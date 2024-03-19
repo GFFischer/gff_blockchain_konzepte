@@ -68,15 +68,15 @@ Berechnungsaufwand) ausgewählt wird.
 zwischen den einzelnen Animationen nach vor und zurück zu springen.
 * **/LF30/** Die Applikation *soll* dem User die Möglichkeit geben, an den vorgesehenen Stellen interaktiv in die
 Gestaltung der Animationen eingreifen zu können:
-  * beim Aufbau einer Blockchain-Datenstruktur durch das Hinzufügen von neuen Seiten (Blöcken, Block-Headern) und
+  * /LF31/ beim Aufbau einer Blockchain-Datenstruktur durch das Hinzufügen von neuen Seiten (Blöcken, Block-Headern) und
     die Eingabe von selbst gewählten Inhalten sowie durch das Berechnen von Hashwerten
-  * beim Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System durch das Eingeben eines Namens, der Anzahl der
+  * /LF32/ beim Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System durch das Eingeben eines Namens, der Anzahl der
     zu erstellenden Schlüsselpaare (Adressen) sowie eines selbst gewählten fiktiven Guthabens
-  * bei der Durchführung einer Transaktion durch die Auswahl einer Sender-Adresse, durch die Eingabe einer
+  * /LF33/ bei der Durchführung einer Transaktion durch die Auswahl einer Sender-Adresse, durch die Eingabe einer
     Empfänger-Adresse und eines zu überweisenden Betrags sowie durch das Bestätigen der digitalen Signatur
-  * beim Speichern von Transaktionen und Erstellen von neuen Blöcken durch das Verändern des zu überweisenden
+  * /LF34/ beim Speichern von Transaktionen und Erstellen von neuen Blöcken durch das Verändern des zu überweisenden
     Betrags und/oder der Empfänger-Adresse bei einer Transaktion
-  * beim Schützen der Blöcke durch Proof-of-Work durch das Bestätigen des Starts oder des Abbruchs eines Mining-
+  * /LF35/ beim Schützen der Blöcke durch Proof-of-Work durch das Bestätigen des Starts oder des Abbruchs eines Mining-
     Vorgangs
 * **/LF40/** Die Applikation *muss* dem User die Möglichkeit geben, durch das Klicken auf ein intuitiv
 verständliches Symbol erklärende Texte zu den einzelnen Animationen zu öffnen.
