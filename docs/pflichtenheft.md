@@ -4,7 +4,7 @@
 | Version | Autor | Quelle | Status | Datum | Kommentar |
 | ------- | ----- | ------ | ------ | ----- | --------- |
 |  0.1    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 19.03.2024 | Datei erstellt |
-|  0.2    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 20.03.2024 | Pkt. 1 - x bearbeitet |
+|  0.2    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 20.03.2024 | Pkt. 1.1 - 1.3 bearbeitet |
 
 
 ## 1. Einleitung
@@ -20,10 +20,10 @@ Pflichtenhefts wäre im Regelfall der Auftraggeber, im konkreten Spezialfall die
 ### 1.2 Einsatzbereich und Ziele
 
 Der **vorrangige Einsatzbereich** der Applikation soll vorrangig im Rahmen des Informatikunterrichts an der gymnasialen 
-Oberstufe sein. Die **Ziele** sind, dass Lernenden ohne Vorwissen die fundamentalen Konzepte einer Blockchaines 
+Oberstufe sein. Die **Ziele** sind, dass Lernenden ohne Vorwissen die fundamentalen Konzepte einer Blockchain 
 vermittelt werden und es dabei für die Lernenden die Möglichkeit gibt, an bestimmten Stellen interaktiv einzugreifen. 
-Die **Vision** hinter diesen Zielen ist, dass durch die Anwendung der Applikation schneller und effizienter gelernt 
-werden kann.
+Die **Vision** hinter diesen Zielen ist, dass durch die Anwendung der Applikation die fundamentalen Konzepte einer 
+Blockchein schneller und effizienter verstanden und gelernt werden können.
 
 Ein **weiterer Einsatzbereich** ist die selbstständige Anwendung der Applikation durch User ausserhalb des Unterrichts,
 ohne formellen Rahmen und ohne vermittelnde Lehrperson. Daher ist es ein weiteres **Ziel**, dass die Applikation
@@ -39,20 +39,22 @@ bedient werden muss.
 
 | **Begriff** | **Erklärung** |
 | ----------- | ------------- |
-| Adresse | eine eindeutig identifizierbare, pseudonyme Identität eines Teilnehmers an einer Blockchain, bestehend aus einem zufällig erzeugten Schlüsselpaar |
-| Block | Einheit von Daten in einer Blockchain-Datenstruktur, bestehend aus einem Block-Header und Referenzen auf die gespeicherten Daten ("Inhalt") |
-| Blockchain-Datenstruktur | Organisation von Daten in miteinander verketteten Einheiten ("Blöcken") |
-| Block-Header | xxxxxxxxxxxxxxxxxxxxxxxx |
-| digitale Signatur | xxxxxxxxxxxxxxxxxxxxxx |
-| Hash-Referenz | xxxxxxxxxxxxxxxxxxxxxxxxx |
-| Hashpuzzle | xxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Hashwert | xxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Merkle-Tree | xxxxxxxxxxxxxxxxxxxxxxxx |
-| Mining | xxxxxxxxxxxxxxxxxxxxxxxxx |
-| Nonce | xxxxxxxxxxxxxxxxxxxx|
+| Adresse | eine eindeutig identifizierbare, pseudonyme Identität eines Knotens einer Blockchain, bestehend aus dem öffentlichen Schlüssel eines zufällig erzeugten Schlüsselpaars |
+| asymmetrische Verschlüsselung | Verschlüsselungsverfahren, bei denen für die Verschlüsselung und die Entschlüsselung zwei unterschiedliche Schlüssel verwendet werden |
+| Block | Einheit von Daten in einer Blockchain-Datenstruktur, bestehend aus einem Block-Header und einem Merkle-Tree mit Hash-Referenzen auf die Transaktionsdaten ("Inhalt") |
+| Blockchain-Datenstruktur | Organisation von Transaktionsdaten in miteinander verketteten Einheiten ("Blöcken") |
+| Block-Header | Kopf eines Blocks einer Blockchain, bestehend aus dem Hashwerts des vorherigen Block-Headers, der Wurzel eines Merkle-Trees, dem Schwierigkeitsgrad für das Hashpuzzle ("Target"), einem Zeitstempel und einer Nonce |
+| digitale Signatur | ein mit dem privaten Schlüssel verschlüsselter und zusammen mit einer Nachricht verschickter Hashwert der Nachricht, der die Authentifizierung der Nachricht ermöglicht |
+| Hash-Referenz | ein Hash-Wert, der auf Daten (z.B. Transaktionsdaten) verweist, die an einem anderen Ort gespeichert sind |
+| Hashpuzzle | eine Berechnungsaufgabe, bei der ein Hashwert mit einem bestimmten Target gesucht wird und die nur durch die Trial-and-Error-Methode zu lösen ist, indem den Daten, die gehasht werden, eine sich ständig ändernde Nonce hinzugefügt wird |
+| Hashwert | eine Zahl mit fixer Länge, die von einer Hashfunktion bzw. einem Hashalgorithmus aus Daten unterschiedlicher Länge berechnet wird |
+| Merkle-Tree | ein Binär-Baum, dessen Blätter Transaktionsdaten enthalten und dessen Knoten erzeugt werden, indem man Hash-Werte aus den jeweils darunterliegenden Teilbäumen kombiniert und daraus einen neuen Hashwert generiert; die Wurzel des Baumes ist ebenfalls ein Hash-Wert |
+| Mining | der Versuch, ein Hashpuzzle zu lösen, um einen neuen Block an die Blockchain dranhängen zu können; im Erfolgsfall gibt es für die bereitgestellte Rechnerleistung in der Regel eine Entlohnung |
+| Nonce | eine einmalige Zahlenfolge ("Number used once"), die in einem Block-Header dazu benötigt wird, das Hashpuzzle zu lösen |
 | Peer-to-Peer System | ein verteiltes Softwaresystem aus Einzelcomputern ("Knoten"), die sich ihre Berechnungsressourcen teilen und bei denen jeder Knoten die gleiche Funktionalität und Verantwortung hat |
-| Proof-of-Work | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
-| Schlüsselpaar | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Proof-of-Work | ein Algorithmus, der dazu führt, dass unter den einzelnen Knoten des Peer-to-Peer-Systems ein Konsens über die Gültigkeit eines neuen Blocks erzielt wird, indem die Lösung eines Hashpuzzles als Beweis für die Gültigkeit und als Arbeitsnachweis erbracht wird |
+| Schlüsselpaar | in einem asymmetrischen Verschlüsselungsverfahren ein Paar aus einem öffentlichen und einem privaten Schlüssel |
+| Target | der Schwierigkeitsgrad eines Hashpuzzles, angegeben durch eine Zahl; der gesuchte Hashwert (die Zahl, die das Hashpuzzle löst) muss kleiner sein als diese Zahl |
 | Transaktion | Übertragung von Werten innerhalb einer Blockchain von einer Adresse zu einer anderen Adresse |
 | User | jede Person, welche die Applikation anwendet, gleichgültig in welchem Einsatzbereich | 
 
