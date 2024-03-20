@@ -93,13 +93,15 @@ verständliches Symbol erklärende Texte zu den einzelnen Animationen zu öffnen
 | Wartbarkeit          |          |     |   x    |                |
 | Portabilität         |          |     |        |       x        |
 
-* **/LQF10/** Einmal gemachte Eingaben und berechnete Werte (z.B. Hashreferenzen) bleiben in der Applikation
-verfügbar, solange sich der User durch die Applikation bewegt. Sie müssen und können nicht noch einmal gemacht werden,
-wenn in der Applikation zurücknavigiert wird.
-* **/LQB10/** Das Design der Webapplikation ist responsiv. Auch auf einem kleinen Screen (z.B. Smartphone) werden die
-Animationen so dargestellt, dass das Erfassen der wesentlichen Aspekte leicht möglich ist. 
-* **/LQB20/** Erklärende Texte zu den Animationen poppen beim Klicken auf ein Symbol auf, der User wird dadurch nicht
-von der aktuellen Animation wegnavigiert.
-* **/LQB30/** Die Navigation über die einzelnen Animationen ist in der gesamten Applikation einfach und übersichtlich.
-* **/LQE10/** Die erklärenden Texte sind für junge Lernzende mit wenig Erfahrung und geringen Kenntnissen in der
-Informatik verständlich geschrieben und sie sind ausgewogen bezüglich notwendiger Kürze und wünschenswerter Tiefe.
+* **/LQF10/** Einmal gemachte Eingaben und berechnete Werte (z.B. Hashreferenzen) sollen in der Applikation
+verfügbar bleiben, solange sich der User durch die Applikation bewegt. Sie können nicht noch einmal gemacht oder
+abgeändert werden, wenn in der Applikation zurücknavigiert wird.
+* **/LQB10/** Das Design der Webapplikation soll responsiv sein. Auch auf einem kleinen Screen (z.B. Smartphone)
+sollen die Animationen so dargestellt werden, dass das Erfassen der wesentlichen Aspekte leicht möglich ist. 
+* **/LQB20/** Erklärende Texte zu den Animationen sollen beim Klicken auf ein Symbol aufpoppen, sodass der User
+dadurch nicht von der aktuellen Animation wegnavigiert wird.
+* **/LQB30/** Die Navigation über die einzelnen Animationen soll in der gesamten Applikation einfach und
+übersichtlich sein.
+* **/LQE10/** Die erklärenden Texte sollen für junge Lernzende mit wenig Erfahrung und geringen Kenntnissen in der
+Informatik verständlich geschrieben sein und sie sollen ausgewogen bezüglich notwendiger Kürze und wünschenswerter
+Tiefe sein.
