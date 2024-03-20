@@ -1,25 +1,60 @@
----
-layout: default
-title : Woche 6
----
 # Pflichtenheft
-#####  (Nach Lichter & Ludwig, Software Engineering: Grundlagen, Menschen, Prozesse, Techniken)
+#####  (Nach Ludewig und Lichter, 351-358)
+
+| Version | Autor | Quelle | Status | Datum | Kommentar |
+| ------- | ----- | ------ | ------ | ----- | --------- |
+|  0.1    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 19.03.2024 | Datei erstellt |
+|  0.2    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 20.03.2024 | Pkt. 1 - x bearbeitet |
 
 
 ## 1. Einleitung
 
 ### 1.1 Zweck
 
-Beschreibt den Zweck und den Leserkreis der Spezifikation.
+Der **Zweck** dieses Pflichtenhefts ist es, die Anforderungen, die sich aus dem Lastenheft ergeben, aus der Sicht des
+Programmierers zu präzisieren, Anwendungsfälle ("Use-cases") inklusive etwaiger Ausnahmen und Sonderfälle zu 
+definieren, sodass darauf aufbauend das Design der Applikation erstellt werden kann. Der **Leserkreis** eines
+Pflichtenhefts wäre im Regelfall der Auftraggeber, im konkreten Spezialfall dieses Projekts ist es der Autor 
+(Programmierer) selbst. Daher sind die Abnahmekriterien (Pkt. 4) auch sehr kurz gehalten.
 
 ### 1.2 Einsatzbereich und Ziele
-Gibt an, wo die Software eingesetzt werden soll und welche wesentlichen Funktionen es haben wird. Wo sinnvoll, sollte auch definiert werden, was die Software nicht leisten wird.
 
-Beschreibt die mit der Software verfolgten Ziele.
+Der **vorrangige Einsatzbereich** der Applikation soll vorrangig im Rahmen des Informatikunterrichts an der gymnasialen 
+Oberstufe sein. Die **Ziele** sind, dass Lernenden ohne Vorwissen die fundamentalen Konzepte einer Blockchaines 
+vermittelt werden und es dabei für die Lernenden die Möglichkeit gibt, an bestimmten Stellen interaktiv einzugreifen. 
+Die **Vision** hinter diesen Zielen ist, dass durch die Anwendung der Applikation schneller und effizienter gelernt 
+werden kann.
+
+Ein **weiterer Einsatzbereich** ist die selbstständige Anwendung der Applikation durch User ausserhalb des Unterrichts,
+ohne formellen Rahmen und ohne vermittelnde Lehrperson. Daher ist es ein weiteres **Ziel**, dass die Applikation
+selbsterklärend und intuitiv bedienbar ist.
+
+Was die Applikation **nicht leisten** kann, ist, dass den Lernenden sämtliche Konzepte einer Blockchain detailliert und
+vollständig vermittelt werden. Sie werden nach der Anwendung nicht in der Lage sein, selbst eine Blockchain-Anwendung zu
+programmieren, es geht auch nicht darum, Wissen oder Kompetenzen zu erlangen, wie man eine konkrete existierende
+Blockchain-Anwendung (z.B. die Bitcoin-Blockchain) verwendet, d.h. welche Software dafür installiert und wie diese
+bedient werden muss.
 
 ### 1.3 Definitionen
 
-Dokumentiert alle verwendeten Fachbegriffe und Abkürzungen. Alternativ können Sie auch ein separates Glossar nutzen.
+| **Begriff** | **Erklärung** |
+| ----------- | ------------- |
+| Adresse | eine eindeutig identifizierbare, pseudonyme Identität eines Teilnehmers an einer Blockchain, bestehend aus einem zufällig erzeugten Schlüsselpaar |
+| Block | Einheit von Daten in einer Blockchain-Datenstruktur, bestehend aus einem Block-Header und Referenzen auf die gespeicherten Daten ("Inhalt") |
+| Blockchain-Datenstruktur | Organisation von Daten in miteinander verketteten Einheiten ("Blöcken") |
+| Block-Header | xxxxxxxxxxxxxxxxxxxxxxxx |
+| digitale Signatur | xxxxxxxxxxxxxxxxxxxxxx |
+| Hash-Referenz | xxxxxxxxxxxxxxxxxxxxxxxxx |
+| Hashpuzzle | xxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Hashwert | xxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Merkle-Tree | xxxxxxxxxxxxxxxxxxxxxxxx |
+| Mining | xxxxxxxxxxxxxxxxxxxxxxxxx |
+| Nonce | xxxxxxxxxxxxxxxxxxxx|
+| Peer-to-Peer System | ein verteiltes Softwaresystem aus Einzelcomputern ("Knoten"), die sich ihre Berechnungsressourcen teilen und bei denen jeder Knoten die gleiche Funktionalität und Verantwortung hat |
+| Proof-of-Work | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Schlüsselpaar | xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx |
+| Transaktion | Übertragung von Werten innerhalb einer Blockchain von einer Adresse zu einer anderen Adresse |
+| User | jede Person, welche die Applikation anwendet, gleichgültig in welchem Einsatzbereich | 
 
 ### 1.4 Referenzierte Dokumente
 
