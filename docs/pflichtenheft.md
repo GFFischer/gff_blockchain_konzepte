@@ -5,6 +5,7 @@
 | ------- | ----- | ------ | ------ | ----- | --------- |
 |  0.1    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 19.03.2024 | Datei erstellt |
 |  0.2    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 20.03.2024 | Pkt. 1.1 - 1.3 bearbeitet |
+|  0.3    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.03.2024 | Pkt. 1.4 - 2.5 (ausgenommen 2.2) bearbeitet |
 
 
 ## 1. Einleitung
@@ -19,11 +20,12 @@ Pflichtenhefts wäre im Regelfall der Auftraggeber, im konkreten Spezialfall die
 
 ### 1.2 Einsatzbereich und Ziele
 
-Der **vorrangige Einsatzbereich** der Applikation soll vorrangig im Rahmen des Informatikunterrichts an der gymnasialen 
+Der **vorrangige Einsatzbereich** der Applikation soll der Informatikunterricht an der gymnasialen 
 Oberstufe sein. Die **Ziele** sind, dass Lernenden ohne Vorwissen die fundamentalen Konzepte einer Blockchain 
 vermittelt werden und es dabei für die Lernenden die Möglichkeit gibt, an bestimmten Stellen interaktiv einzugreifen. 
 Die **Vision** hinter diesen Zielen ist, dass durch die Anwendung der Applikation die fundamentalen Konzepte einer 
-Blockchein schneller und effizienter verstanden und gelernt werden können.
+Blockchein schneller und effizienter verstanden und gelernt werden können. Daher ist es ein weiteres Ziel, dass die
+Applikation optisch ansprechend gestaltet ist.
 
 Ein **weiterer Einsatzbereich** ist die selbstständige Anwendung der Applikation durch User ausserhalb des Unterrichts,
 ohne formellen Rahmen und ohne vermittelnde Lehrperson. Daher ist es ein weiteres **Ziel**, dass die Applikation
@@ -49,10 +51,10 @@ bedient werden muss.
 | Hashpuzzle | eine Berechnungsaufgabe, bei der ein Hashwert mit einem bestimmten Target gesucht wird und die nur durch die Trial-and-Error-Methode zu lösen ist, indem den Daten, die gehasht werden, eine sich ständig ändernde Nonce hinzugefügt wird |
 | Hashwert | eine Zahl mit fixer Länge, die von einer Hashfunktion bzw. einem Hashalgorithmus aus Daten unterschiedlicher Länge berechnet wird |
 | Merkle-Tree | ein Binär-Baum, dessen Blätter Transaktionsdaten enthalten und dessen Knoten erzeugt werden, indem man Hash-Werte aus den jeweils darunterliegenden Teilbäumen kombiniert und daraus einen neuen Hashwert generiert; die Wurzel des Baumes ist ebenfalls ein Hash-Wert |
-| Mining | der Versuch, ein Hashpuzzle zu lösen, um einen neuen Block an die Blockchain dranhängen zu können; im Erfolgsfall gibt es für die bereitgestellte Rechnerleistung in der Regel eine Entlohnung |
-| Nonce | eine einmalige Zahlenfolge ("Number used once"), die in einem Block-Header dazu benötigt wird, das Hashpuzzle zu lösen |
+| Mining | der Versuch, ein Hashpuzzle zu lösen, um einen neuen Block an die Blockchain anfügen zu können; im Erfolgsfall gibt es für die bereitgestellte Rechnerleistung in der Regel eine Entlohnung |
+| Nonce | eine einmalige Zahlenfolge ("Number used once"), die einem Block-Header hinzugefügt und dazu benötigt wird, das Hashpuzzle zu lösen |
 | Peer-to-Peer System | ein verteiltes Softwaresystem aus Einzelcomputern ("Knoten"), die sich ihre Berechnungsressourcen teilen und bei denen jeder Knoten die gleiche Funktionalität und Verantwortung hat |
-| Proof-of-Work | ein Algorithmus, der dazu führt, dass unter den einzelnen Knoten des Peer-to-Peer-Systems ein Konsens über die Gültigkeit eines neuen Blocks erzielt wird, indem die Lösung eines Hashpuzzles als Beweis für die Gültigkeit und als Arbeitsnachweis erbracht wird |
+| Proof-of-Work | ein Algorithmus, der dazu führt, dass unter den einzelnen Knoten des Peer-to-Peer-Systems ein Konsens über die Gültigkeit eines neuen Blocks gefunden wird, indem die Lösung eines Hashpuzzles als Beweis für die Gültigkeit des Blocks und als Arbeitsnachweis dient |
 | Schlüsselpaar | in einem asymmetrischen Verschlüsselungsverfahren ein Paar aus einem öffentlichen und einem privaten Schlüssel |
 | Target | der Schwierigkeitsgrad eines Hashpuzzles, angegeben durch eine Zahl; der gesuchte Hashwert (die Zahl, die das Hashpuzzle löst) muss kleiner sein als diese Zahl |
 | Transaktion | Übertragung von Werten innerhalb einer Blockchain von einer Adresse zu einer anderen Adresse |
@@ -60,31 +62,61 @@ bedient werden muss.
 
 ### 1.4 Referenzierte Dokumente
 
-Verzeichnet alle Dokumente, auf die in der Spezifikation verwiesen wird.
+Das Lastenheft mit den Anforderungen an die Applikation aus der Sicht des Auftraggebers.
 
 ### 1.5 Überblick
 
-Beschreibt, wie der Rest der Spezifikation aufgebaut ist, insbesondere, wie Kapitel 3 strukturiert ist.
+In Pkt. 2 dieses Pflichtenhefts wird die Applikation allgemein beschrieben.
+
+In Pkt. 3 werden die im Lastenheft formulierten Anforderungen detailliert aufgelistet. Dazu dienen die im Anhang 
+skizzierten und beschriebenen Use-cases.
+
+Pkt. 4 ist aufgrund der speziellen Situation, dass es sich um das "individuelle Projekt" im Rahmen des 
+Studienprogramms GymInf handelt und es keinen Auftraggeber im eigentlichen Sinn gibt, der am Ende das fertige
+Produkt abnimmt, kurz gehalten.
+
+Im Anhang finden sich die Use-cases, die sich aus dem Lastenheft (/LK10/ bis /LK80/ sowie /LF10/ bis /LF40/
+und /LQF10/ bis /LQE10/) ergeben.
+
 
 ## 2. Allgemeine Beschreibung
 
 ### 2.1 Einbettung
 
-Beschreibt, wie das System in seine Umgebung eingebettet ist und wie die Software mit den umgebenden Komponenten und Systemen zusammenspielt. Dazu werden die Schnittstellen, Kommunikationsprotokolle etc. definiert.
+* Die Applikation steht für sich selbst, ist nicht Teil einer grösseren Anwendung und auch nicht von anderen Anwendungen
+  abhängig.
+* Die Realisierung erfolgt als Web-Applikation, für die Umsetzung werden HTML, CSS und JavaScript verwendet.
+* Die Ausführung der Applikation sowie der eingebetteten Skripte erfolgt auf der Client-Seite.
 
 ### 2.2 Funktionen
 
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 Skizziert die wichtigsten Funktionen
 
 ### 2.3 Benutzerprofile
 
-Charakterisiert die Benutzergruppen und die Voraussetzungen die diese jeweils mitbringen (Ausbildung, Know-how, Sprache)
+* **Schülerinnen und Schüler der gymnasialen Oberstufe:** eine informatische Grundbildung, die in der Sekundarstufe
+  erfolgt, kann vorausgesetzt werden; es wird davon ausgegangen, dass keine Kenntnisse über Blockchains, Hashfunktionen
+  und asymmetrische Verschlüsselungsverfahren vorhanden sind
+* **"freie" User:** eine etwaige informatische Vorbildung kann nicht vorausgesetzt werden, trotzdem wird davon
+  ausgegangen, dass diese vergleichbar ist mit jener von Schülerinnen und Schülern der gymnasialen Oberstufe 
+
+Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig sind.
 
 ### 2.4 Einschränkungen
-Dokumentiert Einschränkungen, die die Freiheit der Entwicklung reduzieren (Basis-Software, Ziel-Hardware, Gesetzliche Grundlagen, ...)
+* Die Applikation soll lediglich in deutscher Sprache zur Verfügung stehen, es sind keine Übersetzungen geplant.
+* Es ist möglich, dass einige Animationen eine Grösse erreichen, die auf einem kleinen, hochformatigen Bildschirm (z.B.
+  Smartphone) nicht darstellbar ist.
+* Das "individuelle Projekt" im Studienprogramm GymInf dient dazu, dass Studierenden ihre im Studium erworbenen Kenntnisse
+  in die Praxis umsetzen. Daher versucht der Autor (Programmierer), soweit das möglich ist, den notwendigen Code
+  eigenhändig zu schreiben und auf Bibliotheken, Templates, APIs, ... weitestgehend zu verzichten. Es ergibt sich von
+  selbst, dass das zu einer Einschränkung in der Qualität der Applikation führt.
 
 ### 2.5 Annahmen und Abhängigkeiten
-Nennt explizit die Annahmen und externen Voraussetzungen, von denen bei der Spezifikation ausgegangen wurde.
+* Angenommen wird, dass die User moderne Browser verwenden, die HTML5, CSS3 und JavaScript beherrschen.
+* Bei der Konzeption der Animationen wird angenommen, dass die User die Applikation mehrheitlich auf grösseren,
+  querformatigen Bildschirmen anwenden.
+* Es bestehen keine Abhängigkeiten zu anderen Systemen oder anderer Software.
 
 
 ## 3. Einzelanforderungen
