@@ -6,7 +6,7 @@
 |  0.1    |  Georg Fischer   | Konzept 2024-03-06, PPT zur Veranschaulichung | in Bearbeitung  | 18.03.2024 | Datei erstellt, Pkt. 1-3 bearbeitet                        |
 |  1.0    |  Georg Fischer   | Konzept 2024-03-06, PPT zur Veranschaulichung | fertig gestellt | 19.03.2024 | Pkt. 3-5 bearbeitet, Bearbeitung (vorläufig) abgeschlossen |
 |  1.1    |  Georg Fischer   | Lastenheft, Version 1.0                       | Verbesserungen  | 20.03.2024 | sprachliche Nachbesserungen Pkt.5                          |
-|  1.2    |  Georg Fischer   | Lastenheft, Version 1.1                       | Ergänzungen     | 21.03.2024 | in Pkt. 1 /LZ30/ ergänzt                                   |
+|  1.2    |  Georg Fischer   | Lastenheft, Version 1.1                       | Ergänzungen     | 21.03.2024 | in Pkt. 1 /LZ30/ ergänzt, in Pkt. 5 /LQB50/ ergänzt        |
 
 
 
@@ -107,6 +107,7 @@ sollen die Animationen so dargestellt werden, dass das Erfassen der wesentlichen
 dadurch nicht von der aktuellen Animation wegnavigiert wird.
 * **/LQB30/** Die Navigation über die einzelnen Animationen soll in der gesamten Applikation einfach und
 übersichtlich sein.
+* **/LQB40/** Die optische Gestaltung der Applikation soll ansprechend und farbenfroh sein.
 * **/LQE10/** Die erklärenden Texte sollen für junge Lernzende mit wenig Erfahrung und geringen Kenntnissen in der
 Informatik verständlich geschrieben sein und sie sollen ausgewogen bezüglich notwendiger Kürze und wünschenswerter
 Tiefe sein.
