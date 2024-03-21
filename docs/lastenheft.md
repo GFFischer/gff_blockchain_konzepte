@@ -5,6 +5,9 @@
 | ------- | ----- | ------ | ------ | ----- | --------- |
 |  0.1    |  Georg Fischer   | Konzept 2024-03-06, PPT zur Veranschaulichung | in Bearbeitung  | 18.03.2024 | Datei erstellt, Pkt. 1-3 bearbeitet                        |
 |  1.0    |  Georg Fischer   | Konzept 2024-03-06, PPT zur Veranschaulichung | fertig gestellt | 19.03.2024 | Pkt. 3-5 bearbeitet, Bearbeitung (vorläufig) abgeschlossen |
+|  1.1    |  Georg Fischer   | Lastenheft, Version 1.0                       | Verbesserungen  | 20.03.2024 | sprachliche Nachbesserungen Pkt.5                          |
+|  1.2    |  Georg Fischer   | Lastenheft, Version 1.1                       | Ergänzungen     | 21.03.2024 | in Pkt. 1 /LZ30/ ergänzt                                   |
+
 
 
 ## 1. Visionen und Ziele
@@ -19,6 +22,8 @@ mit unbewegten Grafiken und ohne die Möglichkeit zur Interaktion zur Verfügung
 weiterführende erklärende Texte die Funktionsweise einer Blockchain möglichst kompakt darstellt.
 * **/LZ20/** Die Applikation soll selbsterklärend und intuitiv bedienbar sein, sodass ihre Anwendung keiner
 weiteren Vermittlung durch eine Lehrperson bedarf.
+* **/LZ30/** Die Applikation soll durch eine optisch ansprechende Gestaltung Lernende motivieren, sich die
+dargebotenen Lerninhalte anzueignen.
 
 ## 2. Rahmenbedingungen
 
