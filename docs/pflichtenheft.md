@@ -42,15 +42,15 @@ bedient werden muss.
 | **Begriff** | **Erklärung** |
 | ----------- | ------------- |
 | Adresse | eine eindeutig identifizierbare, pseudonyme Identität eines Knotens einer Blockchain, bestehend aus dem öffentlichen Schlüssel eines zufällig erzeugten Schlüsselpaars |
-| asymmetrische Verschlüsselung | Verschlüsselungsverfahren, bei denen für die Verschlüsselung und die Entschlüsselung zwei unterschiedliche Schlüssel verwendet werden |
+| asymmetrische Verschlüsselung | Verschlüsselungsverfahren, bei dem für die Verschlüsselung und die Entschlüsselung zwei unterschiedliche Schlüssel verwendet werden |
 | Block | Einheit von Daten in einer Blockchain-Datenstruktur, bestehend aus einem Block-Header und einem Merkle-Tree mit Hash-Referenzen auf die Transaktionsdaten ("Inhalt") |
 | Blockchain-Datenstruktur | Organisation von Transaktionsdaten in miteinander verketteten Einheiten ("Blöcken") |
-| Block-Header | Kopf eines Blocks einer Blockchain, bestehend aus dem Hashwerts des vorherigen Block-Headers, der Wurzel eines Merkle-Trees, dem Schwierigkeitsgrad für das Hashpuzzle ("Target"), einem Zeitstempel und einer Nonce |
+| Block-Header | Kopf eines Blocks einer Blockchain, bestehend aus der Hash-Referenz auf den vorherigen Block-Header, der Wurzel eines Merkle-Trees, dem Schwierigkeitsgrad für das Hashpuzzle ("Target"), einem Zeitstempel und einer Nonce |
 | digitale Signatur | ein mit dem privaten Schlüssel verschlüsselter und zusammen mit einer Nachricht verschickter Hashwert der Nachricht, der die Authentifizierung der Nachricht ermöglicht |
 | Hash-Referenz | ein Hash-Wert, der auf Daten (z.B. Transaktionsdaten) verweist, die an einem anderen Ort gespeichert sind |
 | Hashpuzzle | eine Berechnungsaufgabe, bei der ein Hashwert mit einem bestimmten Target gesucht wird und die nur durch die Trial-and-Error-Methode zu lösen ist, indem den Daten, die gehasht werden, eine sich ständig ändernde Nonce hinzugefügt wird |
 | Hashwert | eine Zahl mit fixer Länge, die von einer Hashfunktion bzw. einem Hashalgorithmus aus Daten unterschiedlicher Länge berechnet wird |
-| Merkle-Tree | ein Binär-Baum, dessen Blätter Transaktionsdaten enthalten und dessen Knoten erzeugt werden, indem man Hash-Werte aus den jeweils darunterliegenden Teilbäumen kombiniert und daraus einen neuen Hashwert generiert; die Wurzel des Baumes ist ebenfalls ein Hash-Wert |
+| Merkle-Tree | ein Binär-Baum, dessen Blätter Transaktionsdaten enthalten und dessen Knoten erzeugt werden, indem man Hashwerte aus den jeweils darunterliegenden Teilbäumen kombiniert und daraus einen neuen Hashwert generiert; die Wurzel des Baumes ist ebenfalls ein Hashwert |
 | Mining | der Versuch, ein Hashpuzzle zu lösen, um einen neuen Block an die Blockchain anfügen zu können; im Erfolgsfall gibt es für die bereitgestellte Rechnerleistung in der Regel eine Entlohnung |
 | Nonce | eine einmalige Zahlenfolge ("Number used once"), die einem Block-Header hinzugefügt und dazu benötigt wird, das Hashpuzzle zu lösen |
 | Peer-to-Peer System | ein verteiltes Softwaresystem aus Einzelcomputern ("Knoten"), die sich ihre Berechnungsressourcen teilen und bei denen jeder Knoten die gleiche Funktionalität und Verantwortung hat |
@@ -62,20 +62,17 @@ bedient werden muss.
 
 ### 1.4 Referenzierte Dokumente
 
-Das Lastenheft mit den Anforderungen an die Applikation aus der Sicht des Auftraggebers.
+Das **Lastenheft** mit den Anforderungen an die Applikation aus der Sicht des Auftraggebers.
 
 ### 1.5 Überblick
 
-In Pkt. 2 dieses Pflichtenhefts wird die Applikation allgemein beschrieben.
-
-In Pkt. 3 werden die im Lastenheft formulierten Anforderungen detailliert aufgelistet. Dazu dienen die im Anhang 
+* In **Pkt. 2** dieses Pflichtenhefts wird die Applikation allgemein beschrieben.
+* In **Pkt. 3** werden die im Lastenheft formulierten Anforderungen detailliert aufgelistet. Dazu dienen die im Anhang 
 skizzierten und beschriebenen Use-cases.
-
-Pkt. 4 ist aufgrund der speziellen Situation, dass es sich um das "individuelle Projekt" im Rahmen des 
+* **Pkt. 4** ist aufgrund der speziellen Situation, dass es sich um das "individuelle Projekt" im Rahmen des 
 Studienprogramms GymInf handelt und es keinen Auftraggeber im eigentlichen Sinn gibt, der am Ende das fertige
 Produkt abnimmt, kurz gehalten.
-
-Im Anhang finden sich die Use-cases, die sich aus dem Lastenheft (/LK10/ bis /LK80/ sowie /LF10/ bis /LF40/
+* Im **Anhang** finden sich die Use-cases, die sich aus dem Lastenheft (/LK10/ bis /LK80/ sowie /LF10/ bis /LF40/
 und /LQF10/ bis /LQE10/) ergeben.
 
 
@@ -99,7 +96,7 @@ Skizziert die wichtigsten Funktionen
   erfolgt, kann vorausgesetzt werden; es wird davon ausgegangen, dass keine Kenntnisse über Blockchains, Hashfunktionen
   und asymmetrische Verschlüsselungsverfahren vorhanden sind
 * **"freie" User:** eine etwaige informatische Vorbildung kann nicht vorausgesetzt werden, trotzdem wird davon
-  ausgegangen, dass diese vergleichbar ist mit jener von Schülerinnen und Schülern der gymnasialen Oberstufe 
+  ausgegangen, dass diese vergleichbar mit jener von Schülerinnen und Schülern der gymnasialen Oberstufe ist
 
 Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig sind.
 
