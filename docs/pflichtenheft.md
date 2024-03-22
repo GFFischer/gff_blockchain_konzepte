@@ -6,6 +6,7 @@
 |  0.1    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 19.03.2024 | Datei erstellt |
 |  0.2    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 20.03.2024 | Pkt. 1.1 - 1.3 bearbeitet |
 |  0.3    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.03.2024 | Pkt. 1.4 - 2.5 (ausgenommen 2.2) bearbeitet |
+|  0.4    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 22.03.2024 | Pkt. 2.2 bearbeitet |
 
 
 ## 1. Einleitung
@@ -87,8 +88,14 @@ und /LQF10/ bis /LQE10/) ergeben.
 
 ### 2.2 Funktionen
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-Skizziert die wichtigsten Funktionen
+* Die Applikation besteht aus einer Anzahl von animierten Grafiken, über die a) durch das Klicken von "weiter"- und
+  "zurück"-Buttons navigiert werden kann oder die b) über ein Navigationsmenü direkt angesteuert werden können.
+* Alle animierten Grafiken können vom User durch das Klicken von Buttons gestartet, unterbrochen oder abgebrochen werden.
+* Bei allen animierten Grafiken gibt es (vor dem Start und/oder nach Beendigung bzw. Abbruch der Animation) die Möglichkeit,
+  dass durch das Klicken auf ein intuitiv verständliches Symbol weiterführende erklärende Texte aufpoppen.
+* Bei bestimmten Animationen gibt es für den User die Möglichkeit, durch (Text-)Eingaben über ein Formular die Gestaltung
+  der Animationen interaktiv zu beeinflussen, wobei einmal getätigte Eingaben auch Auswirkungen auf die Gestaltung danach
+  folgender Animationen haben können.
 
 ### 2.3 Benutzerprofile
 
