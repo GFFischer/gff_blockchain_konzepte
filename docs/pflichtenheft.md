@@ -7,6 +7,7 @@
 |  0.2    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 20.03.2024 | Pkt. 1.1 - 1.3 bearbeitet |
 |  0.3    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.03.2024 | Pkt. 1.4 - 2.5 (ausgenommen 2.2) bearbeitet |
 |  0.4    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 22.03.2024 | Pkt. 2.2 bearbeitet |
+|  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -151,12 +152,12 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 
 ## Anhang A. Use-cases
 
-An dieser Stelle können detaillierte Use-cases angegeben werden
+### Use-Case 1 - gilt für alle n Animationen:
+
 ![Diagram](img/use-case_1.svg)
 
-### Use-Case 1 - gilt für alle n Animationen:
-* Name: *Animation n starten / unterbrechen / fortsetzen / abbrechen / zur nächsten (vorherigen) Animation navigieren*
-* Akteure: *User*
+* Name: *Animation n starten / unterbrechen / fortsetzen / abbrechen
+* Akteur: *User*
 * Vorbedingungen: *Der User hat zu einer Animation navigiert, die Animation ist vollständig geladen.*
 * Standardablauf
     * Der User startet die Animation n.
@@ -164,20 +165,13 @@ An dieser Stelle können detaillierte Use-cases angegeben werden
       * (Optional, nur nach Unterbrechen der Animation möglich: Der User setzt die Animation fort.)
       * (Optional: der User bricht die Animation ab.)
     * Die Animation ist beendet.
-    * Der User navigiert zur nächsten Animation n + 1 ODER zur vorherigen Animation n - 1.
-* Nachbedingungen Erfolg: *Die nächste ODER vorherige Animation (je nach Auswahl des Users) wird geladen.*
-* Nachbedingung Sonderfall 1a: *Die vom User gewählte Animation *
+* Nachbedingungen Erfolg: *Der letzte Frame der Animation wird am Bildschirm angezeigt.*
+* Nachbedingung Sonderfall 1a: *Die vom User gewählte Animation wird geladen.*
 
-
-#### Sonderfall 1a: Ausnahme 1
+#### Sonderfall 1a: Der User navigiert von der Animation weg.
 * Ablauf Sonderfall 1a
-    * Schritt 1
-    * Schritt 2
-
-#### Sonderfall 1b: Ausnahme 2
-* Ablauf Sonderfall 1b
-    * Schritt 1
-    * Schritt 2
+    * Der User betätigt die "weiter"- oder "zurück"-Buttons oder wählt eine Animation im Animationsmenü.
+    * Der User navigiert zur nächsten ODER zur vorherigen ODER zu einer beliebigen Animation.
 
 
 ### Use Case 2:
