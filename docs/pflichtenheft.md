@@ -152,17 +152,21 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 ## Anhang A. Use-cases
 
 An dieser Stelle können detaillierte Use-cases angegeben werden
-![Diagram](../../slides/images/use-case.png)
+![Diagram](img/use-case_1.svg)
 
-### Use Case 1:
-* Name: *Name des Use-cases*
-* Akteure: *Akteur1, Akteur2, ...*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+### Use-Case 1 - gilt für alle n Animationen:
+* Name: *Animation n starten / unterbrechen / fortsetzen / abbrechen / zur nächsten (vorherigen) Animation navigieren*
+* Akteure: *User*
+* Vorbedingungen: *Der User hat zu einer Animation navigiert, die Animation ist vollständig geladen.*
 * Standardablauf
-    * Schritt 1
-    * Schritt 2
-* Nachbedingungen Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+    * Der User startet die Animation n.
+      * (Optional, mehrfach möglich: Der User unterbricht die Animation.)
+      * (Optional, nur nach Unterbrechen der Animation möglich: Der User setzt die Animation fort.)
+      * (Optional: der User bricht die Animation ab.)
+    * Die Animation ist beendet.
+    * Der User navigiert zur nächsten Animation n + 1 ODER zur vorherigen Animation n - 1.
+* Nachbedingungen Erfolg: *Die nächste ODER vorherige Animation (je nach Auswahl des Users) wird geladen.*
+* Nachbedingung Sonderfall 1a: *Die vom User gewählte Animation *
 
 
 #### Sonderfall 1a: Ausnahme 1
