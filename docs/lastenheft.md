@@ -74,7 +74,9 @@ abzubrechen, zu unterbrechen und nach einer Unterbrechung fortzusetzen.
 * **/LF20/** Die Applikation *muss* dem User die Möglichkeit geben, über "weiter"- und "zurück"-Buttons
 zwischen den einzelnen Animationen nach vor und zurück zu springen sowie über ein eigenes Navigationsmenü direkt zu den
 einzelnen Animationen zu navigieren.
-* **/LF30/** Die Applikation *soll* dem User die Möglichkeit geben, an den vorgesehenen Stellen interaktiv in die
+* **/LF30/** Die Applikation *muss* dem User die Möglichkeit geben, durch das Klicken auf ein intuitiv
+verständliches Symbol erklärende und/oder weiterführende Texte zu den einzelnen Animationen zu öffnen.
+* **/LF40/** Die Applikation *soll* dem User die Möglichkeit geben, an den vorgesehenen Stellen interaktiv in die
 Gestaltung der Animationen eingreifen zu können:
   * /LF31/ beim Aufbau einer Blockchain-Datenstruktur durch das Hinzufügen von neuen Seiten (Blöcken, Block-Headern) und
     die Eingabe von selbst gewählten Inhalten sowie durch das Berechnen von Hashwerten
@@ -86,8 +88,6 @@ Gestaltung der Animationen eingreifen zu können:
     Betrags und/oder der Empfänger-Adresse bei einer Transaktion
   * /LF35/ beim Schützen der Blöcke durch Proof-of-Work durch das Bestätigen des Starts oder des Abbruchs eines
     Mining-Vorgangs
-* **/LF40/** Die Applikation *muss* dem User die Möglichkeit geben, durch das Klicken auf ein intuitiv
-verständliches Symbol erklärende und/oder weiterführende Texte zu den einzelnen Animationen zu öffnen.
 
 
 ## 5. Qualitätsanforderungen
