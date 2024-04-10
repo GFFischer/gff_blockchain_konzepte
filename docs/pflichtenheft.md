@@ -190,7 +190,7 @@ Definieren Sie hier mindestens ein Abnahmekriterium
     * ODER: Der User navigiert zur nachfolgenden Animation n+1 durch Klichen auf einen "Weiter"-Button
     * ODER: Der User navigiert zu eienr beliebigen Animation m durch das Klicken auf einen Link zur
       Animation m im Navigationsmenü.
-* Nachbedingungen Erfolg: *Die gewählte Animation wird geladen.*
+* Nachbedingung Erfolg: *Die gewählte Animation wird geladen.*
 * Nachbedingung Sonderfall 2a: *Die erste Animation wird geladen.*
 * Nachbedingung Sonderfall 2b: *Die letzte Animation wird geladen.*
 
@@ -226,28 +226,33 @@ Definieren Sie hier mindestens ein Abnahmekriterium
       Informationen (Button "Hintergrundwissen") handelt.
     * Der User klickt irgendwo innerhalb der Applikation.
     * Der erklärende bzw. weiterführende Text verschwindet.
-* Nachbedingungen Erfolg: *Die Applikation befindet sich im gleichen Status wie vor dem Öffnen der
+* Nachbedingung Erfolg: *Die Applikation befindet sich im gleichen Status wie vor dem Öffnen der
   erklärenden oder weiterführenden Texte.*
 
 
 ### Use Case 4 - Animation 1a:
+
+![Diagram](img/use-case_4.svg)
+
 * Name: *Aufbau einer Blockchain-Datenstruktur, Teil 1/4*
 * Akteure: *User*
 * Vorbedingungen: *Animation 1a ist geladen. Der erste Frame zeigt zwei symbolisch dargestellte
   Seiten eines Buchs, bestehend jeweils aus einer Seitenzahl ("Seite 1", "Seite 2") und einem 
-  kurzen Text.*
+  kurzen Text (siehe folgende schematische Darstellung).*
+
+![Diagram](img/animation_1a_01.svg)
+
 * Standardablauf
     * Der User klickt auf einen Button, der mit "Erstelle eine neue Seite" beschriftet ist.
     * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für eine neue Seite
-      eingeben kann. Die Seitenzahl ("Seite 3") wird automatisch zugewiesen.
-    * xxxxxxxxxxxxxxxx
-* Nachbedingungen Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
-
-#### Sonderfall 4a: Ausnahme 1
-* Ablauf Sonderfall 4a
-    * Schritt 1
-    * Schritt 2
+      eingibt. Die Seitenzahl ("Seite 3") wird automatisch zugewiesen. Der User bestätigt mit "OK".
+    * Eine neue symbolisch dargestellte Seite eines Buchs, bestehend aus einer Seitenzahl ("Seite
+      3") und dem vom User eingegebenen Inhalt wird der Animation hinzugefügt.
+    * Animation 1a ist beendet.
+* Nachbedingungen Erfolg: *Eine neue symbolisch dargestellte Seite eines Buchs mit dem vom User
+  eingegebenen Ihhalt ist der Animation hinzugefügt (siehe folgende schematische Darstellung).*
+ 
+![Diagram](img/animation_1a_02.svg)
 
 
 ### Use Case 5 - Animation 1b:
