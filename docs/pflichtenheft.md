@@ -8,7 +8,7 @@
 |  0.3    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.03.2024 | Pkt. 1.4 - 2.5 (ausgenommen 2.2) bearbeitet |
 |  0.4    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 22.03.2024 | Pkt. 2.2 bearbeitet |
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
-|  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 (Anhang) hinzugefügt |
+|  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 und 3 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -178,6 +178,7 @@ Definieren Sie hier mindestens ein Abnahmekriterium
     * Der User navigiert zur nachfolgenden ODER zur vorherigen ODER zu einer beliebigen Animation.
 
 
+
 ### Use Case 2 - gilt für alle Animationen:
 
 ![Diagram](img/use-case_2.svg)
@@ -190,27 +191,51 @@ Definieren Sie hier mindestens ein Abnahmekriterium
     * ODER: Der User navigiert zur nachfolgenden Animation n+1 durch Klichen auf einen "Weiter"-Button
     * ODER: Der User navigiert zu eienr beliebigen Animation m durch das Klicken auf einen Link zur
       Animation m im Navigationsmenü.
-* Nachbedingungen Erfolg: *Der User hat zur vorherigen ODER zur nachfolgenden ODER zu einer beliebigen
-  Animation m navigiert, die gewählte Animation wird geladen.*
+* Nachbedingungen Erfolg: *Die gewählte Animation wird geladen.*
 * Nachbedingung Sonderfall 2a: *Die erste Animation wird geladen.*
 * Nachbedingung Sonderfall 2b: *Die letzte Animation wird geladen.*
 
 #### Sonderfall 2a: Der User hat zur ersten Animation navigiert und klickt auf den "Zurück"-Button
 * Ablauf Sonderfall 2a
-    * Der User klickt auf den "Zurück"-Button
-    * Eine Benachrichtigung erscheint Bildschirm mit folgendem Text: "Sie befinden sich bereits bei der
-      ersten Animation."
+    * Der User klickt auf den "Zurück"-Button.
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Sie befinden sich bereits
+      bei der ersten Animation."
 
 #### Sonderfall 2b: Der User hat zur letzten Animation navigiert und klickt auf den "Weiter"-Button
 * Ablauf Sonderfall 2b
-    * Der User klickt auf den "Weiter"-Button
-    * Eine Benachrichtigung erscheint Bildschirm mit folgendem Text: "Sie befinden sich bereits bei der
-      letzten Animation."
+    * Der User klickt auf den "Weiter"-Button.
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Sie befinden sich bereits
+      bei der letzten Animation."
 
 
-### Use Case 3:
-* Name: *Name des Use-cases*
-* Akteure: *Akteur1, Akteur2, ...*
+
+### Use Case 3 - gilt für alle Animationen:
+
+![Diagram](img/use-case_3.svg)
+
+* Name: *Erklärende und/oder weiterführende Texte zu den Animationen öffnen*
+* Akteure: *User*
+* Vorbedingungen: *Eine Animation ist vollständig geladen, aber noch nicht gestartet ODER eine
+  Animation ist beendet. Im Bereich der Animation befinden sich an einer oder mehreren Stellen ein
+  oder mehrere Symbole, die intuitiv als Buttons für erklärende Informationen zu den Animationen
+  verstanden werden können. Unterhalb der Animationen befindet sich ein Button, der mit dem Text
+  "Hintergrundwissen" beschriftet ist.*
+* Standardablauf:
+    * Der User klickt auf eines der angezeigten Symbole im Bereich der Animation
+    * ODER: Der User klickt auf den "Hintergrundwissen"-Butten unterhalb der Animation
+    * Ein erklärender bzw. weiterführender Text poppt auf, der sich optisch unterscheidet je
+      nachdem, ob es sich um eine erklärende Information (Symbol) oder um weiterführende
+      Informationen (Button "Hintergrundwissen") handelt.
+    * Der User klickt irgendwo innerhalb der Applikation.
+    * Der erklärende bzw. weiterführende Text verschwindet.
+* Nachbedingungen Erfolg: *Die Applikation befindet sich im gleichen Status wie vor dem Öffnen der
+  erklärenden oder weiterführenden Texte.*
+
+
+
+### Use Case 4 - gilt für alle Animationen:
+* Name: *Erklärende und/oder weiterführende Texte zu den Animationen öffnen*
+* Akteure: *User*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
 * Standardablauf
     * Schritt 1
@@ -218,7 +243,10 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 * Nachbedingungen Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
 * Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-#### Sonderfall 3a: Ausnahme 1
-* Ablauf Sonderfall 1a
+#### Sonderfall 4a: Ausnahme 1
+* Ablauf Sonderfall 4a
     * Schritt 1
     * Schritt 2
+
+
+
