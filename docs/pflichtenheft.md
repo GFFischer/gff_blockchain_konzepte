@@ -8,6 +8,7 @@
 |  0.3    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.03.2024 | Pkt. 1.4 - 2.5 (ausgenommen 2.2) bearbeitet |
 |  0.4    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 22.03.2024 | Pkt. 2.2 bearbeitet |
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
+|  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -47,7 +48,7 @@ bedient werden muss.
 | asymmetrische Verschlüsselung | Verschlüsselungsverfahren, bei dem für die Verschlüsselung und die Entschlüsselung zwei unterschiedliche Schlüssel verwendet werden |
 | Block | Einheit von Daten in einer Blockchain-Datenstruktur, bestehend aus einem Block-Header und einem Merkle-Tree mit Hash-Referenzen auf die Transaktionsdaten ("Inhalt") |
 | Blockchain-Datenstruktur | Organisation von Transaktionsdaten in miteinander verketteten Einheiten ("Blöcken") |
-| Block-Header | Kopf eines Blocks einer Blockchain, bestehend aus der Hash-Referenz auf den vorherigen Block-Header, der Wurzel eines Merkle-Trees, dem Schwierigkeitsgrad für das Hashpuzzle ("Target"), einem Zeitstempel und einer Nonce |
+| Block-Header | Kopf eines Blocks einer Blockchain, bestehend (zumindest) aus der Hash-Referenz auf den vorherigen Block-Header, der Wurzel eines Merkle-Trees, dem Schwierigkeitsgrad für das Hashpuzzle ("Target"), einem Zeitstempel und einer Nonce |
 | digitale Signatur | ein mit dem privaten Schlüssel verschlüsselter und zusammen mit einer Nachricht verschickter Hashwert der Nachricht, der die Authentifizierung der Nachricht ermöglicht |
 | Hash-Referenz | ein Hash-Wert, der auf Daten (z.B. Transaktionsdaten) verweist, die an einem anderen Ort gespeichert sind |
 | Hashpuzzle | eine Berechnungsaufgabe, bei der ein Hashwert mit einem bestimmten Target gesucht wird und die nur durch die Trial-and-Error-Methode zu lösen ist, indem den Daten, die gehasht werden, eine sich ständig ändernde Nonce hinzugefügt wird |
@@ -69,8 +70,8 @@ Das **Lastenheft** mit den Anforderungen an die Applikation aus der Sicht des Au
 ### 1.5 Überblick
 
 * In **Pkt. 2** dieses Pflichtenhefts wird die Applikation allgemein beschrieben.
-* In **Pkt. 3** werden die im Lastenheft formulierten Anforderungen detailliert aufgelistet. Dazu dienen die im Anhang 
-skizzierten und beschriebenen Use-cases.
+* In **Pkt. 3** werden die im Lastenheft formulierten Anforderungen detailliert aufgelistet. Unterstützend dafür finden
+sich im Anhang skizzierte und beschriebene Use-cases.
 * **Pkt. 4** ist aufgrund der speziellen Situation, dass es sich um das "individuelle Projekt" im Rahmen des 
 Studienprogramms GymInf handelt und es keinen Auftraggeber im eigentlichen Sinn gibt, der am Ende das fertige
 Produkt abnimmt, kurz gehalten.
@@ -91,9 +92,12 @@ und /LQF10/ bis /LQE10/) ergeben.
 
 * Die Applikation besteht aus einer Anzahl von animierten Grafiken, über die a) durch das Klicken von "weiter"- und
   "zurück"-Buttons navigiert werden kann oder die b) über ein Navigationsmenü direkt angesteuert werden können.
-* Alle animierten Grafiken können vom User durch das Klicken von Buttons gestartet, unterbrochen oder abgebrochen werden.
+* Alle animierten Grafiken können vom User durch das Klicken von Buttons gestartet, unterbrochen, fortgesetzt oder
+  abgebrochen werden.
 * Bei allen animierten Grafiken gibt es (vor dem Start und/oder nach Beendigung bzw. Abbruch der Animation) die Möglichkeit,
-  dass durch das Klicken auf ein intuitiv verständliches Symbol weiterführende erklärende Texte aufpoppen.
+  dass durch das Klicken auf ein intuitiv verständliches Symbol erklärende Texte aufpoppen. Dabei wird optisch unterschieden
+  zwischen Erklärungen, die sich direkt auf das in der Animation Gezeigte beziehen, und weiterführenden Texten, die über das
+  in der Animation Gezeigte hinausgehen.
 * Bei bestimmten Animationen gibt es für den User die Möglichkeit, durch (Text-)Eingaben über ein Formular die Gestaltung
   der Animationen interaktiv zu beeinflussen, wobei einmal getätigte Eingaben auch Auswirkungen auf die Gestaltung danach
   folgender Animationen haben können.
@@ -110,8 +114,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 ### 2.4 Einschränkungen
 * Die Applikation soll lediglich in deutscher Sprache zur Verfügung stehen, es sind keine Übersetzungen geplant.
-* Es ist möglich, dass einige Animationen eine Grösse erreichen, die auf einem kleinen, hochformatigen Bildschirm (z.B.
-  Smartphone) nicht darstellbar ist.
+* Es ist möglich, dass einige Animationen so gross werden, dass sie auf einem kleinen, hochformatigen Bildschirm (z.B.
+  Smartphone) nicht zur Gänze darstellbar sind.
 * Das "individuelle Projekt" im Studienprogramm GymInf dient dazu, dass Studierenden ihre im Studium erworbenen Kenntnisse
   in die Praxis umsetzen. Daher versucht der Autor (Programmierer), soweit das möglich ist, den notwendigen Code
   eigenhändig zu schreiben und auf Bibliotheken, Templates, APIs, ... weitestgehend zu verzichten. Es ergibt sich von
@@ -152,29 +156,59 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 
 ## Anhang A. Use-cases
 
-### Use-Case 1 - gilt für alle n Animationen:
+### Use-Case 1 - gilt für alle Animationen:
 
 ![Diagram](img/use-case_1.svg)
 
-* Name: *Animation n starten / unterbrechen / fortsetzen / abbrechen
+* Name: *Animation n starten / unterbrechen / fortsetzen / abbrechen*
 * Akteur: *User*
 * Vorbedingungen: *Der User hat zu einer Animation navigiert, die Animation ist vollständig geladen.*
-* Standardablauf
+* Standardablauf:
     * Der User startet die Animation n.
       * (Optional, mehrfach möglich: Der User unterbricht die Animation.)
       * (Optional, nur nach Unterbrechen der Animation möglich: Der User setzt die Animation fort.)
       * (Optional: der User bricht die Animation ab.)
     * Die Animation ist beendet.
-* Nachbedingungen Erfolg: *Der letzte Frame der Animation wird am Bildschirm angezeigt.*
+* Nachbedingung Erfolg: *Der letzte Frame der Animation wird am Bildschirm angezeigt.*
 * Nachbedingung Sonderfall 1a: *Die vom User gewählte Animation wird geladen.*
 
 #### Sonderfall 1a: Der User navigiert von der Animation weg.
 * Ablauf Sonderfall 1a
-    * Der User betätigt die "weiter"- oder "zurück"-Buttons oder wählt eine Animation im Animationsmenü.
-    * Der User navigiert zur nächsten ODER zur vorherigen ODER zu einer beliebigen Animation.
+    * Der User betätigt die "weiter"- oder "zurück"-Buttons oder wählt eine Animation im Navigationsmenü.
+    * Der User navigiert zur nachfolgenden ODER zur vorherigen ODER zu einer beliebigen Animation.
 
 
-### Use Case 2:
+### Use Case 2 - gilt für alle Animationen:
+
+![Diagram](img/use-case_2.svg)
+
+* Name: *Navigation zwischen den einzelnen Animationen*
+* Akteure: *User*
+* Vorbedingungen: *Der User hat zu einer beliebigen Animation n navigiert.*
+* Standardablauf:
+    * Der User navigiert zur vorherigen Animation n-1 durch Klicken auf einen "Zurück"-Button
+    * ODER: Der User navigiert zur nachfolgenden Animation n+1 durch Klichen auf einen "Weiter"-Button
+    * ODER: Der User navigiert zu eienr beliebigen Animation m durch das Klicken auf einen Link zur
+      Animation m im Navigationsmenü.
+* Nachbedingungen Erfolg: *Der User hat zur vorherigen ODER zur nachfolgenden ODER zu einer beliebigen
+  Animation m navigiert, die gewählte Animation wird geladen.*
+* Nachbedingung Sonderfall 2a: *Die erste Animation wird geladen.*
+* Nachbedingung Sonderfall 2b: *Die letzte Animation wird geladen.*
+
+#### Sonderfall 2a: Der User hat zur ersten Animation navigiert und klickt auf den "Zurück"-Button
+* Ablauf Sonderfall 2a
+    * Der User klickt auf den "Zurück"-Button
+    * Eine Benachrichtigung erscheint Bildschirm mit folgendem Text: "Sie befinden sich bereits bei der
+      ersten Animation."
+
+#### Sonderfall 2b: Der User hat zur letzten Animation navigiert und klickt auf den "Weiter"-Button
+* Ablauf Sonderfall 2b
+    * Der User klickt auf den "Weiter"-Button
+    * Eine Benachrichtigung erscheint Bildschirm mit folgendem Text: "Sie befinden sich bereits bei der
+      letzten Animation."
+
+
+### Use Case 3:
 * Name: *Name des Use-cases*
 * Akteure: *Akteur1, Akteur2, ...*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
@@ -184,7 +218,7 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 * Nachbedingungen Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
 * Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-#### Sonderfall 2a: Ausnahme 1
+#### Sonderfall 3a: Ausnahme 1
 * Ablauf Sonderfall 1a
     * Schritt 1
     * Schritt 2
