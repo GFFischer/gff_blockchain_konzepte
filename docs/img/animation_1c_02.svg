@@ -1,0 +1,657 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="291.63531mm"
+   height="85.642265mm"
+   viewBox="0 0 291.63532 85.642265"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="animation_1c_02.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.82142635"
+     inkscape:cx="601.39293"
+     inkscape:cy="177.73961"
+     inkscape:window-width="1440"
+     inkscape:window-height="890"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Dot"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Dot"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         sodipodi:nodetypes="sssss"
+         id="path17" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Dot-7"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Dot"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         sodipodi:nodetypes="sssss"
+         id="path17-4" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-7"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-9" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-6.8838402,-44.919881)">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.412832;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1"
+       width="46.859364"
+       height="85.229431"
+       x="7.0902562"
+       y="45.126297" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2"
+       width="43.502296"
+       height="18.90414"
+       x="8.8826685"
+       y="47.146469" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.340498;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3"
+       width="42.96542"
+       height="35.759613"
+       x="9.3109961"
+       y="91.805504" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="29.836655"
+       y="54.890335"
+       id="text3"><tspan
+         id="tspan3"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="29.836655"
+         y="54.890335"
+         sodipodi:role="line">Hash Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="29.608891"
+       y="99.13002"
+       id="text4"><tspan
+         id="tspan4"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="29.608891"
+         y="99.13002"
+         sodipodi:role="line">Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="30.747696"
+       y="113.93447"
+       id="text5"><tspan
+         id="tspan5"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="30.747696"
+         y="113.93447"
+         sodipodi:role="line">Informatik ist</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.412368;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-9"
+       width="46.859829"
+       height="85.037132"
+       x="68.725014"
+       y="45.318829" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-4"
+       width="43.502296"
+       height="18.90414"
+       x="70.517662"
+       y="47.339226" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.346029;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3-6"
+       width="43.281994"
+       height="36.660744"
+       x="70.265594"
+       y="91.325882" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="90.767799"
+       y="97.69072"
+       id="text4-8"><tspan
+         id="tspan4-5"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="90.767799"
+         y="97.69072"
+         sodipodi:role="line">Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="91.906593"
+       y="112.49518"
+       id="text5-0"><tspan
+         id="tspan5-9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="91.906593"
+         y="112.49518"
+         sodipodi:role="line">für mich ein</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.411487;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-9-5"
+       width="46.86071"
+       height="84.672485"
+       x="128.60231"
+       y="45.683914" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-4-2"
+       width="43.502296"
+       height="18.90414"
+       x="130.39539"
+       y="47.704754" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.34628;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3-6-7"
+       width="43.281742"
+       height="36.71413"
+       x="130.39178"
+       y="91.337349" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="150.89386"
+       y="97.755692"
+       id="text4-8-8"><tspan
+         id="tspan4-5-9"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="150.89386"
+         y="97.755692"
+         sodipodi:role="line">Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="152.03265"
+       y="112.56014"
+       id="text5-0-2"><tspan
+         id="tspan5-9-3"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="152.03265"
+         y="112.56014"
+         sodipodi:role="line">Fachgebiet, das</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.411484;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-9-5-8"
+       width="46.86071"
+       height="84.671051"
+       x="189.90627"
+       y="45.363247" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-4-2-3"
+       width="43.502296"
+       height="18.90414"
+       x="191.69934"
+       y="47.384083" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.34705;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3-6-7-9"
+       width="43.280972"
+       height="36.878254"
+       x="192.01823"
+       y="91.496368" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="212.51991"
+       y="98.079224"
+       id="text4-8-8-0"><tspan
+         id="tspan4-5-9-3"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="212.51991"
+         y="98.079224"
+         sodipodi:role="line">Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:41.3505;display:inline;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="214.30292"
+       y="90.980713"
+       id="text5-0-2-2"
+       transform="translate(-0.64420465,20.308633)"><tspan
+         x="214.30292"
+         y="90.980713"
+         id="tspan17"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Arial Italic';fill:#000000;stroke:none"
+           id="tspan1">viel mit logischem</tspan><tspan
+           y="90.980713"
+           id="tspan18"> </tspan></tspan><tspan
+         x="214.30292"
+         y="97.166322"
+         id="tspan20"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Arial Italic';fill:#000000;stroke:none"
+           id="tspan19">Denken</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="213.44859"
+       y="54.983021"
+       id="text3-9-0"><tspan
+         id="tspan3-6-7"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="213.44859"
+         y="54.983021"
+         sodipodi:role="line">Hash Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="213.22081"
+       y="62.043606"
+       id="text9-9-0"><tspan
+         id="tspan9-9-8"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="213.22081"
+         y="62.043606"
+         sodipodi:role="line">673acd4e</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="29.608894"
+       y="61.95092"
+       id="text9"><tspan
+         id="tspan9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="29.608894"
+         y="61.95092"
+         sodipodi:role="line">d3af213c</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.373695;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-3"
+       width="43.482086"
+       height="21.137629"
+       x="9.037509"
+       y="68.44754" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="29.981382"
+       y="76.181297"
+       id="text3-8"><tspan
+         id="tspan3-9"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="29.981382"
+         y="76.181297"
+         sodipodi:role="line">Startseite:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="29.75363"
+       y="83.241882"
+       id="text9-2"><tspan
+         id="tspan9-5"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="29.75363"
+         y="83.241882"
+         sodipodi:role="line">&quot;Genesis-Block&quot;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="91.923271"
+       y="54.998165"
+       id="text3-5"><tspan
+         id="tspan3-0"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="91.923271"
+         y="54.998165"
+         sodipodi:role="line">Hash Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="91.695511"
+       y="62.058746"
+       id="text9-6"><tspan
+         id="tspan9-3"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="91.695511"
+         y="62.058746"
+         sodipodi:role="line">34ca5f95</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="152.14464"
+       y="55.303696"
+       id="text3-9"><tspan
+         id="tspan3-6"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="152.14464"
+         y="55.303696"
+         sodipodi:role="line">Hash Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="151.91685"
+       y="62.364281"
+       id="text9-9"><tspan
+         id="tspan9-9"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="151.91685"
+         y="62.364281"
+         sodipodi:role="line">85c72847</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.370883;stroke-dasharray:none;stroke-opacity:1"
+       id="rect9"
+       width="43.484898"
+       height="20.819355"
+       x="70.52636"
+       y="68.606674" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.370119;stroke-dasharray:none;stroke-opacity:1"
+       id="rect10"
+       width="43.485661"
+       height="20.733261"
+       x="130.7258"
+       y="68.649719" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.370093;stroke-dasharray:none;stroke-opacity:1"
+       id="rect11"
+       width="43.485687"
+       height="20.730413"
+       x="191.70764"
+       y="68.329041" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:41.4004;display:inline;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="90.634865"
+       y="75.290611"
+       id="text11"
+       transform="translate(0.64420464,-0.96630697)"><tspan
+         x="90.634865"
+         y="75.290611"
+         id="tspan22"><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan21">Hash vorheriger</tspan><tspan
+           y="75.290611"
+           id="tspan23"> </tspan></tspan><tspan
+         x="90.634865"
+         y="81.464222"
+         id="tspan25"><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan24">Block:</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="90.486237"
+       y="86.430702"
+       id="text12"><tspan
+         id="tspan12"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="90.486237"
+         y="86.430702"
+         sodipodi:role="line">d3af213c</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:41.4004;display:inline;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="90.634865"
+       y="75.290611"
+       id="text13"
+       transform="translate(122.39888,-1.9326139)"><tspan
+         x="90.634865"
+         y="75.290611"
+         id="tspan27"><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan26">Hash vorheriger</tspan><tspan
+           y="75.290611"
+           id="tspan28"> </tspan></tspan><tspan
+         x="90.634865"
+         y="81.464222"
+         id="tspan30"><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan29">Block:</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:41.4004;display:inline;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="90.634865"
+       y="75.290611"
+       id="text14"
+       transform="translate(61.199441,-1.6105116)"><tspan
+         x="90.634865"
+         y="75.290611"
+         id="tspan32"><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan31">Hash vorheriger</tspan><tspan
+           y="75.290611"
+           id="tspan33"> </tspan></tspan><tspan
+         x="90.634865"
+         y="81.464222"
+         id="tspan35"><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan34">Block:</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="151.60654"
+       y="85.894318"
+       id="text15"><tspan
+         id="tspan15"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="151.60654"
+         y="85.894318"
+         sodipodi:role="line">34ca5f95</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="212.79419"
+       y="85.555641"
+       id="text16"><tspan
+         id="tspan16"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="212.79419"
+         y="85.555641"
+         sodipodi:role="line">85c72847</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Triangle);paint-order:normal"
+       d="M 70.337998,79.70693 51.978166,57.803974"
+       id="path16"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Triangle);paint-order:normal"
+       d="M 130.89323,80.029033 112.5334,58.126077"
+       id="path18"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Triangle);paint-order:normal"
+       d="M 191.77057,79.062726 173.41074,57.15977"
+       id="path19"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.411484;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-9-5-8-1"
+       width="46.86071"
+       height="84.671051"
+       x="251.4527"
+       y="45.447563" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-4-2-3-5"
+       width="43.502296"
+       height="18.90414"
+       x="253.24577"
+       y="47.468391" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.34705;stroke-dasharray:none;stroke-opacity:1"
+       id="rect3-6-7-9-9"
+       width="43.280972"
+       height="36.878254"
+       x="253.56467"
+       y="91.580681" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="274.06635"
+       y="98.163536"
+       id="text4-8-8-0-5"><tspan
+         id="tspan4-5-9-3-8"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="274.06635"
+         y="98.163536"
+         sodipodi:role="line">Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:41.3505;display:inline;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="214.30292"
+       y="90.980713"
+       id="text5-0-2-2-1"
+       transform="translate(60.902215,20.392949)"><tspan
+         x="214.30292"
+         y="90.980713"
+         id="tspan37"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Arial Italic';fill:#000000;stroke:none"
+           id="tspan36">zu tun hat.</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="274.99503"
+       y="55.067337"
+       id="text3-9-0-5"><tspan
+         id="tspan3-6-7-0"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="274.99503"
+         y="55.067337"
+         sodipodi:role="line">Hash Inhalt:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="274.76724"
+       y="62.127922"
+       id="text9-9-0-7"><tspan
+         id="tspan9-9-8-4"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="274.76724"
+         y="62.127922"
+         sodipodi:role="line">a4902af2</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.370093;stroke-dasharray:none;stroke-opacity:1"
+       id="rect11-4"
+       width="43.485687"
+       height="20.730413"
+       x="253.25407"
+       y="68.413353" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:41.4004;display:inline;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="90.634865"
+       y="75.290611"
+       id="text13-1"
+       transform="translate(183.9453,-1.848298)"><tspan
+         x="90.634865"
+         y="75.290611"
+         id="tspan39"><tspan
+   style="fill:#000000;stroke:none"
+   id="tspan38">Hash vorheriger</tspan><tspan
+   y="75.290611"
+   id="tspan40"> </tspan></tspan><tspan
+         x="90.634865"
+         y="81.464222"
+         id="tspan42"><tspan
+           style="fill:#000000;stroke:none"
+           id="tspan41">Block:</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="274.34061"
+       y="85.639961"
+       id="text16-3"><tspan
+         id="tspan16-7"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="274.34061"
+         y="85.639961"
+         sodipodi:role="line">673acd4e</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.465;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot-7);marker-end:url(#Triangle-7);paint-order:normal"
+       d="M 253.31699,79.147045 234.95716,57.244085"
+       id="path19-0"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
