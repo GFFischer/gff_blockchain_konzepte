@@ -178,7 +178,6 @@ Definieren Sie hier mindestens ein Abnahmekriterium
     * Der User navigiert zur nachfolgenden ODER zur vorherigen ODER zu einer beliebigen Animation.
 
 
-
 ### Use Case 2 - gilt für alle Animationen:
 
 ![Diagram](img/use-case_2.svg)
@@ -208,7 +207,6 @@ Definieren Sie hier mindestens ein Abnahmekriterium
       bei der letzten Animation."
 
 
-
 ### Use Case 3 - gilt für alle Animationen:
 
 ![Diagram](img/use-case_3.svg)
@@ -232,9 +230,28 @@ Definieren Sie hier mindestens ein Abnahmekriterium
   erklärenden oder weiterführenden Texte.*
 
 
+### Use Case 4 - Animation 1a:
+* Name: *Aufbau einer Blockchain-Datenstruktur, Teil 1/4*
+* Akteure: *User*
+* Vorbedingungen: *Animation 1a ist geladen. Der erste Frame zeigt zwei symbolisch dargestellte
+  Seiten eines Buchs, bestehend jeweils aus einer Seitenzahl ("Seite 1", "Seite 2") und einem 
+  kurzen Text.*
+* Standardablauf
+    * Der User klickt auf einen Button, der mit "Erstelle eine neue Seite" beschriftet ist.
+    * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für eine neue Seite
+      eingeben kann. Die Seitenzahl ("Seite 3") wird automatisch zugewiesen.
+    * xxxxxxxxxxxxxxxx
+* Nachbedingungen Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-### Use Case 4 - gilt für alle Animationen:
-* Name: *Erklärende und/oder weiterführende Texte zu den Animationen öffnen*
+#### Sonderfall 4a: Ausnahme 1
+* Ablauf Sonderfall 4a
+    * Schritt 1
+    * Schritt 2
+
+
+### Use Case 5 - Animation 1b:
+* Name: *Aufbau einer Blockchain-Datenstruktur, Teil 1/4*
 * Akteure: *User*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
 * Standardablauf
@@ -247,6 +264,3 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 * Ablauf Sonderfall 4a
     * Schritt 1
     * Schritt 2
-
-
-
