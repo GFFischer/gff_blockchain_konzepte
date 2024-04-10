@@ -7,6 +7,7 @@
 |  1.0    |  Georg Fischer   | Konzept 2024-03-06, PPT zur Veranschaulichung | fertig gestellt | 19.03.2024 | Pkt. 3-5 bearbeitet, Bearbeitung (vorläufig) abgeschlossen |
 |  1.1    |  Georg Fischer   | Lastenheft, Version 1.0                       | Verbesserungen  | 20.03.2024 | sprachliche Nachbesserungen Pkt.5                          |
 |  1.2    |  Georg Fischer   | Lastenheft, Version 1.1                       | Ergänzungen     | 21.03.2024 | in Pkt. 1 /LZ30/ ergänzt, in Pkt. 5 /LQB50/ ergänzt        |
+|  1.3    |  Georg Fischer   | Lastenheft, Version 1.2                       | Präzisierungen  | 10.04.2024 | /LF10/ und /LF20/ ergänzt und sprachlich verdeutlicht      |
 
 
 
@@ -68,9 +69,11 @@ Berechnungsaufwand) ausgewählt wird.
 
 ## 4. Funktionale Anforderungen
 
-* **/LF10/** Die Applikation *muss* dem User die Möglichkeit geben, die Animationen selbstständig zu starten.
+* **/LF10/** Die Applikation *muss* dem User die Möglichkeit geben, die Animationen selbstständig zu starten,
+abzubrechen, zu unterbrechen und nach einer Unterbrechung fortzusetzen.
 * **/LF20/** Die Applikation *muss* dem User die Möglichkeit geben, über "weiter"- und "zurück"-Buttons
-zwischen den einzelnen Animationen nach vor und zurück zu springen.
+zwischen den einzelnen Animationen nach vor und zurück zu springen sowie über ein eigenes Navigationsmenü direkt zu den
+einzelnen Animationen zu navigieren.
 * **/LF30/** Die Applikation *soll* dem User die Möglichkeit geben, an den vorgesehenen Stellen interaktiv in die
 Gestaltung der Animationen eingreifen zu können:
   * /LF31/ beim Aufbau einer Blockchain-Datenstruktur durch das Hinzufügen von neuen Seiten (Blöcken, Block-Headern) und
@@ -81,8 +84,8 @@ Gestaltung der Animationen eingreifen zu können:
     Empfänger-Adresse und eines zu überweisenden Betrags sowie durch das Bestätigen der digitalen Signatur
   * /LF34/ beim Speichern von Transaktionen und Erstellen von neuen Blöcken durch das Verändern des zu überweisenden
     Betrags und/oder der Empfänger-Adresse bei einer Transaktion
-  * /LF35/ beim Schützen der Blöcke durch Proof-of-Work durch das Bestätigen des Starts oder des Abbruchs eines Mining-
-    Vorgangs
+  * /LF35/ beim Schützen der Blöcke durch Proof-of-Work durch das Bestätigen des Starts oder des Abbruchs eines
+    Mining-Vorgangs
 * **/LF40/** Die Applikation *muss* dem User die Möglichkeit geben, durch das Klicken auf ein intuitiv
 verständliches Symbol erklärende Texte zu den einzelnen Animationen zu öffnen.
 
@@ -108,6 +111,6 @@ dadurch nicht von der aktuellen Animation wegnavigiert wird.
 * **/LQB30/** Die Navigation über die einzelnen Animationen soll in der gesamten Applikation einfach und
 übersichtlich sein.
 * **/LQB40/** Die optische Gestaltung der Applikation soll ansprechend und farbenfroh sein.
-* **/LQE10/** Die erklärenden Texte sollen für junge Lernzende mit wenig Erfahrung und geringen Kenntnissen in der
+* **/LQE10/** Die erklärenden Texte sollen für junge Lernende mit wenig Erfahrung und geringen Kenntnissen in der
 Informatik verständlich geschrieben sein und sie sollen ausgewogen bezüglich notwendiger Kürze und wünschenswerter
 Tiefe sein.
