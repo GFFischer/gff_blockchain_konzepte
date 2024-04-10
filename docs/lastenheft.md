@@ -87,7 +87,7 @@ Gestaltung der Animationen eingreifen zu können:
   * /LF35/ beim Schützen der Blöcke durch Proof-of-Work durch das Bestätigen des Starts oder des Abbruchs eines
     Mining-Vorgangs
 * **/LF40/** Die Applikation *muss* dem User die Möglichkeit geben, durch das Klicken auf ein intuitiv
-verständliches Symbol erklärende Texte zu den einzelnen Animationen zu öffnen.
+verständliches Symbol erklärende und/oder weiterführende Texte zu den einzelnen Animationen zu öffnen.
 
 
 ## 5. Qualitätsanforderungen
