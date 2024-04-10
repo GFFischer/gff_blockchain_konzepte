@@ -8,7 +8,7 @@
 |  0.3    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.03.2024 | Pkt. 1.4 - 2.5 (ausgenommen 2.2) bearbeitet |
 |  0.4    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 22.03.2024 | Pkt. 2.2 bearbeitet |
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
-|  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 4 (Anhang) hinzugefügt |
+|  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 6 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -238,7 +238,7 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 * Akteure: *User*
 * Vorbedingungen: *Animation 1a ist geladen. Der erste Frame zeigt zwei symbolisch dargestellte
   Seiten eines Buchs, bestehend jeweils aus einer Seitenzahl ("Seite 1", "Seite 2") und einem 
-  kurzen Text (siehe folgende schematische Darstellung).*
+  kurzen Text als Inhalt (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_1a_01.svg)
 
@@ -263,9 +263,9 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 * Akteure: *User*
 * Vorbedingungen: *Animation 1b ist geladen. Der erste Frame zeigt drei symbolisch dargestellte
   Seiten eines Buchs, bestehend jeweils aus einem auf den Inhalt berechneten Hashwert (eine
-  achtstellige hexadezimale Zahl) und einem kurzen Text. Die Texte sind identisch mit jenen aus
-  Animation 1a, auf der dritten Seite befindet sich also der vom User in Animation 1a eingegebene
-  Text (siehe folgende schematische Darstellung).*
+  achtstellige hexadezimale Zahl) und einem kurzen Text als Inhalt. Die Texte sind identisch mit
+  jenen aus Animation 1a, auf der dritten Seite befindet sich also der vom User in Animation 1a
+  eingegebene Text (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_1b_01.svg)
 
@@ -284,7 +284,40 @@ Definieren Sie hier mindestens ein Abnahmekriterium
  
 ![Diagram](img/animation_1b_02.svg)
 
-### Use Case 6 - Animation 1b:
+
+### Use Case 6 - Animation 1c:
+
+![Diagram](img/use-case_6.svg)
+
+* Name: *Aufbau einer Blockchain-Datenstruktur, Teil 3/4*
+* Akteure: *User*
+* Vorbedingungen: *Animation 1c ist geladen. Der erste Frame zeigt vier symbolisch dargestellte
+  Blöcke einer Blockchain, bestehend jeweils aus einem auf den Inhalt berechneten Hashwert, einer
+  Hash-Referenz auf den vorherigen Block und einem kurzen Text als Inhalt. Die Texte sind identisch
+  mit jenen aus Animation 1b, auf der dritten und der vierten Seite befinden sich also die vom
+  User in den Animation 1a und 1b eingegebenen Texte (siehe folgende schematische Darstellung).*
+
+![Diagram](img/animation_1c_01.svg)
+
+* Standardablauf
+    * Der User klickt auf einen Button, der mit "Erstelle eine neue Seite" beschriftet ist.
+    * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für einen neuen
+      Block eingibt. 
+    * Durch Klicken eines Buttons ("Hashwert berechnen") wird auf den vom User eingegebenen Text
+      ein Hashwert berechnet. Die Hash-Referenz auf den vorherigen Block wird automatisch zugewiesen.
+      Der User bestätigt mit "OK".
+    * Eine neuer symbolisch dargestellter Block einer Blockchain, bestehend aus dem berechneten
+      Hashwert, der Hash-Referenz auf den vorherigen Block und dem vom User eingegebenen Inhalt wird
+      der Animation hinzugefügt.
+    * Animation 1c ist beendet.
+* Nachbedingungen Erfolg: *Ein neuer symbolisch dargestellter Block einer Blockchain mit dem vom
+  User eingegebenen Ihhalt, dem auf diesen Inhalt berechneten Hashwert und einer Hash-Referenz auf
+  den vorherigen Block ist der Animation hinzugefügt (siehe folgende schematische Darstellung).*
+ 
+![Diagram](img/animation_1c_02.svg)
+
+
+### Use Case 7 - Animation 1b:
 * Name: *Aufbau einer Blockchain-Datenstruktur, Teil 1/4*
 * Akteure: *User*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
