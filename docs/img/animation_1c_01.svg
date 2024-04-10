@@ -110,7 +110,7 @@
          style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
          x="29.836655"
          y="54.890335"
-         sodipodi:role="line">Hash Inhalt:</tspan></text>
+         sodipodi:role="line">Hashwert Block:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -260,16 +260,16 @@
        transform="translate(-0.64420465,20.308633)"><tspan
          x="214.30292"
          y="90.980713"
-         id="tspan2"><tspan
-           style="font-style:italic;-inkscape-font-specification:'Arial Italic';fill:#000000;stroke:none"
-           id="tspan1">viel mit logischem</tspan><tspan
-           y="90.980713"
-           id="tspan6"> </tspan></tspan><tspan
+         id="tspan13"><tspan
+   style="font-style:italic;-inkscape-font-specification:'Arial Italic';fill:#000000;stroke:none"
+   id="tspan11">viel mit logischem</tspan><tspan
+   y="90.980713"
+   id="tspan14"> </tspan></tspan><tspan
          x="214.30292"
          y="97.166322"
-         id="tspan8"><tspan
+         id="tspan32"><tspan
            style="font-style:italic;-inkscape-font-specification:'Arial Italic';fill:#000000;stroke:none"
-           id="tspan7">Denken</tspan></tspan></text>
+           id="tspan31">Denken</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -280,7 +280,7 @@
          style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
          x="213.44859"
          y="54.983021"
-         sodipodi:role="line">Hash Inhalt:</tspan></text>
+         sodipodi:role="line">Hashwert Block:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -342,7 +342,7 @@
          style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
          x="91.923271"
          y="54.998165"
-         sodipodi:role="line">Hash Inhalt:</tspan></text>
+         sodipodi:role="line">Hashwert Block:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -364,7 +364,7 @@
          style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
          x="152.14464"
          y="55.303696"
-         sodipodi:role="line">Hash Inhalt:</tspan></text>
+         sodipodi:role="line">Hashwert Block:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -406,16 +406,18 @@
        transform="translate(0.64420464,-0.96630697)"><tspan
          x="90.634865"
          y="75.290611"
-         id="tspan17"><tspan
+         id="tspan34"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan10">Hash vorheriger</tspan><tspan
+           id="tspan33">Hashwert</tspan><tspan
            y="75.290611"
-           id="tspan18"> </tspan></tspan><tspan
+           id="tspan35"> </tspan></tspan><tspan
          x="90.634865"
          y="81.464222"
-         id="tspan20"><tspan
-           style="fill:#000000;stroke:none"
-           id="tspan19">Block:</tspan></tspan></text>
+         id="tspan38"><tspan
+   style="fill:#000000;stroke:none"
+   id="tspan36">vorheriger</tspan> <tspan
+   style="fill:#000000;stroke:none"
+   id="tspan37">Block:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -436,16 +438,18 @@
        transform="translate(122.39888,-1.9326139)"><tspan
          x="90.634865"
          y="75.290611"
-         id="tspan22"><tspan
+         id="tspan40"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan21">Hash vorheriger</tspan><tspan
+           id="tspan39">Hashwert</tspan><tspan
            y="75.290611"
-           id="tspan23"> </tspan></tspan><tspan
+           id="tspan41"> </tspan></tspan><tspan
          x="90.634865"
          y="81.464222"
-         id="tspan25"><tspan
-           style="fill:#000000;stroke:none"
-           id="tspan24">Block:</tspan></tspan></text>
+         id="tspan44"><tspan
+   style="fill:#000000;stroke:none"
+   id="tspan42">vorheriger</tspan> <tspan
+   style="fill:#000000;stroke:none"
+   id="tspan43">Block:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:41.4004;display:inline;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -455,16 +459,18 @@
        transform="translate(61.199441,-1.6105116)"><tspan
          x="90.634865"
          y="75.290611"
-         id="tspan27"><tspan
+         id="tspan46"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan26">Hash vorheriger</tspan><tspan
+           id="tspan45">Hashwert</tspan><tspan
            y="75.290611"
-           id="tspan28"> </tspan></tspan><tspan
+           id="tspan47"> </tspan></tspan><tspan
          x="90.634865"
          y="81.464222"
-         id="tspan30"><tspan
-           style="fill:#000000;stroke:none"
-           id="tspan29">Block:</tspan></tspan></text>
+         id="tspan50"><tspan
+   style="fill:#000000;stroke:none"
+   id="tspan48">vorheriger</tspan> <tspan
+   style="fill:#000000;stroke:none"
+   id="tspan49">Block:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"

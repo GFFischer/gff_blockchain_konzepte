@@ -24,7 +24,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1.1616723"
-     inkscape:cx="408.89329"
+     inkscape:cx="805.73497"
      inkscape:cy="212.62451"
      inkscape:window-width="1440"
      inkscape:window-height="890"
@@ -70,7 +70,7 @@
          style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
          x="29.836655"
          y="54.890335"
-         sodipodi:role="line">Hashwert:</tspan></text>
+         sodipodi:role="line">Hashwert Seite:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -220,16 +220,16 @@
        transform="translate(0,-1.5943252)"><tspan
          x="214.30292"
          y="90.980713"
-         id="tspan2"><tspan
-           style="font-style:italic;-inkscape-font-specification:'Arial Italic';fill:#000000;stroke:none"
-           id="tspan1">viel mit logischem</tspan><tspan
-           y="90.980713"
-           id="tspan6"> </tspan></tspan><tspan
+         id="tspan11"><tspan
+   style="font-style:italic;-inkscape-font-specification:'Arial Italic';fill:#000000;stroke:none"
+   id="tspan10">viel mit logischem</tspan><tspan
+   y="90.980713"
+   id="tspan12"> </tspan></tspan><tspan
          x="214.30292"
          y="97.166322"
-         id="tspan8"><tspan
+         id="tspan14"><tspan
            style="font-style:italic;-inkscape-font-specification:'Arial Italic';fill:#000000;stroke:none"
-           id="tspan7">Denken</tspan></tspan></text>
+           id="tspan13">Denken</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -240,7 +240,7 @@
          style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
          x="214.4149"
          y="55.305122"
-         sodipodi:role="line">Hashwert:</tspan></text>
+         sodipodi:role="line">Hashwert Seite:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -273,7 +273,7 @@
          style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
          x="91.923271"
          y="54.998165"
-         sodipodi:role="line">Hashwert:</tspan></text>
+         sodipodi:role="line">Hashwert Seite:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
@@ -295,7 +295,7 @@
          style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
          x="152.14464"
          y="55.303696"
-         sodipodi:role="line">Hashwert:</tspan></text>
+         sodipodi:role="line">Hashwert Seite:</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
