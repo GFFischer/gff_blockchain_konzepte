@@ -8,7 +8,7 @@
 |  0.3    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.03.2024 | Pkt. 1.4 - 2.5 (ausgenommen 2.2) bearbeitet |
 |  0.4    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 22.03.2024 | Pkt. 2.2 bearbeitet |
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
-|  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 und 3 (Anhang) hinzugefügt |
+|  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 4 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -256,6 +256,35 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 
 
 ### Use Case 5 - Animation 1b:
+
+![Diagram](img/use-case_5.svg)
+
+* Name: *Aufbau einer Blockchain-Datenstruktur, Teil 2/4*
+* Akteure: *User*
+* Vorbedingungen: *Animation 1b ist geladen. Der erste Frame zeigt drei symbolisch dargestellte
+  Seiten eines Buchs, bestehend jeweils aus einem auf den Inhalt berechneten Hashwert (eine
+  achtstellige hexadezimale Zahl) und einem kurzen Text. Die Texte sind identisch mit jenen aus
+  Animation 1a, auf der dritten Seite befindet sich also der vom User in Animation 1a eingegebene
+  Text (siehe folgende schematische Darstellung).*
+
+![Diagram](img/animation_1b_01.svg)
+
+* Standardablauf
+    * Der User klickt auf einen Button, der mit "Erstelle eine neue Seite" beschriftet ist.
+    * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für eine neue Seite
+      eingibt. 
+    * Durch Klicken eines Buttons ("Hashwert berechnen") wird auf den vom User eingegebenen Text
+      ein Hashwert berechnet. Der User bestätigt mit "OK".
+    * Eine neue symbolisch dargestellte Seite eines Buchs, bestehend aus dem berechneten Hashwert
+      und dem vom User eingegebenen Inhalt wird der Animation hinzugefügt.
+    * Animation 1b ist beendet.
+* Nachbedingungen Erfolg: *Eine neue symbolisch dargestellte Seite eines Buchs mit dem vom User
+  eingegebenen Ihhalt und dem auf diesen Inhalt berechneten Hashwert ist der Animation hinzugefügt
+  (siehe folgende schematische Darstellung).*
+ 
+![Diagram](img/animation_1b_02.svg)
+
+### Use Case 6 - Animation 1b:
 * Name: *Aufbau einer Blockchain-Datenstruktur, Teil 1/4*
 * Akteure: *User*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
