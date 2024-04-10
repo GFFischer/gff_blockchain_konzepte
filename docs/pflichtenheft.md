@@ -8,7 +8,7 @@
 |  0.3    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.03.2024 | Pkt. 1.4 - 2.5 (ausgenommen 2.2) bearbeitet |
 |  0.4    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 22.03.2024 | Pkt. 2.2 bearbeitet |
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
-|  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 6 (Anhang) hinzugefügt |
+|  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 7 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -235,7 +235,7 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 ![Diagram](img/use-case_4.svg)
 
 * Name: *Aufbau einer Blockchain-Datenstruktur, Teil 1/4*
-* Akteure: *User*
+* Akteure: *User, Applikation*
 * Vorbedingungen: *Animation 1a ist geladen. Der erste Frame zeigt zwei symbolisch dargestellte
   Seiten eines Buchs, bestehend jeweils aus einer Seitenzahl ("Seite 1", "Seite 2") und einem 
   kurzen Text als Inhalt (siehe folgende schematische Darstellung).*
@@ -249,7 +249,7 @@ Definieren Sie hier mindestens ein Abnahmekriterium
     * Eine neue symbolisch dargestellte Seite eines Buchs, bestehend aus einer Seitenzahl ("Seite
       3") und dem vom User eingegebenen Inhalt wird der Animation hinzugefügt.
     * Animation 1a ist beendet.
-* Nachbedingungen Erfolg: *Eine neue symbolisch dargestellte Seite eines Buchs mit dem vom User
+* Nachbedingung Erfolg: *Eine neue symbolisch dargestellte Seite eines Buchs mit dem vom User
   eingegebenen Ihhalt ist der Animation hinzugefügt (siehe folgende schematische Darstellung).*
  
 ![Diagram](img/animation_1a_02.svg)
@@ -260,7 +260,7 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 ![Diagram](img/use-case_5.svg)
 
 * Name: *Aufbau einer Blockchain-Datenstruktur, Teil 2/4*
-* Akteure: *User*
+* Akteure: *User, Applikation*
 * Vorbedingungen: *Animation 1b ist geladen. Der erste Frame zeigt drei symbolisch dargestellte
   Seiten eines Buchs, bestehend jeweils aus einem auf den Inhalt berechneten Hashwert (eine
   achtstellige hexadezimale Zahl) und einem kurzen Text als Inhalt. Die Texte sind identisch mit
@@ -278,7 +278,7 @@ Definieren Sie hier mindestens ein Abnahmekriterium
     * Eine neue symbolisch dargestellte Seite eines Buchs, bestehend aus dem berechneten Hashwert
       und dem vom User eingegebenen Inhalt wird der Animation hinzugefügt.
     * Animation 1b ist beendet.
-* Nachbedingungen Erfolg: *Eine neue symbolisch dargestellte Seite eines Buchs mit dem vom User
+* Nachbedingung Erfolg: *Eine neue symbolisch dargestellte Seite eines Buchs mit dem vom User
   eingegebenen Ihhalt und dem auf diesen Inhalt berechneten Hashwert ist der Animation hinzugefügt
   (siehe folgende schematische Darstellung).*
  
@@ -290,7 +290,7 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 ![Diagram](img/use-case_6.svg)
 
 * Name: *Aufbau einer Blockchain-Datenstruktur, Teil 3/4*
-* Akteure: *User*
+* Akteure: *User, Applikation*
 * Vorbedingungen: *Animation 1c ist geladen. Der erste Frame zeigt vier symbolisch dargestellte
   Blöcke einer Blockchain, bestehend jeweils aus einem auf den Inhalt berechneten Hashwert, einer
   Hash-Referenz auf den vorherigen Block und einem kurzen Text als Inhalt. Die Texte sind identisch
@@ -310,14 +310,37 @@ Definieren Sie hier mindestens ein Abnahmekriterium
       Hashwert, der Hash-Referenz auf den vorherigen Block und dem vom User eingegebenen Inhalt wird
       der Animation hinzugefügt.
     * Animation 1c ist beendet.
-* Nachbedingungen Erfolg: *Ein neuer symbolisch dargestellter Block einer Blockchain mit dem vom
+* Nachbedingung Erfolg: *Ein neuer symbolisch dargestellter Block einer Blockchain mit dem vom
   User eingegebenen Ihhalt, dem auf diesen Inhalt berechneten Hashwert und einer Hash-Referenz auf
   den vorherigen Block ist der Animation hinzugefügt (siehe folgende schematische Darstellung).*
  
 ![Diagram](img/animation_1c_02.svg)
 
 
-### Use Case 7 - Animation 1b:
+### Use Case 7 - Animation 1d:
+
+![Diagram](img/use-case_7.svg)
+
+* Name: *Aufbau einer Blockchain-Datenstruktur, Teil 4/4*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Animation 1d ist geladen. Der erste Frame zeigt fünf symbolisch dargestellte
+  Blöcke einer Blockchain, bestehend jeweils aus einem auf den Inhalt berechneten Hashwert, einer
+  Hash-Referenz auf den vorherigen Block und einem kurzen Text als Inhalt. Der Frame ist identisch
+  mit dem Abschluss-Frame aus Animation 1c, auf der dritten, vierten und fünften Seite befinden
+  sich also die vom User in den Animation 1a, 1b und 1c eingegebenen Texte.*
+* Standardablauf
+    * Der User klickt auf einen Button, der mit "Starte Animation" beschriftet ist.
+    * In einer Animation wird aus den fünf symbolisch dargestellten Blöcken deren jeweiliger Inhalt
+      ausgelagert und durch eine Hash-Referenz auf diesen ersetzt. Übrig bleibt ein Block-Header.
+    * Animation 1d ist beendet.
+* Nachbedingungen Erfolg: *Die fünf symbolisch dargestellten Blöcke einer Blockchain sind in der
+  Animation aufgeteilt in Block-Header und die jeweiligen Inahlte, auf die in den Block-Headern
+  referenziert wird (siehe folgende schematische Darstellung).*
+ 
+![Diagram](img/animation_1d_01.svg)
+
+
+### Use Case 8 - Animation 2a:
 * Name: *Aufbau einer Blockchain-Datenstruktur, Teil 1/4*
 * Akteure: *User*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
