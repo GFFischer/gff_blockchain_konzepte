@@ -9,7 +9,7 @@
 |  0.4    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 22.03.2024 | Pkt. 2.2 bearbeitet |
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
 |  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 7 (Anhang) hinzugefügt |
-|  0.7    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 11.04.2024 | Pkt. 5 bearbeitet |
+|  0.7    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 11.04.2024 | Pkt. 4 bearbeitet, Pkt. 3 begonnen |
 
 
 ## 1. Einleitung
@@ -18,9 +18,9 @@
 
 Der **Zweck** dieses Pflichtenhefts ist es, die Anforderungen, die sich aus dem Lastenheft ergeben, aus der Sicht des
 Programmierers zu präzisieren, Anwendungsfälle ("Use-cases") inklusive etwaiger Ausnahmen und Sonderfälle zu 
-definieren, sodass darauf aufbauend das Design der Applikation erstellt werden kann. Der **Leserkreis** eines
-Pflichtenhefts wäre im Regelfall der Auftraggeber, im konkreten Spezialfall dieses Projekts ist es der Autor 
-(Programmierer) selbst. Daher sind die Abnahmekriterien (Pkt. 4) auch sehr kurz gehalten.
+definieren, sodass darauf aufbauend das Design der Applikation erstellt und die technischen Spezifikationen
+vorgenommen werden können. Der **Leserkreis** eines Pflichtenhefts wäre im Regelfall der Auftraggeber, im konkreten 
+Spezialfall dieses Projekts ist es der Autor (Programmierer) selbst.
 
 ### 1.2 Einsatzbereich und Ziele
 
@@ -75,7 +75,7 @@ Das **Lastenheft** mit den Anforderungen an die Applikation aus der Sicht des Au
 sich im Anhang skizzierte und beschriebene Use-cases.
 * **Pkt. 4** ist aufgrund der speziellen Situation, dass es sich um das "individuelle Projekt" im Rahmen des 
 Studienprogramms GymInf handelt und es keinen Auftraggeber im eigentlichen Sinn gibt, der am Ende das fertige
-Produkt abnimmt, kurz gehalten.
+Produkt abnimmt, verhältnismässig kurz gehalten.
 * Im **Anhang** finden sich die Use-cases, die sich aus dem Lastenheft (/LK10/ bis /LK80/ sowie /LF10/ bis /LF40/
 und /LQF10/ bis /LQE10/) ergeben.
 
@@ -93,8 +93,8 @@ und /LQF10/ bis /LQE10/) ergeben.
 
 * Die Applikation besteht aus einer Anzahl von animierten Grafiken, über die a) durch das Klicken von "weiter"- und
   "zurück"-Buttons navigiert werden kann oder die b) über ein Navigationsmenü direkt angesteuert werden können.
-* Alle animierten Grafiken können vom User durch das Klicken von Buttons gestartet, unterbrochen, fortgesetzt oder
-  abgebrochen werden.
+* Alle animierten Grafiken können vom User durch das Klicken von Buttons gestartet oder abgebrochen, gegebenenfalls
+  unterbrochen und wieder fortgesetzt werden.
 * Bei allen animierten Grafiken gibt es (vor dem Start und/oder nach Beendigung bzw. Abbruch der Animation) die Möglichkeit,
   dass durch das Klicken auf ein intuitiv verständliches Symbol erklärende Texte aufpoppen. Dabei wird optisch unterschieden
   zwischen Erklärungen, die sich direkt auf das in der Animation Gezeigte beziehen, und weiterführenden Texten, die über das
@@ -131,18 +131,45 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 ## 3. Einzelanforderungen
 
-Beschreibt die Anforderung i so genau, dass bei der Verwendung der Spezifikation (im Entwurf usw.) keine Rückfragen dazu notwendig sind.
+* **/F10/** Das Design der Webapplikation *muss* responsiv sein. *(vgl. /LQB10/)*
+  * /F11/ Bei einer Bildschirmbreite von weniger als 960 Pixeln *soll* das bei grösseren Bildschirmbreiten angezeigte
+    Navigationsmenü verschwinden und über ein "Hamburger-Menü-Icon" ausklappbar sein.
+  * /F12/ Die aufpoppenden erklärenden bzw. weiterführenden Texte *müssen* bei einer Bildschirmbreite von mindestens
+    540 Pixeln ohne horizontales Scrollen lesbar sein. *(vgl. Use-case 3)*
+  * /F13/ Die verwendeten Schriftarten sollen bei einer Bildschirmbreite von weniger als 960 Pixeln um 25 - 35 Prozent
+    kleiner werden.
+  * /F14/ Die Grösse der Animationen *sollte sich eventuell* dynamisch an die Bildschirmbreite anpassen.
+* **/F20/** Die Applikation *muss* dem User die Möglichkeit geben, die Animationen selbstständig zu starten, abzubrechen,
+  zu unterbrechen und nach einer Unterbrechung fortzusetzen. *(vgl. Use-case 1, /LF10/)*
+  * /F21/ Bei jeder Animation *muss* der User durch das Klicken jeweils eines Buttons die Animation starten und abbrechen
+    können.
+  * /F22/ Bei jenen Animationen, die länger als 3 Sekunden dauern, *muss* der User durch das Klicken jeweils eines Buttons
+    die Animation unterbrechen und nach einer Unterbrechung fortsetzen können.
+* **/F30/** Eine einfache Navigation über die einzelnen Animationen *soll* in der gesamten Applikation mittels eines Menüs
+  und mithilfe von Buttons ermöglicht werden. *(vgl. Use-case 2, /LF20/, /LQB30/)*
+  * /F31/ Die Applikation *muss* dem User die Möglichkeit geben, über "weiter"- und "zurück"-Buttons zwischen den
+    einzelnen Animationen nach vor und zurück zu springen.
+  * /F31/ Die Applikation *muss* dem User die Möglichkeit geben, über ein eigenes Navigationsmenü direkt zu den einzelnen
+    Animationen zu navigieren.
+* **/F40/** Die Applikation *muss* dem User die Möglichkeit geben, durch das Klicken auf ein Symbol oder einen Button
+  erklärende und/oder weiterführende Texte zu den einzelnen Animationen zu öffnen. *(vgl. Use-case 3, /LF30/)*
+  * /F41/ Die erklärenden Texte *sollen* durch das Klicken auf ein intuitiv verständliches Symbol (z.B. i in einem Kreis),
+    das sich an einer oder mehreren Stellen im Bereich einer Animation befindet, aufpoppen. *(vgl. /LQB20/)*
+  * /F42/ Die weiterführenden Texte *sollen* durch das Klicken auf einen Button (z.B. "Hintergrundwissen"), der sich
+    unterhalb der Animation befindet, aufpoppen.
+  * /F43/ Die erklärenden und die weiterführenden Texte sollen sich farblich unterscheiden. *(vgl. /LBQ40/)*
+  * /F44/ Die erklärenden Texte *sollen* leicht verständlich geschrieben und ausgewogen bezüglich Kürze und inhaltlicher
+    Tiefe sein. *(vgl. /LQE10/)*
+* **/F50/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 1
+  ("Aufbau einer Blockchain-Datenstruktur") einzugreifen. *(vgl. /LF40/, /LF41/)*
+  * /F51/ Der User soll die Möglichkeit haben, bei Animation 1a einen kurzen Text (maximal ca. 50 Zeichen) einzugeben,
+    bei Animation 1b udn 1c einen kurzen Text einzugeben und die Berechnung eines Hashwerts durch das Klicken eines
+    Buttons zu starten. *(vgl. Use-case 4 bis Use-case 6)*
+  * /F52/ Die ausgegebenen Hashwerte *sollen* das Ergebnis einer Hashfunktion und demgemäss vom eingegebenen Text
+    abhängig sein.
+  * /F53/ Die Animation 1d soll zeigen, wie Block-Header und Inhalt getrennt und durch eine Hash-Referenz im Block-Header
+    miteinander verknüpft werden. *(vgl. Use-case 7)*
 
-Identifizieren Sie jede Funktionale Anforderung mit einer Nummer, so dass diese Nachverfolgbar sind. Zusammengehörende Funktionale Anforderungen können durch geeignete Nummerierung angezeigt werden.
-
-Zur Spezifikation der Software sollen Sprachschablonen benutzt werden.
-
-* /F10/ Funktion 1 des Systems
-* /F11/ Weitere Detaillierung Funkion 1
-* /F20/ Funktion 2 des Systems
-
-
-Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die Use-cases sollen in Anhang A detailliert beschrieben werden.
 
 ## 4. Abnahmekriterien
 
@@ -169,7 +196,7 @@ Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die
 
 ## Anhang A. Use-cases
 
-### Use-Case 1 - gilt für alle Animationen:
+### Use-case 1 - gilt für alle Animationen:
 
 ![Diagram](img/use-case_1.svg)
 
@@ -191,7 +218,7 @@ Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die
     * Der User navigiert zur nachfolgenden ODER zur vorherigen ODER zu einer beliebigen Animation.
 
 
-### Use Case 2 - gilt für alle Animationen:
+### Use-case 2 - gilt für alle Animationen:
 
 ![Diagram](img/use-case_2.svg)
 
@@ -220,7 +247,7 @@ Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die
       bei der letzten Animation."
 
 
-### Use Case 3 - gilt für alle Animationen:
+### Use-case 3 - gilt für alle Animationen:
 
 ![Diagram](img/use-case_3.svg)
 
@@ -243,7 +270,7 @@ Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die
   erklärenden oder weiterführenden Texte.*
 
 
-### Use Case 4 - Animation 1a:
+### Use-case 4 - Animation 1a:
 
 ![Diagram](img/use-case_4.svg)
 
@@ -269,7 +296,7 @@ Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die
 ![Diagram](img/animation_1a_02.svg)
 
 
-### Use Case 5 - Animation 1b:
+### Use-case 5 - Animation 1b:
 
 ![Diagram](img/use-case_5.svg)
 
@@ -300,7 +327,7 @@ Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die
 ![Diagram](img/animation_1b_02.svg)
 
 
-### Use Case 6 - Animation 1c:
+### Use-case 6 - Animation 1c:
 
 ![Diagram](img/use-case_6.svg)
 
@@ -333,7 +360,7 @@ Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die
 ![Diagram](img/animation_1c_02.svg)
 
 
-### Use Case 7 - Animation 1d:
+### Use-case 7 - Animation 1d:
 
 ![Diagram](img/use-case_7.svg)
 
@@ -357,7 +384,7 @@ Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die
 ![Diagram](img/animation_1d_01.svg)
 
 
-### Use Case 8 - Animation 2a:
+### Use-case - Animation 2a:
 * Name: *Aufbau einer Blockchain-Datenstruktur, Teil 1/4*
 * Akteure: *User*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
