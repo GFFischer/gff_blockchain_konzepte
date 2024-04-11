@@ -8,6 +8,7 @@
 |  1.1    |  Georg Fischer   | Lastenheft, Version 1.0                       | Verbesserungen  | 20.03.2024 | sprachliche Nachbesserungen Pkt.5                          |
 |  1.2    |  Georg Fischer   | Lastenheft, Version 1.1                       | Ergänzungen     | 21.03.2024 | in Pkt. 1 /LZ30/ ergänzt, in Pkt. 5 /LQB50/ ergänzt        |
 |  1.3    |  Georg Fischer   | Lastenheft, Version 1.2                       | Präzisierungen  | 10.04.2024 | /LF10/ und /LF20/ ergänzt und sprachlich verdeutlicht      |
+|  2.0    |  Georg Fischer   | Lastenheft, Version 1.3                       | Präzisierungen  | 11.04.2024 | einige Formulierungen leicht verändert                     |
 
 
 
@@ -97,20 +98,21 @@ Gestaltung der Animationen eingreifen zu können:
 | Funktionalität       |          |  x  |        |                |
 | Zuverässigkeit       |          |     |   x    |                |
 | Benutzbarkeit        |    x     |     |        |                |
-| Effizienz            |          |  x  |        |                |
+| Effizienz            |          |     |   x    |                |
 | Wartbarkeit          |          |     |   x    |                |
 | Portabilität         |          |     |        |       x        |
 
-* **/LQF10/** Einmal gemachte Eingaben und berechnete Werte (z.B. Hashreferenzen) sollen in der Applikation
-verfügbar bleiben, solange sich der User durch die Applikation bewegt. Sie können nicht noch einmal gemacht oder
+* **/LQF10/** Einmal gemachte Eingaben und berechnete Werte (z.B. Hashreferenzen) *sollen* in der Applikation
+verfügbar bleiben, solange sich der User durch die Applikation bewegt. Sie können jedoch noch einmal gemacht oder
 abgeändert werden, wenn in der Applikation zurücknavigiert wird.
-* **/LQB10/** Das Design der Webapplikation soll responsiv sein. Auch auf einem kleinen Screen (z.B. Smartphone)
-sollen die Animationen so dargestellt werden, dass das Erfassen der wesentlichen Aspekte leicht möglich ist. 
-* **/LQB20/** Erklärende Texte zu den Animationen sollen beim Klicken auf ein Symbol aufpoppen, sodass der User
+* **/LQB10/** Das Design der Webapplikation *muss* responsiv sein. Auch auf einem kleinen Screen (z.B. Smartphone)
+*sollen* die Animationen so dargestellt werden, dass das Erfassen der wesentlichen Aspekte leicht möglich ist. 
+* **/LQB20/** Erklärende Texte zu den Animationen *müssen* beim Klicken auf ein Symbol aufpoppen, sodass der User
 dadurch nicht von der aktuellen Animation wegnavigiert wird.
-* **/LQB30/** Die Navigation über die einzelnen Animationen soll in der gesamten Applikation einfach und
+* **/LQB30/** Die Navigation über die einzelnen Animationen *soll* in der gesamten Applikation einfach und
 übersichtlich sein.
-* **/LQB40/** Die optische Gestaltung der Applikation soll ansprechend und farbenfroh sein.
-* **/LQE10/** Die erklärenden Texte sollen für junge Lernende mit wenig Erfahrung und geringen Kenntnissen in der
-Informatik verständlich geschrieben sein und sie sollen ausgewogen bezüglich notwendiger Kürze und wünschenswerter
+* **/LQB40/** Die optische Gestaltung der Applikation *soll* ansprechend und farbenfroh sein und das Wesentliche
+  für das Verständnis der fundamentalen Konzepte einer Blockchain hervorheben.
+* **/LQE10/** Die erklärenden Texte *sollen* für junge Lernende mit wenig Erfahrung und geringen Kenntnissen in der
+Informatik verständlich geschrieben sein und sie *sollen* ausgewogen bezüglich notwendiger Kürze und wünschenswerter
 Tiefe sein.
