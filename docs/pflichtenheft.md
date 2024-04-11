@@ -9,6 +9,7 @@
 |  0.4    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 22.03.2024 | Pkt. 2.2 bearbeitet |
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
 |  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 7 (Anhang) hinzugefügt |
+|  0.7    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 11.04.2024 | Pkt. 5 bearbeitet |
 
 
 ## 1. Einleitung
@@ -145,11 +146,23 @@ Die Funktionalen Anforderungen sollen mithilfe von Use-cases erhoben werden. Die
 
 ## 4. Abnahmekriterien
 
-Beschreiben Sie hier, wie die Anforderungen bei der Abnahme auf ihre Realisierung überprüft werden können.
-
-Definieren Sie hier mindestens ein Abnahmekriterium
-* /A10/ Abnahmekriterium 1
-* /A20/ Abnahmekriterium 2
+* /A10/ Das Design der Webapplikation ist responsiv, auch bei der Benutzung auf einem Smartphone ist eine gegebenenfalls
+  leicht eingeschränkte Übersichtlichkeit gegeben.
+* /A20/ Es ist möglich, über "weiter"- und "zurück"-Buttons zwischen den einzelnen Animationen nach vor und zurück zu
+  springen sowie über ein eigenes Navigationsmenü direkt zu den einzelnen Animationen zu navigieren.
+* /A30/ Es ist bei allen Animationen möglich, die jeweilige Animation zu starten und jederzeit abzubrechen.
+* /A31/ Es ist bei jenen Animationen, die länger als 3 Sekunden dauern, die jeweilige Animation beliebig oft zu
+  unterbrechen und danach wieder fortzusetzen.
+* /A40/ Es ist bei allen Animationen möglich, durch das Klicken auf ein Symbol oder einen Button erklärende und/oder
+  weiterführende Texte zu öffnen.
+* /A50/ Die Applikation erfüllt die in Pkt. 3 ("Einzelanforderungen") zu den einzelnen Animationen definierten
+  funktionalen Anforderungen **/Fxx/ bis /Fxx/**, wobei etwaige kleine Abstriche möglich sind, jedoch jeder konkrete
+  Einzelfall gesondert bewertet werden muss.
+* /A60/ Die optische Gestaltung der Applikation ist mehrfarbig, das für das Verständnis der fundamentalen Konzepte einer
+  Blockchain Wesentliche ist erkennbar hervorgehoben.
+* /A70/ Die erklärenden und weiterführenden Texte sind für junge Lernende mit wenig Erfahrung und geringen Kenntnissen in
+  der Informatik zum überwiegenden Teil verständlich geschrieben und ausgewogen bezüglich notwendiger Kürze und
+  wünschenswerter Tiefe.
 
 
 # Anhang
@@ -243,7 +256,8 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 ![Diagram](img/animation_1a_01.svg)
 
 * Standardablauf
-    * Der User klickt auf einen Button, der mit "Erstelle eine neue Seite" beschriftet ist.
+    * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle eine neue Seite"
+      beschriftet ist, klickt.
     * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für eine neue Seite
       eingibt. Die Seitenzahl ("Seite 3") wird automatisch zugewiesen. Der User bestätigt mit "OK".
     * Eine neue symbolisch dargestellte Seite eines Buchs, bestehend aus einer Seitenzahl ("Seite
@@ -270,7 +284,8 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 ![Diagram](img/animation_1b_01.svg)
 
 * Standardablauf
-    * Der User klickt auf einen Button, der mit "Erstelle eine neue Seite" beschriftet ist.
+    * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle eine neue Seite"
+      beschriftet ist, klickt.
     * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für eine neue Seite
       eingibt. 
     * Durch Klicken eines Buttons ("Hashwert berechnen") wird auf den vom User eingegebenen Text
@@ -300,7 +315,8 @@ Definieren Sie hier mindestens ein Abnahmekriterium
 ![Diagram](img/animation_1c_01.svg)
 
 * Standardablauf
-    * Der User klickt auf einen Button, der mit "Erstelle eine neue Seite" beschriftet ist.
+    * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle eine neue Seite"
+      beschriftet ist, klickt.
     * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für einen neuen
       Block eingibt. 
     * Durch Klicken eines Buttons ("Hashwert berechnen") wird auf den vom User eingegebenen Text
@@ -329,7 +345,8 @@ Definieren Sie hier mindestens ein Abnahmekriterium
   mit dem Abschluss-Frame aus Animation 1c, auf der dritten, vierten und fünften Seite befinden
   sich also die vom User in den Animation 1a, 1b und 1c eingegebenen Texte.*
 * Standardablauf
-    * Der User klickt auf einen Button, der mit "Starte Animation" beschriftet ist.
+    * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation"
+      beschriftet ist, klickt.
     * In einer Animation wird aus den fünf symbolisch dargestellten Blöcken deren jeweiliger Inhalt
       ausgelagert und durch eine Hash-Referenz auf diesen ersetzt. Übrig bleibt ein Block-Header.
     * Animation 1d ist beendet.
