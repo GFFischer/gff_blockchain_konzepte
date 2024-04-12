@@ -26,7 +26,7 @@
      showgrid="false"
      inkscape:zoom="1.3289991"
      inkscape:cx="236.26803"
-     inkscape:cy="200.15063"
+     inkscape:cy="200.15062"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
@@ -122,12 +122,6 @@
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.305;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 42.641199,55.387702 107.76773,26.179632"
        id="path15"
-       inkscape:connector-type="polyline"
-       inkscape:connector-curvature="0" />
-    <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="M 46.685353,34.975972 68.475274,80.284499"
-       id="path16"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
@@ -300,5 +294,11 @@
          style="stroke-width:0.305"
          x="73.263153"
          y="86.800911">Erna</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 69.28162,79.522976 50.658294,33.919726"
+       id="path1"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>
