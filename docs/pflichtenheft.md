@@ -232,7 +232,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Nachbedingung Sonderfall 1a: *Die vom User gewählte Animation wird geladen.*
 
 #### Sonderfall 1a: Der User navigiert von der Animation weg.
-* Ablauf Sonderfall 1a
+* Ablauf Sonderfall 1a:
     * Der User betätigt die "weiter"- oder "zurück"-Buttons oder wählt eine Animation im Navigationsmenü.
     * Der User navigiert zur nachfolgenden ODER zur vorherigen ODER zu einer beliebigen Animation.
 
@@ -254,13 +254,13 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Nachbedingung Sonderfall 2b: *Die letzte Animation wird geladen.*
 
 #### Sonderfall 2a: Der User hat zur ersten Animation navigiert und klickt auf den "Zurück"-Button
-* Ablauf Sonderfall 2a
+* Ablauf Sonderfall 2a;
     * Der User klickt auf den "Zurück"-Button.
     * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Sie befinden sich bereits
       bei der ersten Animation."
 
 #### Sonderfall 2b: Der User hat zur letzten Animation navigiert und klickt auf den "Weiter"-Button
-* Ablauf Sonderfall 2b
+* Ablauf Sonderfall 2b:
     * Der User klickt auf den "Weiter"-Button.
     * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Sie befinden sich bereits
       bei der letzten Animation."
@@ -316,7 +316,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 ![Diagram](img/animation_1a_02.svg)
 
 #### Sonderfall 4a: Der User gibt einen Text ein, der länger als 50 Zeichen ist oder nicht ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern besteht
-* Ablauf Sonderfall 4a
+* Ablauf Sonderfall 4a:
     * Der User klickt auf "OK".
     * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie einen Text ein, der
       ausschliesslich aus Gross- und Kleinbuchstaben oder Ziffern besteht und maximal 50 Zeichen lang ist."
@@ -353,7 +353,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 ![Diagram](img/animation_1b_02.svg)
 
 #### Sonderfall 5a: Der User gibt einen Text ein, der länger als 50 Zeichen ist oder nicht ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern besteht
-* Ablauf Sonderfall 5a
+* Ablauf Sonderfall 5a:
     * Der User klickt auf "OK".
     * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie einen Text ein, der
       ausschliesslich aus Gross- und Kleinbuchstaben oder Ziffern besteht und maximal 50 Zeichen lang ist."
@@ -393,7 +393,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 ![Diagram](img/animation_1c_02.svg)
 
 #### Sonderfall 6a: Der User gibt einen Text ein, der länger als 50 Zeichen ist oder nicht ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern besteht
-* Ablauf Sonderfall 6a
+* Ablauf Sonderfall 6a:
     * Der User klickt auf "OK".
     * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie einen Text ein, der
       ausschliesslich aus Gross- und Kleinbuchstaben oder Ziffern besteht und maximal 50 Zeichen lang ist."
@@ -434,13 +434,13 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 ![Diagram](img/animation_2a_01.svg)
 
-* Standardablauf
+* Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle einen neuen Peer" beschriftet ist,
       klickt.
-    * Es öffnet sich ein Formular, in das der User einen kurzen Text (maximal 20 Zeichen, ) als Name für eine neuen Peer
-      eingibt. Der User bestätigt mit "OK".
+    * Es öffnet sich ein Formular, in das der User einen kurzen Text als Name für eine neuen Peer eingibt. Der User
+      bestätigt mit "OK".
     * Ein neuer Knoten, der mit dem eingegebenen Namen beschriftet ist, wird dem ungerichteten Graphen hinzugefügt. Der
-      neue Knoten ist mit drei anderen Knoten verbunden.
+      neue Knoten ist mit zwei anderen Knoten verbunden.
     * Animation 2a ist beendet.
 * Nachbedingung Erfolg: *Ein neuer, mit dem vom User eingegebenen Namen beschrifteter Knoten ist dem Peer-to-Peer-System
   hinzugefügt (siehe folgende schematische Darstellung.)*
@@ -449,39 +449,56 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 ![Diagram](img/animation_2a_02.svg)
 
 #### Sonderfall 8a: Der User gibt einen Text ein, der länger als 20 Zeichen ist oder nicht ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern besteht
-* Ablauf Sonderfall 8a
+* Ablauf Sonderfall 8a:
     * Der User klickt auf "OK".
     * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie einen Text ein, der
       ausschliesslich aus Gross- und Kleinbuchstaben oder Ziffern besteht und maximal 20 Zeichen lang ist."
 
 ### Use-case 9 - Animation 2b:
-* Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
-* Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
-* Standardablauf
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-#### Sonderfall 9a: Ausnahme 1
-* Ablauf Sonderfall 9a
-    * Schritt 1
-    * Schritt 2
+![Diagram](img/use-case_9.svg)
+
+* Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 2/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Animation 2b ist geladen. Der erste Frame zeigt den Graphen aus Animation 2a, allerdings so verändert,
+  dass die Beschriftung jedes Knotens ausgenommen des vom User in Animation 2a hinzugefügten mit einer, zwei oder drei
+  Adressen erweitert worden ist (siehe folgende schematische Darstellung.)*
+
+![Diagram](img/animation_2b_01.svg)
+
+* Standardablauf:
+    * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle ein Wallet" beschriftet ist, klickt.
+    * Es öffnet sich ein Formular, in das der User eine ganze Zahl von 1 bis 3 als Anzahl für die einzurichtenden
+      Adressen eingibt. Der User bestätigt mit "OK".
+    * Die Beschriftung des vom User in Animation 2a hinzugefügten Knoten wird mit so vielen Adressen erweitert, wie der
+      es eingegeben hat.
+    * Animation 2b ist beendet.
+* Nachbedingung Erfolg: *Die Beschriftung des vom User in Animation 2a hinzugefügten Knoten ist mit so viele Adressen
+  erweitert, wie es der User eingegeben hat. Neben diesem Knoten befindet sich ein Textfeld mit den entsprechenden
+  privaten Schlüsseln (siehe folgende schematische Darstellung.)*
+* Nachbedingung Sonderfall: *Animation 2b wird neu gestartet.*
+
+![Diagram](img/animation_2b_02.svg)
+
+#### Sonderfall 9a: Der User gibt etwas anderes ein als eine der drei ganzen Zahlen 1, 2, oder 3
+* Ablauf Sonderfall 9a:
+    * Der User klickt auf "OK".
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie eine ganze Zahl von 1
+      bis 3 ein."
 
 
 ### Use-case 10 - Animation 2c:
 * Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
-* Standardablauf
+* Standardablauf:
     * Schritt 1
     * Schritt 2
 * Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
 * Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
 #### Sonderfall 10a: Ausnahme 1
-* Ablauf Sonderfall 10a
+* Ablauf Sonderfall 10a:
     * Schritt 1
     * Schritt 2
 
@@ -490,13 +507,13 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
-* Standardablauf
+* Standardablauf:
     * Schritt 1
     * Schritt 2
 * Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
 * Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
 #### Sonderfall 11a: Ausnahme 1
-* Ablauf Sonderfall 11a
+* Ablauf Sonderfall 11a:
     * Schritt 1
     * Schritt 2
