@@ -60,6 +60,7 @@ bedient werden muss.
 | Peer-to-Peer System | ein verteiltes Softwaresystem aus Einzelcomputern ("Knoten"), die sich ihre Berechnungsressourcen teilen und bei denen jeder Knoten die gleiche Funktionalität und Verantwortung hat |
 | Proof-of-Work | ein Algorithmus, der dazu führt, dass unter den einzelnen Knoten des Peer-to-Peer-Systems ein Konsens über die Gültigkeit eines neuen Blocks gefunden wird, indem die Lösung eines Hashpuzzles als Beweis für die Gültigkeit des Blocks und als Arbeitsnachweis dient |
 | Schlüsselpaar | in einem asymmetrischen Verschlüsselungsverfahren ein Paar aus einem öffentlichen und einem privaten Schlüssel |
+| SiC (= Simulation Coin) | eine eigens für die Webapplikation erfundene fiktive Kryptowährung|
 | Target | der Schwierigkeitsgrad eines Hashpuzzles, angegeben durch eine Zahl; der gesuchte Hashwert (die Zahl, die das Hashpuzzle löst) muss kleiner sein als diese Zahl |
 | Transaktion | Übertragung von Werten innerhalb einer Blockchain von einer Adresse zu einer anderen Adresse |
 | User | jede Person, welche die Applikation anwendet, gleichgültig in welchem Einsatzbereich | 
@@ -194,7 +195,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 * /A10/ Das Design der Webapplikation ist responsiv, auch bei der Benutzung auf einem Smartphone ist eine gegebenenfalls
   leicht eingeschränkte Übersichtlichkeit gegeben.
-* /A20/ Es ist möglich, über "weiter"- und "zurück"-Buttons zwischen den einzelnen Animationen nach vor und zurück zu
+* /A20/ Es ist möglich, über "weiter"- und zurück"-Buttons zwischen den einzelnen Animationen nach vor und zurück zu
   springen sowie über ein eigenes Navigationsmenü direkt zu den einzelnen Animationen zu navigieren.
 * /A30/ Es ist bei allen Animationen möglich, die jeweilige Animation zu starten und jederzeit abzubrechen.
 * /A31/ Es ist bei jenen Animationen, die länger als 3 Sekunden dauern, möglich, die jeweilige Animation beliebig oft zu
@@ -495,7 +496,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Animation 2c ist geladen. Der erste Frame ist identisch mit dem Abschluss-Frame von Animation 2b
   und zeigt den ungerichteten Graphen mit allen Namen und Adressen, einschliesslich dem vom User in Animation 2a
-  eingegebenen Namen und den in Animation 2b hinzugefügten Adressen und privaten Schlüsseln.
+  eingegebenen Namen und den in Animation 2b hinzugefügten Adressen und privaten Schlüsseln.*
 * Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation"
       beschriftet ist, klickt.
@@ -510,7 +511,41 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 
 ### Use-case 11 - Animation 3a:
-* Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
+
+![Diagram](img/use-case_11.svg)
+
+* Name: *Durchführen einer Transaktion Teil 1/4*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Animation 3a ist geladen. Der erste Frame zeigt eine Tabelle mit den 1 bis 3 Adressen des in
+  Animation 2a bis 2c neu hinzugefügten Knotens ODER, falls der User die Animationen 2a bis 2c nicht bearbeitet hat
+  und direkt zu Animation 3a navigiert ist, drei aus einer vorgegebenen Auswahl zufällig ausgewählte Adressen. In einer
+  weiteren Spalte sind die privaten Schlüssel, eine weitere mit "Kontostand" überschriebene Spalte ist noch leer (siehe
+  folgende schematische Darstellung).*
+
+![Diagram](img/animation_3a_01.svg)
+
+* Standardablauf:
+    * Der User startet die Animation, indem er auf einen Button, der mit "Lege Kontostand fest" beschriftet ist, klickt.
+    * Es öffnet sich ein Formular, in das der User eine ganze Zahl von 0 bis 999 eingibt. Der User bestätigt mit "OK".
+    * Die vom User eingegebenen Kontostände in der Kryptowährung SiC werden in die Spalte "Kontostand" in die Animation
+      eingefügt.
+    * Animation 3a ist beendet.
+* Nachbedingung Erfolg: *Die Tabelle auf der Animation ist mit den eingegebenen Kontoständen vollständig ausgefüllt.
+  (siehe folgende schematische Darstellung).*
+* Nachbedingung Sonderfall: *Animation 3a wird neu gestartet.*
+
+![Diagram](img/animation_3a_02.svg)
+
+#### Sonderfall 11a: Der User gibt etwas anderes ein als eine ganze Zahl von 0 bis 999
+* Ablauf Sonderfall 11a:
+    * Der User klickt auf "OK".
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie eine ganze Zahl von 0
+      bis 999 ein."
+
+
+
+### Use-case 12 - Animation 3b:
+* Name: *Durchführen einer Transaktion Teil 2/4*
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
 * Standardablauf:
@@ -519,7 +554,55 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
 * Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-#### Sonderfall 11a: Ausnahme 1
-* Ablauf Sonderfall 11a:
+#### Sonderfall 12a: Ausnahme 1
+* Ablauf Sonderfall 12a:
+    * Schritt 1
+    * Schritt 2
+
+
+### Use-case 13 - Animation 3c:
+* Name: *Durchführen einer Transaktion Teil 3/4*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Standardablauf:
+    * Schritt 1
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+
+#### Sonderfall 13a: Ausnahme 1
+* Ablauf Sonderfall 13a:
+    * Schritt 1
+    * Schritt 2
+
+
+### Use-case 14 - Animation 3d:
+* Name: *Durchführen einer Transaktion Teil 4/4*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Standardablauf:
+    * Schritt 1
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+
+#### Sonderfall 14a: Ausnahme 1
+* Ablauf Sonderfall 14a:
+    * Schritt 1
+    * Schritt 2
+
+
+### Use-case 15 - Animation 4a:
+* Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 1/xxxxxxxxxx*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Standardablauf:
+    * Schritt 1
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+
+#### Sonderfall 15a: Ausnahme 1
+* Ablauf Sonderfall 15a:
     * Schritt 1
     * Schritt 2
