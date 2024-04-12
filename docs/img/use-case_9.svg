@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
-   sodipodi:docname="use-case_8.svg"
+   sodipodi:docname="use-case_9.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,8 @@
      inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1" />
+     inkscape:current-layer="layer1"
+     showgrid="false" />
   <defs
      id="defs1">
     <rect
@@ -116,8 +117,8 @@
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.476948;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path12"
-       cx="85.69577"
-       cy="98.538383"
+       cx="86.381508"
+       cy="92.823914"
        rx="21.324305"
        ry="10.609122" />
     <text
@@ -126,115 +127,118 @@
        x="99.033676"
        y="42.03989"
        id="text12"
-       transform="translate(-13.463042,55.102995)"><tspan
+       transform="translate(-13.005885,47.33132)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan19"><tspan
-   style="stroke-width:0.665"
-   id="tspan2">einen neuen Peer</tspan><tspan
+         id="tspan1">ein Wallet für den<tspan
    y="42.03989"
-   id="tspan20"> </tspan></tspan><tspan
+   id="tspan2"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan22"><tspan
+         id="tspan7">neuen Knoten<tspan
+   y="46.890592"
+   id="tspan8"> </tspan></tspan><tspan
+         x="99.033676"
+         y="51.741293"
+         id="tspan12"><tspan
            style="stroke-width:0.665"
-           id="tspan21">erstellen</tspan></tspan></text>
+           id="tspan11">erstellen</tspan></tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse12"
-       cx="77.483826"
-       cy="136.62862"
+       cx="78.169563"
+       cy="130.91415"
        rx="20.37044"
        ry="9.9773588" />
     <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.498086;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse16"
-       cx="136.90695"
-       cy="113.42191"
-       rx="20.37044"
-       ry="9.9773588" />
+       cx="137.59268"
+       cy="109.87894"
+       rx="20.347429"
+       ry="12.125846" />
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:36.1519;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="105.78841"
        y="74.198608"
        id="text18"
-       transform="translate(30.881197,35.927694)"><tspan
+       transform="translate(31.566933,30.213227)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan24">neuen Peer zu<tspan
+         id="tspan13">Adressen und<tspan
    y="74.198608"
-   id="tspan25"> </tspan></tspan><tspan
+   id="tspan16"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan26">Animation<tspan
+         id="tspan19">private Schlüssel der<tspan
    y="79.04931"
-   id="tspan27"> </tspan></tspan><tspan
+   id="tspan20"> </tspan></tspan><tspan
          x="105.78841"
          y="83.900011"
-         id="tspan28">hinzufügen</tspan></text>
+         id="tspan21">Animation<tspan
+   y="83.900011"
+   id="tspan22"> </tspan></tspan><tspan
+         x="105.78841"
+         y="88.750711"
+         id="tspan24">hinzufügen</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.527;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="M 17.756214,109.55197 60.40835,100.10773"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.509;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 17.778318,109.49825 60.386246,96.047035"
        id="path20"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="104.91759"
-       y="113.08044"
+       x="105.60333"
+       y="107.36597"
        id="text23"><tspan
          sodipodi:role="line"
          id="tspan23"
          style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565"
-         x="104.91759"
-         y="113.08044">&lt;&lt;extend&gt;&gt;</tspan></text>
+         x="105.60333"
+         y="107.36597">&lt;&lt;extend&gt;&gt;</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.477;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 17.894134,113.44694 38.199558,18.26078"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.508;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 17.875273,113.40329 37.322965,14.46224"
        id="path4"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
-       inkscape:transform-center-x="5.4109286"
-       inkscape:transform-center-y="-19.315063" />
+       inkscape:transform-center-x="5.2867602"
+       inkscape:transform-center-y="-15.297221" />
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="99.033676"
        y="42.03989"
        id="text14"
-       transform="translate(-22.32162,91.168238)"><tspan
+       transform="translate(-20.950148,87.053822)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan29">Name für neuen<tspan
+         id="tspan25">Anzahl der<tspan
    y="42.03989"
-   id="tspan30"> </tspan></tspan><tspan
+   id="tspan26"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan31">Peer in Formular<tspan
-   y="46.890592"
-   id="tspan32"> </tspan></tspan><tspan
-         x="99.033676"
-         y="51.741293"
-         id="tspan33">eingeben</tspan></text>
+         id="tspan27">Adressen eingeben</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.479892;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.91958, 0.479892;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
-       d="M 77.327524,126.23635 81.926402,111.6668"
+       d="m 78.01326,120.52188 4.598878,-14.56955"
        id="path18"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="69.258621"
-       y="119.1497"
+       x="69.944359"
+       y="113.43523"
        id="text45"><tspan
          sodipodi:role="line"
          id="tspan45"
          style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565"
-         x="69.258621"
-         y="119.1497">&lt;&lt;include&gt;&gt;</tspan></text>
+         x="69.944359"
+         y="113.43523">&lt;&lt;include&gt;&gt;</tspan></text>
     <g
        id="g6"
        transform="matrix(0.60525918,0,0,0.60525918,169.17592,41.603155)">
@@ -279,7 +283,7 @@
        transform="translate(-88.863411,85.788162)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan34">User</tspan></text>
+         id="tspan28">User</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -290,7 +294,7 @@
        inkscape:transform-center-y="0.96630697"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan35">Applikation</tspan></text>
+         id="tspan29">Applikation</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,5.1554958,59.002248)"
@@ -302,48 +306,53 @@
        id="text24"
        style="font-style:italic;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;white-space:pre;shape-inside:url(#rect24);display:inline;fill:#000000;stroke-width:1.94268;stroke-dasharray:7.77074, 1.94268;stroke-dashoffset:0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.502;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 158.91015,113.20042 24.4879,-5.12931"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.49;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 161.1931,110.12137 22.66494,-1.02841"
        id="path25"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
-       inkscape:transform-center-x="-9.3296364"
-       inkscape:transform-center-y="17.151805" />
+       inkscape:transform-center-x="-8.635111"
+       inkscape:transform-center-y="3.438872" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.452553;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.81022, 0.452553;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
-       d="m 117.85895,110.64005 -10.51547,-5.66658"
+       d="M 118.54469,104.92558 108.02922,99.259006"
        id="path7"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <ellipse
-       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       id="ellipse2"
-       cx="130.73532"
-       cy="76.163589"
-       rx="20.37044"
-       ry="9.9773588" />
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.476948;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ellipse8"
+       cx="135.29735"
+       cy="77.50914"
+       rx="21.324305"
+       ry="10.609122" />
     <text
        xml:space="preserve"
-       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:36.1519;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="105.78841"
-       y="74.198608"
-       id="text22"
-       transform="translate(24.709572,-0.18773936)"><tspan
-         x="105.78841"
-         y="74.198608"
-         id="tspan36">bestehenden Peers<tspan
-   y="74.198608"
-   id="tspan37"> </tspan></tspan><tspan
-         x="105.78841"
-         y="79.04931"
-         id="tspan38">Namen zuweisen</tspan></text>
+       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:37.6238;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="99.033676"
+       y="42.03989"
+       id="text8"
+       transform="translate(36.82427,32.702284)"><tspan
+         x="99.033676"
+         y="42.03989"
+         id="tspan30">bestehenden Peers<tspan
+   y="42.03989"
+   id="tspan31"> </tspan></tspan><tspan
+         x="99.033676"
+         y="46.890592"
+         id="tspan32">Schlüsselpaare<tspan
+   y="46.890592"
+   id="tspan33"> </tspan></tspan><tspan
+         x="99.033676"
+         y="51.741293"
+         id="tspan34">zuweisen</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.509;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 150.24199,83.045443 32.94065,19.633317"
-       id="path26"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.500439;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 155.94862,83.483835 27.92761,18.756525"
+       id="path13"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
-       inkscape:transform-center-x="4.6660097"
-       inkscape:transform-center-y="-20.76684" />
+       inkscape:transform-center-x="3.9559141"
+       inkscape:transform-center-y="-19.83944" />
   </g>
 </svg>
