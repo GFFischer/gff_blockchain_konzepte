@@ -10,7 +10,7 @@
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
 |  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 7 (Anhang) hinzugefügt |
 |  0.7    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 11.04.2024 | Pkt. 4 bearbeitet, Pkt. 3 begonnen |
-
+|  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis xxxx (Anhang) hinzugefügt |
 
 ## 1. Einleitung
 
@@ -162,13 +162,32 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     Tiefe sein. *(vgl. /LQE10/)*
 * **/F50/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 1
   ("Aufbau einer Blockchain-Datenstruktur") einzugreifen. *(vgl. /LF40/, /LF41/)*
-  * /F51/ Der User soll die Möglichkeit haben, bei Animation 1a einen kurzen Text (maximal ca. 50 Zeichen) einzugeben,
-    bei Animation 1b udn 1c einen kurzen Text einzugeben und die Berechnung eines Hashwerts durch das Klicken eines
-    Buttons zu starten. *(vgl. Use-case 4 bis Use-case 6)*
-  * /F52/ Die ausgegebenen Hashwerte *sollen* das Ergebnis einer Hashfunktion und demgemäss vom eingegebenen Text
+  * /F51/ Die Animationen 1a, 1b und 1c *sollen* schrittweise detaillierter zeigen, wie einer Blockchain neue Blöcke
+    hinzugefügt werden, wobei die Inhalte dieser neuen Blöcke die vom User eingegebenen Texte sind. *(vgl. Use-case 4
+    bis Use-case 5)*
+  * /F52/ Der User soll die Möglichkeit haben, bei Animation 1a einen kurzen Text (maximal ca. 50 Zeichen, bestehend aus
+    ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern) einzugeben, bei Animation 1b und 1c einen ebensolchen
+    kurzen Text einzugeben und die Berechnung eines Hashwerts durch das Klicken eines Buttons zu starten. *(vgl. Use-case
+    4 bis Use-case 6)*
+  * /F53/ Die ausgegebenen Hashwerte *sollen* das Ergebnis einer Hashfunktion und demgemäss vom eingegebenen Text
     abhängig sein.
-  * /F53/ Die Animation 1d soll zeigen, wie Block-Header und Inhalt getrennt und durch eine Hash-Referenz im Block-Header
-    miteinander verknüpft werden. *(vgl. Use-case 7)*
+  * /F54/ Die Animation 1d *soll* zeigen, wie Block-Header und Inhalt getrennt und durch eine Hash-Referenz im
+    Block-Header miteinander verknüpft werden. *(vgl. Use-case 7)*
+* **/F60/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 2
+  ("Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System") einzugreifen. *(vgl. /LF40/, /LF42/)*
+  * /F61/ Die Animationen 2a und 2b *sollen* zeigen, wie ein neuer Knoten zu einem als ungerichteter Graph modellierten
+    Peer-to-Peer-System hinzugefügt wird und wie für diesen Knoten ein Wallet mit einem oder mehreren Schlüsselpaaren
+    ("Adressen") eingerichtet wird, wobei der User dem Knoten einen vorläufigen Namen zuweisenn und die Anzahl der
+    Adressen bestimmen kann. *(vgl. Use-case 8 und Use-case 9)*
+  * /F62/ Der User *soll* die Möglichkeit haben, bei Animation 2a einen Namen (maximal 20 Zeichen, bestehend aus
+    ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern) einzugeben. *(vgl. Use-case 8)*
+  * /F63/ Der User *soll* die Möglichkeit haben, bei Animation 2b die Anzahl der dem neuen Knoten zugewiesenen Adressen
+    (mindestens 1, maximal 3 Adressen) einzugeben. *(vgl. Use-case 9)*
+  * /F64/ Die Zuweisung der vorläufigen Namen der Knoten in Animation 2a sowie der Anzahl der Adressen als auch der
+    Adressen selbst in Animation 2b *soll* bei jedem Start der Applikation aus einer vorgegebenen Auswahl (ca. 200 Namen
+    und ca. 200 Adressen, Anzahl von 1 bis 3) zufällig gewählt werden.
+  * /F65/ Die Animation 2c soll zeigen, wie die Namen der Knoten verschwinden und als pseudonyme Identifikation
+    ausschliesslich die Adressen übrig bleiben. *(vgl. Use-case 10)*
 
 
 ## 4. Abnahmekriterien
@@ -178,18 +197,18 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * /A20/ Es ist möglich, über "weiter"- und "zurück"-Buttons zwischen den einzelnen Animationen nach vor und zurück zu
   springen sowie über ein eigenes Navigationsmenü direkt zu den einzelnen Animationen zu navigieren.
 * /A30/ Es ist bei allen Animationen möglich, die jeweilige Animation zu starten und jederzeit abzubrechen.
-* /A31/ Es ist bei jenen Animationen, die länger als 3 Sekunden dauern, die jeweilige Animation beliebig oft zu
+* /A31/ Es ist bei jenen Animationen, die länger als 3 Sekunden dauern, möglich, die jeweilige Animation beliebig oft zu
   unterbrechen und danach wieder fortzusetzen.
 * /A40/ Es ist bei allen Animationen möglich, durch das Klicken auf ein Symbol oder einen Button erklärende und/oder
   weiterführende Texte zu öffnen.
 * /A50/ Die Applikation erfüllt die in Pkt. 3 ("Einzelanforderungen") zu den einzelnen Animationen definierten
-  funktionalen Anforderungen **/Fxx/ bis /Fxx/**, wobei etwaige kleine Abstriche möglich sind, jedoch jeder konkrete
+  funktionalen Anforderungen /F50/ bis **/Fxx/**, wobei etwaige kleine Abstriche möglich sind, jedoch jeder konkrete
   Einzelfall gesondert bewertet werden muss.
 * /A60/ Die optische Gestaltung der Applikation ist mehrfarbig, das für das Verständnis der fundamentalen Konzepte einer
   Blockchain Wesentliche ist erkennbar hervorgehoben.
-* /A70/ Die erklärenden und weiterführenden Texte sind für junge Lernende mit wenig Erfahrung und geringen Kenntnissen in
-  der Informatik zum überwiegenden Teil verständlich geschrieben und ausgewogen bezüglich notwendiger Kürze und
-  wünschenswerter Tiefe.
+* /A70/ Die erklärenden und weiterführenden Texte sind für den Grossteil junger Lernender mit wenig Erfahrung und geringen
+  Kenntnissen in der Informatik verständlich geschrieben und ausgewogen bezüglich notwendiger Kürze und wünschenswerter
+  Tiefe.
 
 
 # Anhang
@@ -282,7 +301,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 ![Diagram](img/animation_1a_01.svg)
 
-* Standardablauf
+* Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle eine neue Seite"
       beschriftet ist, klickt.
     * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für eine neue Seite
@@ -292,9 +311,15 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     * Animation 1a ist beendet.
 * Nachbedingung Erfolg: *Eine neue symbolisch dargestellte Seite eines Buchs mit dem vom User
   eingegebenen Ihhalt ist der Animation hinzugefügt (siehe folgende schematische Darstellung).*
+* Nachbedingung Sonderfall 4a: *Animation 1a wird neu geladen.*
  
 ![Diagram](img/animation_1a_02.svg)
 
+#### Sonderfall 4a: Der User gibt einen Text ein, der länger als 50 Zeichen ist oder nicht ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern besteht
+* Ablauf Sonderfall 4a
+    * Der User klickt auf "OK".
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie einen Text ein, der
+      ausschliesslich aus Gross- und Kleinbuchstaben oder Ziffern besteht und maximal 50 Zeichen lang ist."
 
 ### Use-case 5 - Animation 1b:
 
@@ -310,7 +335,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 ![Diagram](img/animation_1b_01.svg)
 
-* Standardablauf
+* Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle eine neue Seite"
       beschriftet ist, klickt.
     * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für eine neue Seite
@@ -323,8 +348,15 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Nachbedingung Erfolg: *Eine neue symbolisch dargestellte Seite eines Buchs mit dem vom User
   eingegebenen Ihhalt und dem auf diesen Inhalt berechneten Hashwert ist der Animation hinzugefügt
   (siehe folgende schematische Darstellung).*
+* Nachbedingung Sonderfall 5a: *Animation 1b wird neu geladen.*
  
 ![Diagram](img/animation_1b_02.svg)
+
+#### Sonderfall 5a: Der User gibt einen Text ein, der länger als 50 Zeichen ist oder nicht ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern besteht
+* Ablauf Sonderfall 5a
+    * Der User klickt auf "OK".
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie einen Text ein, der
+      ausschliesslich aus Gross- und Kleinbuchstaben oder Ziffern besteht und maximal 50 Zeichen lang ist."
 
 
 ### Use-case 6 - Animation 1c:
@@ -341,7 +373,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 ![Diagram](img/animation_1c_01.svg)
 
-* Standardablauf
+* Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle eine neue Seite"
       beschriftet ist, klickt.
     * Es öffnet sich ein Formular, in das der User einen kurzen Text als Inhalt für einen neuen
@@ -356,8 +388,15 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Nachbedingung Erfolg: *Ein neuer symbolisch dargestellter Block einer Blockchain mit dem vom
   User eingegebenen Ihhalt, dem auf diesen Inhalt berechneten Hashwert und einer Hash-Referenz auf
   den vorherigen Block ist der Animation hinzugefügt (siehe folgende schematische Darstellung).*
+* Nachbedingung Sonderfall 6a: *Animation 1c wird neu geladen.*
  
 ![Diagram](img/animation_1c_02.svg)
+
+#### Sonderfall 6a: Der User gibt einen Text ein, der länger als 50 Zeichen ist oder nicht ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern besteht
+* Ablauf Sonderfall 6a
+    * Der User klickt auf "OK".
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie einen Text ein, der
+      ausschliesslich aus Gross- und Kleinbuchstaben oder Ziffern besteht und maximal 50 Zeichen lang ist."
 
 
 ### Use-case 7 - Animation 1d:
@@ -371,7 +410,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   Hash-Referenz auf den vorherigen Block und einem kurzen Text als Inhalt. Der Frame ist identisch
   mit dem Abschluss-Frame aus Animation 1c, auf der dritten, vierten und fünften Seite befinden
   sich also die vom User in den Animation 1a, 1b und 1c eingegebenen Texte.*
-* Standardablauf
+* Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation"
       beschriftet ist, klickt.
     * In einer Animation wird aus den fünf symbolisch dargestellten Blöcken deren jeweiliger Inhalt
@@ -384,17 +423,80 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 ![Diagram](img/animation_1d_01.svg)
 
 
-### Use-case - Animation 2a:
-* Name: *Aufbau einer Blockchain-Datenstruktur, Teil 1/4*
-* Akteure: *User*
+### Use-case 8 - Animation 2a:
+
+![Diagram](img/use-case_8.svg)
+
+* Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Animation 2a ist geladen. Der erste Frame zeigt einen ungerichteten Graphen mit elf Knoten, jeder
+  beschriftet mit einem kurzen Vornamen (siehe folgende schematische Darstellung).*
+
+![Diagram](img/animation_2a_01.svg)
+
+* Standardablauf
+    * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle einen neuen Peer" beschriftet ist,
+      klickt.
+    * Es öffnet sich ein Formular, in das der User einen kurzen Text (maximal 20 Zeichen, ) als Name für eine neuen Peer
+      eingibt. Der User bestätigt mit "OK".
+    * Ein neuer Knoten, der mit dem eingegebenen Namen beschriftet ist, wird dem ungerichteten Graphen hinzugefügt. Der
+      neue Knoten ist mit drei anderen Knoten verbunden.
+    * Animation 2a ist beendet.
+* Nachbedingung Erfolg: *Ein neuer, mit dem vom User eingegebenen Namen beschrifteter Knoten ist dem Peer-to-Peer-System
+  hinzugefügt (siehe folgende schematische Darstellung.)*
+* Nachbedingung Sonderfall 8a: *Animation 2a wird neu geladen.*
+
+![Diagram](img/animation_2a_02.svg)
+
+#### Sonderfall 8a: Der User gibt einen Text ein, der länger als 20 Zeichen ist oder nicht ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern besteht
+* Ablauf Sonderfall 8a
+    * Der User klickt auf "OK".
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie einen Text ein, der
+      ausschliesslich aus Gross- und Kleinbuchstaben oder Ziffern besteht und maximal 20 Zeichen lang ist."
+
+### Use-case 9 - Animation 2b:
+* Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
+* Akteure: *User, Applikation*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
 * Standardablauf
     * Schritt 1
     * Schritt 2
-* Nachbedingungen Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
 * Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-#### Sonderfall 4a: Ausnahme 1
-* Ablauf Sonderfall 4a
+#### Sonderfall 9a: Ausnahme 1
+* Ablauf Sonderfall 9a
+    * Schritt 1
+    * Schritt 2
+
+
+### Use-case 10 - Animation 2c:
+* Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Standardablauf
+    * Schritt 1
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+
+#### Sonderfall 10a: Ausnahme 1
+* Ablauf Sonderfall 10a
+    * Schritt 1
+    * Schritt 2
+
+
+### Use-case 11 - Animation 3a:
+* Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Standardablauf
+    * Schritt 1
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+
+#### Sonderfall 11a: Ausnahme 1
+* Ablauf Sonderfall 11a
     * Schritt 1
     * Schritt 2
