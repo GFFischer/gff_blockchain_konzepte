@@ -488,19 +488,25 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 
 ### Use-case 10 - Animation 2c:
-* Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
-* Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
-* Standardablauf:
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-#### Sonderfall 10a: Ausnahme 1
-* Ablauf Sonderfall 10a:
-    * Schritt 1
-    * Schritt 2
+![Diagram](img/use-case_10.svg)
+
+* Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 3/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Animation 2c ist geladen. Der erste Frame ist identisch mit dem Abschluss-Frame von Animation 2b
+  und zeigt den ungerichteten Graphen mit allen Namen und Adressen, einschliesslich dem vom User in Animation 2a
+  eingegebenen Namen und den in Animation 2b hinzugefügten Adressen und privaten Schlüsseln.
+* Standardablauf:
+    * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation"
+      beschriftet ist, klickt.
+    * In einer Animation verschwinden aus den zwölf Knoten hintereinander die jeweiligen Namen, sodass einzig die
+      Adressen sowie die privaten Schlüssel der Adressen des vom User in Animation 2a hinzugefügten Knoten übrig bleiben.
+    * Animation 2c ist beendet.
+* Nachbedingung Erfolg: *Zu sehen ist ein ungerichteter Graph mit zwölf Knoten, die mit ein bis drei Adressen beschriftet
+  sind, sowie die privaten Schlüssel der Adressen des vom User hinzugefügten Knotens (siehe folgende schematische
+  Darstellung).*
+
+![Diagram](img/animation_2c_01.svg)
 
 
 ### Use-case 11 - Animation 3a:
