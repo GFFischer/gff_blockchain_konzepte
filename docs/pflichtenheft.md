@@ -10,7 +10,7 @@
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
 |  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 7 (Anhang) hinzugefügt |
 |  0.7    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 11.04.2024 | Pkt. 4 bearbeitet, Pkt. 3 begonnen |
-|  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis xxxx (Anhang) hinzugefügt |
+|  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis 12 (Anhang) hinzugefügt |
 
 ## 1. Einleitung
 
@@ -477,7 +477,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Nachbedingung Erfolg: *Die Beschriftung des vom User in Animation 2a hinzugefügten Knoten ist mit so viele Adressen
   erweitert, wie es der User eingegeben hat. Neben diesem Knoten befindet sich ein Textfeld mit den entsprechenden
   privaten Schlüsseln (siehe folgende schematische Darstellung.)*
-* Nachbedingung Sonderfall: *Animation 2b wird neu gestartet.*
+* Nachbedingung Sonderfall 9a: *Animation 2b wird neu gestartet.*
 
 ![Diagram](img/animation_2b_02.svg)
 
@@ -532,7 +532,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     * Animation 3a ist beendet.
 * Nachbedingung Erfolg: *Die Tabelle auf der Animation ist mit den eingegebenen Kontoständen vollständig ausgefüllt.
   (siehe folgende schematische Darstellung).*
-* Nachbedingung Sonderfall: *Animation 3a wird neu gestartet.*
+* Nachbedingung Sonderfall 11a: *Animation 3a wird neu gestartet.*
 
 ![Diagram](img/animation_3a_02.svg)
 
@@ -545,19 +545,39 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 
 ### Use-case 12 - Animation 3b:
+
+![Diagram](img/use-case_12.svg)
+
 * Name: *Durchführen einer Transaktion Teil 2/4*
 * Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
-* Standardablauf:
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+* Vorbedingungen: *Animation 3b ist geladen. Der erste Frame zeigt die Tabelle des Abschluss-Frames von Animation 3a
+  ODER, falls der User die Animation 3a nicht bearbeitet hat und direkt zu Animation 3b navigiert ist, drei aus einer
+  vorgegebenen Auswahl zufällig ausgewählte Adressen mit zufällig bestimmten Kontoständen. Zusätzlich zu dieser Tabelle
+  ist eine Tabelle mit allen anderen Adressen des Graphen aus Animation 2c und zufällig bestimmten Kontoständen (siehe
+  folgende schematische Darstellung).*
 
-#### Sonderfall 12a: Ausnahme 1
+![Diagram](img/animation_3b_01.svg)
+
+* Standardablauf:
+    * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle eine Transaktion" beschriftet ist,
+      klickt.
+    * Es öffnet sich ein Formular, in dem der User eine seiner eigenen Adressen als Auftraggeber-Adresse und eine von
+      allen anderen Adressen als Empfänger-Adresse auswählt und einen zu überweisenden Betrag eingibt. Der User bestätigt
+      mit dem Klicken auf einen Button, der mit "Transaktion bestätigen" beschriftet ist.
+    * Es öffnet sich ein weiteres Formular, in das automatisch die Transaktionsgebühr, ein akuteller Zeitstempel und ein
+      berechneter Hashwert für die ganze Transaktion eingefügt wird. Der User bestätigt die Transaktion mit "OK".
+    * Animation 3b ist beendet.
+* Nachbedingung Erfolg: *Zusätzlich zu der Tabelle mit den Adressen, privaten Schlüsseln und Kontoständen des Users, der
+  Tabelle mit allen anderen Adressen und Kontoständen eine neue Tabelle mit allen eingegebenen Transaktionsdaten (siehe
+  folgende schematische Darstellung).*
+* Nachbedingung Sonderfall: *Animation 3b wird neu gestartet.*
+
+![Diagram](img/animation_3b_02.svg)
+
+#### Sonderfall 12a: Der User gibt als zu überweisenden Betrag keine ganze Zahl ein
 * Ablauf Sonderfall 12a:
-    * Schritt 1
-    * Schritt 2
+    * Der User klickt auf "Transaktion bestätigen".
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie eine ganze Zahl ein."
 
 
 ### Use-case 13 - Animation 3c:
