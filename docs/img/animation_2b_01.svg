@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="297mm"
-   height="210mm"
-   viewBox="0 0 297 210"
+   width="143.65375mm"
+   height="105.4295mm"
+   viewBox="0 0 143.65375 105.4295"
    version="1.1"
    id="svg1"
    sodipodi:docname="animation_2b_01.svg"
@@ -25,8 +25,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="1.3289991"
-     inkscape:cx="300.97838"
-     inkscape:cy="211.43731"
+     inkscape:cx="242.2876"
+     inkscape:cy="187.35904"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
@@ -36,9 +36,9 @@
   <defs
      id="defs1">
     <rect
-       x="79.083128"
-       y="95.945431"
-       width="93.702465"
+       x="79.08313"
+       y="95.945435"
+       width="93.702461"
        height="33.766609"
        id="rect4" />
   </defs>
@@ -46,7 +46,7 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-27.585142,-10.862028)">
+     transform="translate(-43.018517,-17.133524)">
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.332848;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 59.514551,62.71688 65.908787,45.585176"
@@ -166,7 +166,7 @@
          x="69.327209"
          y="35.643997">Ada</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-dasharray:none"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.265;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 119.51373,70.973678 106.24828,67.78833"
        id="path1"
        inkscape:connector-type="polyline"
@@ -229,7 +229,7 @@
          sodipodi:role="line"
          style="stroke-width:0.262"
          x="104.03365"
-         y="33.501945"
+         y="33.501942"
          id="tspan11" /></text>
     <circle
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.262;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -300,7 +300,7 @@
          sodipodi:role="line"
          style="stroke-width:0.262"
          x="173.91237"
-         y="67.887856"
+         y="67.887848"
          id="tspan18" /></text>
     <circle
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.262;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -508,7 +508,7 @@
          sodipodi:role="line"
          style="stroke-width:0.262"
          x="129.91466"
-         y="114.72849"
+         y="114.72848"
          id="tspan43" /></text>
   </g>
 </svg>
