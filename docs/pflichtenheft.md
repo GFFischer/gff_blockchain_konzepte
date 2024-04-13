@@ -10,7 +10,8 @@
 |  0.5    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 23.03.2024 | Use-case 1 (Anhang) hinzugefügt |
 |  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 7 (Anhang) hinzugefügt |
 |  0.7    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 11.04.2024 | Pkt. 4 bearbeitet, Pkt. 3 begonnen |
-|  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 21.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis 12 (Anhang) hinzugefügt |
+|  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 12.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis 12 (Anhang) hinzugefügt |
+|  0.9    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 13.04.2024 | Use-case 13 bis (Anhang) hinzugefügt |
 
 ## 1. Einleitung
 
@@ -526,7 +527,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 * Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Lege Kontostand fest" beschriftet ist, klickt.
-    * Es öffnet sich ein Formular, in das der User eine ganze Zahl von 0 bis 999 eingibt. Der User bestätigt mit "OK".
+    * Es öffnet sich ein Formular, in das der User ein- bis dreimal, je nach Anzahl der Adressen, eine ganze Zahl von 0
+      bis 999 eingibt. Der User bestätigt mit "OK".
     * Die vom User eingegebenen Kontostände in der Kryptowährung SiC werden in die Spalte "Kontostand" in die Animation
       eingefügt.
     * Animation 3a ist beendet.
@@ -567,9 +569,9 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     * Es öffnet sich ein weiteres Formular, in das automatisch die Transaktionsgebühr, ein akuteller Zeitstempel und ein
       berechneter Hashwert für die ganze Transaktion eingefügt wird. Der User bestätigt die Transaktion mit "OK".
     * Animation 3b ist beendet.
-* Nachbedingung Erfolg: *Zusätzlich zu der Tabelle mit den Adressen, privaten Schlüsseln und Kontoständen des Users, der
-  Tabelle mit allen anderen Adressen und Kontoständen eine neue Tabelle mit allen eingegebenen Transaktionsdaten (siehe
-  folgende schematische Darstellung).*
+* Nachbedingung Erfolg: *Zusätzlich zu der Tabelle mit den Adressen, privaten Schlüsseln und Kontoständen des Users und
+  der Tabelle mit allen anderen Adressen und Kontoständen wird eine neue Tabelle mit allen eingegebenen Transaktionsdaten
+  angezeigt (siehe folgende schematische Darstellung).*
 * Nachbedingung Sonderfall: *Animation 3b wird neu gestartet.*
 
 ![Diagram](img/animation_3b_02.svg)
@@ -581,19 +583,33 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 
 ### Use-case 13 - Animation 3c:
+
+![Diagram](img/use-case_13.svg)
+
 * Name: *Durchführen einer Transaktion Teil 3/4*
 * Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
-* Standardablauf:
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+* Vorbedingungen: *Animation 3c ist vollständig geladen. Der erste Frame zeigt die in Animation 3b neu erstellte Tabelle
+  mit allen eingegebenen Transaktionsdaten ODER, falls der User direkt zu Animation 3c navigiert ist, mit zufällig
+  erstellten Daten, ausgenommen jene, die der User schon irgendwann im Verlaufe der laufenden Verwendung der Applikation
+  in einer der Animationen eingegeben hat, und einem noch leeren Feld, das mit "Digitale Signatur" überschrieben ist (siehe
+  folgende schematische Darstellung).*
 
-#### Sonderfall 13a: Ausnahme 1
-* Ablauf Sonderfall 13a:
-    * Schritt 1
-    * Schritt 2
+![Diagram](img/animation_3c_01.svg)
+
+* Standardablauf:
+    * Der User startet die Animation, indem er auf einen Butten, der mit "Erstelle eine digitale Signatur" beschriftet
+      ist, klickt.
+    * In einer Animation wird der Hashwert der Transaktion in Einheiten zu je zwei hexadezimalen Ziffern aufgeteilt. Jede
+      dieser zweistelligen hexadezimalen Zahlen wird nacheinander in eine binäre und dann in eine deziamle Zahl umgewandelt.
+      Jede dieser dezimalen Zahlen wird nun mit dem privaten Schlüssel der Adresse verschlüsselt, das bedeutet, dass auf
+      diese Zahlen eine Berechnung durchgeführt wird. Als Ergebnis bleiben wiederum dezimale Zahlen übrig, die die digitale
+      Signatur der Transaktion bilden.
+    * Animation 3c ist beendet.
+* Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt neben der Tabelle mit den Transaktionsdaten eine neue Tabelle
+  mit allen berechneten Zahlen sowie mit der digitalen Signatur als Ergebnis. Die digitale Signatur ist ebenso in der
+  Tabelle mit den Transaktionsdaten eingetragen.*
+
+![Diagram](img/animation_3c_02.svg)
 
 
 ### Use-case 14 - Animation 3d:
