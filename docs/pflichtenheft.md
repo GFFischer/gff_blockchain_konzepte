@@ -11,7 +11,7 @@
 |  0.6    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 10.04.2024 | Use-case 2 bis 7 (Anhang) hinzugefügt |
 |  0.7    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 11.04.2024 | Pkt. 4 bearbeitet, Pkt. 3 begonnen |
 |  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 12.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis 12 (Anhang) hinzugefügt |
-|  0.9    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 13.04.2024 | Use-case 13 bis (Anhang) hinzugefügt |
+|  0.9    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 13.04.2024 | Use-case 13 (Anhang) hinzugefügt |
 
 ## 1. Einleitung
 
@@ -607,7 +607,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     * Animation 3c ist beendet.
 * Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt neben der Tabelle mit den Transaktionsdaten eine neue Tabelle
   mit allen berechneten Zahlen sowie mit der digitalen Signatur als Ergebnis. Die digitale Signatur ist ebenso in der
-  Tabelle mit den Transaktionsdaten eingetragen.*
+  Tabelle mit den Transaktionsdaten eingetragen (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_3c_02.svg)
 
