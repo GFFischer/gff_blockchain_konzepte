@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="190.95915mm"
+   height="113.73918mm"
+   viewBox="0 0 190.95914 113.73918"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="animation_3c_02.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.1616723"
+     inkscape:cx="340.88787"
+     inkscape:cy="359.82609"
+     inkscape:window-width="1440"
+     inkscape:window-height="914"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="425.24902"
+       y="359.82608"
+       width="96.412735"
+       height="71.448723"
+       id="rect59" />
+    <rect
+       x="395.12003"
+       y="94.691078"
+       width="389.95508"
+       height="81.778656"
+       id="rect60" />
+    <rect
+       x="49.067196"
+       y="224.6761"
+       width="501.00189"
+       height="123.0984"
+       id="rect12" />
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-20.110309,-67.751404)">
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;line-height:1.9;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="95.005913"
+       y="100.89801"
+       id="text1"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326"
+         x="95.005913"
+         y="100.89801"
+         id="tspan5">Hashwert</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326"
+         x="95.005913"
+         y="108.27107"
+         id="tspan49">... als binäre Zahl</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326"
+         x="95.005913"
+         y="115.64413"
+         id="tspan50">... als dezimale Zahl (m)</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326"
+         x="95.005913"
+         y="123.0172"
+         id="tspan53">... verschlüsselt</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326"
+         x="95.005913"
+         y="130.39026"
+         id="tspan57">    c = m<tspan
+   style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:3.175px;font-family:Arial;-inkscape-font-specification:'Arial Bold';baseline-shift:super"
+   id="tspan58">d</tspan> mod n</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326"
+         x="95.005913"
+         y="137.76334"
+         id="tspan51" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="136.20091"
+       y="100.89801"
+       id="text11"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.9;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.326"
+         x="136.20091"
+         y="100.89801"
+         id="tspan56">      a3            16              2d             f9</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.9;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.326"
+         x="136.20091"
+         y="108.27107"
+         id="tspan76">10100011 00010110  00101101 111110011</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.9;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.326"
+         x="136.20091"
+         y="115.64413"
+         id="tspan77">    163            22              45            249</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.9;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.326"
+         x="136.20091"
+         y="123.0172"
+         id="tspan80" /><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.58611px;line-height:1.9;font-family:Arial;-inkscape-font-specification:Arial;stroke-width:0.326"
+         x="136.20091"
+         y="131.2551"
+         id="tspan81">     57        609          452         27</tspan></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text12"
+       style="font-size:13.3333px;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;white-space:pre;shape-inside:url(#rect12);display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.23213;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.330843;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect46"
+       width="118.65849"
+       height="7.5112624"
+       x="92.245522"
+       y="95.434174" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.330843;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect47"
+       width="118.6585"
+       height="7.5112624"
+       x="92.245522"
+       y="102.97201" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.330843;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect48"
+       width="118.65851"
+       height="7.5112624"
+       x="92.245522"
+       y="110.50984" />
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,15.780246,65.204334)"
+       id="text60"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:14.6667px;line-height:1.9;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;white-space:pre;shape-inside:url(#rect60);display:inline;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1.23213;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;line-height:0;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="95.461433"
+       y="100.89801"
+       id="text64"><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326"
+         x="95.461433"
+         y="100.89801"
+         id="tspan64" /></text>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.45854;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect78"
+       width="118.53082"
+       height="14.444148"
+       x="92.309364"
+       y="118.11153" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.2312;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect86-5-8"
+       width="57.490505"
+       height="7.5709682"
+       x="20.346916"
+       y="67.867004" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.326608;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect160"
+       width="57.490505"
+       height="15.108803"
+       x="20.346916"
+       y="75.437973" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.326608;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect161"
+       width="57.490505"
+       height="15.108803"
+       x="20.273613"
+       y="90.674461" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.326608;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect162"
+       width="57.490505"
+       height="15.108803"
+       x="20.273613"
+       y="105.78326" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.326608;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect163"
+       width="57.490505"
+       height="15.108803"
+       x="20.273613"
+       y="120.89207" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.326608;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect164"
+       width="57.490505"
+       height="15.108803"
+       x="20.273613"
+       y="136.12856" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.326608;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect165"
+       width="57.490505"
+       height="15.108803"
+       x="20.273613"
+       y="151.10966" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.93;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:48.1777;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       x="192.50374"
+       y="79.66877"
+       id="text97-3-6"
+       transform="translate(-146.22239,-6.1495398)"><tspan
+         x="192.50374"
+         y="79.66877"
+         id="tspan4"><tspan
+           style="font-weight:bold;-inkscape-font-specification:'Arial Bold'"
+           id="tspan2">Transaktionsdaten</tspan><tspan
+           style="stroke-width:0.326"
+           id="tspan3">&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="87.158251"
+         id="tspan7"><tspan
+           style="stroke-width:0.326"
+           id="tspan6">Auftraggeber-Adresse:&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="94.657157"
+         id="tspan10"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Arial Italic'"
+           id="tspan8">e=61, n=629</tspan><tspan
+           style="stroke-width:0.326"
+           id="tspan9">&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="102.14664"
+         id="tspan14"><tspan
+           style="stroke-width:0.326"
+           id="tspan11">Empfänger-Adresse:&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="109.64555"
+         id="tspan19"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Arial Italic'"
+           id="tspan15">e=37, n=377</tspan><tspan
+           style="stroke-width:0.326"
+           id="tspan18">&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="117.13503"
+         id="tspan23"><tspan
+           style="stroke-width:0.326"
+           id="tspan20">zu überweisender Betrag:&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="124.63393"
+         id="tspan28"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Arial Italic'"
+           id="tspan24">100 SiC</tspan><tspan
+           style="stroke-width:0.326"
+           id="tspan25">&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="132.12342"
+         id="tspan30"><tspan
+           style="stroke-width:0.326"
+           id="tspan29">Transaktionsgebühr:&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="139.62233"
+         id="tspan35"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Arial Italic'"
+           id="tspan33">0,03 SiC</tspan><tspan
+           style="stroke-width:0.326"
+           id="tspan34">&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="147.1118"
+         id="tspan39"><tspan
+           style="stroke-width:0.326"
+           id="tspan38">Zeitstempel:&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="154.61072"
+         id="tspan43"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Arial Italic'"
+           id="tspan40">12.04.2024 19:31:20,32</tspan><tspan
+           style="stroke-width:0.326"
+           id="tspan42">&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="162.10019"
+         id="tspan45"><tspan
+           style="stroke-width:0.326"
+           id="tspan44">Hashwert Transaktion:&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="169.59911"
+         id="tspan48"><tspan
+           style="font-style:italic;-inkscape-font-specification:'Arial Italic'"
+           id="tspan46">a3162df9</tspan><tspan
+           style="font-weight:bold;-inkscape-font-specification:'Arial Bold'"
+           id="tspan47">&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="177.08858"
+         id="tspan54"><tspan
+           style="font-weight:bold;-inkscape-font-specification:'Arial Bold'"
+           id="tspan52">Digitale Signatur:&#10;</tspan></tspan><tspan
+         x="192.50374"
+         y="184.57807"
+         id="tspan60"><tspan
+           style="font-weight:bold;-inkscape-font-specification:'Arial Bold'"
+           id="tspan55">57  609  452  27</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,18.285613,66.343135)"
+       id="text59"
+       style="font-style:italic;font-size:12px;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;white-space:pre;shape-inside:url(#rect59);fill:none;stroke:#000000;stroke-width:2.03717;stroke-linejoin:round" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.326608;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       id="rect81"
+       width="57.490505"
+       height="15.108803"
+       x="20.273613"
+       y="166.21848" />
+  </g>
+</svg>
