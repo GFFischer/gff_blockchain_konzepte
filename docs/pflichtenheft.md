@@ -178,8 +178,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * **/F60/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 2
   ("Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System") einzugreifen. *(vgl. /LF40/, /LF42/)*
   * /F61/ Die Animationen 2a und 2b *sollen* zeigen, wie ein neuer Knoten zu einem als ungerichteter Graph modellierten
-    Peer-to-Peer-System hinzugefügt wird und wie für diesen Knoten ein Wallet mit einem oder mehreren Schlüsselpaaren
-    ("Adressen") eingerichtet wird, wobei der User dem Knoten einen vorläufigen Namen zuweisenn und die Anzahl der
+    Peer-to-Peer-System hinzugefügt wird und wie für diesen Knoten ein Wallet mit einem, zwei oder drei Schlüsselpaaren
+    ("Adressen") eingerichtet wird, wobei der User dem Knoten einen vorläufigen Namen zuweisen und die Anzahl der
     Adressen bestimmen kann. *(vgl. Use-case 8 und Use-case 9)*
   * /F62/ Der User *soll* die Möglichkeit haben, bei Animation 2a einen Namen (maximal 20 Zeichen, bestehend aus
     ausschliesslich Gross- und Kleinbuchstaben, Umlauten und Ziffern) einzugeben. *(vgl. Use-case 8)*
@@ -312,7 +312,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
       3") und dem vom User eingegebenen Inhalt wird der Animation hinzugefügt.
     * Animation 1a ist beendet.
 * Nachbedingung Erfolg: *Eine neue symbolisch dargestellte Seite eines Buchs mit dem vom User
-  eingegebenen Ihhalt ist der Animation hinzugefügt (siehe folgende schematische Darstellung).*
+  eingegebenen Inhalt ist der Animation hinzugefügt (siehe folgende schematische Darstellung).*
 * Nachbedingung Sonderfall 4a: *Animation 1a wird neu geladen.*
  
 ![Diagram](img/animation_1a_02.svg)
@@ -333,7 +333,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   Seiten eines Buchs, bestehend jeweils aus einem auf den Inhalt berechneten Hashwert (eine
   achtstellige hexadezimale Zahl) und einem kurzen Text als Inhalt. Die Texte sind identisch mit
   jenen aus Animation 1a, auf der dritten Seite befindet sich also der vom User in Animation 1a
-  eingegebene Text (siehe folgende schematische Darstellung).*
+  eingegebene Text ODER, falls der User Animation 1a nicht bearbeitet hat, ein von der Applikation
+  vorgegebener Text (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_1b_01.svg)
 
@@ -371,7 +372,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   Blöcke einer Blockchain, bestehend jeweils aus einem auf den Inhalt berechneten Hashwert, einer
   Hash-Referenz auf den vorherigen Block und einem kurzen Text als Inhalt. Die Texte sind identisch
   mit jenen aus Animation 1b, auf der dritten und der vierten Seite befinden sich also die vom
-  User in den Animation 1a und 1b eingegebenen Texte (siehe folgende schematische Darstellung).*
+  User in den Animation 1a und 1b eingegebenen Texte ODER, falls der User die Animationen 1a und/oder 1b
+  nicht bearbeitet hat, von der Applikation vorgegebene Texte (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_1c_01.svg)
 
@@ -411,7 +413,9 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   Blöcke einer Blockchain, bestehend jeweils aus einem auf den Inhalt berechneten Hashwert, einer
   Hash-Referenz auf den vorherigen Block und einem kurzen Text als Inhalt. Der Frame ist identisch
   mit dem Abschluss-Frame aus Animation 1c, auf der dritten, vierten und fünften Seite befinden
-  sich also die vom User in den Animation 1a, 1b und 1c eingegebenen Texte.*
+  sich also die vom User in den Animation 1a, 1b und 1c eingegebenen Texte ODER, falls der User die
+  Animationen 1a bis 1c teilweise oder zur Gänze nicht bearbeitet hat, von der Applikation vorgegebene
+  Texte.*
 * Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation"
       beschriftet ist, klickt.
@@ -432,7 +436,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Name: *Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System", Teil 1/3*
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Animation 2a ist geladen. Der erste Frame zeigt einen ungerichteten Graphen mit elf Knoten, jeder
-  beschriftet mit einem kurzen Vornamen (siehe folgende schematische Darstellung).*
+  beschriftet mit einem kurzen Vornamen. Die Zuweisung dieser Vornamen hat die Applikation aus einer vorgegebenen
+  Auswahl (ca. 200 Namen) zufällig gewählt (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_2a_01.svg)
 
@@ -464,7 +469,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Animation 2b ist geladen. Der erste Frame zeigt den Graphen aus Animation 2a, allerdings so verändert,
   dass die Beschriftung jedes Knotens ausgenommen des vom User in Animation 2a hinzugefügten mit einer, zwei oder drei
-  Adressen erweitert worden ist (siehe folgende schematische Darstellung.)*
+  Adressen erweitert worden ist. Falls der User die Animation 2a nicht bearbeitet hat, ist der dort hinzugefügte Knoten mit
+  einem von der Applikation vorgegebenen Namen beschriftet (siehe folgende schematische Darstellung.)*
 
 ![Diagram](img/animation_2b_01.svg)
 
@@ -472,10 +478,10 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle ein Wallet" beschriftet ist, klickt.
     * Es öffnet sich ein Formular, in das der User eine ganze Zahl von 1 bis 3 als Anzahl für die einzurichtenden
       Adressen eingibt. Der User bestätigt mit "OK".
-    * Die Beschriftung des vom User in Animation 2a hinzugefügten Knoten wird mit so vielen Adressen erweitert, wie der
-      es eingegeben hat.
+    * Die Beschriftung des vom User in Animation 2a hinzugefügten Knotens wird mit so vielen Adressen erweitert, wie es der
+      User eingegeben hat.
     * Animation 2b ist beendet.
-* Nachbedingung Erfolg: *Die Beschriftung des vom User in Animation 2a hinzugefügten Knoten ist mit so viele Adressen
+* Nachbedingung Erfolg: *Die Beschriftung des vom User in Animation 2a hinzugefügten Knotens ist mit so viele Adressen
   erweitert, wie es der User eingegeben hat. Neben diesem Knoten befindet sich ein Textfeld mit den entsprechenden
   privaten Schlüsseln (siehe folgende schematische Darstellung.)*
 * Nachbedingung Sonderfall 9a: *Animation 2b wird neu gestartet.*
@@ -497,7 +503,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Animation 2c ist geladen. Der erste Frame ist identisch mit dem Abschluss-Frame von Animation 2b
   und zeigt den ungerichteten Graphen mit allen Namen und Adressen, einschliesslich dem vom User in Animation 2a
-  eingegebenen Namen und den in Animation 2b hinzugefügten Adressen und privaten Schlüsseln.*
+  eingegebenen Namen und den in Animation 2b hinzugefügten Adressen und privaten Schlüsseln ODER, falls der User die
+  Animationen 2a und/oder 2b nicht bearbeitet hat, mit von der Applikation vorgegebenen Werten.*
 * Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation"
       beschriftet ist, klickt.
@@ -572,7 +579,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Nachbedingung Erfolg: *Zusätzlich zu der Tabelle mit den Adressen, privaten Schlüsseln und Kontoständen des Users und
   der Tabelle mit allen anderen Adressen und Kontoständen wird eine neue Tabelle mit allen eingegebenen Transaktionsdaten
   angezeigt (siehe folgende schematische Darstellung).*
-* Nachbedingung Sonderfall: *Animation 3b wird neu gestartet.*
+* Nachbedingung Sonderfall 12a: *Animation 3b wird neu gestartet.*
 
 ![Diagram](img/animation_3b_02.svg)
 
@@ -602,8 +609,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     * In einer Animation wird der Hashwert der Transaktion in Einheiten zu je zwei hexadezimalen Ziffern aufgeteilt. Jede
       dieser zweistelligen hexadezimalen Zahlen wird nacheinander in eine binäre und dann in eine deziamle Zahl umgewandelt.
       Jede dieser dezimalen Zahlen wird nun mit dem privaten Schlüssel der Adresse verschlüsselt, das bedeutet, dass auf
-      diese Zahlen eine Berechnung durchgeführt wird. Als Ergebnis bleiben wiederum dezimale Zahlen übrig, die die digitale
-      Signatur der Transaktion bilden.
+      diese Zahlen eine Berechnung durchgeführt wird. Als Ergebnis bleiben wiederum dezimale Zahlen übrig, welche die
+      digitale Signatur der Transaktion bilden.
     * Animation 3c ist beendet.
 * Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt neben der Tabelle mit den Transaktionsdaten eine neue Tabelle
   mit allen berechneten Zahlen sowie mit der digitalen Signatur als Ergebnis. Die digitale Signatur ist ebenso in der
