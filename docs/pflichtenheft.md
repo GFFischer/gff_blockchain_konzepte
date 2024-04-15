@@ -12,6 +12,8 @@
 |  0.7    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 11.04.2024 | Pkt. 4 bearbeitet, Pkt. 3 begonnen |
 |  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 12.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis 12 (Anhang) hinzugefügt |
 |  0.9    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 13.04.2024 | Use-case 13 (Anhang) hinzugefügt |
+|  0.10   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 15.04.2024 | Pkt. 3 bearbeitet, Use-case 14 bis xxxxx (Anhang) hinzugefügt |
+
 
 ## 1. Einleitung
 
@@ -620,19 +622,40 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 
 ### Use-case 14 - Animation 3d:
+
+![Diagram](img/use-case_14.svg)
+
 * Name: *Durchführen einer Transaktion Teil 4/4*
 * Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Vorbedingungen: *Animation 3d ist vollständig geladen. Der erste Frame zeigt die in Animation 3c ergänzte Tabelle mit den
+  Transaktionsdaten ODER, falls der User direkt zu Animation 3d navigiert ist, mit zufällig erstellten Daten, ausgenommen
+  jene, die der User schon irgendwann im Verlaufe der laufenden Verwendung der Applikation in einer der Animationen
+  eingegeben hat.*
 * Standardablauf:
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+    * Der User startet die Animation, indem er auf einen Button, der mit "Prüfe Transaktion" beschrieben ist, klickt.
+    * Im ersten Teil der Animation wird geprüft, ob alle Daten der Transaktion korrekt eingegeben sind, ob die Absender-
+      und die Empfängeradresse existieren und ob der zu überweisende Betrag höher ist als der Kontostand der
+      Absenderadresse. Bei allen Bedingungen, die erfüllt sind, erscheint ein Symbol zur Bestätigung (z.B. ein Haken), bei
+      allen Bedingungen, die nicht erfüllt sind, erscheint ein Symbol zur Zurückweiung (z.B. ein X). Tatsächlich kann
+      ausschliesslich die Bedingung, dass der zu überweisende Betrag höher ist als der Kontostand der Absenderadresse,
+      nicht erfüllt sein, weil alle anderen Daten vom User nicht selbstständig eingegeben, sondern nur aus Auswahlfeldern
+      ausgewählt worden sind. Falls eine also diese Bedingung nicht erfüllt ist, erscheint ein Textfeld mit der Nachricht
+      "Transaktion zurückgewiesen" und die Animation 3d ist beendet.
+    * Falls im ersten Teil der Animation alle Bedingungen erfüllt sind, werden im zweiten Teil der Animation die Zahlen der 
+      digitalen Signatur entschlüsselt, das heisst, es wird auf jede Zahl eine Berechnung durchgeführt. Als Ergebnis kommen 
+      dezimale Zahlen heraus, die nacheinander in binäre und dann in hexadezimale Zahlen umgewandelt werden. Die vier
+      zweistelligen hexadezimalen Zahlen zusammengesetzt ergeben den Hashwert der Transaktion.
+    * Es erscheint ein Textfeld mit der Nachricht "Transaktion gültig" und die Animation 3d ist beendet.
+* Nachbedingung Erfolg: *Neben der Tabelle mit den Transaktionsdaten ist bei allen geprüften Bedingungen  ein
+  Bestätigungssymbol zu sehen, ebenso ist eine neue Tabelle mit allen berechneten Zahlen sowie mit dem Hashwert der
+  Transaktion als Ergebnis und ein Textfeld mit der Nachricht "Transaktion gültig" zu sehen, ODER bei der Bedingung, dass
+  der zu überweisende Betrag höher ist als der Kontostand der Absenderadresse, ist ein Zurückweisungssymbol zu sehen,
+  ebenso ein Textfeld mit der Nachricht "Transaktion zurückgewiesen" (siehe folgende schematischen Darstellungen).*
 
-#### Sonderfall 14a: Ausnahme 1
-* Ablauf Sonderfall 14a:
-    * Schritt 1
-    * Schritt 2
+![Diagram](img/animation_3d_01.svg)
+
+
+![Diagram](img/animation_3d_02.svg)
 
 
 ### Use-case 15 - Animation 4a:
