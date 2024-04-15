@@ -12,7 +12,7 @@
 |  0.7    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 11.04.2024 | Pkt. 4 bearbeitet, Pkt. 3 begonnen |
 |  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 12.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis 12 (Anhang) hinzugefügt |
 |  0.9    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 13.04.2024 | Use-case 13 (Anhang) hinzugefügt |
-|  0.10   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 15.04.2024 | Pkt. 3 bearbeitet, Use-case 14 bis xxxxx (Anhang) hinzugefügt |
+|  0.10   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 15.04.2024 | Pkt. 3 bearbeitet, Use-case 14 bis 15 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -165,7 +165,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   * /F44/ Die erklärenden Texte *sollen* leicht verständlich geschrieben und ausgewogen bezüglich Kürze und inhaltlicher
     Tiefe sein. *(vgl. /LQE10/)*
 * **/F50/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 1
-  ("Aufbau einer Blockchain-Datenstruktur") einzugreifen. *(vgl. /LF40/, /LF41/)*
+  ("Aufbau einer Blockchain-Datenstruktur") einzugreifen. *(vgl. /LK20/, /LF40/, /LF41/)*
   * /F51/ Die Animationen 1a, 1b und 1c *sollen* schrittweise detaillierter zeigen, wie einer Blockchain neue Blöcke
     hinzugefügt werden, wobei die Inhalte dieser neuen Blöcke die vom User eingegebenen Texte sind. *(vgl. Use-case 4
     bis Use-case 5)*
@@ -178,7 +178,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   * /F54/ Die Animation 1d *soll* zeigen, wie Block-Header und Inhalt getrennt und durch eine Hash-Referenz im
     Block-Header miteinander verknüpft werden. *(vgl. Use-case 7)*
 * **/F60/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 2
-  ("Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System") einzugreifen. *(vgl. /LF40/, /LF42/)*
+  ("Hinzufügen eines neuen Knotens zu einem Peer-to-Peer-System") einzugreifen. *(vgl. /LK30/ /LF40/, /LF42/)*
   * /F61/ Die Animationen 2a und 2b *sollen* zeigen, wie ein neuer Knoten zu einem als ungerichteter Graph modellierten
     Peer-to-Peer-System hinzugefügt wird und wie für diesen Knoten ein Wallet mit einem, zwei oder drei Schlüsselpaaren
     ("Adressen") eingerichtet wird, wobei der User dem Knoten einen vorläufigen Namen zuweisen und die Anzahl der
@@ -192,6 +192,34 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     und ca. 200 Adressen, Anzahl von 1 bis 3) zufällig gewählt werden.
   * /F65/ Die Animation 2c soll zeigen, wie die Namen der Knoten verschwinden und als pseudonyme Identifikation
     ausschliesslich die Adressen übrig bleiben. *(vgl. Use-case 10)*
+* **/F70/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 3
+  ("Durchführung einer Transaktion") einzugreifen. *(vgl. /LK40/, /LF40/, /LF43/)*
+  * /F71/ Der User *soll* die Möglichkeit haben, in Animation 3a für die in Animation 2b erstellten Adressen jeweils
+    fiktive Kontostände im Bereich von 0 bis 999 SiC einzugeben. *(vgl. Use-case 11)*
+  * /F72/ Die Zuweisung der Kontostände im Bereich von 0 bis 999 SiC zu allen anderen Adressen der Knoten aus Animation
+    2c *soll* bei jedem Start der Applikation zufällig bestimmt werden.
+  * /F73/ Der User *soll* die Möglichkeit haben, in Animation 3b eine fiktive Transaktion zu erstellen, indem er über ein
+    Formular aus den ein bis drei Adressen seines "eigenen" Knotens eine Auftraggeber-Adresse und aus allen anderen
+    Adressen der Knoten aus Animation 2c eine Empfänger-Adresse wählt, selbstständig eine ganze Zahl für den zu
+    überweisenden Betrag eingibt, und indem die Applikation automatisch einen aktuellen Zeitstempel, eine Gebühr von 0,03
+    SiC einfügt sowie einen Hashwert für die ganze Transaktion berechnet. *(vgl. Use-case 12)*
+  * /F64/ Die Animation 3c *soll* zeigen, wie eine digitale Signatur erstellt wird, indem aus dem Hashwert der Transaktion
+    durch die Anwendung asymmetrischer Verschlüsselung nach dem Prinzip des RSA-Algorithmus, allerdings mit sehr kleinen
+    Zahlen, eine digitale Signatur berechnet wird. *(vgl. Use-case 13)*
+  * /F75/ Die Animation 3d *soll* zeigen, wie die Transaktion geprüft und zurückgewiesen wird, wenn der eingegebene zu
+    überweisende Betrag höher ist als der Kontostand der Auftraggeber-Adresse, ODER wie andernfalls die digitale Signatur
+    geprüft wird, indem aus ihr durch die Anwendung asymmetrischer Entschlüsselung nach dem Prinzip des RSA-Algorithmus,
+    allerdings mit sehr kleinen Zahlen, der Hashwert der Transaktion berechnet wird. *(vgl. Use-case 14)*
+* **/F80/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 4
+  ("Speichern von Transaktionen und Erstellen von neuen Blöcken") einzugreifen. *(vgl. /LK50/, /LF40/, /LF44/)*
+  * /F81/ Die Animation 4a *soll* zeigen, wie zwei Transaktionen durch die Berechnung eines Hashwertes auf ihre beiden
+    Hash-Referenzen miteinander verknüpft werden. *(vgl. Use-case 15)*
+  * /F82/ Die Animation 4b *soll* zeigen, wie zweimal jeweils vier Transaktionen durch die Berechnung von Hashwerten in
+    einem Merkle-Tree miteinander verknüpft und wie im Block-Header der Blöcke der Blockchain die Wurzel dieser
+    Merkle-Trees zur Hash-Referenz auf den Inhalt der Blöcke werden. *(vgl. Use-case 16)*
+  * /F83/ Der User *soll* die Möglichkeit haben, in Animation 4c bei einer der in einem Merkle-Tree miteinander verknüpften
+    Transaktionen den zu überweisenden Betrag und/oder die Empfänger-Adresse zu ändern, wodurch gezeigt werden soll, welche
+    Auswirkungen eine kleine Änderung auf die gesamte Blockchain hat. *(vgl. Use-case 17)*
 
 
 ## 4. Abnahmekriterien
@@ -640,7 +668,10 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
       ausschliesslich die Bedingung, dass der zu überweisende Betrag höher ist als der Kontostand der Absenderadresse,
       nicht erfüllt sein, weil alle anderen Daten vom User nicht selbstständig eingegeben, sondern nur aus Auswahlfeldern
       ausgewählt worden sind. Falls eine also diese Bedingung nicht erfüllt ist, erscheint ein Textfeld mit der Nachricht
-      "Transaktion zurückgewiesen" und die Animation 3d ist beendet.
+      "Transaktion zurückgewiesen" und die Animation 3d ist beendet (siehe folgende schematische Darstellung).
+
+![Diagram](img/animation_3d_01.svg)
+
     * Falls im ersten Teil der Animation alle Bedingungen erfüllt sind, werden im zweiten Teil der Animation die Zahlen der 
       digitalen Signatur entschlüsselt, das heisst, es wird auf jede Zahl eine Berechnung durchgeführt. Als Ergebnis kommen 
       dezimale Zahlen heraus, die nacheinander in binäre und dann in hexadezimale Zahlen umgewandelt werden. Die vier
@@ -650,25 +681,79 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   Bestätigungssymbol zu sehen, ebenso ist eine neue Tabelle mit allen berechneten Zahlen sowie mit dem Hashwert der
   Transaktion als Ergebnis und ein Textfeld mit der Nachricht "Transaktion gültig" zu sehen, ODER bei der Bedingung, dass
   der zu überweisende Betrag höher ist als der Kontostand der Absenderadresse, ist ein Zurückweisungssymbol zu sehen,
-  ebenso ein Textfeld mit der Nachricht "Transaktion zurückgewiesen" (siehe folgende schematischen Darstellungen).*
-
-![Diagram](img/animation_3d_01.svg)
-
+  ebenso ein Textfeld mit der Nachricht "Transaktion zurückgewiesen" (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_3d_02.svg)
 
 
 ### Use-case 15 - Animation 4a:
-* Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 1/xxxxxxxxxx*
+
+![Diagram](img/use-case_15.svg)
+
+* Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 1/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Animation 4a ist vollständig geladen. Der erste Frame zeigt die Tabelle mit den Transaktionsdaten aus
+  Animation 3c und eine weitere, von der Applikation mit zufälligen Daten erstellte Tabelle einer Transaktion ODER, falls
+  der User direkt zu Animation 4a navigiert ist, zwei Tabellen mit zufällig erstellten Transaktionsdaten, ausgenommen
+  jene, die der User schon irgendwann im Verlaufe der laufenden Verwendung der Applikation in einer der Animationen
+  eingegeben hat (siehe folgende schematische Darstellung).*
+
+![Diagram](img/animation_4a_01.svg)
+
+* Standardablauf:
+    * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation" beschrieben ist, klickt.
+    * In einer Animation werden die Hashwerte der Transaktionen herausgehoben und zu Hash-Referenzen auf die Transaktionen,
+      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+
+#### Sonderfall 15a: Ausnahme 1
+* Ablauf Sonderfall 15a:
+    * Schritt 1
+    * Schritt 2
+
+
+### Use-case 16 - Animation 4b:
+* Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 2/3*
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
 * Standardablauf:
     * Schritt 1
     * Schritt 2
 * Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+* Nachbedingung Sonderfall 16a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-#### Sonderfall 15a: Ausnahme 1
-* Ablauf Sonderfall 15a:
+#### Sonderfall 16a: Ausnahme 1
+* Ablauf Sonderfall 16a:
+    * Schritt 1
+    * Schritt 2
+
+### Use-case 17 - Animation 4c:
+* Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 3/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Standardablauf:
+    * Schritt 1
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall 17a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+
+#### Sonderfall 17a: Ausnahme 1
+* Ablauf Sonderfall 17a:
+    * Schritt 1
+    * Schritt 2
+
+### Use-case 18 - Animation 5a:
+* Name: *Schützen der Blöcke durch Proof-of-Work, Teil 1/xxxxxxx*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Standardablauf:
+    * Schritt 1
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall 18a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+
+#### Sonderfall 18a: Ausnahme 1
+* Ablauf Sonderfall 18a:
     * Schritt 1
     * Schritt 2
