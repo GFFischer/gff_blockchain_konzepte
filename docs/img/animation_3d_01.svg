@@ -132,7 +132,7 @@
        y="151.10966" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.93;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:48.1777;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;line-height:1.93;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:48.1777;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.326001;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        x="192.50374"
        y="79.66877"
        id="text97-3-6"
@@ -230,7 +230,7 @@
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,18.285613,66.343135)"
        id="text59"
-       style="font-style:italic;font-size:12px;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;white-space:pre;shape-inside:url(#rect59);fill:none;stroke:#000000;stroke-width:2.03717;stroke-linejoin:round" />
+       style="font-style:italic;font-size:12px;line-height:1.9;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;white-space:pre;shape-inside:url(#rect59);display:inline;fill:none;stroke:#000000;stroke-width:2.03717;stroke-linejoin:round" />
     <rect
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.326608;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
        id="rect81"
@@ -302,7 +302,7 @@
        y="121.95846" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.1;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;text-anchor:start;white-space:pre;inline-size:34.652;fill:#008000;fill-opacity:1;stroke:none;stroke-width:0.494001;stroke-linejoin:round;stroke-dasharray:1.97601, 0.494001"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.23333px;line-height:1.1;font-family:Arial;-inkscape-font-specification:Arial;text-align:start;text-anchor:start;white-space:pre;inline-size:34.652;display:inline;fill:#008000;fill-opacity:1;stroke:none;stroke-width:0.494001;stroke-linejoin:round;stroke-dasharray:1.97601, 0.494001"
        x="117.77774"
        y="166.59956"
        id="text26"
@@ -317,18 +317,31 @@
          id="tspan88"><tspan
            style="font-weight:bold;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;fill:#000000;stroke-width:0.494"
            id="tspan87">zurückgewiesen</tspan></tspan></text>
-    <g
-       id="g2">
-      <use
-         x="0"
-         y="0"
-         xlink:href="#rect24"
-         id="use1" />
-      <use
-         x="0"
-         y="0"
-         xlink:href="#text26"
-         id="use2" />
-    </g>
+    <use
+       x="0"
+       y="0"
+       xlink:href="#rect24"
+       id="use1" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:3.52777px;line-height:1.1;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:center;text-anchor:middle;white-space:pre;inline-size:28.7125;display:inline;fill:#008000;stroke-width:0.494001;stroke-linejoin:round;stroke-dasharray:1.97601, 0.494001"
+       x="143.55663"
+       y="167.05508"
+       id="text3"
+       transform="translate(-0.1155585,-40.358225)"><tspan
+         x="143.55663"
+         y="167.05508"
+         id="tspan91"><tspan
+           style="fill:#000000;stroke-width:0.494"
+           id="tspan89">Transaktion</tspan><tspan
+           style="fill:#000000"
+           id="tspan90"></tspan><tspan
+           y="167.05508"
+           id="tspan92"> </tspan></tspan><tspan
+         x="143.55663"
+         y="170.93564"
+         id="tspan94"><tspan
+           style="fill:#000000"
+           id="tspan93">zurückgewiesen</tspan></tspan></text>
   </g>
 </svg>
