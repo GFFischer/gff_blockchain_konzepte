@@ -24,7 +24,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1"
-     inkscape:cx="357"
+     inkscape:cx="356.5"
      inkscape:cy="137"
      inkscape:window-width="1440"
      inkscape:window-height="890"
@@ -135,16 +135,16 @@
        transform="translate(-6.8269903,3.0541803)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan2"><tspan
-           style="stroke-width:0.665"
-           id="tspan1">Animation</tspan><tspan
-           y="74.198608"
-           id="tspan3"> </tspan></tspan><tspan
+         id="tspan18"><tspan
+   style="stroke-width:0.665"
+   id="tspan17">Animation</tspan><tspan
+   y="74.198608"
+   id="tspan19"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan5"><tspan
+         id="tspan24"><tspan
    style="stroke-width:0.665"
-   id="tspan4">unterbreche</tspan>n</tspan></text>
+   id="tspan20">unterbreche</tspan>n</tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse14"
@@ -161,16 +161,16 @@
        transform="translate(-6.6473327,35.03324)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan7"><tspan
-           style="stroke-width:0.665"
-           id="tspan6">Animation</tspan><tspan
-           y="74.198608"
-           id="tspan8"> </tspan></tspan><tspan
+         id="tspan26"><tspan
+   style="stroke-width:0.665"
+   id="tspan25">Animation</tspan><tspan
+   y="74.198608"
+   id="tspan27"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan10"><tspan
+         id="tspan29"><tspan
            style="stroke-width:0.665"
-           id="tspan9">abbrechen</tspan></tspan></text>
+           id="tspan28">abbrechen</tspan></tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse16"
@@ -187,16 +187,16 @@
        transform="translate(49.405851,1.6169192)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan13"><tspan
-           style="stroke-width:0.665"
-           id="tspan11">Animation</tspan><tspan
-           y="74.198608"
-           id="tspan14"> </tspan></tspan><tspan
+         id="tspan31"><tspan
+   style="stroke-width:0.665"
+   id="tspan30">Animation</tspan><tspan
+   y="74.198608"
+   id="tspan32"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan16"><tspan
+         id="tspan34"><tspan
            style="stroke-width:0.665"
-           id="tspan15">fortsetzen</tspan></tspan></text>
+           id="tspan33">fortsetzen</tspan></tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.57445;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.2978, 0.57445;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
        d="M 98.129146,68.191286 97.910003,54.336091"
@@ -231,7 +231,7 @@
          id="tspan21"
          style="stroke-width:0.565"
          x="134.67291"
-         y="32.279167"></tspan></text>
+         y="32.279167" /></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -254,5 +254,15 @@
          style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565"
          x="127.90984"
          y="83.590416">&lt;&lt;extend&gt;&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="99.033676"
+       y="42.03989"
+       id="text40"
+       transform="translate(-74.224497,51.736646)"><tspan
+         x="99.033676"
+         y="42.03989"
+         id="tspan35">User</tspan></text>
   </g>
 </svg>

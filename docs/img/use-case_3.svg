@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="164.73724mm"
+   width="205.18323mm"
    height="98.989998mm"
-   viewBox="0 0 164.73724 98.989998"
+   viewBox="0 0 205.18322 98.989998"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
@@ -24,7 +24,7 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="1"
-     inkscape:cx="357"
+     inkscape:cx="356"
      inkscape:cy="137"
      inkscape:window-width="1440"
      inkscape:window-height="890"
@@ -64,7 +64,7 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-19.430678,-26.175834)">
+     transform="translate(-19.695261,-26.175834)">
     <rect
        style="fill:#5e711c;fill-opacity:0.351906;stroke:#000000;stroke-width:0.496;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect21"
@@ -123,17 +123,17 @@
        transform="translate(-2.9104167,11.1125)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan1">erklärenden Text<tspan
+         id="tspan18">erklärenden Text<tspan
    y="42.03989"
-   id="tspan2"> </tspan></tspan><tspan
+   id="tspan19"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan3">durch Klicken auf<tspan
+         id="tspan20">durch Klicken auf<tspan
    y="46.890592"
-   id="tspan4"> </tspan></tspan><tspan
+   id="tspan22"> </tspan></tspan><tspan
          x="99.033676"
          y="51.741293"
-         id="tspan5">Symbol öffnen</tspan></text>
+         id="tspan23">Symbol öffnen</tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.539845;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse14"
@@ -164,7 +164,7 @@
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,19.430678,26.175834)"
        id="text1"
-       style="fill:#000000;stroke-width:2.13543307;-inkscape-font-specification:Arial;font-family:Arial;font-size:12px;text-align:center;white-space:pre;shape-inside:url(#rect1)" />
+       style="font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;white-space:pre;shape-inside:url(#rect1);fill:#000000;stroke-width:2.13543" />
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -174,20 +174,20 @@
        transform="translate(-1.8520833,44.714583)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan6">weiterführenden<tspan
+         id="tspan24">weiterführenden<tspan
    y="42.03989"
-   id="tspan7"> </tspan></tspan><tspan
+   id="tspan25"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan8">Text duch Klicken<tspan
+         id="tspan26">Text duch Klicken<tspan
    y="46.890592"
-   id="tspan9"> </tspan></tspan><tspan
+   id="tspan27"> </tspan></tspan><tspan
          x="99.033676"
          y="51.741293"
-         id="tspan10">auf Button öffnen&#10;</tspan><tspan
+         id="tspan28">auf Button öffnen&#10;</tspan><tspan
          x="99.033676"
          y="56.591993"
-         id="tspan11">&quot;Hintergrundwissen&quot;</tspan></text>
+         id="tspan29">&quot;Hintergrundwissen&quot;</tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse15"
@@ -223,12 +223,12 @@
        transform="translate(47.818352,17.227336)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan12">weiterführenden<tspan
+         id="tspan30">weiterführenden<tspan
    y="74.198608"
-   id="tspan13"> </tspan></tspan><tspan
+   id="tspan31"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan14">Text schliessen</tspan></text>
+         id="tspan32">Text schliessen</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:33.5751;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -238,12 +238,12 @@
        transform="translate(46.495434,-18.755997)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan15">erklärenden Text<tspan
+         id="tspan33">erklärenden Text<tspan
    y="74.198608"
-   id="tspan16"> </tspan></tspan><tspan
+   id="tspan34"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan17">schliessen</tspan></text>
+         id="tspan35">schliessen</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -274,5 +274,77 @@
        inkscape:connector-curvature="0"
        inkscape:transform-center-x="0.45750512"
        inkscape:transform-center-y="7.0891351" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="99.033676"
+       y="42.03989"
+       id="text40"
+       transform="translate(-74.753664,47.503313)"><tspan
+         x="99.033676"
+         y="42.03989"
+         id="tspan36">User</tspan></text>
+    <g
+       id="g6"
+       transform="matrix(0.60525918,0,0,0.60525918,191.96925,5.4764017)">
+      <ellipse
+         style="fill:#5e711c;stroke:#000000;stroke-width:0.669;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ellipse1"
+         cx="38.528542"
+         cy="98.417274"
+         rx="6.0191445"
+         ry="5.8366013" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 38.826016,104.19318 0.298908,13.36134"
+         id="path1-7"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 39.194689,117.00275 -7.390805,8.52786"
+         id="path3"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 38.933388,116.99636 7.390805,8.52786"
+         id="path5"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 30.804166,109.61321 16.210198,-0.0656"
+         id="path6"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="99.033676"
+       y="42.03989"
+       id="text41"
+       transform="translate(116.61946,45.19799)"
+       inkscape:transform-center-y="0.96630697"><tspan
+         x="99.033676"
+         y="42.03989"
+         id="tspan37">Applikation</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.49;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 175.83257,59.961015 28.61822,9.553523"
+       id="path25"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="-10.903245"
+       inkscape:transform-center-y="-31.945481" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.504;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 177.84111,90.206877 205.31184,75.817699"
+       id="path4"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="-10.46606"
+       inkscape:transform-center-y="48.115153" />
   </g>
 </svg>

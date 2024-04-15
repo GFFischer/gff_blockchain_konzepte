@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="164.73724mm"
+   width="207.73497mm"
    height="98.989998mm"
-   viewBox="0 0 164.73724 98.989998"
+   viewBox="0 0 207.73496 98.989998"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
@@ -123,21 +123,21 @@
        transform="translate(-1.0583333,-3.96875)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan14"><tspan
+         id="tspan3"><tspan
    style="stroke-width:0.665"
-   id="tspan13">zu Animation n - 1</tspan><tspan
+   id="tspan2">zu Animation n - 1</tspan><tspan
    y="42.03989"
-   id="tspan15"> </tspan></tspan><tspan
+   id="tspan4"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan17"><tspan
+         id="tspan6"><tspan
            style="stroke-width:0.665"
-           id="tspan16">navigieren&#10;</tspan></tspan><tspan
+           id="tspan5">navigieren&#10;</tspan></tspan><tspan
          x="99.033676"
          y="51.741293"
-         id="tspan47"><tspan
+         id="tspan8"><tspan
            style="stroke-width:0.665"
-           id="tspan46">&quot;zurück&quot;</tspan></tspan></text>
+           id="tspan7">&quot;zurück&quot;</tspan></tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse12"
@@ -168,14 +168,14 @@
        transform="translate(49.405851,1.6169192)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan49"><tspan
+         id="tspan10"><tspan
    style="stroke-width:0.665"
-   id="tspan48">Animation n+1</tspan><tspan
+   id="tspan9">Animation n+1</tspan><tspan
    y="74.198608"
-   id="tspan50"> </tspan></tspan><tspan
+   id="tspan11"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan51">laden</tspan></text>
+         id="tspan12">laden</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.579867;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.31947, 0.579867;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
        d="m 134.68748,77.932501 -12.44054,0.248695"
@@ -220,7 +220,7 @@
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,19.430678,26.175834)"
        id="text1"
-       style="fill:#000000;stroke-width:2.13543307;-inkscape-font-specification:Arial;font-family:Arial;font-size:12px;text-align:center;white-space:pre;shape-inside:url(#rect1)" />
+       style="font-size:12px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;white-space:pre;shape-inside:url(#rect1);fill:#000000;stroke-width:2.13543" />
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -230,21 +230,21 @@
        transform="translate(3.3333336e-8,64.29375)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan53"><tspan
+         id="tspan14"><tspan
    style="stroke-width:0.665"
-   id="tspan52">zu Animation m</tspan><tspan
+   id="tspan13">zu Animation m</tspan><tspan
    y="42.03989"
-   id="tspan54"> </tspan></tspan><tspan
+   id="tspan15"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan56"><tspan
+         id="tspan17"><tspan
            style="stroke-width:0.665"
-           id="tspan55">navigieren&#10;</tspan></tspan><tspan
+           id="tspan16">navigieren&#10;</tspan></tspan><tspan
          x="99.033676"
          y="51.741293"
-         id="tspan58"><tspan
+         id="tspan19"><tspan
            style="stroke-width:0.665"
-           id="tspan57">&quot;Navigationsmenü&quot;</tspan></tspan></text>
+           id="tspan18">&quot;Navigationsmenü&quot;</tspan></tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.504707;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 34.410669,77.112191 39.657827,0.292282"
@@ -262,21 +262,21 @@
        transform="translate(-0.79374997,33.602084)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan60"><tspan
+         id="tspan22"><tspan
    style="stroke-width:0.665"
-   id="tspan59">zu Animation n + 1</tspan><tspan
+   id="tspan20">zu Animation n + 1</tspan><tspan
    y="42.03989"
-   id="tspan61"> </tspan></tspan><tspan
+   id="tspan24"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan63"><tspan
+         id="tspan26"><tspan
            style="stroke-width:0.665"
-           id="tspan62">navigieren&#10;</tspan></tspan><tspan
+           id="tspan25">navigieren&#10;</tspan></tspan><tspan
          x="99.033676"
          y="51.741293"
-         id="tspan65"><tspan
+         id="tspan28"><tspan
            style="stroke-width:0.665"
-           id="tspan64">&quot;weiter&quot;</tspan></tspan></text>
+           id="tspan27">&quot;weiter&quot;</tspan></tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse15"
@@ -312,12 +312,12 @@
        transform="translate(49.935018,33.631503)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan67"><tspan
+         id="tspan30"><tspan
            style="stroke-width:0.665"
-           id="tspan66">Animation m&#10;</tspan></tspan><tspan
+           id="tspan29">Animation m&#10;</tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan68">laden</tspan></text>
+         id="tspan31">laden</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:33.5751;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -327,14 +327,14 @@
        transform="translate(47.818351,-34.366414)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan70"><tspan
+         id="tspan33"><tspan
    style="stroke-width:0.665"
-   id="tspan69">Animation n-1</tspan><tspan
+   id="tspan32">Animation n-1</tspan><tspan
    y="74.198608"
-   id="tspan71"> </tspan></tspan><tspan
+   id="tspan34"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan72">laden</tspan></text>
+         id="tspan35">laden</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -357,5 +357,85 @@
          style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565"
          x="126.85151"
          y="46.019581">&lt;&lt;extend&gt;&gt;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="99.033676"
+       y="42.03989"
+       id="text40"
+       transform="translate(-74.551224,53.408698)"><tspan
+         x="99.033676"
+         y="42.03989"
+         id="tspan36">User</tspan></text>
+    <g
+       id="g6"
+       transform="matrix(0.60525918,0,0,0.60525918,193.99181,10.897439)">
+      <ellipse
+         style="fill:#5e711c;stroke:#000000;stroke-width:0.669;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         id="ellipse1"
+         cx="38.528542"
+         cy="98.417274"
+         rx="6.0191445"
+         ry="5.8366013" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 38.826016,104.19318 0.298908,13.36134"
+         id="path1-1"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 39.194689,117.00275 -7.390805,8.52786"
+         id="path3"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 38.933388,116.99636 7.390805,8.52786"
+         id="path5"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 30.804166,109.61321 16.210198,-0.0656"
+         id="path6"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="99.033676"
+       y="42.03989"
+       id="text41"
+       transform="translate(118.90661,53.794027)"
+       inkscape:transform-center-y="0.96630697"><tspan
+         x="99.033676"
+         y="42.03989"
+         id="tspan37">Applikation</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.506;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 174.13823,48.845216 206.4292,74.704101"
+       id="path25"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="-12.302527"
+       inkscape:transform-center-y="-86.468052" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.516;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 178.82667,102.74632 207.31308,81.264082"
+       id="path4"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="-10.853028"
+       inkscape:transform-center-y="71.833234" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.426067;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 178.87561,77.904632 28.01128,0.2949"
+       id="path7"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="1.3345641"
+       inkscape:transform-center-y="-7.7854541" />
   </g>
 </svg>
