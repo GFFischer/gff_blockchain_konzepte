@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
-   sodipodi:docname="use-case_13.svg"
+   sodipodi:docname="use-case_14.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -24,8 +24,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="0.94316065"
-     inkscape:cx="376.92412"
-     inkscape:cy="292.63307"
+     inkscape:cx="377.45425"
+     inkscape:cy="203.57083"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
@@ -132,20 +132,15 @@
        x="105.78841"
        y="74.198608"
        id="text18-9"
-       transform="translate(1.5051885,50.948459)"><tspan
+       transform="translate(1.7857169,52.912158)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan29">Hashwert in<tspan
+         id="tspan3">Betrag Transaktion<tspan
    y="74.198608"
-   id="tspan30"> </tspan></tspan><tspan
+   id="tspan4"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan31">Einheiten zu 2<tspan
-   y="79.04931"
-   id="tspan32"> </tspan></tspan><tspan
-         x="105.78841"
-         y="83.900011"
-         id="tspan33">Ziffern aufteilen</tspan></text>
+         id="tspan5">prüfen</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.504;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 41.37945,141.69169 80.156533,106.15072"
@@ -165,29 +160,29 @@
          y="115.38165">&lt;&lt;extend&gt;&gt;</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.516;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.06401, 0.516;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
-       d="m 136.00717,182.45725 -5.79143,-13.98097"
+       d="m 119.456,155.52653 -5.79143,-13.98097"
        id="path18"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse12-0"
-       cx="-128.0369"
-       cy="155.7722"
+       cx="-142.62437"
+       cy="197.85146"
        rx="20.37044"
        ry="9.9773588"
        transform="scale(-1,1)" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="120.90892"
-       y="177.28644"
+       x="104.35774"
+       y="150.35571"
        id="text45"><tspan
          sodipodi:role="line"
          id="tspan45"
          style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565"
-         x="120.90892"
-         y="177.28644">&lt;&lt;extend&gt;&gt;</tspan></text>
+         x="104.35774"
+         y="150.35571">&lt;&lt;extend&gt;&gt;</tspan></text>
     <g
        id="g6"
        transform="matrix(0.60525918,0,0,0.60525918,191.30839,77.004022)">
@@ -232,7 +227,7 @@
        transform="translate(-64.486707,117.54485)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan34">User</tspan></text>
+         id="tspan8">User</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -243,27 +238,22 @@
        inkscape:transform-center-y="0.96630697"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan35">Applikation</tspan></text>
+         id="tspan9">Applikation</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="99.033676"
        y="42.03989"
        id="text20"
-       transform="translate(28.593486,110.1869)"><tspan
+       transform="translate(43.180962,153.94932)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan36">hexadezimale in<tspan
+         id="tspan12">dezimale in binäre<tspan
    y="42.03989"
-   id="tspan37"> </tspan></tspan><tspan
+   id="tspan14"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan38">dezimale Zahlen<tspan
-   y="46.890592"
-   id="tspan39"> </tspan></tspan><tspan
-         x="99.033676"
-         y="51.741293"
-         id="tspan40">umwandeln</tspan></text>
+         id="tspan18">Zahlen umwandeln</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,5.1554958,59.002248)"
@@ -281,13 +271,13 @@
        id="text24"
        style="font-style:italic;font-size:18.6667px;font-family:Arial;-inkscape-font-specification:'Arial Italic';text-align:center;white-space:pre;shape-inside:url(#rect24);display:inline;fill:#000000;stroke-width:1.94268;stroke-dasharray:7.77074, 1.94268;stroke-dashoffset:0" />
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 131.52087,129.70046 72.26365,11.27779"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.487;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 129.55114,133.33994 74.23941,9.88993"
        id="path25"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
-       inkscape:transform-center-x="-27.531704"
-       inkscape:transform-center-y="-37.711159" />
+       inkscape:transform-center-x="-28.284444"
+       inkscape:transform-center-y="-33.070397" />
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse2"
@@ -304,12 +294,12 @@
        transform="translate(-0.92283802,53.038481)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan41">Animation starten</tspan></text>
+         id="tspan19">Animation starten</tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse5"
-       cx="146.67635"
-       cy="103.66205"
+       cx="159.30013"
+       cy="91.318794"
        rx="20.37044"
        ry="9.9773588" />
     <text
@@ -318,37 +308,32 @@
        x="99.033676"
        y="42.03989"
        id="text8"
-       transform="translate(47.328043,58.575689)"><tspan
+       transform="translate(59.95182,47.635082)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan42">hexadezimale in<tspan
+         id="tspan20">Transaktion<tspan
    y="42.03989"
-   id="tspan43"> </tspan></tspan><tspan
+   id="tspan21"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan44">binäre Zahlen<tspan
-   y="46.890592"
-   id="tspan46"> </tspan></tspan><tspan
-         x="99.033676"
-         y="51.741293"
-         id="tspan47">umwandeln</tspan></text>
+         id="tspan24">zurückweisen</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.533;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.13201, 0.533;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
-       d="m 131.84102,110.65283 -6.56995,9.16776"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.494;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.97600833,0.494;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
+       d="M 143.47975,98.017172 125.81276,119.20055"
        id="path15"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="138.95012"
-       y="119.93109"
+       x="123.52106"
+       y="108.99049"
        id="text16"><tspan
          sodipodi:role="line"
          id="tspan16"
          style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565"
-         x="138.95012"
-         y="119.93109">&lt;&lt;include&gt;&gt;</tspan></text>
+         x="123.52106"
+         y="108.99049">&lt;&lt;extend&gt;&gt;</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,5.1554958,59.002248)"
@@ -356,60 +341,153 @@
        style="font-size:14.6667px;line-height:1.9;font-family:Arial;-inkscape-font-specification:Arial;white-space:pre;shape-inside:url(#rect19);display:inline;fill:none;stroke:#000000;stroke-width:2.01449;stroke-linejoin:round;stroke-dasharray:8.05798, 2.01449;stroke-dashoffset:0" />
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.477537;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.91015, 0.477537;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
-       d="m 121.07596,146.32514 -3.00451,-5.69892"
+       d="m 135.66344,188.40439 -3.00451,-5.69892"
        id="path26"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="131.28845"
-       y="142.50093"
+       x="145.87593"
+       y="184.58018"
        id="text26"><tspan
          sodipodi:role="line"
          id="tspan26"
          style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565"
-         x="131.28845"
-         y="142.50093">&lt;&lt;include&gt;&gt;</tspan></text>
+         x="145.87593"
+         y="184.58018">&lt;&lt;include&gt;&gt;</tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.513487;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse26"
-       cx="136.81694"
-       cy="195.68626"
+       cx="120.26576"
+       cy="168.75554"
        rx="20.339727"
        ry="12.892196" />
     <text
        xml:space="preserve"
-       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:36.1519;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:32.7856;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        x="105.78841"
        y="74.198608"
        id="text27"
-       transform="translate(30.654523,116.22619)"><tspan
+       transform="translate(14.103348,88.734408)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan48">dezimale Zahlen<tspan
+         id="tspan25">digitale Signatur<tspan
    y="74.198608"
-   id="tspan49"> </tspan></tspan><tspan
+   id="tspan28"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan50">verschlüsseln -<tspan
+         id="tspan30">entschlüsseln -<tspan
    y="79.04931"
-   id="tspan51"> </tspan></tspan><tspan
+   id="tspan31"> </tspan></tspan><tspan
          x="105.78841"
          y="83.900011"
-         id="tspan52">digitale Signatur<tspan
+         id="tspan32">Hashwert<tspan
    y="83.900011"
-   id="tspan53"> </tspan></tspan><tspan
+   id="tspan33"> </tspan></tspan><tspan
          x="105.78841"
          y="88.750711"
-         id="tspan54">berechnen</tspan></text>
+         id="tspan34">berechnen</tspan></text>
     <path
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.539;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 157.95822,185.69951 46.60021,-38.24212"
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.518;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 144.72584,165.27387 59.88014,-17.86941"
        id="path4"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0"
-       inkscape:transform-center-x="-17.754195"
-       inkscape:transform-center-y="127.87565" />
+       inkscape:transform-center-x="-22.813712"
+       inkscape:transform-center-y="59.752504" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.426;stroke-linejoin:round;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect7"
+       width="38.875565"
+       height="21.202276"
+       x="143.7662"
+       y="107.35699" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:39.3425;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="99.033676"
+       y="42.03989"
+       id="text8-7"
+       transform="translate(63.726056,70.35639)"><tspan
+         x="99.033676"
+         y="42.03989"
+         id="tspan35">Extension Point: X<tspan
+   y="42.03989"
+   id="tspan36"> </tspan></tspan><tspan
+         x="99.033676"
+         y="46.890592"
+         id="tspan37">Bedingung:<tspan
+   y="46.890592"
+   id="tspan38"> </tspan></tspan><tspan
+         x="99.033676"
+         y="51.741293"
+         id="tspan39">Überweisungsbetrag<tspan
+   y="51.741293"
+   id="tspan40"> </tspan></tspan><tspan
+         x="99.033676"
+         y="56.591993"
+         id="tspan41">zu hoch</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.46013;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.84052, 0.46013;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 131.76985,112.72792 12.01316,5.94889"
+       id="path7"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="-4.5768924"
+       inkscape:transform-center-y="-19.892145" />
+    <ellipse
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="ellipse8"
+       cx="-92.970856"
+       cy="197.57092"
+       rx="20.37044"
+       ry="9.9773588"
+       transform="scale(-1,1)" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="99.033676"
+       y="42.03989"
+       id="text22"
+       transform="translate(-5.9115052,150.58298)"><tspan
+         x="99.033676"
+         y="42.03989"
+         id="tspan42">binäre in<tspan
+   y="42.03989"
+   id="tspan43"> </tspan></tspan><tspan
+         x="99.033676"
+         y="46.890592"
+         id="tspan44">hexadezimale<tspan
+   y="46.890592"
+   id="tspan46">  </tspan></tspan><tspan
+         x="99.033676"
+         y="51.741293"
+         id="tspan47">Zahlen umwandeln</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.485461;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:1.94184, 0.485461;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
+       d="m 114.00017,197.60846 5.60466,0.10928"
+       id="path22"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="118.10362"
+       y="206.18086"
+       id="text29"><tspan
+         sodipodi:role="line"
+         id="tspan29"
+         style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565"
+         x="118.10362"
+         y="206.18086">&lt;&lt;include&gt;&gt;</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.505333;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="M 180.38572,96.491748 205.13426,137.6388"
+       id="path29"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       inkscape:transform-center-x="-9.4289336"
+       inkscape:transform-center-y="-137.58928" />
   </g>
 </svg>
