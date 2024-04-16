@@ -718,19 +718,22 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 
 ### Use-case 16 - Animation 4b:
+
+![Diagram](img/use-case_16.svg)
+
 * Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 2/3*
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Animation 4b ist vollständig geladen.*
+
+![Diagram](img/animation_4b_01.svg)
+
 * Standardablauf:
     * Schritt 1
     * Schritt 2
 * Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall 16a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-#### Sonderfall 16a: Ausnahme 1
-* Ablauf Sonderfall 16a:
-    * Schritt 1
-    * Schritt 2
+![Diagram](img/animation_4b_02.svg)
+
 
 ### Use-case 17 - Animation 4c:
 * Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 3/3*
