@@ -13,6 +13,7 @@
 |  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 12.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis 12 (Anhang) hinzugefügt |
 |  0.9    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 13.04.2024 | Use-case 13 (Anhang) hinzugefügt |
 |  0.10   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 15.04.2024 | Pkt. 3 bearbeitet, Use-case 14 bis 15 (Anhang) hinzugefügt |
+|  0.11   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 16.04.2024 | Pkt. 3 bearbeitet, Use-case 15 bis xx (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -670,7 +671,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
       ausgewählt worden sind. Falls eine also diese Bedingung nicht erfüllt ist, erscheint ein Textfeld mit der Nachricht
       "Transaktion zurückgewiesen" und die Animation 3d ist beendet (siehe folgende schematische Darstellung).
 
-![Diagram](img/animation_3d_01.svg)
+      ![Diagram](img/animation_3d_01.svg)
 
     * Falls im ersten Teil der Animation alle Bedingungen erfüllt sind, werden im zweiten Teil der Animation die Zahlen der 
       digitalen Signatur entschlüsselt, das heisst, es wird auf jede Zahl eine Berechnung durchgeführt. Als Ergebnis kommen 
@@ -702,21 +703,24 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 * Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation" beschrieben ist, klickt.
-    * In einer Animation werden die Hashwerte der Transaktionen herausgehoben und zu Hash-Referenzen auf die Transaktionen,
-      xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+    * In einer Animation werden die Hashwerte der Transaktionen herausgehoben, um damit zu verdeutlichen, dass diese Werte im
+      folgenden als Hash-Referenzen auf die Transaktionen verwendet werden.
+    * Es erscheint eine Tabelle, in der die beiden Hash-Referenzen der Transaktionen als Eingabe stehen und der Hashwert auf
+      diese Eingabe automatisch berechnet wird. Dieser Hashwert wird als Hash-Referenz auf die Verknüpfung der beiden
+      Transaktionen angezeigt.
+    * Animation 4a ist beendet.
+* Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt die beiden Tabellen mit den Transaktionsdaten, die
+  Hash-Referenzen auf diese beiden Transaktionen, eine Tabelle, in der aus diesen beiden Hash-Referenzen ein neuer Hashwert
+  berechnet worden ist, und diesen Hashwert als Hash-Referenz auf die Verknüfung der beiden Transaktionen (siehe folgende
+  schematische Darstellung).*
 
-#### Sonderfall 15a: Ausnahme 1
-* Ablauf Sonderfall 15a:
-    * Schritt 1
-    * Schritt 2
+![Diagram](img/animation_4a_02.svg)
 
 
 ### Use-case 16 - Animation 4b:
 * Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 2/3*
 * Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Vorbedingungen: *Animation 4b ist vollständig geladen.*
 * Standardablauf:
     * Schritt 1
     * Schritt 2
