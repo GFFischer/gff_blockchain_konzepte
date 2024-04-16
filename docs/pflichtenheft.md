@@ -13,7 +13,7 @@
 |  0.8    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 12.04.2024 | Pkt. 3 bearbeitet, Use-case 8 bis 12 (Anhang) hinzugefügt |
 |  0.9    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 13.04.2024 | Use-case 13 (Anhang) hinzugefügt |
 |  0.10   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 15.04.2024 | Pkt. 3 bearbeitet, Use-case 14 bis 15 (Anhang) hinzugefügt |
-|  0.11   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 16.04.2024 | Pkt. 3 bearbeitet, Use-case 15 bis xx (Anhang) hinzugefügt |
+|  0.11   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 16.04.2024 | Pkt. 3 bearbeitet, Use-case 15 bis 17 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -723,32 +723,63 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 * Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 2/3*
 * Akteure: *User, Applikation*
-* Vorbedingungen: *Animation 4b ist vollständig geladen.*
+* Vorbedingungen: *Animation 4b ist vollständig geladen. Der erste Frame zeigt die zwei Tabellen mit den Transaktionsdaten
+  aus Animation 4a ODER, falls der User direkt zu Animation 4b navigiert ist, zwei Tabellen mit zufällig erstellten
+  Transaktionsdaten, ausgenommen jene, die der User schon irgendwann im Verlaufe der laufenden Verwendung der Applikation
+  in einer der Animationen eingegeben hat. Herausgehoben sind die Hash-Referenzen auf diese Transaktionen. Neben diesen
+  Tabellen befinden sich zwei weitere Transaktionen ohne konkrete Daten aber mit herausgehobenen Hash-Referenzen (siehe
+  folgende schematische Darstellung).
 
 ![Diagram](img/animation_4b_01.svg)
 
 * Standardablauf:
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+    * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation" beschrieben ist, klickt.
+    * Im ersten Teil der Animation werden jeweils zwei Transaktionen durch einen auf beide Hash-Referenzen berechneten 
+      Hashwert verknüpft, danach zwei dieser Hash-Referenzen wiederum durch die Berechnung eines Hashwerts verknüpft, sodass
+      dadurch eine Merkle-Tree mit vier Blättern entsteht.
+    * Im zweiten Teil der Animation entsteht auf vier weitere Transaktionen ein weiterer Merkle-Tree.
+    * Im dritten Teil der Animation entsteht über den Wurzeln der Merkle-Trees die Blockchain als eine Kette von
+      Block-Headern, wobei jeweils die Wurzel eines Merkle-Trees zur Hash-Referenz auf den Inhalt des Blocks wird.
+    * Animation 4b ist beendet.
+* Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt ein komplexes Gebilde bestehend aus acht Transaktionen, von
+  denen jeweils vier durch einen Merkle-Tree miteinander verknüpft sind. Die Wurzeln der Merkle-Trees sind mit den
+  Block-Headern einer Blockchain verknüpft, die über diesen dargestellt wird (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_4b_02.svg)
 
 
 ### Use-case 17 - Animation 4c:
+
+![Diagram](img/use-case_17.svg)
+
 * Name: *Speichern von Transaktionen und Erstellen von neuen Blöcken, Teil 3/3*
 * Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Vorbedingungen: *Animation 4c ist vollständig geladen. Der erste Frame zeigt den letzten Frame von Animation 4b. Falls der
+  User direkt zu Animation 4c navigiert ist, sind die Transaktionsdaten in den zwei Tabellen zufällig erstellt, ausgenommen
+  jene, die der User schon irgendwann im Verlaufe der laufenden Verwendung der Applikation in einer der Animationen
+  eingegeben hat.*
 * Standardablauf:
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall 17a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+    * Der User startet die Animation, indem er auf einen Butten, der mit "Ändere Transaktionsdaten" beschriftet ist,
+      klickt.
+    * Es öffnet sich ein Formular, in das der User für die beiden mit vollständigen Daten angeführten Transaktionen einen
+      neuen zu überweisenden Betrag eingeben oder eine neue Empfänger-Adresse auswählen kann. Der User bestätigt mit "OK".
+    * In der Animation ändern sich durch die veränderten Eingaben die Hash-Referenzen der veränderten Transaktionen, die
+      Hash-Referenzen der verknüpften Transaktionen, die Hash-Referenz der Wurzel des Merkle-Trees und dadurch auch die
+      Hash-Referenz des Blocks, der auf diesen Merkle-Tree verweist, wodurch die Blockchain unterbrochen wird, weil im
+      folgenden Block die Hash-Referenz auf den vorherigen Block nicht mehr stimmt. Alle veränderten Hash-Referenzen sind
+      farblich hervorgehoben.
+    * Animation 4c ist beendet.
+* Nachbedingung Erfolg: *Die veränderten Hash-Referenzen sind farblich hervorgehoben, ein Bruch in der Blockchain ist
+  deutlich markiert (siehe folgende schematische Darstellung).*
+* Nachbedingung Sonderfall 17a: *Animation 4c wird neu gestartet.*
 
-#### Sonderfall 17a: Ausnahme 1
+![Diagram](img/animation_4c_01.svg)
+
+#### Sonderfall 17a:  Der User gibt als zu überweisenden Betrag keine ganze Zahl ein
 * Ablauf Sonderfall 17a:
-    * Schritt 1
-    * Schritt 2
+    * Der User klickt auf "OK".
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte geben Sie eine ganze Zahl ein."
+  
 
 ### Use-case 18 - Animation 5a:
 * Name: *Schützen der Blöcke durch Proof-of-Work, Teil 1/xxxxxxx*
