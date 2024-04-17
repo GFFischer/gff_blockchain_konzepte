@@ -14,6 +14,7 @@
 |  0.9    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 13.04.2024 | Use-case 13 (Anhang) hinzugefügt |
 |  0.10   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 15.04.2024 | Pkt. 3 bearbeitet, Use-case 14 bis 15 (Anhang) hinzugefügt |
 |  0.11   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 16.04.2024 | Pkt. 3 bearbeitet, Use-case 15 bis 17 (Anhang) hinzugefügt |
+|  0.12   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 17.04.2024 | Pkt. 3 bearbeitet, Use-case 17 bis xx (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -221,6 +222,14 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   * /F83/ Der User *soll* die Möglichkeit haben, in Animation 4c bei einer der in einem Merkle-Tree miteinander verknüpften
     Transaktionen den zu überweisenden Betrag und/oder die Empfänger-Adresse zu ändern, wodurch gezeigt werden soll, welche
     Auswirkungen eine kleine Änderung auf die gesamte Blockchain hat. *(vgl. Use-case 17)*
+* **/F90/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 5
+  ("Schützen der Blöcke durch Proof-of-Work") einzugreifen. *(vgl. /LK60/, /LF40/, /LF45/)*
+  * /F91/ Die Animation 5a *soll* das Mining beim Proof-of-Work-Konsensmechanismus zu zeigen, indem im Abstand von 0,5
+    Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen Block zu finden, der kleiner als
+    die im Target angegebene hexadezimale Zahl 0fffffff ist. *(vgl. Use-cas 18)*
+  * /F92/ Die Animation 5b *soll* das Mining beim Proof-of-Work-Konsensmechanismus zu zeigen, indem im Abstand von 0,5
+    Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen Block zu finden, der kleiner als
+    die im Target angegebene hexadezimale Zahl 00ffffff ist. *(vgl. Use-cas 19)*
 
 
 ## 4. Abnahmekriterien
@@ -782,16 +791,75 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   
 
 ### Use-case 18 - Animation 5a:
-* Name: *Schützen der Blöcke durch Proof-of-Work, Teil 1/xxxxxxx*
+
+![Diagram](img/use-case_18.svg)
+
+* Name: *Schützen der Blöcke durch Proof-of-Work, Teil 1/2*
 * Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Vorbedingungen: *Die Animation 5a ist vollständig geladen. Der erste Frame zeigt einen Block-Header als Ausschnitt aus
+  einer Blockchain, der mit einem verkürzt dargestellten Merkle-Tree verknüpft ist und der im Vergleich mit den
+  Darstellungen von Block-Headern in den bisherigen Animationen um einen Zeitstempel, ein Target und eine Nonce erweitert
+  ist.  *
+
+![Diagram](img/animation_5a_01.svg)
+
 * Standardablauf:
     * Schritt 1
     * Schritt 2
 * Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
 * Nachbedingung Sonderfall 18a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
+![Diagram](img/animation_5a_02.svg)
+
 #### Sonderfall 18a: Ausnahme 1
 * Ablauf Sonderfall 18a:
+    * Schritt 1
+    * Schritt 2
+
+
+### Use-case 19 - Animation 5b:
+
+![Diagram](img/use-case_19.svg)
+
+* Name: *Schützen der Blöcke durch Proof-of-Work, Teil 1/2*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+
+![Diagram](img/animation_5b_01.svg)
+
+* Standardablauf:
+    * Schritt 1
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall 18a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+
+![Diagram](img/animation_5b_02.svg)
+
+#### Sonderfall 19a: Ausnahme 1
+* Ablauf Sonderfall 19a:
+    * Schritt 1
+    * Schritt 2
+
+
+### Use-case 20 - Animation 6a:
+
+![Diagram](img/use-case_20.svg)
+
+* Name: *Schützen der Blöcke durch Proof-of-Work, Teil 1/2*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+
+![Diagram](img/animation_6a_01.svg)
+
+* Standardablauf:
+    * Schritt 1
+    * Schritt 2
+* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+* Nachbedingung Sonderfall 18a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+
+![Diagram](img/animation_6a_02.svg)
+
+#### Sonderfall 19a: Ausnahme 1
+* Ablauf Sonderfall 19a:
     * Schritt 1
     * Schritt 2
