@@ -224,12 +224,12 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     Auswirkungen eine kleine Änderung auf die gesamte Blockchain hat. *(vgl. Use-case 17)*
 * **/F90/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 5
   ("Schützen der Blöcke durch Proof-of-Work") einzugreifen. *(vgl. /LK60/, /LF40/, /LF45/)*
-  * /F91/ Die Animation 5a *soll* das Mining beim Proof-of-Work-Konsensmechanismus zu zeigen, indem im Abstand von 0,5
+  * /F91/ Die Animation 5a *soll* das Mining beim Proof-of-Work-Konsensmechanismus zu zeigen, indem im Abstand von 0.7
     Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen Block zu finden, der kleiner als
-    die im Target angegebene hexadezimale Zahl 0fffffff ist. *(vgl. Use-cas 18)*
-  * /F92/ Die Animation 5b *soll* das Mining beim Proof-of-Work-Konsensmechanismus zu zeigen, indem im Abstand von 0,5
+    die im Target angegebene hexadezimale Zahl 0fffffff ist. *(vgl. Use-case 18)*
+  * /F92/ Die Animation 5b *soll* das Mining beim Proof-of-Work-Konsensmechanismus zu zeigen, indem im Abstand von 0.7
     Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen Block zu finden, der kleiner als
-    die im Target angegebene hexadezimale Zahl 00ffffff ist. *(vgl. Use-cas 19)*
+    die im Target angegebene hexadezimale Zahl 00ffffff ist. *(vgl. Use-case 19)*
 
 
 ## 4. Abnahmekriterien
@@ -778,8 +778,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
       folgenden Block die Hash-Referenz auf den vorherigen Block nicht mehr stimmt. Alle veränderten Hash-Referenzen sind
       farblich hervorgehoben.
     * Animation 4c ist beendet.
-* Nachbedingung Erfolg: *Die veränderten Hash-Referenzen sind farblich hervorgehoben, ein Bruch in der Blockchain ist
-  deutlich markiert (siehe folgende schematische Darstellung).*
+* Nachbedingung Erfolg: *Im letzten Frame der Animation sind die veränderten Hash-Referenzen sind farblich hervorgehoben,
+  ein Bruch in der Blockchain ist deutlich markiert (siehe folgende schematische Darstellung).*
 * Nachbedingung Sonderfall 17a: *Animation 4c wird neu gestartet.*
 
 ![Diagram](img/animation_4c_01.svg)
@@ -799,46 +799,52 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Vorbedingungen: *Die Animation 5a ist vollständig geladen. Der erste Frame zeigt einen Block-Header als Ausschnitt aus
   einer Blockchain, der mit einem verkürzt dargestellten Merkle-Tree verknüpft ist und der im Vergleich mit den
   Darstellungen von Block-Headern in den bisherigen Animationen um einen Zeitstempel, ein Target und eine Nonce erweitert
-  ist.  *
+  ist. Im Feld "Zeitstempel" befindet sich die aktuelle Zeit, im Feld "Target" befindet sich der Wert 0fffffff. In den
+  Feldern "Nonce" und "Hash-Wert Block" befinden sich noch keine Werte (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_5a_01.svg)
 
 * Standardablauf:
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall 18a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
+    * Der User startet die Animation, indem er auf einen Button, der mit "Mining starten" beschriftet ist, klickt.
+    * Im Feld "Nonce" erscheint der Wert "0000001", 0.2 Sekunden danach erscheint im Feld "Hash-Wert Block" der errechnete
+      Hash-Wert des Blocks.
+    * Solange der Hash-Wert des Blocks grösser als oder gleich 0fffffff ist, erscheint jeweils nach 0.5 Sekunden ein um 1
+      erhöhter Wert im Feld "Nonce" und 0.2 Sekunden danach ein neu errechneter Wert im Feld "Hash-Wert Block".
+    * Wenn der Hash-Wert des Blocks kleiner 0fffffff ist, bleiben die aktuellen Werte in den Feldern "Nonce" und
+      "Hash-Wert Block" stehen und neben dem Hash-Wert des Blocks erscheint ein Bestätigungssymbol (z.B. ein Haken).
+    * Animation 5a ist beendet.
+* Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt den Block-Header mit einem gültigen Hash-Wert, einer passenden
+  Nonce und einem Bestätigungssymbol (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_5a_02.svg)
-
-#### Sonderfall 18a: Ausnahme 1
-* Ablauf Sonderfall 18a:
-    * Schritt 1
-    * Schritt 2
 
 
 ### Use-case 19 - Animation 5b:
 
 ![Diagram](img/use-case_19.svg)
 
-* Name: *Schützen der Blöcke durch Proof-of-Work, Teil 1/2*
+* Name: *Schützen der Blöcke durch Proof-of-Work, Teil 2/2*
 * Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Vorbedingungen: *Die Animation 5a ist vollständig geladen. Der erste Frame zeigt den Block-Header aus dem letzten Frame
+  von Animation 5a, daneben einen mit diesem Block verknüpften, gleich aufgebauten Block-Header einer Blockchain. Im Feld
+  "Zeitstempel" befindet sich die aktuelle Zeit, im Feld "Target" befindet sich der Wert 00ffffff. In den Feldern "Nonce"
+  und "Hash-Wert Block" dieses Blocks befinden sich noch keine Werte (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_5b_01.svg)
 
 * Standardablauf:
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall 18a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
-
+    * Der User startet die Animation, indem er auf einen Button, der mit "Mining starten" beschriftet ist, klickt.
+    * Im Feld "Nonce" erscheint der Wert "5264c509", 0.2 Sekunden danach erscheint im Feld "Hash-Wert Block" der errechnete
+      Hash-Wert des Blocks.
+    * Solange der Hash-Wert des Blocks grösser als oder gleich 00ffffff ist, erscheint jeweils nach 0.5 Sekunden ein um 1
+      erhöhter Wert im Feld "Nonce" und 0.2 Sekunden danach ein neu errechneter Wert im Feld "Hash-Wert Block".
+    * Wenn der Hash-Wert des Blocks kleiner 00ffffff ist, bleiben die aktuellen Werte in den Feldern "Nonce" und
+      "Hash-Wert Block" stehen und neben dem Hash-Wert des Blocks erscheint ein Bestätigungssymbol (z.B. ein Haken).
+    * Animation 5b ist beendet.
+* Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt beide Block-Header mit gültigen Hash-Werten, passenden
+  Nonces und jeweils einem Bestätigungssymbol (siehe folgende schematische Darstellung).*
+  
 ![Diagram](img/animation_5b_02.svg)
-
-#### Sonderfall 19a: Ausnahme 1
-* Ablauf Sonderfall 19a:
-    * Schritt 1
-    * Schritt 2
 
 
 ### Use-case 20 - Animation 6a:
