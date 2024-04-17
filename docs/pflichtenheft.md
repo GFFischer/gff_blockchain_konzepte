@@ -14,7 +14,7 @@
 |  0.9    |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 13.04.2024 | Use-case 13 (Anhang) hinzugefügt |
 |  0.10   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 15.04.2024 | Pkt. 3 bearbeitet, Use-case 14 bis 15 (Anhang) hinzugefügt |
 |  0.11   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 16.04.2024 | Pkt. 3 bearbeitet, Use-case 15 bis 17 (Anhang) hinzugefügt |
-|  0.12   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 17.04.2024 | Pkt. 3 bearbeitet, Use-case 17 bis xx (Anhang) hinzugefügt |
+|  0.12   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 17.04.2024 | Pkt. 3 fertig bearbeitet, Use-case 17 bis 19 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -224,12 +224,33 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     Auswirkungen eine kleine Änderung auf die gesamte Blockchain hat. *(vgl. Use-case 17)*
 * **/F90/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 5
   ("Schützen der Blöcke durch Proof-of-Work") einzugreifen. *(vgl. /LK60/, /LF40/, /LF45/)*
-  * /F91/ Die Animation 5a *soll* das Mining beim Proof-of-Work-Konsensmechanismus zu zeigen, indem im Abstand von 0.7
+  * /F91/ Die Animation 5a *soll* das Mining beim Proof-of-Work-Konsensmechanismus zeigen, indem im Abstand von 0.7
     Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen Block zu finden, der kleiner als
     die im Target angegebene hexadezimale Zahl 0fffffff ist. *(vgl. Use-case 18)*
-  * /F92/ Die Animation 5b *soll* das Mining beim Proof-of-Work-Konsensmechanismus zu zeigen, indem im Abstand von 0.7
+  * /F92/ Die Animation 5b *soll* das Mining beim Proof-of-Work-Konsensmechanismus zeigen, indem im Abstand von 0.7
     Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen Block zu finden, der kleiner als
     die im Target angegebene hexadezimale Zahl 00ffffff ist. *(vgl. Use-case 19)*
+* **/F100/** Die Applikation *soll* zeigen, wie eine Transaktion in einem als ungerichteter Graph modellierten
+  Peer-to-Peer-System verteilt wird, wie ein neuer Block erstellt und verteilt wird und wie es zu Konflikten kommen kann,
+  wenn zwei unterschiedliche Blöcke annähernd zeitgleich erstellt werden. *(vgl. /LK70/)*
+  * /F101/ Die Animation 6a *soll* anhand des in Animation 2c als ungerichteter Graph modellierten Peer-to-Peer-Systems
+    zeigen, wie eine Transaktion, die von einer Adresse des in Animation 2a vom User hinzugefügten Knotens erstellt worden
+    ist, im System verteilt wird und letztlich zu allen Peers gelangt, indem jeder Peer (Knoten), der die Transaktion erhält,
+    sie an alle Peers, mit denen er verbunden ist, weiterleitet. *(vgl. Use-case 20)*
+  * /F102/ Die Animation 6b *soll* zeigen, wie der User von "seinem" Knoten aus mehrere Transaktionen in einen Block
+    zusammenfasst und diesen Block an alle Peers weiterleitet, wodurch die verarbeiteten Transaktionen bei den Peers aus
+    deren Posteingang verschwinden. *(vgl. Use-case 21)*
+  * /F103/ Die Animation 6c *soll* zeigen, wie der User von "seinem" Knoten aus mehrere Transaktionen in einen Block
+    zusammenfasst und diesen Block an alle Peers weiterleitet und gleichzeitig ein anderer Knoten ebenfalls mehrere
+    Transaktionen in einen Block zusammenfasst und diesen Block an alle Peers weiterleitet, wodurch es zu einem Konflikt
+    kommt, welcher Knoten der gültige Knoten ist. *(vgl Use-case 22)*
+ * **/F110/** Die Applikation *soll* zeigen, wie bei einer Konkurrenzsituation von zwei Versionen einer Blockchain die
+   gültige Version über das Kriterium der "schwersten Kette" (bis dahin grösster Berechnungsaufwand) ausgewählt wird.
+   *(vgl. /LK80/)*
+   * /F111/ Die Animation 7 *soll* zeigen, wie sich bei zwei Konkurrenzsituationen von jeweils zwei Versionen einer
+     Blockchain mehrere Äste bilden, bis eine Version gegenüber der jeweils konkurrierenden Version aufgrund des höheren
+     gesamten Schwierigkeitsgrads (entspricht dem insgesamt erbrachten Rechenaufwand, "Kriterium der schwersten Kette")
+     als aktuell gültig anerkannt und farblich hervorgehoben wird. *(vgl. Use-case 23)*
 
 
 ## 4. Abnahmekriterien
@@ -244,7 +265,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * /A40/ Es ist bei allen Animationen möglich, durch das Klicken auf ein Symbol oder einen Button erklärende und/oder
   weiterführende Texte zu öffnen.
 * /A50/ Die Applikation erfüllt die in Pkt. 3 ("Einzelanforderungen") zu den einzelnen Animationen definierten
-  funktionalen Anforderungen /F50/ bis **/Fxx/**, wobei etwaige kleine Abstriche möglich sind, jedoch jeder konkrete
+  funktionalen Anforderungen /F50/ bis /F111/, wobei etwaige kleine Abstriche möglich sind, jedoch jeder konkrete
   Einzelfall gesondert bewertet werden muss.
 * /A60/ Die optische Gestaltung der Applikation ist mehrfarbig, das für das Verständnis der fundamentalen Konzepte einer
   Blockchain Wesentliche ist erkennbar hervorgehoben.
