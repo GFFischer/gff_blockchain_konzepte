@@ -135,12 +135,12 @@
        transform="translate(14.082594,101.72769)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan7">Transaktionsdaten<tspan
+         id="tspan1">Transaktionsdaten<tspan
    y="42.03989"
-   id="tspan8"> </tspan></tspan><tspan
+   id="tspan2"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan9">ändern</tspan></text>
+         id="tspan3">ändern</tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse12"
@@ -164,12 +164,12 @@
        transform="translate(58.426833,71.061117)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan10">Hash-Referenzen<tspan
+         id="tspan4">Hash-Referenzen<tspan
    y="74.198608"
-   id="tspan11"> </tspan></tspan><tspan
+   id="tspan5"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan12">ändern</tspan></text>
+         id="tspan7">ändern</tspan></text>
     <ellipse
        style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.452066;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="ellipse16-5"
@@ -203,12 +203,12 @@
        transform="translate(-9.3795907,72.753285)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan14">Empfänger-Adresse<tspan
+         id="tspan8">Empfänger-Adresse<tspan
    y="42.03989"
-   id="tspan17"> </tspan></tspan><tspan
+   id="tspan9"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan18">ändern</tspan></text>
+         id="tspan10">ändern</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.509;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.03601, 0.509;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
        d="m 103.37752,197.17063 10.44575,-11.59772"
@@ -278,7 +278,7 @@
        transform="translate(-65.889349,150.92773)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan19">User</tspan></text>
+         id="tspan11">User</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -289,7 +289,7 @@
        inkscape:transform-center-y="0.96630697"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan20">Applikation</tspan></text>
+         id="tspan12">Applikation</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -299,15 +299,15 @@
        transform="translate(57.207381,160.40148)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan21">Hashwert in&#10;</tspan><tspan
+         id="tspan14">Hashwert in&#10;</tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan22">Block-Header neu<tspan
+         id="tspan15">Block-Header neu<tspan
    y="46.890592"
-   id="tspan24"> </tspan></tspan><tspan
+   id="tspan17"> </tspan></tspan><tspan
          x="99.033676"
          y="51.741293"
-         id="tspan26">berechnen</tspan></text>
+         id="tspan18">berechnen</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(0.26458333,0,0,0.26458333,5.1554958,59.002248)"
@@ -359,12 +359,12 @@
        transform="translate(41.717476,71.760524)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan27">zu überweisenden<tspan
+         id="tspan19">zu überweisenden<tspan
    y="42.03989"
-   id="tspan28"> </tspan></tspan><tspan
+   id="tspan20"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan29">Betrag ändern</tspan></text>
+         id="tspan21">Betrag ändern</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.52;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.08001, 0.52;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
        d="m 97.512464,125.41706 4.779226,8.50863"
@@ -388,17 +388,6 @@
        id="path15"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
-    <text
-       xml:space="preserve"
-       style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
-       x="104.16459"
-       y="105.06308"
-       id="text15"><tspan
-         sodipodi:role="line"
-         id="tspan15"
-         style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.565"
-         x="104.16459"
-         y="105.06308">&lt;&lt;include&gt;&gt;</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.175px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.564999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -439,17 +428,17 @@
        transform="translate(-1.8867698,126.60574)"><tspan
          x="105.78841"
          y="74.198608"
-         id="tspan30">Hashwerte im<tspan
+         id="tspan22">Hashwerte im<tspan
    y="74.198608"
-   id="tspan31"> </tspan></tspan><tspan
+   id="tspan24"> </tspan></tspan><tspan
          x="105.78841"
          y="79.04931"
-         id="tspan32">Merkle-Tree neu<tspan
+         id="tspan26">Merkle-Tree neu<tspan
    y="79.04931"
-   id="tspan33"> </tspan></tspan><tspan
+   id="tspan27"> </tspan></tspan><tspan
          x="105.78841"
          y="83.900011"
-         id="tspan34">berechnen</tspan></text>
+         id="tspan28">berechnen</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.88056px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:35.4151;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
@@ -459,17 +448,17 @@
        transform="translate(33.244287,132.73977)"><tspan
          x="99.033676"
          y="42.03989"
-         id="tspan35">Hashwert auf<tspan
+         id="tspan29">Hashwert auf<tspan
    y="42.03989"
-   id="tspan36"> </tspan></tspan><tspan
+   id="tspan30"> </tspan></tspan><tspan
          x="99.033676"
          y="46.890592"
-         id="tspan37">Transaktion neu<tspan
+         id="tspan31">Transaktion neu<tspan
    y="46.890592"
-   id="tspan38"> </tspan></tspan><tspan
+   id="tspan32"> </tspan></tspan><tspan
          x="99.033676"
          y="51.741293"
-         id="tspan39">berechnen</tspan></text>
+         id="tspan33">berechnen</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.547853;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:2.19142, 0.547853;stroke-dashoffset:0;stroke-opacity:1;marker-end:url(#marker2)"
        d="m 135.22431,206.02971 -6.17685,-0.0617"
