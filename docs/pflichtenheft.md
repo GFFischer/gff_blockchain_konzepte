@@ -914,7 +914,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 * Standardablauf:
     * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle neuen Block" beschriftet ist, klickt.
-    * Die Transaktionen "T 0" bis "T 4" verschwinden aus der Beschriftung des in Animation 2 vom User hinzugefügten
+    * Die Transaktionen "T 0" bis "T 3" verschwinden aus der Beschriftung des in Animation 2 vom User hinzugefügten
       Knotens, dafür erscheint ein Hashwert (z.B. 01d33512), der einen neuen Block darstellt.
     * Der User setzt die Animation fort, indem er auf einen Button, der mit "Verteile Block" beschriftet ist, klickt.
     * Alle Kanten, die vom in Animation 2 hinzugefügten Knoten ausgehen, ändern die Farbe.
