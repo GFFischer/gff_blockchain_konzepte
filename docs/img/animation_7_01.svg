@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="134.17419mm"
+   height="35.376881mm"
+   viewBox="0 0 134.1742 35.376881"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="animation_7_01.svg"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.5759723"
+     inkscape:cx="756.98085"
+     inkscape:cy="220.49672"
+     inkscape:window-width="1440"
+     inkscape:window-height="890"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="Triangle"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Dot"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Dot"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         sodipodi:nodetypes="sssss"
+         id="path17" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Dot-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Dot"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 5,0 C 5,2.76 2.76,5 0,5 -2.76,5 -5,2.76 -5,0 c 0,-2.76 2.3,-5 5,-5 2.76,0 5,2.24 5,5 z"
+         sodipodi:nodetypes="sssss"
+         id="path17-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Triangle-3"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="1"
+       markerHeight="1"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path135-4" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-10.079256,-105.98998)">
+    <rect
+       style="fill:#00c000;fill-opacity:1;stroke:#000000;stroke-width:0.263516;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-9"
+       width="47.008682"
+       height="34.615921"
+       x="29.99831"
+       y="106.12174" />
+    <rect
+       style="fill:#00c000;fill-opacity:1;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-4"
+       width="43.502296"
+       height="18.90414"
+       x="31.865385"
+       y="108.21657" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="53.270996"
+       y="115.8755"
+       id="text3-5"><tspan
+         id="tspan3-0"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="53.270996"
+         y="115.8755"
+         sodipodi:role="line">Hashwert Block:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="53.043236"
+       y="122.93609"
+       id="text9-6"><tspan
+         id="tspan9-3"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="53.043236"
+         y="122.93609"
+         sodipodi:role="line">04ca5f95</tspan></text>
+    <rect
+       style="fill:#00c000;fill-opacity:1;stroke:#000000;stroke-width:0.248839;stroke-dasharray:none;stroke-opacity:1"
+       id="rect9"
+       width="43.606941"
+       height="9.3457155"
+       x="31.813063"
+       y="129.423" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:41.4004;display:inline;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="90.634865"
+       y="75.290611"
+       id="text11"
+       transform="translate(-38.008074,59.911032)"><tspan
+         x="90.634865"
+         y="75.290611"
+         id="tspan4"><tspan
+           style="font-weight:bold;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none"
+           id="tspan3">Schwierigkeit: 1</tspan></tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.421;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot);marker-end:url(#Triangle);paint-order:normal"
+       d="m 29.894434,124.08064 -18.32018,0.046"
+       id="path18"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="fill:#00c000;fill-opacity:1;stroke:#000000;stroke-width:0.263516;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1-9-6"
+       width="47.008682"
+       height="34.615921"
+       x="97.113007"
+       y="106.61919" />
+    <rect
+       style="fill:#00c000;fill-opacity:1;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       id="rect2-4-9"
+       width="43.502296"
+       height="18.90414"
+       x="98.980087"
+       y="108.71401" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="120.38569"
+       y="116.37295"
+       id="text3-5-8"><tspan
+         id="tspan3-0-0"
+         style="font-size:4.93889px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="120.38569"
+         y="116.37295"
+         sodipodi:role="line">Hashwert Block:</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="120.15791"
+       y="123.43353"
+       id="text9-6-8"><tspan
+         id="tspan9-3-2"
+         style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:4.93889px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.353483;stroke-opacity:1"
+         x="120.15791"
+         y="123.43353"
+         sodipodi:role="line">00c72847</tspan></text>
+    <rect
+       style="fill:#00c000;fill-opacity:1;stroke:#000000;stroke-width:0.248839;stroke-dasharray:none;stroke-opacity:1"
+       id="rect9-0"
+       width="43.606941"
+       height="9.3457155"
+       x="98.927773"
+       y="129.92044" />
+    <text
+       xml:space="preserve"
+       style="font-size:4.93889px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;white-space:pre;inline-size:41.4004;display:inline;fill:none;stroke:#000000;stroke-width:0.353483;stroke-dasharray:none;stroke-opacity:1"
+       x="90.634865"
+       y="75.290611"
+       id="text11-5"
+       transform="translate(29.106621,60.408474)"><tspan
+         x="90.634865"
+         y="75.290611"
+         id="tspan6"><tspan
+           style="font-weight:bold;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none"
+           id="tspan5">Schwierigkeit: 2</tspan></tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.421;stroke-linecap:butt;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#Dot-0);marker-end:url(#Triangle-3);paint-order:normal"
+       d="m 97.009136,124.57809 -18.320187,0.046"
+       id="path18-0"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>
