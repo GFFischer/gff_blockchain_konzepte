@@ -15,6 +15,7 @@
 |  0.10   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 15.04.2024 | Pkt. 3 bearbeitet, Use-case 14 bis 15 (Anhang) hinzugefügt |
 |  0.11   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 16.04.2024 | Pkt. 3 bearbeitet, Use-case 15 bis 17 (Anhang) hinzugefügt |
 |  0.12   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 17.04.2024 | Pkt. 3 fertig bearbeitet, Use-case 17 bis 19 (Anhang) hinzugefügt |
+|  1.0    |  Georg Fischer   | lastenheft.md | abgeschlossen   | 18.04.2024 | Use-case 20 bis 23 (Anhang) hinzugefügt |
 
 
 ## 1. Einleitung
@@ -203,9 +204,9 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   * /F73/ Der User *soll* die Möglichkeit haben, in Animation 3b eine fiktive Transaktion zu erstellen, indem er über ein
     Formular aus den ein bis drei Adressen seines "eigenen" Knotens eine Auftraggeber-Adresse und aus allen anderen
     Adressen der Knoten aus Animation 2c eine Empfänger-Adresse wählt, selbstständig eine ganze Zahl für den zu
-    überweisenden Betrag eingibt, und indem die Applikation automatisch einen aktuellen Zeitstempel, eine Gebühr von 0,03
-    SiC einfügt sowie einen Hashwert für die ganze Transaktion berechnet. *(vgl. Use-case 12)*
-  * /F64/ Die Animation 3c *soll* zeigen, wie eine digitale Signatur erstellt wird, indem aus dem Hashwert der Transaktion
+    überweisenden Betrag eingibt, und indem die Applikation automatisch einen aktuellen Zeitstempel und eine Gebühr von
+    0,03 SiC einfügt sowie einen Hashwert für die ganze Transaktion berechnet. *(vgl. Use-case 12)*
+  * /F74/ Die Animation 3c *soll* zeigen, wie eine digitale Signatur erstellt wird, indem aus dem Hashwert der Transaktion
     durch die Anwendung asymmetrischer Verschlüsselung nach dem Prinzip des RSA-Algorithmus, allerdings mit sehr kleinen
     Zahlen, eine digitale Signatur berechnet wird. *(vgl. Use-case 13)*
   * /F75/ Die Animation 3d *soll* zeigen, wie die Transaktion geprüft und zurückgewiesen wird, wenn der eingegebene zu
@@ -224,12 +225,12 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     Auswirkungen eine kleine Änderung auf die gesamte Blockchain hat. *(vgl. Use-case 17)*
 * **/F90/** Die Applikation *soll* dem User die Möglichkeit geben, interaktiv in die Gestaltung von Animation 5
   ("Schützen der Blöcke durch Proof-of-Work") einzugreifen. *(vgl. /LK60/, /LF40/, /LF45/)*
-  * /F91/ Die Animation 5a *soll* das Mining beim Proof-of-Work-Konsensmechanismus zeigen, indem im Abstand von 0.7
-    Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen Block zu finden, der kleiner als
-    die im Target angegebene hexadezimale Zahl 0fffffff ist. *(vgl. Use-case 18)*
-  * /F92/ Die Animation 5b *soll* das Mining beim Proof-of-Work-Konsensmechanismus zeigen, indem im Abstand von 0.7
-    Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen Block zu finden, der kleiner als
-    die im Target angegebene hexadezimale Zahl 00ffffff ist. *(vgl. Use-case 19)*
+  * /F91/ Die Animation 5a *soll* das Mining beim Proof-of-Work-Konsensmechanismus zeigen, indem automatisch durch die
+    Applikation im Abstand von 0.7 Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen
+    Block zu finden, der kleiner als die im Target angegebene hexadezimale Zahl 0fffffff ist. *(vgl. Use-case 18)*
+  * /F92/ Die Animation 5b *soll* das Mining beim Proof-of-Work-Konsensmechanismus zeigen, indem automatisch durch die
+    Applikation im Abstand von 0.7 Sekunden eine Nonce nach der anderen ausprobiert wird, um einen Hashwert für den neuen
+    Block zu finden, der kleiner als die im Target angegebene hexadezimale Zahl 00ffffff ist. *(vgl. Use-case 19)*
 * **/F100/** Die Applikation *soll* zeigen, wie eine Transaktion in einem als ungerichteter Graph modellierten
   Peer-to-Peer-System verteilt wird, wie ein neuer Block erstellt und verteilt wird und wie es zu Konflikten kommen kann,
   wenn zwei unterschiedliche Blöcke annähernd zeitgleich erstellt werden. *(vgl. /LK70/)*
@@ -243,7 +244,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   * /F103/ Die Animation 6c *soll* zeigen, wie der User von "seinem" Knoten aus mehrere Transaktionen in einen Block
     zusammenfasst und diesen Block an alle Peers weiterleitet und gleichzeitig ein anderer Knoten ebenfalls mehrere
     Transaktionen in einen Block zusammenfasst und diesen Block an alle Peers weiterleitet, wodurch es zu einem Konflikt
-    kommt, welcher Knoten der gültige Knoten ist. *(vgl Use-case 22)*
+    kommt, welcher Block der gültige Block ist. *(vgl Use-case 22)*
  * **/F110/** Die Applikation *soll* zeigen, wie bei einer Konkurrenzsituation von zwei Versionen einer Blockchain die
    gültige Version über das Kriterium der "schwersten Kette" (bis dahin grösster Berechnungsaufwand) ausgewählt wird.
    *(vgl. /LK80/)*
@@ -872,21 +873,126 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 ![Diagram](img/use-case_20.svg)
 
-* Name: *Schützen der Blöcke durch Proof-of-Work, Teil 1/2*
+* Name: *Verteilen neuer Transaktionen und Blöcke, Teil 1/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Animation 6a ist vollständig geladen. Der erste Frame zeigt das als ungerichteter Graph modellierte
+  Peer-to-Peer-System aus dem letzten Frame von Animation 2c mit dem Unterschied, dass der vom User in Animation 2a bis
+  2b hinzugefügte Knoten eine andere Hintergrundfarbe hat und zusätzlich mit 'Transaktion 4' beschriftet ist (siehe
+  folgende schematische Darstellung).*
+
+![Diagram](img/animation_6a_01.svg)
+
+* Standardablauf:
+    * Der User startet die Animation, indem er auf einen Button, der mit "Verteile Transaktion" beschriftet ist, klickt.
+    * Alle Kanten, die vom in Animation 2 hinzugefügten Knoten ausgehen, ändern die Farbe und werden etwas dicker.
+    * Nach 1.0 Sekunden bekommen alle Knoten, die neu von den Kanten mit den geänderten Farben erreicht werden, die
+      gleiche Hintergrundfarbe wie der Knoten, von dem die Kanten mit den geänderten Farben ausgehen, und werden ebenfalls
+      mit "Transaktion 4" beschriftet.
+    * Nach 1.5 Sekunden ändern alle Kanten, die von den nun neu eingefärbten Knoten ausgehen, die Farbe und werden etwas
+      dicker.
+    * Die letzten beiden Schritte wiederholen sich, bis alle Knoten und Kanten neu eingefärbt und verändert sind. Danach
+      ist Animation 6a abgeschlossen.
+* Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt den Graphen so, dass alle Knoten eine neue Hintergrundfarbe
+  haben und zusätzlich mit "Transaktion 4" beschriftet sind und dass alle Kanten neu eingefärbt und etwas dicker
+  dargestellt sind (siehe folgende schematische Darstellung).*
+
+![Diagram](img/animation_6a_02.svg)
+
+
+### Use-case 21 - Animation 6b:
+
+![Diagram](img/use-case_21.svg)
+
+* Name: *Verteilen neuer Transaktionen und Blöcke, Teil 2/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Animation 6b ist vollständig geladen. Der erste Frame zeigt das als ungerichteter Graph modellierte
+  Peer-to-Peer-System aus dem letzten Frame von Animation 2c mit dem Unterschied, dass die Knoten nicht mehr mit den
+  Adressen beschriftet sind, sondern ausschliesslich mit sechs als "T 0" bis "T 5" bezeichneten Transaktionen. (siehe
+  folgende schematische Darstellung).*
+
+![Diagram](img/animation_6b_01.svg)
+
+* Standardablauf:
+    * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle neuen Block" beschriftet ist, klickt.
+    * Die Transaktionen "T 0" bis "T 4" verschwinden aus der Beschriftung des in Animation 2 vom User hinzugefügten
+      Knotens, dafür erscheint ein Hashwert (z.B. 01d33512), der einen neuen Block darstellt.
+    * Der User setzt die Animation fort, indem er auf einen Button, der mit "Verteile Block" beschriftet ist, klickt.
+    * Alle Kanten, die vom in Animation 2 hinzugefügten Knoten ausgehen, ändern die Farbe.
+    * Nach 1.5 Sekunden vollzieht sich in allen Knoten, die neu von den Kanten mit den geänderten Farben erreicht werden,
+      die gleiche Änderung wie in dem Knoten, von dem die Kanten mit den geänderten Farben ausgehen.
+    * Nach 1.0 Sekunden ändern alle Kanten, die von den nun neu beschrifteten Knoten ausgehen, die Farbe.
+    * Die letzten beiden Schritte wiederholen sich, bis sich die Beschriftung aller Knoten geändert hat und alle Kanten
+      neu eingefärbt sind. Danach ist Animation 6b abgeschlossen.
+* Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt den Graphen so, dass alle Knoten mit einem Hashwert sowie
+  mit zwei als "T 4" und "T 5" bezeichneten Transaktionen beschriftet sind und dass alle Kanten neu eingefärbt sind
+  (siehe folgende schematische Darstellung).*
+* Nachbedingung Sonderfall 21a: *Die Animation 6b wird neu geladen.*
+
+![Diagram](img/animation_6b_02.svg)
+
+#### Sonderfall 21a: Der User klickt auf "Verteile Block", bevor er die Animation gestartet hat
+* Ablauf Sonderfall 21a:
+    * Der User klickt auf den mit "Verteile Block" beschrifteten Button, bevor er durch das Klicken auf den mit
+      "Erstelle neuen Block" beschrifteten Button die Animation gestartet hat.
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte starten Sie die Animation, indem Sie
+      auf 'Erstelle neuen Block' klicken"
+
+
+### Use-case 22 - Animation 6c:
+
+![Diagram](img/use-case_22.svg)
+
+* Name: *Verteilen neuer Transaktionen und Blöcke, Teil 3/3*
+* Akteure: *User, Applikation*
+* Vorbedingungen: *Animation 6c ist vollständig geladen. Der erste Frame zeigt den identischen Graphen wie zu Beginn von
+  Animation 6b.*
+* Standardablauf:
+    * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle neuen Block" beschriftet ist, klickt.
+    * Die Transaktionen "T 0" bis "T 4" verschwinden aus der Beschriftung des in Animation 2 vom User hinzugefügten
+      Knotens, dafür erscheint ein Hashwert (z.B. 01d33512), der einen neuen Block darstellt.
+    * Nach 0.3 Sekunden verschwinden bei dem Konten, der am weitesten von dem in Animation 2 hinzugefügten Knoten entfernt
+      ist (fortan "Knoten B" genannt), die Transaktionen "T 2" bis "T 6", dafür erscheint ein Hashwert (z.B. 0f75b449),
+      der einen neuen Block darstellt.
+    * Der User setzt die Animation fort, indem er auf einen Button, der mit "Verteile Block" beschriftet ist, klickt.
+    * Alle Kanten, die vom in Animation 2 hinzugefügten Knoten ausgehen, bekommen eine andere Farbe.
+    * Nach 0.3 Sekunden bekommen alle Kanten, die von Knoten B ausgehen, eine andere, von den Farben der bis dahin
+      dargestellten Kanten deutlich zu unterscheidende Farbe.
+    * Nach 1.5 Sekunden vollzieht sich in allen Knoten, die neu von den Kanten mit den geänderten Farben erreicht werden,
+      die gleiche Änderung wie in dem Knoten, von dem die Kanten mit den geänderten Farben ausgehen.
+    * Nach 1.0 Sekunden ändern alle Kanten, die von den nun neu eingefärbten Knoten ausgehen, die Farbe.
+    * Wenn eine Kante schon neu eingefärbt ist, wird eine zusätzliche Kante in der anderen (neuen) Farbe eingezeichnet.
+    * Wenn Knoten von Kanten mit beiden geänderten Farben erreicht werden, ändert sich ihre Beschriftung, indem alle
+      Transaktionen verschwinden und beide Hashwerte ("Blöcke") im Knoten angezeigt werden.
+    * Die letzten vier Schritte wiederholen sich, bis sich die Beschriftung aller Knoten so geändert hat, dass beide
+      Hashwerte angezeigt werden, und alle Kanten doppelt in zwei verschiedenen Farben eingezeichnet sind. Danach ist
+      Animation 6c abgeschlossen.
+* Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt den Graphen so, dass alle Knoten mit zwei Hashwerten
+  beschriftet sind und alle Kanten doppelt in zwei verschiedenen Farben eingezeichnet sind.*
+* Nachbedingung Sonderfall 22a: *Die Animation 6c wird neu geladen.*
+
+![Diagram](img/animation_6c_01.svg)
+
+#### Sonderfall 22a: Der User klickt auf "Verteile Block", bevor er die Animation gestartet hat
+* Ablauf Sonderfall 22a:
+    * Der User klickt auf den mit "Verteile Block" beschrifteten Button, bevor er durch das Klicken auf den mit
+      "Erstelle neuen Block" beschrifteten Button die Animation gestartet hat.
+    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte starten Sie die Animation, indem Sie
+      auf 'Erstelle neuen Block' klicken"
+
+
+### Use-case 23 - Animation 7:
+
+![Diagram](img/use-case_23.svg)
+
+* Name: *Validieren eines Blocks*
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
 
-![Diagram](img/animation_6a_01.svg)
+![Diagram](img/animation_7_01.svg)
 
 * Standardablauf:
     * Schritt 1
     * Schritt 2
 * Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
-* Nachbedingung Sonderfall 18a: *Was gilt nach dem Ende, wenn der Ablauf fehlgeschlagen ist*
 
-![Diagram](img/animation_6a_02.svg)
-
-#### Sonderfall 19a: Ausnahme 1
-* Ablauf Sonderfall 19a:
-    * Schritt 1
-    * Schritt 2
+![Diagram](img/animation_7_02.svg)
