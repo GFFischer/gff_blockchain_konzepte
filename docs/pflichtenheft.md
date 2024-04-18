@@ -907,7 +907,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Akteure: *User, Applikation*
 * Vorbedingungen: *Animation 6b ist vollständig geladen. Der erste Frame zeigt das als ungerichteter Graph modellierte
   Peer-to-Peer-System aus dem letzten Frame von Animation 2c mit dem Unterschied, dass die Knoten nicht mehr mit den
-  Adressen beschriftet sind, sondern ausschliesslich mit sechs als "T 0" bis "T 5" bezeichneten Transaktionen. (siehe
+  Adressen beschriftet sind, sondern ausschliesslich mit sechs als "T 0" bis "T 5" bezeichneten Transaktionen (siehe
   folgende schematische Darstellung).*
 
 ![Diagram](img/animation_6b_01.svg)
@@ -986,13 +986,28 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 
 * Name: *Validieren eines Blocks*
 * Akteure: *User, Applikation*
-* Vorbedingungen: *Was muss vor Beginn des Ablaufs gelten*
+* Vorbedingungen: *Animation 7 ist vollständig geladen. Der erste Frame zeigt einen Ausschnitt aus einer Kette von zwei
+  nur mit dem Hashwert des Blocks und einem Schwierigkeitsgrad von 1 bis 3 beschrifteten, gleich eingefärbte
+  Block-Header (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_7_01.svg)
 
 * Standardablauf:
-    * Schritt 1
-    * Schritt 2
-* Nachbedingung Erfolg: *Was muss nach dem Ende des erfolgreichen Ablaufs gelten*
+    * Der User startet die Animation, indem er auf einen Button, der mit "Starte Animation" beschrieben ist, klickt.
+    * In einer Animation werden der dargestellten Blockchain gleichzeitig zwei Block-Header mit demselben
+      Schwierigkeitsgrad hinzugefügt und zwischen diesen beiden ein Fragezeichen angezeigt. Nach 1.5 Sekunden werden jedem
+      dieser beiden Block-Header ein weiterer, nicht eingefärbter Block-Header hinzugefügt, wobei diese beiden neuen
+      Block-Header einen unterschiedlichen Schwierigkeitsgrad haben.
+    * Der User setzt die Animation fort, indem er auf einen Button, der mit "Entscheidung fällen" beschrieben ist, klickt.
+    * Der Block-Header mit dem höheren Schwierigkeitsgrad sowie dessen direkter Vorgänger werden gleich eingefärbt wie
+      die seit dem Start der Animation angezeigten beiden Block-Header.
+    * Nach 2.0 Sekunden werden im Abstand von 1.0 Sekunden dem letzten eingefärbten Block zwei weitere Block-Header
+      hinzugefügt, die jeweils den Schwierigkeitsgrad 1 haben. Wiederum 1.0 Sekunden später wird ein weiterer Block-Header
+      mit dem Schwierigkeitsgrad 3 dem letzten eingefärbten Block hinzugefügt.
+    * Der User setzt die Animation fort, indem er auf einen Button, der mit "Entscheidung fällen" beschrieben ist, klickt.
+    * Der Block-Header mit dem Schwierigkeitsgrad 3 wird eingefärbt.
+    * Animation 7 ist beendet.
+* Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt eine Blockchain mit fünf eingefärbten, aneinanderhängenden
+  Block-Headern mit zwei nicht eingefärbten Verzweigungen (siehe folgende schematische Darstellung).*
 
 ![Diagram](img/animation_7_02.svg)
