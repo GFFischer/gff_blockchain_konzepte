@@ -156,7 +156,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   und mithilfe von Buttons ermöglicht werden. *(vgl. Use-case 2, /LF20/, /LQB30/)*
   * /F31/ Die Applikation *muss* dem User die Möglichkeit geben, über "weiter"- und "zurück"-Buttons zwischen den
     einzelnen Animationen nach vor und zurück zu springen.
-  * /F31/ Die Applikation *muss* dem User die Möglichkeit geben, über ein eigenes Navigationsmenü direkt zu den einzelnen
+  * /F32/ Die Applikation *muss* dem User die Möglichkeit geben, über ein eigenes Navigationsmenü direkt zu den einzelnen
     Animationen zu navigieren.
 * **/F40/** Die Applikation *muss* dem User die Möglichkeit geben, durch das Klicken auf ein Symbol oder einen Button
   erklärende und/oder weiterführende Texte zu den einzelnen Animationen zu öffnen. *(vgl. Use-case 3, /LF30/)*
