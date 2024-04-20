@@ -8,7 +8,7 @@
 
 # 1 Einführung
 
-# 1.1 Zweck 
+## 1.1 Zweck 
 
 Das **Ziel** dieses Dokuments ist es, die technische Umsetzung der im Pflichtenheft formulierten Einzelanforderungen (/F10/
 bis /F111/) und den dazugehörenden dargestellten Use-cases (Use-case 1 bis Use-case 23) so präzise zu beschreiben, dass
@@ -39,7 +39,7 @@ richtet sich dieses Dokument an alle Entwickler*innen, die gegebenenfalls diese 
 möchten, sowie im konkreten Fall auch an alle, die dieses Projekt zu bewerten und zu beurteilen haben.
 
 
-# 1.2 Beziehung zu anderen Dokumenten
+## 1.2 Beziehung zu anderen Dokumenten
 
 Dieses Dokument bezieht sich auf die im **Lastenheft** formulierten funktionalen und Qualitätsanforderungen und die im
 **Pflichtenheft** formulierten und mit Use-cases detailliert beschriebenen Einzelanforderungen. Ebenso steht dieses 
