@@ -159,7 +159,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   * /F32/ Die Applikation *muss* dem User die Möglichkeit geben, über ein eigenes Navigationsmenü direkt zu den einzelnen
     Animationen zu navigieren.
 * **/F40/** Die Applikation *muss* dem User die Möglichkeit geben, durch das Klicken auf ein Symbol oder einen Button
-  erklärende und/oder weiterführende Texte zu den einzelnen Animationen zu öffnen. *(vgl. Use-case 3, /LF30/)*
+  vor dem Start und/oder nach Beendigung bzw. Abbruch der Animation erklärende und/oder weiterführende Texte zu den
+  einzelnen Animationen zu öffnen. *(vgl. Use-case 3, /LF30/)*
   * /F41/ Die erklärenden Texte *sollen* durch das Klicken auf ein intuitiv verständliches Symbol (z.B. i in einem Kreis),
     das sich an einer oder mehreren Stellen im Bereich einer Animation befindet, aufpoppen. *(vgl. /LQB20/)*
   * /F42/ Die weiterführenden Texte *sollen* durch das Klicken auf einen Button (z.B. "Hintergrundwissen"), der sich
