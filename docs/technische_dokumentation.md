@@ -112,13 +112,16 @@ unbewegten Grafiken und ohne die Möglichkeit zur Interaktion zur Verfügung ste
 * Beim **Start der Applikation** wird der erste Teil von Animation 1 geladen.
 * **Erklärende und weiterführende Texte** zu den Animationen können durch das Klicken auf ein Symbol oder einen Button vor
   dem Start und/oder nach Beendigung bzw. Abbruch der Animation geöffnet werden.
+* **Eingaben durch den User** über Formulare sind in den Animationen insgesamt an acht Stellen möglich. Die Applikation
+  überprüft die Gültigkeit der Eingaben und weist Eingaben, die nicht den Vorgaben entsprechen, zurück.
+* Eingaben bewirken eine **Veränderung der Inhalte der Animationen**. Auf Eingaben wird gelegentlich in anderen
+  Animationen zurückgegriffen. Für den Fall, dass der User auf diese Eingaben verzichtet oder direkt zu Animationen
+  navigiert, die auf davor gemachte Eingaben zurückgreifen, weist die Applikation beim Start allen betreffenden Variablen
+  einen zum Teil zufällig gewählten Wert zu, der durch die Eingaben des Users auf jeden Fall überschrieben wird.
 
-
-
-Um die Designlösung die nachfolgend beschrieben wird einzuführen, sollten an dieser Stelle nochmals das gewünschte Verhalten des Systems (abgeleitet aus dem Pflichtenheft) kurz beschrieben werden. Idealerweise sollte hier genügend Information gegeben werden, so dass man die Diagramme und Spezifikationen die im nächsten Abschnitt beschrieben werden verstehen kann, ohne zuvor das Pflichtenheft im Detail gelesen zu haben.
 
 # 5. Design
-An dieser Stelle wird nun das eigentliche Softwaredesign (die technische Lösung) beschrieben. In grösseren Systemen wird typischerweise zwischen High-level Design (Architektur) sowie Mid-level Design (UML Klassen- und Sequenzdiagramme) sowie Detaildesign (Detaillierte Beschreibung von einigen Schlüsselklassen) unterschieden. Für diese kleine Änderung, muss diese Unterscheidung aber nicht gemacht werden. Jedoch wollen wir explizit zwischen Statik, Dynamik und Logik zu unterscheiden.
+
 ## 5.1 Statik
 An dieser Stelle sollten die statischen Aspekte, zum Beispiel mit Hilfe von UML Klassendiagrammen oder Paketdiagrammen beschrieben werden.
 
