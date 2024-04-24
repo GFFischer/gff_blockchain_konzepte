@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tests zu Erklärungstexten</title>
+        <script type="text/javascript" src="info_ausgelagert.js"></script>
+        <style type="text/css">
+            @font-face {
+                font-family: 'AgenorNeue-Regular';
+                src: url('AgenorNeue-Regular.otf');
+            }
+            div   {
+                font-family: 'AgenorNeue-Regular', Verdana, Arial, Helvetica, sans-serif;
+                font-size: 1.1em;
+                word-spacing: 0.1em;
+                line-height: 150%;
+            }
+            div.erklaerung {
+                border-width: medium;
+                border-style: solid;
+                border-color: darkblue;
+                padding: 2vw;
+                background-color: greenyellow;
+                position: fixed; left: 1vw; top: 1vh;
+                max-width: 93vw;
+                max-height: 90vh;
+                overflow: auto;
+            }
+            button {
+                background-color: darkgray;
+                color: antiquewhite;
+                font-size: 1.1em;
+                border: 0em;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="text1" class="erklaerung" style="visibility: hidden;">
+            <script type="text/javascript">
+                document.write(info);
+            </script> <br>
+            <button id="schliessen2" type="x_button" value="schliessen" 
+            onclick="document.getElementById('text1').style='visibility: hidden';">Schliessen</button>
+        </div>
+        <div id="text2" class="erklaerung" style="visibility: hidden;">
+            <p>
+                Und wie jetzt hier?</br>
+                Hier erscheint der kurze zweite Absatz.
+            </p>
+            <button id="schliessen1" type="x_button" value="schliessen" 
+                    onclick="document.getElementById('text2').style='visibility: hidden';">Schliessen</button>
+        </div>
+        <img id="proto_erklaerung" src="infotext.png" alt="Erklärung" height="100em" width="100em">
+        <button id="proto_hintergrundwissen" type="x_button" value="hintergrundwissen"
+            onclick="document.getElementById('text2').style='visibility: visible';">Hintergrundwissen</button>
+        <script type="text/javascript">
+            document.images[0].onclick=function() {
+                document.getElementById("text1").style="visibility: visible";
+            }
+        </script>
+    </body>
+</html>
