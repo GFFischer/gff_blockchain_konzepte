@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Das wandelbare Peer-to-Peer-System</title>
+        <script type="text/javascript" src="startwerte_variablen.js"></script>
+        <style>
+            :root {
+                --mittelgruen: rgb(148,179,28);
+                --schriftgroesse: 12pt;
+            }
+            body {
+                max-width: 1280px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: var(--schriftgroesse);
+                word-spacing: 0.1em;
+                line-height: 150%;
+                
+            }
+            div {
+                background-color: white;
+                border-width: thin;
+                border-style: solid;
+                border-color: black;
+                margin: 0.5em;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .formular {
+                width: 20em;
+                padding: 0.5em;
+            }
+            .knoten_name {
+                height: 7em;
+                width: 7em;
+                border-radius: 50%;
+                padding: 0.5em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .knoten_neu {
+                color: var(--mittelgruen);
+                border-color: var(--mittelgruen);
+            }
+            .anim_hintergrund {
+                background-color: lightgrey;
+            }
+            .graph {
+                width: 44em;
+            }
+            .schrift_einheitsgroesse {
+                font-size: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="anim_hintergrund" style="height: 39em; min-width: 54em;"></div>
+        <img id="graph_start" class="graph" src="graph_start.png" alt="Peer-to-Peer-System" 
+            style="position: absolute; left: 6em; top: 5em;">
+        <img id="graph_farbig" class="graph" src="graph_farbig.png" alt="Peer-to-Peer-System" 
+            style="position: absolute; left: 6em; top: 5em; visibility: hidden;">
+        <div id="knoten_neu" class="knoten_name knoten_neu" style="position: absolute; left: 7em; top: 29em;
+            visibility: hidden;">
+            <p></p>
+            <br><span id="knoten_neu_inhalt"></span>
+        </div>
+        <div id="knoten_1" class="knoten_name" style="position: absolute; left: 7em; top: 3em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten1);
+            </script>
+        </div>
+        <div id="knoten_2" class="knoten_name" style="position: absolute; left: 19.5em; top: 1.5em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten2);
+            </script>
+        </div>
+        <div id="knoten_3" class="knoten_name" style="position: absolute; left: 31.5em; top: 2em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten3);
+            </script>
+        </div>
+        <div id="knoten_4" class="knoten_name" style="position: absolute; left: 1.5em; top: 16em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten4);
+            </script>
+        </div>
+        <div id="knoten_5" class="knoten_name" style="position: absolute; left: 18.5em; top: 14.5em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten5);
+            </script>
+        </div>
+        <div id="knoten_6" class="knoten_name" style="position: absolute; left: 29.5em; top: 15.5em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten6);
+            </script>
+        </div>
+        <div id="knoten_7" class="knoten_name" style="position: absolute; left: 44.5em; top: 12em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten7);
+            </script>
+        </div>
+        <div id="knoten_8" class="knoten_name" style="position: absolute; left: 17em; top: 26em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten8);
+            </script>
+        </div>
+        <div id="knoten_9" class="knoten_name" style="position: absolute; left: 29em; top: 29.5em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten9);
+            </script>
+        </div>
+        <div id="knoten_10" class="knoten_name" style="position: absolute; left: 40.5em; top: 25em;">
+            <p></p>
+            <br>
+            <script type="text/javascript">
+                document.write(name_knoten10);
+            </script>
+        </div>
+        <div id="formular" class="formular" style="visibility: hidden;">
+            <label>Geben Sie einen Namen ein:  <input id="eingegebener_name" class="schrift_einheitsgroesse" name="eingegebener_name" type="text"></label>
+            <button id="submitButton" class="schrift_einheitsgroesse" onclick="
+                if (document.getElementById('eingegebener_name').value != '') {
+                    document.getElementById('knoten_neu_inhalt').innerHTML = document.getElementById('eingegebener_name').value;
+                }
+                else {
+                    document.getElementById('knoten_neu_inhalt').innerHTML = name_neu;
+                }
+                getElementById('knoten_neu').style='position: absolute; left: 7em; top: 29em; visibility: visible;';
+                document.getElementById('formular').style='visibility: hidden';
+                document.getElementById('graph_farbig').style='position: absolute; left: 6em; top: 5em; visibility: visible';"
+                >OK</button>
+          
+            <p>
+                <script type="text/javascript">
+                     if (document.getElementById('eingegebener_name').value != "") {
+                        name_neu = document.getElementById('eingegebener_name').value;
+                     }
+                </script>
+            </p>
+        </div>
+        <button id="formular_button" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;" onclick="
+            document.getElementById('formular').style='position: fixed; right: 2em; top: 4em; visibility: visible;';
+            ">Erstelle einen neuen Peer</button>
+    </body>
+</html>
