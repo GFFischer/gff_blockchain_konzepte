@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
+        <meta charset="UTF-8">
         <title>Tests zu Erklärungstexten</title>
         <script type="text/javascript" src="info_ausgelagert.js"></script>
         <style type="text/css">
@@ -35,6 +35,15 @@
                 margin-top: 0.5em;
                 float: right;
             }
+            input[type="button"] {
+                background-color: rgb(220, 24, 24);
+                color: rgb(206, 241, 4);
+                font-size: 1.1em;
+                border: 0em;
+                padding: 0.5em;
+                margin-top: 0.5em;
+                float: right;
+            }
         </style>
     </head>
     <body>
@@ -50,8 +59,8 @@
                 Und wie jetzt hier?</br>
                 Hier erscheint der kurze zweite Absatz.
             </p>
-            <button id="schliessen1" type="x_button" value="schliessen" 
-                    onclick="document.getElementById('text2').style='visibility: hidden';">Schliessen</button>
+            <input type="button" value="schliessen" 
+                    onclick="document.getElementById('text2').style='visibility: hidden';"></input>
         </div>
         <img id="proto_erklaerung" src="infotext.png" alt="Erklärung" height="100em" width="100em">
         <button id="proto_hintergrundwissen" type="x_button" value="hintergrundwissen"

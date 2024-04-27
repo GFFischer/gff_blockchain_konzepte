@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Elemente für die Animationen</title>
+    <script type="text/javascript" src="test.js"></script>
+    <style>
+        body {
+            max-width: 1280px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+            word-spacing: 0.1em;
+            line-height: 150%;
+            
+        }
+        div {
+            background-color: white;
+            border-width: thin;
+            border-style: solid;
+            border-color: black;
+            margin: 0.5em;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .anim_hintergrund {
+            background-color: lightgrey;
+            height: 20em;
+            min-width: 50em;
+        }
+        .blockheader {
+            width: 10em;
+        }
+        .header_seite {
+            max-height: 4em;
+            padding: 0.5em;
+        }
+        .header_inhalt {
+            height: 5em;
+            padding: 1em 0.5em 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="blockheader" style="position: absolute; left: 3em; top: 2em;">
+        <div class="header_seite">
+            Seite 1
+        </div>
+        <div class="header_inhalt">
+            <i>Informatik ist jetzt nicht gerade von allen ...</i>
+        </div>
+    </div>
+    <div class="blockheader" style="position: absolute; left: 15em; top: 2em;">
+        <div class="header_seite">
+            Seite 2
+        </div>
+        <div class="header_inhalt">
+            <i>das Lieblingsfach Nummer eins, aber ...</i>
+        </div>
+    </div>
+    <div class="blockheader" id="block3" style="position: absolute; left: 27em; top: 2em; visibility: hidden;">
+        <div class="header_seite">
+            Seite 3
+        </div>
+        <div class="header_inhalt">
+            <i><span id="block3_inhalt"></span></i>
+        </div>
+    </div>
+    <div class="anim_hintergrund"></div>
+    <div id="formular" style="visibility: hidden;">
+        <h3>Ein Formular</h3>
+        <p>Geben Sie einen Text für die neue Seite ein:</p>
+       
+            <label>Text für Seite 3 eingeben:  <input id="seite3_inhalt" name="seite3_inhalt" type="text"></label>
+            <button id="submitButton" onclick="
+                if (document.getElementById('seite3_inhalt').value != '') {
+                    document.getElementById('block3_inhalt').innerHTML = document.getElementById('seite3_inhalt').value;
+                }
+                else {
+                    document.getElementById('block3_inhalt').innerHTML = seite3;
+                }
+                getElementById('block3').style='position: absolute; left: 27em; top: 2em; visibility: visible';"
+                ">OK</button>
+      
+        <p>
+            <script type="text/javascript">
+                 if (document.getElementById('seite3_inhalt').value != "") {
+                    seite3 = document.getElementById('seite3_inhalt').value;
+                 }
+                document.write(seite3)
+            </script>
+        </p>
+    </div>
+    <button id="formular_button" style="position: fixed; right: 2em; top: 2em;" onclick="
+        document.getElementById('formular').style='visibility: visible';
+        ">Formular öffnen</button>
+</body>
+</html>
