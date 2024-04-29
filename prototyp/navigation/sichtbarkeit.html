@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sichtbarkeit von Animationen</title>
+        <script type="text/javascript" src="un_sichtbar_machen.js"></script>
+        <style>
+            body {
+                max-width: 1280px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:12pt;
+                word-spacing: 0.1em;
+                line-height: 150%;
+            }
+            nav ul {
+                display: flex;
+                padding: 0;
+                list-style-type: none;
+            }
+            nav li {
+                margin: 0.2em;
+                padding: 0.4em;
+                width: 10em;
+                background-color: lightgreen;
+            }
+            .animation {
+                display: none;
+            }
+            .block {
+                width: 11em;
+                background-color: white;
+                border-width: thin;
+                border-style: solid;
+                border-color: black;
+                margin: 0.5em;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .blockinhalt {
+                width: 80%;
+                max-height: 4em;
+                padding: 0.5em;
+            }
+            .hintergrund {
+                position: absolute;
+                background-color: lightgrey;
+                height: 20em;
+                min-width: 50em;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li onclick="oeffne_animation(1, anim_aktuell)">Animation 1</li>
+                <li onclick="oeffne_animation(2, anim_aktuell)">Animation 2</li>
+                <li onclick="oeffne_animation(3, anim_aktuell)">Animation 3</li>
+            </ul>
+        </nav>
+        <div id="anim_1" class="animation">
+            <div class="hintergrund"></div>
+            <div id="testblock1" class="block" style="position: absolute; left: 2em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 1
+                </div>
+            </div>
+            <div id="testblock2" class="block" style="position: absolute; left: 14em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 2
+                </div>
+            </div>
+            <div id="testblock3" class="block" style="display: none;">
+                <div class="block blockinhalt">
+                    Testblock 3
+                </div>
+            </div>
+            <button id="testblock3_button" style="position: fixed; right: 2em; top: 2em;" onclick="
+                document.getElementById('testblock3').style='position: absolute; left: 26em; top: 6em; visibility: visible';
+                ">Testblock 3 öffnen</button>
+        </div>
+        
+        <div id="anim_2" class="animation">
+            <div class="hintergrund" style="height: 15em;"></div>
+            <div id="testblock4" class="block" style="position: absolute; left: 2em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 4 von Animation 2
+                </div>
+            </div>
+            <div id="testblock5" class="block" style="position: absolute; left: 14em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 5 von Animation 2
+                </div>
+            </div>
+            <div id="testblock6" class="block" style="visibility: hidden;">
+                <div class="block blockinhalt">
+                    Testblock 6 von Animation 2
+                </div>
+            </div>
+            <button id="testblock6_button" style="position: fixed; right: 2em; top: 2em;" onclick="
+                document.getElementById('testblock6').style='position: absolute; left: 26em; top: 6em; visibility: visible';
+                ">Testblock 6 öffnen</button>
+        </div>
+
+        <div id="anim_3" class="animation">
+            <div class="hintergrund" style="height: 10em; background-color: azure;"></div>
+            <div id="testblock7" class="block" style="position: absolute; left: 2em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 7 der 3. Animation
+                </div>
+            </div>
+            <div id="testblock8" class="block" style="position: absolute; left: 14em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 8 von 3. Animation
+                </div>
+            </div>
+            <div id="testblock9" class="block" style="visibility: hidden;">
+                <div class="block blockinhalt">
+                    Testblock 9 der 3. Animation
+                </div>
+            </div>
+            <button id="testblock9_button" style="position: fixed; right: 2em; top: 2em;" onclick="
+                document.getElementById('testblock9').style='position: absolute; left: 26em; top: 6em; visibility: visible';
+                ">Testblock 9 öffnen</button>
+        </div>
+    </body>
+</html>
