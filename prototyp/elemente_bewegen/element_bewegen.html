@@ -1,0 +1,127 @@
+<! ksdk -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Element bewegen</title>
+        <script type="text/javascript" src="bewegung.js"></script>
+        <style>
+            body {
+                max-width: 1280px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:12pt;
+                word-spacing: 0.1em;
+                line-height: 150%;
+            }
+            .block {
+                width: 11em;
+                background-color: white;
+                border-width: thin;
+                border-style: solid;
+                border-color: black;
+                margin: 0.5em;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .blockinhalt {
+                width: 80%;
+                min-height: 4em;
+                padding: 0.5em;
+            }
+            .hintergrund {
+                position: absolute;
+                background-color: lightgrey;
+                height: 30em;
+                min-width: 60em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hintergrund"></div>
+        <div id="testblock" class="block" style="position: absolute; left: 2em; top: 6em;">
+            <div class="block blockinhalt">
+                Ein sportlicher Block, der sich gerne bewegen würde.
+            </div>
+        </div>
+        <div id="testblock2" class="block" style="position: absolute; left: 26em; top: 6em;">
+            <div class="block blockinhalt">
+                Noch ein sportlicher Block, der sich gerne bewegen würde.
+            </div>
+        </div>
+        <img id="infobild" src="infotext.png" alt="Informationen" style="visibility: hidden;">
+        
+        <script>
+            var verstrichene_zeit = 0;
+
+            async function bewegteBloecke() {
+                
+                const startzeit = Date.now();
+                var aktuelle_Zeit = startzeit;
+                var posX_testblock = position_x("testblock");
+                var posY_testblock = position_y("testblock");
+                var posX_testblock2 = position_x("testblock2");
+                var posY_testblock2 = position_y("testblock2");
+                var unterbrochen = false;
+
+                document.getElementById("abbruch").addEventListener("click", () => {
+                    unterbrochen = true;
+                    document.getElementById("testblock").style="position: absolute; left: 12em; top: 6em;";
+                    document.getElementById("testblock2").style="position: absolute; left: 40em; top: 20em;";
+                    document.getElementById("infobild").style="position: absolute; left: 9em; top: 9em; height: 3em; width: 3em;"
+                    document.getElementById("abbruch").style="visibility: hidden";
+                    document.getElementById("unterbrechung").style="visibility: hidden";
+                    document.getElementById("fortsetzung").style="visibility: hidden";
+                    document.getElementById("neustart").style="position: absolute; right: 2em; top: 2em; visibility: visible";});
+                
+                document.getElementById("unterbrechung").addEventListener("click", () => {
+                    unterbrochen = true;
+                    aktuelle_Zeit = Date.now();
+                    document.getElementById("fortsetzung").style="position: absolute; right: 2em; top: 11em; visibility: visible";});
+                
+                document.getElementById("fortsetzung").addEventListener("click", () => {
+                    unterbrochen = false;
+                    verstrichene_zeit = aktuelle_Zeit - startzeit;
+                    document.getElementById("fortsetzung").style="visibility: hidden";
+                    bewegteBloecke();});
+
+                document.getElementById("neustart").addEventListener("click", () => {
+                    unterbrochen = true;
+                    verstrichene_zeit = 0;
+                    document.getElementById("unterbrechung").style="position: absolute; right: 2em; top: 8em; visibility: visible";
+                    document.getElementById("abbruch").style="position: absolute; right: 2em; top: 5em; visibility: visible";
+                    document.getElementById("fortsetzung").style="visibility: visible";
+                    document.getElementById("neustart").style="visibility: hidden";
+                    document.getElementById("infobild").style="visibility:hidden";
+                    document.getElementById("testblock").style="position: absolute; left: 2em; top: 6em;";
+                    document.getElementById("testblock2").style="position: absolute; left: 26em; top: 6em;";
+                    bewegteBloecke();});
+
+                bewegeObjekt("testblock", "unterbrechung", "abbruch", "neustart", posX_testblock, posY_testblock, 0.2, 0, 12, 6, 20);
+                await verzoegerung(2000 - verstrichene_zeit);
+                if (!unterbrochen) {
+                    bewegeObjekt("testblock2", "unterbrechung", "abbruch", "neustart", posX_testblock2, posY_testblock2, 0.2, 0.2, 40, 20, 20);
+                }
+                await verzoegerung(2500);
+                if (!unterbrochen) {
+                    document.getElementById("infobild").style="position: absolute; left: 9em; top: 9em; height: 3em; width: 3em;";
+                    document.getElementById("abbruch").style="visibility: hidden";
+                    document.getElementById("unterbrechung").style="visibility: hidden";
+                    document.getElementById("neustart").style="position: absolute; right: 2em; top: 2em; visibility: visible";
+                }
+            }
+        </script>
+        
+        <button id="start" style="position: absolute; right: 2em; top: 2em;"
+            onclick="
+                document.getElementById('unterbrechung').style='position: absolute; right: 2em; top: 8em; visibility: visible'
+                document.getElementById('abbruch').style='position: absolute; right: 2em; top: 5em; visibility: visible';
+                document.getElementById('start').style='visibility: hidden';
+                bewegteBloecke();"
+            >Animation starten</button>
+        <button id="neustart" style="visibility: hidden;">Animation neu starten</button>
+        <button id="unterbrechung" style="visibility: hidden;">Animation unterbrechen</button>
+        <button id="fortsetzung" style="visibility: hidden;">Animation fortsetzen</button>
+        <button id="abbruch" style="visibility: hidden;">Animation abbrechen</button>
+    </body>
+</html>
