@@ -1,3 +1,11 @@
+<! Diese Datei dient zum Testen, ob es möglich ist, ganze Animationen in ihrem aktuellen Status ein- oder auszublenden.
+Es gelingt damit, dass dem div-Container, in dem sich eine ganze Animation befindet, die CSS-Klasse .animation 
+hinzugefügt wird, deren einzige Anweisung display: none lautet. Beim Navigieren zu einer Animation wird die Eigenschaft
+display geändert.
+Beachte: Es ist noch zu klären, ob display: inline für das Original die korrekte Zuweisung ist (abhängig davon, wie 
+das rekursive Design realisiert wird). -->
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,6 +30,7 @@
                 padding: 0.4em;
                 width: 10em;
                 background-color: lightgreen;
+                text-align: center;
             }
             .animation {
                 display: none;
@@ -52,9 +61,9 @@
     <body>
         <nav>
             <ul>
-                <li onclick="oeffne_animation(1, anim_aktuell)">Animation 1</li>
-                <li onclick="oeffne_animation(2, anim_aktuell)">Animation 2</li>
-                <li onclick="oeffne_animation(3, anim_aktuell)">Animation 3</li>
+                <li onclick="oeffne_animation(1)">Animation 1</li>
+                <li onclick="oeffne_animation(2)">Animation 2</li>
+                <li onclick="oeffne_animation(3)">Animation 3</li>
             </ul>
         </nav>
         <div id="anim_1" class="animation">
@@ -69,7 +78,7 @@
                     Testblock 2
                 </div>
             </div>
-            <div id="testblock3" class="block" style="display: none;">
+            <div id="testblock3" class="block" style="visibility: hidden;">
                 <div class="block blockinhalt">
                     Testblock 3
                 </div>

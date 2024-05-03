@@ -1,3 +1,7 @@
+<! Diese Datei diente zum erstmaligen Testen von Texteingaben und deren Speicherung in Variablen sowie der Ausgabe in
+einem html-Element, ebenso zum Testen der Positionierung von html-Elementen. Praktisch ist damit schon die erste 
+Animation des Originals programmiert, abgesehen von der Optik un der Positionierung der Elemente. -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -47,7 +51,7 @@
     </style>
 </head>
 <body>
-    <div class="blockheader" style="position: absolute; left: 3em; top: 2em;">
+    <div id="block1" class="blockheader" style="position: absolute; left: 3em; top: 2em;">
         <div class="header_seite">
             Seite 1
         </div>
@@ -55,7 +59,7 @@
             <i>Informatik ist jetzt nicht gerade von allen ...</i>
         </div>
     </div>
-    <div class="blockheader" style="position: absolute; left: 15em; top: 2em;">
+    <div id="block2" class="blockheader" style="position: absolute; left: 15em; top: 2em;">
         <div class="header_seite">
             Seite 2
         </div>
@@ -63,7 +67,7 @@
             <i>das Lieblingsfach Nummer eins, aber ...</i>
         </div>
     </div>
-    <div class="blockheader" id="block3" style="position: absolute; left: 27em; top: 2em; visibility: hidden;">
+    <div id="block3" class="blockheader" style="position: absolute; left: 27em; top: 2em; visibility: hidden;">
         <div class="header_seite">
             Seite 3
         </div>
@@ -72,6 +76,11 @@
         </div>
     </div>
     <div class="anim_hintergrund"></div>
+
+<! Hier folgt das Eingabeformular, das als herkömmliches div-Element angelegt ist. Wenn kein Text in das Eingabefeld
+seite3_inhalt eingegeben wird, wird der Wert aus der Variable seite3 geholt, die in der Datei test.js angelegt und
+initialisiert worden ist. -->
+
     <div id="formular" style="visibility: hidden;">
         <h3>Ein Formular</h3>
         <p>Geben Sie einen Text für die neue Seite ein:</p>
@@ -84,9 +93,10 @@
                 else {
                     document.getElementById('block3_inhalt').innerHTML = seite3;
                 }
-                getElementById('block3').style='position: absolute; left: 27em; top: 2em; visibility: visible';"
+                document.getElementById('block3').style='position: absolute; left: 27em; top: 2em; visibility: visible';"
                 >OK</button>
-      
+
+<! Der folgende Absatz diente nur zum Testen, welcher Wert aktuell in der Variable seite3 gespeichert ist. -->
         <p>
             <script type="text/javascript">
                  if (document.getElementById('seite3_inhalt').value != "") {

@@ -1,3 +1,9 @@
+<! Diese Datei war der erste Versuch beim Prototyping. Es ging um die Frage, wie man einzelne html-Elemente über Buttons
+oder über das Klicken auf Info-Grafiken sichtbar bzw. unsichtbar zu machen. Die Lösung wurde über die CSS-Eigenschaft
+visibility gefunden, die über onclick gesetzt werden kann.  
+
+Beachte die Einbindung einer Schriftart über font-face zu Beginn des style-Elements  -->
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -47,11 +53,13 @@
         </style>
     </head>
     <body>
+<! Hier wird der Text aus der Variable "info" aus der Datei info_ausgelagert.js importiert. -->
+
         <div id="text1" class="erklaerung" style="visibility: hidden;">
             <script type="text/javascript">
                 document.write(info);
             </script> <br>
-            <button id="schliessen2" type="x_button" value="schliessen" 
+            <button id="schliessen2"
             onclick="document.getElementById('text1').style='visibility: hidden';">Schliessen</button>
         </div>
         <div id="text2" class="erklaerung" style="visibility: hidden;">
@@ -59,13 +67,22 @@
                 Und wie jetzt hier?</br>
                 Hier erscheint der kurze zweite Absatz.
             </p>
-            <input type="button" value="schliessen" 
+            <input type="button" value="SCHLIESSEN"
                     onclick="document.getElementById('text2').style='visibility: hidden';"></input>
         </div>
         <img id="proto_erklaerung" src="infotext.png" alt="Erklärung" height="100em" width="100em">
-        <button id="proto_hintergrundwissen" type="x_button" value="hintergrundwissen"
+
+<! Das war der erste Versuch, einen Button in html ohne Formular-Element und nicht als input zu definieren.
+Erfolgreich. Eine Methode, die so im Original verwendet werden wird. -->
+
+        <button id="proto_hintergrundwissen" 
             onclick="document.getElementById('text2').style='visibility: visible';">Hintergrundwissen</button>
-        <script type="text/javascript">
+
+<! Hier wird das Ereignis, das beim Klicken auf das Bild infotext.png ausgelöst wird, definiert. Dass dabei nicht direkt
+auf die ID des Bilds zugegriffen wird, war lediglich ein Versuch und sollte im Original nicht vorkommen. Eine anonyme
+Funktion zu definieren, war an dieser Stelle ebenfalls nur ein Versuch und ist ebenfalls nicht notwendig. -->
+
+<script type="text/javascript">
             document.images[0].onclick=function() {
                 document.getElementById("text1").style="visibility: visible";
             }

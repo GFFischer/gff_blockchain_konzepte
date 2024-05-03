@@ -1,4 +1,8 @@
-<! ksdk -->
+<! 
+Diese Datei bietet die Lösung für:
+- HTML-Objekte animieren, d.h. in beliebige Richtungen geradlinig bewegen
+- Animationen steuern, d.h. starten, unterbrechen, fortsetzen, abbrechen, neu starten
+-->
 
 <!DOCTYPE html>
 <html>
@@ -37,6 +41,10 @@
             }
         </style>
     </head>
+
+<! Hier werden die html-Elemente definiert, die sich auf der Seite befinden und gegebenenfalls animiert werden.
+Der Hintergrund muss im Original noch positioniert und seine Grösse muss noch angepasst werden. -->
+
     <body>
         <div class="hintergrund"></div>
         <div id="testblock" class="block" style="position: absolute; left: 2em; top: 6em;">
@@ -50,7 +58,36 @@
             </div>
         </div>
         <img id="infobild" src="infotext.png" alt="Informationen" style="visibility: hidden;">
-        
+
+<! Hier kommen die Buttons für das Steuern der Animation. Vor dem Start ist nur der Startbutton sichtbar. Einzig 
+beim Startbutton ist daher das Ereignis, das beim Draufklicken ausgelöst wird, definiert (Buttons für Unterbrechung 
+und Abbruch erscheinen, Startbutton selbst verschwindet). Alle anderen Buttons bekommen in der Funktion bewegteBloecke
+einen addEventListener. -->
+
+        <button id="start" style="position: absolute; right: 2em; top: 2em;"
+            onclick="
+                document.getElementById('unterbrechung').style='position: absolute; right: 2em; top: 8em; visibility: visible'
+                document.getElementById('abbruch').style='position: absolute; right: 2em; top: 5em; visibility: visible';
+                document.getElementById('start').style='visibility: hidden';
+                bewegteBloecke();"
+            >Animation starten</button>
+        <button id="neustart" style="visibility: hidden;">Animation neu starten</button>
+        <button id="unterbrechung" style="visibility: hidden;">Animation unterbrechen</button>
+        <button id="fortsetzung" style="visibility: hidden;">Animation fortsetzen</button>
+        <button id="abbruch" style="visibility: hidden;">Animation abbrechen</button>
+
+<! Das Skript mit der Funktion bewegteBloecke (muss im Original anders genannt werden - für jede Animation ein eigener
+Name) ist der Kern der Seite. Sie ist deshalb nicht in eine js-Datei ausgelagert, weil sie für jede Animation erstellt 
+und nach dieser Vorlage angepasst werden muss (Jede Animation hat z.B. eigene Objekte und eigene Buttons).
+
+Es kommt beim Klicken des fortsetzen-Buttons und des neustart-Buttons zu einem quasi rekursiven Aufruf der Funktion 
+(auch hier muss der Name angepasst werden), bei dem die verstrichene_zeit nicht wieder auf 0 gesetzt werden soll (wegen
+der zeitlichen Verzögerung von nacheinander folgenden Animationen), daher ist die Definition und Initialisierung der 
+Variable verstrichene_zeit ausserhalb der Funktion.
+
+Die Funktion verwendet die in der Skriptdatei bewegung.js definierten Variablen und Funktionen verzoegerung,
+bewegeObjekt, position_x, position_y.  -->
+
         <script>
             var verstrichene_zeit = 0;
 
@@ -112,16 +149,5 @@
             }
         </script>
         
-        <button id="start" style="position: absolute; right: 2em; top: 2em;"
-            onclick="
-                document.getElementById('unterbrechung').style='position: absolute; right: 2em; top: 8em; visibility: visible'
-                document.getElementById('abbruch').style='position: absolute; right: 2em; top: 5em; visibility: visible';
-                document.getElementById('start').style='visibility: hidden';
-                bewegteBloecke();"
-            >Animation starten</button>
-        <button id="neustart" style="visibility: hidden;">Animation neu starten</button>
-        <button id="unterbrechung" style="visibility: hidden;">Animation unterbrechen</button>
-        <button id="fortsetzung" style="visibility: hidden;">Animation fortsetzen</button>
-        <button id="abbruch" style="visibility: hidden;">Animation abbrechen</button>
     </body>
 </html>
