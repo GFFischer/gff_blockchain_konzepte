@@ -16,6 +16,7 @@
 |  0.11   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 16.04.2024 | Pkt. 3 bearbeitet, Use-case 15 bis 17 (Anhang) hinzugefügt |
 |  0.12   |  Georg Fischer   | lastenheft.md | in Bearbeitung  | 17.04.2024 | Pkt. 3 fertig bearbeitet, Use-case 17 bis 19 (Anhang) hinzugefügt |
 |  1.0    |  Georg Fischer   | lastenheft.md | abgeschlossen   | 18.04.2024 | Use-case 20 bis 23 (Anhang) hinzugefügt |
+|  1.1    |  Georg Fischer   | lastenheft.md | abgeschlossen   | 04.05.2024 | Anpassungen bei Use-case 2, 21 und 22 vorgenommen |
 
 
 ## 1. Einleitung
@@ -57,7 +58,7 @@ bedient werden muss.
 | Blockchain-Datenstruktur | Organisation von Transaktionsdaten in miteinander verketteten Einheiten ("Blöcken") |
 | Block-Header | Kopf eines Blocks einer Blockchain, bestehend (zumindest) aus der Hash-Referenz auf den vorherigen Block-Header, der Wurzel eines Merkle-Trees, dem Schwierigkeitsgrad für das Hashpuzzle ("Target"), einem Zeitstempel und einer Nonce |
 | digitale Signatur | ein mit dem privaten Schlüssel verschlüsselter und zusammen mit einer Nachricht verschickter Hashwert der Nachricht, der die Authentifizierung der Nachricht ermöglicht |
-| Hash-Referenz | ein Hash-Wert, der auf Daten (z.B. Transaktionsdaten) verweist, die an einem anderen Ort gespeichert sind |
+| Hash-Referenz | ein Hashwert, der auf Daten (z.B. Transaktionsdaten) verweist, die an einem anderen Ort gespeichert sind |
 | Hashpuzzle | eine Berechnungsaufgabe, bei der ein Hashwert mit einem bestimmten Target gesucht wird und die nur durch die Trial-and-Error-Methode zu lösen ist, indem den Daten, die gehasht werden, eine sich ständig ändernde Nonce hinzugefügt wird |
 | Hashwert | eine Zahl mit fixer Länge, die von einer Hashfunktion bzw. einem Hashalgorithmus aus Daten unterschiedlicher Länge berechnet wird |
 | Merkle-Tree | ein Binär-Baum, dessen Blätter Transaktionsdaten enthalten und dessen Knoten erzeugt werden, indem man Hashwerte aus den jeweils darunterliegenden Teilbäumen kombiniert und daraus einen neuen Hashwert generiert; die Wurzel des Baumes ist ebenfalls ein Hashwert |
@@ -315,20 +316,16 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     * ODER: Der User navigiert zu eienr beliebigen Animation m durch das Klicken auf einen Link zur
       Animation m im Navigationsmenü.
 * Nachbedingung Erfolg: *Die gewählte Animation wird geladen.*
-* Nachbedingung Sonderfall 2a: *Die erste Animation wird geladen.*
-* Nachbedingung Sonderfall 2b: *Die letzte Animation wird geladen.*
+* Nachbedingung Sonderfall 2a: *Die erste Animation bleibt geladen.*
+* Nachbedingung Sonderfall 2b: *Die letzte Animation bleibt geladen.*
 
-#### Sonderfall 2a: Der User hat zur ersten Animation navigiert und klickt auf den "Zurück"-Button
-* Ablauf Sonderfall 2a;
-    * Der User klickt auf den "Zurück"-Button.
-    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Sie befinden sich bereits
-      bei der ersten Animation."
+#### Sonderfall 2a: Der User hat zur ersten Animation navigiert
+* Ablauf Sonderfall 2a:
+    * Es wird kein "Zurück"-Button angezeigt.
 
-#### Sonderfall 2b: Der User hat zur letzten Animation navigiert und klickt auf den "Weiter"-Button
+#### Sonderfall 2b: Der User hat zur letzten Animation navigiert
 * Ablauf Sonderfall 2b:
-    * Der User klickt auf den "Weiter"-Button.
-    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Sie befinden sich bereits
-      bei der letzten Animation."
+    * Es wird kein "Weiter"-Button angezeigt.
 
 
 ### Use-case 3 - gilt für alle Animationen:
@@ -917,7 +914,9 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle neuen Block" beschriftet ist, klickt.
     * Die Transaktionen "T 0" bis "T 3" verschwinden aus der Beschriftung des in Animation 2 vom User hinzugefügten
       Knotens, dafür erscheint ein Hashwert (z.B. 01d33512), der einen neuen Block darstellt.
-    * Der User setzt die Animation fort, indem er auf einen Button, der mit "Verteile Block" beschriftet ist, klickt.
+    * Der mit "Erstelle neuen Block" beschriftete Button verschwindet, an seiner Stelle erscheint ein Button, der mit
+      "Verteile Block" beschriftet ist.
+    * Der User setzt die Animation fort, indem er auf den Button, der mit "Verteile Block" beschriftet ist, klickt.
     * Alle Kanten, die vom in Animation 2 hinzugefügten Knoten ausgehen, ändern die Farbe.
     * Nach 1.5 Sekunden vollzieht sich in allen Knoten, die neu von den Kanten mit den geänderten Farben erreicht werden,
       die gleiche Änderung wie in dem Knoten, von dem die Kanten mit den geänderten Farben ausgehen.
@@ -927,16 +926,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
 * Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt den Graphen so, dass alle Knoten mit einem Hashwert sowie
   mit zwei als "T 4" und "T 5" bezeichneten Transaktionen beschriftet sind und dass alle Kanten neu eingefärbt sind
   (siehe folgende schematische Darstellung).*
-* Nachbedingung Sonderfall 21a: *Die Animation 6b wird neu geladen.*
 
 ![Diagram](img/animation_6b_02.svg)
-
-#### Sonderfall 21a: Der User klickt auf "Verteile Block", bevor er die Animation gestartet hat
-* Ablauf Sonderfall 21a:
-    * Der User klickt auf den mit "Verteile Block" beschrifteten Button, bevor er durch das Klicken auf den mit
-      "Erstelle neuen Block" beschrifteten Button die Animation gestartet hat.
-    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte starten Sie die Animation, indem Sie
-      auf 'Erstelle neuen Block' klicken"
 
 
 ### Use-case 22 - Animation 6c:
@@ -951,10 +942,12 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
     * Der User startet die Animation, indem er auf einen Button, der mit "Erstelle neuen Block" beschriftet ist, klickt.
     * Die Transaktionen "T 0" bis "T 4" verschwinden aus der Beschriftung des in Animation 2 vom User hinzugefügten
       Knotens, dafür erscheint ein Hashwert (z.B. 01d33512), der einen neuen Block darstellt.
+    * Der mit "Erstelle neuen Block" beschriftete Button verschwindet, an seiner Stelle erscheint ein Button, der mit
+      "Verteile Block" beschriftet ist.
     * Nach 0.3 Sekunden verschwinden bei dem Konten, der am weitesten von dem in Animation 2 hinzugefügten Knoten entfernt
       ist (fortan "Knoten B" genannt), die Transaktionen "T 2" bis "T 6", dafür erscheint ein Hashwert (z.B. 0f75b449),
       der einen neuen Block darstellt.
-    * Der User setzt die Animation fort, indem er auf einen Button, der mit "Verteile Block" beschriftet ist, klickt.
+    * Der User setzt die Animation fort, indem er auf den Button, der mit "Verteile Block" beschriftet ist, klickt.
     * Alle Kanten, die vom in Animation 2 hinzugefügten Knoten ausgehen, bekommen eine andere Farbe.
     * Nach 0.3 Sekunden bekommen alle Kanten, die von Knoten B ausgehen, eine andere, von den Farben der bis dahin
       dargestellten Kanten deutlich zu unterscheidende Farbe.
@@ -969,16 +962,8 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
       Animation 6c abgeschlossen.
 * Nachbedingung Erfolg: *Der letzte Frame der Animation zeigt den Graphen so, dass alle Knoten mit zwei Hashwerten
   beschriftet sind und alle Kanten doppelt in zwei verschiedenen Farben eingezeichnet sind.*
-* Nachbedingung Sonderfall 22a: *Die Animation 6c wird neu geladen.*
 
 ![Diagram](img/animation_6c_01.svg)
-
-#### Sonderfall 22a: Der User klickt auf "Verteile Block", bevor er die Animation gestartet hat
-* Ablauf Sonderfall 22a:
-    * Der User klickt auf den mit "Verteile Block" beschrifteten Button, bevor er durch das Klicken auf den mit
-      "Erstelle neuen Block" beschrifteten Button die Animation gestartet hat.
-    * Eine Benachrichtigung erscheint auf dem Bildschirm mit folgendem Text: "Bitte starten Sie die Animation, indem Sie
-      auf 'Erstelle neuen Block' klicken"
 
 
 ### Use-case 23 - Animation 7:
