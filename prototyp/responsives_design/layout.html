@@ -1,0 +1,95 @@
+<! Diese Datei dient zur Klärung, ob wie das responsive Design der Webseite realisiert werden kann.
+Viel spannender als diese Anweisungen ist daher die CSS-Datei design.css -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Sichtbarkeit von Animationen</title>
+        <script type="text/javascript" src="un_sichtbar_machen.js"></script>
+        <link rel="stylesheet" href="design.css">
+    </head>
+    <body>
+        <div class="randr"></div>
+        <div class="randl"></div>
+        <nav id="navmenu">
+            <ul onclick="document.getElementById('navmenu').classList.remove('sichtbarkeit')">
+                <li onclick="oeffne_animation(1)">Animation 1</li>
+                <li onclick="oeffne_animation(2)">Animation 2</li>
+                <li onclick="oeffne_animation(3)">Animation 3</li>
+            </ul>
+        </nav>
+        <img id="menu" src="hamburger_icon.png" class="menuicon" alt="Menü">
+        <script type="text/javascript">
+            document.getElementById("menu").addEventListener("click", () => {
+                document.getElementById('navmenu').classList.add('sichtbarkeit')
+            })
+        </script>
+        <div id="anim_1" class="mitte animation">
+            <div class="hintergrund" style="width: 40em; "></div>
+            <div id="testblock1" class="block" style="position: absolute; left: 2em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 1
+                </div>
+            </div>
+            <div id="testblock2" class="block" style="position: absolute; left: 14em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 2
+                </div>
+            </div>
+            <div id="testblock3" class="block" style="visibility: hidden;">
+                <div class="block blockinhalt">
+                    Testblock 3
+                </div>
+            </div>
+            <button id="testblock3_button" class="animbutton" onclick="
+                document.getElementById('testblock3').style='position: absolute; left: 26em; top: 6em; visibility: visible';
+                ">Testblock 3 öffnen</button>
+        </div>
+        
+        <div id="anim_2" class="mitte animation">
+            <div class="hintergrund" style="height: 15em;"></div>
+            <div id="testblock4" class="block" style="position: absolute; left: 2em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 4 von Animation 2
+                </div>
+            </div>
+            <div id="testblock5" class="block" style="position: absolute; left: 14em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 5 von Animation 2
+                </div>
+            </div>
+            <button id="testblock6_button" class="animbutton" onclick="
+                document.getElementById('testblock6').style='position: absolute; left: 26em; top: 6em; visibility: visible';
+            ">Testblock 6 öffnen</button>
+            <div id="testblock6" class="block" style="visibility: hidden;">
+                <div class="block blockinhalt">
+                    Testblock 6 von Animation 2
+                </div>
+            </div>
+        </div>
+
+        <div id="anim_3" class="mitte animation">
+            <div class="hintergrund" style="height: 10em; background-color: azure;"></div>
+            <div id="testblock7" class="block" style="position: absolute; left: 2em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 7 der 3. Animation
+                </div>
+            </div>
+            <div id="testblock8" class="block" style="position: absolute; left: 14em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 8 von 3. Animation
+                </div>
+            </div>
+            <div id="testblock9" class="block" style="visibility: hidden;">
+                <div class="block blockinhalt">
+                    Testblock 9 der 3. Animation
+                </div>
+            </div>
+            <button id="testblock9_button" class="animbutton" onclick="
+                document.getElementById('testblock9').style='position: absolute; left: 26em; top: 6em; visibility: visible';
+                ">Testblock 9 öffnen</button>
+        </div>
+    </body>
+</html>

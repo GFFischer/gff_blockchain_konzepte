@@ -1,0 +1,124 @@
+/* Zu Beginn werden die Bereiche für die Aufteilung der Grid-Container in CSS-Grid festgelegt. nav ist der Bereich
+für das Navigationsmenü, div.mitte ist die Klasse für den Hauptinhalt (Bereich der Animationen), div.randr und
+div.randl sind der rechte und der linke Randbereich, die bei breiten und sehr breiten Bildschirmen (ab 1440px Breite) 
+leer bleiben sollen. in body werden alle Grid-Einstellungen vorgenommen. */
+
+nav {
+    grid-area: navigation;
+    background-color: darksalmon;
+}
+
+div.mitte {
+    grid-area: hauptbereich;
+    position: relative;
+    background-color: lightgreen;
+}
+
+div.randr {
+    grid-area: rand_rechts;
+    background-color: antiquewhite;
+}
+
+div.randl {
+    grid-area: rand_links;
+    background-color: aqua;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 8fr 1fr;
+    grid-template-areas:
+    "rand_links navigation hauptbereich rand_rechts";
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    word-spacing: 0.1em;
+    line-height: 150%;
+    background-color: greenyellow;
+}
+
+@media screen and (width <= 1400px) {
+    body {
+        grid-template-columns: 0.5fr 2fr 9fr 0.5fr
+    }
+}
+
+@media screen and (width <= 1280px) {
+    body {
+        grid-template-columns: 0fr 2fr 10fr 0fr;
+    }
+}
+
+@media screen and (width <= 960px) {
+    body {
+        display: grid;
+        grid-template-columns: 12fr;
+        grid-template-rows: 0fr 1fr;
+        grid-template-areas:
+        "navigation"
+        "hauptbereich";
+        font-size: 9pt;
+    }
+    nav {
+        position: absolute;
+        visibility: hidden;
+        width: 96vw;
+        z-index: 2;
+    }
+    .sichtbarkeit {
+        visibility: visible;
+    }
+    #menu {
+        position: relative;
+        visibility: visible;
+    }
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+}
+nav li {
+    margin: 0.2em;
+    padding: 0.4em;
+    background-color: lightgreen;
+    text-align: center;
+}
+.menuicon {
+    position: absolute;
+    visibility: hidden;
+    width: 2em;
+    margin-bottom: 0.7em;
+    z-index: 1;
+}
+.animbutton {
+    background-color: yellow;
+    font-size: 0.9em;
+    position: absolute;
+    right: 2em;
+    top: 2em;
+}
+.animation {
+    display: none;
+}
+.block {
+    width: 11em;
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    margin: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+}
+.blockinhalt {
+    width: 80%;
+    max-height: 4em;
+    padding: 0.5em;
+}
+div .hintergrund {
+    background-color: lightgrey;
+    height: 20em;
+    width: 96%;
+    margin: 2%;
+}

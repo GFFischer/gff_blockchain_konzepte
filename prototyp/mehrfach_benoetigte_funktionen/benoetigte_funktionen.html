@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Mehrfach benötigte Funktionen</title>
+        <script type="text/javascript" src="hash.js"></script>
+        <script type="text/javascript" src="funktionensammlung.js"></script>
+    </head>
+    <body>
+        <div>
+            <h3>Hashwert auf Zeichenfolge berechnen</h3>
+            <label>Zeichenfolge eingeben  <input id="t1" type="text"></label>
+            <button id="b1" onclick="
+                var v1 = document.getElementById('t1').value;
+                document.getElementById('e1').innerHTML = berechneHash(v1);
+            ">Hashwert berechnen</button>
+            <br><span id="e1"></span>
+            <h3>Zahlen umrechnen</h3>
+            <label>Dezimalzahl eingeben  <input id="t2" type="text"></label>
+            <button id="b2" onclick="
+                var v2 = parseInt(document.getElementById('t2').value);
+                document.getElementById('e2').innerHTML = umwandleDez(v2, 16);
+                document.getElementById('e2a').innerHTML = umwandleDez(v2, 2);
+            ">Hexadezimal- und Binärzahl berechnen</button>
+            <br><span id="e2"></span>
+            <br><span id="e2a"></span><br><br>
+            <label>Binärzahl eingeben  <input id="t3" type="text"></label>
+            <button id="b3" onclick="
+                var v3 = document.getElementById('t3').value;
+                document.getElementById('e3').innerHTML = umwandleInDez(v3, 2);
+                document.getElementById('e3a').innerHTML = umwandleBinInHex(v3);
+            ">Dezimal- und Hexadezimalzahl berechnen</button>
+            <br><span id="e3"></span>
+            <br><span id="e3a"></span><br><br>
+            <label>Hexadezimalzahl eingeben  <input id="t4" type="text"></label>
+            <button id="b4" onclick="
+                var v4 = document.getElementById('t4').value;
+                document.getElementById('e4').innerHTML = umwandleInDez(v4, 16);
+                document.getElementById('e4a').innerHTML = umwandleHexInBin(v4);
+            ">Dezimal- und Binärzahl berechnen</button>
+            <br><span id="e4"></span>
+            <br><span id="e4a"></span><br><br>
+            <label>Dezimalzahl eingeben  <input id="t5" type="text"></label>
+            <button id="b5" onclick="
+                var v5 = parseInt(document.getElementById('t5').value);
+                document.getElementById('e5').innerHTML = umwandleDezInHashwert(v5);
+            ">Achtstellige Hexadezimalzahl mit führenden Nullen berechnen</button>
+            <br><span id="e5"></span><br><br>
+            <h3>Eingaben überprüfen</h3>
+            <label>Text mit maximal 20 Zeichen eingeben  <input id="t6" type="text" maxlength="20"></label>
+            <button id="b6" onclick="
+                var v6 = pruefeEingabeText(document.getElementById('t6').value);
+                if (v6) {
+                    document.getElementById('e6').innerHTML = 'Eingabe ist in Ordnung';
+                }
+                else {
+                    document.getElementById('e6').innerHTML = 'Eingabe hat Fehler';
+                }  
+            ">Prüfen</button>
+            <br><span id="e6"></span><br><br>
+            <label>Text mit maximal 50 Zeichen eingeben  <input id="t7" type="text" maxlength="50"></label>
+            <button id="b7" onclick="
+                var v7 = pruefeEingabeText(document.getElementById('t7').value);
+                if (v7) {
+                    document.getElementById('e7').innerHTML = 'Eingabe ist in Ordnung';
+                }
+                else {
+                    document.getElementById('e7').innerHTML = 'Eingabe hat Fehler';
+                }  
+            ">Prüfen</button>
+            <br><span id="e7"></span><br><br>
+            <label>Zahl von 0 bis 999 eingeben  <input id="t8" type="text" maxlength="3"></label>
+            <button id="b8" onclick="
+                var v8 = pruefeEingabeZahl(document.getElementById('t8').value);
+                if (v8) {
+                    document.getElementById('e8').innerHTML = 'Eingabe ist in Ordnung';
+                }
+                else {
+                    document.getElementById('e8').innerHTML = 'Eingabe hat Fehler';
+                }  
+            ">Prüfen</button>
+            <br><span id="e8"></span><br><br>
+            <label>Zahl von 1 bis 3 eingeben  <input id="t9" type="text" maxlength="1"></label>
+            <button id="b9" onclick="
+                var v9 = pruefeEingabe1bis3(document.getElementById('t9').value);
+                if (v9) {
+                    document.getElementById('e9').innerHTML = 'Eingabe ist in Ordnung';
+                }
+                else {
+                    document.getElementById('e9').innerHTML = 'Eingabe hat Fehler';
+                }  
+            ">Prüfen</button>
+            <br><span id="e9"></span><br>
+            <h3>Aktuelle Zeit</h3>
+            <button id="b10" onclick="
+                document.getElementById('e10').innerHTML = zeitstempel();
+            ">OK</button>
+            <span id="e10"></span>
+        </div>
+    </body>
+
+</html>

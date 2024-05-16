@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <title>Mining bei Proof-of-Work</title>
+        <link rel="stylesheet" href="design.css">
+        <script type="text/javascript" src="hash.js"></script>
+        <script type="text/javascript" src="funktionensammlung.js"></script>
+    </head>
+
+<! Die beiden Transaktionen, für die in der Animation das Mining simuliert werden soll, werden als Tabellen
+dargestellt. Die Werte für Hashwert Block, Nonce, Zeitstempel und (nur bei der zweiten Transaktion) Hashwert vorheriger
+Block bekommen ihre Werte erst, wenn auf den Startbutton geklickt wird. -->
+
+    <body>
+        <div class="hintergrund"></div>
+        <div id="transaktion1" style="width: 18em; position: absolute; top: 4em; left: 4em;">
+            <table class="transaktion">
+                <tr>
+                    <td class="feld">
+                        Hashwert Block: <br>
+                        <span id="blockhash"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Nonce: <br>
+                        <span id="noncetest"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Target: <br>
+                        <script>
+                            document.write("<i>" + target1 + "</i>")
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Zeitstempel: <br>
+                        <span id="zeitstempel1"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Hash-Referenz vorheriger Block: <br>
+                        <script>
+                            document.write("<i>" + hash_vorheriger_block1 + "</i>")
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Hash-Referenz Inhalt: <br>
+                        <script>
+                            document.write("<i>" + hash_inhalt1 + "</i>")
+                        </script>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="transaktion2">
+            <table class="transaktion">
+                <tr>
+                    <td class="feld">
+                        Hashwert Block: <br>
+                        <span id="blockhash2">
+                            <script>
+                                document.write(hashBlock2);
+                            </script>
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Nonce: <br>
+                        <span id="noncetest2"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Target: <br>
+                        <script>
+                            document.write("<i>" + target2 + "</i>")
+                        </script>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Zeitstempel: <br>
+                        <span id="zeitstempel2"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Hash-Referenz vorheriger Block: <br>
+                        <i><span id="hash_block_1"></span></i>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="feld">
+                        Hash-Referenz Inhalt: <br>
+                        <script>
+                            document.write("<i>" + hash_inhalt2 + "</i>")
+                        </script>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+<! Die beiden Haken kommen vom gleichen Bild und bekommen in design.css ihren Style, der zunächst unsichtbar ist. -->
+
+        <img id="haken1" src="haken.png" alt="Mining beendet" width="50">
+        <img id="haken2" src="haken.png" alt="Mining beendet" width="50">
+        
+ <! Die Startbuttons bewirken, dass der Abbruch-Button angezeigt wird, dass ein neuer Zeitstempel für die Transaktion
+berechnet und in die Transaktion eingefügt wird sowie dass das Mining gestartet wird.
+Die Ereignisse, die beim Klicken der Abbruch-Buttons geschehen, sind in der funktionensammlung.js Datei definiert.>       
+        
+        <button id="start1" style="position: absolute; right: 3em; top: 3em;"
+            onclick="
+                zeit1 = zeitstempel();
+                document.getElementById('zeitstempel1').innerHTML = zeit1;
+                document.getElementById('abbruch1').style='position: absolute; right: 3em; top: 6em; visibility: visible';
+                mining('noncetest', nonce1, 'blockhash', hashBlock1, target1, zeit1, 
+                    hash_inhalt1, hash_vorheriger_block1, 700, 'abbruch1', 'haken1', 'start2', 'transaktion2');"
+            >Mining starten</button>
+        <button id="abbruch1" style="visibility: hidden;">Mining abbrechen</button>
+        <button id="start2" style="position: absolute; right: 3em; top: 3em; visibility: hidden;"
+            onclick="
+                zeit2 = zeitstempel();
+                document.getElementById('zeitstempel2').innerHTML = zeit2;
+                document.getElementById('abbruch2').style='position: absolute; right: 3em; top: 6em; visibility: visible';
+                hash_vorheriger_block2 = hashBlock1;
+                document.getElementById('hash_block_1').innerHTML = getElementById('blockhash').innerHTML;
+                mining('noncetest2', nonce2, 'blockhash2', hashBlock2, target2, zeit2, 
+                    hash_inhalt2, hash_vorheriger_block2, 700, 'abbruch2', 'haken2', 'start2', 'transaktion2');"
+            >Mining starten</button>
+        <button id="abbruch2" style="visibility: hidden;">Mining abbrechen</button>
+    </body>
+</html>

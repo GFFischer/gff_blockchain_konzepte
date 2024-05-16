@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    word-spacing: 0.1em;
+    line-height: 150%;
+}
+.transaktion {
+    display: table;
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 0.5em;
+}
+.feld {
+    display: table-cell;
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    width: 100%;
+    padding: 0.5em;
+}
+.hintergrund {
+    background-color: lightgrey;
+    height: 40em;
+    margin: 2%;
+}
+#noncetest, #noncetest2 {
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+}
+#blockhash, #blockhash2{
+    font-weight: bold;
+    font-size: larger;
+    color: red;
+}
+#haken1 {
+    position: absolute; top: 30em; left: 12em;
+    visibility: hidden;
+}
+#haken2 {
+    position: absolute; top: 30em; left: 34em;
+    visibility: hidden;
+}
+#transaktion2 {
+    width: 18em; 
+    position: absolute; top: 4em; left: 26em;
+    visibility: hidden;
+}
