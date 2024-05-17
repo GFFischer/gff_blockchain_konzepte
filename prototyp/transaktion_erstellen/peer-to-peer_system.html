@@ -1,0 +1,141 @@
+<! In diesem Dokument geht es um das Erstellen eines Graphen, der ein Peer-to-Peer-System darstellen soll. In jedem
+Knoten sind eine zufällige Anzahl von 1 - 3 Adressen zu sehen.
+Die zufällige Zuweisung der Adressen zu den einzelnen Knoten geht über die Datei startwerte_variablen.js. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Das wandelbare Peer-to-Peer-System, Teil 2</title>
+        <script type="text/javascript" src="startwerte_variablen.js"></script>
+        <style>
+            :root {
+                --mittelgruen: rgb(148,179,28);
+                --schriftgroesse: 12pt;
+            }
+            body {
+                max-width: 1280px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: var(--schriftgroesse);
+                word-spacing: 0.1em;
+                line-height: 150%;
+                
+            }
+            div {
+                background-color: white;
+                border-width: thin;
+                border-style: solid;
+                border-color: black;
+                margin: 0.5em;
+                text-align: center;
+                vertical-align: middle;
+            }
+            .formular {
+                width: 20em;
+                padding: 0.5em;
+            }
+            .knoten_adresse {
+                height: 9em;
+                width: 9em;
+                border-radius: 50%;
+                padding: 0.5em;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .anim_hintergrund {
+                background-color: lightgrey;
+            }
+            .graph {
+                width: 44em;
+            }
+            .schrift_einheitsgroesse {
+                font-size: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="anim_hintergrund" style="height: 41em; min-width: 54em;"></div>
+        <img id="graph_fertig" class="graph" src="graph_fertig.png" alt="Peer-to-Peer-System" 
+            style="position: absolute; left: 7em; top: 6em;">
+        <div id="knoten_neu" class="knoten_adresse" style="position: absolute; left: 6.5em; top: 29em;">
+            <p></p>
+            <span id="knoten_neu_inhalt"></span>
+        </div>
+        <div id="knoten_1" class="knoten_adresse" style="position: absolute; left: 7em; top: 3em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[3] + "<br>" + adressenKnoten[4] + "<br>" + adressenKnoten[5]);
+            </script>
+        </div>
+        <div id="knoten_2" class="knoten_adresse" style="position: absolute; left: 19.5em; top: 1em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[6] + "<br>" + adressenKnoten[7] + "<br>" + adressenKnoten[8]);
+            </script>
+        </div>
+        <div id="knoten_3" class="knoten_adresse" style="position: absolute; left: 31.5em; top: 2em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[9] + "<br>" + adressenKnoten[10] + "<br>" + adressenKnoten[11]);
+            </script>
+        </div>
+        <div id="knoten_4" class="knoten_adresse" style="position: absolute; left: 1em; top: 16em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[12] + "<br>" + adressenKnoten[13] + "<br>" + adressenKnoten[14]);
+            </script>
+        </div>
+        <div id="knoten_5" class="knoten_adresse" style="position: absolute; left: 18.5em; top: 14em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[15] + "<br>" + adressenKnoten[16] + "<br>" + adressenKnoten[17]);
+            </script>
+        </div>
+        <div id="knoten_6" class="knoten_adresse" style="position: absolute; left: 30em; top: 15.5em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[18] + "<br>" + adressenKnoten[19] + "<br>" + adressenKnoten[20]);
+            </script>
+        </div>
+        <div id="knoten_7" class="knoten_adresse" style="position: absolute; left: 44.5em; top: 12em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[21] + "<br>" + adressenKnoten[22] + "<br>" + adressenKnoten[23]);
+            </script>
+        </div>
+        <div id="knoten_8" class="knoten_adresse" style="position: absolute; left: 18em; top: 26em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[24] + "<br>" + adressenKnoten[25] + "<br>" + adressenKnoten[26]);
+            </script>
+        </div>
+        <div id="knoten_9" class="knoten_adresse" style="position: absolute; left: 29em; top: 29.5em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[27] + "<br>" + adressenKnoten[28] + "<br>" + adressenKnoten[29]);
+            </script>
+        </div>
+        <div id="knoten_10" class="knoten_adresse" style="position: absolute; left: 40.5em; top: 25em;">
+            <p></p>
+            <script type="text/javascript">
+                document.write("<br>" + adressenKnoten[30] + "<br>" + adressenKnoten[31] + "<br>" + adressenKnoten[32]);
+            </script>
+        </div>
+        <div id="formular" class="formular" style="visibility: hidden;">
+            <label>Geben Sie die Anzahl der Adressen ein:  <input id="anzahl_adressen" 
+                class="schrift_einheitsgroesse" type="number"></label>
+            <button id="submitButton" class="schrift_einheitsgroesse" onclick="
+                var wert = document.getElementById('anzahl_adressen').value;
+                aendereAnzahlSchluessel(wert);
+                if (pruefeEingabe1bis3(wert)) {
+                    document.getElementById('knoten_neu_inhalt').innerHTML = '<br>' + adressenKnoten[0] + '<br>' + 
+                    adressenKnoten[1] + '<br>' + adressenKnoten[2];
+                    document.getElementById('formular').style='visibility: hidden';
+                }
+                ">OK</button>
+        </div>
+        <button id="formular_button" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;" onclick="
+            document.getElementById('formular').style='position: fixed; right: 2em; top: 4em; visibility: visible;';
+            ">Erstelle Adressen</button>
+    </body>
+</html>
