@@ -1,0 +1,109 @@
+:root {
+    --mittelgruen: rgb(148,179,28);
+    --schriftgroesse: 12pt;
+}
+body {
+    max-width: 1280px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: var(--schriftgroesse);
+    word-spacing: 0.1em;
+    line-height: 150%;
+    
+}
+nav ul {
+    display: flex;
+    padding: 0;
+    list-style-type: none;
+}
+nav li {
+    margin: 0.2em;
+    padding: 0.4em;
+    width: 10em;
+    background-color: lightgreen;
+    text-align: center;
+}
+button {
+    margin: 0.2em;
+    padding: 0.4em;
+    width: 10em;
+    background-color: rgb(144, 194, 238);
+    text-align: center;
+}
+.animation {
+    display: none;
+    position: relative;
+}
+.knoten {
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    margin: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+}
+.formular {
+    background-color: lightgreen;
+    width: 20em;
+    padding: 0.5em;
+}
+.knoten_adresse {
+    height: 9em;
+    width: 9em;
+    border-radius: 50%;
+    padding: 0.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.knoten_name {
+    height: 7em;
+    width: 7em;
+    border-radius: 50%;
+    padding: 0.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.knoten_neu {
+    color: var(--mittelgruen);
+    border-color: var(--mittelgruen);
+}
+.anim_hintergrund {
+    background-color: lightgrey;
+}
+.graph {
+    width: 44em;
+}
+.schrift_einheitsgroesse {
+    font-size: 1em;
+}
+.adressentabelle {
+    display: table;
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+    width: 100%;
+}
+.transaktion {
+    display: table;
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 0.5em;
+}
+.feld {
+    display: table-cell;
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    padding: 0.5em;
+}
+.randlos {
+    padding: 0em;
+}

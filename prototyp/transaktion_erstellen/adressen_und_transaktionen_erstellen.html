@@ -1,0 +1,290 @@
+<! In diesem Dokument geht es um das Erstellen eines Graphen, der ein Peer-to-Peer-System darstellen soll. In jedem
+Knoten sind eine zufällige Anzahl von 1 - 3 Adressen zu sehen.
+Die zufällige Zuweisung der Adressen zu den einzelnen Knoten geht über die Datei startwerte_variablen.js. -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Das wandelbare Peer-to-Peer-System, Teil 2</title>
+        <link rel="stylesheet" href="testdesign.css">
+        <script type="text/javascript" src="startwerte_variablen.js"></script>
+    </head>
+    <body>
+
+<! Zunächst die Navigation.
+Bedenke: Damit in Animation 2 der in Animation 1 eingegebene oder gegebenenfalls veränderte Wert von nameKnotenNeu
+angezeigt wird, muss die Anzeige in Animation 2 beim Laden aktualisiert werden. Dafür ist die zweite Anweisung 
+document.getElementById('knoten_neu_name').innerHTML = nameKnotenNeu notwendig.
+Im Original muss bei der Navigation zu jeder Animation bedacht werden, welche angezeigten Wert aktualisiert werden
+müssen, weil sie eventuell in einer anderen Animation gerade geändert worden sind! -->
+
+        <nav style="position: relative;">
+            <ul>
+                <li onclick="oeffne_animation(1)">Namen eingeben</li>
+                <li onclick="oeffne_animation(2);
+                    document.getElementById('knoten_neu_name').innerHTML = nameKnotenNeu;
+                    ">Anzahl Adressen eingeben</li>
+                <li onclick="oeffne_animation(3);
+                    document.getElementById('tabelle_eigene_adressen_ohne_sic').innerHTML = 
+                        tabelleEigeneAdressenOhneSic();
+                        document.getElementById('formularb').innerHTML = eingabeGuthaben();
+                    ">Guthaben eingeben</li>
+                <li onclick="oeffne_animation(4);
+                    document.getElementById('tabelle_eigene_adressen').innerHTML = tabelleEigeneAdressen();
+                    ">Transaktion erstellen</li>
+            </ul>
+        </nav>
+
+<! Hier beginnt die erste Animation, in der der neue Knoten erstellt wird und einen Namen bekommt. -->
+
+        <div id="anim_1" class="animation">
+            <div class="anim_hintergrund" style="height: 39em; min-width: 54em;"></div>
+            <img id="graph_start" class="graph" src="graph_start.png" alt="Peer-to-Peer-System" 
+                style="position: absolute; left: 6em; top: 5em;">
+            <img id="graph_farbig" class="graph" src="graph_farbig.png" alt="Peer-to-Peer-System" 
+                style="position: absolute; left: 6em; top: 5em; visibility: hidden;">
+            <div id="knoten_neua" class="knoten knoten_name knoten_neu" style="position: absolute; left: 7em; top: 29em;
+                visibility: hidden;">
+                <p></p>
+                <br><span id="knoten_neu_inhalta"></span>
+            </div>
+            <div id="knoten_1a" class="knoten knoten_name" style="position: absolute; left: 7em; top: 3em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten1);
+                </script>
+            </div>
+            <div id="knoten_2a" class="knoten knoten_name" style="position: absolute; left: 19.5em; top: 1.5em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten2);
+                </script>
+            </div>
+            <div id="knoten_3a" class="knoten knoten_name" style="position: absolute; left: 31.5em; top: 2em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten3);
+                </script>
+            </div>
+            <div id="knoten_4a" class="knoten knoten_name" style="position: absolute; left: 1.5em; top: 16em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten4);
+                </script>
+            </div>
+            <div id="knoten_5a" class="knoten knoten_name" style="position: absolute; left: 18.5em; top: 14.5em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten5);
+                </script>
+            </div>
+            <div id="knoten_6a" class="knoten knoten_name" style="position: absolute; left: 29.5em; top: 15.5em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten6);
+                </script>
+            </div>
+            <div id="knoten_7a" class="knoten knoten_name" style="position: absolute; left: 44.5em; top: 12em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten7);
+                </script>
+            </div>
+            <div id="knoten_8a" class="knoten knoten_name" style="position: absolute; left: 17em; top: 26em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten8);
+                </script>
+            </div>
+            <div id="knoten_9a" class="knoten knoten_name" style="position: absolute; left: 29em; top: 29.5em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten9);
+                </script>
+            </div>
+            <div id="knoten_10a" class="knoten knoten_name" style="position: absolute; left: 40.5em; top: 25em;">
+                <p></p>
+                <br>
+                <script type="text/javascript">
+                    document.write(nameKnoten10);
+                </script>
+            </div>
+            <button id="formular_buttona" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;" onclick="
+                document.getElementById('formulara').style='position: fixed; right: 2em; top: 6em; visibility: visible;';
+                ">Erstelle einen neuen Peer</button>
+            <div id="formulara" class="formular" style="visibility: hidden;">
+                <label>Geben Sie einen Namen ein:  <input id="eingegebener_name" class="schrift_einheitsgroesse" name="eingegebener_name" type="text"></label>
+                <button id="submitButton" class="ok schrift_einheitsgroesse" onclick="
+                    if (document.getElementById('eingegebener_name').value != '') {
+                        nameKnotenNeu = document.getElementById('eingegebener_name').value;
+                        document.getElementById('knoten_neu_inhalta').innerHTML = nameKnotenNeu;
+                    }
+                    else {
+                        document.getElementById('knoten_neu_inhalta').innerHTML = nameKnotenNeu;
+                    }
+                    getElementById('knoten_neua').style='position: absolute; left: 7em; top: 29em; visibility: visible;';
+                    document.getElementById('formulara').style='visibility: hidden';
+                    document.getElementById('graph_farbig').style='position: absolute; left: 6em; top: 5em; visibility: visible';"
+                    >OK</button>
+            
+                <p>
+                    <script type="text/javascript">
+                        if (document.getElementById('eingegebener_name').value != "") {
+                            nameKnotenNeu = document.getElementById('eingegebener_name').value;
+                        }
+                    </script>
+                </p>
+            </div> 
+        </div>
+
+<! Hier beginnt die zweite Animation, bei der die Adressen zugewiesen werden. -->
+
+        <div id="anim_2" class="animation">
+            <div class="anim_hintergrund" style="height: 41em; min-width: 54em;"></div>
+            <img id="graph_fertig" class="graph" src="graph_fertig.png" alt="Peer-to-Peer-System" 
+                style="position: absolute; left: 7em; top: 6em;">
+            <div id="knoten_neu" class="knoten knoten_adresse" style="position: absolute; left: 6.5em; top: 29em;">
+                <p></p>
+                <span id="knoten_neu_name">
+                    <script>
+                        document.write(nameKnotenNeu);
+                    </script>
+                </span>
+                <span id="knoten_neu_inhalt"></span>
+            </div>
+            <div id="knoten_1" class="knoten knoten_adresse" style="position: absolute; left: 7em; top: 3em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[3] + "<br>" + adressenKnoten[4] + "<br>" + adressenKnoten[5]);
+                </script>
+            </div>
+            <div id="knoten_2" class="knoten knoten_adresse" style="position: absolute; left: 19.5em; top: 1em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[6] + "<br>" + adressenKnoten[7] + "<br>" + adressenKnoten[8]);
+                </script>
+            </div>
+            <div id="knoten_3" class="knoten knoten_adresse" style="position: absolute; left: 31.5em; top: 2em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[9] + "<br>" + adressenKnoten[10] + "<br>" + adressenKnoten[11]);
+                </script>
+            </div>
+            <div id="knoten_4" class="knoten knoten_adresse" style="position: absolute; left: 1em; top: 16em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[12] + "<br>" + adressenKnoten[13] + "<br>" + adressenKnoten[14]);
+                </script>
+            </div>
+            <div id="knoten_5" class="knoten knoten_adresse" style="position: absolute; left: 18.5em; top: 14em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[15] + "<br>" + adressenKnoten[16] + "<br>" + adressenKnoten[17]);
+                </script>
+            </div>
+            <div id="knoten_6" class="knoten knoten_adresse" style="position: absolute; left: 30em; top: 15.5em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[18] + "<br>" + adressenKnoten[19] + "<br>" + adressenKnoten[20]);
+                </script>
+            </div>
+            <div id="knoten_7" class="knoten knoten_adresse" style="position: absolute; left: 44.5em; top: 12em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[21] + "<br>" + adressenKnoten[22] + "<br>" + adressenKnoten[23]);
+                </script>
+            </div>
+            <div id="knoten_8" class="knoten knoten_adresse" style="position: absolute; left: 18em; top: 26em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[24] + "<br>" + adressenKnoten[25] + "<br>" + adressenKnoten[26]);
+                </script>
+            </div>
+            <div id="knoten_9" class="knoten knoten_adresse" style="position: absolute; left: 29em; top: 29.5em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[27] + "<br>" + adressenKnoten[28] + "<br>" + adressenKnoten[29]);
+                </script>
+            </div>
+            <div id="knoten_10" class="knoten knoten_adresse" style="position: absolute; left: 40.5em; top: 25em;">
+                <p></p>
+                <script type="text/javascript">
+                    document.write("<br>" + adressenKnoten[30] + "<br>" + adressenKnoten[31] + "<br>" + adressenKnoten[32]);
+                </script>
+            </div>
+            <div id="formular" class="formular" style="visibility: hidden;">
+                <label>Geben Sie die Anzahl der Adressen ein:  <input id="anzahl_adressen" 
+                    class="schrift_einheitsgroesse" type="number"></label>
+                <button id="submitButton" class="ok schrift_einheitsgroesse" onclick="
+                    var wert = document.getElementById('anzahl_adressen').value;
+                    aendereAnzahlSchluessel(wert);
+                    if (pruefeEingabe1bis3(wert)) {
+                        document.getElementById('knoten_neu_inhalt').innerHTML = '<br>' + adressenKnoten[0] + '<br>' + 
+                        adressenKnoten[1] + '<br>' + adressenKnoten[2];
+                        document.getElementById('formular').style='visibility: hidden';
+                    }
+                    ">OK</button>
+            </div>
+            <button id="formular_button" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;" onclick="
+                document.getElementById('formular').style='position: fixed; right: 2em; top: 6em; visibility: visible;';
+                ">Erstelle Adressen</button>
+        </div>
+
+ <! Hier beginnt die dritte Animation, in der den Adressen ein Guthaben zugewiesen wird. -->
+
+    <div id="anim_3" class="animation">
+        <div class="anim_hintergrund" style="height: 52em; min-width: 54em;"></div>
+        <div id="tabelle_eigene_adressen_ohne_sic" style="width: 22em; position: absolute; top: 2em; left: 2em;">
+        </div>
+        <script type="text/javascript">
+            document.getElementById("tabelle_eigene_adressen_ohne_sic").innerHTML = tabelleEigeneAdressenOhneSic();
+        </script>
+        <button id="formular_buttonb" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;" onclick="
+            document.getElementById('formularb').style='position: fixed; right: 2em; top: 6em; width: 23em; visibility: visible;';
+            ">Lege Kontostand fest</button>
+        <div id="formularb" class="formular" style="visibility: hidden;"></div>
+        <script>
+            document.getElementById("formularb").innerHTML = eingabeGuthaben();
+        </script>
+        <div id="warnung" class="knoten knoten_adresse" style="visibility: hidden;"><br>Sie müssen 
+            als Kontostand eine Zahl von 0 bis 999 eingeben!</div>
+    </div>
+
+<! Hier beginnt die vierte Animation, in der eine neue Transaktion erstellt wird. -->
+
+    <div id="anim_4" class="animation">
+        <div class="anim_hintergrund" style="height: 52em; min-width: 54em;"></div>
+        <div id="tabelle_fremde_adressen" style="width: 18em; position: absolute; top: 2em; left: 2em;">
+            <table class="adressentabelle">
+                <tr>
+                    <th class="feld">Fremde Adressen</th>
+                    <th class="feld">Kontostand</th>
+                </tr>
+                <script type="text/javascript">
+                    for (var i = 3; i < guthabenAdressen.length; i++) {
+                        if (adressenKnoten[i] != "") {
+                            document.write("<tr><td class='feld randlos'>" + getAdresse(i) + "</td>")
+                            document.write("<td class='feld randlos'>" + guthabenAdressen[i] + " SiC</td></tr>")
+                        } 
+                    }   
+                </script>
+            </table>
+        </div>
+        <div id="tabelle_eigene_adressen" style="width: 22em; position: absolute; top: 2em; left: 22em;"></div>
+        <script type="text/javascript">
+            document.getElementById("tabelle_eigene_adressen").innerHTML = tabelleEigeneAdressen();
+        </script>
+    </div>
+        
+    </body>
+</html>

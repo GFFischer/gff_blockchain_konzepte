@@ -1,6 +1,21 @@
 /* Diese Datei erweitert jene aus dem Ordner peer-to-peer_system!
 
-Die Funktion zufallsindizes wählt zufällig eine bestimmte Anzahl (Paramweter anzahl) an zufälligen Indizes eines 
+Zunächst die Funktion für die Navigation */
+
+var anim_aktuell = 1;
+
+function oeffne_animation(nummer_oeffnen) {
+    oeffne_ID = "anim_" + nummer_oeffnen;
+    schliesse_ID = "anim_" + anim_aktuell;
+    document.getElementById(oeffne_ID).style="display: inline";
+    if (nummer_oeffnen != anim_aktuell) {
+        document.getElementById(schliesse_ID).style="display: none";
+    }
+    anim_aktuell = nummer_oeffnen;
+}
+
+
+/* Die Funktion zufallsindizes wählt zufällig eine bestimmte Anzahl (Paramweter anzahl) an zufälligen Indizes eines 
 Arrays (Parameter array) und gibt diese unsortiert als neues Array zurück. Über diese Indizes kann dann auf die 
 entsprechenden Elemente in dem als Parameter übergebenen Array zugegriffen und so eine zufällige Auswahl von Werten
 aus einem Array von Werten realisert werden. Durch die if-Anweisung wird sichergestellt, dass kein Index im 
@@ -311,6 +326,14 @@ for (var i = 3; i <= 31; i += 3) {
     }
 }
 
+/* Das folgende Array speichert 33 zufällige Werte von 0 bis 999, die als Guthaben für die verschiedenen Adressen
+gebraucht werden */
+
+var guthabenAdressen = new Array();
+for (var k = 0; k < 33; k++) {
+    guthabenAdressen[k] = Math.floor(Math.random() * 1000);
+}
+
 /* Die folgenden Zeilen schaffen ein Array für die drei privaten Schlüssel für den neuen Knoten, die in der Form 
 "Kpriv: d=233" gespeichert werden. Die Funktion aendereAnzahlSchluessel wird ausgeführt, wenn durch den User per
 Eingabe die Anzahl der zu erstellenden Adressen ausgewählt wird.
@@ -341,4 +364,117 @@ function aendereAnzahlSchluessel(zahl) {
 function pruefeEingabe1bis3(eingabe) {
     var vorgabe = /^[123]$/;
     return vorgabe.test(eingabe);
+}
+
+/* Die Funktion tabelleEigeneAdressen erstellt einen String mit dem html-Code für die Tabelle der eigenen Adressen
+des Users. Das ist notwendig, damit die Anzeige aktualisiert werden kann, wenn der User in einer anderen Animation
+die Anzahl der eigenen Adressen ändert.
+Die Funktion tabelleEigeneAdressenOhneSiC tut das gleiche, nur bleiben die Felder für die Eingabe der Kontostände
+des Users leer.
+Die Funktion pruefeEingabeZahl prüft, ob auch tatsächlich eine Zahl eingegeben worden ist.
+  */
+
+function tabelleEigeneAdressen() {
+    var htmlCode = "<table class='adressentabelle'><tr><th class='feld'>Eigene Adressen</th><th class='feld'>\
+    Key privat</th><th class='feld'>Kontostand</th></tr>";
+    for (var i = 0; i < 3; i++) {
+        if (privateSchluessel[i] != "") {
+            htmlCode += "<tr><td class='feld randlos'>" + getAdresse(i) + "</td><td class='feld randlos'>" 
+                + privateSchluessel[i].substr(8,6) + "</td><td class='feld randlos'>" + guthabenAdressen[i] 
+                + " SiC</td></tr>";
+        } 
+    }
+    return htmlCode + "</table>";
+}
+
+function tabelleEigeneAdressenOhneSic() {
+    var htmlCode = "<table class='adressentabelle'><tr><th class='feld'>Eigene Adressen</th><th class='feld'>\
+    Key privat</th><th class='feld'>Kontostand</th></tr>";
+    for (var i = 0; i < 3; i++) {
+        if (privateSchluessel[i] != "") {
+            htmlCode += "<tr><td class='feld randlos'>" + getAdresse(i) + "</td><td class='feld randlos'>" 
+                + privateSchluessel[i].substr(8,6) + "</td><td id='guthaben" + i + "' class='feld randlos'></td></tr>";
+        } 
+    }
+    return htmlCode + "</table>";
+}
+
+function pruefeEingabeZahl(eingabe) {
+    var vorgabe = /^\d+$/;
+    return vorgabe.test(eingabe);
+}
+
+/* Die Funtion eingabeGuthaben erstellt den html-Code und innerhalb dieses html-Codes, indem ein Button erstellt
+wird, wieder recht umfangreichen JS-Code, der beim Clicken des Buttons ausgeführt werden soll, alles für das 
+Eingabeformular der Guthaben in anim_3. Es hat viele Abhängigkeiten, weshalb der Code sehr umfangreich geworden ist:
+1. Dem User sollen nur so viele Eingabefelder zum Eingeben von Guthaben angezeigt werden, wie er Adressen in anim_2
+   ausgewählt hat.
+2. Der OK-Button soll abhängig davon entweder 1, 2, oder 3 Eingaben prüfen. 
+3. Ein Warnhinweis soll erscheinen wenn in einem der max. 3 Eingaben keine Zahl von 0 - 999 eingegeben worden ist.
+4. Das Formular soll erst wieder unsichtbar werden, wenn in alle 1, 2 oder 3 Eingaben eine Zahl von 0 - 999 
+   eingegeben worden ist.
+Beachte: Im Original muss das Element mit der ID warnung im html-Code anders definiert werden, nämlich erstens
+optisch (andere CSS-Klasse) und zweitens mit einem OK-Button, das es unsichtbar macht, und drittens soll es,
+während es angezeigt wird, das Eingabeformular zumindest grossteils überdecken.*/
+
+function eingabeGuthaben() {
+    var htmlCode = "Geben Sie die Kontostände für Ihre Adressen ein";
+    for (var i = 0; i < 3; i++) {
+        if (privateSchluessel[i] != "") {
+            htmlCode += "<br><label>Adresse " + (i + 1) + ":  <input id='kontostand" + (i + 1) + "' \
+            class='schrift_einheitsgroesse' type='text' maxlength='3'></label>"
+        }
+    }
+    if (privateSchluessel[1] == "") {
+        htmlCode += "<br><button id='submitButton' class='schrift_einheitsgroesse' onclick='\
+            var wert1 = document.getElementById(`kontostand1`).value;\
+            if (pruefeEingabeZahl(wert1)) {\
+                guthabenAdressen[0] = wert1;\
+                document.getElementById(`guthaben0`).innerHTML = wert1 + ` SiC`;\
+                document.getElementById(`formularb`).style=`visibility: hidden`;\
+            } else {\
+                document.getElementById(`warnung`).style=`position: fixed; top: 8em; right: 28em; visibility: visible`;\
+            }'>OK</button>";
+    } else if (privateSchluessel[2] == "") {
+        htmlCode += "<br><button id='submitButton' class='schrift_einheitsgroesse' onclick='\
+            var wert1 = document.getElementById(`kontostand1`).value;\
+            var wert2 = document.getElementById(`kontostand2`).value;\
+            if (pruefeEingabeZahl(wert1)) {\
+                guthabenAdressen[0] = wert1;\
+                document.getElementById(`guthaben0`).innerHTML = wert1 + ` SiC`;\
+            } else {\
+                document.getElementById(`warnung`).style=`position: fixed; top: 8em; right: 28em; visibility: visible`;}\
+            if (pruefeEingabeZahl(wert2)) {\
+                guthabenAdressen[1] = wert2;\
+                document.getElementById(`guthaben1`).innerHTML = wert2 + ` SiC`;\
+            } else {\
+                document.getElementById(`warnung`).style=`position: fixed; top: 8em; right: 28em; visibility: visible`;}\
+            if (pruefeEingabeZahl(wert1) && pruefeEingabeZahl(wert2)) {\
+                document.getElementById(`formularb`).style=`visibility: hidden`;\
+            }'>OK</button>";
+    } else {
+        htmlCode += "<br><button id='submitButton' class='schrift_einheitsgroesse' onclick='\
+            var wert1 = document.getElementById(`kontostand1`).value;\
+            var wert2 = document.getElementById(`kontostand2`).value;\
+            var wert3 = document.getElementById(`kontostand3`).value;\
+            if (pruefeEingabeZahl(wert1)) {\
+                guthabenAdressen[0] = wert1;\
+                document.getElementById(`guthaben0`).innerHTML = wert1 + ` SiC`;\
+            } else {\
+                document.getElementById(`warnung`).style=`position: fixed; top: 8em; right: 28em; visibility: visible`;}\
+            if (pruefeEingabeZahl(wert2)) {\
+                guthabenAdressen[1] = wert2;\
+                document.getElementById(`guthaben1`).innerHTML = wert2 + ` SiC`;\
+            } else {\
+                document.getElementById(`warnung`).style=`position: fixed; top: 8em; right: 28em; visibility: visible`;}\
+            if (pruefeEingabeZahl(wert3)) {\
+                guthabenAdressen[2] = wert3;\
+                document.getElementById(`guthaben2`).innerHTML = wert3 + ` SiC`;\
+            } else {\
+                document.getElementById(`warnung`).style=`position: fixed; top: 8em; right: 28em; visibility: visible`;}\
+            if (pruefeEingabeZahl(wert1) && pruefeEingabeZahl(wert2) && pruefeEingabeZahl(wert3)) {\
+                document.getElementById(`formularb`).style=`visibility: hidden`;\
+            }'>OK</button>";
+    }
+    return htmlCode 
 }
