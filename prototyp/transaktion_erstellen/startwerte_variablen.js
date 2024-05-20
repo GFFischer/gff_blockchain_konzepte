@@ -380,8 +380,8 @@ function tabelleEigeneAdressen() {
     for (var i = 0; i < 3; i++) {
         if (privateSchluessel[i] != "") {
             htmlCode += "<tr><td class='feld randlos'>" + getAdresse(i) + "</td><td class='feld randlos'>" 
-                + privateSchluessel[i].substr(8,6) + "</td><td class='feld randlos'>" + guthabenAdressen[i] 
-                + " SiC</td></tr>";
+                + privateSchluessel[i].substr(8,6) + "</td><td class='feld randlos' id='guth" + i +"'>" 
+                + guthabenAdressen[i] + " SiC</td></tr>";
         } 
     }
     return htmlCode + "</table>";
@@ -477,4 +477,128 @@ function eingabeGuthaben() {
             }'>OK</button>";
     }
     return htmlCode 
+}
+
+/* Die Funktion tabelleMitFremdenAdressen erstellt den Code für die Anzeige aller Adressen aller fremden Knoten.
+Die Funktion auswahllisteAuftraggeber erstelt den html Code, um die Auswahlliste der eigenen Adressen des Users
+im Formular für Erstellung einer Transaktion korrekt anzuzeigen.
+Die Variablen senderTransaktion, empfaengerTransaktion, betragTransaktion, gebuehrTransaktion, zeitTransaktion
+und hashTransaktion (sowie die Hilfsfunktionen errechneGebuehr und stringTransaktion, die sämtliche Transaktionsdaten 
+zu einem String verbindet, damit von diesem String der Hashwert berechnet werden kann) werden initialisiert, damit 
+in einer späteren Animation alle Daten für eine Transaktion zur Verfügung stehen, falls keine eigenen Daten eingegeben 
+worden sind.
+(Die Funktionen zeitstempel und berechneHash sind hier nur eingefügt, damit der Prototyp ohne weitere Dateien 
+funktioniert.) */
+
+function tabelleMitFremdenAdressen() {
+    var htmlCode = "<tr><th class='feld'>Fremde Adressen</th><th class='feld'>Kontostand</th></tr>" 
+    for (var i = 3; i < guthabenAdressen.length; i++) {
+        if (adressenKnoten[i] != "") {
+            htmlCode += "<tr><td class='feld randlos'>" + getAdresse(i) 
+            + "</td><td class='feld randlos' id='fremdbetrag" + i + "'>" + guthabenAdressen[i] + " SiC</td></tr>";
+        } 
+    }
+    return htmlCode
+}
+
+function auswahllisteAuftraggeber() {
+    var htmlCode = "";
+    for (var i = 0; i < 3; i++) {
+        if (privateSchluessel[i] != "") {
+            htmlCode += "<option value='" + i + "'>" + adressenKnoten[i] + "</option>"
+        }
+    }
+    return htmlCode
+}
+
+var senderTransaktion = adressenKnoten[0];
+var empfaengerTransaktion = getAdresse(3);
+var betragTransaktion = 100;
+
+function errechneGebuehr(betrag) {
+    var gebuehr = (3 * betrag - ((3 * betrag) % 100)) / 100;
+    if (gebuehr < 3) {
+        return 3;
+    }
+    return gebuehr;
+}
+
+var gebuehrTransaktion = errechneGebuehr(betragTransaktion);
+
+function zeitstempel() {
+    var a = new Date();
+    var tag = a.getDate() < 10 ? "0" + a.getDate() : a.getDate();
+    var monat = a.getMonth() + 1 < 10 ? "0" + (a.getMonth() + 1) : a.getMonth() + 1;
+    var jahr = a.getFullYear();
+    var stunde = a.getHours() < 10 ? "0" + a.getHours() : a.getHours();
+    var minute = a.getMinutes() < 10 ? "0" + a.getMinutes() : a.getMinutes();
+    var sekunde = a.getSeconds() < 10 ? "0" + a.getSeconds() : a.getSeconds();
+    var millisek = a % 1000 < 100 ? "0" + a % 1000 : a % 1000;
+    return (tag + "." + monat + "." + jahr + " " + stunde + ":" + minute + ":" + sekunde + "," + millisek);
+}
+
+var zeitTransaktion = zeitstempel();
+
+function berechneHash(eingabe) {
+    var hashwert = new Hashes.SHA256().hex(eingabe).toLowerCase().substring(0, 8);
+    return hashwert;
+}
+
+function stringTransaktion() {
+    return senderTransaktion + empfaengerTransaktion + betragTransaktion + gebuehrTransaktion 
+    + zeitTransaktion;
+}
+
+var hashTransaktion = berechneHash(stringTransaktion());
+
+/* Die Funktion pruefeEingabeAdresseEmpfaenger dient dazu zu überprüfen, ob die vom User eingegebenen Daten auch
+tatsächlich unter den Adressen der Knoten des Peer-to-Peer-Netzwerkes zu finden sind. */
+
+function pruefeEingabeAdresseEmpfaenger(adresse) {
+    for (var i = 0; i < adressenKnoten.length; i++) {
+        if (adressenKnoten[i] != "" && adresse === adressenKnoten[i].substr(4)) {
+            return i;
+        }
+    }
+    return -1
+}
+
+/* Die folgenden Funktionen sind nicht neu erfunden, sondernhier hineinkopiert, um die digitale Signatur zu berechnen */
+
+function umwandleInDez(zahl, basis) {
+    return parseInt(zahl, basis);
+}
+
+function umwandleDez(dez_zahl, basis) {
+    return dez_zahl.toString(basis);
+}
+
+function umwandleDezInHashwert(dez_zahl) {
+    dez_zahl = dez_zahl % 4294967295;
+    var temp = umwandleDez(dez_zahl, 16);
+    laenge = temp.length;
+    if (laenge < 8) {
+        for (var i = 0; i < (8 - laenge); i++) {
+            temp = "0" + temp;
+        }
+    }
+    return temp;
+}
+
+function umwandleHexInBin(hex_zahl) {
+    return umwandleInDez(hex_zahl, 16).toString(2);
+}
+
+function umwandleBinInHex(bin_zahl) {
+    return umwandleInDez(bin_zahl, 2).toString(16);
+}
+
+// Das stimmt noch nicht! Modulo-Rechnung nochmals genau anschauen!
+function verschluesseln(basis, exp, n) {
+    var ergebnis = basis;
+    for (var i = 0; i < exp; i++) {
+        ergebnis *= basis;
+        ergebnis = ergebnis % n;
+    }
+    return ergebnis;
 }

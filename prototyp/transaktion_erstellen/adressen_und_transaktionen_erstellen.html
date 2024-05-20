@@ -8,6 +8,7 @@ Die zufällige Zuweisung der Adressen zu den einzelnen Knoten geht über die Dat
         <meta charset="UTF-8">
         <title>Das wandelbare Peer-to-Peer-System, Teil 2</title>
         <link rel="stylesheet" href="testdesign.css">
+        <script type="text/javascript" src="hash.js"></script>
         <script type="text/javascript" src="startwerte_variablen.js"></script>
     </head>
     <body>
@@ -31,8 +32,12 @@ müssen, weil sie eventuell in einer anderen Animation gerade geändert worden s
                         document.getElementById('formularb').innerHTML = eingabeGuthaben();
                     ">Guthaben eingeben</li>
                 <li onclick="oeffne_animation(4);
+                    document.getElementById('fremde_adressen').innerHTML = tabelleMitFremdenAdressen();
                     document.getElementById('tabelle_eigene_adressen').innerHTML = tabelleEigeneAdressen();
+                    document.getElementById('eingabe_auftraggeber').innerHTML = auswahllisteAuftraggeber();
                     ">Transaktion erstellen</li>
+                <li onclick="oeffne_animation(5);
+                    "> Digitale Signatur berechnen</li>
             </ul>
         </nav>
 
@@ -124,7 +129,7 @@ müssen, weil sie eventuell in einer anderen Animation gerade geändert worden s
                 ">Erstelle einen neuen Peer</button>
             <div id="formulara" class="formular" style="visibility: hidden;">
                 <label>Geben Sie einen Namen ein:  <input id="eingegebener_name" class="schrift_einheitsgroesse" name="eingegebener_name" type="text"></label>
-                <button id="submitButton" class="ok schrift_einheitsgroesse" onclick="
+                <button id="submitButton1" class="ok schrift_einheitsgroesse" onclick="
                     if (document.getElementById('eingegebener_name').value != '') {
                         nameKnotenNeu = document.getElementById('eingegebener_name').value;
                         document.getElementById('knoten_neu_inhalta').innerHTML = nameKnotenNeu;
@@ -225,7 +230,7 @@ müssen, weil sie eventuell in einer anderen Animation gerade geändert worden s
             <div id="formular" class="formular" style="visibility: hidden;">
                 <label>Geben Sie die Anzahl der Adressen ein:  <input id="anzahl_adressen" 
                     class="schrift_einheitsgroesse" type="number"></label>
-                <button id="submitButton" class="ok schrift_einheitsgroesse" onclick="
+                <button id="submitButton2" class="ok schrift_einheitsgroesse" onclick="
                     var wert = document.getElementById('anzahl_adressen').value;
                     aendereAnzahlSchluessel(wert);
                     if (pruefeEingabe1bis3(wert)) {
@@ -242,49 +247,306 @@ müssen, weil sie eventuell in einer anderen Animation gerade geändert worden s
 
  <! Hier beginnt die dritte Animation, in der den Adressen ein Guthaben zugewiesen wird. -->
 
-    <div id="anim_3" class="animation">
-        <div class="anim_hintergrund" style="height: 52em; min-width: 54em;"></div>
-        <div id="tabelle_eigene_adressen_ohne_sic" style="width: 22em; position: absolute; top: 2em; left: 2em;">
+        <div id="anim_3" class="animation">
+            <div class="anim_hintergrund" style="height: 52em; min-width: 54em;"></div>
+            <div id="tabelle_eigene_adressen_ohne_sic" style="width: 22em; position: absolute; top: 2em; left: 2em;">
+            </div>
+            <script type="text/javascript">
+                document.getElementById("tabelle_eigene_adressen_ohne_sic").innerHTML = tabelleEigeneAdressenOhneSic();
+            </script>
+            <button id="formular_buttonb" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;" onclick="
+                document.getElementById('formularb').style='position: fixed; right: 2em; top: 6em; width: 23em; visibility: visible;';
+                ">Lege Kontostand fest</button>
+            <div id="formularb" class="formular" style="visibility: hidden;"></div>
+            <script>
+                document.getElementById("formularb").innerHTML = eingabeGuthaben();
+            </script>
+            <div id="warnung" class="knoten knoten_adresse" style="visibility: hidden;"><br>Sie müssen 
+                als Kontostand eine Zahl von 0 bis 999 eingeben!</div>
         </div>
-        <script type="text/javascript">
-            document.getElementById("tabelle_eigene_adressen_ohne_sic").innerHTML = tabelleEigeneAdressenOhneSic();
-        </script>
-        <button id="formular_buttonb" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;" onclick="
-            document.getElementById('formularb').style='position: fixed; right: 2em; top: 6em; width: 23em; visibility: visible;';
-            ">Lege Kontostand fest</button>
-        <div id="formularb" class="formular" style="visibility: hidden;"></div>
-        <script>
-            document.getElementById("formularb").innerHTML = eingabeGuthaben();
-        </script>
-        <div id="warnung" class="knoten knoten_adresse" style="visibility: hidden;"><br>Sie müssen 
-            als Kontostand eine Zahl von 0 bis 999 eingeben!</div>
-    </div>
 
 <! Hier beginnt die vierte Animation, in der eine neue Transaktion erstellt wird. -->
 
-    <div id="anim_4" class="animation">
-        <div class="anim_hintergrund" style="height: 52em; min-width: 54em;"></div>
-        <div id="tabelle_fremde_adressen" style="width: 18em; position: absolute; top: 2em; left: 2em;">
-            <table class="adressentabelle">
-                <tr>
-                    <th class="feld">Fremde Adressen</th>
-                    <th class="feld">Kontostand</th>
-                </tr>
+        <div id="anim_4" class="animation">
+            <div class="anim_hintergrund" style="height: 52em; min-width: 54em;"></div>
+            <div id="tabelle_fremde_adressen" style="width: 18em; position: absolute; top: 2em; left: 2em;">
+                <table id="fremde_adressen" class="adressentabelle"></table>
                 <script type="text/javascript">
-                    for (var i = 3; i < guthabenAdressen.length; i++) {
-                        if (adressenKnoten[i] != "") {
-                            document.write("<tr><td class='feld randlos'>" + getAdresse(i) + "</td>")
-                            document.write("<td class='feld randlos'>" + guthabenAdressen[i] + " SiC</td></tr>")
-                        } 
-                    }   
+                    document.getElementById("fremde_adressen").innerHTML = tabelleMitFremdenAdressen();   
                 </script>
-            </table>
+            </div>
+            <div id="tabelle_eigene_adressen" style="width: 22em; position: absolute; top: 2em; left: 22em;"></div>
+            <script type="text/javascript">
+                document.getElementById("tabelle_eigene_adressen").innerHTML = tabelleEigeneAdressen();
+            </script>
+            <div id="erste_transaktion" style="visibility: hidden;">
+                <table class="transaktion" style="width: 15em; position: absolute; top: 2em; left: 46em;">
+                    <tr>
+                        <th class="feld">Transaktionsdaten</th>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Auftraggeber-Adresse: <br>
+                            <span id="adr_auftraggeber"></span>
+                            <script>
+                                document.getElementById("adr_auftraggeber").innerHTML = senderTransaktion;
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Empfänger-Adresse: <br>
+                            <span id="adr_empfaenger"></span>
+                            <script>
+                                document.getElementById("adr_empfaenger").innerHTML = empfaengerTransaktion;
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Zu überweisender Betrag: <br>
+                            <span id="betrag"></span>
+                            <script>
+                                document.getElementById("betrag").innerHTML = betragTransaktion + " SiC";
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Transaktionsgebühr: <br>
+                            <span id="gebuehr"></span>
+                            <script>
+                                document.getElementById("gebuehr").innerHTML = gebuehrTransaktion + " SiC";
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Zeitstempel: <br>
+                            <span id="zeitstempel"></span>
+                            <script>
+                                document.getElementById("zeitstempel").innerHTML = zeitTransaktion;
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Hashwert Transaktion: <br>
+                            <span id="hashwert"></span>
+                            <script>
+                                document.getElementById("hashwert").innerHTML = hashTransaktion;
+                            </script>
+                        </td>
+                    </tr>
+                </table>    
+            </div>
+            <button id="formular_buttonc" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;"
+                onclick="document.getElementById('formularc').style=
+                    'text-align: center; position: fixed; right: 2em; top: 6em; width: 26em; visibility: visible;';
+                ">Erstelle eine Transaktion</button>
+            <div id="formularc" class="formular" style="visibility: hidden;">
+                <label>Wählen Sie eine Auftraggeber-Adresse aus: <br><select id="eingabe_auftraggeber" 
+                    class="schrift_einheitsgroesse"></select></label><br>
+                <script>
+                    document.getElementById("eingabe_auftraggeber").innerHTML = auswahllisteAuftraggeber();
+                </script>
+                <label>Geben Sie einen Betrag ein: <br><input id="eingabe_betrag" class="schrift_einheitsgroesse" 
+                    size="5" type="text"></label> SiC<br>
+                Geben Sie eine Empfänger-Adresse ein: <br>
+                <label>e: <input id="eingabe_e" class="schrift_einheitsgroesse" size="3" maxlength="2"
+                    type="text"></label>
+                <label>n: <input id="eingabe_n" class="schrift_einheitsgroesse" size="4" maxlength="4"
+                    type="text"></label><br>
+                <button id="submitButton3" class="ok schrift_einheitsgroesse" onclick="
+                    senderTransaktion = adressenKnoten[document.getElementById('eingabe_auftraggeber').value];
+                    document.getElementById('adr_auftraggeber').innerHTML = senderTransaktion;  
+                    empfaengerTransaktion = 'e=' + document.getElementById('eingabe_e').value + ', n=' +
+                        document.getElementById('eingabe_n').value;
+                    betragTransaktion = document.getElementById('eingabe_betrag').value;
+                    document.getElementById('betrag').innerHTML = betragTransaktion + ' SiC';
+                    gebuehrTransaktion = errechneGebuehr(betragTransaktion);
+                    document.getElementById('gebuehr').innerHTML = gebuehrTransaktion + ' SiC';
+                    if (pruefeEingabeAdresseEmpfaenger(empfaengerTransaktion) < 0) {
+                        document.getElementById('hashwert').innerHTML = 'nicht okay';
+                    } else {
+                        document.getElementById('adr_empfaenger').innerHTML = empfaengerTransaktion;
+                        zeitTransaktion = zeitstempel();
+                        document.getElementById('zeitstempel').innerHTML = zeitTransaktion;
+                        hashTransaktion = berechneHash(stringTransaktion());
+                        document.getElementById('hashwert').innerHTML = hashTransaktion;
+                        document.getElementById('gebuehr_formular').innerHTML = gebuehrTransaktion;
+                        document.getElementById('zeitstempel_formular').innerHTML = zeitTransaktion;
+                        document.getElementById('hashwert_formular').innerHTML = hashTransaktion;
+                        document.getElementById('formulard').style=
+                            'position: fixed; right: 2em; top: 22em; width: 26em; visibility: visible;';
+                    }
+                ">Transaktion bestätigen</button>
+            </div>
+            <div id="formulard" class="formular" style="visibility: hidden;">
+                Transaktionsgebühr: <span id="gebuehr_formular" class="knoten" style="padding: 0.5em;"></span> SiC <br><br>
+                Zeitstempel: <span id="zeitstempel_formular" class="knoten" style="padding: 0.5em;"></span><br><br>
+                Hashwert: <span id="hashwert_formular" class="knoten" style="padding: 0.5em;"></span><br><br>
+                <button id="submitButton4" class="ok schrift_einheitsgroesse" onclick="
+                    document.getElementById('formularc').style='visibility: hidden';
+                    document.getElementById('formulard').style='visibility: hidden';
+                    document.getElementById('erste_transaktion').style='visibility: visible';
+                    guthabenAdressen[pruefeEingabeAdresseEmpfaenger(empfaengerTransaktion)] += 
+                        betragTransaktion - gebuehrTransaktion;
+                    document.getElementById('fremde_adressen').innerHTML = tabelleMitFremdenAdressen();
+                    var fremdbetrag = 'fremdbetrag' + pruefeEingabeAdresseEmpfaenger(empfaengerTransaktion);
+                    document.getElementById(fremdbetrag).style='color: red; font-weight: bold';
+                    guthabenAdressen[document.getElementById('eingabe_auftraggeber').value] -=
+                        betragTransaktion;
+                    document.getElementById('tabelle_eigene_adressen').innerHTML = tabelleEigeneAdressen();
+                    var guth = 'guth' + document.getElementById('eingabe_auftraggeber').value;
+                    document.getElementById(guth).style='color: red; font-weight: bold';
+                ">OK</button>
+            </div>
         </div>
-        <div id="tabelle_eigene_adressen" style="width: 22em; position: absolute; top: 2em; left: 22em;"></div>
-        <script type="text/javascript">
-            document.getElementById("tabelle_eigene_adressen").innerHTML = tabelleEigeneAdressen();
-        </script>
-    </div>
-        
+
+<! Hier beginnt die fünfte Animation, bei der für eine Transaktion eine Digitale Signatur berechnet wird 
+
+Beachte: Im Original muss der Code noch so angepasst werden, dass die Transaktionstabelle die in anim_4 eingegeben
+Werte übernimmt, will heissen: es muss eine Funktion geschrieben werden, die den Code generiert, welche beim der
+Navigation zu dieser Animation neu geladen wird -->
+
+        <div id="anim_5" class="animation">
+            <div class="anim_hintergrund" style="height: 52em; min-width: 54em;"></div>
+            <div id="erste_transaktion1">
+                <table class="transaktion" style="width: 15em; position: absolute; top: 2em; left: 2em;">
+                    <tr>
+                        <th class="feld">Transaktionsdaten</th>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Auftraggeber-Adresse: <br>
+                            <span id="adr_auftraggeber1"></span>
+                            <script>
+                                document.getElementById("adr_auftraggeber1").innerHTML = senderTransaktion;
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Empfänger-Adresse: <br>
+                            <span id="adr_empfaenger1"></span>
+                            <script>
+                                document.getElementById("adr_empfaenger1").innerHTML = empfaengerTransaktion;
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Zu überweisender Betrag: <br>
+                            <span id="betrag1"></span>
+                            <script>
+                                document.getElementById("betrag1").innerHTML = betragTransaktion + " SiC";
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Transaktionsgebühr: <br>
+                            <span id="gebuehr1"></span>
+                            <script>
+                                document.getElementById("gebuehr1").innerHTML = gebuehrTransaktion + " SiC";
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Zeitstempel: <br>
+                            <span id="zeitstempel1"></span>
+                            <script>
+                                document.getElementById("zeitstempel1").innerHTML = zeitTransaktion;
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Hashwert Transaktion: <br>
+                            <span id="hashwert1"></span>
+                            <script>
+                                document.getElementById("hashwert1").innerHTML = hashTransaktion;
+                            </script>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="feld">
+                            Digitale Signatur: <br>
+                            <span id="signatur"></span>
+                            <script>
+                                document.getElementById("signatur").innerHTML = "";
+                            </script>
+                        </td>
+                    </tr>
+                </table>    
+            </div>
+            <button id="formular_buttone" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;"
+                onclick="document.getElementById('formulare').style=
+                    'position: fixed; left: 22em; top: 16em; width: 30em; padding: 0.2em; visibility: visible;';
+            ">Erstelle eine Digitale Signatur</button>
+        </div>
+        <div id="formulare" class="formular" style="visibility: hidden;">
+            <table class="transaktion">
+                <tr>
+                    <td><b>Hashwert</b></td>
+                    <td id="hw1"></td>
+                    <td id="hw2"></td>
+                    <td id="hw3"></td>
+                    <td id="hw4"></td>
+                </tr>
+                <tr>
+                    <td><b>...als binäre Zahl</b></td>
+                    <td id="bZ1"></td>
+                    <td id="bZ2"></td>
+                    <td id="bZ3"></td>
+                    <td id="bZ4"></td>
+                </tr>
+                <tr>
+                    <td><b>...als dezimale Zahl (m)</b></td>
+                    <td id="dZ1"></td>
+                    <td id="dZ2"></td>
+                    <td id="dZ3"></td>
+                    <td id="dZ4"></td>
+                </tr>
+                <tr>
+                    <td><b>...verschlüsselt <br>  c = m<span style="vertical-align: super;">d</span> mod n</b></td>
+                    <td id="c1"></td>
+                    <td id="c2"></td>
+                    <td id="c3"></td>
+                    <td id="c4"></td>
+                </tr>
+            </table>
+            <script>
+                var teil1 = hashTransaktion.substr(0,2);
+                var teil2 = hashTransaktion.substr(2,2);
+                var teil3 = hashTransaktion.substr(4,2);
+                var teil4 = hashTransaktion.substr(6,2);
+                document.getElementById("hw1").innerHTML = teil1;
+                document.getElementById("hw2").innerHTML = teil2;
+                document.getElementById("hw3").innerHTML = teil3;
+                document.getElementById("hw4").innerHTML = teil4;
+                document.getElementById("bZ1").innerHTML = umwandleHexInBin(teil1);
+                document.getElementById("bZ2").innerHTML = umwandleHexInBin(teil2);
+                document.getElementById("bZ3").innerHTML = umwandleHexInBin(teil3);
+                document.getElementById("bZ4").innerHTML = umwandleHexInBin(teil4);
+                document.getElementById("dZ1").innerHTML = umwandleInDez(teil1, 16);
+                document.getElementById("dZ2").innerHTML = umwandleInDez(teil2, 16);
+                document.getElementById("dZ3").innerHTML = umwandleInDez(teil3, 16);
+                document.getElementById("dZ4").innerHTML = umwandleInDez(teil4, 16);
+               
+               // Da müssen wir uns die Modulo-Rechnung nochmals genau anschauen!
+                var dKey = adressenAuswahl[indizesFuerAdressen[0]].d;
+                var nKey = adressenAuswahl[indizesFuerAdressen[0]].n;
+                var zahl1 = umwandleInDez(teil1, 16);
+                var crypt = verschluesseln(zahl1, dKey, nKey);
+                document.getElementById("c1").innerHTML = crypt;
+                var eKey = adressenAuswahl[indizesFuerAdressen[0]].e;
+                var clear = verschluesseln(crypt, eKey, nKey);
+                document.getElementById("c2").innerHTML = clear;
+
+            </script>
+        </div>
     </body>
 </html>
