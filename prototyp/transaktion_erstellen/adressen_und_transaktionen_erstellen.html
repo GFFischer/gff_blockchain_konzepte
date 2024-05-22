@@ -484,7 +484,7 @@ Navigation zu dieser Animation neu geladen wird -->
             </div>
             <button id="formular_buttone" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;"
                 onclick="document.getElementById('formulare').style=
-                    'position: fixed; left: 22em; top: 16em; width: 30em; padding: 0.2em; visibility: visible;';
+                    'position: absolute; left: 22em; top: 16em; width: 30em; padding: 0.2em; visibility: visible;';
             ">Erstelle eine Digitale Signatur</button>
         </div>
         <div id="formulare" class="formular" style="visibility: hidden;">
@@ -535,18 +535,74 @@ Navigation zu dieser Animation neu geladen wird -->
                 document.getElementById("dZ2").innerHTML = umwandleInDez(teil2, 16);
                 document.getElementById("dZ3").innerHTML = umwandleInDez(teil3, 16);
                 document.getElementById("dZ4").innerHTML = umwandleInDez(teil4, 16);
-               
-               // Da müssen wir uns die Modulo-Rechnung nochmals genau anschauen!
                 var dKey = adressenAuswahl[indizesFuerAdressen[0]].d;
                 var nKey = adressenAuswahl[indizesFuerAdressen[0]].n;
-                var zahl1 = umwandleInDez(teil1, 16);
-                var crypt = verschluesseln(zahl1, dKey, nKey);
-                document.getElementById("c1").innerHTML = crypt;
-                var eKey = adressenAuswahl[indizesFuerAdressen[0]].e;
-                var clear = verschluesseln(crypt, eKey, nKey);
-                document.getElementById("c2").innerHTML = clear;
-
+                document.getElementById("c1").innerHTML = verschluesseln(umwandleInDez(teil1, 16), dKey, nKey);
+                document.getElementById("c2").innerHTML = verschluesseln(umwandleInDez(teil2, 16), dKey, nKey);
+                document.getElementById("c3").innerHTML = verschluesseln(umwandleInDez(teil3, 16), dKey, nKey);
+                document.getElementById("c4").innerHTML = verschluesseln(umwandleInDez(teil4, 16), dKey, nKey);
             </script>
+            <br><br>
+            <table class="transaktion">
+                <tr>
+                    <td><b>Digitale Signatur</b></td>
+                    <td id="hw5"></td>
+                    <td id="hw6"></td>
+                    <td id="hw7"></td>
+                    <td id="hw8"></td>
+                </tr>
+                <tr>
+                    <td><b>...entschlüsselt <br>  m = c<span style="vertical-align: super;">e</span> mod n</b></td>
+                    <td id="c5"></td>
+                    <td id="c6"></td>
+                    <td id="c7"></td>
+                    <td id="c8"></td>
+                </tr>
+                <tr>
+                    <td><b>...als binäre Zahl</b></td>
+                    <td id="bZ5"></td>
+                    <td id="bZ6"></td>
+                    <td id="bZ7"></td>
+                    <td id="bZ8"></td>
+                </tr>
+                <tr>
+                    <td><b>...als hexadezimale Zahl (m)</b></td>
+                    <td id="dZ5"></td>
+                    <td id="dZ6"></td>
+                    <td id="dZ7"></td>
+                    <td id="dZ8"></td>
+                </tr>
+            </table>
+            <script>
+                var teil5 = verschluesseln(umwandleInDez(teil1, 16), dKey, nKey);
+                var teil6 = verschluesseln(umwandleInDez(teil2, 16), dKey, nKey);
+                var teil7 = verschluesseln(umwandleInDez(teil3, 16), dKey, nKey);
+                var teil8 = verschluesseln(umwandleInDez(teil4, 16), dKey, nKey);
+                document.getElementById("hw5").innerHTML = teil5;
+                document.getElementById("hw6").innerHTML = teil6;
+                document.getElementById("hw7").innerHTML = teil6;
+                document.getElementById("hw8").innerHTML = teil8;
+                var eKey = adressenAuswahl[indizesFuerAdressen[0]].e;
+                var nKey = adressenAuswahl[indizesFuerAdressen[0]].n;
+                var zahl1 = verschluesseln(teil5, eKey, nKey);
+                var zahl2 = verschluesseln(teil6, eKey, nKey);
+                var zahl3 = verschluesseln(teil7, eKey, nKey);
+                var zahl4 = verschluesseln(teil8, eKey, nKey);
+                document.getElementById("c5").innerHTML = zahl1;
+                document.getElementById("c6").innerHTML = zahl2; 
+                document.getElementById("c7").innerHTML = zahl3;
+                document.getElementById("c8").innerHTML = zahl4;
+                document.getElementById("bZ5").innerHTML = umwandleDez(zahl1, 2);
+                document.getElementById("bZ6").innerHTML = umwandleDez(zahl2, 2);
+                document.getElementById("bZ7").innerHTML = umwandleDez(zahl3, 2);
+                document.getElementById("bZ8").innerHTML = umwandleDez(zahl4, 2);
+                document.getElementById("dZ5").innerHTML = umwandleDez(zahl1, 16);
+                document.getElementById("dZ6").innerHTML = umwandleDez(zahl2, 16);
+                document.getElementById("dZ7").innerHTML = umwandleDez(zahl3, 16);
+                document.getElementById("dZ8").innerHTML = umwandleDez(zahl4, 16);
+                
+                
+            </script>            
         </div>
     </body>
 </html>

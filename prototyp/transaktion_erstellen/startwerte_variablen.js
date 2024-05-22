@@ -593,9 +593,11 @@ function umwandleBinInHex(bin_zahl) {
     return umwandleInDez(bin_zahl, 2).toString(16);
 }
 
-// Das stimmt noch nicht! Modulo-Rechnung nochmals genau anschauen!
+/* Die Funktion verschluesseln ist notwendig, weil JS offensichtlich nicht sehr gut mit sehr grossen Zahlen operieren
+kann */
+
 function verschluesseln(basis, exp, n) {
-    var ergebnis = basis;
+    var ergebnis = 1;
     for (var i = 0; i < exp; i++) {
         ergebnis *= basis;
         ergebnis = ergebnis % n;

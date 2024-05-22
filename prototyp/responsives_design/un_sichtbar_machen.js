@@ -8,7 +8,7 @@ Animation auf display: inline. Der Variable anim_aktuell wird die Nummer der zu 
 Beachte: Im Original ist "display: inline" vielleicht nicht korrekt, falls das rekursive Design mit flexbox realisiert
 wird! */
 
-var anim_aktuell = 1;
+var anim_aktuell = 0;
 
 function oeffne_animation(nummer_oeffnen) {
     oeffne_ID = "anim_" + nummer_oeffnen;
