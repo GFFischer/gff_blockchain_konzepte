@@ -5,6 +5,7 @@
 |   0.1   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 19.04.2024 | Template erstellt |
 |   0.2   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 20.04.2024 | Pkt 1.1 bis 1.2 bearbeitet |
 |   0.3   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 22.04.2024 | Pkt 2 bis 4 bearbeitet |
+|   0.4   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 23.05.2024 | Pkt 2 bis 4 bearbeitet |
 
 
 # 1 Einführung
@@ -44,7 +45,8 @@ möchten, sowie im konkreten Fall auch an alle, die dieses Projekt zu bewerten u
 
 Dieses Dokument bezieht sich auf die im **Lastenheft** formulierten funktionalen und Qualitätsanforderungen und die im
 **Pflichtenheft** formulierten und mit Use-cases detailliert beschriebenen Einzelanforderungen. Ebenso steht dieses 
-Dokument in Beziehung zum **Prototyp** der Applikation, der parallel zu diesem Dokument entwickelt wird.
+Dokument in Beziehung zu den einzelnen Dateien, die als **Prototyp** für einzelne Aspekte der Applikation parallel zu diesem
+Dokument entwickelt werden.
 
 
 # 2. Systemübersicht
@@ -79,7 +81,7 @@ unbewegten Grafiken und ohne die Möglichkeit zur Interaktion zur Verfügung ste
 ## Primäre Ziele
 * **Übersicht:** Das Design soll dazu führen, dass der Aufbau der Applikation (Komponenten, Schnittstellen, Code)
   nachvollziehbar wird, in erster Linie im konkreten Fall für alle, die dieses Projekt zu bewerten und zu beurteilen
-  haben, in zweiter Linie gegebenenfalls an alle Entwickler*innen, die diese Applikation warten und/oder erweitern
+  haben, in zweiter Linie gegebenenfalls für alle Entwickler*innen, die diese Applikation warten und/oder erweitern
   möchten.
 * **Festlegung von Details:** Das Design soll dazu führen, dass die Entwicklungszeit minimiert wird, indem es dem
   Programmierer möglich ist, die Vorgaben in Code zu überführen, ohne selbst Entscheidungen über Details (z.B. Namen und
@@ -103,13 +105,14 @@ unbewegten Grafiken und ohne die Möglichkeit zur Interaktion zur Verfügung ste
 # 4. Systemverhalten
 
 * Das **optische Erscheinungsbild** der Applikation ist responsiv, ab einer Bildschirmbreite von weniger als 960 Pixeln
-  verschwindet das Navigationsmenü aus dem Vordergrund und wird ausklappbar, Schriftarten werden verkleinert, eventuell
-  passt sich die Grösse der Animationen der Bildschirmbreite an.
+  verschwindet das Navigationsmenü aus dem Vordergrund und wird ausklappbar, Schriftarten werden verkleinert, die Grösse der
+  Animationen passt sich der Bildschirmbreite an.
 * Die **Navigation** zu den einzelnen Animationen bzw. deren Teilen erfolgt sowohl direkt über ein Navigationsmenü als
   auch zwischen den einzelnen Teilen der Animationen über "weiter"- und "zurück"-Buttons.
 * Die **Steuerung der Animationen** erfolgt über Buttons, mit denen es möglich ist, die Animationen zu starten, abzubrechen,
   in einigen Fällen zu unterbrechen und nach einer Unterbrechung fortzusetzen.
-* Beim **Start der Applikation** wird der erste Teil von Animation 1 geladen.
+* Beim **Start der Applikation** wird eine Startseite, die eine kurze Einführung in die Applikation und eine Erklärung der
+  Unterschiede von erklärenden und weiterführenden Texten sowie den dafür verwendeten Symbolen und Buttons enthält, geladen.
 * **Erklärende und weiterführende Texte** zu den Animationen können durch das Klicken auf ein Symbol oder einen Button vor
   dem Start und/oder nach Beendigung bzw. Abbruch der Animation geöffnet werden.
 * **Eingaben durch den User** über Formulare sind in den Animationen insgesamt an acht Stellen möglich. Die Applikation
@@ -123,7 +126,16 @@ unbewegten Grafiken und ohne die Möglichkeit zur Interaktion zur Verfügung ste
 # 5. Design
 
 ## 5.1 Statik
-An dieser Stelle sollten die statischen Aspekte, zum Beispiel mit Hilfe von UML Klassendiagrammen oder Paketdiagrammen beschrieben werden.
+### HTML
+**blockchainkonzepte.html**
+
+Die Applikation und all ihre Teile werden zusammengefügt in einer einzigen html-Datei, wobei die Navigation zwischen den
+einzelnen Animationen sowie das Aufpoppen von Warnhinweisen, erklärenden und weiterführenden Texten usw. ausschliesslich
+über das Sichtbar-Machen und Verstecken von einzelnen html-Kontainern bzw. html-Elementen geregelt wird.
+
+### JavaScript
+
+### CSS
 
 ## 5.2 Dynamik
 An dieser Stelle sollten die dynamische Aspekte, zum Beispiel mit Hilfe von UML Sequenz/Kollaborationsdiagrammen, oder Akivitätsdiagrammen beschrieben werden.
