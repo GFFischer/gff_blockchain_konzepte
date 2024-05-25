@@ -1,0 +1,239 @@
+/* Zu Beginn werden die Bereiche für die Aufteilung der Grid-Container in CSS-Grid festgelegt. nav ist der Bereich
+für das Navigationsmenü, div.mitte ist die Klasse für den Hauptinhalt (Bereich der Animationen), div.randr und
+div.randl sind der rechte und der linke Randbereich, die bei breiten und sehr breiten Bildschirmen (ab 1440px Breite) 
+leer bleiben sollen. in body werden alle Grid-Einstellungen vorgenommen. */
+
+:root {
+    --paradiesgruen: rgb(213,229,194);
+    --gruenspan: rgb(176,213,166);
+    --waldmeister: rgb(51,97,23);
+    --tarngruen: rgb(53,76,40);
+    --kressegruen: rgb(94,113,28);
+    --avocadogruen: rgb(163,175,0);
+    --steingrau: rgb(150,161,154);
+    --sandgrau: rgb(136,138,134);
+    --grapefruit: rgb(254,205,49);
+    --schmetterlingsblau: rgb(103,177,227);
+    --antikblau: rgb(0,45,91);
+    --creme: rgb(254,244,229);
+}
+nav {
+    grid-area: navigation;
+    background-color: var(--kressegruen);
+}
+
+div.mitte {
+    grid-area: hauptbereich;
+    position: relative;
+}
+
+div.randr {
+    grid-area: rand_rechts;
+}
+
+div.randl {
+    grid-area: rand_links;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 8fr 1fr;
+    grid-template-areas:
+    "rand_links navigation hauptbereich rand_rechts";
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    word-spacing: 0.1em;
+    line-height: 150%;
+    background-color: var(--paradiesgruen);
+}
+
+@media screen and (width <= 1400px) {
+    body {
+        grid-template-columns: 0.5fr 2fr 9fr 0.5fr
+    }
+}
+
+@media screen and (width <= 1280px) {
+    body {
+        grid-template-columns: 0fr 2fr 10fr 0fr;
+    }
+}
+
+@media screen and (width <= 960px) {
+    body {
+        display: grid;
+        grid-template-columns: 12fr;
+        grid-template-rows: 0fr 1fr;
+        grid-template-areas:
+        "navigation"
+        "hauptbereich";
+        font-size: 9pt;
+    }
+    nav {
+        position: absolute;
+        visibility: hidden;
+        width: 96vw;
+        z-index: 2;
+    }
+    .sichtbarkeit {
+        visibility: visible;
+    }
+    #menu {
+        position: relative;
+        visibility: visible;
+    }
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    color: var(--creme);
+}
+nav li {
+    margin: 0.6em 0.5em;
+    padding: 0.4em;
+    background-color: var(--waldmeister);
+    border-radius: 0.5em;
+    text-align: center;
+    box-shadow: 0em 0em 0.4em 0em var(--creme);
+}
+nav li:active {
+    margin: 0.4em 0.5em;
+    padding: 0.4em;
+    background-color: var(--creme);
+    border-radius: 0.5em;
+    text-align: center;
+    color: var(--waldmeister);
+}
+h1 {
+    color: var(--waldmeister);
+    margin: 1em;
+}
+p {
+    margin: 1em 2em;
+}
+.hinweis {
+    background-color: var(--kressegruen);
+    border-radius: 1em;
+    max-width: 20em;
+    position: relative;
+    top: 50vh;
+    margin: 0 auto;
+    margin-top: -30%;
+    padding: 1em 1em 0.5em 1em;
+    color: var(--grapefruit);
+    text-align: right;
+    font-weight: bold;
+    box-shadow: 0em 0em 2em var(--grapefruit);
+}
+.menuicon {
+    position: absolute;
+    visibility: hidden;
+    width: 2em;
+    margin-bottom: 0.7em;
+    z-index: 1;
+}
+button.hinweisbutton {
+    background-color: var(--grapefruit);
+    border-radius: 0.2em ;
+    border-style: solid;
+    border-color: var(--grapefruit);
+    font-size: 1em;
+    padding: 0.3em;
+    width: 5em;
+    color: var(--kressegruen);
+    position: flex; right: 0em;
+}
+button.hinweisbutton:active {
+    background-color: var(--kressegruen);
+    color: var(--grapefruit);
+}
+.hinweistext {
+    text-align: center;
+    margin: 0.5em 0em 1.2em 0em;
+}
+button.animbutton {
+    background-color: var(--kressegruen);
+    border-radius: 0.4em;
+    border-style: none;
+    border-width: thin;
+    border-color: var(--kressegruen);
+    box-shadow: 0em 0em 0.5em 0em var(--creme);
+    font-size: 1em;
+    padding: 0.7em;
+    color: var(--creme);
+}
+button.animbutton:active {
+    background-color: var(--creme);
+    color: var(--kressegruen);
+    box-shadow: 0em 0em 0.5em 0em var(--kressegruen);
+}
+.animation {
+    display: none;
+}
+.block {
+    width: 11em;
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    margin: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+}
+.blockinhalt {
+    width: 80%;
+    max-height: 4em;
+    padding: 0.5em;
+}
+div .hintergrund {
+    background-color: var(--sandgrau);
+    border-radius: 0.5em;
+    height: 20em;
+    width: 96%;
+    margin: 2%;
+}
+.infoimg {
+    width: 4em;
+}
+.infotext { 
+    box-shadow: 0em 0em 2em 0em var(--schmetterlingsblau);
+    padding: 1.5em 1.5em 1em 1.5em;
+    border-radius: 0.5em;
+    background-color: var(--grapefruit);
+    position: absolute; left: 1em; top: 1em;
+    max-width: 87%;
+    overflow: auto;
+    color: var(--antikblau);
+}
+button.infobutton {
+    background-color: var(--schmetterlingsblau);
+    border-radius: 0.4em;
+    border-style: none;
+    box-shadow: 0em 0em 0.7em 0em var(--creme);
+    font-size: 1em;
+    padding: 0.3em 0.5em;
+    color: var(--creme);
+    float: right;
+}
+.hintergrundwissen { 
+    box-shadow: 0em 0em 2em 0em var(--creme);
+    padding: 1.5em 1.5em 1em 1.5em;
+    border-radius: 0.5em;
+    background-color: var(--antikblau);
+    position: absolute; left: 1em; top: 1em;
+    max-width: 87%;
+    overflow: auto;
+    color: var(--grapefruit);
+}
+button.hintergrbutton {
+    background-color: var(--grapefruit);
+    border-radius: 0.4em;
+    border-style: none;
+    box-shadow: 0em 0em 0.7em 0em var(--creme);
+    font-size: 1em;
+    padding: 0.3em 0.5em;
+    color: var(--antikblau);
+    float: right;
+}

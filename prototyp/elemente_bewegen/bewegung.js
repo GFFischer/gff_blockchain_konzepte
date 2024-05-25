@@ -15,7 +15,7 @@ Zielpositionen (horizontal oder vertikal) erreicht (oder durch den letzten Inter
 */
 
 function bewegeObjekt(objektID, unterbrechungID, abbruchID, neustartID, startpos_x, startpos_y, tempo_x, tempo_y, 
-                      zielpos_x, zielpos_y, intervall) {
+                      zielpos_x, zielpos_y) {
     if (tempo_x != 0 || tempo_y != 0) {
         var objekt = document.getElementById(objektID);
         function starteBewegung() {
@@ -39,7 +39,7 @@ function bewegeObjekt(objektID, unterbrechungID, abbruchID, neustartID, startpos
                 clearInterval(bewegung);
             }
         }
-        var bewegung = setInterval(starteBewegung, intervall);
+        var bewegung = setInterval(starteBewegung, 35);
     }  
 }
 

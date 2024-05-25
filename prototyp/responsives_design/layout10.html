@@ -1,0 +1,137 @@
+<! Diese Datei dient zur Klärung, ob wie das responsive Design der Webseite realisiert werden kann.
+Viel spannender als diese Anweisungen ist daher die CSS-Datei design.css -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Layout 10</title>
+        <script type="text/javascript" src="un_sichtbar_machen.js"></script>
+        <link rel="stylesheet" href="design10.css">
+    </head>
+    <body>
+        <div class="randr"></div>
+        <div class="randl"></div>
+        <nav id="navmenu">
+            <ul onclick="document.getElementById('navmenu').classList.remove('sichtbarkeit')">
+                <li onclick="oeffne_animation(0)">Startseite</li>
+                <li onclick="oeffne_animation(1)">Animation 1</li>
+                <li onclick="oeffne_animation(2)">Animation 2</li>
+                <li onclick="oeffne_animation(3)">Animation 3</li>
+            </ul>
+        </nav>
+        <img id="menu" src="hamburger_icon.png" class="menuicon" alt="Menü">
+        <script type="text/javascript">
+            document.getElementById("menu").addEventListener("click", () => {
+                document.getElementById('navmenu').classList.add('sichtbarkeit')
+            })
+        </script>
+        <div id="anim_0" class="mitte animation" style="display: inline;">
+            <h1>Das Layout im Überblick</h1>
+            <div id="warnhinweis" class="hinweis">
+                <p class="hinweistext">
+                    Ich bin ein Warnhinweis.<br>Bitte bestätige mich mit OK!
+                </p>
+                <button class="hinweisbutton" onclick="
+                    getElementById('warnhinweis').style='visibility: hidden';
+                ">OK</button>
+            </div>
+        </div>
+        <div id="anim_1" class="mitte animation">
+            <h1>Einen Block hinzufügen</h1>
+            <p>Hier seht ihr, wie man einen Block an eine Blockchain hinzufügen kann.</p>
+            <div class="hintergrund" style="width: 40em; "></div>
+            <button id="proto_hintergrundwissen" class="animbutton" style="margin-left: 2%;"
+            onclick="document.getElementById('text2').style='visibility: visible; z-index: 11';">Hintergrundwissen</button>
+            <div id="testblock1" class="block" style="position: absolute; left: 2em; top: 11em;">
+                <div class="block blockinhalt">
+                    Testblock 1
+                </div>
+            </div>
+            <div id="testblock2" class="block" style="position: absolute; left: 14em; top: 11em;">
+                <div class="block blockinhalt">
+                    Testblock 2
+                </div>
+            </div>
+            <div id="testblock3" class="block" style="visibility: hidden;">
+                <div class="block blockinhalt">
+                    Testblock 3
+                </div>
+            </div>
+            <button id="testblock3_button" class="animbutton" style="position: absolute; right: 2em; top: 7em;"
+                onclick="document.getElementById('testblock3').style=
+                    'position: absolute; left: 26em; top: 11em; visibility: visible';
+                ">Testblock 3 öffnen</button>
+            <div id="text1" class="infotext" style="visibility: hidden;">
+                Das ist ein Informationstext, mit dem erklärt wird, was genau auf dieser Animation eigentlich
+                dargestellt wird, was unter Umständen sehr kompliziert sein kann, es aber nicht muss. Das heisst,
+                ich wäre froh, wenn die erklärenden Texte sehr einfach geschrieben wären, klar formuliert und 
+                ohne unnötige Wiederholungen, also so gar nicht wie dieser Text, den ich nur auf die Schnelle
+                erfunden habe, um irgendwas hier anzeigen zu können. <br>
+                <button id="schliessen2" class="infobutton"
+                onclick="document.getElementById('text1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="text2" class="hintergrundwissen" style="visibility: hidden;">
+                <p>
+                    Und wie jetzt hier?</br>
+                    Hier handelt es sich um Hintergrundwissen. Das ist in diesem Falle natürlich nicht allzu viel,
+                    das heisst hier gibt es nicht viel zu schreiben, weshalb dieser Satz nun auch künstlich in die
+                    Länge gezogen wird, um ein bisschen Text zu haben, der nach etwas ausschaut und nicht nur ein
+                    kurzer Kommentar ist, der aus zwei Zeilen besteht.
+                </p>
+                <button class="hintergrbutton"
+                        onclick="document.getElementById('text2').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <img id="proto_erklaerung" src="infotext.png" alt="Erklärung" class="infoimg"
+                style="position: absolute; top: 17em; left: 6em;"
+                onclick="document.getElementById('text1').style='visibility: visibible; z-index: 20;'">
+        </div>
+        
+        <div id="anim_2" class="mitte animation">
+            <div class="hintergrund" style="height: 15em;"></div>
+            <div id="testblock4" class="block" style="position: absolute; left: 2em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 4 von Animation 2
+                </div>
+            </div>
+            <div id="testblock5" class="block" style="position: absolute; left: 14em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 5 von Animation 2
+                </div>
+            </div>
+            <button id="testblock6_button" class="animbutton" style="position: absolute; right: 2em; top: 2em;" 
+                onclick="document.getElementById('testblock6').style=
+                    'position: absolute; left: 26em; top: 6em; visibility: visible';
+            ">Testblock 6 öffnen</button>
+            <div id="testblock6" class="block" style="visibility: hidden;">
+                <div class="block blockinhalt">
+                    Testblock 6 von Animation 2
+                </div>
+            </div>
+        </div>
+
+        <div id="anim_3" class="mitte animation">
+            <div class="hintergrund" style="height: 15em"></div>
+            <div id="testblock7" class="block" style="position: absolute; left: 2em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 7 der 3. Animation
+                </div>
+            </div>
+            <div id="testblock8" class="block" style="position: absolute; left: 14em; top: 6em;">
+                <div class="block blockinhalt">
+                    Testblock 8 von 3. Animation
+                </div>
+            </div>
+            <div id="testblock9" class="block" style="visibility: hidden;">
+                <div class="block blockinhalt">
+                    Testblock 9 der 3. Animation
+                </div>
+            </div>
+            <button id="testblock9_button" class="animbutton" style="position: absolute; right: 2em; top: 2em;"
+                onclick="document.getElementById('testblock9').style=
+                    'position: absolute; left: 26em; top: 6em; visibility: visible';
+                ">Testblock 9 öffnen</button>
+        </div>
+    </body>
+</html>
