@@ -5,7 +5,9 @@
 |   0.1   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 19.04.2024 | Template erstellt |
 |   0.2   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 20.04.2024 | Pkt 1.1 bis 1.2 bearbeitet |
 |   0.3   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 22.04.2024 | Pkt 2 bis 4 bearbeitet |
-|   0.4   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 23.05.2024 | Pkt 2 bis 4 bearbeitet |
+|   0.4   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 23.05.2024 | Pkt 5.1 bearbeitet |
+|   0.4   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 27.05.2024 | Pkt 5.1 bearbeitet |
+
 
 
 # 1 Einführung
@@ -134,6 +136,186 @@ einzelnen Animationen sowie das Aufpoppen von Warnhinweisen, erklärenden und we
 über das Sichtbar-Machen und Verstecken von einzelnen html-Kontainern bzw. html-Elementen geregelt wird.
 
 ### JavaScript
+
+**bjk_funktionensammlung.js**
+
+In dieser Datei befinden sich alle Funktionen, die beim Anwenden der Applikation mehrmals verwendet werden und sich nicht 
+nur auf eine konkrete Animation beziehen.
+
+* **umwandleInDez**(zahl, basis) <br>
+  Diese Funktion bekommt eine Zahl und deren Basis (z.B. 2 für eine binäre Zahl, 16 für eine hexadezimale Zahl) übergeben
+  und gibt die entsprechende Dezimalzahl zurück.
+* **umwandleDez**(dezZahl, basis) <br>
+  Diese Funktion bekommt eine Dezimalzahl und die Basis a des a-adischen Zahlensystems, in das die Dezimalzahl umgewandelt
+  werden soll, übergeben und gibt die umgewandelte Zahl als String zurück.
+* **umwandleDezInHashwert**(dezZahl) <br>
+  Diese Funktion bekommt eine Dezimalzahl übergeben und gibt eine achtstellige, hexadezimale Zahl als String zurück, der
+  führende Nullen hinzugefügt werden, falls die übergebene Zahl kleiner als 16<sup>7</sup> ist. Ist die übergebene Zahl
+  grösser oder gleich 16<sup>8</sup, wird sie vor der Umwandlung modulo 168 gerechnet.
+* **umwandleHexInBin**(hexZahl) <br>
+  Diese Funktion bekommt eine hexadezimale Zahl übergeben und gibt die entsprechende binäre Zahl zurück.
+* **umwandleBinInHex**(binZahl) <br>
+  Diese Funktion bekommt eine binäre Zahl übergeben und gibt die entsprechende hexadezimale Zahl zurück.
+* **pruefeEingabeText**(eingabe) <br>
+  Diese Funktion prüft, ob der als Parameter übergebene String (*eingabe*) ausschliesslich aus Buchstaben, Leerzeichen sowie
+  den Satzzeichen . , ! ? besteht.
+* **pruefeEingabeZahl**(eingabe) <br>
+  Diese Funktion prüft, ob der als Parameter übergebene String (*eingabe*) ausschliesslich aus Ziffern besteht.
+* **pruefeEingabe1bis3**(eingabe) <br>
+  Diese Funktion prüft, ob es sich bei dem als Parameter übergebenen String (*eingabe*) entweder um die Ziffer 1 oder die
+  Ziffer 2 oder die Ziffer 3 handelt.
+* **zeitstempel**() <br>
+  Diese Funktion gibt bei ihrer Ausführung das aktuelle Datum und die aktuelle Uhrzeit als String in der Form dd.mm.jjjj
+  hh:mm:ss,ttt zurück, wobei t für Tausendstelsekunden (Millisekunden) steht.
+* **berechneHash**(eingabe) <br>
+  Diese Funktion nimmt einen String (*eingabe*) entgegen und berechnet mithilfe der Implementation des SHA256-Algorithmus in
+  den Dateien jshashes.js und hash.js einen Hashwert auf den eingegebenen String. Vom errechneten Wert, der als hexadezimale
+  Zahl dargestellt wird, werden die ersten acht Zeichen als String zurückgegeben, wobei sämtliche Buchstaben in den
+  hexadezimalen Zahlen als Kleinbuchstaben dargestellt werden.
+* **bewegeObjekt**(objektID, unterbrechungID, abbruchID, neustartID, startposX, startposY, tempoX, tempoY, zielposX, zielposY) <br>
+  Dies ist die zentrale Funktion, mit der absolut positionierte html-Elemente animiert, d.h. bewegt werden. Sie bekommt zunächst
+  die IDs des Elements, das bewegt werden soll (*objektID*), übergeben. <br>
+  Die nächsten Parameter sind die IDs der Buttons, mit denen die Bewegung unterbrochen, abgebrochen oder neu gestartet werden
+  kann (*unterbrechungID, abbruchID, neustartID*). Allen Buttons wird in der Funktion ein Event Listener hinzugefügt, sodass
+  beim Klicken eines dieser Buttons mit *clearInterval(bewegung)* die der mit *setInterval* der Variablen *bewegung*
+  zugewiesene Bewegung stoppt. <br>
+  Die nächsten Parameter betreffen die Werte, mit denen die CSS-Anweisungen left (*starposX*) und top (*startposY*) zu Beginn der
+  Bewegung des Elements belegt sind. Die übergebenen Werte sind Zahlen, die beim Ausführen der Funktion zu einem String konvertiert
+  werden, dem die Masseinheit *em* angehängt wird. <br>
+  Die Parameter *tempoX* und *tempoY* sind ebenfalls Zahlen, die angeben, um wieviel die Werte von *left* und *top* pro Intervall
+  geändert werden sollen. Werden positive Zahlen übergeben, bewegt sich das Element nach rechts bzw. unten, werden negative Zahlen
+  übergeben, bewegt sich das Element nach links bzw. oben. <br>
+  Die Parameter *zielposX* und *zielposY*  geben an, wann die Bewegung des Elements gestoppt wird, wobei die Bewegung bereits
+  stoppt, wenn einer dieser beiden Parameter erreicht wird. Wie bei *startposX* und *startposY* werden auch hier Zahlen übergeben,
+  welche die Position in der Masseinheit *em* angeben. <br>
+  Anzumerken ist, dass für jede Animation, in der ein oder mehrere Elemente miteinander oder automatisch nacheinander bewegt werden,
+  eine eigene asynchrone Funktion erstellt werden muss, in der genau bestimmt wird, was beim Klicken auf einen Button geschieht
+  (z.B. welche andere Buttons oder sonstige Elemente sichtbar werden oder verschwinden, oder wie beim Abbruch alle zu bewegenden
+  Elemente die Zielposition einnehmen, oder wie nach einer Unterbrechung die Bewegung des Elements an genau der gleichen Position
+  fortgesetzt wird, …) oder welche Elemente in welcher Reihenfolge und mit welchem zeitlichen Abstand miteinander oder
+  hintereinander bewegt werden.
+* **positionX**(objektID) <br>
+  Diese Funktion bekommt die ID eines absolut positionierten html-Elements übergeben (*objektID*), liest den Wert, mit dem in der
+  Masseinheit *em* die CSS-Eigenschaft *left* belegt ist, aus und gibt diesen Wert als reine Zahl ohne Masseinheit zurück.
+* **positionY**(objektID) <br>
+  Diese Funktion bekommt die ID eines absolut positionierten html-Elements übergeben (*objektID*)  liest den Wert, mit dem in der
+  Masseinheit *em* die CSS-Eigenschaft *top* belegt ist, aus und gibt diesen Wert als reine Zahl ohne Masseinheit zurück.
+* **const verzoegerung** <br>
+  Die Konstante *verzoegerung* ist eine Anweisung, der ein Parameter *delay* übergeben wird, sodass die Ausführung eines Skripts
+  um so viele Millisekunden wie im Parameter *delay* angegeben unterbrochen wird. Es handelt sich um eine Hilfskonstruktion, in der
+  über die Anweisung *setTimeout* die Möglichkeit geschaffen wird, die Ausführung der nächsten Anweisung des Skripts um eine
+  gewisse Zeit zu verzögern. Sie wird in der asynchronen Funktion, mit welcher der Ablauf der gesamten Bewegung in der Animation
+  festgelegt wird, mit der Anweisung *await* verwendet.
+
+**jshashes.js, hash.js**
+
+Beide Dateien beinhalten die JavaScript Implementation von üblichen Hashfunktionen, zur Verfügung gestellt von Tomas Aparicio, 
+Paul Johnston und Angel Martin, welche unter https://github.com/h2non/jshashes zu finden ist. Ihre Verwendung ist bei der Angabe 
+eines Copyright-Hinweises gestattet. Konkret daraus verwendet wird in der Applikation die Implementierung des SHA256-Algorithmus.
+
+**bjk_variablen.js**
+
+Diese Datei beinhaltet alle Variablen, deren Werte bei jedem Laden der Seite einen Anfangswert bekommen. Dieser Anfangswert wird 
+entweder zufällig generiert oder aus einer vorgegebenen Auswahl zufällig ausgewählt. Daher befinden sich in dieser Datei auch 
+alle zur Auswahl stehenden Werte und alle Funktionen, die diese zufällige Auswahl durchführen und die entsprechenden Werte den 
+Variablen zuweisen.
+
+Ebenso findet sich in dieser Datei die initiale Zuweisung von Werten an alle Variablen, deren Inhalt bei der Ausführung der
+Applikation durch den User geändert werden kann und auf die in mehreren Animationen zugegriffen wird. Der Grund für diese
+Initialisierungen liegt in der Möglichkeit, dass der User direkt zu allen Animationen navigieren kann und diese auch dann
+funktionieren sollen, wenn der User davor noch keinen Wert für die verwendeten Variablen eingegeben hat.
+
+**bjk_erklaerende_texte.js**
+
+In dieser Datei befindet sich der html-Code für alle erklärenden und weiterführenden Texte, die in der Applikation aufgepoppt 
+werden können, wobei jeder einzelne Text einer gesonderten Variable zugewiesen wird. Die Auslagerung der Texte in eine eigene 
+js-Datei dient einerseits dazu, den Code in der html-Datei *blockchainkonzepte.html* übersichtlicher zu gestalten, und 
+andererseits dazu, die Wartbarkeit der Applikation zu fördern, weil dadurch die einzelnen Texte ohne grossen Aufwand gefunden
+und gegebenenfalls verändert oder ersetzt werden können.
+
+Die Namen der Variablen werden nach folgenden Regeln vergeben:
+* Alle Namen beginnen mit "a".
+* Es folgt die Nummer der Animation, wie sie in den Use-cases im Pflichtenheft vergeben worden ist.
+* Danach folgt als Trennzeichen ein Unterstrich ("_").
+* Zur Identifikation, ob es sich um einen erklärenden oder um einen weiterführenden Text handelt, folgt dann entweder "info" oder
+  "hintergr".
+* Abgeschlossen wird der Variablenname mit einer fortlaufenden Nummer, beginnend bei 1.
+
+Beispiele: a3c_info1, a4b_hinterg1, a1c_info2, …
+
+In der Datei selbst sind die Variablennamen alphabetisch sortiert. Ganz am Ende befindet sich noch eine Variable mit dem Namen 
+*copyright_hashes*, welcher der html-Code des Copyright-Hinweises für die Implementierung der verwendeten Hash-Funktion in
+JavaScript, der bei jeder Animation aufgepoppt werden kann, wo die Hashfunktion verwendet wird, zugewiesen wird.
+
+**bjk_code_generierung.js**
+
+Beim Starten der Applikation durch das Laden der html-Seite *blockchainkonzepte.html* wird der gesamte Code geladen. Damit 
+Eingaben des Users auch Auswirkungen auf die Animationen haben, müssen Teile des html-Codes während der Anwendung der Applikation 
+angepasst und verändert werden. Die Lösung dieses Problems liegt darin, dass die betreffenden Teile des html-Codes durch das 
+Ausführen von JavaScript-Funktionen beim Navigieren zu den betreffenden Animationen neu generiert werden und dabei die Werte in 
+den Variablen neu ausgelesen und verarbeitet werden.
+
+Da sich der jeweilige html-Code jeweils auf eine konkrete Animation bezieht, haben die Funktionen keine Parameter, und die Namen 
+der Funktionen in dieser Datei werden gemäss folgenden Regeln gebildet:
+* Alle Namen beginnen mit "a".
+* Es folgt die Nummer der Animation, wie sie in den Use-cases im Pflichtenheft vergeben worden sind.
+* Danach folgt als Trennzeichen ein Unterstrich ("_").
+* Schliesslich folgt ein Name, der beschreibt, welcher Teil des Codes durch diese Funktion generiert wird.
+
+Ganz am Ende der Datei befindet sich die Funktion *mining()*, mit der in den Animationen 5a und 5b das Schützen der Blöcke durch
+Proof-of-Work simuliert wird. Auch sie generiert html-Code, indem sie die sich ändernde Nonce und den jeweils berechneten
+Hashwert in den in der Animation dargestellten Blöcken ausgibt.
+
+* **a1b_inhaltBlock3**() <br>
+  Neu generiert wird der Inhalt des dritten Blocks (Variable xxxxxx), der vom User in Animation 1a eingegeben oder verändert
+  werden kann und der daraus berechnete Hashwert.
+* **a1c_inhalteBloecke**() <br>
+  Neu generiert werden die Inhalte des dritten und vierten Blocks (Variablen xxxxxxxxxxxx und xxxxxxxxxxx), die vom User in den
+  Animationen 1a und 1b eingegeben oder verändert werden können, die daraus berechneten Hashwerte sowie die Hashwerte der
+  jeweils vorherigen Blöcke.
+* **a1d_inhalteBloecke**() <br>
+  Neu generiert werden die Inhalte des dritten, vierten und fünften Blocks (Variablen xxxxxxxxxxxx, xxxxxxxxxxxxxxx und xxxxxxxxxxx),
+  die vom User in den Animationen 1a, 1b und 1c eingegeben oder verändert werden können, die daraus berechneten Hashwerte sowie die
+  Hashwerte der jeweils vorherigen Blöcke.
+* **a2b_nameKnotenNeu**() <br>
+  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable xxxxxxx), sowohl ###################.
+
+
+
+  
+* **a2b_nameKnotenNeu**() <br>
+  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable xxxxxxx).
+* **mining**(nonceID, nonce, hashID, hashBlock, target, zeit, hashInhalt, hashVorherigerBlock, intervall, abbruchID, hakenID,
+  nextStartButtonID, nextBlockID) <br>
+  Diese Funktion bewirkt, dass für die übergebenen Werte eines Blocks einer Blockchain in einem bestimmten zeitlichen Intervall
+  eine neue Nonce geschaffen und ein neuer Hashwert berechnet und im in der Animation dargestellten Block ausgegeben wird und
+  sobald ein vorgegebenes Target unterschritten wird, ein Haken unterhalb des Blocks in der Animation angezeigt und die Funktion
+  beendet wird. <br>
+  Im Parameter *nonceID* wird die ID des html-Elements übergeben, in dem die Nonce des Blocks ausgegeben wird. Der Parameter
+  *nonce* ist eine achtstellige hexadezimale Zahl als String, der die Nonce repräsentiert, mit der das Mining gestartet werden
+  soll. <br>
+  Im Parameter *hashID* wir die ID des html-Elements übergeben, in dem der Hashwert des Blocks ausgegeben wird. Der Parameter
+  *hashBlock* ist ein Hashwert (achtstellige hexadezimale Zahl mit führenden Nullen als String), wobei vorgesehen ist, dass
+  dieser Hashwert bereits aus den Werten des Blocks zuvor berechnet worden ist. <br>
+  Der Parameter *target* ist eine achtstellige hexadezimale Zahl mit führenden Nullen als String, welche die Schwierigkeit des
+  Hashpuzzles angibt. Das bedeutet, dass der in der Funktion errechnete Hashwert kleiner sein muss als diese Zahl, damit die
+  Funktion beendet wird. <br>
+  Der Parameter *zeit* enthält einen Zeitstempel, an dem mit dem Mining begonnen worden ist, als String. <br>
+  Der Parameter *hashInhalt* beinhaltet die Hash-Referenz auf den Inhalt des Blocks. Der Parameter *hashVorherigerBlock*
+  beinhaltet die Hash-Referenz auf den vorherigen Block der dargestellten Blockchain. Beide Werte sind achtstellige hexadezimale
+  Zahlen als String. <br>
+  Der Parameter *intervall* ist eine Zahl, mit der in Millisekunden angegeben wird, in welchem Abstand eine neue Nonce generiert
+  und ein neuer Hashwert berechnet und ausgegeben werden soll. <br>
+  Der Parameter *abbruchID* beinhaltet die ID des Buttons, mit dem der Mining-Vorgang abgebrochen und die Funktion vorzeitig
+  beendet werden kann. <br>
+  Der Parameter *hakenID* beinhaltet die ID des Bildes eines Hakens, der angezeigt wird, wenn das Mining erfolgreich
+  abgeschlossen ist. <br>
+  Der Parameter *nextStartButtonID* beinhaltet die ID des Buttons, der nach dem Mining angezeigt wird und mit dem das Mining für
+  den nächsten dargestellten Block gestartet werden kann. <br>
+  Der Parameter *nextBlockID* beinhaltet die ID des nächsten dargestellten Blocks, für den im Anschluss die Mining-Funktion
+  ausgeführt werden kann.
+
+
 
 ### CSS
 
