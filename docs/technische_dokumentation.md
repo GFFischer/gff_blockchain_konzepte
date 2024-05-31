@@ -7,7 +7,7 @@
 |   0.3   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 22.04.2024 | Pkt 2 bis 4 bearbeitet |
 |   0.4   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 23.05.2024 | Pkt 5.1 bearbeitet |
 |   0.4   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 27.05.2024 | Pkt 5.1 bearbeitet |
-
+|   0.5   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 31.05.2024 | Pkt 5.1 bearbeitet |
 
 
 # 1 Einführung
@@ -134,6 +134,19 @@ unbewegten Grafiken und ohne die Möglichkeit zur Interaktion zur Verfügung ste
 Die Applikation und all ihre Teile werden zusammengefügt in einer einzigen html-Datei, wobei die Navigation zwischen den
 einzelnen Animationen sowie das Aufpoppen von Warnhinweisen, erklärenden und weiterführenden Texten usw. ausschliesslich
 über das Sichtbar-Machen und Verstecken von einzelnen html-Kontainern bzw. html-Elementen geregelt wird.
+
+Dabei ist es so, dass die Startseite sowie jede einzelne Animation in einem eigenen <div>-Kontainer zusammengefasst
+werden. Diese Kontainer bekommen die CSS-Klasse *.animation* zugewiesen, deren wichtigste Eigenschaften *display: none*
+(damit wird der ganze Kontainer standardmässig nicht angezeigt) und *position: relative* (damit alle absolut
+positionierten html-Elemente in den Animationen sich an der Position dieses übergeordneten Kontainers orientieren)
+sind. Innerhalb dieser <div>-Kontainer wird die Sichtbarkeit der einzelnen html-Elemente über die CSS-Eigenschaft 
+*visibility* geregelt.
+
+Diese IDs dieser Kontainer werden nach folgenden Regeln gebildet:
+* Alle IDs beginnen mit "anim_".
+* Es folgt die Nummer der Animation, wie sie in den Use-cases im Pflichtenheft vergeben worden ist.
+* Die Startseite bekommt die ID "anim_0".
+
 
 ### JavaScript
 
@@ -278,13 +291,55 @@ Hashwert in den in der Animation dargestellten Blöcken ausgibt.
   die vom User in den Animationen 1a, 1b und 1c eingegeben oder verändert werden können, die daraus berechneten Hashwerte sowie die
   Hashwerte der jeweils vorherigen Blöcke.
 * **a2b_nameKnotenNeu**() <br>
-  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable xxxxxxx), sowohl ###################.
-
-
-
-  
-* **a2b_nameKnotenNeu**() <br>
   Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable xxxxxxx).
+* **a2c_inhaltKnotenNeu**() <br>
+  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable xxxxxxx) sowie die dem neuen Knoten
+  zugewiesenen Adressen, abhängig von der in Animation 2b eingegebenen Anzahl (Variable xxxxxxxxxxxxxx).
+* **a3a_tabelleAdressenKnotenNeu**() <br>
+  Neu generiert wird die Tabelle mit den Adressen des neuen Knotens und jeweils dem dazugehörenden privaten Schlüssel, abhängig
+  von der in Animation 2b eingegebenen Anzahl von Adressen (Variable xxxxxxxxxxxxx).
+* **a3a_eingabeGuthaben**() <br>
+  Neu generiert wird der html-Code für das Eingabeformular der Kontostände, abhängig von der in Animation 2b eingegebenen
+  Anzahl (Variable xxxxxxxxxxxxxx).
+* **a3b_tabelleAdressenKnotenNeuMitGuthaben**() <br>
+  Neu generiert wird die Tabelle mit den Adressen des neuen Knotens, dem jeweils dazugehörenden privaten Schlüssel und den
+  "Kontoständen" der Adressen, abhängig der in Animation 2b eingegebenen Anzahl (Variable xxxxxxxxx) und den in Animation 3a
+  eingegebenen Kontoständen (Array-Werte xxxxxxxxxxxxxxxxxxx).
+* **a3b_tabelleAdressenFremdeKnoten**() <br>
+  Neu generiert wird eine Tabelle mit den Adressen aller Knoten ausgenommen des neuen Knotens.
+* **a3b_auswahllisteAuftraggeber**() <br>
+  Neu generiert wird die Auswahlliste der zur Verfügung stehenden Adressen für das Formular zur Eingabe von Daten für eine
+  Transaktion, abhängig von der in Animation 2b eingegebenen Anzahl von Adressen (Variable xxxxxxxxxxxxx).
+* **a3b_errechneTransaktionsgebuehr**(betrag) <br>
+  Diese Funktion bekommt als Parameter einen Betrag für eine Transaktion (*betrag*) übergeben, errechnet abhängig von der
+  Höhe des eingegebenen Betrags eine Transaktionsgebühr und gibt diese als ganze Zahl zurück. Mindestgebühr für jede
+  Transaktion sind 3 SiC, ab einem Betrag von 100 SiC werden 3 Prozent des Betrags (abgerundet auf eine ganze Zahl) als
+  Transaktionsgebühr zurückgegeben.
+* **a3b_stringTransaktion**() <br>
+  Diese Funktion gibt die Konkatenation der Werte der Variablen xxxxxxxxxxxxxxxxxxxxx als String zurück, um daraus den
+  Hashwert der Transaktion zu berechnen.
+* **a3b_pruefeEingabeAdresseEmpfaenger**() <br>
+  Diese Funktion prüft, ob die vom User eingegebenen Daten auch tatsächlich unter den Adressen der Knoten des
+  Peer-to-Peer-Netzwerkes zu finden sind und gibt entweder des Index der Adresse im Array xxxxxxxxxxxxxxxx oder,
+  falls die Adressen in diesem Array nicht vorhanden ist, -1 zurück.
+* **a3c_berechneSignatur**(basis, exp, n) <br>
+  Diese Hilfsfunktion errechnet in einer Schleife schrittweise den Wert der Gleichung *basis<sup>exp</sup> mod n* und
+  gibt diesen als Dezimalzahl zurück.
+* **a3c_erstelleDigitaleSignatur**(hashTransaktion, idxAdresse) <br>
+  Diese Funktion generiert den html-Code für einzelnen Felder der Tabelle, in der das Errechnen einer digitalen Signatur
+  veranschaulicht wird. Sie übernimmt den Hashcode für die Transaktion (*hashTransaktion*), teilt ihn in vier Teile und
+  berechnet für jeden Teil des hexadezimalen Codes die entsprechende binäre Zahl, die entsprechende Dezimalzahl und
+  verschlüsselt diese mit der Funktion *a3c_berechneSignatur()*. Für die Werte des privaten Schlüssels (d, n) bekommt die
+  Funktion einen Index (ganze Zahl von 0 bis 2) übergeben, mit dem aus dem Array *adressenAuswahl* die Werte für d und n
+  ausgewählt werden.
+* **a3d_pruefeDigitaleSignatur**(hashTransaktion, idxAdresse) <br>
+  Diese Funktion generiert den html-Code für einzelnen Felder der Tabelle, in der das Prüfen einer digitalen Signatur
+  veranschaulicht wird. Sie übernimmt den Hashcode für die Transaktion (*hashTransaktion*), teilt ihn in vier Teile,
+  berechnet für jeden Teil die entsprechende Dezimalzahl und entschlüsselt diese mit der Funktion *a3c_berechneSignatur()*.
+  Für die Werte des öffentlichen Schlüssels (e, n) bekommt die Funktion einen Index (ganze Zahl von 0 bis 2) übergeben,
+  mit dem aus dem Array *adressenAuswahl* die Werte für e und n ausgewählt werden.
+
+
 * **mining**(nonceID, nonce, hashID, hashBlock, target, zeit, hashInhalt, hashVorherigerBlock, intervall, abbruchID, hakenID,
   nextStartButtonID, nextBlockID) <br>
   Diese Funktion bewirkt, dass für die übergebenen Werte eines Blocks einer Blockchain in einem bestimmten zeitlichen Intervall
