@@ -9,6 +9,7 @@
 |   0.4   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 27.05.2024 | Pkt 5.1 bearbeitet |
 |   0.5   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 31.05.2024 | Pkt 5.1 bearbeitet |
 |   0.6   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 02.06.2024 | Pkt 5.1 bearbeitet |
+|   0.7   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 03.06.2024 | Pkt 5.1 bearbeitet |
 
 
 # 1 Einführung
@@ -365,13 +366,15 @@ Konkret handelt es sich um folgende Funktionen:
   Blockchain angezeigt werden und die von den Eingaben in den Animationen 3b und 3d abhängig sind. (Diese Funktion wird auch
   zu Beginn der Animation 4c ausgeführt.)
 * **a4c_aendereDaten**() <br/>
-  Neu generiert werden jene Daten der Transaktionen, die der User über das Formular in der Animation 4c verändert, ebenso
-  sämtliche Hash-Referenzen, die davon betroffen sind. Die Funktion bewirkt ebenso, dass sämtliche geänderten Werte und
-  Hash-Referenzen farblich hervorgehoben werden, dass die Verknüpfung vom zweiten zum dritten angezeigten Block verschwindet
-  und der Pfeil, welcher die Hash-Referenz auf den vorherigen Block andeutet, auf ein grosses Fragezeichen verweist.
+  Neu generiert werden während der Ausführung der Animation 4c jene Daten der Transaktionen, die der User über das Formular
+  verändert   (Variablen xxxxxxxxxxxxxxxx), ebenso sämtliche Hash-Referenzen, die davon betroffen sind (Variablen xxxxxxxxxxx)
+  Die Funktion bewirkt ebenso, dass sämtliche geänderten Werte und Hash-Referenzen farblich hervorgehoben werden, dass die
+  Verknüpfung vom zweiten zum dritten angezeigten Block verschwindet und der Pfeil, welcher die Hash-Referenz auf den vorherigen
+  Block andeutet, auf ein grosses Fragezeichen verweist.
 * **a5a_datenBlock1**() <br/>
-
-
+  Neu generiert werden die Daten für die Hash-Referenzen auf den Inhalt (Variable xxxxxxxx) und den vorherigen Block (Variable xxxxxxxxxxxx).
+* **a5b_datenBloecke**() <br/>
+  Neu generiert werden die Daten für die Hash-Referenzen auf den Inhalt (Variable xxxxxxxx) und den vorherigen Block (Variable xxxxxxxxxxxx).
 * **a5ab_mining**(nonceID, nonce, hashID, hashBlock, target, zeit, hashInhalt, hashVorherigerBlock, intervall, abbruchID, hakenID,
   nextStartButtonID, nextBlockID) <br>
   Mit dieser Funktion wird in den Animationen 5a und 5b das Schützen der Blöcke durch Proof-of-Work simuliert. Auch sie
