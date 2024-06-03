@@ -157,6 +157,13 @@ Diese IDs dieser Kontainer werden nach folgenden Regeln gebildet:
 In dieser Datei befinden sich alle Funktionen, die beim Anwenden der Applikation mehrmals verwendet werden und sich nicht 
 nur auf eine konkrete Animation beziehen.
 
+* **oeffneAnimation**(nummer) <br>
+  Diese Funktion funktioniert mit der externen Variable *animAktuell*, in der die Zahl gespeichert wird, die angibt, welche
+  Animation aktuell sichtbar ist, und hat als Bedingung, dass die IDs der Animationen einheitlich bezeichnet werden und
+  zwar mit "anim_" gefolgt von der Nummer der Animation. Die Funktion nimmt als Parameter die Nummer der zu öffnenden
+  Animation entgegen (*nummer*). Bei der aktuell geöffneten Animation wird die CSS-Eigenschaft *display: none* gesetzt,
+  bei der zu öffnende Animation *display: inline*. Der Variable *animAktuell* wird die Nummer der zu öffnenden Animation
+  zugewiesen.
 * **umwandleInDez**(zahl, basis) <br>
   Diese Funktion bekommt eine Zahl (*zahl*) und deren Basis (*basis*, z.B. 2 für eine binäre Zahl, 16 für eine hexadezimale
   Zahl) übergeben und gibt die entsprechende Dezimalzahl zurück.
@@ -240,6 +247,26 @@ Applikation durch den User geändert werden kann und auf die in mehreren Animati
 Initialisierungen liegt in der Möglichkeit, dass der User direkt zu allen Animationen navigieren kann und diese auch dann
 funktionieren sollen, wenn der User davor noch keinen Wert für die verwendeten Variablen eingegeben hat.
 
+Klassen und Funktionen:
+
+* **zufallsindizes**(anzahl, array) <br>
+  Diese Funktion wählt eine bestimmte Anzahl (*anzahl*) an zufälligen Indizes eines Arrays (*array*) und gibt diese unsortiert in
+  einem neuen Array zurück. Über diese Indizes kann dann auf die entsprechenden Elemente in dem als Parameter übergebenen Array
+  zugegriffen und so eine zufällige Auswahl von Werten aus einem Array von Werten realisert werden. Durch eine if-Anweisung wird
+  sichergestellt, dass kein Index im zurückgegebenen Array mehrfach vorkommt.
+* **getName**(index) <br>
+  Diese Funktion gibt aus dem Array *nameAuswahl* einen Namen zurück. Der Parameter *index* bezieht sich dabei auf das Array
+  *indizesFuerNamen*, in dem beim Start der Applikation mit der Funktion *zufallsindizes()* die Indizes jener Elemente aus dem
+  Array *nameAuswahl* bestimmt wurden, die für die Namen der Knoten in Animation 2a verwendet werden.
+* **Adresse** <br>
+  Weil ein Schlüsselpaar (= eine Adresse in der Blockchain) aus den drei Werten e, d und n besteht, wird eine Klasse Adresse
+  geschaffen, um komplette Schlüsselpaare in einem Array speichern zu können.
+* **getAdresse**(index) <br>
+  Diese Funktion gibt aus dem Array *adressenAuswahl* eine Adresse (konkret: den öffentlichen Schlüssel) in der Form *e=nn, n=nn*
+  zurück. Der Parameter *index* bezieht sich dabei auf das Array *indizesFuerAdressen*, in dem beim Start der Applikation mit der
+  Funktion *zufallsindizes()* die Indizes jener Elemente aus dem Array *adressenAuswahl* bestimmt wurden, die für die Knoten des
+  Peer-to-Peer-Netzwerkes ab Animation 2b verwendet werden.
+
 **bjk_erklaerende_texte.js**
 
 In dieser Datei befindet sich der html-Code für alle erklärenden und weiterführenden Texte, die in der Applikation aufgepoppt 
@@ -292,6 +319,11 @@ Konkret handelt es sich um folgende Funktionen:
   Hashwerte der jeweils vorherigen Blöcke.
 * **a2b_nameKnotenNeu**() <br>
   Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable xxxxxxx).
+* **a2b_aendereAnzahlSchluessel**(zahl) <br>
+  Mit dieser Funktion wird die Anzahl der Adressen des in Animation 2a neu hinzugefügten Knotens gemäss der im Parameter *zahl*
+  übergebenen Zahl (1 bis 3) geändert, und zwar so, dass in den Arrays *adressenKnoten* und *privateSchluessel* die Einträge
+  beim Index 2 (falls der Wert 2 übergeben wurde) oder bei den Indizes 1 und 2 (falls der Wert 1 übergeben wurde) durch einen
+  leeren String ("") ersetzt werden.
 * **a2c_inhaltKnotenNeu**() <br>
   Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable xxxxxxx) sowie die dem neuen Knoten
   zugewiesenen Adressen, abhängig von der in Animation 2b eingegebenen Anzahl (Variable xxxxxxxxxxxxxx).
@@ -314,20 +346,21 @@ Konkret handelt es sich um folgende Funktionen:
   Diese Funktion bekommt als Parameter einen Betrag für eine Transaktion (*betrag*) übergeben, errechnet abhängig von der
   Höhe des eingegebenen Betrags eine Transaktionsgebühr und gibt diese als ganze Zahl zurück. Mindestgebühr für jede
   Transaktion sind 3 SiC, ab einem Betrag von 100 SiC werden 3 Prozent des Betrags (abgerundet auf eine ganze Zahl) als
-  Transaktionsgebühr zurückgegeben.
+  Transaktionsgebühr zurückgegeben. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim Start!)
 * **a3b_stringTransaktion**() <br>
   Diese Funktion gibt die Konkatenation der Werte der Variablen xxxxxxxxxxxxxxxxxxxxx als String zurück, um daraus den
   Hashwert der Transaktion zu berechnen.
 * **a3b_pruefeEingabeAdresseEmpfaenger**() <br>
   Diese Funktion prüft, ob die vom User eingegebenen Daten auch tatsächlich unter den Adressen der Knoten des
   Peer-to-Peer-Netzwerkes zu finden sind und gibt entweder den Index der Adresse im Array xxxxxxxxxxxxxxxx oder,
-  falls die Adressen in diesem Array nicht vorhanden ist, -1 zurück.
+  falls die Adressen in diesem Array nicht vorhanden ist, -1 zurück. (Diese Funktion wird **während** der Animation
+  ausgeführt, nicht beim Start!)
 * **a3c_tabelleTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
   eingegeben hat (Variablen xxxxxxxxxxxxxxxxx) bzw. welche automatisch vergeben worden sind (Variablen xxxxxxxxxxxxxxx).
 * **a3c_berechneSignatur**(basis, exp, n) <br>
   Diese Hilfsfunktion errechnet in einer Schleife schrittweise den Wert der Gleichung *basis<sup>exp</sup> mod n* und
-  gibt diesen als Dezimalzahl zurück.
+  gibt diesen als Dezimalzahl zurück. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim Start!)
 * **a3c_erstelleSignatur**(hashTransaktion, idxAdresse) <br>
   Diese Funktion generiert den html-Code für einzelnen Felder der Tabelle, in der das Errechnen einer digitalen Signatur
   veranschaulicht wird. Sie übernimmt den Hashcode für die Transaktion (*hashTransaktion*), teilt ihn in vier Teile und
@@ -351,7 +384,8 @@ Konkret handelt es sich um folgende Funktionen:
   veranschaulicht wird. Sie übernimmt den Hashcode für die Transaktion (*hashTransaktion*), teilt ihn in vier Teile,
   berechnet für jeden Teil die entsprechende Dezimalzahl und entschlüsselt diese mit der Funktion *a3c_berechneSignatur()*.
   Für die Werte des öffentlichen Schlüssels (e, n) bekommt die Funktion einen Index (ganze Zahl von 0 bis 2) übergeben
-  (*idxAdresse*), mit dem aus dem Array *adressenAuswahl* die Werte für e und n ausgewählt werden.
+  (*idxAdresse*), mit dem aus dem Array *adressenAuswahl* die Werte für e und n ausgewählt werden. (Diese Funktion wird
+  **während** der Animation ausgeführt, nicht beim Start!)
 * **a4a_datenTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
   eingegeben hat (Variablen xxxxxxxxxxxxxxxxx) bzw. welche automatisch vergeben worden (Variablen xxxxxxxxxxxxxxx) oder bei
@@ -370,11 +404,14 @@ Konkret handelt es sich um folgende Funktionen:
   verändert   (Variablen xxxxxxxxxxxxxxxx), ebenso sämtliche Hash-Referenzen, die davon betroffen sind (Variablen xxxxxxxxxxx)
   Die Funktion bewirkt ebenso, dass sämtliche geänderten Werte und Hash-Referenzen farblich hervorgehoben werden, dass die
   Verknüpfung vom zweiten zum dritten angezeigten Block verschwindet und der Pfeil, welcher die Hash-Referenz auf den vorherigen
-  Block andeutet, auf ein grosses Fragezeichen verweist.
+  Block andeutet, auf ein grosses Fragezeichen verweist. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim
+  Start!)
 * **a5a_datenBlock1**() <br/>
   Neu generiert werden die Daten für die Hash-Referenzen auf den Inhalt (Variable xxxxxxxx) und den vorherigen Block (Variable xxxxxxxxxxxx).
 * **a5b_datenBloecke**() <br/>
-  Neu generiert werden die Daten für die Hash-Referenzen auf den Inhalt (Variable xxxxxxxx) und den vorherigen Block (Variable xxxxxxxxxxxx).
+  Neu generiert werden die Daten für die Hash-Referenzen auf den Inhalt (Variable xxxxxxxx) und den vorherigen Block (Variable xxxxxxxxxxxx)
+  des ersten Blocks sowie die in Animation 5a gefundene Hash-Referenz des Blocks (Variable xxxxxxxxxx), welche gleichzeitig im zweiten Block
+  die Hash-Referenz für den vorherigen Block ist.
 * **a5ab_mining**(nonceID, nonce, hashID, hashBlock, target, zeit, hashInhalt, hashVorherigerBlock, intervall, abbruchID, hakenID,
   nextStartButtonID, nextBlockID) <br>
   Mit dieser Funktion wird in den Animationen 5a und 5b das Schützen der Blöcke durch Proof-of-Work simuliert. Auch sie
@@ -382,7 +419,7 @@ Konkret handelt es sich um folgende Funktionen:
   dargestellten Blöcken ausgibt. Dabei wird so vorgegangen, dass für die übergebenen Werte eines Blocks einer Blockchain in
   einem bestimmten zeitlichen Intervall eine neue Nonce geschaffen und ein neuer Hashwert berechnet wird und sobald ein
   vorgegebenes Target unterschritten wird, ein Haken unterhalb des Blocks in der Animation angezeigt und die Funktion
-  beendet wird. <br>
+  beendet wird. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim Start!) <br>
   Im Parameter *nonceID* wird die ID des html-Elements übergeben, in dem die Nonce des Blocks ausgegeben wird. Der Parameter
   *nonce* ist eine achtstellige hexadezimale Zahl als String, der die Nonce repräsentiert, mit der das Mining gestartet werden
   soll. <br>
@@ -406,7 +443,9 @@ Konkret handelt es sich um folgende Funktionen:
   den nächsten dargestellten Block gestartet werden kann. <br>
   Der Parameter *nextBlockID* beinhaltet die ID des nächsten dargestellten Blocks, für den im Anschluss die Mining-Funktion
   ausgeführt werden kann.
-
+* **a6a_inhaltKnotenNeu**() <br>
+  Neu generiert wird der Inhalt des neuen Knotens, der aus die dem neuen Knoten in Animation 2b zugewiesenen Adressen
+  besteht (Variable xxxxxxxxxxxxxx).
 
 
 ### CSS
