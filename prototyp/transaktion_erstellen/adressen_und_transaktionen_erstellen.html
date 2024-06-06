@@ -369,17 +369,16 @@ müssen, weil sie eventuell in einer anderen Animation gerade geändert worden s
                     if (pruefeEingabeAdresseEmpfaenger(empfaengerTransaktion) < 0) {
                         document.getElementById('hashwert').innerHTML = 'nicht okay';
                     } else {
-                        document.getElementById('adr_empfaenger').innerHTML = empfaengerTransaktion;
-                        zeitTransaktion = zeitstempel();
-                        document.getElementById('zeitstempel').innerHTML = zeitTransaktion;
-                        hashTransaktion = berechneHash(stringTransaktion());
-                        document.getElementById('hashwert').innerHTML = hashTransaktion;
-                        document.getElementById('gebuehr_formular').innerHTML = gebuehrTransaktion;
-                        document.getElementById('zeitstempel_formular').innerHTML = zeitTransaktion;
-                        document.getElementById('hashwert_formular').innerHTML = hashTransaktion;
-                        document.getElementById('formulard').style=
-                            'position: fixed; right: 2em; top: 22em; width: 26em; visibility: visible;';
+                        document.getElementById('hashwert').innerHTML = hashTransaktion;   
                     }
+                    document.getElementById('adr_empfaenger').innerHTML = empfaengerTransaktion;
+                    zeitTransaktion = zeitstempel();
+                    document.getElementById('zeitstempel').innerHTML = zeitTransaktion;
+                    hashTransaktion = berechneHash(stringTransaktion());
+                    document.getElementById('gebuehr_formular').innerHTML = gebuehrTransaktion;
+                    document.getElementById('zeitstempel_formular').innerHTML = zeitTransaktion;
+                    document.getElementById('hashwert_formular').innerHTML = hashTransaktion;document.getElementById('formulard').style=
+                        'position: fixed; right: 2em; top: 22em; width: 26em; visibility: visible;';
                 ">Transaktion bestätigen</button>
             </div>
             <div id="formulard" class="formular" style="visibility: hidden;">
@@ -580,7 +579,7 @@ Navigation zu dieser Animation neu geladen wird -->
                 var teil8 = verschluesseln(umwandleInDez(teil4, 16), dKey, nKey);
                 document.getElementById("hw5").innerHTML = teil5;
                 document.getElementById("hw6").innerHTML = teil6;
-                document.getElementById("hw7").innerHTML = teil6;
+                document.getElementById("hw7").innerHTML = teil7;
                 document.getElementById("hw8").innerHTML = teil8;
                 var eKey = adressenAuswahl[indizesFuerAdressen[0]].e;
                 var nKey = adressenAuswahl[indizesFuerAdressen[0]].n;
