@@ -195,6 +195,9 @@ nur auf eine konkrete Animation beziehen.
   den Dateien jshashes.js und hash.js einen Hashwert auf den eingegebenen String. Vom errechneten Wert, der als hexadezimale
   Zahl dargestellt wird, werden die ersten acht Zeichen als String zurückgegeben, wobei sämtliche Buchstaben in den
   hexadezimalen Zahlen als Kleinbuchstaben dargestellt werden.
+* **berechneSignatur**(basis, exp, n) <br>
+  Diese Hilfsfunktion errechnet in einer Schleife schrittweise den Wert der Gleichung *basis<sup>exp</sup> mod n* und
+  gibt diesen als Dezimalzahl zurück.
 * **bewegeObjekt**(objektID, unterbrechungID, abbruchID, neustartID, startposX, startposY, tempoX, tempoY, zielposX, zielposY) <br>
   Dies ist die zentrale Funktion, mit der absolut positionierte html-Elemente animiert, d.h. bewegt werden. Sie bekommt zunächst
   die IDs des Elements, das bewegt werden soll (*objektID*), übergeben. <br>
@@ -276,8 +279,8 @@ Variablen:
   Anfangswert ist der Text "raffinierten Ideen und Konzepten."
 * **a1c_block5Hash**: beinhaltet den Hashwert des fünften dargestellten Blocks, berechnet mit der Funktion *berechneHash()* aus dem String
   "Block5" + Inhalt des Blocks.
-* **a1d_inhaltBlock1Hash** bis **a1d_inhaltBlock5Hash**: beinhaltet den Hashwert des Inhalts des jeweils dargestellten Blocks,
-  berechnet mit der Funktion *berechneHash()*.
+* **a1d_inhaltBlock1Hash** bis **a1d_inhaltBlock5Hash**: die fünf Variablen beinhalten den Hashwert des Inhalts des jeweils
+  dargestellten Blocks, berechnet mit der Funktion *berechneHash()*.
 * **a2a_nameKnotenNeu**: beinhaltet den Namen, der dem neu hinzugefügten Knoten gegeben wird. Anfangswert: "Satoshi".
 * **nameAuswahl**: Array, das etwa 200 unterschiedliche Vornamen als Werte beinhaltet.
 * **indizesFuerNamen**: Array, das 10 unterschiedliche Zahlen als Werte beinhaltet, die jeweils einen Index aus dem Array *nameAuswahl*
@@ -286,8 +289,82 @@ Variablen:
   dargestellten Peer-to-Peer-Netzwerk zufällig hinzugefügt werden. Zugewiesen werden die Werte mit der Funktion *getName()*.
 * **adressenAuswahl**: Array, das 200 händisch erstellte, Zeile für Zeile dem Array hinzugefügte Objekte der Klasse Adresse als Werte
   beinhaltet.
-* * **indizesFuerAdressen**: Array, das 33 unterschiedliche Zahlen als Werte beinhaltet, die jeweils einen Index aus dem Array
+* **indizesFuerAdressen**: Array, das 33 unterschiedliche Zahlen als Werte beinhaltet, die jeweils einen Index aus dem Array
   *adressenAuswahl* repräsentieren, erstellt mit der Funktion *zufallsindizes()*.
+* **a2b_adressenKnoten**: Array, in dem alle der maximal 33 Adressen für die 11 Knoten des dargestellten Peer-to-Peer-Systems als
+  Strings gespeichert werden. Die Strings beginnen jeweils mit "K1:", "K2:" oder "K3:", gefolgt von der Adresse, wie sie von der
+  Funktion *getAdresse()* zurückgegeben wird. Die ersten drei Indizes des Arrays sind dabei für den neu hinzugefügten Knoten reserviert
+  und bekommen alle eine Adresse zugewiesen. Danach sind jeweils drei Indizes für einen der zehn Knoten reserviert. Vor dem Einfügen
+  der Adressen in den Array wird per Zufallszahl entschieden, ob der jeweilige Knoten eine, zwei oder drei Adressen erhält. Erhält
+  ein Knoten nicht alle drei Adressen zugewiesen, wird an den betreffenden Indizes statt der Adresse ein leerer String gespeichert.
+* **a2b_privateSchluessel**: Array, in dem die drei privaten Schlüssel des neu hinzugefügten Knoten als Strings gespeichert werden.
+  Beispiel für den ersten Eintrag: "K1<sub>priv</sub>: d=" + den Wert der Variable d der ersten Adresse.
+* **a3a_guthabenAdressen**: Array, in dem 33 Zufallszahlen im Spektrum von 0 bis 999 gespeichert werden, welche das Guthaben in SiC
+  der maximal 33 Knoten repräsentieren.
+* **a3b_senderTransaktion**: beinhaltet diejenige Adresse des neu hinzugefügten Knotens, von dem die Transaktion gesendet wird
+  und die aus aus dem Array *a2b_adressenKnoten* kommt. Anfangswert ist a2b_adressenKnoten[0].
+* **a3c_idxAdresseSender**: beinhaltet den Index der Sender-Adresse aus dem Array *a2b_adressenKnoten*. Anfangswert ist "0". (Der
+  Wert dieser Variable wird benötigt für die Funktion *a3c_erstelleSignatur()*.)
+* **a3b_empfaengerTransaktion**: beinhaltet die Adresse des Knotens, an den die Transaktion gesendet wird, in der Form, wie sie von
+  der Funktion *getAdresse()* zurückgegeben wird. Anfangswert ist getAdresse(3).
+* **a3b_betragTransaktion**: beinhaltet den zu überweisenden Betrag der Transaktion. Anfangswert ist "100".
+* **a3b_gebuehrTransaktion**: beinhaltet die Gebühr der Transaktion, berechnet mit der Funktion *a3b_errechneTransaktionsgebuehr()*.
+* **a3b_zeitTransaktion**: beinhaltet den Zeitstempel der Transaktion, berechnet mit der Funktion *zeitstempel()*
+* **a3b_hashTransaktion**: beinhaltet den Hashwert der Transaktion, berechnet mit der Funktion *berechneHash()* auf den String, der
+  von der Funktion *a3b_stringTransaktion()* zurückgegeben wird.
+* **a3c_hashTeil1** bis **a3c_hashTeil4**: die vier Variablen beinhalten jeweils zwei Zeichen des achtstelligen Hashcodes der
+  Transaktion (Variable *a3b_hashTransaktion*).
+* **a3c_dKey**: beinhaltet den Wert der Variable d der Sender-Adresse. Anfangswert: d von der ersten Adresse des hinzugefügten Knotens.
+* **a3c_nKey**: beinhaltet den Wert der Variable n der Sender-Adresse. Anfangswert: n von der ersten Adresse des hinzugefügten Knotens.
+* **a3c_signaturTeil1** bis **a3c_signaturTeil4**: die vier Variablen beinhalten die vier Teile der digitalen Signatur der Transaktion,
+  berechnet mit der Funktion *berechneSignatur()*.
+* **a4a_senderTransaktion**: beinhaltet die Sender-Adresse der zweiten dargestellten Transaktion. Anfangswert: a2b_adressenKnoten[6].
+* **a4a_empfaengerTransaktion**: beinhaltet die Empfänger-Adresse der zweiten dargestellten Transaktion. zurückgegeben von der
+  Funktion *getAdresse()*. Anfangswert ist getAdresse(21).
+* **a4a_betragTransaktion**: beinhaltet den zu Betrag der zweiten dargestellten Transaktion. Anfangswert ist eine Zufallszahl im
+  Spektrum von 0 bis zum Wert von a3a_guthabenAdressen[6].
+* **a4a_gebuehrTransaktion**: beinhaltet die Gebühr der Transaktion, berechnet mit der Funktion *a3b_errechneTransaktionsgebuehr()*.
+* **a4a_zeitTransaktion**: beinhaltet den Zeitstempel der Transaktion, berechnet mit der Funktion *zeitstempel()*
+* **a4a_hashTransaktion**: beinhaltet den Hashwert der Transaktion, berechnet mit der Funktion *berechneHash()* auf den String, der
+  von der Funktion *a4a_stringTransaktion()* zurückgegeben wird.
+* **a4a_hashTeil1** bis **a4a_hashTeil4**: die vier Variablen beinhalten jeweils zwei Zeichen des achtstelligen Hashcodes der
+  Transaktion (Variable *a4a_hashTransaktion*).
+* **a4a_dKey**: beinhaltet den Wert der Variable d der Sender-Adresse. Anfangswert: d von der Adresse mit dem Index 6 des Arrays
+  *indizesFuerAdressen*.
+* **a4a_nKey**: beinhaltet den Wert der Variable n der Sender-Adresse. Anfangswert: n von der Adresse mit dem Index 6 des Arrays
+  *indizesFuerAdressen*.
+* **a4a_signaturTeil1** bis **a4a_signaturTeil4**: die vier Variablen beinhalten die vier Teile der digitalen Signatur der Transaktion,
+  berechnet mit der Funktion *berechneSignatur()*.
+* **a4a_referenz45**: beinhaltet die Konkatenation der Variablen *a3b_hashTransaktion* + " " + *a4a_hashTransaktion*.
+* **a4a_hashReferenz45**: beinhaltet den Hashwert der beiden Hash-Referenzen, berechnet mit der Funktion *berechneHash()* auf den
+  String in der Variable *a4a_referenz45*.
+* **a4b_referenz6** bis **a4b_referenzB**: diese sechs Variablen beinhalten die Hash-Referenzen der dargestellten Transaktionen 6,
+  7, 8, 9, a und b, jeweils berechnet mit der Funktion *berechneHash()* auf einen String "Transaktion n" + den von der Funktion
+  *zeitstempel()* zurückgegebenen Wert.
+* **a4b_hashReferenz67**: beinhaltet den mit der Funktion *berechneHash()* auf die Konkatenation der Variablen *a4b_referenz6* + " " +
+  *a4b_referenz7* berechneten Hashwert.
+* **a4b_hashReferenz89**: beinhaltet den mit der Funktion *berechneHash()* auf die Konkatenation der Variablen *a4b_referenz8* + " " +
+  *a4b_referenz9* berechneten Hashwert.
+* **a4b_hashReferenzAB**: beinhaltet den mit der Funktion *berechneHash()* auf die Konkatenation der Variablen *a4b_referenzA* + " " +
+  *a4b_referenzB* berechneten Hashwert.
+* **a4b_hashReferenz0123**: beinhaltet einen Hashwert, berechnet mit der Funktion *berechneHash()* auf einen String "Referenz 0123" +
+  den von der Funktion *zeitstempel()* zurückgegebenen Wert.
+* **a4b_hashReferenz4567**: beinhaltet den mit der Funktion *berechneHash()* auf die Konkatenation der Variablen *a4b_hashReferenz45* +
+  " " + *a4b_referenz67* berechneten Hashwert.
+* **a4b_hashReferenz89AB**: beinhaltet den mit der Funktion *berechneHash()* auf die Konkatenation der Variablen *a4b_hashReferenz89* +
+  " " + *a4b_referenzAB* berechneten Hashwert.
+* **a4b_hashReferenzCDEF**: beinhaltet einen Hashwert, berechnet mit der Funktion *berechneHash()* auf einen String "Referenz cdef" +
+  den von der Funktion *zeitstempel()* zurückgegebenen Wert.
+* **a4b_hashBlock1**: beinhaltet den Hashwert des ersten dargestellten Blocks, berechnet mit der Funktion *berechneHash()* auf einen
+  String "Genesis-Block" + den von der Funktion *zeitstempel()* zurückgegebenen Wert.
+* **a4b_hashBlock2**: beinhaltet den Hashwert des zweiten dargestellten Blocks, berechnet mit der Funktion *berechneHash()* auf die
+  Konkatenation der Variablen *a4b_hashBlock1* + *a4b_hashReferenz4567*.
+* **a4b_hashBlock3**: beinhaltet den Hashwert des dritten dargestellten Blocks, berechnet mit der Funktion *berechneHash()* auf die
+  Konkatenation der Variablen *a4b_hashBlock2* + *a4b_hashReferenz89AB*.
+* **a4b_hashBlock4**: beinhaltet den Hashwert des vierten dargestellten Blocks, berechnet mit der Funktion *berechneHash()* auf die
+  Konkatenation der Variablen *a4b_hashBlock3* + *a4b_hashReferenzCDEF*.
+* **ab5a....................................
+
 
 Klassen und Funktionen:
 
@@ -308,7 +385,15 @@ Klassen und Funktionen:
   zurück. Der Parameter *index* bezieht sich dabei auf das Array *indizesFuerAdressen*, in dem beim Start der Applikation mit der
   Funktion *zufallsindizes()* die Indizes jener Elemente aus dem Array *adressenAuswahl* bestimmt wurden, die für die Knoten des
   Peer-to-Peer-Netzwerkes ab Animation 2b verwendet werden.
-
+* **a3b_stringTransaktion**() <br>
+  Diese Funktion gibt die Konkatenation der Werte der Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion,
+  a3b_betragTransaktion, a3b_gebuehrTransaktion* und *a3b_zeitTransaktion* als String zurück, um daraus den
+  Hashwert der Transaktion zu berechnen.
+* **a4a_stringTransaktion**() <br>
+  Diese Funktion gibt die Konkatenation der Werte der Variablen *a4a_senderTransaktion, a4a_empfaengerTransaktion,
+  a4a_betragTransaktion, a4a_gebuehrTransaktion* und *a4a_zeitTransaktion* als String zurück, um daraus den
+  Hashwert der Transaktion zu berechnen.
+  
 **bjk_erklaerende_texte.js**
 
 In dieser Datei befindet sich der html-Code für alle erklärenden und weiterführenden Texte, die in der Applikation aufgepoppt 
@@ -363,46 +448,41 @@ Konkret handelt es sich um folgende Funktionen:
   Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable *a2a_nameKnotenNeu*).
 * **a2b_aendereAnzahlSchluessel**(zahl) <br>
   Mit dieser Funktion wird die Anzahl der Adressen des in Animation 2a neu hinzugefügten Knotens gemäss der im Parameter *zahl*
-  übergebenen Zahl (1 bis 3) geändert, und zwar so, dass in den Arrays *adressenKnoten* und *privateSchluessel* die Einträge
+  übergebenen Zahl (1 bis 3) geändert, und zwar so, dass in den Arrays *a2b_adressenKnoten* und *a2b_privateSchluessel* die Einträge
   beim Index 2 (falls der Wert 2 übergeben wurde) oder bei den Indizes 1 und 2 (falls der Wert 1 übergeben wurde) durch einen
   leeren String ("") ersetzt werden.
 * **a2c_inhaltKnotenNeu**() <br>
   Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable *a2a_nameKnotenNeu*) sowie die dem neuen
-  Knoten zugewiesenen Adressen, abhängig von der in Animation 2b eingegebenen Anzahl (Variable xxxxxxxxxxxxxx).
+  Knoten zugewiesenen Adressen, abhängig von der in Animation 2b eingegebenen Anzahl (Array *a2b_adressenKnoten*).
 * **a3a_tabelleAdressenKnotenNeu**() <br>
   Neu generiert wird die Tabelle mit den Adressen des neuen Knotens und jeweils dem dazugehörenden privaten Schlüssel, abhängig
-  von der in Animation 2b eingegebenen Anzahl von Adressen (Variable xxxxxxxxxxxxx).
+  von der in Animation 2b eingegebenen Anzahl von Adressen (Array *a2b_adressenKnoten*).
 * **a3a_eingabeGuthaben**() <br>
   Neu generiert wird der html-Code für das Eingabeformular der Kontostände, abhängig von der in Animation 2b eingegebenen
-  Anzahl (Variable xxxxxxxxxxxxxx).
+  Anzahl (Array *a2b_adressenKnoten*).
 * **a3b_tabelleAdressenKnotenNeuMitGuthaben**() <br>
   Neu generiert wird die Tabelle mit den Adressen des neuen Knotens, dem jeweils dazugehörenden privaten Schlüssel und den
-  "Kontoständen" der Adressen, abhängig der in Animation 2b eingegebenen Anzahl (Variable xxxxxxxxx) und den in Animation 3a
-  eingegebenen Kontoständen (Array-Werte xxxxxxxxxxxxxxxxxxx).
+  "Kontoständen" der Adressen, abhängig der in Animation 2b eingegebenen Anzahl (Array *a2b_adressenKnoten*) und den in
+  Animation 3a eingegebenen Kontoständen (Array *a3a_guthabenKnoten*).
 * **a3b_tabelleAdressenFremdeKnoten**() <br>
   Neu generiert wird eine Tabelle mit den Adressen aller Knoten ausgenommen des neuen Knotens.
 * **a3b_auswahllisteAuftraggeber**() <br>
   Neu generiert wird die Auswahlliste der zur Verfügung stehenden Adressen für das Formular zur Eingabe von Daten für eine
-  Transaktion, abhängig von der in Animation 2b eingegebenen Anzahl von Adressen (Variable xxxxxxxxxxxxx).
+  Transaktion, abhängig von der in Animation 2b eingegebenen Anzahl von Adressen (Array *a2b_adressenKnoten*).
 * **a3b_errechneTransaktionsgebuehr**(betrag) <br>
   Diese Funktion bekommt als Parameter einen Betrag für eine Transaktion (*betrag*) übergeben, errechnet abhängig von der
   Höhe des eingegebenen Betrags eine Transaktionsgebühr und gibt diese als ganze Zahl zurück. Mindestgebühr für jede
   Transaktion sind 3 SiC, ab einem Betrag von 100 SiC werden 3 Prozent des Betrags (abgerundet auf eine ganze Zahl) als
   Transaktionsgebühr zurückgegeben. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim Start!)
-* **a3b_stringTransaktion**() <br>
-  Diese Funktion gibt die Konkatenation der Werte der Variablen xxxxxxxxxxxxxxxxxxxxx als String zurück, um daraus den
-  Hashwert der Transaktion zu berechnen.
 * **a3b_pruefeEingabeAdresseEmpfaenger**() <br>
   Diese Funktion prüft, ob die vom User eingegebenen Daten auch tatsächlich unter den Adressen der Knoten des
-  Peer-to-Peer-Netzwerkes zu finden sind und gibt entweder den Index der Adresse im Array xxxxxxxxxxxxxxxx oder,
+  Peer-to-Peer-Netzwerkes zu finden sind und gibt entweder den Index der Adresse im Array *a2b_adressenKnoten* oder,
   falls die Adressen in diesem Array nicht vorhanden ist, -1 zurück. (Diese Funktion wird **während** der Animation
   ausgeführt, nicht beim Start!)
 * **a3c_tabelleTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
-  eingegeben hat (Variablen xxxxxxxxxxxxxxxxx) bzw. welche automatisch vergeben worden sind (Variablen xxxxxxxxxxxxxxx).
-* **a3c_berechneSignatur**(basis, exp, n) <br>
-  Diese Hilfsfunktion errechnet in einer Schleife schrittweise den Wert der Gleichung *basis<sup>exp</sup> mod n* und
-  gibt diesen als Dezimalzahl zurück. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim Start!)
+  eingegeben hat (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche
+  automatisch vergeben worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*).
 * **a3c_erstelleSignatur**(hashTransaktion, idxAdresse) <br>
   Diese Funktion generiert den html-Code für einzelnen Felder der Tabelle, in der das Errechnen einer digitalen Signatur
   veranschaulicht wird. Sie übernimmt den Hashcode für die Transaktion (*hashTransaktion*), teilt ihn in vier Teile und
@@ -412,15 +492,17 @@ Konkret handelt es sich um folgende Funktionen:
   Werte für d und n ausgewählt werden.
 * **a3d_tabelleTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
-  eingegeben hat (Variablen xxxxxxxxxxxxxxxxx) bzw. welche automatisch vergeben worden sind (Variablen xxxxxxxxxxxxxxx).
+  eingegeben hat (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche
+  automatisch vergeben worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*).
 * **a3d_pruefeTransaktion**() <br/>
   Diese Funktion wird beim Starten der Animation ausgeführt. Sie generiert den html-Code, der anzeigt, ob die Transaktion
   gültig ist oder zurückgewiesen wird. Konkret wird geprüft, ob der in Animation 3b eingegebene zu überweisende Betrag
-  (Variable xxxxxxxxxxxx) grösser ist als der in Animation 3a eingegebene Kontostand (Variable xxxxxxxxxxxx). Ist dies der
-  Fall, wird ein "X" neben dem Text "... Betrag niedriger als Kontostand" und ein Textfeld mit der Nachricht "Transaktion
-  zurückgewiesen" ausgegeben sowie der zu überweisende Betrag (Wert der Variable xxxxxxxxxx) auf 0 gesetzt. Ansonsten wird
-  ein Haken neben dem Text "... Betrag niedriger als Kontostand" ausgegeben, die Funktion *a3d_pruefeSignatur()* ausgeführt
-  und die Tabelle, die das Prüfen einer digitalen Signatur veranschaulicht, angezeigt.
+  (Variable *a3b_betragTransaktion*) grösser ist als der in Animation 3a eingegebene Kontostand (Wert aus dem Array
+  *a3a_guthabenAdressen*). Ist dies der Fall, wird ein "X" neben dem Text "... Betrag niedriger als Kontostand" und ein
+  Textfeld mit der Nachricht "Transaktion zurückgewiesen" ausgegeben sowie der zu überweisende Betrag (Wert der Variable
+  *a3b_betragTransaktion*) auf 0 gesetzt. Ansonsten wird ein Haken neben dem Text "... Betrag niedriger als Kontostand"
+  ausgegeben, die Funktion *a3d_pruefeSignatur()* ausgeführt und die Tabelle, die das Prüfen einer digitalen Signatur
+  veranschaulicht, angezeigt.
 * **a3d_pruefeSignatur**(hashTransaktion, idxAdresse) <br>
   Diese Funktion generiert den html-Code für einzelnen Felder der Tabelle, in der das Prüfen einer digitalen Signatur
   veranschaulicht wird. Sie übernimmt den Hashcode für die Transaktion (*hashTransaktion*), teilt ihn in vier Teile,
@@ -430,10 +512,11 @@ Konkret handelt es sich um folgende Funktionen:
   **während** der Animation ausgeführt, nicht beim Start!)
 * **a4a_datenTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
-  eingegeben hat (Variablen xxxxxxxxxxxxxxxxx) bzw. welche automatisch vergeben worden (Variablen xxxxxxxxxxxxxxx) oder bei
-  der Prüfung der Transaktion in Animation 3d geändert worden sind (Variable xxxxxxxxxxxxxx). Ebenso generiert wird der
-  Inhalt der Tabelle, in der aus den Hash-Referenzen der beiden angezeigten Transaktionen eine neue Hash-Referenz als deren
-  Verknüfung angezeigt wird (Variablen xxxxxxxxxxxxxxxx).
+  eingegeben hat (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche
+  automatisch vergeben worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*) oder bei
+  der Prüfung der Transaktion in Animation 3d geändert worden sind (Variable *a3b_betragTransaktion*). Ebenso generiert
+  wird der Inhalt der Tabelle, in der aus den Hash-Referenzen der beiden angezeigten Transaktionen eine neue Hash-Referenz
+  als deren Verknüfung angezeigt wird (Variablen xxxxxxxxxxxxxxxx).
 * **a4bc_datenMerkleTree**() <br/>
   Neu generiert wird der html-Code für die Tabelle der Transaktion, welche der User in der Animation 3b eingegeben hat
   (Variablen xxxxxxxxxxxxxxxxx) bzw. welche automatisch vergeben worden (Variablen xxxxxxxxxxxxxxx) oder bei der Prüfung der
@@ -443,7 +526,7 @@ Konkret handelt es sich um folgende Funktionen:
   zu Beginn der Animation 4c ausgeführt.)
 * **a4c_aendereDaten**() <br/>
   Neu generiert werden während der Ausführung der Animation 4c jene Daten der Transaktionen, die der User über das Formular
-  verändert   (Variablen xxxxxxxxxxxxxxxx), ebenso sämtliche Hash-Referenzen, die davon betroffen sind (Variablen xxxxxxxxxxx)
+  verändert (Variablen xxxxxxxxxxxxxxxx), ebenso sämtliche Hash-Referenzen, die davon betroffen sind (Variablen xxxxxxxxxxx)
   Die Funktion bewirkt ebenso, dass sämtliche geänderten Werte und Hash-Referenzen farblich hervorgehoben werden, dass die
   Verknüpfung vom zweiten zum dritten angezeigten Block verschwindet und der Pfeil, welcher die Hash-Referenz auf den vorherigen
   Block andeutet, auf ein grosses Fragezeichen verweist. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim
