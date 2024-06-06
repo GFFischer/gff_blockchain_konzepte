@@ -10,6 +10,7 @@
 |   0.5   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 31.05.2024 | Pkt 5.1 bearbeitet |
 |   0.6   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 02.06.2024 | Pkt 5.1 bearbeitet |
 |   0.7   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 03.06.2024 | Pkt 5.1 bearbeitet |
+|   0.8   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 06.06.2024 | Pkt 5.1 bearbeitet |
 
 
 # 1 Einführung
@@ -247,12 +248,53 @@ Applikation durch den User geändert werden kann und auf die in mehreren Animati
 Initialisierungen liegt in der Möglichkeit, dass der User direkt zu allen Animationen navigieren kann und diese auch dann
 funktionieren sollen, wenn der User davor noch keinen Wert für die verwendeten Variablen eingegeben hat.
 
+Die Nmaen der Variablen werden gemäss den folgenden Regeln gebildet:
+* Alle Namen beginnen mit "a".
+* Es folgt die Nummer der Animation, in welcher auf die Variable das erste Mal zugegriffen wird. Die Nummer ist jene, die für die
+  Animation in den Use-cases im Pflichtenheft vergeben worden ist.
+* Danach folgt als Trennzeichen ein Unterstrich ("_").
+* Schliesslich folgt ein Name, der den Inhalt der Variable beschreibt.
+
+Variablen:
+
+* **a1a_block3Inhalt**: beinhaltet den Text, den der User in Animation 1a als Inhalt für die neu hinzugefügte Seite eingeben kann.
+  Der Satz, der auf der ersten der dargestellten Seiten mit dem Text "Informatik ist vielleicht nicht von allen ..."
+  und auf der zweiten der dargestellten Seiten mit dem Text "das Lieblingsfach Nummer eins, aber ..." begonnen wurde, wird im
+  Inhalt vom neu hinzugefügten Block fortgeführt. Daher ist der Anfangswert der Variable der Text "wenn man sich darauf einlässt,
+  dann ..."
+* **a1b_block4Inhalt**: beinhaltet den Text, den der User in Animation 1b als Inhalt für die neu hinzugefügte Seite eingeben kann.
+  Anfangswert ist der Text "öffnet sich eine Tür zu vielen ..."
+* **a1b_block1Hash**: beinhaltet den Hashwert der ersten dargestellten Seite, berechnet mit der Funktion *berechneHash()* aus dem String
+  "Block1" + Inhalt der Seite.
+* **a1b_block2Hash**: beinhaltet den Hashwert der zweiten dargestellten Seite, berechnet mit der Funktion *berechneHash()* aus dem String
+  "Block2" + Inhalt der Seite.
+* **a1b_block3Hash**: beinhaltet den Hashwert der dritten dargestellten Seite, berechnet mit der Funktion *berechneHash()* aus dem String
+  "Block3" + Inhalt der Seite.
+* **a1b_block4Hash**: beinhaltet den Hashwert der vierten dargestellten Seite, berechnet mit der Funktion *berechneHash()* aus dem String
+  "Block4" + Inhalt der Seite.
+* **a1c_block5Inhalt**: beinhaltet den Text, den der User in Animation 1c als Inhalt für den neu hinzugefügten Block eingeben kann.
+  Anfangswert ist der Text "raffinierten Ideen und Konzepten."
+* **a1c_block5Hash**: beinhaltet den Hashwert des fünften dargestellten Blocks, berechnet mit der Funktion *berechneHash()* aus dem String
+  "Block5" + Inhalt des Blocks.
+* **a1d_inhaltBlock1Hash** bis **a1d_inhaltBlock5Hash**: beinhaltet den Hashwert des Inhalts des jeweils dargestellten Blocks,
+  berechnet mit der Funktion *berechneHash()*.
+* **a2a_nameKnotenNeu**: beinhaltet den Namen, der dem neu hinzugefügten Knoten gegeben wird. Anfangswert: "Satoshi".
+* **nameAuswahl**: Array, das etwa 200 unterschiedliche Vornamen als Werte beinhaltet.
+* **indizesFuerNamen**: Array, das 10 unterschiedliche Zahlen als Werte beinhaltet, die jeweils einen Index aus dem Array *nameAuswahl*
+  repräsentieren, erstellt mit der Funktion *zufallsindizes()*.
+* **a2a_nameKnoten1** bis **a2a_nameKnoten10**: die 10 Variablen beinhalten als Werte die Namen, die den verschiedenen Knoten im
+  dargestellten Peer-to-Peer-Netzwerk zufällig hinzugefügt werden. Zugewiesen werden die Werte mit der Funktion *getName()*.
+* **adressenAuswahl**: Array, das 200 händisch erstellte, Zeile für Zeile dem Array hinzugefügte Objekte der Klasse Adresse als Werte
+  beinhaltet.
+* * **indizesFuerAdressen**: Array, das 33 unterschiedliche Zahlen als Werte beinhaltet, die jeweils einen Index aus dem Array
+  *adressenAuswahl* repräsentieren, erstellt mit der Funktion *zufallsindizes()*.
+
 Klassen und Funktionen:
 
 * **zufallsindizes**(anzahl, array) <br>
   Diese Funktion wählt eine bestimmte Anzahl (*anzahl*) an zufälligen Indizes eines Arrays (*array*) und gibt diese unsortiert in
   einem neuen Array zurück. Über diese Indizes kann dann auf die entsprechenden Elemente in dem als Parameter übergebenen Array
-  zugegriffen und so eine zufällige Auswahl von Werten aus einem Array von Werten realisert werden. Durch eine if-Anweisung wird
+  zugegriffen und so eine zufällige Auswahl von Werten aus einem Array realisert werden. Durch eine if-Anweisung wird
   sichergestellt, dass kein Index im zurückgegebenen Array mehrfach vorkommt.
 * **getName**(index) <br>
   Diese Funktion gibt aus dem Array *nameAuswahl* einen Namen zurück. Der Parameter *index* bezieht sich dabei auf das Array
@@ -307,26 +349,26 @@ Parameter, und die Namen der Funktionen in dieser Datei werden gemäss den folge
 Konkret handelt es sich um folgende Funktionen:
 
 * **a1b_inhaltBlock3**() <br>
-  Neu generiert wird der Inhalt des dritten Blocks (Variable xxxxxx), der vom User in Animation 1a eingegeben oder verändert
-  werden kann und der daraus berechnete Hashwert.
+  Neu generiert wird der Inhalt des dritten Blocks (Variable *a1a_block3Inhalt*), der vom User in Animation 1a eingegeben oder
+  verändert werden kann und der daraus berechnete Hashwert.
 * **a1c_inhalteBloecke**() <br>
-  Neu generiert werden die Inhalte des dritten und vierten Blocks (Variablen xxxxxxxxxxxx und xxxxxxxxxxx), die vom User in den
-  Animationen 1a und 1b eingegeben oder verändert werden können, die daraus berechneten Hashwerte sowie die Hashwerte der
-  jeweils vorherigen Blöcke.
+  Neu generiert werden die Inhalte des dritten und vierten Blocks (Variablen *a1a_block3Inhalt* und *a1b_block4Inhalt*), die vom
+  User in den Animationen 1a und 1b eingegeben oder verändert werden können, die daraus berechneten Hashwerte sowie die Hashwerte
+  der jeweils vorherigen Blöcke.
 * **a1d_inhalteBloecke**() <br>
-  Neu generiert werden die Inhalte des dritten, vierten und fünften Blocks (Variablen xxxxxxxxxxxx, xxxxxxxxxxxxxxx und xxxxxxxxxxx),
-  die vom User in den Animationen 1a, 1b und 1c eingegeben oder verändert werden können, die daraus berechneten Hashwerte sowie die
-  Hashwerte der jeweils vorherigen Blöcke.
+  Neu generiert werden die Inhalte des dritten, vierten und fünften Blocks (Variablen *a1a_block3Inhalt*, *a1b_block4Inhalt* und
+  *a1c_block5Inhalt*), die vom User in den Animationen 1a, 1b und 1c eingegeben oder verändert werden können, die daraus
+  berechneten Hashwerte sowie die Hashwerte der jeweils vorherigen Blöcke.
 * **a2b_nameKnotenNeu**() <br>
-  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable xxxxxxx).
+  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable *a2a_nameKnotenNeu*).
 * **a2b_aendereAnzahlSchluessel**(zahl) <br>
   Mit dieser Funktion wird die Anzahl der Adressen des in Animation 2a neu hinzugefügten Knotens gemäss der im Parameter *zahl*
   übergebenen Zahl (1 bis 3) geändert, und zwar so, dass in den Arrays *adressenKnoten* und *privateSchluessel* die Einträge
   beim Index 2 (falls der Wert 2 übergeben wurde) oder bei den Indizes 1 und 2 (falls der Wert 1 übergeben wurde) durch einen
   leeren String ("") ersetzt werden.
 * **a2c_inhaltKnotenNeu**() <br>
-  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable xxxxxxx) sowie die dem neuen Knoten
-  zugewiesenen Adressen, abhängig von der in Animation 2b eingegebenen Anzahl (Variable xxxxxxxxxxxxxx).
+  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable *a2a_nameKnotenNeu*) sowie die dem neuen
+  Knoten zugewiesenen Adressen, abhängig von der in Animation 2b eingegebenen Anzahl (Variable xxxxxxxxxxxxxx).
 * **a3a_tabelleAdressenKnotenNeu**() <br>
   Neu generiert wird die Tabelle mit den Adressen des neuen Knotens und jeweils dem dazugehörenden privaten Schlüssel, abhängig
   von der in Animation 2b eingegebenen Anzahl von Adressen (Variable xxxxxxxxxxxxx).
