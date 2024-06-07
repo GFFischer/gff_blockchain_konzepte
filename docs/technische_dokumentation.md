@@ -11,7 +11,7 @@
 |   0.6   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 02.06.2024 | Pkt 5.1 bearbeitet |
 |   0.7   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 03.06.2024 | Pkt 5.1 bearbeitet |
 |   0.8   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 06.06.2024 | Pkt 5.1 bearbeitet |
-
+|   0.9   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 07.06.2024 | Pkt 5.1 bearbeitet |
 
 # 1 Einführung
 
@@ -149,6 +149,10 @@ Diese IDs dieser Kontainer werden nach folgenden Regeln gebildet:
 * Alle IDs beginnen mit "anim_".
 * Es folgt die Nummer der Animation, wie sie in den Use-cases im Pflichtenheft vergeben worden ist.
 * Die Startseite bekommt die ID "anim_0".
+
+Im head-Bereich der html-Datei werden die CSS-Datei *bjk_styles.css* sowie alle JavaScript-Dateien 
+(*bjk_funktionensammlung.js, jshashes.js, hash.js, bjk_variablen.js, bjk_erklaerende_texte.js* und 
+*bjk_code_generierung.js*) geladen.
 
 
 ### JavaScript
@@ -363,8 +367,22 @@ Variablen:
   Konkatenation der Variablen *a4b_hashBlock2* + *a4b_hashReferenz89AB*.
 * **a4b_hashBlock4**: beinhaltet den Hashwert des vierten dargestellten Blocks, berechnet mit der Funktion *berechneHash()* auf die
   Konkatenation der Variablen *a4b_hashBlock3* + *a4b_hashReferenzCDEF*.
-* **ab5a....................................
-
+* **a5a_hashVorhBlock**: beinhaltet den Hashwert des nicht dargestellten vorherigen Blocks. Anfangswert ist der Inhlat der Variable
+  *a4b_hashBlock1*.
+* **a5a_hashInhalt**: beinhaltet den Hashwert des Inhalts des dargestellten Blocks. Anfangswert ist der Inhalt der Variable
+  **a4b_hashReferenz4567*.
+* **a5a_zeit**: beinhaltet den Zeitstempel des Erstellens des Blocks, berechnet mit der Funktion *zeitstempel()*.
+* **a5a_target**: beinhaltet den Schwierigkeitsgrad des Hashpuzzles. Anfangswert ist "0fffffff".
+* **a5a_nonce**: beinhaltet die Nonce, die für die Lösung des Hashpuzzles benötigt wird. Anfangswert ist "00000001".
+* **a5a_hashBlock**: beinhaltet den Hashwert des Blocks, der mit der Funktion *berechneHash()*, angewendet auf eine Konkatenation der
+  Inhalte der Variablen *a5a_hashInhalt, a5a_hashVorhBlock, a5a_zeit, a5a_target* und *a5a_nonce*.
+* **a5b_hashInhalt**: beinhaltet den Hashwert des Inhalts des dargestellten Blocks. Anfangswert ist der Inhalt der Variable
+  **a4b_hashReferenz89AB*.
+* **a5b_zeit**: beinhaltet den Zeitstempel des Erstellens des Blocks, berechnet mit der Funktion *zeitstempel()*.
+* **a5b_target**: beinhaltet den Schwierigkeitsgrad des Hashpuzzles. Anfangswert ist "00ffffff".
+* **a5b_nonce**: beinhaltet die Nonce, die für die Lösung des Hashpuzzles benötigt wird. Anfangswert ist "5264c509".
+* **a5b_hashBlock**: beinhaltet den Hashwert des Blocks, der mit der Funktion *berechneHash()*, angewendet auf eine Konkatenation der
+  Inhalte der Variablen *a5b_hashInhalt, a5a_hashBlock, a5b_zeit, a5b_target* und *a5b_nonce*.
 
 Klassen und Funktionen:
 
@@ -413,7 +431,7 @@ Die Namen der Variablen werden nach folgenden Regeln vergeben:
 Beispiele: a3c_info1, a4b_hinterg1, a1c_info2, …
 
 In der Datei selbst sind die Variablennamen alphabetisch sortiert. Ganz am Ende befindet sich noch eine Variable mit dem Namen 
-*copyright_hashes*, welcher der html-Code des Copyright-Hinweises für die Implementierung der verwendeten Hash-Funktion in
+***copyright_hashes***, welcher der html-Code des Copyright-Hinweises für die Implementierung der verwendeten Hash-Funktion in
 JavaScript, der bei jeder Animation aufgepoppt werden kann, wo die Hashfunktion verwendet wird, zugewiesen wird.
 
 **bjk_code_generierung.js**
@@ -516,27 +534,27 @@ Konkret handelt es sich um folgende Funktionen:
   automatisch vergeben worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*) oder bei
   der Prüfung der Transaktion in Animation 3d geändert worden sind (Variable *a3b_betragTransaktion*). Ebenso generiert
   wird der Inhalt der Tabelle, in der aus den Hash-Referenzen der beiden angezeigten Transaktionen eine neue Hash-Referenz
-  als deren Verknüfung angezeigt wird (Variablen xxxxxxxxxxxxxxxx).
+  als deren Verknüfung angezeigt wird (Variablen *a4a_referenz45, a4a_hashReferenz45*).
 * **a4bc_datenMerkleTree**() <br/>
   Neu generiert wird der html-Code für die Tabelle der Transaktion, welche der User in der Animation 3b eingegeben hat
-  (Variablen xxxxxxxxxxxxxxxxx) bzw. welche automatisch vergeben worden (Variablen xxxxxxxxxxxxxxx) oder bei der Prüfung der
-  Transaktion in Animation 3d geändert worden sind (Variable xxxxxxxxxxxxxx). Ebenso generiert wird der html-Code für
-  sämtliche Hash-Referenzen, die am Ende der Animation im dargestellten Merkle-Tree und in den dargestellten Blöcken der
+  (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche automatisch vergeben
+  worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*) oder bei der Prüfung der
+  Transaktion in Animation 3d geändert worden sind (Variable *a3b_betragTransaktion*). Ebenso generiert wird der html-Code
+  für sämtliche Hash-Referenzen, die am Ende der Animation im dargestellten Merkle-Tree und in den dargestellten Blöcken der
   Blockchain angezeigt werden und die von den Eingaben in den Animationen 3b und 3d abhängig sind. (Diese Funktion wird auch
   zu Beginn der Animation 4c ausgeführt.)
 * **a4c_aendereDaten**() <br/>
   Neu generiert werden während der Ausführung der Animation 4c jene Daten der Transaktionen, die der User über das Formular
-  verändert (Variablen xxxxxxxxxxxxxxxx), ebenso sämtliche Hash-Referenzen, die davon betroffen sind (Variablen xxxxxxxxxxx)
-  Die Funktion bewirkt ebenso, dass sämtliche geänderten Werte und Hash-Referenzen farblich hervorgehoben werden, dass die
-  Verknüpfung vom zweiten zum dritten angezeigten Block verschwindet und der Pfeil, welcher die Hash-Referenz auf den vorherigen
-  Block andeutet, auf ein grosses Fragezeichen verweist. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim
-  Start!)
-* **a5a_datenBlock1**() <br/>
-  Neu generiert werden die Daten für die Hash-Referenzen auf den Inhalt (Variable xxxxxxxx) und den vorherigen Block (Variable xxxxxxxxxxxx).
-* **a5b_datenBloecke**() <br/>
-  Neu generiert werden die Daten für die Hash-Referenzen auf den Inhalt (Variable xxxxxxxx) und den vorherigen Block (Variable xxxxxxxxxxxx)
-  des ersten Blocks sowie die in Animation 5a gefundene Hash-Referenz des Blocks (Variable xxxxxxxxxx), welche gleichzeitig im zweiten Block
-  die Hash-Referenz für den vorherigen Block ist.
+  verändert (Variablen *a3b_empfaengerTransaktion, a3b_betragTransaktion, a4a_empfaengerTransaktion, a4a_betragTransaktion*),
+  ebenso sämtliche Hash-Referenzen, die davon betroffen sind (Variablen *a3b_hashTransaktion, a4a_hashTransaktion,
+  a4a_hashReferenz45, a4b_hashReferenz4567, a4b_hashBlock2*). Die Funktion bewirkt ebenso, dass sämtliche geänderten Werte und
+  Hash-Referenzen farblich hervorgehoben werden, dass die Verknüpfung vom zweiten zum dritten angezeigten Block verschwindet und
+  der Pfeil, welcher die Hash-Referenz auf den vorherigen Block andeutet, auf ein grosses Fragezeichen verweist. (Diese Funktion
+  wird **während** der Animation ausgeführt, nicht beim Start!)
+* **a5ab_datenBloecke**() <br/>
+  Neu generiert werden die Daten für die Hash-Referenzen auf den Inhalt (Variable *a5a_hashInhalt*) und den vorherigen Block
+  (Variable *a5a_hashVorhBlock*) des ersten Blocks sowie die in Animation 5a gefundene Hash-Referenz des Blocks (Variable
+  *a5a_hashBlock*), welche gleichzeitig im zweiten Block die Hash-Referenz für den vorherigen Block ist.
 * **a5ab_mining**(nonceID, nonce, hashID, hashBlock, target, zeit, hashInhalt, hashVorherigerBlock, intervall, abbruchID, hakenID,
   nextStartButtonID, nextBlockID) <br>
   Mit dieser Funktion wird in den Animationen 5a und 5b das Schützen der Blöcke durch Proof-of-Work simuliert. Auch sie
@@ -569,11 +587,15 @@ Konkret handelt es sich um folgende Funktionen:
   Der Parameter *nextBlockID* beinhaltet die ID des nächsten dargestellten Blocks, für den im Anschluss die Mining-Funktion
   ausgeführt werden kann.
 * **a6a_inhaltKnotenNeu**() <br>
-  Neu generiert wird der Inhalt des neuen Knotens, der aus die dem neuen Knoten in Animation 2b zugewiesenen Adressen
-  besteht (Variable xxxxxxxxxxxxxx).
+  Neu generiert wird der Inhalt des neuen Knotens, bestehend aus den diesem zugewiesenen Adressen, abhängig von der in Animation
+  2b eingegebenen Anzahl (Array *a2b_adressenKnoten*).
 
 
 ### CSS
+
+Alle Styles für das Design der Applikation sind in der Datei ***bjk_styles.css*** gebündelt. Die grosse Ausnahme davon bilden
+die Angaben über die Sichtbarkeit (
+
 
 ## 5.2 Dynamik
 An dieser Stelle sollten die dynamische Aspekte, zum Beispiel mit Hilfe von UML Sequenz/Kollaborationsdiagrammen, oder Akivitätsdiagrammen beschrieben werden.
