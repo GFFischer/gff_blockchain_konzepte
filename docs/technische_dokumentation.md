@@ -614,7 +614,7 @@ werden.
   Verhältnis 1:2:8:1, bei Bildschirmen > 1280px im Verhältnis 0.5:2:9:0.5, bei Bildschirmbreiten > 960px im Verhältnis 0:2:10:0.
   Hier wird die Schriftgrösse auf 85% gesetzt. Bei kleineren Bildschirmen wird die Schriftgrösse auf 75% gesetzt und es stehen
   *nav* und *mitte* untereinander und füllen jeweils die ganze Bildschirmbreite aus, wobei bei *nav* die Eigenschaft *visibility:
-  hidden* gesetzt ist. Sie kann durch das Klicken auf ein nur bei Bildschirmbreiten < 960px sichtbaren "Hamburger-Icon" sichtbar
+  hidden* gesetzt ist. Sie kann durch das Klicken auf ein nur bei Bildschirmbreiten < 960px angezeigtes "Hamburger-Icon" sichtbar
   gemacht werden.
 * **body**: <br>
   Hier werden die Eigenschaften für das in CSS-Grid realisierte Layout bestimmt (*display: grid, grid-template-columns,
@@ -627,25 +627,43 @@ werden.
   Der Navigationsbereich wird als unsortierte Liste realisiert, wobei die Listeneinträge (*nav li*) so formatiert sind, dass
   sie für den User den Eindruck erwecken, Buttons zu sein (Cursor wird zum Pointer, Invertierung der Farben bei Aktivierung
   *nav li:active*).
+* **#menuicon**: <br>
+  Mit der ID *#menuicon* wird das Hamburger-Icon selektiert und formatiert, welches bei Bildschirmbreiten < 960px anstelle des
+  Navigationsmenüs erscheint.
 * **p, h1, h2, ...**: <br>
   Hier werden lediglich die Farbe der Überschriften (*color*) und der jeweilige Aussenabstand (*margin*) bestimmt.
 * **.animation**: <br>
-  ............................................
+  Hier wird lediglich als Standardeinstellung für alle Animationen die Eigenschaft *display: none* gesetzt. Diese Klasse wird
+  den div-Kontainern, in denen sich die einzelnen Animationen befinden, zugewiesen.
 * **button.animbutton**: <br>
   Diese Klasse formatiert die Buttons, die in den einzelnen Animationen gedrückt werden können. Wie bei allen anderen Buttons
   sind die Ecken leicht abgerundet (*border-radius*), die Buttons erhalten einen leichten Schatten (*box-shadow*) in der
   Schriftfarbe, die beim Button verwendet wird, und der Cursor (*cursor*) wird zum Pointer. Bei Aktivierung werden die Farben
   invertiert (*button.animbutton:acitve*).
+* **div .hintergrund**: <br>
+  Diese Klasse schafft ein Element für den sandgrauen Hintergrund, auf dem die Animationen jeweils zu sehen sind. Die Höhe
+  bekommt einen Mindestwert als Standardwert zugewiesen (*height: 30em*), der aber bei vielen Animationen händisch vergrössert
+  werden muss.
+* **.infoimg**: <br>
+  Diese Klasse regelt die Grösse der Grafik, auf die geklickt werden kann, um die erklärenden Texte zu öffnen, und sorgt dafür,
+  dass der Cursor (*cursor*) zum Pointer wird. Bei Aktivierung werden die Farben invertiert (*.infoimg:active*).
 * **.hinweis**: <br>
   Die Klasse *.hinweis* ist für Warnhinweise gedacht, die relativ mittig auf dem Bildschirm angezeigt werden. Die Farbgestaltung
   ist daher etwas auffälliger.
-* **button.hinweisbutton** <br>
+* **.hinweistext**: <br>
+  Diese Klasse formatiert die Ausrichtung (*text-align*) und den Aussenabstand (*margin*) des Textes, der in den Warnhinweisen
+  angezeigt wird.
+* **button.hinweisbutton**: <br>
   Diese Klasse formatiert den Button, der auf einem Warnhinweis erscheint und mit dem dieser Warnhinweis wieder ausgeblendet
   werden kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.hinweis*, bei Aktivierung werden die Farben invertiert
   (*button.hinweisbutton:aktive*).
-* **#menuicon**: <br>
-  Mit der ID *#menuicon* wird das Hamburger-Icon selektiert und formatiert, welches bei Bildschirmbreiten < 960px anstelle des
-  Navigationsmenüs erscheint.
+* **.infotext**: <br>
+  .....................................
+* **.block**: <br>
+  Diese Klasse regelt die Formatierung der Elemente, die in verschiedenen Animationen die Blöcke einer Blockchain darstellen.
+* **.blockinhalt**: <br>
+  Diese Klasse ergänzt die Klasse *.block* und ist für die Elemente, die innerhalb eines dargestellten Blocks ala Elemente dieses
+  Blocks angezeigt werden. Dabei wird v.a. die Eigenschaft *width* auf *80%* gesetzt.
 
 
 ## 5.2 Dynamik
