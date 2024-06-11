@@ -4,17 +4,14 @@ div.randl sind der rechte und der linke Randbereich, die bei breiten und sehr br
 leer bleiben sollen. in body werden alle Grid-Einstellungen vorgenommen. */
 
 :root {
-    --paradiesgruen: rgb(213,229,194);
     --gruenspan: rgb(176,213,166);
-    --waldmeister: rgb(51,97,23);
     --tarngruen: rgb(53,76,40);
     --kressegruen: rgb(94,113,28);
-    --avocadogruen: rgb(163,175,0);
-    --steingrau: rgb(150,161,154);
     --sandgrau: rgb(136,138,134);
     --grapefruit: rgb(254,205,49);
     --schmetterlingsblau: rgb(103,177,227);
     --antikblau: rgb(0,45,91);
+    --klatschmohnrot: rgb(237, 60, 11);
     --creme: rgb(254,244,229);
 }
 nav {
@@ -57,6 +54,7 @@ body {
 @media screen and (width <= 1280px) {
     body {
         grid-template-columns: 0fr 2fr 10fr 0fr;
+        font-size: 85%;
     }
 }
 
@@ -68,7 +66,7 @@ body {
         grid-template-areas:
         "navigation"
         "hauptbereich";
-        font-size: 9pt;
+        font-size: 75%;
     }
     nav {
         position: absolute;
@@ -97,6 +95,7 @@ nav li {
     border-radius: 0.5em;
     text-align: center;
     box-shadow: 0em 0em 0.4em 0em var(--creme);
+    cursor: pointer;
 }
 nav li:active {
     margin: 0.4em 0.5em;
@@ -144,6 +143,7 @@ button.hinweisbutton {
     width: 5em;
     color: var(--kressegruen);
     position: flex; right: 0em;
+    cursor: pointer;
 }
 button.hinweisbutton:active {
     background-color: var(--kressegruen);
@@ -163,6 +163,7 @@ button.animbutton {
     font-size: 1em;
     padding: 0.7em;
     color: var(--creme);
+    cursor: pointer;
 }
 button.animbutton:active {
     background-color: var(--creme);
@@ -184,18 +185,18 @@ button.animbutton:active {
 }
 .blockinhalt {
     width: 80%;
-    max-height: 4em;
     padding: 0.5em;
 }
 div .hintergrund {
     background-color: var(--sandgrau);
     border-radius: 0.5em;
-    height: 20em;
+    height: 30em;
     width: 96%;
     margin: 2%;
 }
 .infoimg {
     width: 4em;
+    cursor: pointer;
 }
 .infoimg:active {
     filter: invert(0.5);
@@ -219,6 +220,7 @@ button.infobutton {
     padding: 0.3em 0.5em;
     color: var(--creme);
     float: right;
+    cursor: pointer;
 }
 button.infobutton:active {
     background-color: var(--creme);
@@ -244,6 +246,7 @@ button.hintergrbutton {
     padding: 0.3em 0.5em;
     color: var(--antikblau);
     float: right;
+    cursor: pointer;
 }
 button.hintergrbutton:active {
     background-color: var(--antikblau);

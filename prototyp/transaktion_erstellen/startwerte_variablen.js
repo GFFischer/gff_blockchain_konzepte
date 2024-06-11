@@ -341,9 +341,9 @@ Die Funktion pruefeEingabe1bis3 ist dafür da, dass der User in das Formularfeld
 von 1 bis 3 eingeben kann. */
 
 var privateSchluessel = new Array();
-privateSchluessel[0] = "K0priv: d=" + adressenAuswahl[indizesFuerAdressen[0]].d;
-privateSchluessel[1] = "K1priv: d=" + adressenAuswahl[indizesFuerAdressen[1]].d;
-privateSchluessel[2] = "K2priv: d=" + adressenAuswahl[indizesFuerAdressen[2]].d;
+privateSchluessel[0] = "K1<sub>priv</sub>: d=" + adressenAuswahl[indizesFuerAdressen[0]].d;
+privateSchluessel[1] = "K2<sub>priv</sub>: d=" + adressenAuswahl[indizesFuerAdressen[1]].d;
+privateSchluessel[2] = "K3<sub>priv</sub>: d=" + adressenAuswahl[indizesFuerAdressen[2]].d;
 
 function aendereAnzahlSchluessel(zahl) {
     adressenKnoten[1] = "K2: " + getAdresse(1);
@@ -380,7 +380,7 @@ function tabelleEigeneAdressen() {
     for (var i = 0; i < 3; i++) {
         if (privateSchluessel[i] != "") {
             htmlCode += "<tr><td class='feld randlos'>" + getAdresse(i) + "</td><td class='feld randlos'>" 
-                + privateSchluessel[i].substr(8,6) + "</td><td class='feld randlos' id='guth" + i +"'>" 
+                + privateSchluessel[i].substr(19,6) + "</td><td class='feld randlos' id='guth" + i +"'>" 
                 + guthabenAdressen[i] + " SiC</td></tr>";
         } 
     }
@@ -393,7 +393,7 @@ function tabelleEigeneAdressenOhneSic() {
     for (var i = 0; i < 3; i++) {
         if (privateSchluessel[i] != "") {
             htmlCode += "<tr><td class='feld randlos'>" + getAdresse(i) + "</td><td class='feld randlos'>" 
-                + privateSchluessel[i].substr(8,6) + "</td><td id='guthaben" + i + "' class='feld randlos'></td></tr>";
+                + privateSchluessel[i].substr(19,6) + "</td><td id='guthaben" + i + "' class='feld randlos'></td></tr>";
         } 
     }
     return htmlCode + "</table>";
