@@ -12,6 +12,7 @@
 |   0.7   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 03.06.2024 | Pkt 5.1 bearbeitet |
 |   0.8   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 06.06.2024 | Pkt 5.1 bearbeitet |
 |   0.9   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 07.06.2024 | Pkt 5.1 bearbeitet |
+|   0.10  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 11.06.2024 | Pkt 5.1 bearbeitet |
 
 # 1 Einführung
 
@@ -594,7 +595,57 @@ Konkret handelt es sich um folgende Funktionen:
 ### CSS
 
 Alle Styles für das Design der Applikation sind in der Datei ***bjk_styles.css*** gebündelt. Die grosse Ausnahme davon bilden
-die Angaben über die Sichtbarkeit (
+die Angaben über die Sichtbarkeit (CSS-Eigenschaften *display* und *visibility*), die für jedes html-Element gesondert geregelt
+werden.
+
+**Styles für das Design der Applikation**
+* **Farben**: <br>
+  In der Pseudoklasse *:root* werden mittels Variablen die in der Applikation verwendeten Farben festgelegt. Es sind dies:
+  *gruenspan* (rgb: 176, 213, 166), *tarngruen* (rgb: 53, 76, 40), *kressegruen* (rgb: 94, 113, 28), *sandgrau* (rgb: 136, 138,
+  134), *grapefruit* (rgb: 254, 205, 49), *schmetterlingsblau* (rgb: 103, 177, 227), *antikblau* (rgb: 0, 49, 91),
+  *klatschmohnrot* (rgb: 237, 60, 11) und *creme* (rgb: 254, 244, 229).
+* **Layout**: <br>
+  Das responsive Design der Applikation wird mit CSS-Grid realisiert. Dabei bilden der Bereich für die Navigation (*nav*) und
+  für das Logo (*logo*) eigene grid-areas, es gibt die Klassen *div.mitte* (für den Bereich des Inhalts), *div.randr* und
+  *div.randl* (für einen frei bleibenden Rand links und rechts vom Inhalt bei breiten Bildschirmen), die auch jeweils eine eigene
+  grid-area darstellen. <br>
+  Um das Layout den verschiedenen Bildschirmbreiten anzupassen, wird die *@media*-Regel verwendet, um so die vom Standardlayout
+  abweichenden Eigenschaften zu bestimmen. Bei Bildschirmbreiten > 1440px ist die Aufteilung randl - nav/logo - mitte - randl im
+  Verhältnis 1:2:8:1, bei Bildschirmen > 1280px im Verhältnis 0.5:2:9:0.5, bei Bildschirmbreiten > 960px im Verhältnis 0:2:10:0.
+  Hier wird die Schriftgrösse auf 85% gesetzt. Bei kleineren Bildschirmen wird die Schriftgrösse auf 75% gesetzt und es stehen
+  *nav* und *mitte* untereinander und füllen jeweils die ganze Bildschirmbreite aus, wobei bei *nav* die Eigenschaft *visibility:
+  hidden* gesetzt ist. Sie kann durch das Klicken auf ein nur bei Bildschirmbreiten < 960px sichtbaren "Hamburger-Icon" sichtbar
+  gemacht werden.
+* **body**: <br>
+  Hier werden die Eigenschaften für das in CSS-Grid realisierte Layout bestimmt (*display: grid, grid-template-columns,
+  grid-template-areas*), ebenso die Eigenschaften für die Schrift (*font-familiy: Arial, Helvetica, sans-serif, font-size: 12pt,
+  word-spacing: 0.1em, line-height: 150%*). Wichtig dabei ist v.a. die ***font-size***, weil sämtliche andere Grössenangaben in
+  der Applikation in der Einheit *em* gemacht und daher direkt abhängig von der Grösse der Schrift sind. <br>
+  Bestimmt werden die Hintergrundfarbe (*background-color*) und dass sich der body-Bereich über die gesamte Bildschirmhöhe
+  ausbreiten soll (*height: 100vh*).
+* **Navigation**: <br>
+  Der Navigationsbereich wird als unsortierte Liste realisiert, wobei die Listeneinträge (*nav li*) so formatiert sind, dass
+  sie für den User den Eindruck erwecken, Buttons zu sein (Cursor wird zum Pointer, Invertierung der Farben bei Aktivierung
+  *nav li:active*).
+* **p, h1, h2, ...**: <br>
+  Hier werden lediglich die Farbe der Überschriften (*color*) und der jeweilige Aussenabstand (*margin*) bestimmt.
+* **.animation**: <br>
+  ............................................
+* **button.animbutton**: <br>
+  Diese Klasse formatiert die Buttons, die in den einzelnen Animationen gedrückt werden können. Wie bei allen anderen Buttons
+  sind die Ecken leicht abgerundet (*border-radius*), die Buttons erhalten einen leichten Schatten (*box-shadow*) in der
+  Schriftfarbe, die beim Button verwendet wird, und der Cursor (*cursor*) wird zum Pointer. Bei Aktivierung werden die Farben
+  invertiert (*button.animbutton:acitve*).
+* **.hinweis**: <br>
+  Die Klasse *.hinweis* ist für Warnhinweise gedacht, die relativ mittig auf dem Bildschirm angezeigt werden. Die Farbgestaltung
+  ist daher etwas auffälliger.
+* **button.hinweisbutton** <br>
+  Diese Klasse formatiert den Button, der auf einem Warnhinweis erscheint und mit dem dieser Warnhinweis wieder ausgeblendet
+  werden kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.hinweis*, bei Aktivierung werden die Farben invertiert
+  (*button.hinweisbutton:aktive*).
+* **#menuicon**: <br>
+  Mit der ID *#menuicon* wird das Hamburger-Icon selektiert und formatiert, welches bei Bildschirmbreiten < 960px anstelle des
+  Navigationsmenüs erscheint.
 
 
 ## 5.2 Dynamik
