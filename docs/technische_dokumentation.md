@@ -13,7 +13,7 @@
 |   0.8   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 06.06.2024 | Pkt 5.1 bearbeitet |
 |   0.9   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 07.06.2024 | Pkt 5.1 bearbeitet |
 |   0.10  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 11.06.2024 | Pkt 5.1 bearbeitet |
-|   0.11  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 12.06.2024 | Pkt 5.1 bearbeitet |
+|   0.11  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 12.06.2024 | Pkt 5.1 und 5.2 bearbeitet |
 
 
 # 1 Einführung
@@ -40,13 +40,14 @@ Der **Zweck** dieses Dokuments ist,
 * die Farben zu bestimmen, die in der Applikation für Texte, Menüs, Symbole, Animationen, Hintergründe verwendet werden
   *(/LQB40/)*
   
-Dieses Dokument kann, wenn man es mit dem Bau eines Hauses vergleicht, als "Polierplan" verstanden werden, also als ein
-Plan, bei dem schon möglichst alle Details geklärt sind, sodass mit dem Bau des Hauses begonnen werden kann. Er richtet 
-sich demzufolge in erster Linie an die Ausführenden, bei der Softwareentwicklung also an die Programmierenden. Im konkreten
-Spezialfall der Entwicklung dieser Applikation als "individuelles Projekt" im Rahmen des Studienprogramms GymInf handelt
-es sich dabei um den Autor, der in Personalunion gleichzeitig Auftraggeber, Designer und Programmierer ist. Gleichzeitig 
-richtet sich dieses Dokument an alle Entwickler*innen, die gegebenenfalls diese Applikation warten und/oder erweitern 
-möchten, sowie im konkreten Fall auch an alle, die dieses Projekt zu bewerten und zu beurteilen haben.
+Dieses Dokument kann, wenn man es mit dem Bau eines Hauses vergleicht, als "Ausführungsplanung" verstanden werden, also als
+ein Plan, der, wenn auch noch nicht jedes kleinste Detail geklärt ist, dennoch schon so ausreichend detailliert ist, dass
+mit dem Bau des Hauses begonnen werden kann. Er richtet sich demzufolge in erster Linie an die Ausführenden, bei der
+Softwareentwicklung also an die Programmierenden. Im konkreten Spezialfall der Entwicklung dieser Applikation als 
+"individuelles Projekt" im Rahmen des Studienprogramms GymInf handelt es sich dabei um den Autor, der in Personalunion 
+gleichzeitig Auftraggeber, Designer und Programmierer ist. Ebenso richtet sich dieses Dokument an alle Entwickler*innen, die
+gegebenenfalls diese Applikation warten und/oder erweitern möchten, sowie im konkreten Fall auch an alle, die dieses Projekt
+zu bewerten und zu beurteilen haben.
 
 
 ## 1.2 Beziehung zu anderen Dokumenten
@@ -92,9 +93,9 @@ unbewegten Grafiken und ohne die Möglichkeit zur Interaktion zur Verfügung ste
   haben, in zweiter Linie gegebenenfalls für alle Entwickler*innen, die diese Applikation warten und/oder erweitern
   möchten.
 * **Festlegung von Details:** Das Design soll dazu führen, dass die Entwicklungszeit minimiert wird, indem es dem
-  Programmierer möglich ist, die Vorgaben in Code zu überführen, ohne selbst Entscheidungen über Details (z.B. Namen und
-  erwartete Rückgabewerte von Funktionen, Namen und initiale Belegung von Variablen, verwendete Farben, Symbole,
-  Schriftarten für die optische Gestaltung, ...) treffen zu müssen.
+  Programmierer möglich ist, die Vorgaben in Code zu überführen, ohne selbst Entscheidungen über viele Details (z.B.
+  Namen und erwartete Rückgabewerte von Funktionen, Namen und initiale Belegung von Variablen, verwendete Farben,
+  Symbole, Schriftarten für die optische Gestaltung, ...) treffen zu müssen.
 
 ## Untergeordnete Ziele
 * **Portabilität:** Das Design soll, wo es möglich ist, dazu führen, dass die Applikation auch auf einem kleinen Screen
@@ -274,14 +275,8 @@ Variablen:
   dann ..."
 * **a1b_block4Inhalt**: beinhaltet den Text, den der User in Animation 1b als Inhalt für die neu hinzugefügte Seite eingeben kann.
   Anfangswert ist der Text "öffnet sich eine Tür zu vielen ..."
-* **a1b_block1Hash**: beinhaltet den Hashwert der ersten dargestellten Seite, berechnet mit der Funktion *berechneHash()* aus dem String
-  "Block1" + Inhalt der Seite.
-* **a1b_block2Hash**: beinhaltet den Hashwert der zweiten dargestellten Seite, berechnet mit der Funktion *berechneHash()* aus dem String
-  "Block2" + Inhalt der Seite.
-* **a1b_block3Hash**: beinhaltet den Hashwert der dritten dargestellten Seite, berechnet mit der Funktion *berechneHash()* aus dem String
-  "Block3" + Inhalt der Seite.
-* **a1b_block4Hash**: beinhaltet den Hashwert der vierten dargestellten Seite, berechnet mit der Funktion *berechneHash()* aus dem String
-  "Block4" + Inhalt der Seite.
+* **a1b_block1Hash** bis **a1b_block4Hash**: die 4 Variablen beinhalten den Hashwert der jeweils dargestellten Seite, berechnet mit der
+  Funktion *berechneHash()* aus dem String "Block1" (bzw. "Block2", ...) + Inhalt der Seite.
 * **a1c_block5Inhalt**: beinhaltet den Text, den der User in Animation 1c als Inhalt für den neu hinzugefügten Block eingeben kann.
   Anfangswert ist der Text "raffinierten Ideen und Konzepten."
 * **a1c_block5Hash**: beinhaltet den Hashwert des fünften dargestellten Blocks, berechnet mit der Funktion *berechneHash()* aus dem String
@@ -606,7 +601,7 @@ werden.
   *gruenspan* (rgb: 176, 213, 166), *tarngruen* (rgb: 53, 76, 40), *kressegruen* (rgb: 94, 113, 28), *sandgrau* (rgb: 136, 138,
   134), *grapefruit* (rgb: 254, 205, 49), *schmetterlingsblau* (rgb: 103, 177, 227), *antikblau* (rgb: 0, 49, 91),
   *klatschmohnrot* (rgb: 237, 60, 11) und *creme* (rgb: 254, 244, 229).
-* **Layout**: <br>
+* **Responsives Erscheinungsbild**: <br>
   Das responsive Design der Applikation wird mit CSS-Grid realisiert. Dabei bilden der Bereich für die Navigation (*nav*) und
   für das Logo (*logo*) eigene grid-areas, es gibt die Klassen *div.mitte* (für den Bereich des Inhalts), *div.randr* und
   *div.randl* (für einen frei bleibenden Rand links und rechts vom Inhalt bei breiten Bildschirmen), die auch jeweils eine eigene
@@ -626,9 +621,9 @@ werden.
   Bestimmt werden die Hintergrundfarbe (*background-color*) und dass sich der body-Bereich über die gesamte Bildschirmhöhe
   ausbreiten soll (*height: 100vh*).
 * **Navigation**: <br>
-  Der Navigationsbereich wird als unsortierte Liste realisiert, wobei die Listeneinträge (*nav li*) so formatiert sind, dass
-  sie für den User den Eindruck erwecken, Buttons zu sein (Cursor wird zum Pointer, Invertierung der Farben bei Aktivierung
-  *nav li:active*).
+  Der Navigationsbereich wird als unsortierte Liste (*nav ul*) realisiert, wobei die Listeneinträge (*nav li*) so formatiert
+  sind, dass sie für den User den Eindruck erwecken, Buttons zu sein (Cursor wird zum Pointer, Invertierung der Farben bei
+  Aktivierung *nav li:active*).
 * **#menuicon**: <br>
   Mit der ID *#menuicon* wird das Hamburger-Icon selektiert und formatiert, welches bei Bildschirmbreiten < 960px anstelle des
   Navigationsmenüs erscheint.
@@ -707,6 +702,9 @@ werden.
 * **.tabFeldTitel**: <br>
   Diese Klasse regelt als Ergänzung zur Klasse *.tabelle* die Formatierung derjenigen Zellen innerhalb einer Tabelle, die eine
   Überschrift beinhalten.
+* **.tabHervorgehoben**: <br>
+  Diese Klasse regelt als Ergänzung zur Klasse *.tabelle* die Formatierung von Zellen einer Tabelle, die von der Schrift- und
+  Hintergrundfarbe deutlich hervorgehoben sein sollen.
 * **.tabTransaktion**: <br>
   Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der eine
   die Daten einer Transaktion angezeigt werden, bestimmt.
@@ -727,21 +725,95 @@ werden.
   Diese Klasse regelt die Grösse der Grafik, die einen Haken darstellt und in mehreren Animationen angezeigt wird.
 * **.kreuz**: <br>
   Diese Klasse regelt die Grösse der Grafik, die ein Kreuz darstellt und in mehreren Animationen angezeigt wird.
-* **.fragenzeichen**: <br>
+* **.fragezeichen**: <br>
   Diese Klasse regelt die Grösse der Grafik, die ein Fragezeichen darstellt und in mehreren Animationen angezeigt wird.
-* **#a3d_gueltigeTransa, #a3d_zurückgewieseneTrans**: <br>
+* **#a3d_gueltigeTrans, #a3d_zurückgewieseneTrans**: <br>
   Diese IDs bestimmen die Formatierung der Meldungen "Transaktion zurückgewiesen" bzw. "Transaktion gültig", die in der Animation
   3d dargestellt werden.
 * **.feld**: <br>
-  Diese Klasse regelt die Formatierung derjenigen Elemente in den Animationen, die aussehen wie eine Tabelle, die lediglich aus
-  einem einzigen Feld besteht (ähnlich wie ein Block mit weissem Hintergrund und schwarzem Rahmen).
-* **.veraendert** <br>
+  Diese Klasse regelt die Formatierung derjenigen Elemente in den Animationen, die aussehen wie eine lediglich aus einem einzigen
+  Feld bestehende Tabelle (ähnlich wie ein Block mit weissem Hintergrund und schwarzem Rahmen).
+* **.geaenderterWert**: <br>
   Diese Klasse dient dazu, die Felder, welche sich in der Animation 4c verändern können, durch eine gesonderte Formatierung
   hervorzuheben.
+* **.gruenerHintergrund**: <br>
+  Diese Klasse dient dazu, die Hintergrundfarbe von dargestellten Blöcken oder Knoten in *kressegruen* zu ändern. Verwendet wird
+  diese Klasse in den Animationen 6a (Knoten) und 7 (Blöcke).
+* **.teileBlockGruen, .teileBlockBlau**: <br>
+  Diese beiden Klassen formatieren die auf einen Hashwert reduzierten Blöcke, die in den Animationen 6b und 6c im
+  Peer-to-Peer-Netzwerk verteilt werden. Sie unterscheiden sich lediglich in der Hintergrundfarbe, die bei der ersten Klasse
+  *kressegruen* und bei der zweiten *schmetterlingsblau* ist.
 
 
 ## 5.2 Dynamik
-An dieser Stelle sollten die dynamische Aspekte, zum Beispiel mit Hilfe von UML Sequenz/Kollaborationsdiagrammen, oder Akivitätsdiagrammen beschrieben werden.
 
-## 5.3 Logik 
-An dieser Stelle können noch logische Aspekte, wie zum Beispiel logische Einschränkungen spezifiziert werden. Hierzu kann zum Beispiel OCL verwendet werden.
+### Navigation
+
+Sowohl die zum Start der Applikation angezeigte Startseite (ID *anim_0*) als auch jede einzelne der Animatonen von 1a bis 7 (ID
+*anim_1a* bis *anim_7*) sind in der Datei *blockchainkonzepte.html* in eigene div-Kontainer verpackt, die zwar alle beim Start der
+Applikation vollständig geladen werden, von denen aber jeweils nur ein einziger div-Kontainer sichtbar ist. Alle anderen sind durch
+das Setzen der CSS-Eigenschaft *display: none* in der Klasse *.animation* verborgen. Navigation zu einer bestimmten Animation 
+bedeutet also, dass beim div-Kontainer, in dem sich die aktuell sichtbare Animation befindet, die CSS-Eigenschaft *display: none*
+und beim div-Kontainer, in dem sich die Animation, zu der navigiert werden soll, befindet, die CSS-Eigenschaft *display: inline* 
+gesetzt werden. Das wird realisiert durch die Verwendung der Variable *animAktuell*, in der die Nummer der aktuell sichtbaren
+Animation gespeichert ist, und die Ausführung der Funktion *oeffneAnimation()*.
+
+Weil beim Starten der Applikation die Datei *blockchainkonzepte.html* vollständig geladen wird, werden dabei auch die Werte
+sämtlicher Variablen ausgelesen, auch die Werte jener Variablen, welche der User beim Verwenden der Applikation über Eingaben
+verändern kann. Dadurch ist einerseits sichergestellt, dass jede Animation beim Start der Applikation voll funktionsfähig ist 
+und es daher möglich ist, vom Start der Applikation an zu jeder beliebigen Animation zu navigieren. Andererseits führt dies zu der
+Notwendigkeit, dass beim Navigieren zu einer Animation, was ja lediglich ein Sichtbar-Machen des bereits geladenen Inhalts ist,
+die Werte der in dieser Animation verwendeten Variablen neu ausgelesen und die Darstellung der Animation angepasst werden müssen,
+damit Eingaben, die der User während der Anwendung der Applikation schon gemacht hat, in der Darstellung der Animation auch 
+angezeigt werden. Das wird dadurch realisiert, dass beim Navigieren zu bestimmten Animationen Funktionen ausgeführt werden, die 
+Teile des html-Codes der betroffenen Animationen neu generieren. Diese code-generierenden Funktionen sind zusammengefasst in der 
+Datei *bjk_code_generierung.js*.
+
+Beim Klicken auf einen Button im Navigationsmenü werden also sowohl die Funktion *oeffneAnimation()* als auch (in den meisten
+Fällen) die code-generierende Funktion, die zur entsprechenden Animation gehört, ausgeführt. Für die "weiter"- und "zurück"-Buttons
+in den einzelnen Animationen gibt es keine gesonderte "weiter"- oder "zurück"-Funktionen. Faktisch finden sich in jedem
+div-Kontainer eigene "weiter"- und "zurück"-Buttons. Wenn man auf diese klickt, wird das Gleiche ausgeführt wie beim Klicken auf
+einen Button im Navigationsmenü. Welche Animation jeweils geöffnet wird, ist abhängig davon, welche Animationen direkt davor und 
+danach an der Reihe sind.
+
+
+### Beeinflussung der Animationen durch den User
+
+**Start der Animationen**: <br>
+Alle Animationen starten durch das Klicken auf einen Button, der so prominent platziert und so deutlich beschriftet ist, dass
+für einen durchschnittlich begabten User es einfach sein sollte, diesen Button als Startbutton der Animation zu interpretieren.
+Bei denjenigen Animationen, bei denen der User über Eingaben die Darstellung der Animationen beeinflussen kann, öffnet sich 
+daraufhin ein Eingabeformular, bei denjenigen Animationen, die der User lediglich betrachten kann, wird der automatische Ablauf
+der Animation gestartet.
+
+**Abbruch der Animation**: <br>
+Bei denjenigen Animationen, die der User lediglich betrachten kann, wird nach dem Starten der Animation ein mit "Animation
+abbrechen" beschrifteter Button angezeigt. Ein Klicken auf diesen Button bewirkt, dass allen dargestellten html-Elementen jene
+Position zugewiesen wird, welche sie am Ende der Animation einnehmen würden.
+
+**Unterbrechung der Animation**: <br>
+Bei denjenigen Animationen, die der User lediglich betrachten kann, wird nach dem Starten der Animation ein mit "Animation
+unterbrechen" beschrifteter Button angezeigt. Ein Klicken auf diesen Button bewirkt, dass die Positionen, welche die einzelnen
+dargestellten html-Elemente zum Zeitpunkt des Klickens einnehmen, gleichsam "eingeforen" werden.
+
+**Fortsetzen der Animation**: <br>
+Bei denjenigen Animationen, die der User lediglich betrachten kann, wird nach dem Unterbrechen der Animation ein mit "Animation
+fortsetzen" beschrifteter Button angezeigt. Ein Klicken auf diesen Button bewirkt, dass die einzelnen dargestellten html-Elemente
+von den Positionen aus, welche sie zum Zeitpunkt des Klickens des Buttons "Animation unterbrechen" eingenommen haben, ihre 
+Bewegung wieder aufnehmen.
+
+**Neustart der Animation**: <br>
+Bei denjenigen Animationen, die der User lediglich betrachten kann, wird sowohl nach dem Ende der Animation als auch nach dem
+Abbruch der Animation ein mit "Animation neu starten" beschrifteter Button angezeigt. Ein Klicken auf diesen Button bewirkt, dass
+den einzelnen dargestellten html-Elementen wieder ihre Ausgangsposition zugewiesen und die Animation gestartet wird.
+
+**Eingabe von Daten über Eingabeformulare**: <br>
+Bei denjenigen Animationen, bei denen der User über Eingaben die Darstellung der Animationen beeinflussen kann, öffnet sich 
+nach dem Klicken auf den Startbutton ein Eingabeformular, welches aus einem oder mehreren Feldern besteht, in das der User
+Texteingaben machen kann. Die erlaubten Eingaben sind an Vorgaben geknüpft, deren Einhaltung beim Klicken eines OK-Buttons zum
+Abschluss der Eingabe geprüft werden. Das geschieht je nach Animation und Eingabefeld durch eine der Funktionen *pruefeEingabeText(),
+pruefeEingabeZahl()* oder *pruefeEingabe1bis3*. Die maximale Länge der Eingaben wird über die html-Eigenschaft *maxlength*
+festgelegt, welche dem Eingabefeld (*input*) mitgegeben wird. Macht ein User eine ungültige Eingabe, erscheint ein Warnhinweis,
+welcher die erlaubten Eingaben verdeutlicht. Wird der Warnhinweis geschlossen, hat der User erneut die Möglichkeit, eine gültige
+Eingabe zu machen. Das Eingabeformular verschwindet erst, wenn alle Eingaben korrekt sind und der User auf den OK-Button klickt.
+Erst dann wird die Animation fortgesetzt.
