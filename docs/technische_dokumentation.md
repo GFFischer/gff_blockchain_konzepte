@@ -13,6 +13,8 @@
 |   0.8   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 06.06.2024 | Pkt 5.1 bearbeitet |
 |   0.9   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 07.06.2024 | Pkt 5.1 bearbeitet |
 |   0.10  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 11.06.2024 | Pkt 5.1 bearbeitet |
+|   0.11  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 12.06.2024 | Pkt 5.1 bearbeitet |
+
 
 # 1 Einführung
 
@@ -644,9 +646,6 @@ werden.
   Diese Klasse schafft ein Element für den sandgrauen Hintergrund, auf dem die Animationen jeweils zu sehen sind. Die Höhe
   bekommt einen Mindestwert als Standardwert zugewiesen (*height: 30em*), der aber bei vielen Animationen händisch vergrössert
   werden muss.
-* **.infoimg**: <br>
-  Diese Klasse regelt die Grösse der Grafik, auf die geklickt werden kann, um die erklärenden Texte zu öffnen, und sorgt dafür,
-  dass der Cursor (*cursor*) zum Pointer wird. Bei Aktivierung werden die Farben invertiert (*.infoimg:active*).
 * **.hinweis**: <br>
   Die Klasse *.hinweis* ist für Warnhinweise gedacht, die relativ mittig auf dem Bildschirm angezeigt werden. Die Farbgestaltung
   ist daher etwas auffälliger.
@@ -655,15 +654,90 @@ werden.
   angezeigt wird.
 * **button.hinweisbutton**: <br>
   Diese Klasse formatiert den Button, der auf einem Warnhinweis erscheint und mit dem dieser Warnhinweis wieder ausgeblendet
-  werden kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.hinweis*, bei Aktivierung werden die Farben invertiert
-  (*button.hinweisbutton:aktive*).
+  werden kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.hinweis*, der Cursor (*cursor*) wird zum Pointer und
+  bei Aktivierung werden die Farben invertiert (*button.hinweisbutton:active*).
+* **.infoimg**: <br>
+  Diese Klasse regelt die Grösse der Grafik, auf die geklickt werden kann, um die erklärenden Texte zu öffnen, und sorgt dafür,
+  dass der Cursor (*cursor*) zum Pointer wird. Bei Aktivierung werden die Farben invertiert (*.infoimg:active*).
 * **.infotext**: <br>
-  .....................................
+  Diese Klasse formatiert die erklärenden Texte, die aufpoppen, wenn auf die jeweiligen Grafiken in den Animationen (*.infoimg*)
+  geklickt wird. Die Farbgestaltung hebt sich deutlich vom Rest der Applikation ab (Text in *antikblau* und Hintergrund in
+  *grapefruit*).
+* **.button.infobutton**: <br>
+  Diese Klasse formatiert den Button, der am Ende eines erklärenden Textes erscheint und mit dem dieser Text wieder ausgeblendet
+  werden kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.infotext*, der Cursor (*cursor*) wird zum Pointer und
+  bei Aktivierung werden die Farben invertiert (*button.infobutton:active*).
+* **.hintergrundwissen**: <br>
+  Diese Klasse formatiert die weiterführenden Texte, die aufpoppen, wenn in den Animationen auf den Button mit der Beschriftung
+  "Hintergrundwissen" geklickt wird. Die Farbgestaltung hebt sich deutlich vom Rest der Applikation ab (Text in *grapefruit*
+  und Hintergrund in *antikblau*).
+* **.button.hintergrbutton**: <br>
+  Diese Klasse formatiert den Button, der am Ende eines weiterführenden Textes erscheint und mit dem dieser Text wieder
+  ausgeblendet werden kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.hintergrundwissen*, der Cursor (*cursor*)
+  wird zum Pointer und bei Aktivierung werden die Farben invertiert (*button.hintergrbutton:active*).
+* **.formular**: <br>
+  Diese Klasse formatiert die Eingabeformulare, die aufpoppen, wenn der User in den einzelnen Animationen die Möglichkeit hat,
+  durch seine Eingaben die Gestaltung der Animation zu beeinflussen. Die farbliche Gestaltung soll sich harmonisch in den Rest
+  der Applikation einfügen und gleichzeitig deutlich von der Gestaltung der Warnhinweise (*.hinweis*) abheben.
+* **.button.formularbutton**: <br>
+  Diese Klasse formatiert die Buttons, innerhalb der Formulare angezeigt werden und mit denen die Eingabe abgeschlossen werden
+  kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.formular*, der Cursor (*cursor*) wird zum Pointer und bei
+  Aktivierung werden die Farben invertiert (*button.formularbutton:active*).
 * **.block**: <br>
   Diese Klasse regelt die Formatierung der Elemente, die in verschiedenen Animationen die Blöcke einer Blockchain darstellen.
 * **.blockinhalt**: <br>
   Diese Klasse ergänzt die Klasse *.block* und ist für die Elemente, die innerhalb eines dargestellten Blocks ala Elemente dieses
   Blocks angezeigt werden. Dabei wird v.a. die Eigenschaft *width* auf *80%* gesetzt.
+* **.graph**: <br>
+  Diese Klasse regelt die Grösse der Grafiken, die bei der Darstellung des Peer-to-Peer-Netzwerkes hinter den Knoten angezeigt
+  werden und die Kanten des Graphen darstellen.
+* **.knoten**: <br>
+  Diese Klasse regelt die Formatierung der einzelnen Knoten, wenn in den Animationen das Peer-to-Peer-Netzwerk dargestellt wird.
+  Die runde Form wird durch die Eigenschaft *border-radius: 50%* realisiert.
+* **.knotenName**: <br>
+  Diese Klasse ergänzt die Klasse *.knoten* und bestimmt die Grösse der Knoten, die bei der ersten Darstellung des
+  Peer-to-Peer-Netzwerks noch ein wenig kleiner ist.
+* **#a2a_knotenNeu**: <br>
+  Mit dieser ID wird der in Animation 2a neu hinzugefügte Knoten selektiert. Bestimmt wird die Farbe, damit sich dieser Knoten
+  optisch von den anderen Knoten des dargestellten Peer-to-Peer-Netzwerks abhebt.
+* **.tabelle**: <br>
+  Diese Klasse regelt die Formatierung, die für alle Tabellen, die in den Animationen angezeigt werden, gültig ist.
+* **.tabFeld**: <br>
+  Diese Klasse regelt als Ergänzung zur Klasse *.tabelle* die Formatierung der einzelnen Zellen innerhalb einer Tabelle.
+* **.tabFeldTitel**: <br>
+  Diese Klasse regelt als Ergänzung zur Klasse *.tabelle* die Formatierung derjenigen Zellen innerhalb einer Tabelle, die eine
+  Überschrift beinhalten.
+* **.tabTransaktion**: <br>
+  Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der eine
+  die Daten einer Transaktion angezeigt werden, bestimmt.
+* **.tabAdresse**: <br>
+  Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der die
+  Adressen der fremden Knoten angezeigt werden, bestimmt.
+* **.hash**: <br>
+  Überall, wo in der Animationen Hashwerte bzw. Hash-Referenzen angezeigt werden, sollen diese einheitlich formatiert sein, und
+  zwar in einer Monospace-Schriftart. Dazu dient diese Klasse.
+* **#a5ab_nonceHash1, a5ab_nonceHash2**: <br>
+  Als Ergänzung zur Klasse *.hash* wird bei diesen IDs der Text besonders hervorgehoben (*font-weight, font-size*).
+* **#a5ab_blockHash1, a5ab_blockHash2**: <br>
+  Als Ergänzung zur Klasse *.hash* wird bei diesen IDs der Text besonders hervorgehoben (*font-weight, font-size, color*).
+* **.signatur**: <br>
+  Diese Klasse dient dazu, dass überall, wo digitale Signaturen in den Animationen dargestellt werden, diese in einem
+  einheitlichen Format (Monospace-Schriftart, grössere Schrift) dargestellt werden.
+* **.haken**: <br>
+  Diese Klasse regelt die Grösse der Grafik, die einen Haken darstellt und in mehreren Animationen angezeigt wird.
+* **.kreuz**: <br>
+  Diese Klasse regelt die Grösse der Grafik, die ein Kreuz darstellt und in mehreren Animationen angezeigt wird.
+* **.fragenzeichen**: <br>
+  Diese Klasse regelt die Grösse der Grafik, die ein Fragezeichen darstellt und in mehreren Animationen angezeigt wird.
+* **#a3d_gueltigeTransa, #a3d_zurückgewieseneTrans**: <br>
+  Diese IDs bestimmen die Formatierung der Meldungen "Transaktion zurückgewiesen" bzw. "Transaktion gültig", die in der Animation
+  3d dargestellt werden.
+* **.feld**: <br>
+  Diese Klasse regelt die Formatierung derjenigen Elemente in den Animationen, die aussehen wie eine Tabelle, die lediglich aus
+  einem einzigen Feld besteht (ähnlich wie ein Block mit weissem Hintergrund und schwarzem Rahmen).
+* **.veraendert** <br>
+  Diese Klasse dient dazu, die Felder, welche sich in der Animation 4c verändern können, durch eine gesonderte Formatierung
+  hervorzuheben.
 
 
 ## 5.2 Dynamik
