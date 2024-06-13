@@ -14,7 +14,8 @@
 |   0.9   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 07.06.2024 | Pkt 5.1 bearbeitet |
 |   0.10  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 11.06.2024 | Pkt 5.1 bearbeitet |
 |   0.11  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 12.06.2024 | Pkt 5.1 und 5.2 bearbeitet |
-|   1.0   |  Fundamentale Blockchain-Konzepte | Georg Fischer | abgeschlossen  | 13.06.2024 | Grafiken hinzugefügt |
+|   0.12  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 13.06.2024 | Grafik hinzugefügt |
+|   1.0   |  Fundamentale Blockchain-Konzepte | Georg Fischer | abgeschlossen  | 14.06.2024 | Grafiken hinzugefügt |
 
 
 # 1 Einführung
@@ -136,6 +137,9 @@ unbewegten Grafiken und ohne die Möglichkeit zur Interaktion zur Verfügung ste
 # 5. Design
 
 ## 5.1 Statik
+
+![Diagram](img/statik.svg)
+
 ### HTML
 **blockchainkonzepte.html**
 
@@ -665,7 +669,7 @@ werden.
   Diese Klasse formatiert die erklärenden Texte, die aufpoppen, wenn auf die jeweiligen Grafiken in den Animationen (*.infoimg*)
   geklickt wird. Die Farbgestaltung hebt sich deutlich vom Rest der Applikation ab (Text in *antikblau* und Hintergrund in
   *grapefruit*).
-* **.button.infobutton**: <br>
+* **button.infobutton**: <br>
   Diese Klasse formatiert den Button, der am Ende eines erklärenden Textes erscheint und mit dem dieser Text wieder ausgeblendet
   werden kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.infotext*, der Cursor (*cursor*) wird zum Pointer und
   bei Aktivierung werden die Farben invertiert (*button.infobutton:active*).
@@ -673,7 +677,7 @@ werden.
   Diese Klasse formatiert die weiterführenden Texte, die aufpoppen, wenn in den Animationen auf den Button mit der Beschriftung
   "Hintergrundwissen" geklickt wird. Die Farbgestaltung hebt sich deutlich vom Rest der Applikation ab (Text in *grapefruit*
   und Hintergrund in *antikblau*).
-* **.button.hintergrbutton**: <br>
+* **button.hintergrbutton**: <br>
   Diese Klasse formatiert den Button, der am Ende eines weiterführenden Textes erscheint und mit dem dieser Text wieder
   ausgeblendet werden kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.hintergrundwissen*, der Cursor (*cursor*)
   wird zum Pointer und bei Aktivierung werden die Farben invertiert (*button.hintergrbutton:active*).
@@ -681,7 +685,7 @@ werden.
   Diese Klasse formatiert die Eingabeformulare, die aufpoppen, wenn der User in den einzelnen Animationen die Möglichkeit hat,
   durch seine Eingaben die Gestaltung der Animation zu beeinflussen. Die farbliche Gestaltung soll sich harmonisch in den Rest
   der Applikation einfügen und gleichzeitig deutlich von der Gestaltung der Warnhinweise (*.hinweis*) abheben.
-* **.button.formularbutton**: <br>
+* **button.formularbutton**: <br>
   Diese Klasse formatiert die Buttons, innerhalb der Formulare angezeigt werden und mit denen die Eingabe abgeschlossen werden
   kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.formular*, der Cursor (*cursor*) wird zum Pointer und bei
   Aktivierung werden die Farben invertiert (*button.formularbutton:active*).
