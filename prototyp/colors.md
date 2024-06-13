@@ -1,1 +1,0 @@
-R 148  G 179  B28   sattes mittelgrün

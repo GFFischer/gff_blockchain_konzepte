@@ -40,32 +40,40 @@ Viel spannender als diese Anweisungen ist daher die CSS-Datei design.css -->
         </div>
         <div id="anim_1" class="mitte animation">
             <h1>Einen Block hinzufügen</h1>
-            <p style="position: relative;">Hier seht ihr, wie man einen Block an eine Blockchain hinzufügen kann.</p>
-            <div class="hintergrund"></div>
-            <button id="proto_hintergrundwissen" class="animbutton" style="margin-left: 2%;"
-            onclick="document.getElementById('text2').style='visibility: visible; z-index: 11';">Hintergrundwissen</button>
-            <div id="testblock1" class="block" style="position: absolute; left: 2em; top: 11em;">
-                <div class="block blockinhalt">
-                    Testblock 1
+            <p style="position: relative;">Hier seht ihr, wie man einen Block an eine Blockchain hinzufügen kann.
+                Damit dieser Text etwas länger wird, betone ich es nochmals: ihr seht, wie einer Blockchain ein neuer
+                Block hinzugefügt werden kann.
+            </p>
+            <div style="position: relative;">
+                <div class="hintergrund"></div>
+                <button id="proto_hintergrundwissen" class="animbutton" style="margin-left: 2%;"
+                onclick="document.getElementById('text2').style='visibility: visible; z-index: 11';">Hintergrundwissen</button>
+                <div id="testblock1" class="block" style="position: absolute; left: 2em; top: 1em;">
+                    <div class="block blockinhalt">
+                        Testblock 1
+                    </div>
+                    <div class="block blockinhalt">
+                        ... der ausnahmsweise einen Inhalt zugewiesen bekommt.
+                    </div>
                 </div>
-                <div class="block blockinhalt">
-                    ... der ausnahmsweise einen Inhalt zugewiesen bekommt.
+                <div id="testblock2" class="block" style="position: absolute; left: 14em; top: 1em;">
+                    <div class="block blockinhalt">
+                        Testblock 2
+                    </div>
                 </div>
+                <div id="testblock3" class="block" style="visibility: hidden;">
+                    <div class="block blockinhalt">
+                        Testblock 3
+                    </div>
+                </div>
+                <button id="testblock3_button" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="document.getElementById('testblock3').style=
+                        'position: absolute; left: 26em; top: 1em; visibility: visible';
+                    ">Testblock 3 öffnen</button>
+                <img id="proto_erklaerung" src="infotext.png" alt="Erklärung" class="infoimg"
+                    style="position: absolute; top: 15em; left: 6em;"
+                    onclick="document.getElementById('text1').style='visibility: visibible; z-index: 20;'">                    
             </div>
-            <div id="testblock2" class="block" style="position: absolute; left: 14em; top: 11em;">
-                <div class="block blockinhalt">
-                    Testblock 2
-                </div>
-            </div>
-            <div id="testblock3" class="block" style="visibility: hidden;">
-                <div class="block blockinhalt">
-                    Testblock 3
-                </div>
-            </div>
-            <button id="testblock3_button" class="animbutton" style="position: absolute; right: 2em; top: 9em;"
-                onclick="document.getElementById('testblock3').style=
-                    'position: absolute; left: 26em; top: 11em; visibility: visible';
-                ">Testblock 3 öffnen</button>
             <div id="text1" class="infotext" style="visibility: hidden;">
                 Das ist ein Informationstext, mit dem erklärt wird, was genau auf dieser Animation eigentlich
                 dargestellt wird, was unter Umständen sehr kompliziert sein kann, es aber nicht muss. Das heisst,
@@ -86,9 +94,7 @@ Viel spannender als diese Anweisungen ist daher die CSS-Datei design.css -->
                 <button class="hintergrbutton"
                         onclick="document.getElementById('text2').style='visibility: hidden';">Schliessen</button>
             </div>
-            <img id="proto_erklaerung" src="infotext.png" alt="Erklärung" class="infoimg"
-                style="position: absolute; top: 25em; left: 6em;"
-                onclick="document.getElementById('text1').style='visibility: visibible; z-index: 20;'">
+            
         </div>
         
         <div id="anim_2" class="mitte animation">
