@@ -14,6 +14,7 @@
 |   0.9   |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 07.06.2024 | Pkt 5.1 bearbeitet |
 |   0.10  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 11.06.2024 | Pkt 5.1 bearbeitet |
 |   0.11  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 12.06.2024 | Pkt 5.1 und 5.2 bearbeitet |
+|   1.0   |  Fundamentale Blockchain-Konzepte | Georg Fischer | abgeschlossen  | 13.06.2024 | Grafiken hinzugefügt |
 
 
 # 1 Einführung
@@ -241,9 +242,9 @@ nur auf eine konkrete Animation beziehen.
   gewisse Zeit zu verzögern. Sie wird in der asynchronen Funktion, mit welcher der Ablauf der gesamten Bewegung in der Animation
   festgelegt wird, mit der Anweisung *await* verwendet.
 
-**jshashes.js, hash.js**
+**hash.js**
 
-Beide Dateien beinhalten die JavaScript Implementation von üblichen Hashfunktionen, zur Verfügung gestellt von Tomas Aparicio, 
+Diese Datei beinhaltet die JavaScript Implementation von üblichen Hashfunktionen, zur Verfügung gestellt von Tomas Aparicio, 
 Paul Johnston und Angel Martin, welche unter https://github.com/h2non/jshashes zu finden ist. Ihre Verwendung ist bei der Angabe 
 eines Copyright-Hinweises gestattet. Konkret daraus verwendet wird in der Applikation die Implementierung des SHA256-Algorithmus.
 
@@ -393,7 +394,7 @@ Klassen und Funktionen:
   Diese Funktion gibt aus dem Array *nameAuswahl* einen Namen zurück. Der Parameter *index* bezieht sich dabei auf das Array
   *indizesFuerNamen*, in dem beim Start der Applikation mit der Funktion *zufallsindizes()* die Indizes jener Elemente aus dem
   Array *nameAuswahl* bestimmt wurden, die für die Namen der Knoten in Animation 2a verwendet werden.
-* **Adresse** <br>
+* **class Adresse** <br>
   Weil ein Schlüsselpaar (= eine Adresse in der Blockchain) aus den drei Werten e, d und n besteht, wird eine Klasse Adresse
   geschaffen, um komplette Schlüsselpaare in einem Array speichern zu können.
 * **getAdresse**(index) <br>
@@ -627,6 +628,12 @@ werden.
 * **#menuicon**: <br>
   Mit der ID *#menuicon* wird das Hamburger-Icon selektiert und formatiert, welches bei Bildschirmbreiten < 960px anstelle des
   Navigationsmenüs erscheint.
+* **.sichtbar**: <br>
+  Diese Klasse besteht einzig aus der CSS-Eigenschaft *visibility: visible*. Sie findet sich ausschliesslich in der @media-Regel
+  für Bildschirmbreiten <= 960px und wird dort der *classList* der Navigation (*nav*, ID: *navmenu*) hinzugefügt, wenn der User
+  auf das "Hamburger-Icon" klickt, und wieder davon entfernt, sobald der User auf einen Eintrag im Navigationsmenü klickt. Dadurch
+  wird verhindert, dass das Navigationsmenü dauerhaft unsichtbar bleibt, wenn der User die Bildschirmbereite in seinem
+  Browserfenster wieder auf > 960px vergrössert.
 * **p, h1, h2, ...**: <br>
   Hier werden lediglich die Farbe der Überschriften (*color*) und der jeweilige Aussenabstand (*margin*) bestimmt.
 * **.animation**: <br>
