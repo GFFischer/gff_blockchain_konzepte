@@ -159,14 +159,14 @@ Diese IDs dieser Kontainer werden nach folgenden Regeln gebildet:
 * Es folgt die Nummer der Animation, wie sie in den Use-cases im Pflichtenheft vergeben worden ist.
 * Die Startseite bekommt die ID "anim_0".
 
-Im head-Bereich der html-Datei werden die CSS-Datei *bjk_styles.css* sowie alle JavaScript-Dateien 
-(*bjk_funktionensammlung.js, jshashes.js, hash.js, bjk_variablen.js, bjk_erklaerende_texte.js* und 
-*bjk_code_generierung.js*) geladen.
+Im head-Bereich der html-Datei werden die CSS-Datei *bck_styles.css* sowie alle JavaScript-Dateien 
+(*bck_funktionensammlung.js, jshashes.js, hash.js, bck_variablen.js, bck_erklaerende_texte.js* und 
+*bck_code_generierung.js*) geladen.
 
 
 ### JavaScript
 
-**bjk_funktionensammlung.js**
+**bck_funktionensammlung.js**
 
 In dieser Datei befinden sich alle Funktionen, die beim Anwenden der Applikation mehrmals verwendet werden und sich nicht 
 nur auf eine konkrete Animation beziehen.
@@ -252,7 +252,7 @@ Diese Datei beinhaltet die JavaScript Implementation von üblichen Hashfunktione
 Paul Johnston und Angel Martin, welche unter https://github.com/h2non/jshashes zu finden ist. Ihre Verwendung ist bei der Angabe 
 eines Copyright-Hinweises gestattet. Konkret daraus verwendet wird in der Applikation die Implementierung des SHA256-Algorithmus.
 
-**bjk_variablen.js**
+**bck_variablen.js**
 
 Diese Datei beinhaltet alle Variablen, deren Werte bei jedem Laden der Seite einen Anfangswert bekommen. Dieser Anfangswert wird 
 entweder zufällig generiert oder aus einer vorgegebenen Auswahl zufällig ausgewählt. Daher befinden sich in dieser Datei auch 
@@ -415,7 +415,7 @@ Klassen und Funktionen:
   a4a_betragTransaktion, a4a_gebuehrTransaktion* und *a4a_zeitTransaktion* als String zurück, um daraus den
   Hashwert der Transaktion zu berechnen.
   
-**bjk_erklaerende_texte.js**
+**bck_erklaerende_texte.js**
 
 In dieser Datei befindet sich der html-Code für alle erklärenden und weiterführenden Texte, die in der Applikation aufgepoppt 
 werden können, wobei jeder einzelne Text einer gesonderten Variable zugewiesen wird. Die Auslagerung der Texte in eine eigene 
@@ -437,7 +437,7 @@ In der Datei selbst sind die Variablennamen alphabetisch sortiert. Ganz am Ende 
 ***copyright_hashes***, welcher der html-Code des Copyright-Hinweises für die Implementierung der verwendeten Hash-Funktion in
 JavaScript, der bei jeder Animation aufgepoppt werden kann, wo die Hashfunktion verwendet wird, zugewiesen wird.
 
-**bjk_code_generierung.js**
+**bck_code_generierung.js**
 
 Beim Starten der Applikation durch das Laden der html-Seite *blockchainkonzepte.html* wird der gesamte Code geladen. Damit 
 Eingaben des Users auch Auswirkungen auf die Animationen haben, müssen Teile des html-Codes während der Anwendung der Applikation 
@@ -596,7 +596,7 @@ Konkret handelt es sich um folgende Funktionen:
 
 ### CSS
 
-Alle Styles für das Design der Applikation sind in der Datei ***bjk_styles.css*** gebündelt. Die grosse Ausnahme davon bilden
+Alle Styles für das Design der Applikation sind in der Datei ***bck_styles.css*** gebündelt. Die grosse Ausnahme davon bilden
 die Angaben über die Sichtbarkeit (CSS-Eigenschaften *display* und *visibility*), die für jedes html-Element gesondert geregelt
 werden.
 
@@ -760,6 +760,8 @@ werden.
 
 ### Navigation
 
+![Diagram](img/dynamik_1.svg)
+
 Sowohl die zum Start der Applikation angezeigte Startseite (ID *anim_0*) als auch jede einzelne der Animatonen von 1a bis 7 (ID
 *anim_1a* bis *anim_7*) sind in der Datei *blockchainkonzepte.html* in eigene div-Kontainer verpackt, die zwar alle beim Start der
 Applikation vollständig geladen werden, von denen aber jeweils nur ein einziger div-Kontainer sichtbar ist. Alle anderen sind durch
@@ -778,7 +780,7 @@ die Werte der in dieser Animation verwendeten Variablen neu ausgelesen und die D
 damit Eingaben, die der User während der Anwendung der Applikation schon gemacht hat, in der Darstellung der Animation auch 
 angezeigt werden. Das wird dadurch realisiert, dass beim Navigieren zu bestimmten Animationen Funktionen ausgeführt werden, die 
 Teile des html-Codes der betroffenen Animationen neu generieren. Diese code-generierenden Funktionen sind zusammengefasst in der 
-Datei *bjk_code_generierung.js*.
+Datei *bck_code_generierung.js*.
 
 Beim Klicken auf einen Button im Navigationsmenü werden also sowohl die Funktion *oeffneAnimation()* als auch (in den meisten
 Fällen) die code-generierende Funktion, die zur entsprechenden Animation gehört, ausgeführt. Für die "weiter"- und "zurück"-Buttons
