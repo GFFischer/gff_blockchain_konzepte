@@ -792,6 +792,8 @@ danach an der Reihe sind.
 
 ### Beeinflussung der Animationen durch den User
 
+![Diagram](img/dynamik_2.svg)
+
 **Start der Animationen**: <br>
 Alle Animationen starten durch das Klicken auf einen Button, der so prominent platziert und so deutlich beschriftet ist, dass
 für einen durchschnittlich begabten User es einfach sein sollte, diesen Button als Startbutton der Animation zu interpretieren.
@@ -819,6 +821,8 @@ Bewegung wieder aufnehmen.
 Bei denjenigen Animationen, die der User lediglich betrachten kann, wird sowohl nach dem Ende der Animation als auch nach dem
 Abbruch der Animation ein mit "Animation neu starten" beschrifteter Button angezeigt. Ein Klicken auf diesen Button bewirkt, dass
 den einzelnen dargestellten html-Elementen wieder ihre Ausgangsposition zugewiesen und die Animation gestartet wird.
+
+![Diagram](img/dynamik_3.svg)
 
 **Eingabe von Daten über Eingabeformulare**: <br>
 Bei denjenigen Animationen, bei denen der User über Eingaben die Darstellung der Animationen beeinflussen kann, öffnet sich 
