@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="316.25964mm"
+   height="136.49371mm"
+   viewBox="0 0 316.25964 136.49371"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   sodipodi:docname="dynamik_1.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#999999"
+     borderopacity="1"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.58083614"
+     inkscape:cx="568.14647"
+     inkscape:cy="390.8159"
+     inkscape:window-width="1440"
+     inkscape:window-height="890"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <linearGradient
+       x1="354.5"
+       y1="128.5"
+       x2="354.5"
+       y2="190.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill0">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop1" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop2" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop3" />
+    </linearGradient>
+    <linearGradient
+       x1="604.5"
+       y1="128.5"
+       x2="604.5"
+       y2="190.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill1">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop4" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop5" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       x1="1097"
+       y1="128.5"
+       x2="1097"
+       y2="190.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill2">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop7" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop8" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop9" />
+    </linearGradient>
+    <linearGradient
+       x1="853"
+       y1="128.5"
+       x2="853"
+       y2="190.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill3">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop10" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop11" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop12" />
+    </linearGradient>
+    <linearGradient
+       x1="1097.5"
+       y1="349.5"
+       x2="1097.5"
+       y2="482.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill4">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop13" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop14" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop15" />
+    </linearGradient>
+    <linearGradient
+       x1="851.5"
+       y1="314.5"
+       x2="851.5"
+       y2="555.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill5">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop16" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop17" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop18" />
+    </linearGradient>
+    <linearGradient
+       x1="602"
+       y1="272.5"
+       x2="602"
+       y2="338.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill6">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop19" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop20" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop21" />
+    </linearGradient>
+    <linearGradient
+       x1="353"
+       y1="241.5"
+       x2="353"
+       y2="600.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill7">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop22" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop23" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop24" />
+    </linearGradient>
+    <linearGradient
+       x1="104"
+       y1="128.5"
+       x2="104"
+       y2="190.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill8">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop25" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop26" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop27" />
+    </linearGradient>
+    <linearGradient
+       x1="104.5"
+       y1="204.5"
+       x2="104.5"
+       y2="266.5"
+       gradientUnits="userSpaceOnUse"
+       spreadMethod="reflect"
+       id="fill9">
+      <stop
+         offset="0"
+         stop-color="#F7BDA4"
+         id="stop28" />
+      <stop
+         offset="0.5"
+         stop-color="#F5B195"
+         id="stop29" />
+      <stop
+         offset="1"
+         stop-color="#F8A581"
+         id="stop30" />
+    </linearGradient>
+  </defs>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(45.182944,-45.304525)">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,-53.429151,11.393762)"
+       id="g73">
+      <path
+         d="m 274.5,138.834 c 0,-5.707 4.627,-10.334 10.334,-10.334 h 139.333 c 5.707,0 10.333,4.627 10.333,10.334 v 41.333 c 0,5.707 -4.626,10.333 -10.333,10.333 H 284.834 c -5.707,0 -10.334,-4.626 -10.334,-10.333 z"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill0)"
+         fill-rule="evenodd"
+         id="path30"
+         style="fill:url(#fill0)" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(287.601,155)"
+         id="text30">blockchainkonzepte.</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(338.661,174)"
+         id="text31">html</text>
+      <path
+         d="m 506.5,138.834 c 0,-5.707 4.627,-10.334 10.334,-10.334 h 175.333 c 5.707,0 10.333,4.627 10.333,10.334 v 41.333 c 0,5.707 -4.626,10.333 -10.333,10.333 H 516.834 c -5.707,0 -10.334,-4.626 -10.334,-10.333 z"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill1)"
+         fill-rule="evenodd"
+         id="path31"
+         style="fill:url(#fill1)" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(519.309,155)"
+         id="text32">bck_funktionensammlung</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(596.689,174)"
+         id="text33">.js</text>
+      <path
+         d="m 1024.5,138.834 c 0,-5.707 4.63,-10.334 10.33,-10.334 h 124.34 c 5.7,0 10.33,4.627 10.33,10.334 v 41.333 c 0,5.707 -4.63,10.333 -10.33,10.333 h -124.34 c -5.7,0 -10.33,-4.626 -10.33,-10.333 z"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill2)"
+         fill-rule="evenodd"
+         id="path33"
+         style="fill:url(#fill2)" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(1043.93,165)"
+         id="text34">bck_variablen.js</text>
+      <path
+         d="m 762.5,138.834 c 0,-5.707 4.627,-10.334 10.334,-10.334 h 160.333 c 5.707,0 10.333,4.627 10.333,10.334 v 41.333 c 0,5.707 -4.626,10.333 -10.333,10.333 H 772.834 c -5.707,0 -10.334,-4.626 -10.334,-10.333 z"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill3)"
+         fill-rule="evenodd"
+         id="path34"
+         style="fill:url(#fill3)" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(776.081,155)"
+         id="text35">bck_code_generierung.</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(847.281,174)"
+         id="text36">js</text>
+      <path
+         d="M 0,0 7.37239,453.543"
+         stroke="#000000"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="0.666667, 0.666667"
+         fill="none"
+         fill-rule="evenodd"
+         transform="matrix(-1,0,0,1,353.872,190.5)"
+         id="path36" />
+      <path
+         d="M 1096.5,190.5 V 644.043"
+         stroke="#000000"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="0.666667, 0.666667"
+         fill="none"
+         fill-rule="evenodd"
+         id="path37" />
+      <path
+         d="M 851.5,190.5 V 644.043"
+         stroke="#000000"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="0.666667, 0.666667"
+         fill="none"
+         fill-rule="evenodd"
+         id="path38" />
+      <path
+         d="M 602.5,190.5 V 644.043"
+         stroke="#000000"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="0.666667, 0.666667"
+         fill="none"
+         fill-rule="evenodd"
+         id="path39" />
+      <path
+         d="m 108.5,246.167 h 234.166 v 0.666 H 108.5 Z m 232.833,-3.667 8,4 -8,4 z"
+         id="path40" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(140.014,221)"
+         id="text40">alle Inhalte der Applikation</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(140.014,237)"
+         id="text41">werden geladen</text>
+      <path
+         d="M 7.12262e-8,-0.333333 484.664,-0.33323 V 0.333437 L -7.12262e-8,0.333333 Z M 483.331,-3.9999 l 8,4.000004987 -8,3.999995013 z"
+         transform="matrix(-1,0,0,1,847.831,537.5)"
+         id="path41" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(625.705,295)"
+         id="text42">die Funktion</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-style="italic"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(696.038,295)"
+         id="text43">oeffneAnimation</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-style="italic"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(786.372,295)"
+         id="text44">()</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(797.372,295)"
+         id="text45">macht</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(625.705,311)"
+         id="text46">die gewählte Animation sichtbar</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(381.648,564)"
+         id="text47">geänderter Code wird in der Applikation angezeigt</text>
+      <path
+         d="m 605.5,320.167 h 235.186 v 0.666 H 605.5 Z m 233.853,-3.667 8,4 -8,4 z"
+         id="path47" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(878.838,332)"
+         id="text48">die Werte der benötigten Variablen</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(878.838,348)"
+         id="text49">werden neu ausgelesen</text>
+      <path
+         d="m 854.5,358.167 h 232.42 v 0.666 H 854.5 Z m 231.09,-3.667 8,4 -8,4 z"
+         id="path49" />
+      <path
+         d="m 1100.5,368.5 h 30"
+         stroke="#000000"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="none"
+         fill-rule="evenodd"
+         id="path50" />
+      <path
+         d="m 1130.88,368.5 v 91.896 l -22.76,0.162 v -0.666 l 22.42,-0.16 -0.33,0.333 V 368.5 Z m -20.96,95.537 -8.42,-3.014 7.46,-4.929 z"
+         id="path51" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(1147.66,389)"
+         id="text51">Werte von</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(1147.66,405)"
+         id="text52">Variablen</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(1147.66,421)"
+         id="text53">werden</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(1147.66,437)"
+         id="text54">zurückgegeben</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(884.591,488)"
+         id="text55">Teile des</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(935.258,488)"
+         id="text56">html</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(960.425,488)"
+         id="text57">-</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(964.425,488)"
+         id="text58">Codes</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(1000.42,488)"
+         id="text59">der</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(884.591,504)"
+         id="text60">gewählten</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(944.591,504)"
+         id="text61">Animation</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(1003.76,504)"
+         id="text62">werden</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(1048.26,504)"
+         id="text63">neu</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(884.591,520)"
+         id="text64">geschriebe</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(943.425,520)"
+         id="text65">n</text>
+      <rect
+         x="1093.5"
+         y="349.5"
+         width="8"
+         height="133"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill4)"
+         id="rect65"
+         style="fill:url(#fill4)" />
+      <rect
+         x="847.5"
+         y="314.5"
+         width="8"
+         height="241"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill5)"
+         id="rect66"
+         style="fill:url(#fill5)" />
+      <rect
+         x="598.5"
+         y="272.5"
+         width="7"
+         height="66"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill6)"
+         id="rect67"
+         style="fill:url(#fill6)" />
+      <rect
+         x="349.5"
+         y="241.5"
+         width="7"
+         height="359"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill7)"
+         id="rect68"
+         style="fill:url(#fill7)" />
+      <path
+         d="m 31.5001,138.834 c 0,-5.707 4.6264,-10.334 10.3334,-10.334 H 166.167 c 5.707,0 10.333,4.627 10.333,10.334 v 41.333 c 0,5.707 -4.626,10.333 -10.333,10.333 H 41.8335 c -5.707,0 -10.3334,-4.626 -10.3334,-10.333 z"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill8)"
+         fill-rule="evenodd"
+         id="path68"
+         style="fill:url(#fill8)" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(66.2574,155)"
+         id="text68">Applikation</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(80.1507,174)"
+         id="text69">starte</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="16px"
+         transform="translate(117.771,174)"
+         id="text70">n</text>
+      <path
+         d="M 103.5,190.5 V 644.043"
+         stroke="#000000"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         stroke-dasharray="0.666667, 0.666667"
+         fill="none"
+         fill-rule="evenodd"
+         id="path70" />
+      <rect
+         x="100.5"
+         y="204.5"
+         width="8"
+         height="62"
+         stroke="#ed7d31"
+         stroke-width="0.666667"
+         stroke-miterlimit="8"
+         fill="url(#fill9)"
+         id="rect70"
+         style="fill:url(#fill9)" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(383.538,256)"
+         id="text71">der User navigiert zu einer</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="13px"
+         transform="translate(383.538,272)"
+         id="text72">Animation</text>
+      <path
+         d="m 356.5,281.167 h 235.253 v 0.666 H 356.5 Z m 233.92,-3.667 8,4 -8,4 z"
+         id="path72" />
+      <path
+         d="M 1.46721e-7,-0.333333 231.851,-0.333231 V 0.333435 L -1.46721e-7,0.333333 Z M 230.518,-3.9999 l 8,4.000004987 -8,3.999995013 z"
+         transform="matrix(-1,0,0,1,1093.02,471.5)"
+         id="path73" />
+    </g>
+  </g>
+</svg>

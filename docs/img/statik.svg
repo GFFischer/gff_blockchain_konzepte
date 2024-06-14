@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.57434918"
-     inkscape:cx="151.4758"
-     inkscape:cy="503.17823"
+     inkscape:zoom="1.6245048"
+     inkscape:cx="373.65233"
+     inkscape:cy="43.705627"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
@@ -132,7 +132,7 @@
          id="tspan1"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;line-height:1.1;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none;stroke-width:0.225"
          x="71.865211"
-         y="17.246964">bjk_funktionensammlung.js</tspan><tspan
+         y="17.246964">bck_funktionensammlung.js</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;line-height:1.1;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
          x="71.865211"
@@ -256,7 +256,7 @@
          id="tspan1-0"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;line-height:1.1;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none;stroke-width:0.225"
          x="16.869806"
-         y="62.34528">bjk_variablen.js</tspan><tspan
+         y="62.34528">bck_variablen.js</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;line-height:1.1;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
          x="16.869806"
@@ -658,7 +658,7 @@
          id="tspan103"
          style="stroke-width:0.225"
          x="101.72773"
-         y="199.34985"></tspan></text>
+         y="199.34985" /></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="m 15.201783,266.79248 h 33.40914"
@@ -765,7 +765,7 @@
          id="tspan162"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;line-height:1.1;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none;stroke-width:0.225"
          x="142.16682"
-         y="50.151802">bjk_erklaerende_texte.js</tspan><tspan
+         y="50.151802">bck_erklaerende_texte.js</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;line-height:1.1;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
          x="142.16682"
@@ -819,7 +819,7 @@
          id="tspan204"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;line-height:1.1;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none;stroke-width:0.225"
          x="70.180527"
-         y="163.05037">bjk_code_generierung.js</tspan><tspan
+         y="163.05037">bck_code_generierung.js</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;line-height:1.1;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
          x="70.180527"
@@ -983,7 +983,7 @@
          id="tspan268"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.82222px;line-height:1.1;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none;stroke-width:0.225"
          x="146.95074"
-         y="96.392525">bjk_styles.css</tspan><tspan
+         y="96.392525">bck_styles.css</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.175px;line-height:1.1;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
          x="146.95074"
@@ -1320,7 +1320,7 @@
          id="tspan336"
          style="stroke-width:0.2"
          x="97.622124"
-         y="154.64441"></tspan></text>
+         y="154.64441" /></text>
     <path
        style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1;marker-start:url(#ConcaveTriangle)"
        d="m 68.931047,52.535356 -6.472452,0.02879"
