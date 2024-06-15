@@ -393,12 +393,12 @@ müssen, weil sie eventuell in einer anderen Animation gerade geändert worden s
                         betragTransaktion - gebuehrTransaktion;
                     document.getElementById('fremde_adressen').innerHTML = tabelleMitFremdenAdressen();
                     var fremdbetrag = 'fremdbetrag' + pruefeEingabeAdresseEmpfaenger(empfaengerTransaktion);
-                    document.getElementById(fremdbetrag).style='color: red; font-weight: bold';
+                    document.getElementById(fremdbetrag).style='background-color: rgb(254,205,49); color: rgb(237, 60, 11); font-weight: bold';
                     guthabenAdressen[document.getElementById('eingabe_auftraggeber').value] -=
                         betragTransaktion;
                     document.getElementById('tabelle_eigene_adressen').innerHTML = tabelleEigeneAdressen();
                     var guth = 'guth' + document.getElementById('eingabe_auftraggeber').value;
-                    document.getElementById(guth).style='color: red; font-weight: bold';
+                    document.getElementById(guth).style='background-color: rgb(254,205,49); color: rgb(237, 60, 11); font-weight: bold';
                 ">OK</button>
             </div>
         </div>
@@ -412,7 +412,7 @@ Navigation zu dieser Animation neu geladen wird -->
         <div id="anim_5" class="animation">
             <div class="anim_hintergrund" style="height: 52em; min-width: 54em;"></div>
             <div id="erste_transaktion1">
-                <table class="transaktion" style="width: 15em; position: absolute; top: 2em; left: 2em;">
+                <table class="transaktion" style="width: 14em; position: absolute; top: 2em; left: 2em;">
                     <tr>
                         <th class="feld">Transaktionsdaten</th>
                     </tr>

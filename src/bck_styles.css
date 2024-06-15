@@ -342,3 +342,154 @@ input, select {
     padding: 0.5em;
 }
 
+.graph {
+    width: 44em;
+}
+
+.knoten {
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    margin: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+    height: 9em;
+    width: 9em;
+    border-radius: 50%;
+    padding: 0.5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.knotenName {
+    height: 7em;
+    width: 7em;
+}
+
+#a2a_knotenNeu {
+    color: var(--gruenspan);
+    border-color: var(--gruenspan);
+}
+
+.tabelle {
+    display: table;
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabFeld {
+    text-align: center;
+}
+
+.tabFeldTitel {
+    text-align: center;
+    padding: 0.5em;
+}
+
+.tabHervorgehoben {
+    text-align: center;
+    background-color: var(--grapefruit);
+    color: var(--klatschmohnrot);
+    font-weight: bold;
+}
+
+.tabTransaktion {
+    width: 14em;
+}
+
+.tabFremdeAdressen {
+    width: 18em;
+}
+
+.tabEigeneAdressen {
+    width: 22em;
+}
+
+.hash {
+    font-family: 'Bitstream Vera Sans Mono', Consolas, 'Courier New', Courier, monospace;
+}
+
+#a5ab_nonceHash1, #a5ab_nonceHash2 {
+    font-weight: bold;
+    font-size: larger;
+}
+#a5ab_blockHash1, #a5ab_blockHash2 {
+    font-weight: bold;
+    font-size: larger;
+    color: var(--klatschmohnrot);
+}
+
+.signatur {
+    font-family: 'Bitstream Vera Sans Mono', Consolas, 'Courier New', Courier, monospace;
+    font-size: 125%;
+}
+
+#a3d_gueltigeTrans {
+    width: 10em;
+    background-color: var(--kressegruen);
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    margin: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.5em;
+    font-weight: bold;
+    color: var(--creme);
+}
+
+#a3d_zurueckgewieseneTrans {
+    width: 11em;
+    background-color: var(--klatschmohnrot);
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    margin: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.5em;
+    font-weight: bold;
+    color: var(--grapefruit);
+}
+
+.feld {
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    padding: 0.3em;
+}
+
+.geaendeter Wert {
+    font-weight: bold;
+    color: var(--klatschmohnrot);
+}
+
+.gruenerHintergrund {
+    background-color: var(--kressegruen);
+}
+
+.teileBlockGruen {
+    background-color: var(--kressegruen);
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    color: var(--creme);
+    text-align: center;
+    padding: 0.1em;
+}
+
+.teileBlockGruen {
+    background-color: var(--schmetterlingsblau);
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    text-align: center;
+    padding: 0.1em;
+}
