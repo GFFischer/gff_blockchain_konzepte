@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="61.824306mm"
-   height="88.988167mm"
-   viewBox="0 0 61.824306 88.988167"
+   width="108.74302mm"
+   height="156.52164mm"
+   viewBox="0 0 108.74302 156.52164"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
@@ -23,9 +23,10 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.1616723"
-     inkscape:cx="243.1839"
-     inkscape:cy="155.80986"
+     showgrid="false"
+     inkscape:zoom="0.58083614"
+     inkscape:cx="210.04203"
+     inkscape:cy="495.83692"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
@@ -232,10 +233,10 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-19.623263,-33.822597)">
+     transform="translate(-49.169134,-11.597596)">
     <g
-       transform="matrix(0.26458333,0,0,0.26458333,-24.60625,15.345834)"
-       id="g57">
+       transform="matrix(0.46537667,0,0,0.46537667,-28.626333,-20.901255)"
+       id="g53">
       <path
          d="m 214.5,77.0001 c 0,-3.5899 2.686,-6.5 6,-6.5 3.314,0 6,2.9101 6,6.5 0,3.5898 -2.686,6.5 -6,6.5 -3.314,0 -6,-2.9102 -6,-6.5 z"
          stroke="#2f528f"
@@ -366,25 +367,7 @@
          font-weight="400"
          font-size="8px"
          transform="translate(235.443,339)"
-         id="text45">[</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(237.943,339)"
-         id="text46">Eingabe nicht OK</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(292.943,339)"
-         id="text47">]</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(263.52,378)"
-         id="text48">[Name nicht in Adressliste]</text>
+         id="text45">[Eingabe nicht OK]</text>
       <path
          d="m 318.5,332.334 c 0,-3.774 3.06,-6.834 6.834,-6.834 h 68.333 c 3.774,0 6.833,3.06 6.833,6.834 v 27.333 c 0,3.774 -3.059,6.833 -6.833,6.833 h -68.333 c -3.774,0 -6.834,-3.059 -6.834,-6.833 z"
          stroke="#000000"
@@ -392,20 +375,20 @@
          stroke-miterlimit="8"
          fill="url(#fill5)"
          fill-rule="evenodd"
-         id="path48"
+         id="path46"
          style="fill:url(#fill5)" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(337.543,343)"
-         id="text49">Warnhinweis</text>
+         id="text46">Warnhinweis</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(337.796,353)"
-         id="text50">wird sichtbar</text>
+         id="text47">wird sichtbar</text>
       <path
          d="m 318.5,267.334 c 0,-3.774 3.06,-6.834 6.834,-6.834 h 68.333 c 3.774,0 6.833,3.06 6.833,6.834 v 27.333 c 0,3.774 -3.059,6.833 -6.833,6.833 h -68.333 c -3.774,0 -6.834,-3.059 -6.834,-6.833 z"
          stroke="#000000"
@@ -413,52 +396,40 @@
          stroke-miterlimit="8"
          fill="url(#fill6)"
          fill-rule="evenodd"
-         id="path50"
+         id="path47"
          style="fill:url(#fill6)" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(336.043,273)"
-         id="text51">User bestätigt</text>
+         id="text48">User bestätigt</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(331.209,283)"
-         id="text52">Warnhinweis mit</text>
+         id="text49">Warnhinweis mit</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(353.209,293)"
-         id="text53">OK.</text>
+         id="text50">OK.</text>
       <path
          d="M 0.333333,-1.44026e-6 0.333409,17.6315 H -0.333257 L -0.333333,1.44026e-6 Z M 4.00007,16.2981 1.04987e-4,24.2982 -3.99993,16.2982 Z"
          transform="matrix(1,0,0,-1,359.5,325.798)"
-         id="path53" />
+         id="path50" />
       <path
          d="M 0.00372983,-0.333312 37.8647,0.0903589 37.8573,0.756984 -0.00372983,0.333312 Z M 36.5725,-3.591 44.5272,0.498268 36.483,4.4085 Z"
          transform="matrix(-1,0,0,1,318.027,280.5)"
-         id="path54" />
+         id="path51" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(173.308,367)"
-         id="text54">[</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(175.808,367)"
-         id="text55">Eingabe OK</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(212.808,367)"
-         id="text56">]</text>
+         id="text51">[Eingabe OK]</text>
       <path
          d="m 214.5,396 c 0,-3.59 2.91,-6.5 6.5,-6.5 3.59,0 6.5,2.91 6.5,6.5 0,3.59 -2.91,6.5 -6.5,6.5 -3.59,0 -6.5,-2.91 -6.5,-6.5 z"
          stroke="#2f528f"
@@ -466,7 +437,7 @@
          stroke-miterlimit="8"
          fill="url(#fill7)"
          fill-rule="evenodd"
-         id="path56"
+         id="path52"
          style="fill:url(#fill7)" />
       <path
          d="m 211.5,396 c 0,-5.247 4.253,-9.5 9.5,-9.5 5.247,0 9.5,4.253 9.5,9.5 0,5.247 -4.253,9.5 -9.5,9.5 -5.247,0 -9.5,-4.253 -9.5,-9.5 z"
@@ -475,7 +446,7 @@
          stroke-miterlimit="8"
          fill="none"
          fill-rule="evenodd"
-         id="path57" />
+         id="path53" />
     </g>
   </g>
 </svg>

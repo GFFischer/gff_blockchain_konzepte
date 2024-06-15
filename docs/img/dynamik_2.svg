@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="114.61091mm"
-   height="203.81734mm"
-   viewBox="0 0 114.61091 203.81734"
+   width="139.96973mm"
+   height="248.91396mm"
+   viewBox="0 0 139.96973 248.91396"
    version="1.1"
    id="svg1"
    inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
@@ -23,36 +23,16 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
+     showgrid="false"
      inkscape:zoom="0.58083614"
-     inkscape:cx="204.01623"
-     inkscape:cy="433.8573"
+     inkscape:cx="177.33056"
+     inkscape:cy="509.61016"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="layer1">
-    <sodipodi:guide
-       position="-76.990814,331.61635"
-       orientation="0,793.70079"
-       id="guide1"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="133.00919,331.61635"
-       orientation="1122.5197,0"
-       id="guide2"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="133.00919,34.616347"
-       orientation="0,-793.70079"
-       id="guide3"
-       inkscape:locked="false" />
-    <sodipodi:guide
-       position="-76.990814,34.616347"
-       orientation="-1122.5197,0"
-       id="guide4"
-       inkscape:locked="false" />
-  </sodipodi:namedview>
+     inkscape:current-layer="layer1" />
   <defs
      id="defs1">
     <radialGradient
@@ -79,11 +59,11 @@
          id="stop3" />
     </radialGradient>
     <radialGradient
-       cx="61912.5"
-       cy="57150"
+       cx="57150"
+       cy="61912.5"
        r="84257.203"
-       fx="61912.5"
-       fy="57150"
+       fx="57150"
+       fy="61912.5"
        gradientUnits="userSpaceOnUse"
        spreadMethod="pad"
        id="fill1"
@@ -422,10 +402,10 @@
      inkscape:label="Ebene 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-76.990813,-34.616346)">
+     transform="translate(-58.150862,-13.46586)">
     <g
-       transform="matrix(0.26458333,0,0,0.26458333,55.033334,16.404167)"
-       id="g139">
+       transform="matrix(0.32312504,0,0,0.32312504,31.335071,-8.7759461)"
+       id="g134">
       <path
          d="m 293.5,76.0001 c 0,-3.5899 2.686,-6.5 6,-6.5 3.314,0 6,2.9101 6,6.5 0,3.5898 -2.686,6.5 -6,6.5 -3.314,0 -6,-2.9102 -6,-6.5 z"
          stroke="#2f528f"
@@ -436,7 +416,7 @@
          id="path55"
          style="fill:url(#fill0)" />
       <path
-         d="m 189.5,828.5 c 0,-3.314 2.91,-6 6.5,-6 3.59,0 6.5,2.686 6.5,6 0,3.314 -2.91,6 -6.5,6 -3.59,0 -6.5,-2.686 -6.5,-6 z"
+         d="m 189.5,829 c 0,-3.59 2.686,-6.5 6,-6.5 3.314,0 6,2.91 6,6.5 0,3.59 -2.686,6.5 -6,6.5 -3.314,0 -6,-2.91 -6,-6.5 z"
          stroke="#2f528f"
          stroke-width="1.33333"
          stroke-miterlimit="8"
@@ -683,91 +663,55 @@
          font-weight="400"
          font-size="8px"
          transform="translate(328.8,375)"
-         id="text90">[</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(331.3,375)"
-         id="text91">User klickt auf Unterbrechen</text>
+         id="text90">[User klickt auf Unterbrechen</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(424.966,375)"
-         id="text92">-</text>
+         id="text91">-</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(427.466,375)"
-         id="text93">Button</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(449.633,375)"
-         id="text94">]</text>
+         id="text92">Button]</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(208.69,751)"
-         id="text95">[</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(211.19,751)"
-         id="text96">User klickt auf Neustart</text>
+         id="text93">[User klickt auf Neustart</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(287.857,751)"
-         id="text97">-</text>
+         id="text94">-</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(290.357,751)"
-         id="text98">Button</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(312.523,751)"
-         id="text99">]</text>
+         id="text95">Button]</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(164.443,781)"
-         id="text100">[</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(166.943,781)"
-         id="text101">User</text>
+         id="text96">[User</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(164.443,791)"
-         id="text102">macht</text>
+         id="text97">macht</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(164.443,801)"
-         id="text103">nichts</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(183.777,801)"
-         id="text104">]</text>
+         id="text98">nichts]</text>
       <path
          d="m 252.5,180.5 c 0,-3.866 3.134,-7 7,-7 h 79 c 3.866,0 7,3.134 7,7 v 28 c 0,3.866 -3.134,7 -7,7 h -79 c -3.866,0 -7,-3.134 -7,-7 z"
          stroke="#000000"
@@ -775,23 +719,23 @@
          stroke-miterlimit="8"
          fill="url(#fill9)"
          fill-rule="evenodd"
-         id="path104"
+         id="path98"
          style="fill:url(#fill9)" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(265.638,191)"
-         id="text105">Animation läuft vom</text>
+         id="text99">Animation läuft vom</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(278.471,201)"
-         id="text106">Start weg ab</text>
+         id="text100">Start weg ab</text>
       <path
          d="m 299.833,215.5 v 21.726 h -0.666 V 215.5 Z m 3.667,20.393 -4,8 -4,-8 z"
-         id="path106" />
+         id="path100" />
       <path
          d="M 0,0 202.304,1.50877"
          stroke="#000000"
@@ -800,13 +744,13 @@
          fill="none"
          fill-rule="evenodd"
          transform="matrix(1,0,0,-1,210,244.509)"
-         id="path107" />
+         id="path101" />
       <path
          d="m 366.833,317.5 v 24.897 h -0.666 V 317.5 Z m 3.667,23.564 -4,8 -4,-8 z"
-         id="path108" />
+         id="path102" />
       <path
          d="m 256.833,316.496 0.327,25.931 -0.666,0.008 -0.327,-25.931 z m 3.977,24.551 -3.899,8.05 -4.1,-7.949 z"
-         id="path109" />
+         id="path103" />
       <path
          d="M 0,0 329.582,1.82929"
          stroke="#000000"
@@ -815,46 +759,34 @@
          fill="none"
          fill-rule="evenodd"
          transform="matrix(1,0,0,-1,83,351.829)"
-         id="path110" />
+         id="path104" />
       <path
          d="m 318.5,383.167 h 63.675 v 25.725 h -0.666 V 383.5 l 0.333,0.333 H 318.5 Z m 67.342,24.392 -4,8 -4,-8 z"
-         id="path111" />
+         id="path105" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(318.12,540)"
-         id="text111">[</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(320.62,540)"
-         id="text112">User klickt auf</text>
+         id="text105">[User klickt auf</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(318.12,550)"
-         id="text113">Abbruch</text>
+         id="text106">Abbruch</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(345.62,550)"
-         id="text114">-</text>
+         id="text107">-</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(348.12,550)"
-         id="text115">Button</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(370.287,550)"
-         id="text116">]</text>
+         id="text108">Button]</text>
       <path
          d="m 375.5,557 6.5,-8.5 6.5,8.5 -6.5,8.5 z"
          stroke="#2f528f"
@@ -862,47 +794,35 @@
          stroke-miterlimit="8"
          fill="url(#fill10)"
          fill-rule="evenodd"
-         id="path116"
+         id="path108"
          style="fill:url(#fill10)" />
       <path
          d="m 381.833,525.495 0.241,16.074 -0.667,0.01 -0.24,-16.074 z m 3.887,14.686 -3.88,8.059 -4.119,-7.94 z"
-         id="path117" />
+         id="path109" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(387.8,574)"
-         id="text117">[</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(390.3,574)"
-         id="text118">User klickt auf</text>
+         id="text109">[User klickt auf</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(387.8,584)"
-         id="text119">Fortsetzen</text>
+         id="text110">Fortsetzen</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(422.3,584)"
-         id="text120">-</text>
+         id="text111">-</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(424.8,584)"
-         id="text121">Button</text>
-      <text
-         font-family="Calibri, Calibri_MSFontService, sans-serif"
-         font-weight="400"
-         font-size="8px"
-         transform="translate(446.967,584)"
-         id="text122">]</text>
+         id="text112">Button]</text>
       <path
          d="m 328.5,606.333 c 0,-3.773 3.059,-6.833 6.833,-6.833 h 93.334 c 3.774,0 6.833,3.06 6.833,6.833 v 27.334 c 0,3.774 -3.059,6.833 -6.833,6.833 h -93.334 c -3.774,0 -6.833,-3.059 -6.833,-6.833 z"
          stroke="#000000"
@@ -910,23 +830,23 @@
          stroke-miterlimit="8"
          fill="url(#fill11)"
          fill-rule="evenodd"
-         id="path122"
+         id="path112"
          style="fill:url(#fill11)" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(346.63,617)"
-         id="text123">Ablauf der Animation</text>
+         id="text113">Ablauf der Animation</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(366.55,627)"
-         id="text124">setzt fort</text>
+         id="text114">setzt fort</text>
       <path
          d="m 375.528,557.93 h -36.847 v -0.43 l 0.333,0.333 h -29.847 v -0.666 h 30.181 v 0.43 l -0.334,-0.334 h 36.514 z m -65.028,3.57 -8,-4 8,-4 z"
-         id="path124" />
+         id="path114" />
       <path
          d="m 210.5,543.334 c 0,-3.774 3.06,-6.834 6.834,-6.834 h 78.333 c 3.774,0 6.833,3.06 6.833,6.834 v 27.333 c 0,3.774 -3.059,6.833 -6.833,6.833 h -78.333 c -3.774,0 -6.834,-3.059 -6.834,-6.833 z"
          stroke="#000000"
@@ -934,26 +854,26 @@
          stroke-miterlimit="8"
          fill="url(#fill12)"
          fill-rule="evenodd"
-         id="path125"
+         id="path115"
          style="fill:url(#fill12)" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(228.032,549)"
-         id="text125">letzter Frame der</text>
+         id="text115">letzter Frame der</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(231.279,559)"
-         id="text126">Animation wird</text>
+         id="text116">Animation wird</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(243.279,569)"
-         id="text127">sichtbar</text>
+         id="text117">sichtbar</text>
       <path
          d="m 92.5001,543.334 c 0,-3.774 3.0594,-6.834 6.8334,-6.834 h 78.3335 c 3.774,0 6.833,3.06 6.833,6.834 v 27.333 c 0,3.774 -3.059,6.833 -6.833,6.833 H 99.3335 c -3.774,0 -6.8334,-3.059 -6.8334,-6.833 z"
          stroke="#000000"
@@ -961,31 +881,31 @@
          stroke-miterlimit="8"
          fill="url(#fill13)"
          fill-rule="evenodd"
-         id="path127"
+         id="path117"
          style="fill:url(#fill13)" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(107.355,554)"
-         id="text128">Animation läuft bis</text>
+         id="text118">Animation läuft bis</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(122.269,564)"
-         id="text129">zum Ende</text>
+         id="text119">zum Ende</text>
       <path
          d="m 138.833,577.5 v 73.985 h -0.666 V 577.5 Z m 3.667,72.652 -4,8 -4,-8 z"
-         id="path129" />
+         id="path119" />
       <path
          d="M 0.333328,-0.00192497 0.760026,73.8849 0.09337,73.8887 -0.333328,0.00192497 Z M 4.41893,72.5303 0.465197,80.5533 -3.58094,72.5765 Z"
          transform="matrix(-1,0,0,1,256.965,577.5)"
-         id="path130" />
+         id="path120" />
       <path
          d="M 0.333325,-0.00235239 0.491422,22.3994 -0.175228,22.4041 -0.333325,0.00235239 Z M 4.14859,21.0402 0.205144,29.0682 -3.85121,21.0967 Z"
          transform="matrix(-1,0,0,1,195.705,658.5)"
-         id="path131" />
+         id="path121" />
       <path
          d="m 118.5,695.334 c 0,-3.774 3.06,-6.834 6.834,-6.834 h 140.333 c 3.774,0 6.833,3.06 6.833,6.834 v 27.333 c 0,3.774 -3.059,6.833 -6.833,6.833 H 125.334 c -3.774,0 -6.834,-3.059 -6.834,-6.833 z"
          stroke="#000000"
@@ -993,60 +913,90 @@
          stroke-miterlimit="8"
          fill="url(#fill14)"
          fill-rule="evenodd"
-         id="path132"
+         id="path122"
          style="fill:url(#fill14)" />
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(145.588,701)"
-         id="text132">Neustart</text>
+         id="text122">Neustart</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(174.088,701)"
-         id="text133">-</text>
+         id="text123">-</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(176.588,701)"
-         id="text134">Button wird sichtbar,</text>
+         id="text124">Button wird sichtbar,</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(137.088,711)"
-         id="text135">Abbruch</text>
+         id="text125">Abbruch</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(164.588,711)"
-         id="text136">-</text>
+         id="text126">-</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(167.088,711)"
-         id="text137">Button und Unterbrechen</text>
+         id="text127">Button und Unterbrechen</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(250.922,711)"
-         id="text138">-</text>
+         id="text128">-</text>
       <text
          font-family="Calibri, Calibri_MSFontService, sans-serif"
          font-weight="400"
          font-size="8px"
          transform="translate(152.755,721)"
-         id="text139">Button werden unsichtbar</text>
+         id="text129">Button werden unsichtbar</text>
       <path
          d="M 0,-0.333333 H 313.664 V 567.876 h -163.13 v -0.666 h 162.797 l -0.334,0.333 V 0 l 0.334,0.333333 H 0 Z M 151.867,571.543 l -8,-4 8,-4 z"
          transform="matrix(1,0,0,-1,202.5,762.043)"
-         id="path139" />
+         id="path129" />
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="8px"
+         transform="translate(191.282,375)"
+         id="text130">[User klickt auf</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="8px"
+         transform="translate(241.949,375)"
+         id="text131">Abbruch</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="8px"
+         transform="translate(269.449,375)"
+         id="text132">-</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="8px"
+         transform="translate(271.949,375)"
+         id="text133">Button</text>
+      <text
+         font-family="Calibri, Calibri_MSFontService, sans-serif"
+         font-weight="400"
+         font-size="8px"
+         transform="translate(294.115,375)"
+         id="text134">]</text>
     </g>
   </g>
 </svg>
