@@ -724,11 +724,14 @@ werden.
   Diese Klasse regelt als Ergänzung zur Klasse *.tabelle* die Formatierung von Zellen einer Tabelle, die von der Schrift- und
   Hintergrundfarbe deutlich hervorgehoben sein sollen.
 * **.tabTransaktion**: <br>
-  Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der eine
-  die Daten einer Transaktion angezeigt werden, bestimmt.
-* **.tabAdresse**: <br>
+  Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der die
+  Daten einer Transaktion angezeigt werden, bestimmt.
+* **.tabFremdeAdressen**: <br>
   Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der die
   Adressen der fremden Knoten angezeigt werden, bestimmt.
+* **.tabEigeneAdressen**: <br>
+  Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der die
+  eigenen Adressen angezeigt werden, bestimmt.
 * **.hash**: <br>
   Überall, wo in der Animationen Hashwerte bzw. Hash-Referenzen angezeigt werden, sollen diese einheitlich formatiert sein, und
   zwar in einer Monospace-Schriftart. Dazu dient diese Klasse.
@@ -739,12 +742,6 @@ werden.
 * **.signatur**: <br>
   Diese Klasse dient dazu, dass überall, wo digitale Signaturen in den Animationen dargestellt werden, diese in einem
   einheitlichen Format (Monospace-Schriftart, grössere Schrift) dargestellt werden.
-* **.haken**: <br>
-  Diese Klasse regelt die Grösse der Grafik, die einen Haken darstellt und in mehreren Animationen angezeigt wird.
-* **.kreuz**: <br>
-  Diese Klasse regelt die Grösse der Grafik, die ein Kreuz darstellt und in mehreren Animationen angezeigt wird.
-* **.fragezeichen**: <br>
-  Diese Klasse regelt die Grösse der Grafik, die ein Fragezeichen darstellt und in mehreren Animationen angezeigt wird.
 * **#a3d_gueltigeTrans, #a3d_zurückgewieseneTrans**: <br>
   Diese IDs bestimmen die Formatierung der Meldungen "Transaktion zurückgewiesen" bzw. "Transaktion gültig", die in der Animation
   3d dargestellt werden.
