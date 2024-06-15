@@ -45,6 +45,15 @@ body {
     background-color: var(--gruenspan);
 }
 
+#menu {
+    position: absolute;
+    visibility: hidden;
+    height: 2.5em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    z-index: 1;
+}
+
 @media screen and (width <= 1400px) {
     body {
         grid-template-columns: 0.5fr 2fr 9fr 0.5fr
@@ -126,13 +135,7 @@ p {
     font-weight: bold;
     box-shadow: 0em 0em 2em var(--grapefruit);
 }
-.menuicon {
-    position: absolute;
-    visibility: hidden;
-    width: 2em;
-    margin-bottom: 0.7em;
-    z-index: 1;
-}
+
 button.hinweisbutton {
     background-color: var(--grapefruit);
     border-radius: 0.2em ;

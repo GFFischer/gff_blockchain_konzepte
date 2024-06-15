@@ -49,6 +49,15 @@ body {
     background-color: var(--gruenspan);
 }
 
+#menuicon {
+    position: absolute;
+    visibility: hidden;
+    height: 2.5em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    z-index: 1;
+}
+
 @media screen and (width <= 1440px) {
     body {
         grid-template-columns: 0.5fr 2fr 9fr 0.5fr
@@ -77,14 +86,21 @@ body {
         position: absolute;
         visibility: hidden;
         width: 96vw;
-        z-index: 2;
+        z-index: 3;
     }
-    .sichtbarkeit {
-        visibility: visible;
-    }
-    #menu {
+    
+    #menuicon {
         position: relative;
         visibility: visible;
+    }
+
+    #logo_mit_text {
+        position: relative;
+        visibility: visible;
+        height: 2.5em;
+        margin-bottom: 1em;
+        margin-right: 1em;
+        z-index: 2;
     }
 }
 
@@ -93,6 +109,7 @@ nav ul {
     list-style-type: none;
     color: var(--creme);
 }
+
 nav li {
     margin: 0.6em 0.5em;
     padding: 0.4em;
@@ -102,6 +119,7 @@ nav li {
     box-shadow: 0em 0em 0.4em 0em var(--creme);
     cursor: pointer;
 }
+
 nav li:active {
     margin: 0.4em 0.5em;
     padding: 0.4em;
@@ -110,13 +128,24 @@ nav li:active {
     text-align: center;
     color: var(--tarngruen);
 }
-h1 {
+
+.sichtbar {
+    visibility: visible;
+}
+
+h1, h2 {
     color: var(--tarngruen);
     margin: 1em;
 }
+
 p {
     margin: 1em 2em;
 }
+
+.animation {
+    display: none;
+}
+
 .hinweis {
     background-color: var(--kressegruen);
     border-radius: 1em;
@@ -131,13 +160,7 @@ p {
     font-weight: bold;
     box-shadow: 0em 0em 2em var(--grapefruit);
 }
-.menuicon {
-    position: absolute;
-    visibility: hidden;
-    width: 2em;
-    margin-bottom: 0.7em;
-    z-index: 1;
-}
+
 button.hinweisbutton {
     background-color: var(--grapefruit);
     border-radius: 0.2em ;
@@ -175,9 +198,7 @@ button.animbutton:active {
     color: var(--kressegruen);
     box-shadow: 0em 0em 0.5em 0em var(--kressegruen);
 }
-.animation {
-    display: none;
-}
+
 .block {
     width: 11em;
     background-color: white;
