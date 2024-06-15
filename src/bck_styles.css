@@ -12,14 +12,25 @@
     --creme: rgb(254,244,229);
 }
 
-nav {
-    grid-area: navigation;
-    background-color: var(--kressegruen);
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr 8fr 1fr;
+    grid-template-areas:
+    "rand_links   logo         hauptbereich   rand_rechts"
+    "rand_links   navigation   hauptbereich   rand_rechts";
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    word-spacing: 0.1em;
+    line-height: 150%;
+    background-color: var(--gruenspan);
 }
 
 div.logo {
     grid-area: logo;
     background-color: var(--kressegruen);
+    text-align: center;
+    vertical-align: middle;
 }
 
 div.mitte {
@@ -35,18 +46,34 @@ div.randl {
     grid-area: rand_links;
 }
 
-body {
-    display: grid;
-    grid-template-columns: 1fr 2fr 8fr 1fr;
-    grid-template-areas:
-    "rand_links   logo         hauptbereich   rand_rechts"
-    "rand_links   navigation   hauptbereich   rand_rechts";
-    height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    word-spacing: 0.1em;
-    line-height: 150%;
-    background-color: var(--gruenspan);
+nav {
+    grid-area: navigation;
+    background-color: var(--kressegruen);
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    color: var(--creme);
+}
+
+nav li {
+    margin: 0.6em 0.5em;
+    padding: 0.4em;
+    background-color: var(--tarngruen);
+    border-radius: 0.5em;
+    text-align: center;
+    box-shadow: 0em 0em 0.4em 0em var(--creme);
+    cursor: pointer;
+}
+
+nav li:active {
+    margin: 0.4em 0.5em;
+    padding: 0.4em;
+    background-color: var(--creme);
+    border-radius: 0.5em;
+    text-align: center;
+    color: var(--tarngruen);
 }
 
 #menuicon {
@@ -56,6 +83,24 @@ body {
     margin-bottom: 1em;
     margin-right: 1em;
     z-index: 1;
+}
+
+#logo_mit_text {
+    position: absolute;
+    visibility: hidden;
+    height: 2.5em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    z-index: 2;
+}
+
+#logo_ohne_text {
+    position: absolute;
+    visibility: hidden;
+    max-width: 96%;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    z-index: 2;
 }
 
 @media screen and (width <= 1440px) {
@@ -97,36 +142,7 @@ body {
     #logo_mit_text {
         position: relative;
         visibility: visible;
-        height: 2.5em;
-        margin-bottom: 1em;
-        margin-right: 1em;
-        z-index: 2;
     }
-}
-
-nav ul {
-    padding: 0;
-    list-style-type: none;
-    color: var(--creme);
-}
-
-nav li {
-    margin: 0.6em 0.5em;
-    padding: 0.4em;
-    background-color: var(--tarngruen);
-    border-radius: 0.5em;
-    text-align: center;
-    box-shadow: 0em 0em 0.4em 0em var(--creme);
-    cursor: pointer;
-}
-
-nav li:active {
-    margin: 0.4em 0.5em;
-    padding: 0.4em;
-    background-color: var(--creme);
-    border-radius: 0.5em;
-    text-align: center;
-    color: var(--tarngruen);
 }
 
 .sichtbar {
@@ -146,41 +162,6 @@ p {
     display: none;
 }
 
-.hinweis {
-    background-color: var(--kressegruen);
-    border-radius: 1em;
-    max-width: 20em;
-    position: relative;
-    top: 50vh;
-    margin: 0 auto;
-    margin-top: -30%;
-    padding: 1em 1em 0.5em 1em;
-    color: var(--grapefruit);
-    text-align: right;
-    font-weight: bold;
-    box-shadow: 0em 0em 2em var(--grapefruit);
-}
-
-button.hinweisbutton {
-    background-color: var(--grapefruit);
-    border-radius: 0.2em ;
-    border-style: solid;
-    border-color: var(--grapefruit);
-    font-size: 1em;
-    padding: 0.3em;
-    width: 5em;
-    color: var(--kressegruen);
-    position: flex; right: 0em;
-    cursor: pointer;
-}
-button.hinweisbutton:active {
-    background-color: var(--kressegruen);
-    color: var(--grapefruit);
-}
-.hinweistext {
-    text-align: center;
-    margin: 0.5em 0em 1.2em 0em;
-}
 button.animbutton {
     background-color: var(--kressegruen);
     border-radius: 0.4em;
@@ -199,20 +180,6 @@ button.animbutton:active {
     box-shadow: 0em 0em 0.5em 0em var(--kressegruen);
 }
 
-.block {
-    width: 11em;
-    background-color: white;
-    border-width: thin;
-    border-style: solid;
-    border-color: black;
-    margin: 0.5em;
-    text-align: center;
-    vertical-align: middle;
-}
-.blockinhalt {
-    width: 80%;
-    padding: 0.5em;
-}
 div .hintergrund {
     background-color: var(--sandgrau);
     border-radius: 0.5em;
@@ -220,13 +187,54 @@ div .hintergrund {
     width: 96%;
     margin: 2%;
 }
+
+.hinweis {
+    background-color: var(--kressegruen);
+    border-radius: 1em;
+    max-width: 20em;
+    position: relative;
+    top: 50vh;
+    margin: 0 auto;
+    margin-top: -30%;
+    padding: 1em 1em 0.5em 1em;
+    color: var(--grapefruit);
+    text-align: right;
+    font-weight: bold;
+    box-shadow: 0em 0em 2em var(--grapefruit);
+}
+
+.hinweistext {
+    text-align: center;
+    margin: 0.5em 0em 1.2em 0em;
+}
+
+button.hinweisbutton {
+    background-color: var(--grapefruit);
+    border-radius: 0.2em ;
+    border-style: solid;
+    border-color: var(--grapefruit);
+    font-size: 1em;
+    padding: 0.3em;
+    width: 5em;
+    color: var(--kressegruen);
+    position: flex; right: 0em;
+    cursor: pointer;
+}
+
+button.hinweisbutton:active {
+    background-color: var(--kressegruen);
+    color: var(--grapefruit);
+}
+
 .infoimg {
     width: 4em;
     cursor: pointer;
 }
+
 .infoimg:active {
     filter: invert(0.5);
 }
+
 .infotext { 
     box-shadow: 0em 0em 2em 0em var(--schmetterlingsblau);
     padding: 1.5em 1.5em 1em 1.5em;
@@ -237,6 +245,7 @@ div .hintergrund {
     overflow: auto;
     color: var(--antikblau);
 }
+
 button.infobutton {
     background-color: var(--schmetterlingsblau);
     border-radius: 0.4em;
@@ -248,11 +257,13 @@ button.infobutton {
     float: right;
     cursor: pointer;
 }
+
 button.infobutton:active {
     background-color: var(--creme);
     box-shadow: 0em 0em 0.7em 0em var(--schmetterlingsblau);
     color: var(--schmetterlingsblau);
 }
+
 .hintergrundwissen { 
     box-shadow: 0em 0em 2em 0em var(--creme);
     padding: 1.5em 1.5em 1em 1.5em;
@@ -263,6 +274,7 @@ button.infobutton:active {
     overflow: auto;
     color: var(--grapefruit);
 }
+
 button.hintergrbutton {
     background-color: var(--grapefruit);
     border-radius: 0.4em;
@@ -278,3 +290,55 @@ button.hintergrbutton:active {
     background-color: var(--antikblau);
     color: var(--grapefruit);
 }
+
+.formular {
+    background-color: var(--gruenspan);
+    box-shadow: 0em 0em 2em var(--tarngruen);
+    border-radius: 1em;
+    width: 15em;
+    padding: 0.5em;
+    text-align: center;
+}
+
+button.formularbutton {
+    background-color: var(--tarngruen);
+    border-radius: 0.4em;
+    border-style: none;
+    box-shadow: 0em 0em 0.7em 0em var(--creme);
+    font-size: 1em;
+    padding: 0.3em 0.5em;
+    margin: 1em 0.5em 0.5em;
+    color: var(--creme);
+    float: right;
+    cursor: pointer;
+}
+button.formularbutton:active {
+    background-color: var(--creme);
+    color: var(--tarngruen);
+}
+
+input, select {
+    text-align: center;
+    border: 0em;
+    border-radius: 0.3em;
+    padding: 0.2em;
+    box-shadow: 0em 0em 0.4em var(--tarngruen);
+    background-color: var(--creme);
+}
+
+.block {
+    width: 11em;
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    margin: 0.5em;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.blockinhalt {
+    width: 80%;
+    padding: 0.5em;
+}
+

@@ -342,21 +342,21 @@ müssen, weil sie eventuell in einer anderen Animation gerade geändert worden s
             </div>
             <button id="formular_buttonc" class="schrift_einheitsgroesse" style="position: fixed; right: 2em; top: 2em;"
                 onclick="document.getElementById('formularc').style=
-                    'text-align: center; position: fixed; right: 2em; top: 6em; width: 26em; visibility: visible;';
+                    'text-align: center; position: fixed; right: 2em; top: 6em; width: 15em; visibility: visible;';
                 ">Erstelle eine Transaktion</button>
             <div id="formularc" class="formular" style="visibility: hidden;">
-                <label>Wählen Sie eine Auftraggeber-Adresse aus: <br><select id="eingabe_auftraggeber" 
-                    class="schrift_einheitsgroesse"></select></label><br>
+                <p><label>Wählen Sie eine Auftraggeber-Adresse aus: </p><p><select id="eingabe_auftraggeber" 
+                    class="schrift_einheitsgroesse"></select></label></p>
                 <script>
                     document.getElementById("eingabe_auftraggeber").innerHTML = auswahllisteAuftraggeber();
                 </script>
-                <label>Geben Sie einen Betrag ein: <br><input id="eingabe_betrag" class="schrift_einheitsgroesse" 
-                    size="5" type="text"></label> SiC<br>
-                Geben Sie eine Empfänger-Adresse ein: <br>
-                <label>e: <input id="eingabe_e" class="schrift_einheitsgroesse" size="3" maxlength="2"
+                <p><label>Geben Sie einen Betrag ein: </p><p><input id="eingabe_betrag" class="schrift_einheitsgroesse" 
+                    size="5" type="text"></label> SiC</p>
+                <p>Geben Sie eine Empfänger-Adresse ein: </p>
+                <p><label>e: <input id="eingabe_e" class="schrift_einheitsgroesse" size="3" maxlength="2"
                     type="text"></label>
                 <label>n: <input id="eingabe_n" class="schrift_einheitsgroesse" size="4" maxlength="4"
-                    type="text"></label><br>
+                    type="text"></label></p>
                 <button id="submitButton3" class="ok schrift_einheitsgroesse" onclick="
                     senderTransaktion = adressenKnoten[document.getElementById('eingabe_auftraggeber').value];
                     document.getElementById('adr_auftraggeber').innerHTML = senderTransaktion;  
