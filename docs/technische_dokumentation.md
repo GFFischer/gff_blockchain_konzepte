@@ -608,7 +608,7 @@ werden.
   *klatschmohnrot* (rgb: 237, 60, 11) und *creme* (rgb: 254, 244, 229).
 * **Responsives Erscheinungsbild**: <br>
   Das responsive Design der Applikation wird mit CSS-Grid realisiert. Dabei bilden der Bereich für die Navigation (*nav*) und
-  für das Logo (*logo*) eigene grid-areas, es gibt die Klassen *div.mitte* (für den Bereich des Inhalts), *div.randr* und
+  für das Logo (*div.logo*) eigene grid-areas, es gibt die Klassen *div.mitte* (für den Bereich des Inhalts), *div.randr* und
   *div.randl* (für einen frei bleibenden Rand links und rechts vom Inhalt bei breiten Bildschirmen), die auch jeweils eine eigene
   grid-area darstellen. <br>
   Um das Layout den verschiedenen Bildschirmbreiten anzupassen, wird die *@media*-Regel verwendet, um so die vom Standardlayout
