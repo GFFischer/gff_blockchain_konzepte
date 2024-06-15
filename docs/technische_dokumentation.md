@@ -632,6 +632,11 @@ werden.
 * **#menuicon**: <br>
   Mit der ID *#menuicon* wird das Hamburger-Icon selektiert und formatiert, welches bei Bildschirmbreiten < 960px anstelle des
   Navigationsmenüs erscheint.
+* **#logo_mit_text**: <br>
+  Mit der ID *#logo_mit_text* wird das Logo mit dem Schriftzug "Blockchainkonzepte" selektiert und formatiert, welches bei
+  Bildschirmbreiten < 960px anstelle des grösseren Logos ohne Schriftzug. erscheint.
+* **#logo_ohne_text**: <br>
+  Mit der ID *#logo_ohne_text* wird das Logo ohne Schriftzug selektiert und formatiert.
 * **.sichtbar**: <br>
   Diese Klasse besteht einzig aus der CSS-Eigenschaft *visibility: visible*. Sie findet sich ausschliesslich in der @media-Regel
   für Bildschirmbreiten <= 960px und wird dort der *classList* der Navigation (*nav*, ID: *navmenu*) hinzugefügt, wenn der User
@@ -689,6 +694,8 @@ werden.
   Diese Klasse formatiert die Buttons, innerhalb der Formulare angezeigt werden und mit denen die Eingabe abgeschlossen werden
   kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.formular*, der Cursor (*cursor*) wird zum Pointer und bei
   Aktivierung werden die Farben invertiert (*button.formularbutton:active*).
+* **input, select**: <br>
+  Die html-Elemente input und select formatieren die Eingabefelder in den Formularen, bei denen der User Eingaben machen kann.
 * **.block**: <br>
   Diese Klasse regelt die Formatierung der Elemente, die in verschiedenen Animationen die Blöcke einer Blockchain darstellen.
 * **.blockinhalt**: <br>
