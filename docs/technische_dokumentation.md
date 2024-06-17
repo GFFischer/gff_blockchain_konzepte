@@ -694,8 +694,10 @@ werden.
   Diese Klasse formatiert die Buttons, innerhalb der Formulare angezeigt werden und mit denen die Eingabe abgeschlossen werden
   kann. Farbliche Gestaltung und Grösse sind passend zur Klasse *.formular*, der Cursor (*cursor*) wird zum Pointer und bei
   Aktivierung werden die Farben invertiert (*button.formularbutton:active*).
-* **input, select**: <br>
-  Die html-Elemente input und select formatieren die Eingabefelder in den Formularen, bei denen der User Eingaben machen kann.
+* **input, select, textarea**: <br>
+  Die html-Elemente input, select und textarea formatieren die Eingabefelder in den Formularen, bei denen der User Eingaben machen
+  kann. Wenn in die Eingabefelder geklickt wird, wird der Rahmen durch die CSS-Eigenschaft *outline: 0.15em solid var(--tarngruen)*
+  dunkelgrün.
 * **.block**: <br>
   Diese Klasse regelt die Formatierung der Elemente, die in verschiedenen Animationen die Blöcke einer Blockchain darstellen.
 * **.blockinhalt**: <br>
