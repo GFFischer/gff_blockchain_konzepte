@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Fundamentale Konzepte einer Blockchain</title>
+        <script type="text/javascript" src="hash.js"></script>
+        <script type="text/javascript" src="bck_funktionensammlung.js"></script>
+        <script type="text/javascript" src="bck_variablen.js"></script>
+        <script type="text/javascript" src="bck_erklaerende_texte.js"></script>
+        <script type="text/javascript" src="bck_code_generierung.js"></script>
+        <link rel="stylesheet" href="bck_styles.css">
+        <link rel="icon" href="img/bck_icon.ico">
+    </head>
+    <body>
+        <div class="randl"></div>
+        <div class="randr"></div>
+        <div class="logo">
+            <img id="logo_ohne_text" src="img/bck_logo.png" alt="Blockchainkonzepte-Logo">
+            <img id="menuicon" src="img/hamburger.png" alt="Navigationsmenü>">
+                <script type="text/javascript">
+                document.getElementById("menuicon").addEventListener("click", () => {
+                document.getElementById('navmenu').classList.add('sichtbar');
+                document.getElementById('anim1_menu').style = 'visibility: visible; height: auto';
+            })
+        </script>
+            <img id="logo_mit_text" src="img/bck_logo_mit_text.png" alt="Blockchainkonzepte-Logo">
+        </div>
+        
+<! Navigationsmenü -->
+
+        <nav id="navmenu">
+            <ul onclick="document.getElementById('navmenu').classList.remove('sichtbar');">
+                <li onclick="oeffneAnimation('0');
+                    document.getElementById('anim1_menu').style = 'height: 0em'
+                    ">Startseite</li>
+                <li onclick="oeffneAnimation('1a');
+                    document.getElementById('anim1_menu').style = 'visibility: visible; height: auto'
+                    ">Die Blockchain-Datenstruktur</li>
+                <ul id="anim1_menu" class="submenu" onclick="document.getElementById('anim1_menu').style = 
+                    'visibility: hidden; height: 0em';">
+                    <li id="a1a_menu" class="submenuEintrag" onclick="oeffneAnimation('1a');
+                        ">Ein Buch mit vielen einzelnen Seiten</li>
+                    <li class="submenuEintrag" onclick="oeffneAnimation('1b')">Einen Hashwert auf den Seiteninhalt berechnen</li>
+                    <li class="submenuEintrag" onclick="oeffneAnimation('1c')">Seiten durch Hashwerte verknüpfen </li>
+                </ul>
+                <li onclick="oeffneAnimation('2a');
+                    document.getElementById('anim1_menu').style = 'visibility:hidden; height: 0em'
+                ">Das Peer-to-Peer-Netzwerk</li>
+            </ul>
+        </nav>
+
+<! Startseite -->
+
+        <div id="anim_0" class="mitte animation" style="display: inline;">
+            <h1>Die fundamentalen Konzepte einer Blockchain</h1>
+            <p>
+                Hier wird der Text stehen, der erklärt. Und Grafiken kommen natürlich auch noch dazu.
+            </p>
+        </div>
+
+<! Animation 1a -->
+
+        <div id="anim_1a" class="mitte animation">
+            <h1>Eine Blockchain ist wie ein Buch ...</h1>
+            <p>
+                Ein Buch besteht aus lauter einzelnen Seiten. Die Reihenfolge der Seiten wird durch die Seitenzahl
+                bestimmt. Wenn eine neue Seite dazukommt, bekommt sie eine Seitenzahl, die um 1 höher ist als die 
+                Seitenzahl der bis dahin letzten Seite.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund"></div>
+                <button id="a1a_hintergButton" class="animbutton" 
+                style="visibility: hidden;"
+                onclick="document.getElementById('a1a_hinterg1').style='visibility: visible; z-index: 11';">
+                Hintergrundwissen</button>
+                <button id="a1a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation(2)">weiter</button>
+                <button id="a1a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation(0)">zurück</button>
+                <div id="a1a_block1" class="block" style="position: absolute; left: 2em; top: 4em;">
+                    <div class="block blockinhalt">
+                        Seite 1
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                        <i>Informatik ist vielleicht nicht von allen ...</i>
+                    </div>
+                </div>
+                <div id="a1a_block2" class="block" style="position: absolute; left: 14em; top: 4em;">
+                    <div class="block blockinhalt">
+                        Seite 2
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                        <i>das Lieblingsfach Nummer eins, aber ...</i>
+                    </div>
+                </div>
+                <div id="a1a_block3" class="block" style="visibility: hidden;">
+                    <div class="block blockinhalt">
+                        Seite 3
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                        <i><span id="a1a_block3Inhalt" style="height: 7em; padding-top: 2.5em;"></span></i>
+                        <script>
+                            document.getElementById("a1a_block3Inhalt").innerHTML = a1a_block3Inhalt;
+                        </script>
+                    </div>
+                </div>
+                <button id="a1a_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="document.getElementById('a1a_formular').style=
+                        'position: absolute; right: 2em; top: 5em; visibility: visible';
+                    ">Erstelle eine neue Seite</button>
+                <div id="a1a_warnung" class="hinweis">
+                    <p class="hinweistext">
+                        Bitte geben Sie einen Text ein, der ausschliesslich aus Gross- und Kleinbuchstaben oder 
+                        Ziffern besteht und maximal 50 Zeichen lang ist.
+                    </p>
+                    <button class="hinweisbutton" onclick="
+                        document.getElementById('a1a_warnung').style='visibility: hidden';
+                    ">OK</button>
+                </div>
+                <div id="a1a_formular" class="formular">
+                    <p><label>Gib den Inhalt für die neue Seite ein: </p><p>
+                        <textarea id="a1a_inputInhaltBlock3" cols="15" rows="4" maxlength="50"></textarea></label></p>
+                    <button id="a1a_formularButton" class="formularbutton" onclick="
+                        var a1a_eingabe = pruefeEingabeText(document.getElementById('a1a_inputInhaltBlock3').value);
+                        if (a1a_eingabe) {
+                            if (document.getElementById('a1a_inputInhaltBlock3').value != '') {
+                            a1a_block3Inhalt = document.getElementById('a1a_inputInhaltBlock3').value;
+                            }
+                            document.getElementById('a1a_block3Inhalt').innerHTML = a1a_block3Inhalt;
+                            document.getElementById('a1a_block3').style = 'position: absolute; left: 26em; top: 4em; visibility: visible';
+                            document.getElementById('a1a_formular').style = 'visibility: hidden';
+                            document.getElementById('a1a_infoimg1').style=
+                                'visibility: visible; position: absolute; top: 20em; left: 30em';
+                            document.getElementById('a1a_hintergButton').style=
+                                'visibility: visible; position: absolute; top: 26.5em; left: 2em';
+                        }
+                        else {
+                            document.getElementById('a1a_warnung').style = 
+                                'visibility: visible; top: 7em; right: 6em; z-index: 13';
+                        }
+                       
+                    ">OK</button>
+                </div>
+                <img id="a1a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a1a_info1').style='visibility: visible; z-index: 12;'">                    
+            </div>
+            <div id="a1a_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a1a_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a1a_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a1a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a1a_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a1a_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            
+        </div>
+    </body>
+</html>

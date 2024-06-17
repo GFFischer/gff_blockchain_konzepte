@@ -15,6 +15,7 @@
 body {
     display: grid;
     grid-template-columns: 1fr 2fr 8fr 1fr;
+    grid-template-rows: 0fr 1fr;
     grid-template-areas:
     "rand_links   logo         hauptbereich   rand_rechts"
     "rand_links   navigation   hauptbereich   rand_rechts";
@@ -30,7 +31,7 @@ div.logo {
     grid-area: logo;
     background-color: var(--kressegruen);
     text-align: center;
-    vertical-align: middle;
+    align-content: center;
 }
 
 div.mitte {
@@ -76,30 +77,46 @@ nav li:active {
     color: var(--tarngruen);
 }
 
+nav ul.submenu {
+    visibility: hidden;
+    margin: 0em 0em;
+    height: 0em;
+}
+
+nav li.submenuEintrag {
+    background-color: var(--gruenspan);
+    border-color: var(--tarngruen);
+    border-style: solid;
+    border-width: 0.1em;
+    color: black;
+}
+
 #menuicon {
     position: absolute;
     visibility: hidden;
-    height: 2.5em;
-    margin-bottom: 1em;
-    margin-right: 1em;
+    height: 2em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    margin-left: 1em;
+    margin-right: 2em;
+    cursor: pointer;
     z-index: 1;
 }
 
 #logo_mit_text {
     position: absolute;
     visibility: hidden;
-    height: 2.5em;
+    height: 6em;
+    margin-top: 1em;
     margin-bottom: 1em;
-    margin-right: 1em;
     z-index: 2;
 }
 
 #logo_ohne_text {
-    position: absolute;
-    visibility: hidden;
-    max-width: 96%;
+    max-width: 75%;
+    max-height: 75%;
+    margin-top: 1em;
     margin-bottom: 1em;
-    margin-right: 1em;
     z-index: 2;
 }
 
@@ -120,7 +137,7 @@ nav li:active {
     body {
         display: grid;
         grid-template-columns: 12fr;
-        grid-template-rows: 0fr 1fr;
+        grid-template-rows: 0fr 0fr 1fr;
         grid-template-areas:
         "logo"
         "navigation"
@@ -133,10 +150,17 @@ nav li:active {
         width: 96vw;
         z-index: 3;
     }
+    div.logo {
+        text-align: left;
+    }
     
     #menuicon {
         position: relative;
         visibility: visible;
+    }
+    #logo_ohne_text {
+        position: absolute;
+        visibility: hidden;
     }
 
     #logo_mit_text {
@@ -151,6 +175,7 @@ nav li:active {
 
 h1, h2 {
     color: var(--tarngruen);
+    line-height: 150%;
     margin: 1em;
 }
 
@@ -189,13 +214,11 @@ div .hintergrund {
 }
 
 .hinweis {
+    visibility: hidden;
     background-color: var(--kressegruen);
     border-radius: 1em;
     max-width: 20em;
-    position: relative;
-    top: 50vh;
-    margin: 0 auto;
-    margin-top: -30%;
+    position: absolute;
     padding: 1em 1em 0.5em 1em;
     color: var(--grapefruit);
     text-align: right;
@@ -227,6 +250,7 @@ button.hinweisbutton:active {
 }
 
 .infoimg {
+    visibility: hidden;
     width: 4em;
     cursor: pointer;
 }
@@ -250,6 +274,7 @@ button.infobutton {
     background-color: var(--schmetterlingsblau);
     border-radius: 0.4em;
     border-style: none;
+    margin-top: 1em;
     box-shadow: 0em 0em 0.7em 0em var(--creme);
     font-size: 1em;
     padding: 0.3em 0.5em;
@@ -279,6 +304,7 @@ button.hintergrbutton {
     background-color: var(--grapefruit);
     border-radius: 0.4em;
     border-style: none;
+    margin-top: 1em;
     box-shadow: 0em 0em 0.7em 0em var(--creme);
     font-size: 1em;
     padding: 0.3em 0.5em;
@@ -292,6 +318,7 @@ button.hintergrbutton:active {
 }
 
 .formular {
+    visibility: hidden;
     background-color: var(--gruenspan);
     box-shadow: 0em 0em 2em var(--tarngruen);
     border-radius: 1em;
@@ -317,13 +344,19 @@ button.formularbutton:active {
     color: var(--tarngruen);
 }
 
-input, select {
+input, select, textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
     text-align: center;
     border: 0em;
     border-radius: 0.3em;
     padding: 0.2em;
     box-shadow: 0em 0em 0.4em var(--tarngruen);
     background-color: var(--creme);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 0.15em solid var(--tarngruen);
 }
 
 .block {
@@ -340,6 +373,8 @@ input, select {
 .blockinhalt {
     width: 80%;
     padding: 0.5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .graph {
