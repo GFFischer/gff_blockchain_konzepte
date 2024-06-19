@@ -13,6 +13,21 @@ function oeffneAnimation(nummer) {
     animAktuell = nummer;
 }
 
+/* Funktion für das Navigationsmenü - die Buttons der den einzelnen Animationen untergeordneten Teil-Animationen 
+werden ausgeklappt, die bisher sichtbaren Buttons der untergeordneten Teil-Animationen werden auf unsichtbar
+gesetzt */
+
+function ausklappenMenu(oeffneID) {
+    document.getElementById(oeffneID).style = 'visibility: visible; height: auto';
+    var pruefID = "anim";
+    for (var i = 1; i <= 7; i++) {
+        pruefID = "anim" + i + "_menu";
+        if (pruefID != oeffneID) {
+            document.getElementById(pruefID).style = 'visibility: hidden; height: 0em';
+        }
+    }
+}
+
 /* Funktionen für das Umrechnen von Zahlen aus den und in die verschiedenen Zahlensysteme (binär, dezimal, 
 hexadezimal) sowie für das Umrechnen einer Dezimalzahl in einen achtstelligen hexadezimalen Hashwert mit führenden
 Nullen */

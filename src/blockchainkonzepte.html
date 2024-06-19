@@ -18,35 +18,100 @@
         <div class="logo">
             <img id="logo_ohne_text" src="img/bck_logo.png" alt="Blockchainkonzepte-Logo">
             <img id="menuicon" src="img/hamburger.png" alt="Navigationsmenü>">
-                <script type="text/javascript">
+            <script type="text/javascript">
                 document.getElementById("menuicon").addEventListener("click", () => {
-                document.getElementById('navmenu').classList.add('sichtbar');
-                document.getElementById('anim1_menu').style = 'visibility: visible; height: auto';
-            })
-        </script>
+                document.getElementById('navmenu').classList.remove('unsichtbar');
+                document.getElementById('navmenu').classList.add('sichtbar');})
+            </script>
             <img id="logo_mit_text" src="img/bck_logo_mit_text.png" alt="Blockchainkonzepte-Logo">
         </div>
         
 <! Navigationsmenü -->
 
-        <nav id="navmenu">
-            <ul onclick="document.getElementById('navmenu').classList.remove('sichtbar');">
-                <li onclick="oeffneAnimation('0');
-                    document.getElementById('anim1_menu').style = 'height: 0em'
+        <nav id="navmenu" class="unsichtbar">
+            <ul>
+                <li id="anim0_eintrag" onclick="ausklappenMenu('anim0_menu');
+                    document.getElementById('navmenu').classList.remove('sichtbar');
+                    document.getElementById('navmenu').classList.add('unsichtbar');
+                    oeffneAnimation('0');
                     ">Startseite</li>
-                <li onclick="oeffneAnimation('1a');
-                    document.getElementById('anim1_menu').style = 'visibility: visible; height: auto'
+                <ul id="anim0_menu"></ul>
+                <li onclick="ausklappenMenu('anim1_menu');
                     ">Die Blockchain-Datenstruktur</li>
-                <ul id="anim1_menu" class="submenu" onclick="document.getElementById('anim1_menu').style = 
-                    'visibility: hidden; height: 0em';">
+                <ul id="anim1_menu" class="submenu" 
+                    onclick="document.getElementById('navmenu').classList.remove('sichtbar');
+                        document.getElementById('navmenu').classList.add('unsichtbar');">
                     <li id="a1a_menu" class="submenuEintrag" onclick="oeffneAnimation('1a');
                         ">Ein Buch mit vielen einzelnen Seiten</li>
-                    <li class="submenuEintrag" onclick="oeffneAnimation('1b')">Einen Hashwert auf den Seiteninhalt berechnen</li>
-                    <li class="submenuEintrag" onclick="oeffneAnimation('1c')">Seiten durch Hashwerte verknüpfen </li>
+                    <li id="a1b_menu" class="submenuEintrag" onclick="oeffneAnimation('1b'); a1b_inhaltBlock3();
+                        ">Einen Hashwert auf den Seiteninhalt berechnen</li>
+                    <li id="a1c_menu" class="submenuEintrag" onclick="oeffneAnimation('1c')
+                        ">Blöcke durch Hashwerte verknüpfen</li>
+                    <li id="a1d_menu" class="submenuEintrag" onclick="oeffneAnimation('1d')
+                        ">Den Inhalt aus den Blöcken auslagern</li>
                 </ul>
-                <li onclick="oeffneAnimation('2a');
-                    document.getElementById('anim1_menu').style = 'visibility:hidden; height: 0em'
-                ">Das Peer-to-Peer-Netzwerk</li>
+                <li onclick="ausklappenMenu('anim2_menu')"";
+                    ">Das Peer-to-Peer-Netzwerk</li>
+                <ul id="anim2_menu" class="submenu" 
+                    onclick="document.getElementById('navmenu').classList.remove('sichtbar');
+                        document.getElementById('navmenu').classList.add('unsichtbar');">
+                    <li id="a2a_menu" class="submenuEintrag" onclick="oeffneAnimation('2a')
+                        ">Ein Netzwerk mit vielen Knoten</li>
+                    <li id="a2b_menu" class="submenuEintrag" onclick="oeffneAnimation('2b')
+                        ">Den Knoten Adressen zuweisen</li>
+                    <li id="a2c_menu" class="submenuEintrag" onclick="oeffneAnimation('2c')
+                        ">Die Namen verschwinden hinter den Adressen</li>
+                </ul>
+                <li onclick="ausklappenMenu('anim3_menu')"";
+                    ">Transaktionen</li>
+                <ul id="anim3_menu" class="submenu" 
+                    onclick="document.getElementById('navmenu').classList.remove('sichtbar');
+                        document.getElementById('navmenu').classList.add('unsichtbar');">
+                    <li id="a3a_menu" class="submenuEintrag" onclick="oeffneAnimation('3a')
+                        ">Den Adressen ein Guthaben zuweisen</li>
+                    <li id="a3b_menu" class="submenuEintrag" onclick="oeffneAnimation('3b')
+                        ">Eine neue Transaktion erstellen</li>
+                    <li id="a3c_menu" class="submenuEintrag" onclick="oeffneAnimation('3c')
+                        ">Eine Transaktion digital signieren</li>
+                    <li id="a3d_menu" class="submenuEintrag" onclick="oeffneAnimation('3d')
+                        ">Die Gültigkeit einer Transaktion überprüfen</li>
+                </ul>
+                <li onclick="ausklappenMenu('anim4_menu');
+                    ">Transaktionen verknüpfen und in Blöcken speichern</li>
+                <ul id="anim4_menu" class="submenu" 
+                    onclick="document.getElementById('navmenu').classList.remove('sichtbar');
+                        document.getElementById('navmenu').classList.add('unsichtbar');">
+                    <li id="a4a_menu" class="submenuEintrag" onclick="oeffneAnimation('4a')
+                        ">Zwei Transaktionen miteinander verknüpfen</li>
+                    <li id="a4b_menu" class="submenuEintrag" onclick="oeffneAnimation('4b')
+                        ">Verknüpfte Transaktionen in einem Block speichern</li>
+                    <li id="a4c_menu" class="submenuEintrag" onclick="oeffneAnimation('4c')
+                        ">Auswirkungen einer nachträglichen Änderung</li>
+                </ul>
+                <li id="anim5_eintrag" onclick="ausklappenMenu('anim5_menu');
+                    document.getElementById('navmenu').classList.remove('sichtbar');
+                    document.getElementById('navmenu').classList.add('unsichtbar');
+                    oeffneAnimation('5ab'); 
+                    ">Der Konsensalgorithmus, Teil 1: Proof-of-Work</li>
+                <ul id="anim5_menu"></ul>
+                <li onclick="ausklappenMenu('anim6_menu');
+                    ">Transaktionen und Blöcke im Netzwerk verteilen</li>
+                <ul id="anim6_menu" class="submenu"
+                    onclick="document.getElementById('navmenu').classList.remove('sichtbar');
+                        document.getElementById('navmenu').classList.add('unsichtbar');">
+                    <li id="a6a_menu" class="submenuEintrag" onclick="oeffneAnimation('6a')
+                        ">Eine neue Transaktion im Netzwerk verteilen</li>
+                    <li id="a6b_menu" class="submenuEintrag" onclick="oeffneAnimation('6b')
+                        ">Einen neuen Block im Netzwerk verteilen</li>
+                    <li id="a6c_menu" class="submenuEintrag" onclick="oeffneAnimation('6c')
+                        ">Konflikte bei nahezu gleichzeitig erstellten Blöcken</li>
+                </ul>
+                <li onclick="ausklappenMenu('anim7_menu'); 
+                    document.getElementById('navmenu').classList.remove('sichtbar');
+                    document.getElementById('navmenu').classList.add('unsichtbar');
+                    oeffneAnimation('7');
+                    ">Der Konsensalgorithmus, Teil 2: Auflösen von Konflikten</li>
+                <ul id="anim7_menu"></ul>
             </ul>
         </nav>
 
@@ -75,9 +140,9 @@
                 onclick="document.getElementById('a1a_hinterg1').style='visibility: visible; z-index: 11';">
                 Hintergrundwissen</button>
                 <button id="a1a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation(2)">weiter</button>
+                    onclick="oeffneAnimation('1b'); a1b_inhaltBlock3()">weiter</button>
                 <button id="a1a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
-                    onclick="oeffneAnimation(0)">zurück</button>
+                    onclick="oeffneAnimation('0')">zurück</button>
                 <div id="a1a_block1" class="block" style="position: absolute; left: 2em; top: 4em;">
                     <div class="block blockinhalt">
                         Seite 1
@@ -158,6 +223,130 @@
                 </script> <br>
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a1a_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            
+        </div>
+
+<! Animation 1b -->
+
+        <div id="anim_1b" class="mitte animation">
+            <h1>Die Seitenzahlen einer Blockchain sind Hashwerte</h1>
+            <p>
+                Die "Seiten" einer Blockchain werden "Blöcke" genannt. Jeder Block kann identifiziert werden durch
+                einen Hashwert. Das ist eine (in unserer Darstellung hexadezimale) Zahl mit einer fixen Länge (bei
+                uns 8 Zeichen), die mit einer sogenannten "Hashfunktion" auf den Inhalt des Blocks berechnet wird.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund"></div>
+                <button id="a1b_hintergButton" class="animbutton" 
+                style="visibility: hidden;"
+                onclick="document.getElementById('a1b_hinterg1').style='visibility: visible; z-index: 21';">
+                Hintergrundwissen</button>
+                <button id="a1b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('1c')">weiter</button>
+                <button id="a1b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('1a')">zurück</button>
+                <div id="a1b_block1" class="block" style="position: absolute; left: 2em; top: 4em;">
+                    <div class="block blockinhalt hash">
+                        <script>
+                            document.write(a1b_block1Hash);
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                        <i>Informatik ist vielleicht nicht von allen ...</i>
+                    </div>
+                </div>
+                <div id="a1b_block2" class="block" style="position: absolute; left: 14em; top: 4em;">
+                    <div class="block blockinhalt hash">
+                        <script>
+                            document.write(a1b_block2Hash);
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                        <i>das Lieblingsfach Nummer eins, aber ...</i>
+                    </div>
+                </div>
+                <div id="a1b_block3" class="block" style ="position: absolute; left: 26em; top: 4em;">
+                    <div id="a1b_block3Hash" class="block blockinhalt hash">
+                        <script>
+                            document.getElementById("a1b_block3Hash").innerHTML = a1b_block3Hash;
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                        <i><span id="a1b_block3Inhalt" style="height: 7em; padding-top: 2.5em;"></span></i>
+                        <script>
+                            document.getElementById("a1b_block3Inhalt").innerHTML = a1a_block3Inhalt;
+                        </script>
+                    </div>
+                </div>
+                <div id="a1b_block4" class="block" style ="visibility: hidden;">
+                    <div id="a1b_block4Hash" class="block blockinhalt hash">
+                        <script>
+                            document.getElementById("a1b_block4Hash").innerHTML = a1b_block4Hash;
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                        <i><span id="a1b_block4Inhalt" style="height: 7em; padding-top: 2.5em;"></span></i>
+                        <script>
+                            document.getElementById("a1b_block4Inhalt").innerHTML = a1b_block4Inhalt;
+                        </script>
+                    </div>
+                </div>
+                <button id="a1b_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="document.getElementById('a1b_formular').style=
+                        'position: absolute; right: 2em; top: 5em; visibility: visible';
+                    ">Erstelle einen neuen Block</button>
+                <div id="a1b_warnung" class="hinweis">
+                    <p class="hinweistext">
+                        Bitte geben Sie einen Text ein, der ausschliesslich aus Gross- und Kleinbuchstaben oder 
+                        Ziffern besteht und maximal 50 Zeichen lang ist.
+                    </p>
+                    <button class="hinweisbutton" onclick="
+                        document.getElementById('a1b_warnung').style='visibility: hidden';
+                    ">OK</button>
+                </div>
+                <div id="a1b_formular" class="formular">
+                    <p><label>Gib den Inhalt des neuen Blocks ein: </p><p>
+                        <textarea id="a1b_inputInhaltBlock4" cols="15" rows="4" maxlength="50"></textarea></label></p>
+                    <button id="a1b_formularButton" class="formularbutton" onclick="
+                        var a1b_eingabe = pruefeEingabeText(document.getElementById('a1b_inputInhaltBlock4').value);
+                        if (a1b_eingabe) {
+                            if (document.getElementById('a1b_inputInhaltBlock4').value != '') {
+                            a1b_block4Inhalt = document.getElementById('a1b_inputInhaltBlock4').value;
+                            a1b_block4Hash = berechneHash('Block 4' + a1b_block4Inhalt);
+                            }
+                            document.getElementById('a1b_block4Inhalt').innerHTML = a1b_block4Inhalt;
+                            document.getElementById('a1b_block4Hash').innerHTML = a1b_block4Hash;
+                            document.getElementById('a1b_block4').style = 'position: absolute; left: 38em; top: 4em; visibility: visible';
+                            document.getElementById('a1b_formular').style = 'visibility: hidden';
+                            document.getElementById('a1b_infoimg1').style=
+                                'visibility: visible; position: absolute; top: 20em; left: 42em';
+                            document.getElementById('a1b_hintergButton').style=
+                                'visibility: visible; position: absolute; top: 26.5em; left: 2em';
+                        }
+                        else {
+                            document.getElementById('a1b_warnung').style = 
+                                'visibility: visible; top: 7em; right: 6em; z-index: 23';
+                        }
+                       
+                    ">OK</button>
+                </div>
+                <img id="a1b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a1b_info1').style='visibility: visible; z-index: 22;'">                    
+            </div>
+            <div id="a1b_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a1b_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a1b_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a1b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a1b_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a1b_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>
             
         </div>

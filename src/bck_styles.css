@@ -59,7 +59,7 @@ nav ul {
 }
 
 nav li {
-    margin: 0.6em 0.5em;
+    margin: 0.3em 0.5em 0.3em;
     padding: 0.4em;
     background-color: var(--tarngruen);
     border-radius: 0.5em;
@@ -69,12 +69,16 @@ nav li {
 }
 
 nav li:active {
-    margin: 0.4em 0.5em;
+    margin: 0.3em 0.5em 0.3em;
     padding: 0.4em;
     background-color: var(--creme);
     border-radius: 0.5em;
     text-align: center;
     color: var(--tarngruen);
+}
+
+#anim0_eintrag, #anim5_eintrag {
+    margin: 0.3em 0.5em 0.6em;
 }
 
 nav ul.submenu {
@@ -146,14 +150,18 @@ nav li.submenuEintrag {
     }
     nav {
         position: absolute;
-        visibility: hidden;
         width: 96vw;
         z-index: 3;
+    }
+    .unsichtbar {
+        display: none;
+    }
+    .sichtbar {
+        display: inline;
     }
     div.logo {
         text-align: left;
     }
-    
     #menuicon {
         position: relative;
         visibility: visible;
@@ -162,15 +170,10 @@ nav li.submenuEintrag {
         position: absolute;
         visibility: hidden;
     }
-
     #logo_mit_text {
         position: relative;
         visibility: visible;
     }
-}
-
-.sichtbar {
-    visibility: visible;
 }
 
 h1, h2 {
