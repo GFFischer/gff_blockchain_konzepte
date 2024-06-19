@@ -178,6 +178,10 @@ nur auf eine konkrete Animation beziehen.
   Animation entgegen (*nummer*). Bei der aktuell geöffneten Animation wird die CSS-Eigenschaft *display: none* gesetzt,
   bei der zu öffnende Animation *display: inline*. Der Variable *animAktuell* wird die Nummer der zu öffnenden Animation
   zugewiesen.
+* **ausklappenMenu**(oeffneID) <br>
+  Diese Funktion bewirkt, dass im Navigationsmenü alle Buttons für das Navigieren zu den Teil-Animationen einer bestimmten
+  Animation (*oeffneID*) sichtbar werden, sodass zu diesen Teil-Animationen navigiert werden kann. Gleichzeitig werden
+  etwaige bisher sichtbare Buttons von Teil-Animationen unsichtbar gesetzt.
 * **umwandleInDez**(zahl, basis) <br>
   Diese Funktion bekommt eine Zahl (*zahl*) und deren Basis (*basis*, z.B. 2 für eine binäre Zahl, 16 für eine hexadezimale
   Zahl) übergeben und gibt die entsprechende Dezimalzahl zurück.
@@ -629,6 +633,15 @@ werden.
   Der Navigationsbereich wird als unsortierte Liste (*nav ul*) realisiert, wobei die Listeneinträge (*nav li*) so formatiert
   sind, dass sie für den User den Eindruck erwecken, Buttons zu sein (Cursor wird zum Pointer, Invertierung der Farben bei
   Aktivierung *nav li:active*).
+* **#anim0_eintrag, #anim5_eintrag**: <br>
+  Bei diesen beiden IDs handelt es sich um zwei Einträge im Navigationsmenü, bei denen es keine ausklappbaren Untermenüs gibt.
+  Für sie werden die Aussenabstände separat geregelt, damit im Navigationsmenü alle Abstände gleich sind.
+* **nav ul.submenu**: <br>
+  Bestimmt wird, dass die Untermenüs im Navigationsmenü standardmassig unsichtbar sind und ihre Höhe sowie ihr Aussenabstand auf
+  0em gesetzt sind.
+* **nav li.submenuEintrag**: <br>
+  Die Formatierung der Listeneinträge (*nav li*) ist so, dass sie wie bei *nav li* für den User den Eindruck erwecken, Buttons
+  zu sein. Sie sind so formatiert, dass sie sich deutlich von den "Buttons" des übergeordneten Navigationsmenü abheben.
 * **#menuicon**: <br>
   Mit der ID *#menuicon* wird das Hamburger-Icon selektiert und formatiert, welches bei Bildschirmbreiten < 960px anstelle des
   Navigationsmenüs erscheint.
