@@ -95,6 +95,14 @@ nav li.submenuEintrag {
     color: black;
 }
 
+nav li.submenuEintrag:active {
+    background-color: var(--tarngruen);
+    border-color: var(--gruenspan);
+    border-style: solid;
+    border-width: 0.1em;
+    color: var(--creme);
+}
+
 #menuicon {
     position: absolute;
     visibility: hidden;
@@ -212,7 +220,8 @@ div .hintergrund {
     background-color: var(--sandgrau);
     border-radius: 0.5em;
     height: 30em;
-    width: 96%;
+    min-width: 96%;
+    overflow: scroll;
     margin: 2%;
 }
 

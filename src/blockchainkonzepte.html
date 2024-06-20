@@ -134,7 +134,7 @@
                 Seitenzahl der bis dahin letzten Seite.
             </p>
             <div style="position: relative; text-align: center;">
-                <div class="hintergrund"></div>
+                <div class="hintergrund" style="width: 38em;"></div>
                 <button id="a1a_hintergButton" class="animbutton" 
                 style="visibility: hidden;"
                 onclick="document.getElementById('a1a_hinterg1').style='visibility: visible; z-index: 11';">
@@ -147,7 +147,8 @@
                     <div class="block blockinhalt">
                         Seite 1
                     </div>
-                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
                         <i>Informatik ist vielleicht nicht von allen ...</i>
                     </div>
                 </div>
@@ -155,7 +156,8 @@
                     <div class="block blockinhalt">
                         Seite 2
                     </div>
-                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
                         <i>das Lieblingsfach Nummer eins, aber ...</i>
                     </div>
                 </div>
@@ -163,8 +165,9 @@
                     <div class="block blockinhalt">
                         Seite 3
                     </div>
-                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
-                        <i><span id="a1a_block3Inhalt" style="height: 7em; padding-top: 2.5em;"></span></i>
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
+                        <i><span id="a1a_block3Inhalt"></span></i>
                         <script>
                             document.getElementById("a1a_block3Inhalt").innerHTML = a1a_block3Inhalt;
                         </script>
@@ -237,7 +240,7 @@
                 uns 8 Zeichen), die mit einer sogenannten "Hashfunktion" auf den Inhalt des Blocks berechnet wird.
             </p>
             <div style="position: relative; text-align: center;">
-                <div class="hintergrund"></div>
+                <div class="hintergrund" style="width: 50em;"></div>
                 <button id="a1b_hintergButton" class="animbutton" 
                 style="visibility: hidden;"
                 onclick="document.getElementById('a1b_hinterg1').style='visibility: visible; z-index: 21';">
@@ -247,46 +250,58 @@
                 <button id="a1b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('1a')">zurück</button>
                 <div id="a1b_block1" class="block" style="position: absolute; left: 2em; top: 4em;">
-                    <div class="block blockinhalt hash">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1b_block1Hash" class="hash"></span>
                         <script>
-                            document.write(a1b_block1Hash);
-                        </script> 
+                            document.getElementById("a1b_block1Hash").innerHTML = a1b_block1Hash;
+                        </script>
                     </div>
-                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
                         <i>Informatik ist vielleicht nicht von allen ...</i>
                     </div>
                 </div>
                 <div id="a1b_block2" class="block" style="position: absolute; left: 14em; top: 4em;">
-                    <div class="block blockinhalt hash">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1b_block2Hash" class="hash"></span>
                         <script>
-                            document.write(a1b_block2Hash);
-                        </script> 
+                            document.getElementById("a1b_block2Hash").innerHTML = a1b_block2Hash;
+                        </script>
                     </div>
-                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
                         <i>das Lieblingsfach Nummer eins, aber ...</i>
                     </div>
                 </div>
                 <div id="a1b_block3" class="block" style ="position: absolute; left: 26em; top: 4em;">
-                    <div id="a1b_block3Hash" class="block blockinhalt hash">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1b_block3Hash" class="hash"></span>
                         <script>
                             document.getElementById("a1b_block3Hash").innerHTML = a1b_block3Hash;
                         </script> 
                     </div>
-                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
-                        <i><span id="a1b_block3Inhalt" style="height: 7em; padding-top: 2.5em;"></span></i>
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
+                        <i><span id="a1b_block3Inhalt"></span></i>
                         <script>
                             document.getElementById("a1b_block3Inhalt").innerHTML = a1a_block3Inhalt;
                         </script>
                     </div>
                 </div>
                 <div id="a1b_block4" class="block" style ="visibility: hidden;">
-                    <div id="a1b_block4Hash" class="block blockinhalt hash">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1b_block4Hash" class="hash"></span>
                         <script>
                             document.getElementById("a1b_block4Hash").innerHTML = a1b_block4Hash;
                         </script> 
                     </div>
-                    <div class="block blockinhalt" style="height: 7em; padding-top: 2.5em;">
-                        <i><span id="a1b_block4Inhalt" style="height: 7em; padding-top: 2.5em;"></span></i>
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
+                        <i><span id="a1b_block4Inhalt"></span></i>
                         <script>
                             document.getElementById("a1b_block4Inhalt").innerHTML = a1b_block4Inhalt;
                         </script>
@@ -308,7 +323,7 @@
                 <div id="a1b_formular" class="formular">
                     <p><label>Gib den Inhalt des neuen Blocks ein: </p><p>
                         <textarea id="a1b_inputInhaltBlock4" cols="15" rows="4" maxlength="50"></textarea></label></p>
-                    <button id="a1b_formularButton" class="formularbutton" onclick="
+                    <button id="a1b_formularButton1" class="formularbutton" style="float: none;" onclick="
                         var a1b_eingabe = pruefeEingabeText(document.getElementById('a1b_inputInhaltBlock4').value);
                         if (a1b_eingabe) {
                             if (document.getElementById('a1b_inputInhaltBlock4').value != '') {
@@ -317,18 +332,22 @@
                             }
                             document.getElementById('a1b_block4Inhalt').innerHTML = a1b_block4Inhalt;
                             document.getElementById('a1b_block4Hash').innerHTML = a1b_block4Hash;
-                            document.getElementById('a1b_block4').style = 'position: absolute; left: 38em; top: 4em; visibility: visible';
-                            document.getElementById('a1b_formular').style = 'visibility: hidden';
-                            document.getElementById('a1b_infoimg1').style=
-                                'visibility: visible; position: absolute; top: 20em; left: 42em';
-                            document.getElementById('a1b_hintergButton').style=
-                                'visibility: visible; position: absolute; top: 26.5em; left: 2em';
+                            document.getElementById('a1b_inputHashBlock4').value = a1b_block4Hash;
+                            document.getElementById('a1b_formularButton2').style = 'visibility: visible';
                         }
                         else {
                             document.getElementById('a1b_warnung').style = 
                                 'visibility: visible; top: 7em; right: 6em; z-index: 23';
                         }
-                       
+                        ">Hashwert berechnen</button> <br>
+                    <p><input type="text" id="a1b_inputHashBlock4" class="hash"></p>
+                    <button id="a1b_formularButton2" class="formularbutton" style="visibility: hidden;" onclick="
+                        document.getElementById('a1b_block4').style = 'position: absolute; left: 38em; top: 4em; visibility: visible';
+                        document.getElementById('a1b_formular').style = 'visibility: hidden';
+                        document.getElementById('a1b_infoimg1').style=
+                            'visibility: visible; position: absolute; top: 21em; left: 42em';
+                        document.getElementById('a1b_hintergButton').style=
+                            'visibility: visible; position: absolute; top: 26.5em; left: 2em';
                     ">OK</button>
                 </div>
                 <img id="a1b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
@@ -347,6 +366,161 @@
                 </script> <br>
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a1b_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            
+        </div>
+
+<! Animation 1c -->
+
+        <div id="anim_1c" class="mitte animation">
+            <h1>Die Hashwerte verbinden die Blöcke</h1>
+            <p>
+                Jeder Block beinhaltet den Hashwert des vorherigen Blocks. Dadurch werden die Blöcke miteinander
+                verknüpft und bekommen eine Reihenfolge. Und aus einzelnen Blöcken wird eine Kette von Blöcken.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="width: 62em;"></div>
+                <button id="a1c_hintergButton" class="animbutton" 
+                style="visibility: hidden;"
+                onclick="document.getElementById('a1c_hinterg1').style='visibility: visible; z-index: 31';">
+                Hintergrundwissen</button>
+                <button id="a1c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('1d')">weiter</button>
+                <button id="a1c_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('1b'); a1b_inhaltBlock3();">zurück</button>
+                <div id="a1c_block1" class="block" style="position: absolute; left: 2em; top: 4em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1c_block1Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1c_block1Hash").innerHTML = a1b_block1Hash;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
+                        <i>Informatik ist vielleicht nicht von allen ...</i>
+                    </div>
+                </div>
+                <div id="a1c_block2" class="block" style="position: absolute; left: 14em; top: 4em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1c_block2Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1c_block2Hash").innerHTML = a1b_block2Hash;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
+                        <i>das Lieblingsfach Nummer eins, aber ...</i>
+                    </div>
+                </div>
+                <div id="a1c_block3" class="block" style ="position: absolute; left: 26em; top: 4em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1c_block3Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1c_block3Hash").innerHTML = a1b_block3Hash;
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
+                        <i><span id="a1c_block3Inhalt"></span></i>
+                        <script>
+                            document.getElementById("a1c_block3Inhalt").innerHTML = a1a_block3Inhalt;
+                        </script>
+                    </div>
+                </div>
+                <div id="a1c_block4" class="block" style ="position: absolute; left: 38em; top: 4em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1c_block4Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1c_block4Hash").innerHTML = a1b_block4Hash;
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
+                        <i><span id="a1c_block4Inhalt"></span></i>
+                        <script>
+                            document.getElementById("a1c_block4Inhalt").innerHTML = a1b_block4Inhalt;
+                        </script>
+                    </div>
+                </div>
+                <div id="a1c_block5" class="block" style="visibility: hidden;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1c_block5Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1c_block5Hash").innerHTML = a1c_block5Hash;
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt" style="height: 7em; padding-bottom: 2.5em;">
+                        Inhalt: <br><br>
+                        <i><span id="a1c_block5Inhalt"></span></i>
+                        <script>
+                            document.getElementById("a1c_block5Inhalt").innerHTML = a1c_block5Inhalt;
+                        </script>
+                    </div>
+                </div>
+                <button id="a1c_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="document.getElementById('a1c_formular').style=
+                        'position: absolute; right: 2em; top: 5em; visibility: visible';
+                    ">Erstelle einen neuen Block</button>
+                <div id="a1c_warnung" class="hinweis">
+                    <p class="hinweistext">
+                        Bitte geben Sie einen Text ein, der ausschliesslich aus Gross- und Kleinbuchstaben oder 
+                        Ziffern besteht und maximal 50 Zeichen lang ist.
+                    </p>
+                    <button class="hinweisbutton" onclick="
+                        document.getElementById('a1c_warnung').style='visibility: hidden';
+                    ">OK</button>
+                </div>
+                <div id="a1c_formular" class="formular">
+                    <p><label>Gib den Inhalt des neuen Blocks ein: </p><p>
+                        <textarea id="a1c_inputInhaltBlock5" cols="15" rows="4" maxlength="50"></textarea></label></p>
+                    <button id="a1c_formularButton1" class="formularbutton" style="float: none;" onclick="
+                        var a1c_eingabe = pruefeEingabeText(document.getElementById('a1c_inputInhaltBlock5').value);
+                        if (a1c_eingabe) {
+                            if (document.getElementById('a1c_inputInhaltBlock5').value != '') {
+                            a1c_block5Inhalt = document.getElementById('a1c_inputInhaltBlock5').value;
+                            a1c_block5Hash = berechneHash('Block 5' + a1c_block5Inhalt);
+                            }
+                            document.getElementById('a1c_block5Inhalt').innerHTML = a1c_block5Inhalt;
+                            document.getElementById('a1c_block5Hash').innerHTML = a1c_block5Hash;
+                            document.getElementById('a1c_inputHashBlock5').value = a1c_block5Hash;
+                            document.getElementById('a1c_formularButton2').style = 'visibility: visible';
+                        }
+                        else {
+                            document.getElementById('a1c_warnung').style = 
+                                'visibility: visible; top: 7em; right: 6em; z-index: 33';
+                        }
+                        ">Hashwert berechnen</button> <br>
+                    <p><input type="text" id="a1c_inputHashBlock5" class="hash"></p>
+                    <button id="a1c_formularButton2" class="formularbutton" style="visibility: hidden;" onclick="
+                        document.getElementById('a1c_block5').style = 'position: absolute; left: 50em; top: 4em; visibility: visible';
+                        document.getElementById('a1c_formular').style = 'visibility: hidden';
+                        document.getElementById('a1c_infoimg1').style=
+                            'visibility: visible; position: absolute; top: 21em; left: 42em';
+                        document.getElementById('a1c_hintergButton').style=
+                            'visibility: visible; position: absolute; top: 26.5em; left: 2em';
+                    ">OK</button>
+                </div>
+                <img id="a1c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a1c_info1').style='visibility: visible; z-index: 32;'">                    
+            </div>
+            <div id="a1c_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a1c_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a1c_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a1c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a1c_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a1c_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>
             
         </div>
