@@ -641,7 +641,8 @@ werden.
   0em gesetzt sind.
 * **nav li.submenuEintrag**: <br>
   Die Formatierung der Listeneinträge (*nav li*) ist so, dass sie wie bei *nav li* für den User den Eindruck erwecken, Buttons
-  zu sein. Sie sind so formatiert, dass sie sich deutlich von den "Buttons" des übergeordneten Navigationsmenü abheben.
+  zu sein (Cursor wird zum Pointer, Invertierung der Farben bei Aktivierung *nav li.submenEintrag:active*). Sie sind so
+  formatiert, dass sie sich deutlich von den "Buttons" des übergeordneten Navigationsmenü abheben.
 * **#menuicon**: <br>
   Mit der ID *#menuicon* wird das Hamburger-Icon selektiert und formatiert, welches bei Bildschirmbreiten < 960px anstelle des
   Navigationsmenüs erscheint.
@@ -789,6 +790,13 @@ bedeutet also, dass beim div-Kontainer, in dem sich die aktuell sichtbare Animat
 und beim div-Kontainer, in dem sich die Animation, zu der navigiert werden soll, befindet, die CSS-Eigenschaft *display: inline* 
 gesetzt werden. Das wird realisiert durch die Verwendung der Variable *animAktuell*, in der die Nummer der aktuell sichtbaren
 Animation gespeichert ist, und die Ausführung der Funktion *oeffneAnimation()*.
+
+Im Navigationsmenü werden bei den Animationen, die aus mehreren Teilen bestehen, aus Gründern der Übersichtlichkeit lediglich ein
+Menüpunkt für alle Teilanimationen angezeigt. Wenn der User nicht über die "weiter"- und "zurück"-Buttons zu einer Animation 
+navigiert, sondern das Navigationsmenü verwendet, werden zunüchst über die Funktion *ausklappenMenu()* die Menüpunkte für die
+einzelnen Teile ausgeklappt, d.h. sichtbar gemacht (und etwaige zu diesem Zeitpunkt sichtbare Menüpunkte für die Teile einer 
+anderen Animation unsichtbar gemacht). Erst dann kann der User im Navigationsmenü eine konkrete Teilanimation auswählen und zu
+dieser direkt navigieren.
 
 Weil beim Starten der Applikation die Datei *blockchainkonzepte.html* vollständig geladen wird, werden dabei auch die Werte
 sämtlicher Variablen ausgelesen, auch die Werte jener Variablen, welche der User beim Verwenden der Applikation über Eingaben
