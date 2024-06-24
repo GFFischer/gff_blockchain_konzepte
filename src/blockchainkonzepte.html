@@ -45,9 +45,9 @@
                         ">Ein Buch mit vielen einzelnen Seiten</li>
                     <li id="a1b_menu" class="submenuEintrag" onclick="oeffneAnimation('1b'); a1b_inhaltBlock3();
                         ">Einen Hashwert auf den Seiteninhalt berechnen</li>
-                    <li id="a1c_menu" class="submenuEintrag" onclick="oeffneAnimation('1c')
+                    <li id="a1c_menu" class="submenuEintrag" onclick="oeffneAnimation('1c'); a1c_inhalteBloecke();
                         ">Blöcke durch Hashwerte verknüpfen</li>
-                    <li id="a1d_menu" class="submenuEintrag" onclick="oeffneAnimation('1d')
+                    <li id="a1d_menu" class="submenuEintrag" onclick="oeffneAnimation('1d'); a1d_inhalteBloecke();
                         ">Den Inhalt aus den Blöcken auslagern</li>
                 </ul>
                 <li onclick="ausklappenMenu('anim2_menu')"";
@@ -246,7 +246,7 @@
                 onclick="document.getElementById('a1b_hinterg1').style='visibility: visible; z-index: 21';">
                 Hintergrundwissen</button>
                 <button id="a1b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('1c')">weiter</button>
+                    onclick="oeffneAnimation('1c'); a1c_inhalteBloecke()">weiter</button>
                 <button id="a1b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('1a')">zurück</button>
                 <div id="a1b_block1" class="block" style="position: absolute; left: 2em; top: 5em;">
@@ -368,7 +368,6 @@
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a1b_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>
-            
         </div>
 
 <! Animation 1c -->
@@ -381,12 +380,11 @@
             </p>
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="width: 68em; height: 32em;"></div>
-                <button id="a1c_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
-                onclick="document.getElementById('a1c_hinterg1').style='visibility: visible; z-index: 31';">
+                <button id="a1c_hintergButton" class="animbutton" style="visibility: hidden;"
+                    onclick="document.getElementById('a1c_hinterg1').style='visibility: visible; z-index: 31';">
                 Hintergrundwissen</button>
                 <button id="a1c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('1d')">weiter</button>
+                    onclick="oeffneAnimation('1d'); a1d_inhalteBloecke();">weiter</button>
                 <button id="a1c_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('1b'); a1b_inhaltBlock3();">zurück</button>
                 <div id="a1c_block1" class="block" style="position: absolute; left: 2em; top: 5em;">
@@ -495,6 +493,14 @@
                         </script>
                     </div>
                 </div>
+                <img src="img/pfeil_bloecke_verbinden.png" alt="Pfeil" 
+                    style="position: absolute; top: 8em; left: 13.3em; height: 7.2em; width: 3.5em;">
+                <img src="img/pfeil_bloecke_verbinden.png" alt="Pfeil" 
+                    style="position: absolute; top: 8em; left: 26.8em; height: 7.2em; width: 3.5em;">
+                <img src="img/pfeil_bloecke_verbinden.png" alt="Pfeil" 
+                    style="position: absolute; top: 8em; left: 40.3em; height: 7.2em; width: 3.5em;">
+                <img id="a1c_pfeil5" src="img/pfeil_bloecke_verbinden.png" alt="Pfeil" 
+                    style="visibility: hidden;">
                 <button id="a1c_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
                     onclick="document.getElementById('a1c_formular').style=
                         'position: absolute; right: 2em; top: 5em; visibility: visible';
@@ -508,6 +514,8 @@
                         document.getElementById('a1c_warnung').style='visibility: hidden';
                     ">OK</button>
                 </div>
+                <img id="a1c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg""
+                    onclick="document.getElementById('a1c_info1').style='visibility: visible; z-index: 34;'">
                 <div id="a1c_formular" class="formular">
                     <p><label>Gib den Inhalt des neuen Blocks ein: </p><p>
                         <textarea id="a1c_inputInhaltBlock5" cols="15" rows="4" maxlength="50"></textarea></label></p>
@@ -536,6 +544,7 @@
                     </script>
                     <button id="a1c_formularButton2" class="formularbutton" style="visibility: hidden;" onclick="
                         document.getElementById('a1c_block5').style = 'position: absolute; left: 56em; top: 5em; visibility: visible';
+                        document.getElementById('a1c_pfeil5').style = 'position: absolute; top: 8em; left: 53.8em; height: 7.2em; width: 3.5em; visibility: visible';
                         document.getElementById('a1c_formular').style = 'visibility: hidden';
                         document.getElementById('a1c_formularButton2').style = 'visibility: hidden';
                         document.getElementById('a1c_infoimg1').style=
@@ -543,9 +552,7 @@
                         document.getElementById('a1c_hintergButton').style=
                             'visibility: visible; position: absolute; top: 28.5em; left: 2em';
                     ">OK</button>
-                </div>
-                <img id="a1c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a1c_info1').style='visibility: visible; z-index: 32;'">                    
+                </div>                    
             </div>
             <div id="a1c_info1" class="infotext" style="visibility: hidden;">
                 <script type="text/javascript">
@@ -560,8 +567,220 @@
                 </script> <br>
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a1c_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            
+            </div>   
         </div>
+        
+<! Animation 1d -->
+
+        <div id="anim_1d" class="mitte animation">
+            <h1>Der Inhalt der Blöcke befindet sich ausserhalb der Blöcke</h1>
+            <p>
+                Der Inhalt der einzelnen Blöcke wird aus den Blöcken ausgelagert und an einem anderen Ort
+                gespeichert. Übrig bleibt ein sogenannter "Block-Header", der einen eigenen Hashwert hat und in 
+                dem auf den Hashwert des vorherigen Blocks und den Hashwert des eigenen Inhalts verwiesen wird.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="width: 68em; height: 40em;"></div>
+                <button id="a1d_hintergButton" class="animbutton" 
+                style="visibility: hidden"
+                    onclick="document.getElementById('a1d_hinterg1').style='visibility: visible; z-index: 41';">
+                Hintergrundwissen</button>
+                <button id="a1d_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('2a')">weiter</button>
+                <button id="a1d_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('1c'); a1c_inhalteBloecke();">zurück</button>
+                <div id="a1d_block1" class="block" style="position: absolute; left: 2em; top: 5em; height: 19em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1d_block1Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1d_block1Hash").innerHTML = a1b_block1Hash;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hashwert vorheriger Block:
+                        <span class="hash">"Genesis-Block"</span>
+                    </div>
+                </div>
+                <div id="a1d_block1Inhalt" class="block">
+                    Inhalt: <br>
+                    <i>Informatik ist vielleicht nicht von allen ...</i>
+                </div>
+                <div id="a1d_block1HashInhalt" class="block blockHashInhalt">
+                    Hashwert Inhalt:
+                    <span id="a1d_block1HashRef" class="hash"></span>
+                    <script>
+                        document.getElementById("a1d_block1HashRef").innerHTML = a1d_inhaltBlock1Hash;
+                    </script>
+                </div>
+                <div id="a1d_block2" class="block" style="position: absolute; left: 15.5em; top: 5em; height: 19em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1d_block2Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1d_block2Hash").innerHTML = a1b_block2Hash;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hashwert vorheriger Block:
+                        <span id="a1d_block1HashVorh" class="hash"></span>
+                        <script>
+                            document.getElementById("a1d_block1HashVorh").innerHTML = a1b_block1Hash;
+                        </script>
+                    </div>
+                </div>
+                <div id="a1d_block2Inhalt" class="block">
+                    Inhalt: <br>
+                    <i>das Lieblingsfach Nummer eins, aber ...</i>
+                </div>
+                <div id="a1d_block2HashInhalt" class="block blockHashInhalt">
+                    Hashwert Inhalt:
+                    <span id="a1d_block2HashRef" class="hash"></span>
+                    <script>
+                        document.getElementById("a1d_block2HashRef").innerHTML = a1d_inhaltBlock2Hash;
+                    </script>
+                </div>
+                <div id="a1d_block3" class="block" style ="position: absolute; left: 29em; top: 5em; height: 19em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1d_block3Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1d_block3Hash").innerHTML = a1b_block3Hash;
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt">
+                        Hashwert vorheriger Block:
+                        <span id="a1d_block2HashVorh" class="hash"></span>
+                        <script>
+                            document.getElementById("a1d_block2HashVorh").innerHTML = a1b_block2Hash;
+                        </script>
+                    </div>
+                </div>
+                <div id="a1d_block3Inhalt" class="block">
+                    Inhalt: <br>
+                    <i><span id="a1d_block3InhaltText"></span></i>
+                    <script>
+                        document.getElementById("a1d_block3InhaltText").innerHTML = a1a_block3Inhalt;
+                    </script>
+                </div>
+                <div id="a1d_block3HashInhalt" class="block blockHashInhalt">
+                    Hashwert Inhalt:
+                    <span id="a1d_block3HashRef" class="hash"></span>
+                    <script>
+                        document.getElementById("a1d_block3HashRef").innerHTML = a1d_inhaltBlock3Hash;
+                    </script>
+                </div>
+                <div id="a1d_block4" class="block" style ="position: absolute; left: 42.5em; top: 5em; height: 19em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1d_block4Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1d_block4Hash").innerHTML = a1b_block4Hash;
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt">
+                        Hashwert vorheriger Block:
+                        <span id="a1d_block3HashVorh" class="hash"></span>
+                        <script>
+                            document.getElementById("a1d_block3HashVorh").innerHTML = a1b_block3Hash;
+                        </script>
+                    </div>
+                </div>
+                <div id="a1d_block4Inhalt" class="block">
+                    Inhalt: <br>
+                    <i><span id="a1d_block4InhaltText"></span></i>
+                    <script>
+                        document.getElementById("a1d_block4InhaltText").innerHTML = a1b_block4Inhalt;
+                    </script>
+                </div>
+                <div id="a1d_block4HashInhalt" class="block blockHashInhalt">
+                    Hashwert Inhalt:
+                    <span id="a1d_block4HashRef" class="hash"></span>
+                    <script>
+                        document.getElementById("a1d_block4HashRef").innerHTML = a1d_inhaltBlock4Hash;
+                    </script>
+                </div>
+                <div id="a1d_block5" class="block" style="position: absolute; left: 56em; top: 5em; height: 19em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a1d_block5Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a1d_block5Hash").innerHTML = a1c_block5Hash;
+                        </script> 
+                    </div>
+                    <div class="block blockinhalt">
+                        Hashwert vorheriger Block:
+                        <span id="a1d_block4HashVorh" class="hash"></span>
+                        <script>
+                            document.getElementById("a1d_block4HashVorh").innerHTML = a1b_block4Hash;
+                        </script>
+                    </div>
+                </div>
+                <div id="a1d_block5Inhalt" class="block">
+                    Inhalt: <br>
+                    <i><span id="a1d_block5InhaltText"></span></i>
+                    <script>
+                        document.getElementById("a1d_block5InhaltText").innerHTML = a1c_block5Inhalt;
+                    </script>
+                </div>
+                <div id="a1d_block5HashInhalt" class="block blockHashInhalt">
+                    Hashwert Inhalt:
+                    <span id="a1d_block5HashRef" class="hash"></span>
+                    <script>
+                        document.getElementById("a1d_block5HashRef").innerHTML = a1d_inhaltBlock5Hash;
+                    </script>
+                </div>
+                <img src="img/pfeil_bloecke_verbinden.png" alt="Pfeil" 
+                    style="position: absolute; top: 8em; left: 13.3em; height: 7.2em; width: 3.5em;">
+                <img src="img/pfeil_bloecke_verbinden.png" alt="Pfeil" 
+                    style="position: absolute; top: 8em; left: 26.8em; height: 7.2em; width: 3.5em;">
+                <img src="img/pfeil_bloecke_verbinden.png" alt="Pfeil" 
+                    style="position: absolute; top: 8em; left: 40.3em; height: 7.2em; width: 3.5em;">
+                <img src="img/pfeil_bloecke_verbinden.png" alt="Pfeil" 
+                    style="position: absolute; top: 8em; left: 53.8em; height: 7.2em; width: 3.5em;">
+                <img id="a1d_pfeil1" src="img/pfeil_header_zu_inhalt.png" alt="Pfeil"
+                    style="visibility: hidden;">
+                <img id="a1d_pfeil2" src="img/pfeil_header_zu_inhalt.png" alt="Pfeil"
+                    style="visibility: hidden;">
+                <img id="a1d_pfeil3" src="img/pfeil_header_zu_inhalt.png" alt="Pfeil"
+                    style="visibility: hidden;">
+                <img id="a1d_pfeil4" src="img/pfeil_header_zu_inhalt.png" alt="Pfeil"
+                    style="visibility: hidden;">
+                <img id="a1d_pfeil5" src="img/pfeil_header_zu_inhalt.png" alt="Pfeil"
+                    style="visibility: hidden;">
+                <button id="a1d_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="document.getElementById('a1d_abbruch').style =
+                        'position: absolute; right: 2em; top: 1em;';
+                        document.getElementById('a1d_startButton').style = 'visibility: hidden;';
+                        a1d_bewegteElemente();"
+                    >Starte Animation</button>
+                <button id="a1d_neustart" class="animbutton" style="visibility: hidden;"
+                    >Animation neu starten</button>
+                <button id="a1d_unterbrechung" class="animbutton" style="visibility: hidden;"
+                    >Animation unterbrechen</button>
+                <button id="a1d_fortsetzung" class="animbutton" style="visibility: hidden;"
+                    >Animation fortsetzen</button>
+                <button id="a1d_abbruch" class="animbutton" style="visibility: hidden;"
+                    >Animation abbrechen</button>
+                <img id="a1d_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    style="visibility: hidden"
+                    onclick="document.getElementById('a1d_info1').style='visibility: visible; z-index: 44;'">                   
+            </div>
+            <div id="a1d_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a1d_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a1d_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a1d_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a1d_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a1d_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>
+        </div>
+
     </body>
 </html>

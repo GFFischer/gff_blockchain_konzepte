@@ -2,6 +2,10 @@ var a1a_info1 = "Hier kommt der erste Infotext hinein.";
 var a1a_hinterg1 = "Hintergrundtext 1";
 var a1b_info1 = "Infotext 1b";
 var a1b_hinterg1 = "Hintergrundtext 1b";
+var a1c_info1 = "Infotext 1c";
+var a1c_hinterg1 = "Hintergrundtext 1c";
+var a1d_info1 = "Infotext 1d";
+var a1d_hinterg1 = "Hintergrundtext 1d";
 
 var copyright_hashes = "Berechnet unter Verwendung der JavaScript Implementation von üblichen Hashfunktionen, zur \
 Verfügung gestellt von </br>&copy; 2012-2017, Tomas Aparicio und </br>&copy; 1999-2012, Paul Johnston, Angel Marin, \

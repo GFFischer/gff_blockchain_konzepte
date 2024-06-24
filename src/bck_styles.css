@@ -389,6 +389,62 @@ input:focus, select:focus, textarea:focus {
     overflow: hidden;
 }
 
+.blockHashInhalt {
+    width: 8.9em; 
+    padding: 0.5em;
+    visibility: hidden;
+}
+
+#a1d_block1Inhalt {
+    position: absolute; left: 2.5em; top: 16.4em;
+    height: 5em; 
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    width: 8.9em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#a1d_block2Inhalt {
+    position: absolute; left: 16em; top: 16.4em;
+    height: 5em; 
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    width: 8.9em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#a1d_block3Inhalt {
+    position: absolute; left: 29.5em; top: 16.4em;
+    height: 5em; 
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    width: 8.9em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#a1d_block4Inhalt {
+    position: absolute; left: 43em; top: 16.4em;
+    height: 5em; 
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    width: 8.9em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#a1d_block5Inhalt {
+    position: absolute; left: 56.5em; top: 16.4em;
+    height: 5em; 
+    padding: 0.5em;
+    padding-bottom: 1.5em;
+    width: 8.9em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 .graph {
     width: 44em;
 }
