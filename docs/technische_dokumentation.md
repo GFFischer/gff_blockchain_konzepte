@@ -720,6 +720,12 @@ werden.
 * **.blockinhalt**: <br>
   Diese Klasse ergänzt die Klasse *.block* und ist für die Elemente, die innerhalb eines dargestellten Blocks ala Elemente dieses
   Blocks angezeigt werden. Dabei wird v.a. die Eigenschaft *width* auf *80%* gesetzt.
+* **.blockHashInhalt**: <br>
+  Diese Klasse ergänzt die Klasse *.block* und regelt die Anzeige der Blöcke mit dem Titel "Hash Inhalt:" in Animation 1d.
+  Bestimmt werden die Grösse der Blöcke und die Eigenschaft *visibility: hidden* als Standard.
+* **.a1d_blockInhalt**: <br>
+  Diese Klasse ergänzt die Klasse *.block* und regelt die Anzeige der Blöcke mit dem Titel "Inhalt:" in Animation 1d. Bestimmt
+  werden Grösse und Innenabstand der Blöcke sowie der Umgang mit Text-Overflow.
 * **.graph**: <br>
   Diese Klasse regelt die Grösse der Grafiken, die bei der Darstellung des Peer-to-Peer-Netzwerkes hinter den Knoten angezeigt
   werden und die Kanten des Graphen darstellen.
