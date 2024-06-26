@@ -469,6 +469,9 @@ Konkret handelt es sich um folgende Funktionen:
   Neu generiert werden die Inhalte des dritten, vierten und fünften Blocks (Variablen *a1a_block3Inhalt*, *a1b_block4Inhalt* und
   *a1c_block5Inhalt*), die vom User in den Animationen 1a, 1b und 1c eingegeben oder verändert werden können, die daraus
   berechneten Hashwerte sowie die Hashwerte der jeweils vorherigen Blöcke.
+* **a1d_bewegteBloecke**() <br>
+  Mit dieser Funktion wird die Animation, d.h. die Bewegung der einzelnen Blöcke ausgelöst. Sie beinhaltet auch die ganze Steuerung
+  der Animation, also alles was für Abbruch, Neustart, Unterbrechung und Fortsetzung der Animation notwendig ist.
 * **a2b_nameKnotenNeu**() <br>
   Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable *a2a_nameKnotenNeu*).
 * **a2b_aendereAnzahlSchluessel**(zahl) <br>
