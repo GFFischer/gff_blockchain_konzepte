@@ -116,6 +116,7 @@ eines html-Elements als reine Zahl zurückgeben*/
 
 function bewegeObjekt(objektID, unterbrechungID, abbruchID, neustartID, startposX, startposY, tempoX, tempoY, 
                       zielposX, zielposY) {
+
     if (tempoX != 0 || tempoY != 0) {
         var objekt = document.getElementById(objektID);
         function starteBewegung() {
