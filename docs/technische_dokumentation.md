@@ -483,8 +483,9 @@ Konkret handelt es sich um folgende Funktionen:
   Mit dieser Funktion wird der Code für das Feld generiert, in dem in Animation 2b und 2c die privaten Schlüssel des in Animation
   2a neu hinzugefügten Knotens angezeigt werden. Es geht dabei vor allem um die Vermeidung von Leerzeilen.
 * **a2c_inhaltKnotenNeu**() <br>
-  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable *a2a_nameKnotenNeu*) sowie die dem neuen
-  Knoten zugewiesenen Adressen, abhängig von der in Animation 2b eingegebenen Anzahl (Array *a2b_adressenKnoten*).
+  Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable *a2a_nameKnotenNeu*), die dem neuen
+  Knoten zugewiesenen Adressen sowie das Feld mit den privaten Schlüsseln (Funktion *a2b_schluessel()*), abhängig von der in
+  Animation 2b eingegebenen Anzahl an Adressen (Array *a2b_adressenKnoten*).
 * **a3a_tabelleAdressenKnotenNeu**() <br>
   Neu generiert wird die Tabelle mit den Adressen des neuen Knotens und jeweils dem dazugehörenden privaten Schlüssel, abhängig
   von der in Animation 2b eingegebenen Anzahl von Adressen (Array *a2b_adressenKnoten*).
