@@ -479,6 +479,9 @@ Konkret handelt es sich um folgende Funktionen:
   übergebenen Zahl (1 bis 3) geändert, und zwar so, dass in den Arrays *a2b_adressenKnoten* und *a2b_privateSchluessel* die Einträge
   beim Index 2 (falls der Wert 2 übergeben wurde) oder bei den Indizes 1 und 2 (falls der Wert 1 übergeben wurde) durch einen
   leeren String ("") ersetzt werden.
+* **a2b_privateSchluessel**() <br>
+  Mit dieser Funktion wird der Code für das Feld generiert, in dem in Animation 2b und 2c die privaten Schlüssel des in Animation
+  2a neu hinzugefügten Knotens angezeigt werden. Es geht dabei vor allem um die Vermeidung von Leerzeilen.
 * **a2c_inhaltKnotenNeu**() <br>
   Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable *a2a_nameKnotenNeu*) sowie die dem neuen
   Knoten zugewiesenen Adressen, abhängig von der in Animation 2b eingegebenen Anzahl (Array *a2b_adressenKnoten*).
@@ -735,10 +738,10 @@ werden.
 * **.knotenName**: <br>
   Diese Klasse ergänzt die Klasse *.knoten* und bestimmt die Grösse der Knoten, die bei der ersten Darstellung des
   Peer-to-Peer-Netzwerks noch ein wenig kleiner ist.
-* **#a2a_knotenNeu, #a2b_knotenNeuName, #a2b_knotenNeu**: <br>
+* **#a2a_knotenNeu, #a2b_knotenNeuName, #a2b_knotenNeu, #a2b_privateSchluessel**: <br>
   Mit dieser ID werden in den Animationen 2a und 2b jeweils der Knoten selektiert, der in der Animation 2a neu hinzugefügt worden
   ist. Bestimmt wird die Farbe, damit sich diese Knoten optisch von den anderen Knoten des dargestellten Peer-to-Peer-Netzwerks
-  abheben.
+  abheben. Das gilt auch für das Feld, in dem in Animation 2b und 2c die privaten Schluessel angezeigt werden.
 * **.tabelle**: <br>
   Diese Klasse regelt die Formatierung, die für alle Tabellen, die in den Animationen angezeigt werden, gültig ist.
 * **.tabFeld**: <br>
