@@ -735,9 +735,10 @@ werden.
 * **.knotenName**: <br>
   Diese Klasse ergänzt die Klasse *.knoten* und bestimmt die Grösse der Knoten, die bei der ersten Darstellung des
   Peer-to-Peer-Netzwerks noch ein wenig kleiner ist.
-* **#a2a_knotenNeu**: <br>
-  Mit dieser ID wird der in Animation 2a neu hinzugefügte Knoten selektiert. Bestimmt wird die Farbe, damit sich dieser Knoten
-  optisch von den anderen Knoten des dargestellten Peer-to-Peer-Netzwerks abhebt.
+* **#a2a_knotenNeu, #a2b_knotenNeuName, #a2b_knotenNeu**: <br>
+  Mit dieser ID werden in den Animationen 2a und 2b jeweils der Knoten selektiert, der in der Animation 2a neu hinzugefügt worden
+  ist. Bestimmt wird die Farbe, damit sich diese Knoten optisch von den anderen Knoten des dargestellten Peer-to-Peer-Netzwerks
+  abheben.
 * **.tabelle**: <br>
   Diese Klasse regelt die Formatierung, die für alle Tabellen, die in den Animationen angezeigt werden, gültig ist.
 * **.tabFeld**: <br>
