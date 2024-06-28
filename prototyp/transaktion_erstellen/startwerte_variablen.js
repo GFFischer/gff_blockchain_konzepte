@@ -322,7 +322,7 @@ for (var i = 3; i <= 31; i += 3) {
         adressenKnoten[i + 2] = "";
     } else {
         adressenKnoten[i + 1] = "K2: " + getAdresse(i + 1);
-        adressenKnoten[i + 2] = "K3: " + getAdresse(1 + 2);
+        adressenKnoten[i + 2] = "K3: " + getAdresse(i + 2);
     }
 }
 

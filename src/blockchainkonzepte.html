@@ -57,9 +57,9 @@
                         document.getElementById('navmenu').classList.add('unsichtbar');">
                     <li id="a2a_menu" class="submenuEintrag" onclick="oeffneAnimation('2a')
                         ">Ein Netzwerk mit vielen Knoten</li>
-                    <li id="a2b_menu" class="submenuEintrag" onclick="oeffneAnimation('2b')
+                    <li id="a2b_menu" class="submenuEintrag" onclick="oeffneAnimation('2b'); a2b_nameKnotenNeu();
                         ">Den Knoten Adressen zuweisen</li>
-                    <li id="a2c_menu" class="submenuEintrag" onclick="oeffneAnimation('2c')
+                    <li id="a2c_menu" class="submenuEintrag" onclick="oeffneAnimation('2c'); a2c_inhaltKnotenNeu();
                         ">Die Namen verschwinden hinter den Adressen</li>
                 </ul>
                 <li onclick="ausklappenMenu('anim3_menu')"";
@@ -788,6 +788,408 @@
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a1d_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>
+        </div>
+
+<! Animation 2a -->
+
+        <div id="anim_2a" class="mitte animation">
+            <h1>Eine Blockchain läuft einem Netzwerk</h1>
+            <p>
+                Eine Blockchain wird nicht irgendwo zentral gespeichert, sondern sie wird von einem Netzwerk von 
+                vielen gleichwertigen Knoten bearbeitet. Alle Knoten ("Peers) sind dabei gleichrangig, bei jedem 
+                Knoten ist die gesamte Blockchain mit all ihren Daten gespeichert.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="height: 43em; min-width: 54em;"></div>
+                <button id="a2a_hintergButton" class="animbutton" 
+                style="visibility: hidden;"
+                onclick="document.getElementById('a2a_hinterg1').style='visibility: visible; z-index: 51';">
+                Hintergrundwissen</button>
+                <button id="a2a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('2b'); a2b_nameKnotenNeu();">weiter</button>
+                <button id="a2a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('1d'); a1d_inhalteBloecke();">zurück</button>
+                <img id="a2a_graph_start" class="graph" src="img/graph_start.png" alt="Peer-to-Peer-System" 
+                    style="position: absolute; left: 8em; top: 5em;">
+                <img id="a2a_graph_farbig" class="graph" src="img/a2a_graph_farbig.png" alt="Peer-to-Peer-System" 
+                    style="visibility: hidden;">
+                <div id="a2a_knotenNeu" class="knoten knotenName" style="position: absolute; left: 7em; top: 29em;
+                    visibility: hidden;">
+                    <br><span id="a2a_knotenNeuInhalt"></span>
+                </div>
+                <div id="a2a_knoten_1" class="knoten knotenName" style="position: absolute; left: 9em; top: 4em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten1);
+                    </script>
+                </div>
+                <div id="a2a_knoten_2" class="knoten knotenName" style="position: absolute; left: 21.5em; top: 1.5em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten2);
+                    </script>
+                </div>
+                <div id="a2a_knoten_3" class="knoten knotenName" style="position: absolute; left: 33.5em; top: 2em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten3);
+                    </script>
+                </div>
+                <div id="a2a_knoten_4" class="knoten knotenName" style="position: absolute; left: 4em; top: 16em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten4);
+                    </script>
+                </div>
+                <div id="a2a_knoten_5" class="knoten knotenName" style="position: absolute; left: 21em; top: 14.5em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten5);
+                    </script>
+                </div>
+                <div id="a2a_knoten_6" class="knoten knotenName" style="position: absolute; left: 31em; top: 16em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten6);
+                    </script>
+                </div>
+                <div id="a2a_knoten_7" class="knoten knotenName" style="position: absolute; left: 45.5em; top: 12em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten7);
+                    </script>
+                </div>
+                <div id="a2a_knoten_8" class="knoten knotenName" style="position: absolute; left: 19em; top: 25.5em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten8);
+                    </script>
+                </div>
+                <div id="a2a_knoten_9" class="knoten knotenName" style="position: absolute; left: 31em; top: 29.5em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten9);
+                    </script>
+                </div>
+                <div id="a2a_knoten_10" class="knoten knotenName" style="position: absolute; left: 42em; top: 25em;">
+                    <br>
+                    <script type="text/javascript">
+                        document.write(a2a_nameKnoten10);
+                    </script>
+                </div>
+                <button id="a2a_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="document.getElementById('a2a_formular').style=
+                        'position: absolute; right: 2em; top: 5em; visibility: visible';
+                    ">Erstelle einen neuen Peer</button>
+                <div id="a2a_warnung" class="hinweis">
+                    <p class="hinweistext">
+                        Bitte geben Sie einen Text ein, der ausschliesslich aus Gross- und Kleinbuchstaben oder 
+                        Ziffern besteht und maximal 20 Zeichen lang ist.
+                    </p>
+                    <button class="hinweisbutton" onclick="
+                        document.getElementById('a2a_warnung').style='visibility: hidden';
+                    ">OK</button>
+                </div>
+                <div id="a2a_formular" class="formular">
+                    <p><label>Gib einen Namen ein: </p>
+                        <input id="a2a_inputName" maxlength="20"></input></label>
+                    <button id="a2a_formularButton" class="formularbutton" onclick="
+                        var a2a_eingabe = pruefeEingabeText(document.getElementById('a2a_inputName').value);
+                        if (a2a_eingabe) {
+                            if (document.getElementById('a2a_inputName').value != '') {
+                                a2a_nameKnotenNeu = document.getElementById('a2a_inputName').value;
+                                document.getElementById('a2a_knotenNeuInhalt').innerHTML = a2a_nameKnotenNeu;
+                            }
+                            else {
+                                document.getElementById('a2a_knotenNeuInhalt').innerHTML = a2a_nameKnotenNeu;
+                            }
+                            document.getElementById('a2a_formular').style = 'visibility: hidden';
+                            document.getElementById('a2a_infoimg1').style=
+                                'visibility: visible; position: absolute; top: 37em; left: 21em';
+                            document.getElementById('a2a_hintergButton').style=
+                                'visibility: visible; position: absolute; top: 39.5em; left: 2em';
+                        }
+                        else {
+                            document.getElementById('a2a_warnung').style = 
+                                'visibility: visible; top: 7em; right: 6em; z-index: 53';
+                        }
+                        document.getElementById('a2a_knotenNeu').style='position: absolute; left: 10em; top: 29em; visibility: visible;';
+                        document.getElementById('a2a_formular').style='visibility: hidden';
+                        document.getElementById('a2a_graph_farbig').style='position: absolute; left: 8em; top: 5em; visibility: visible';"
+                    ">OK</button>
+                </div>
+                <img id="a2a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a2a_info1').style='visibility: visible; z-index: 52;'">                    
+            </div>
+            <div id="a2a_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a2a_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a2a_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a2a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a2a_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a2a_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>  
+        </div>
+
+<! Animation 2b -->
+
+        <div id="anim_2b" class="mitte animation">
+            <h1>Jeder Peer hat seine Adressen</h1>
+            <p>
+                Jeder Peer hat eine oder mehrere Adressen, auf die und von diesen weg Transaktionen getätigt werden
+                können. Der Hauptbestandteil dieser Adressen ist ein öffentlicher Schlüssel, mit dem geprüft werden
+                kann, ob eine Transaktion tatsächlich von demjenigen Peer getätigt worden ist, der in dieser
+                Transaktion als Absender angegeben ist.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
+                <button id="a2b_hintergButton" class="animbutton" 
+                style="visibility: hidden;"
+                onclick="document.getElementById('a2b_hinterg1').style='visibility: visible; z-index: 61';">
+                Hintergrundwissen</button>
+                <button id="a2b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('2c'); a2c_inhaltKnotenNeu();">weiter</button>
+                <button id="a2b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('2a');">zurück</button>
+                <img id="a2b_graph_farbig" class="graph" src="img/a2a_graph_farbig.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em;">
+                <div id="a2b_knotenNeuName" class="knoten knotenName" style="position: absolute; left: 10em; top: 30em;">
+                    <br><b><span id="a2b_knotenNeuInhalt"></span></b>
+                    <script>
+                        document.getElementById("a2b_knotenNeuInhalt").innerHTML = a2a_nameKnotenNeu;
+                    </script>
+                </div>
+                <div id="a2b_knotenNeu" class="knoten" style="visibility: hidden;"></div>
+                <div id="a2b_knoten1" class="knoten" style="position: absolute; left: 7.5em; top: 4em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten1 + "</b><br>" + a2b_adressenKnoten[3] + "<br>" + 
+                        a2b_adressenKnoten[4] + "<br>" + a2b_adressenKnoten[5]);
+                    </script>
+                </div>
+                <div id="a2b_knoten2" class="knoten" style="position: absolute; left: 19.5em; top: 1em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten2 + "</b><br>" + a2b_adressenKnoten[6] + "<br>" + 
+                        a2b_adressenKnoten[7] + "<br>" + a2b_adressenKnoten[8]);
+                    </script>
+                </div>
+                <div id="a2b_knoten3" class="knoten" style="position: absolute; left: 31.5em; top: 2.5em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten3 + "</b><br>" + a2b_adressenKnoten[9] + "<br>" + 
+                        a2b_adressenKnoten[10] + "<br>" + a2b_adressenKnoten[11]);
+                    </script>
+                </div>
+                <div id="a2b_knoten4" class="knoten" style="position: absolute; left: 2em; top: 15em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten4 + "</b><br>" + a2b_adressenKnoten[12] + "<br>" + 
+                        a2b_adressenKnoten[13] + "<br>" + a2b_adressenKnoten[14]);
+                    </script>
+                </div>
+                <div id="a2b_knoten5" class="knoten" style="position: absolute; left: 19.5em; top: 13.3em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten5 + "</b><br>" + a2b_adressenKnoten[15] + "<br>" + 
+                        a2b_adressenKnoten[16] + "<br>" + a2b_adressenKnoten[17]);
+                    </script>
+                </div>
+                <div id="a2b_knoten6" class="knoten" style="position: absolute; left: 31em; top: 14em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten6 + "</b><br>" + a2b_adressenKnoten[18] + "<br>" + 
+                        a2b_adressenKnoten[19] + "<br>" + a2b_adressenKnoten[20]);
+                    </script>
+                </div>
+                <div id="a2b_knoten7" class="knoten" style="position: absolute; left: 44.5em; top: 12em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten7 + "</b><br>" + a2b_adressenKnoten[21] + "<br>" + 
+                        a2b_adressenKnoten[22] + "<br>" + a2b_adressenKnoten[23]);
+                    </script>
+                </div>
+                <div id="a2b_knoten8" class="knoten" style="position: absolute; left: 18em; top: 25em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten8 + "</b><br>" + a2b_adressenKnoten[24] + "<br>" + 
+                        a2b_adressenKnoten[25] + "<br>" + a2b_adressenKnoten[26]);
+                    </script>
+                </div>
+                <div id="a2b_knoten9" class="knoten" style="position: absolute; left: 29em; top: 27.5em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten9 + "</b><br>" + a2b_adressenKnoten[27] + "<br>" + 
+                        a2b_adressenKnoten[28] + "<br>" + a2b_adressenKnoten[29]);
+                    </script>
+                </div>
+                <div id="a2b_knoten10" class="knoten" style="position: absolute; left: 40.5em; top: 24em;">
+                    <script type="text/javascript">
+                        document.write("<br><b>" + a2a_nameKnoten10 + "</b><br>" + a2b_adressenKnoten[30] + "<br>" + 
+                        a2b_adressenKnoten[31] + "<br>" + a2b_adressenKnoten[32]);
+                    </script>
+                </div>
+                <button id="a2b_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="document.getElementById('a2b_formular').style=
+                        'position: absolute; right: 2em; top: 5em; visibility: visible';
+                    ">Erstelle ein Wallet</button>
+                <div id="a2b_warnung" class="hinweis">
+                    <p class="hinweistext">
+                        Bitte geben Sie eine ganze Zahl von 1 bis 3 ein.
+                    </p>
+                    <button class="hinweisbutton" onclick="
+                        document.getElementById('a2b_warnung').style='visibility: hidden';
+                    ">OK</button>
+                </div>
+                <div id="a2b_formular" class="formular">
+                    <p><label>Gib die Anzahl deiner Adressen ein: <br>
+                        (eine Zahl von 1 bis 3) </p>
+                        <input id="a2b_inputAnzahlAdressen" maxlength="1"></input></label>
+                    <button id="a2b_formularButton" class="formularbutton" onclick="
+                        var a2b_wert = document.getElementById('a2b_inputAnzahlAdressen').value;
+                        var a2b_eingabe = pruefeEingabe1bis3(a2b_wert);
+                        if (a2b_eingabe) {
+                            if (document.getElementById('a2b_inputAnzahlAdressen').value != '') {
+                                a2b_aendereAnzahlSchluessel(a2b_wert);
+                                document.getElementById('a2b_knotenNeu').innerHTML = '<br> <b>' + a2a_nameKnotenNeu +
+                                '</b> <br>' + a2b_adressenKnoten[0] + '<br>' + a2b_adressenKnoten[1] + '<br>' + 
+                                a2b_adressenKnoten[2];
+                            }
+                            document.getElementById('a2b_formular').style = 'visibility: hidden';
+                            document.getElementById('a2b_infoimg1').style=
+                                'visibility: visible; position: absolute; top: 39.5em; left: 5em';
+                            document.getElementById('a2b_hintergButton').style=
+                                'visibility: visible; position: absolute; top: 44.5em; left: 2em';
+                        }
+                        else {
+                            document.getElementById('a2b_warnung').style = 
+                                'visibility: visible; top: 7em; right: 6em; z-index: 53';
+                        }
+                        document.getElementById('a2b_knotenNeu').style=
+                            'position: absolute; left: 7.5em; top: 28em; visibility: visible;';
+                        document.getElementById('a2b_formular').style='visibility: hidden';
+                        document.getElementById('a2b_privateSchluessel').innerHTML = a2b_schluessel();
+                        document.getElementById('a2b_privateSchluessel').style.visibility = 'visible';
+                        document.getElementById('a2b_pfeil').style.visibility = 'visible';
+                    ">OK</button>
+                </div>
+                <img id="a2b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a2b_info1').style='visibility: visible; z-index: 62;'">    
+                <img id="a2b_pfeil" src="img/pfeil_private_schluessel_gruen.png" alt="Pfeil"
+                    style="position: absolute; left: 16.2em; top: 35.6em; width: 4em; visibility: hidden;">
+                <div id="a2b_privateSchluessel" class="block" style=
+                    "position: absolute; left: 19.7em; top: 38.4em; visibility: hidden;"></div>       
+            </div>
+            <div id="a2b_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a2b_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a2b_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a2b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a2b_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a2b_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>  
+        </div>
+
+<! Animation 2c -->
+
+        <div id="anim_2c" class="mitte animation">
+            <h1>Die Peers sind anonym</h1>
+            <p>
+                In unserer Darstellung haben die einzlenen Peers bisher zum leichteren Verständnis einen Namen
+                bekommen. Das wird nun korrigiert, denn tatsächlich haben die Peers keine Namen. Sie bleiben
+                anonym. Das einzige, wodurch ein Peer identifiziert werden kann, sind seine Adressen.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
+                <button id="a2c_hintergButton" class="animbutton" 
+                style="visibility: hidden;"
+                onclick="document.getElementById('a2c_hinterg1').style='visibility: visible; z-index: 71';">
+                Hintergrundwissen</button>
+                <button id="a2c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('3a');">weiter</button>
+                <button id="a2c_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('2b'); a2b_nameKnotenNeu();">zurück</button>
+                <img id="a2c_graph" class="graph" src="img/graph_fertig.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em;">
+                <div id="a2c_knotenNeu" class="knoten" style="position: absolute; left: 7.5em; top: 28em;"></div>
+                <div id="a2c_knoten1" class="knoten" style="position: absolute; left: 7.5em; top: 4em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten1").innerHTML = "<br><b>" + a2a_nameKnoten1 + "</b><br>" 
+                        + a2b_adressenKnoten[3] + "<br>" + a2b_adressenKnoten[4] + "<br>" + a2b_adressenKnoten[5];
+                    </script>
+                <div id="a2c_knoten2" class="knoten" style="position: absolute; left: 19.5em; top: 1em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten2").innerHTML = "<br><b>" + a2a_nameKnoten2 + "</b><br>"
+                        + a2b_adressenKnoten[6] + "<br>" + a2b_adressenKnoten[7] + "<br>" + a2b_adressenKnoten[8];
+                    </script>
+                <div id="a2c_knoten3" class="knoten" style="position: absolute; left: 31.5em; top: 2.5em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten3").innerHTML = "<br><b>" + a2a_nameKnoten3 + "</b><br>" 
+                        + a2b_adressenKnoten[9] + "<br>" + a2b_adressenKnoten[10] + "<br>" + a2b_adressenKnoten[11];
+                    </script>
+                <div id="a2c_knoten4" class="knoten" style="position: absolute; left: 2em; top: 15em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten4").innerHTML = "<br><b>" + a2a_nameKnoten4 + "</b><br>" 
+                        + a2b_adressenKnoten[12] + "<br>" + a2b_adressenKnoten[13] + "<br>" + a2b_adressenKnoten[14];
+                    </script>
+                <div id="a2c_knoten5" class="knoten" style="position: absolute; left: 19.5em; top: 13.3em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten5").innerHTML = "<br><b>" + a2a_nameKnoten5 + "</b><br>" 
+                        + a2b_adressenKnoten[15] + "<br>" + a2b_adressenKnoten[16] + "<br>" + a2b_adressenKnoten[17];
+                    </script>
+                <div id="a2c_knoten6" class="knoten" style="position: absolute; left: 31em; top: 14em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten6").innerHTML = "<br><b>" + a2a_nameKnoten6 + "</b><br>" 
+                        + a2b_adressenKnoten[18] + "<br>" + a2b_adressenKnoten[19] + "<br>" + a2b_adressenKnoten[20];
+                    </script>
+                <div id="a2c_knoten7" class="knoten" style="position: absolute; left: 44.5em; top: 12em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten7").innerHTML = "<br><b>" + a2a_nameKnoten7 + "</b><br>" 
+                        + a2b_adressenKnoten[21] + "<br>" + a2b_adressenKnoten[22] + "<br>" + a2b_adressenKnoten[23];
+                    </script>
+                <div id="a2c_knoten8" class="knoten" style="position: absolute; left: 18em; top: 25em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten8").innerHTML = "<br><b>" + a2a_nameKnoten8 + "</b><br>" 
+                        + a2b_adressenKnoten[24] + "<br>" + a2b_adressenKnoten[25] + "<br>" + a2b_adressenKnoten[26];
+                    </script>
+                <div id="a2c_knoten9" class="knoten" style="position: absolute; left: 29em; top: 27.5em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten9").innerHTML = "<br><b>" + a2a_nameKnoten9 + "</b><br>" 
+                        + a2b_adressenKnoten[27] + "<br>" + a2b_adressenKnoten[28] + "<br>" + a2b_adressenKnoten[29];
+                    </script>
+                <div id="a2c_knoten10" class="knoten" style="position: absolute; left: 40.5em; top: 24em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a2c_knoten10").innerHTML = "<br><b>" + a2a_nameKnoten10 + "</b><br>" 
+                        + a2b_adressenKnoten[30] + "<br>" + a2b_adressenKnoten[31] + "<br>" + a2b_adressenKnoten[32];
+                    </script>
+                <button id="a2c_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="a2c_verschwindendeNamen();">Starte Animation</button>
+                
+                
+                <img id="a2c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a2b_info1').style='visibility: visible; z-index: 72;'">    
+                <img id="a2c_pfeil" src="img/pfeil_private_schluessel_schwarz.png" alt="Pfeil"
+                    style="position: absolute; left: 16.2em; top: 35.6em; width: 4em;">
+                <div id="a2c_privateSchluessel" class="block" style=
+                    "position: absolute; left: 19.7em; top: 38.4em;"></div>       
+            </div>
+            <div id="a2c_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a2c_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a2c_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a2c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a2c_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a2c_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>  
         </div>
 
     </body>

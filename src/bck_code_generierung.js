@@ -238,3 +238,81 @@ async function a1d_bewegteBloecke() {
         }
     }    
 }
+
+function a2b_nameKnotenNeu() {
+    document.getElementById("a2b_knotenNeuInhalt").innerHTML = a2a_nameKnotenNeu;
+    document.getElementById('a2b_knotenNeu').innerHTML = '<br> <b>' + a2a_nameKnotenNeu + '</b> <br>' + 
+        a2b_adressenKnoten[0] + '<br>' + a2b_adressenKnoten[1] + '<br>' + a2b_adressenKnoten[2];
+}
+
+function a2b_aendereAnzahlSchluessel(zahl) {
+    a2b_adressenKnoten[1] = "K2: " + getAdresse(1);
+    a2b_adressenKnoten[2] = "K3: " + getAdresse(2);
+    a2b_privateSchluessel[1] = "K2<sub>priv</sub>: d=" + adressenAuswahl[indizesFuerAdressen[1]].d;
+    a2b_privateSchluessel[2] = "K3<sub>priv</sub>: d=" + adressenAuswahl[indizesFuerAdressen[2]].d;
+    if (zahl == 1) {
+        a2b_adressenKnoten[1] = "";
+        a2b_adressenKnoten[2] = "";
+        a2b_privateSchluessel[1] = "";
+        a2b_privateSchluessel[2] = "";
+    } else if (zahl == 2) {
+        a2b_adressenKnoten[2] = "";
+        a2b_privateSchluessel[2] = "";
+    }
+}
+
+function a2b_schluessel() {
+    var htmlcode = "Private Schluessel: <br>" + a2b_privateSchluessel[0];
+    if (a2b_privateSchluessel[1] != "") {
+        htmlcode += "<br>" + a2b_privateSchluessel[1];
+    }
+    if (a2b_privateSchluessel[2] != "") {
+        htmlcode += "<br>" + a2b_privateSchluessel[2];
+    }
+    return htmlcode; 
+}
+
+function a2c_inhaltKnotenNeu() {
+    document.getElementById('a2c_privateSchluessel').innerHTML = a2b_schluessel();
+    document.getElementById('a2c_knotenNeu').innerHTML = '<br> <b>' + a2a_nameKnotenNeu + '</b> <br>' + 
+        a2b_adressenKnoten[0] + '<br>' + a2b_adressenKnoten[1] + '<br>' + a2b_adressenKnoten[2];
+}
+
+async function a2c_verschwindendeNamen() {
+    document.getElementById('a2c_knotenNeu').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[0] + '<br>' + a2b_adressenKnoten[1] + '<br>' + a2b_adressenKnoten[2];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten1').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[3] + '<br>' + a2b_adressenKnoten[4] + '<br>' + a2b_adressenKnoten[5];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten2').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[6] + '<br>' + a2b_adressenKnoten[7] + '<br>' + a2b_adressenKnoten[8];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten3').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[9] + '<br>' + a2b_adressenKnoten[10] + '<br>' + a2b_adressenKnoten[11];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten4').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[12] + '<br>' + a2b_adressenKnoten[13] + '<br>' + a2b_adressenKnoten[14];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten5').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[15] + '<br>' + a2b_adressenKnoten[16] + '<br>' + a2b_adressenKnoten[17];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten6').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[18] + '<br>' + a2b_adressenKnoten[19] + '<br>' + a2b_adressenKnoten[20];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten7').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[21] + '<br>' + a2b_adressenKnoten[22] + '<br>' + a2b_adressenKnoten[23];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten8').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[24] + '<br>' + a2b_adressenKnoten[25] + '<br>' + a2b_adressenKnoten[26];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten9').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[27] + '<br>' + a2b_adressenKnoten[28] + '<br>' + a2b_adressenKnoten[29];
+    await verzoegerung(500);
+    document.getElementById('a2c_knoten10').innerHTML = '<br> <br>' + 
+        a2b_adressenKnoten[30] + '<br>' + a2b_adressenKnoten[31] + '<br>' + a2b_adressenKnoten[32];
+    await verzoegerung(500);
+    document.getElementById('a2c_infoimg1').style = 'visibility: visible; position: absolute; top: 39.5em; left: 5em';
+    document.getElementById('a2c_hintergButton').style = 
+        'visibility: visible; position: absolute; top: 44.5em; left: 2em';
+}

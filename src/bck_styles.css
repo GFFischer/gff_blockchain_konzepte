@@ -37,6 +37,7 @@ div.logo {
 div.mitte {
     grid-area: hauptbereich;
     position: relative;
+    overflow: visible;
 }
 
 div.randr {
@@ -134,7 +135,7 @@ nav li.submenuEintrag:active {
 
 @media screen and (width <= 1440px) {
     body {
-        grid-template-columns: 0.5fr 2fr 9fr 0.5fr
+        grid-template-columns: 0fr 2fr 10fr 0fr
     }
 }
 
@@ -191,7 +192,8 @@ h1, h2 {
 }
 
 p {
-    margin: 1em 2em;
+    margin: 1em;
+    padding: 0em 1em;
 }
 
 .animation {
@@ -405,7 +407,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .graph {
-    width: 44em;
+    width: 42em;
 }
 
 .knoten {
@@ -425,13 +427,13 @@ input:focus, select:focus, textarea:focus {
 }
 
 .knotenName {
-    height: 7em;
-    width: 7em;
+    height: 5em;
+    width: 5em;
 }
 
-#a2a_knotenNeu {
-    color: var(--gruenspan);
-    border-color: var(--gruenspan);
+#a2a_knotenNeu, #a2b_knotenNeuName, #a2b_knotenNeu, #a2b_privateSchluessel {
+    color: var(--kressegruen);
+    border-color: var(--kressegruen);
 }
 
 .tabelle {
