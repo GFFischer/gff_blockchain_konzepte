@@ -486,6 +486,9 @@ Konkret handelt es sich um folgende Funktionen:
   Neu generiert wird der Name des in Animation 2a neu hinzugefügten Knotens (Variable *a2a_nameKnotenNeu*), die dem neuen
   Knoten zugewiesenen Adressen sowie das Feld mit den privaten Schlüsseln (Funktion *a2b_schluessel()*), abhängig von der in
   Animation 2b eingegebenen Anzahl an Adressen (Array *a2b_adressenKnoten*).
+* **a2c_verschwindendeNamen**() <br>
+  Diese Funktion wird beim Klicken auf den Button "Starte Animation" in Animation 2c. Sie bewirkt, dass in den einzelnen Knoten
+  die Namen ausgeblendet werden und lediglich die Adressen übrig bleiben.
 * **a3a_tabelleAdressenKnotenNeu**() <br>
   Neu generiert wird die Tabelle mit den Adressen des neuen Knotens und jeweils dem dazugehörenden privaten Schlüssel, abhängig
   von der in Animation 2b eingegebenen Anzahl von Adressen (Array *a2b_adressenKnoten*).
