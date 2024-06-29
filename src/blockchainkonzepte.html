@@ -70,7 +70,8 @@
                     <li id="a3a_menu" class="submenuEintrag" onclick="oeffneAnimation('3a'); 
                         a3a_tabelleAdressenKnotenNeu(); a3a_eingabeGuthaben();
                         ">Den Adressen ein Guthaben zuweisen</li>
-                    <li id="a3b_menu" class="submenuEintrag" onclick="oeffneAnimation('3b')
+                    <li id="a3b_menu" class="submenuEintrag" onclick="oeffneAnimation('3b');
+                        a3b_tabelleAdressenKnotenNeuMitGuthaben();
                         ">Eine neue Transaktion erstellen</li>
                     <li id="a3c_menu" class="submenuEintrag" onclick="oeffneAnimation('3c')
                         ">Eine Transaktion digital signieren</li>
@@ -1212,7 +1213,7 @@
                     onclick="document.getElementById('a3a_hinterg1').style='visibility: visible; z-index: 81';">
                     Hintergrundwissen</button>
                 <button id="a3a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('3b')">weiter</button>
+                    onclick="oeffneAnimation('3b'); a3b_tabelleAdressenKnotenNeuMitGuthaben();">weiter</button>
                 <button id="a3a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('2c'); a2c_inhaltKnotenNeu()">zurück</button>
                 <div id="a3a_tabelleEigeneAdressen" style="position: absolute; top: 4em; left: 4em;"></div>
@@ -1221,7 +1222,7 @@
                 </script>
                 <button id="a3a_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
                     onclick="document.getElementById('a3a_formular').style=
-                        'position: absolute; right: 2em; top: 5em; visibility: visible';
+                        'position: absolute; right: 2em; top: 5em; visibility: visible; width: 16em;';
                     ">Lege Kontostand fest</button>
                 <div id="a3a_warnung" class="hinweis">
                     <p class="hinweistext">
@@ -1251,6 +1252,190 @@
                 </script> <br>
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a3a_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>    
+        </div>
+
+<! Animation 3b -->
+
+        <div id="anim_3b" class="mitte animation">
+            <h1>Von jeder Adresse kann eine Transaktion gestartet werden</h1>
+            <p>
+                Wenn ein Peer einen Teil seiner SiCs an eine andere Adresse überweisen will, muss er angeben,
+                von welcher Adresse der Betrag weggehen soll, an welche Empfänger-Adresse er den Betrag überweisen
+                will und wie hoch der Betrag ist. Automatisch hinzugefügt werden ein Zeitstempel, eine Gebühr und 
+                ein Hashwert, der auf alle Daten der Transaktion berechnet wird.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="height: 50em;"></div>
+                <button id="a3b_hintergButton" class="animbutton" 
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a3b_hinterg1').style='visibility: visible; z-index: 91';">
+                    Hintergrundwissen</button>
+                <button id="a3b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('3c')">weiter</button>
+                <button id="a3b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('3a'); a3a_tabelleAdressenKnotenNeu(); a3a_eingabeGuthaben();
+                    ">zurück</button>
+                <div id="a3b_tabelleFremdeAdressen" style="position: absolute; top: 4em; left: 3em;">
+                    <table id="a3b_fremdeAdressen"></table>
+                    <script type="text/javascript">
+                        a3b_tabelleAdressenFremdeKnoten();   
+                    </script>
+                </div>
+                <div id="a3b_tabelleEigeneAdressen" style="position: absolute; top: 4em; left: 23em;"></div>
+                <script>
+                    a3b_tabelleAdressenKnotenNeuMitGuthaben();
+                </script>
+                <div id="a3b_tabelleTransaktion" style="visibility: hidden;">
+                    <table class="tabelle tabTransaktion" style="position: absolute; top: 14em; left: 27em;">
+                        <tr>
+                            <th class="tabFeldTitel">Transaktionsdaten</th>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Auftraggeber-Adresse: <br>
+                                <span id="a3b_auftraggeber"></span>
+                                <script>
+                                    document.getElementById("a3b_auftraggeber").innerHTML = a3b_senderTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Empfänger-Adresse: <br>
+                                <span id="a3b_empfaenger"></span>
+                                <script>
+                                    document.getElementById("a3b_empfaenger").innerHTML = a3b_empfaengerTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zu überweisender Betrag: <br>
+                                <span id="a3b_betrag"></span>
+                                <script>
+                                    document.getElementById("a3b_betrag").innerHTML = a3b_betragTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Transaktionsgebühr: <br>
+                                <span id="a3b_gebuehr"></span>
+                                <script>
+                                    document.getElementById("a3b_gebuehr").innerHTML = a3b_gebuehrTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zeitstempel: <br>
+                                <span id="a3b_zeitstempel"></span>
+                                <script>
+                                    document.getElementById("a3b_zeitstempel").innerHTML = a3b_zeitTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Hashwert Transaktion: <br>
+                                <span id="a3b_hashwert" class="hash"></span>
+                                <script>
+                                    document.getElementById("a3b_hashwert").innerHTML = a3b_hashTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+                <button id="a3b_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="document.getElementById('a3b_formular1').style=
+                        'position: absolute; right: 2em; top: 5em; visibility: visible';
+                    ">Erstelle eine Transaktion</button>
+                <div id="a3b_warnung" class="hinweis">
+                    <p class="hinweistext">
+                        Bitte geben Sie eine ganze Zahl ein.
+                    </p>
+                    <button class="hinweisbutton" onclick="
+                        document.getElementById('a3b_warnung').style='visibility: hidden';
+                    ">OK</button>
+                </div>
+                <div id="a3b_formular1" class="formular">
+                    <p><label>Wähle eine Auftraggeber-Adresse aus: </p>
+                        <select id="a3b_eingabeAuftraggeber"></select></label>
+                    <script>
+                        document.getElementById("a3b_eingabeAuftraggeber").innerHTML = a3b_auswahllisteAuftraggeber();
+                    </script>
+                    <p><label>Gib einen Betrag ein: </p>
+                        <input id="a3b_eingabeBetrag" size="5" type="text"></label> SiC
+                    <p>Gib eine Empfänger-Adresse ein: </p>
+                    <p><label>e: <input id="a3b_eingabeE" size="3" maxlength="2" type="text"></label>
+                    <label>n: <input id="a3b_eingabeN" size="4" maxlength="4" type="text"></label></p>
+                    <button id="a3b_formularButton1" class="formularbutton" onclick="
+                        a3b_senderTransaktion = 
+                            a2b_adressenKnoten[document.getElementById('a3b_eingabeAuftraggeber').value];
+                        document.getElementById('a3b_auftraggeber').innerHTML = a3b_senderTransaktion;  
+                        a3b_empfaengerTransaktion = 'e=' + document.getElementById('a3b_eingabeE').value + ', n=' +
+                            document.getElementById('a3b_eingabeN').value;
+                        a3b_betragTransaktion = document.getElementById('a3b_eingabeBetrag').value;
+                        document.getElementById('a3b_betrag').innerHTML = a3b_betragTransaktion + ' SiC';
+                        a3b_gebuehrTransaktion = a3b_errechneTransaktionsgebuehr(a3b_betragTransaktion);
+                        document.getElementById('a3b_gebuehr').innerHTML = a3b_gebuehrTransaktion + ' SiC';
+                        if (a3b_pruefeEingabeAdresseEmpfaenger(a3b_empfaengerTransaktion) < 0) {
+                            document.getElementById('a3b_hashwert').innerHTML = 'inkorrekte Eingabe';
+                        } else {
+                            document.getElementById('a3b_hashwert').innerHTML = a3b_hashTransaktion;   
+                        }
+                        document.getElementById('a3b_empfaenger').innerHTML = a3b_empfaengerTransaktion;
+                        a3b_zeitTransaktion = zeitstempel();
+                        document.getElementById('a3b_zeitstempel').innerHTML = a3b_zeitTransaktion;
+                        a3b_hashTransaktion = berechneHash(a3b_stringTransaktion());
+                        document.getElementById('a3b_gebuehrFormular').innerHTML = a3b_gebuehrTransaktion;
+                        document.getElementById('a3b_zeitstempelFormular').innerHTML = a3b_zeitTransaktion;
+                        document.getElementById('a3b_hashwertFormular').innerHTML = a3b_hashTransaktion;
+                        document.getElementById('a3b_formular2').style=
+                            'position: absolute; right: 2em; top: 22em; visibility: visible;';
+                    ">Transaktion bestätigen</button>
+                </div>
+                <div id="a3b_formular2" class="formular">
+                    <p>Transaktionsgebühr:</p>
+                    <input id="a3b_gebuehrFormular" readonly> SiC
+                    <p>Zeitstempel:</p>
+                    <input id="a3b_zeitstempelFormular" readonly>
+                    <p>Hashwert:</p>
+                    <input id="a3b_hashwertFormular" readonly>
+                    <button id="a3b_formularButton2" class="formularbutton" onclick="
+                        document.getElementById('a3b_formular1').style='visibility: hidden';
+                        document.getElementById('a3b_formular2').style='visibility: hidden';
+                        document.getElementById('a3b_tabelleTransaktion').style='visibility: visible';
+                        a3a_guthabenAdressen[a3b_pruefeEingabeAdresseEmpfaenger(a3b_empfaengerTransaktion)] += 
+                            a3b_betragTransaktion - a3b_gebuehrTransaktion;
+                        a3b_tabelleAdressenFremdeKnoten();
+                        var fremdbetrag = 'fremdbetrag' + a3b_pruefeEingabeAdresseEmpfaenger(a3b_empfaengerTransaktion);
+                        document.getElementById(fremdbetrag).classList.add('tabHervorgehoben');
+                        a3a_guthabenAdressen[document.getElementById('a3b_eingabeAuftraggeber').value] -=
+                            a3b_betragTransaktion;
+                        a3b_tabelleAdressenKnotenNeuMitGuthaben();
+                        var guthaben = 'guthaben' + document.getElementById('a3b_eingabeAuftraggeber').value;
+                        document.getElementById(guthaben).classList.add('tabHervorgehoben');
+                    ">OK</button>
+                </div>
+
+                <img id="a3b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a3b_info1').style='visibility: visible; z-index: 92;'">                    
+            </div>
+            <div id="a3b_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a3b_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a3b_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a3b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a3b_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a3b_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>    
         </div>
 

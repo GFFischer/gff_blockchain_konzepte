@@ -323,7 +323,7 @@ function a3a_tabelleAdressenKnotenNeu() {
     for (var i = 0; i < 3; i++) {
         if (a2b_privateSchluessel[i] != "") {
             htmlCode += "<tr><td class='tabFeld'>" + getAdresse(i) + "</td><td class='tabFeld'>" 
-                + a2b_privateSchluessel[i].substr(19,6) + "</td><td class='tabFeld' id='guthaben" + i +"'></td></tr>";
+                + a2b_privateSchluessel[i].substr(19,6) + "</td><td class='tabFeld' id='guth" + i +"'></td></tr>";
         } 
     }
     htmlCode += "</table>";
@@ -334,8 +334,8 @@ function a3a_eingabeGuthaben() {
     var htmlCode = "<p> Gib die Kontostände für deine Adressen ein: <br> (0 bis 999 SiC) </p>";
     for (var i = 0; i < 3; i++) {
         if (a2b_privateSchluessel[i] != "") {
-            htmlCode += "<p><label>Adresse " + (i + 1) + ":</p><input id='kontostand" + (i + 1) + "' \
-            type='text' maxlength='3'></label> SiC"
+            htmlCode += "<p><label>Adresse " + (i + 1) + ":&nbsp&nbsp&nbsp<input id='kontostand" + (i + 1) + "' \
+            type='text' maxlength='3' style='width: 3em'></label>&nbsp SiC</p>"
         }
     }
     if (a2b_privateSchluessel[1] == "") {
@@ -343,7 +343,7 @@ function a3a_eingabeGuthaben() {
             var wert1 = document.getElementById(`kontostand1`).value;\
             if (pruefeEingabeZahl(wert1)) {\
                 a3a_guthabenAdressen[0] = wert1;\
-                document.getElementById(`guthaben0`).innerHTML = wert1 + ` SiC`;\
+                document.getElementById(`guth0`).innerHTML = wert1 + ` SiC`;\
                 document.getElementById(`a3a_formular`).style=`visibility: hidden`;\
                 document.getElementById(`a3a_infoimg1`).style=\
                     `visibility: visible; position: absolute; top: 14em; left: 13em`;\
@@ -358,12 +358,12 @@ function a3a_eingabeGuthaben() {
             var wert2 = document.getElementById(`kontostand2`).value;\
             if (pruefeEingabeZahl(wert1)) {\
                 a3a_guthabenAdressen[0] = wert1;\
-                document.getElementById(`guthaben0`).innerHTML = wert1 + ` SiC`;\
+                document.getElementById(`guth0`).innerHTML = wert1 + ` SiC`;\
             } else {\
                 document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
             if (pruefeEingabeZahl(wert2)) {\
                 a3a_guthabenAdressen[1] = wert2;\
-                document.getElementById(`guthaben1`).innerHTML = wert2 + ` SiC`;\
+                document.getElementById(`guth1`).innerHTML = wert2 + ` SiC`;\
             } else {\
                 document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
             if (pruefeEingabeZahl(wert1) && pruefeEingabeZahl(wert2)) {\
@@ -380,17 +380,17 @@ function a3a_eingabeGuthaben() {
             var wert3 = document.getElementById(`kontostand3`).value;\
             if (pruefeEingabeZahl(wert1)) {\
                 a3a_guthabenAdressen[0] = wert1;\
-                document.getElementById(`guthaben0`).innerHTML = wert1 + ` SiC`;\
+                document.getElementById(`guth0`).innerHTML = wert1 + ` SiC`;\
             } else {\
                 document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
             if (pruefeEingabeZahl(wert2)) {\
                 a3a_guthabenAdressen[1] = wert2;\
-                document.getElementById(`guthaben1`).innerHTML = wert2 + ` SiC`;\
+                document.getElementById(`guth1`).innerHTML = wert2 + ` SiC`;\
             } else {\
                 document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
             if (pruefeEingabeZahl(wert3)) {\
                 a3a_guthabenAdressen[2] = wert3;\
-                document.getElementById(`guthaben2`).innerHTML = wert3 + ` SiC`;\
+                document.getElementById(`guth2`).innerHTML = wert3 + ` SiC`;\
             } else {\
                 document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
             if (pruefeEingabeZahl(wert1) && pruefeEingabeZahl(wert2) && pruefeEingabeZahl(wert3)) {\
@@ -402,4 +402,50 @@ function a3a_eingabeGuthaben() {
             }'>OK</button>";
     }
     document.getElementById("a3a_formular").innerHTML = htmlCode;
+}
+
+function a3b_tabelleAdressenKnotenNeuMitGuthaben() {
+    var htmlCode = "<table class='tabelle tabEigeneAdressen'><tr><th class='tabFeldTitel'>Eigene Adressen</th>\
+    <th class='tabFeldTitel'>Key privat</th><th class='tabFeldTitel'>Kontostand</th></tr>";
+    for (var i = 0; i < 3; i++) {
+        if (a2b_privateSchluessel[i] != "") {
+            htmlCode += "<tr><td class='tabFeld'>" + getAdresse(i) + "</td><td class='tabFeld'>" 
+                + a2b_privateSchluessel[i].substr(19,6) + "</td><td class='tabFeld' id='guthaben" + i +"'>"
+                + a3a_guthabenAdressen[i] + " SiC</td></tr>";
+        } 
+    }
+    htmlCode += "</table>";
+    document.getElementById("a3b_tabelleEigeneAdressen").innerHTML = htmlCode;
+}
+
+function a3b_tabelleAdressenFremdeKnoten() {
+    var htmlCode = "<table class='tabelle tabFremdeAdressen'><tr><th class='tabFeldTitel'>Fremde Adressen</th>\
+    <th class='tabFeldTitel'>Kontostand</th></tr>" 
+    for (var i = 3; i < a3a_guthabenAdressen.length; i++) {
+        if (a2b_adressenKnoten[i] != "") {
+            htmlCode += "<tr><td class='tabFeld'>" + getAdresse(i) 
+            + "</td><td class='tabFeld' id='fremdbetrag" + i + "'>" + a3a_guthabenAdressen[i] + " SiC</td></tr>";
+        } 
+    }
+    htmlCode += "</table>";
+    document.getElementById("a3b_tabelleFremdeAdressen").innerHTML = htmlCode;
+}
+
+function a3b_auswahllisteAuftraggeber() {
+    var htmlCode = "";
+    for (var i = 0; i < 3; i++) {
+        if (a2b_privateSchluessel[i] != "") {
+            htmlCode += "<option value='" + i + "'>" + a2b_adressenKnoten[i] + "</option>"
+        }
+    }
+    return htmlCode
+}
+
+function a3b_pruefeEingabeAdresseEmpfaenger(adresse) {
+    for (var i = 0; i < a2b_adressenKnoten.length; i++) {
+        if (a2b_adressenKnoten[i] != "" && adresse === a2b_adressenKnoten[i].substr(4)) {
+            return i;
+        }
+    }
+    return -1
 }

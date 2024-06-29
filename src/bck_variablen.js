@@ -323,3 +323,21 @@ var a3b_senderTransaktion = a2b_adressenKnoten[0];
 var a3c_idxAdresseSender = 0;
 var a3b_empfaengerTransaktion = getAdresse(3);
 var a3b_betragTransaktion = 100;
+
+function a3b_errechneTransaktionsgebuehr(betrag) {
+    var gebuehr = (3 * betrag - ((3 * betrag) % 100)) / 100;
+    if (gebuehr < 3) {
+        return 3;
+    }
+    return gebuehr;
+}
+
+var a3b_gebuehrTransaktion = a3b_errechneTransaktionsgebuehr(a3b_betragTransaktion);
+var a3b_zeitTransaktion = zeitstempel();
+
+function a3b_stringTransaktion() {
+    return a3b_senderTransaktion + a3b_empfaengerTransaktion + a3b_betragTransaktion + a3b_gebuehrTransaktion 
+    + a3b_zeitTransaktion;
+}
+
+var a3b_hashTransaktion = berechneHash(a3b_stringTransaktion());
