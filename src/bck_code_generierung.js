@@ -316,3 +316,90 @@ async function a2c_verschwindendeNamen() {
     document.getElementById('a2c_hintergButton').style = 
         'visibility: visible; position: absolute; top: 44.5em; left: 2em';
 }
+
+function a3a_tabelleAdressenKnotenNeu() {
+    var htmlCode = "<table class='tabelle tabEigeneAdressen'><tr><th class='tabFeldTitel'>Eigene Adressen</th>\
+    <th class='tabFeldTitel'>Key privat</th><th class='tabFeldTitel'>Kontostand</th></tr>";
+    for (var i = 0; i < 3; i++) {
+        if (a2b_privateSchluessel[i] != "") {
+            htmlCode += "<tr><td class='tabFeld'>" + getAdresse(i) + "</td><td class='tabFeld'>" 
+                + a2b_privateSchluessel[i].substr(19,6) + "</td><td class='tabFeld' id='guthaben" + i +"'></td></tr>";
+        } 
+    }
+    htmlCode += "</table>";
+    document.getElementById("a3a_tabelleEigeneAdressen").innerHTML = htmlCode;
+}
+
+function a3a_eingabeGuthaben() {
+    var htmlCode = "<p> Gib die Kontostände für deine Adressen ein: <br> (0 bis 999 SiC) </p>";
+    for (var i = 0; i < 3; i++) {
+        if (a2b_privateSchluessel[i] != "") {
+            htmlCode += "<p><label>Adresse " + (i + 1) + ":</p><input id='kontostand" + (i + 1) + "' \
+            type='text' maxlength='3'></label> SiC"
+        }
+    }
+    if (a2b_privateSchluessel[1] == "") {
+        htmlCode += "<button id='a3a_formularButton' class='formularbutton' onclick='\
+            var wert1 = document.getElementById(`kontostand1`).value;\
+            if (pruefeEingabeZahl(wert1)) {\
+                a3a_guthabenAdressen[0] = wert1;\
+                document.getElementById(`guthaben0`).innerHTML = wert1 + ` SiC`;\
+                document.getElementById(`a3a_formular`).style=`visibility: hidden`;\
+                document.getElementById(`a3a_infoimg1`).style=\
+                    `visibility: visible; position: absolute; top: 14em; left: 13em`;\
+                document.getElementById(`a3a_hintergButton`).style=\
+                    `visibility: visible; position: absolute; top: 26.5em; left: 2em`;\
+            } else {\
+                document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;\
+            }'>OK</button>";
+    } else if (a2b_privateSchluessel[2] == "") {
+        htmlCode += "<button id='a3a_formularButton' class='formularbutton' onclick='\
+            var wert1 = document.getElementById(`kontostand1`).value;\
+            var wert2 = document.getElementById(`kontostand2`).value;\
+            if (pruefeEingabeZahl(wert1)) {\
+                a3a_guthabenAdressen[0] = wert1;\
+                document.getElementById(`guthaben0`).innerHTML = wert1 + ` SiC`;\
+            } else {\
+                document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
+            if (pruefeEingabeZahl(wert2)) {\
+                a3a_guthabenAdressen[1] = wert2;\
+                document.getElementById(`guthaben1`).innerHTML = wert2 + ` SiC`;\
+            } else {\
+                document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
+            if (pruefeEingabeZahl(wert1) && pruefeEingabeZahl(wert2)) {\
+                document.getElementById(`a3a_formular`).style=`visibility: hidden`;\
+                 document.getElementById(`a3a_infoimg1`).style=\
+                    `visibility: visible; position: absolute; top: 14em; left: 13em`;\
+                document.getElementById(`a3a_hintergButton`).style=\
+                    `visibility: visible; position: absolute; top: 26.5em; left: 2em`;\
+            }'>OK</button>";
+    } else {
+        htmlCode += "<button id='a3a_formularbutton' class='formularbutton' onclick='\
+            var wert1 = document.getElementById(`kontostand1`).value;\
+            var wert2 = document.getElementById(`kontostand2`).value;\
+            var wert3 = document.getElementById(`kontostand3`).value;\
+            if (pruefeEingabeZahl(wert1)) {\
+                a3a_guthabenAdressen[0] = wert1;\
+                document.getElementById(`guthaben0`).innerHTML = wert1 + ` SiC`;\
+            } else {\
+                document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
+            if (pruefeEingabeZahl(wert2)) {\
+                a3a_guthabenAdressen[1] = wert2;\
+                document.getElementById(`guthaben1`).innerHTML = wert2 + ` SiC`;\
+            } else {\
+                document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
+            if (pruefeEingabeZahl(wert3)) {\
+                a3a_guthabenAdressen[2] = wert3;\
+                document.getElementById(`guthaben2`).innerHTML = wert3 + ` SiC`;\
+            } else {\
+                document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
+            if (pruefeEingabeZahl(wert1) && pruefeEingabeZahl(wert2) && pruefeEingabeZahl(wert3)) {\
+                document.getElementById(`a3a_formular`).style=`visibility: hidden`;\
+                 document.getElementById(`a3a_infoimg1`).style=\
+                    `visibility: visible; position: absolute; top: 14em; left: 13em`;\
+                document.getElementById(`a3a_hintergButton`).style=\
+                    `visibility: visible; position: absolute; top: 26.5em; left: 2em`;\
+            }'>OK</button>";
+    }
+    document.getElementById("a3a_formular").innerHTML = htmlCode;
+}

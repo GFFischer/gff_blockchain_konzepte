@@ -369,7 +369,7 @@ input, select, textarea {
     background-color: var(--creme);
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus, select:focus, textarea:focus, button:focus {
     outline: 0.15em solid var(--tarngruen);
 }
 
@@ -448,11 +448,15 @@ input:focus, select:focus, textarea:focus {
 
 .tabFeld {
     text-align: center;
+    border-bottom: solid;
+    border-width: thin;
 }
 
 .tabFeldTitel {
     text-align: center;
     padding: 0.5em;
+    border-bottom: solid;
+    border-width: thin;
 }
 
 .tabHervorgehoben {

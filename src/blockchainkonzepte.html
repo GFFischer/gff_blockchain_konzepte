@@ -67,7 +67,8 @@
                 <ul id="anim3_menu" class="submenu" 
                     onclick="document.getElementById('navmenu').classList.remove('sichtbar');
                         document.getElementById('navmenu').classList.add('unsichtbar');">
-                    <li id="a3a_menu" class="submenuEintrag" onclick="oeffneAnimation('3a')
+                    <li id="a3a_menu" class="submenuEintrag" onclick="oeffneAnimation('3a'); 
+                        a3a_tabelleAdressenKnotenNeu(); a3a_eingabeGuthaben();
                         ">Den Adressen ein Guthaben zuweisen</li>
                     <li id="a3b_menu" class="submenuEintrag" onclick="oeffneAnimation('3b')
                         ">Eine neue Transaktion erstellen</li>
@@ -1109,7 +1110,8 @@
                 onclick="document.getElementById('a2c_hinterg1').style='visibility: visible; z-index: 71';">
                 Hintergrundwissen</button>
                 <button id="a2c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('3a');">weiter</button>
+                    onclick="oeffneAnimation('3a'); a3a_tabelleAdressenKnotenNeu(); a3a_eingabeGuthaben();"
+                    >weiter</button>
                 <button id="a2c_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('2b'); a2b_nameKnotenNeu();">zurück</button>
                 <img id="a2c_graph" class="graph" src="img/graph_fertig.png" alt="Peer-to-Peer-System"
@@ -1190,6 +1192,66 @@
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a2c_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>  
+        </div>
+        
+<! Animation 3a -->
+
+        <div id="anim_3a" class="mitte animation">
+            <h1>Jede Adresse verfügt über ein Guthaben</h1>
+            <p>
+                Der vorrangige Sinn einer Blockchain ist es, Werte von einer Adresse zu einer anderen Adresse zu
+                verschieben, also "Transaktionen" zu tätigen. Das geschieht in einer eigenen Währung, die wir für 
+                unsere Simulation einer Blockchain SiC ("Simulationscoins") nennen wollen. Die Summe aller SiCs, 
+                die an eine Adresse überwiesen und von dieser Adresse noch nicht wieder woandershin weiter
+                überwiesen wurden, ist das Guthaben dieser Adresse.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund"></div>
+                <button id="a3a_hintergButton" class="animbutton" 
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a3a_hinterg1').style='visibility: visible; z-index: 81';">
+                    Hintergrundwissen</button>
+                <button id="a3a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('3b')">weiter</button>
+                <button id="a3a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('2c'); a2c_inhaltKnotenNeu()">zurück</button>
+                <div id="a3a_tabelleEigeneAdressen" style="position: absolute; top: 4em; left: 4em;"></div>
+                <script>
+                    a3a_tabelleAdressenKnotenNeu();
+                </script>
+                <button id="a3a_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="document.getElementById('a3a_formular').style=
+                        'position: absolute; right: 2em; top: 5em; visibility: visible';
+                    ">Lege Kontostand fest</button>
+                <div id="a3a_warnung" class="hinweis">
+                    <p class="hinweistext">
+                        Bitte geben Sie eine ganze Zahl von 0 bis 999 ein.
+                    </p>
+                    <button class="hinweisbutton" onclick="
+                        document.getElementById('a3a_warnung').style='visibility: hidden';
+                    ">OK</button>
+                </div>
+                <div id="a3a_formular" class="formular"></div>
+                <script>
+                    a3a_eingabeGuthaben();
+                </script>
+                <img id="a3a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a3a_info1').style='visibility: visible; z-index: 82;'">                    
+            </div>
+            <div id="a3a_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a3a_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a3a_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a3a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a3a_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a3a_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>    
         </div>
 
     </body>

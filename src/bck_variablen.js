@@ -311,3 +311,15 @@ var a2b_privateSchluessel = new Array();
 a2b_privateSchluessel[0] = "K1<sub>priv</sub>: d=" + adressenAuswahl[indizesFuerAdressen[0]].d;
 a2b_privateSchluessel[1] = "K2<sub>priv</sub>: d=" + adressenAuswahl[indizesFuerAdressen[1]].d;
 a2b_privateSchluessel[2] = "K3<sub>priv</sub>: d=" + adressenAuswahl[indizesFuerAdressen[2]].d;
+
+/* Animation 3 */
+
+var a3a_guthabenAdressen = new Array();
+for (var k = 0; k < 33; k++) {
+    a3a_guthabenAdressen[k] = Math.floor(Math.random() * 1000);
+}
+
+var a3b_senderTransaktion = a2b_adressenKnoten[0];
+var a3c_idxAdresseSender = 0;
+var a3b_empfaengerTransaktion = getAdresse(3);
+var a3b_betragTransaktion = 100;

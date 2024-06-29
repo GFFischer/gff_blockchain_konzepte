@@ -14,6 +14,14 @@ var a2b_hinterg1 = "Hintergrundtext 2b";
 var a2c_info1 = "Infotext 2a";
 var a2c_hinterg1 = "Hintergrundtext 2c";
 
+var a3a_info1 = "Infotext 3a";
+var a3a_hinterg1 = "Hintergrundtext 3a";
+var a3b_info1 = "Infotext 3b";
+var a3b_hinterg1 = "Hintergrundtext 3b";
+var a3c_info1 = "Infotext 3c";
+var a3c_hinterg1 = "Hintergrundtext 3c";
+var a3d_info1 = "Infotext 3d";
+var a3d_hinterg1 = "Hintergrundtext 3d";
 
 
 var copyright_hashes = "Berechnet unter Verwendung der JavaScript Implementation von üblichen Hashfunktionen, zur \
