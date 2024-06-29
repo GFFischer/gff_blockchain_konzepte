@@ -509,10 +509,10 @@ Konkret handelt es sich um folgende Funktionen:
   Höhe des eingegebenen Betrags eine Transaktionsgebühr und gibt diese als ganze Zahl zurück. Mindestgebühr für jede
   Transaktion sind 3 SiC, ab einem Betrag von 100 SiC werden 3 Prozent des Betrags (abgerundet auf eine ganze Zahl) als
   Transaktionsgebühr zurückgegeben. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim Start!)
-* **a3b_pruefeEingabeAdresseEmpfaenger**() <br>
+* **a3b_pruefeEingabeAdresseEmpfaenger**(adresse) <br>
   Diese Funktion prüft, ob die vom User eingegebenen Daten auch tatsächlich unter den Adressen der Knoten des
   Peer-to-Peer-Netzwerkes zu finden sind und gibt entweder den Index der Adresse im Array *a2b_adressenKnoten* oder,
-  falls die Adressen in diesem Array nicht vorhanden ist, -1 zurück. (Diese Funktion wird **während** der Animation
+  falls die Adresse in diesem Array nicht vorhanden ist, -1 zurück. (Diese Funktion wird **während** der Animation
   ausgeführt, nicht beim Start!)
 * **a3c_tabelleTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
