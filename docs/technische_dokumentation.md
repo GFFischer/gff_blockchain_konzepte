@@ -329,6 +329,8 @@ Variablen:
 * **a3c_nKey**: beinhaltet den Wert der Variable n der Sender-Adresse. Anfangswert: n von der ersten Adresse des hinzugefügten Knotens.
 * **a3c_signaturTeil1** bis **a3c_signaturTeil4**: die vier Variablen beinhalten die vier Teile der digitalen Signatur der Transaktion,
   berechnet mit der Funktion *berechneSignatur()*.
+* **a3c_signaturTransaktion**: beinhaltet die Werte, die in den Variablen *a3c_signaturTeil1* bis *a3c_signaturTeil4* gespeichert sind,
+  zusammengefasst in einem String, jeweils getrennt durch ein Leerzeichen.
 * **a4a_senderTransaktion**: beinhaltet die Sender-Adresse der zweiten dargestellten Transaktion. Anfangswert: a2b_adressenKnoten[6].
 * **a4a_empfaengerTransaktion**: beinhaltet die Empfänger-Adresse der zweiten dargestellten Transaktion. zurückgegeben von der
   Funktion *getAdresse()*. Anfangswert ist getAdresse(21).
@@ -414,6 +416,11 @@ Klassen und Funktionen:
   Diese Funktion gibt die Konkatenation der Werte der Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion,
   a3b_betragTransaktion, a3b_gebuehrTransaktion* und *a3b_zeitTransaktion* als String zurück, um daraus den
   Hashwert der Transaktion zu berechnen.
+* **a3b_errechneTransaktionsgebuehr**(betrag) <br>
+  Diese Funktion bekommt als Parameter einen Betrag für eine Transaktion (*betrag*) übergeben, errechnet abhängig von der
+  Höhe des eingegebenen Betrags eine Transaktionsgebühr und gibt diese als ganze Zahl zurück. Mindestgebühr für jede
+  Transaktion sind 3 SiC, ab einem Betrag von 100 SiC werden 3 Prozent des Betrags (abgerundet auf eine ganze Zahl) als
+  Transaktionsgebühr zurückgegeben.
 * **a4a_stringTransaktion**() <br>
   Diese Funktion gibt die Konkatenation der Werte der Variablen *a4a_senderTransaktion, a4a_empfaengerTransaktion,
   a4a_betragTransaktion, a4a_gebuehrTransaktion* und *a4a_zeitTransaktion* als String zurück, um daraus den
@@ -503,12 +510,7 @@ Konkret handelt es sich um folgende Funktionen:
   Neu generiert wird eine Tabelle mit den Adressen aller Knoten ausgenommen des neuen Knotens.
 * **a3b_auswahllisteAuftraggeber**() <br>
   Neu generiert wird die Auswahlliste der zur Verfügung stehenden Adressen für das Formular zur Eingabe von Daten für eine
-  Transaktion, abhängig von der in Animation 2b eingegebenen Anzahl von Adressen (Array *a2b_adressenKnoten*).
-* **a3b_errechneTransaktionsgebuehr**(betrag) <br>
-  Diese Funktion bekommt als Parameter einen Betrag für eine Transaktion (*betrag*) übergeben, errechnet abhängig von der
-  Höhe des eingegebenen Betrags eine Transaktionsgebühr und gibt diese als ganze Zahl zurück. Mindestgebühr für jede
-  Transaktion sind 3 SiC, ab einem Betrag von 100 SiC werden 3 Prozent des Betrags (abgerundet auf eine ganze Zahl) als
-  Transaktionsgebühr zurückgegeben. (Diese Funktion wird **während** der Animation ausgeführt, nicht beim Start!)
+  Transaktion, abhängig von der in Animation 2b eingegebenen Anzahl von Adressen (Array *a2b_adressenKnoten*)
 * **a3b_pruefeEingabeAdresseEmpfaenger**(adresse) <br>
   Diese Funktion prüft, ob die vom User eingegebenen Daten auch tatsächlich unter den Adressen der Knoten des
   Peer-to-Peer-Netzwerkes zu finden sind und gibt entweder den Index der Adresse im Array *a2b_adressenKnoten* oder,
@@ -662,11 +664,15 @@ werden.
 * **#logo_ohne_text**: <br>
   Mit der ID *#logo_ohne_text* wird das Logo ohne Schriftzug selektiert und formatiert.
 * **.sichtbar**: <br>
-  Diese Klasse besteht einzig aus der CSS-Eigenschaft *visibility: visible*. Sie findet sich ausschliesslich in der @media-Regel
+  Diese Klasse besteht einzig aus der CSS-Eigenschaft *display: inline*. Sie findet sich ausschliesslich in der @media-Regel
   für Bildschirmbreiten <= 960px und wird dort der *classList* der Navigation (*nav*, ID: *navmenu*) hinzugefügt, wenn der User
-  auf das "Hamburger-Icon" klickt, und wieder davon entfernt, sobald der User auf einen Eintrag im Navigationsmenü klickt. Dadurch
-  wird verhindert, dass das Navigationsmenü dauerhaft unsichtbar bleibt, wenn der User die Bildschirmbereite in seinem
-  Browserfenster wieder auf > 960px vergrössert.
+  auf das "Hamburger-Icon" klickt. Dadurch wird verhindert, dass das Navigationsmenü dauerhaft sichtbar bleibt, wenn der User
+  die Bildschirmbreite in seinem Browserfenster wieder auf > 960px vergrössert.
+* **.unsichtbar**: <br>
+  Diese Klasse besteht einzig aus der CSS-Eigenschaft *display: none*. Sie findet sich ausschliesslich in der @media-Regel
+  für Bildschirmbreiten <= 960px und wird dort der *classList* der Navigation (*nav*, ID: *navmenu*) hinzugefügt, wenn der User
+  auf einen Eintrag im Navigationsmenü klickt. Dadurch wird erreicht, dass das Navigationsmenü ausgeblendet wird, wenn der
+  User einen Menüpunkt wählt.
 * **p, h1, h2, ...**: <br>
   Hier werden lediglich die Farbe der Überschriften (*color*) und der jeweilige Aussenabstand (*margin*) bestimmt.
 * **.animation**: <br>
@@ -677,6 +683,9 @@ werden.
   sind die Ecken leicht abgerundet (*border-radius*), die Buttons erhalten einen leichten Schatten (*box-shadow*) in der
   Schriftfarbe, die beim Button verwendet wird, und der Cursor (*cursor*) wird zum Pointer. Bei Aktivierung werden die Farben
   invertiert (*button.animbutton:acitve*).
+* **#a3c_buttonBerechnung1, #a3c_buttonBerechnung2, #a3c_buttonBerechnung3**: <br>
+  Mit diesen IDs werden die Buttons in Animation 3c selektiert und formatiert, mit denen der User die digitale Signatur einer
+  Transaktion schrittweise berechnen kann. Sie sind etwas kleiner als die "normalen" Buttons der Klasse *animbutton*.
 * **div .hintergrund**: <br>
   Diese Klasse schafft ein Element für den sandgrauen Hintergrund, auf dem die Animationen jeweils zu sehen sind. Die Höhe
   bekommt einen Mindestwert als Standardwert zugewiesen (*height: 30em*), der aber bei vielen Animationen händisch vergrössert
@@ -722,6 +731,9 @@ werden.
   Die html-Elemente input, select und textarea formatieren die Eingabefelder in den Formularen, bei denen der User Eingaben machen
   kann. Wenn in die Eingabefelder geklickt wird, wird der Rahmen durch die CSS-Eigenschaft *outline: 0.15em solid var(--tarngruen)*
   dunkelgrün.
+* **input:focus, select:focus, textarea:focus, button:focus**: <br>
+  Die Formatierung dieser Selektoren betrifft einzig die farbliche Anpassung der Eigenschaft *outline* an das restliche Design der
+  Applikation.
 * **.block**: <br>
   Diese Klasse regelt die Formatierung der Elemente, die in verschiedenen Animationen die Blöcke einer Blockchain darstellen.
 * **.blockinhalt**: <br>
@@ -765,6 +777,9 @@ werden.
 * **.tabEigeneAdressen**: <br>
   Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der die
   eigenen Adressen angezeigt werden, bestimmt.
+* **.tabSignatur**: <br>
+  Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der die
+  Berechnung einer digitalen Signatur angezeigt werden, bestimmt.
 * **.hash**: <br>
   Überall, wo in der Animationen Hashwerte bzw. Hash-Referenzen angezeigt werden, sollen diese einheitlich formatiert sein, und
   zwar in einer Monospace-Schriftart. Dazu dient diese Klasse.
