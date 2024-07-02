@@ -192,6 +192,12 @@ nur auf eine konkrete Animation beziehen.
   Diese Funktion bekommt eine Dezimalzahl (*dezZahl*) übergeben und gibt eine achtstellige, hexadezimale Zahl als String
   zurück, der führende Nullen hinzugefügt werden, falls die übergebene Zahl kleiner als 16<sup>7</sup> ist. Ist die übergebene
   Zahl grösser oder gleich 16<sup>8</sup>, wird sie vor der Umwandlung modulo 16<sup>8</sup> gerechnet.
+* **ergaenzeNullen2**(wert) <br>
+  Diese Funktion dient dazu, bei Zahlen, die weniger als zwei Stellen haben, führende Nullen zu ergänzen, sodass der
+  zurückgegebene String auf jeden Fall (mindestens) zwei Stellen hat.
+* **ergaenzeNullen8**(wert) <br>
+  Diese Funktion dient dazu, bei Zahlen, die weniger als acht Stellen haben, führende Nullen zu ergänzen, sodass der
+  zurückgegebene String auf jeden Fall (mindestens) acht Stellen hat.
 * **umwandleHexInBin**(hexZahl) <br>
   Diese Funktion bekommt eine hexadezimale Zahl (*hexZahl*) übergeben und gibt die entsprechende binäre Zahl zurück.
 * **umwandleBinInHex**(binZahl) <br>
