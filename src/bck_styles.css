@@ -218,6 +218,12 @@ button.animbutton:active {
     box-shadow: 0em 0em 0.5em 0em var(--kressegruen);
 }
 
+#a3c_buttonBerechnung1, #a3c_buttonBerechnung2, #a3c_buttonBerechnung3 {
+    border-radius: 0.3em;
+    box-shadow: 0em 0em 0.2em 0em var(--creme);
+    padding: 0.4em;
+}
+
 div .hintergrund {
     background-color: var(--sandgrau);
     border-radius: 0.5em;
@@ -478,8 +484,13 @@ input:focus, select:focus, textarea:focus, button:focus {
     width: 22em;
 }
 
+.tabSignatur {
+    width: 30em;
+}
+
 .hash {
     font-family: 'Bitstream Vera Sans Mono', Consolas, 'Courier New', Courier, monospace;
+    font-size: 120%;
 }
 
 #a5ab_nonceHash1, #a5ab_nonceHash2 {
@@ -495,6 +506,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 .signatur {
     font-family: 'Bitstream Vera Sans Mono', Consolas, 'Courier New', Courier, monospace;
     font-size: 125%;
+    font-weight: bold;
 }
 
 #a3d_gueltigeTrans {

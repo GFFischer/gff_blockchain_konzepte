@@ -395,7 +395,7 @@ function a3a_eingabeGuthaben() {
                 document.getElementById(`a3a_warnung`).style=`visibility: visible; top: 7em; right: 6em; z-index: 83`;}\
             if (pruefeEingabeZahl(wert1) && pruefeEingabeZahl(wert2) && pruefeEingabeZahl(wert3)) {\
                 document.getElementById(`a3a_formular`).style=`visibility: hidden`;\
-                 document.getElementById(`a3a_infoimg1`).style=\
+                document.getElementById(`a3a_infoimg1`).style=\
                     `visibility: visible; position: absolute; top: 14em; left: 13em`;\
                 document.getElementById(`a3a_hintergButton`).style=\
                     `visibility: visible; position: absolute; top: 26.5em; left: 2em`;\
@@ -448,4 +448,44 @@ function a3b_pruefeEingabeAdresseEmpfaenger(adresse) {
         }
     }
     return -1
+}
+
+function a3c_tabelleTransaktion() {
+    document.getElementById("a3c_auftraggeber").innerHTML = a3b_senderTransaktion;
+    document.getElementById("a3c_empfaenger").innerHTML = a3b_empfaengerTransaktion;
+    document.getElementById("a3c_betrag").innerHTML = a3b_betragTransaktion + " SiC";
+    document.getElementById("a3c_gebuehr").innerHTML = a3b_gebuehrTransaktion + " SiC";
+    document.getElementById("a3c_zeitstempel").innerHTML = a3b_zeitTransaktion;
+    document.getElementById("a3c_hashwert").innerHTML = a3b_hashTransaktion;
+}
+
+function a3c_erstelleSignatur(hashTransaktion, idxAdresse) {
+    a3c_hashTeil1 = hashTransaktion.substr(0,2);
+    a3c_hashTeil2 = hashTransaktion.substr(2,2);
+    a3c_hashTeil3 = hashTransaktion.substr(4,2);
+    a3c_hashTeil4 = hashTransaktion.substr(6,2);
+    a3c_dKey = adressenAuswahl[indizesFuerAdressen[idxAdresse]].d;
+    a3c_nKey = adressenAuswahl[indizesFuerAdressen[idxAdresse]].n;
+    a3c_signaturTeil1 = berechneSignatur(umwandleInDez(a3c_hashTeil1, 16), a3c_dKey, a3c_nKey);
+    a3c_signaturTeil2 = berechneSignatur(umwandleInDez(a3c_hashTeil2, 16), a3c_dKey, a3c_nKey);
+    a3c_signaturTeil3 = berechneSignatur(umwandleInDez(a3c_hashTeil3, 16), a3c_dKey, a3c_nKey);
+    a3c_signaturTeil4 = berechneSignatur(umwandleInDez(a3c_hashTeil4, 16), a3c_dKey, a3c_nKey);
+    a3c_signaturTransaktion = a3c_signaturTeil1 + " " + a3c_signaturTeil2 + " " + a3c_signaturTeil3 
+        + " " + a3c_signaturTeil4;
+    document.getElementById("a3c_hashT1").innerHTML = a3c_hashTeil1;
+    document.getElementById("a3c_hashT2").innerHTML = a3c_hashTeil2;
+    document.getElementById("a3c_hashT3").innerHTML = a3c_hashTeil3;
+    document.getElementById("a3c_hashT4").innerHTML = a3c_hashTeil4;
+    document.getElementById("a3c_binT1").innerHTML = umwandleHexInBin(a3c_hashTeil1);
+    document.getElementById("a3c_binT2").innerHTML = umwandleHexInBin(a3c_hashTeil2);
+    document.getElementById("a3c_binT3").innerHTML = umwandleHexInBin(a3c_hashTeil3);
+    document.getElementById("a3c_binT4").innerHTML = umwandleHexInBin(a3c_hashTeil4);
+    document.getElementById("a3c_dezT1").innerHTML = umwandleInDez(a3c_hashTeil1, 16);
+    document.getElementById("a3c_dezT2").innerHTML = umwandleInDez(a3c_hashTeil2, 16);
+    document.getElementById("a3c_dezT3").innerHTML = umwandleInDez(a3c_hashTeil3, 16);
+    document.getElementById("a3c_dezT4").innerHTML = umwandleInDez(a3c_hashTeil4, 16);
+    document.getElementById("a3c_digSigT1").innerHTML = a3c_signaturTeil1;
+    document.getElementById("a3c_digSigT2").innerHTML = a3c_signaturTeil2;
+    document.getElementById("a3c_digSigT3").innerHTML = a3c_signaturTeil3;
+    document.getElementById("a3c_digSigT4").innerHTML = a3c_signaturTeil4;
 }

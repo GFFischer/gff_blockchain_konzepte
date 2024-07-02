@@ -341,3 +341,18 @@ function a3b_stringTransaktion() {
 }
 
 var a3b_hashTransaktion = berechneHash(a3b_stringTransaktion());
+
+var a3c_hashTeil1 = a3b_hashTransaktion.substr(0,2);
+var a3c_hashTeil2 = a3b_hashTransaktion.substr(2,2);
+var a3c_hashTeil3 = a3b_hashTransaktion.substr(4,2);
+var a3c_hashTeil4 = a3b_hashTransaktion.substr(6,2);
+
+var a3c_dKey = adressenAuswahl[indizesFuerAdressen[0]].d;
+var a3c_nKey = adressenAuswahl[indizesFuerAdressen[0]].n;
+
+var a3c_signaturTeil1 = berechneSignatur(umwandleInDez(a3c_hashTeil1, 16), a3c_dKey, a3c_nKey);
+var a3c_signaturTeil2 = berechneSignatur(umwandleInDez(a3c_hashTeil2, 16), a3c_dKey, a3c_nKey);
+var a3c_signaturTeil3 = berechneSignatur(umwandleInDez(a3c_hashTeil3, 16), a3c_dKey, a3c_nKey);
+var a3c_signaturTeil4 = berechneSignatur(umwandleInDez(a3c_hashTeil4, 16), a3c_dKey, a3c_nKey);
+var a3c_signaturTransaktion = a3c_signaturTeil1 + " " + a3c_signaturTeil2 + " " + a3c_signaturTeil3 
+    + " " + a3c_signaturTeil4;
