@@ -331,6 +331,9 @@ Variablen:
   berechnet mit der Funktion *berechneSignatur()*.
 * **a3c_signaturTransaktion**: beinhaltet die Werte, die in den Variablen *a3c_signaturTeil1* bis *a3c_signaturTeil4* gespeichert sind,
   zusammengefasst in einem String, jeweils getrennt durch ein Leerzeichen.
+* **a3d_eKey**: beinhaltet den Wert der Variable e der Sender-Adresse. Anfangswert: e von der ersten Adresse des hinzugefügten Knotens.
+* **a3d_entschluesseltTeil1** bis **a3d_entschluesseltTeil4**: die vier Variablen beinhalten jeweils die Dezimalzahl, die bei der
+  Entschlüsselung der digitalen Signatur von der Funktion *berechneSignatur()* als Dezimalzahl zurückgegeben wird.
 * **a4a_senderTransaktion**: beinhaltet die Sender-Adresse der zweiten dargestellten Transaktion. Anfangswert: a2b_adressenKnoten[6].
 * **a4a_empfaengerTransaktion**: beinhaltet die Empfänger-Adresse der zweiten dargestellten Transaktion. zurückgegeben von der
   Funktion *getAdresse()*. Anfangswert ist getAdresse(21).
@@ -683,7 +686,8 @@ werden.
   sind die Ecken leicht abgerundet (*border-radius*), die Buttons erhalten einen leichten Schatten (*box-shadow*) in der
   Schriftfarbe, die beim Button verwendet wird, und der Cursor (*cursor*) wird zum Pointer. Bei Aktivierung werden die Farben
   invertiert (*button.animbutton:acitve*).
-* **#a3c_buttonBerechnung1, #a3c_buttonBerechnung2, #a3c_buttonBerechnung3**: <br>
+* **#a3c_buttonBerechnung1, #a3c_buttonBerechnung2, #a3c_buttonBerechnung3, #a3d_buttonBerechnung1, #a3d_buttonBerechnung2,
+  #a3d_buttonBerechnung3**: <br>
   Mit diesen IDs werden die Buttons in Animation 3c selektiert und formatiert, mit denen der User die digitale Signatur einer
   Transaktion schrittweise berechnen kann. Sie sind etwas kleiner als die "normalen" Buttons der Klasse *animbutton*.
 * **div .hintergrund**: <br>
