@@ -84,7 +84,7 @@
                 <ul id="anim4_menu" class="submenu" 
                     onclick="document.getElementById('navmenu').classList.remove('sichtbar');
                         document.getElementById('navmenu').classList.add('unsichtbar');">
-                    <li id="a4a_menu" class="submenuEintrag" onclick="oeffneAnimation('4a')
+                    <li id="a4a_menu" class="submenuEintrag" onclick="oeffneAnimation('4a'); a4a_datenTransaktion();
                         ">Zwei Transaktionen miteinander verknüpfen</li>
                     <li id="a4b_menu" class="submenuEintrag" onclick="oeffneAnimation('4b')
                         ">Verknüpfte Transaktionen in einem Block speichern</li>
@@ -1350,12 +1350,20 @@
                     onclick="document.getElementById('a3b_formular1').style=
                         'position: absolute; right: 2em; top: 5em; visibility: visible; width: 21.5em';
                     ">Erstelle eine Transaktion</button>
-                <div id="a3b_warnung" class="hinweis">
+                <div id="a3b_warnung1" class="hinweis">
                     <p class="hinweistext">
-                        Bitte geben Sie eine ganze Zahl ein.
+                        Bitte gib eine ganze Zahl ein.
                     </p>
                     <button class="hinweisbutton" onclick="
-                        document.getElementById('a3b_warnung').style='visibility: hidden';
+                        document.getElementById('a3b_warnung1').style = 'visibility: hidden';
+                    ">OK</button>
+                </div>
+                <div id="a3b_warnung2" class="hinweis">
+                    <p class="hinweistext">
+                        Bitte gibt einen Empfänger aus der Liste "Fremde Adressen" ein!
+                    </p>
+                    <button class="hinweisbutton" onclick="
+                        document.getElementById('a3b_warnung2').style = 'visibility: hidden';
                     ">OK</button>
                 </div>
                 <div id="a3b_formular1" class="formular">
@@ -1370,31 +1378,36 @@
                     <p><label>e: <input id="a3b_eingabeE" size="3" maxlength="2" type="text"></label>
                     <label>n: <input id="a3b_eingabeN" size="4" maxlength="4" type="text"></label></p>
                     <button id="a3b_formularButton1" class="formularbutton" onclick="
-                        a3b_senderTransaktion = 
-                            a2b_adressenKnoten[document.getElementById('a3b_eingabeAuftraggeber').value];
-                        a3c_idxAdresseSender = document.getElementById('a3b_eingabeAuftraggeber').value;
-                        document.getElementById('a3b_auftraggeber').innerHTML = a3b_senderTransaktion;  
-                        a3b_empfaengerTransaktion = 'e=' + document.getElementById('a3b_eingabeE').value + ', n=' +
-                            document.getElementById('a3b_eingabeN').value;
-                        a3b_betragTransaktion = document.getElementById('a3b_eingabeBetrag').value;
-                        document.getElementById('a3b_betrag').innerHTML = a3b_betragTransaktion + ' SiC';
-                        a3b_gebuehrTransaktion = a3b_errechneTransaktionsgebuehr(a3b_betragTransaktion);
-                        document.getElementById('a3b_gebuehr').innerHTML = a3b_gebuehrTransaktion + ' SiC';
-                        document.getElementById('a3b_empfaenger').innerHTML = a3b_empfaengerTransaktion;
-                        a3b_zeitTransaktion = zeitstempel();
-                        document.getElementById('a3b_zeitstempel').innerHTML = a3b_zeitTransaktion;
-                        a3b_hashTransaktion = berechneHash(a3b_stringTransaktion());
-                        if (a3b_pruefeEingabeAdresseEmpfaenger(a3b_empfaengerTransaktion) < 0) {
-                            document.getElementById('a3b_hashwert').innerHTML = 'inkorrekte Eingabe';
-                            document.getElementById('a3b_hashwertFormular').value = 'inkorrekt'
+                        if (pruefeEingabeZahl(document.getElementById('a3b_eingabeBetrag').value)) {
+                            a3b_senderTransaktion = 
+                                a2b_adressenKnoten[document.getElementById('a3b_eingabeAuftraggeber').value];
+                            a3c_idxAdresseSender = document.getElementById('a3b_eingabeAuftraggeber').value;
+                            document.getElementById('a3b_auftraggeber').innerHTML = a3b_senderTransaktion;  
+                            a3b_empfaengerTransaktion = 'e=' + document.getElementById('a3b_eingabeE').value +
+                                ', n=' + document.getElementById('a3b_eingabeN').value;
+                            a3b_betragTransaktion = document.getElementById('a3b_eingabeBetrag').value;
+                            document.getElementById('a3b_betrag').innerHTML = a3b_betragTransaktion + ' SiC';
+                            a3b_gebuehrTransaktion = a3b_errechneTransaktionsgebuehr(a3b_betragTransaktion);
+                            document.getElementById('a3b_gebuehr').innerHTML = a3b_gebuehrTransaktion + ' SiC';
                         } else {
+                            document.getElementById('a3b_warnung1').style = 
+                            'visibility: visible; top: 7em; right: 6em; z-index: 63'
+                        }
+                        if (a3b_pruefeEingabeAdresseEmpfaenger(a3b_empfaengerTransaktion) >= 0) {
+                            document.getElementById('a3b_empfaenger').innerHTML = a3b_empfaengerTransaktion;
+                            a3b_zeitTransaktion = zeitstempel();
+                            document.getElementById('a3b_zeitstempel').innerHTML = a3b_zeitTransaktion;
+                            a3b_hashTransaktion = berechneHash(a3b_stringTransaktion());
                             document.getElementById('a3b_hashwert').innerHTML = a3b_hashTransaktion;
                             document.getElementById('a3b_hashwertFormular').value = a3b_hashTransaktion;   
+                            document.getElementById('a3b_gebuehrFormular').value = a3b_gebuehrTransaktion;
+                            document.getElementById('a3b_zeitstempelFormular').value = a3b_zeitTransaktion;
+                            document.getElementById('a3b_formular2').style=
+                                'position: absolute; right: 2em; top: 28em; visibility: visible; width: 21.5em';
+                        } else {
+                            document.getElementById('a3b_warnung2').style = 
+                            'visibility: visible; top: 15em; right: 6em; z-index: 64'
                         }
-                        document.getElementById('a3b_gebuehrFormular').value = a3b_gebuehrTransaktion;
-                        document.getElementById('a3b_zeitstempelFormular').value = a3b_zeitTransaktion;
-                        document.getElementById('a3b_formular2').style=
-                            'position: absolute; right: 2em; top: 28em; visibility: visible; width: 21.5em';
                     ">Transaktion bestätigen</button>
                 </div>
                 <div id="a3b_formular2" class="formular">
@@ -1422,6 +1435,7 @@
                         a3b_tabelleAdressenKnotenNeuMitGuthaben();
                         var guthaben = 'guthaben' + document.getElementById('a3b_eingabeAuftraggeber').value;
                         document.getElementById(guthaben).classList.add('tabHervorgehoben');
+                        a3c_clear();
                         a3d_clear();
                     ">OK</button>
                 </div>
@@ -1718,13 +1732,13 @@
                 Signatur überprüft wird.
             </p>
             <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="width: 55em; height: 38em;"></div>
+                <div class="hintergrund" style="width: 56em; height: 38em;"></div>
                 <button id="a3d_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a3d_hinterg1').style='visibility: visible; z-index: 111';">
                     Hintergrundwissen</button>
                 <button id="a3d_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('3e')">weiter</button>
+                    onclick="oeffneAnimation('4a'); a4a_datenTransaktion();">weiter</button>
                 <button id="a3d_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('3c'); a3c_tabelleTransaktion();
                     ">zurück</button>
@@ -2000,6 +2014,261 @@
                 </script> <br>
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a3d_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>    
+        </div>
+
+<! Animation 4a -->
+
+        <div id="anim_4a" class="mitte animation">
+            <h1>Transaktionen werden über ihre Hashwerte miteinander verbunden</h1>
+            <p>
+                Zwei Transaktionen werden verknüpft, indem ein Hashwert von ihren Hash-Referenzen berechnet wird. 
+                Somit würde jede kleinste Veränderung in den Transaktionen sofort auffallen, denn eine solche würde
+                nicht nur die Hash-Referenz der Transaktion, sondern auch die Hash-Referenz der Verknüpfung verändern.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="width: 55em; height: 44em;"></div>
+                <button id="a4a_hintergButton" class="animbutton" 
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a4a_hinterg1').style='visibility: visible; z-index: 121';">
+                    Hintergrundwissen</button>
+                <button id="a4a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('4b');">weiter</button>
+                <button id="a4a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('3d'); a3d_pruefeSignatur(a3b_hashTransaktion, a3c_idxAdresseSender); 
+                        a3d_tabelleTransaktion();
+                    ">zurück</button>
+                <div id="a4a_tabelleTransaktion4">
+                    <table class="tabelle tabTransaktion" style="position: absolute; top: 13em; left: 3em;">
+                        <tr>
+                            <th class="tabFeldTitel">Transaktion 4</th>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Auftraggeber-Adresse: <br>
+                                <span id="a4a_auftraggeber4"></span>
+                                <script>
+                                    document.getElementById("a4a_auftraggeber4").innerHTML = a3b_senderTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Empfänger-Adresse: <br>
+                                <span id="a4a_empfaenger4"></span>
+                                <script>
+                                    document.getElementById("a4a_empfaenger4").innerHTML = a3b_empfaengerTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zu überweisender Betrag: <br>
+                                <span id="a4a_betrag4"></span>
+                                <script>
+                                    document.getElementById("a4a_betrag4").innerHTML = a3b_betragTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Transaktionsgebühr: <br>
+                                <span id="a4a_gebuehr4"></span>
+                                <script>
+                                    document.getElementById("a4a_gebuehr4").innerHTML = a3b_gebuehrTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zeitstempel: <br>
+                                <span id="a4a_zeitstempel4"></span>
+                                <script>
+                                    document.getElementById("a4a_zeitstempel4").innerHTML = a3b_zeitTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Hashwert Transaktion: <br>
+                                <span id="a4a_hashwert4" class="hash"></span>
+                                <script>
+                                    document.getElementById("a4a_hashwert4").innerHTML = a3b_hashTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld" style="padding-top: 0.4em;">
+                                Digitale Signatur: <br>
+                                <span id="a4a_digitaleSignatur4" class="signatur"></span>
+                                <script>
+                                    document.getElementById("a4a_digitaleSignatur4").innerHTML = a3c_signaturTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+                <div id="a4a_tabelleTransaktion5">
+                    <table class="tabelle tabTransaktion" style="position: absolute; top: 13em; left: 18em;">
+                        <tr>
+                            <th class="tabFeldTitel">Transaktion 5</th>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Auftraggeber-Adresse: <br>
+                                <span id="a4a_auftraggeber5"></span>
+                                <script>
+                                    document.getElementById("a4a_auftraggeber5").innerHTML = a4a_senderTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Empfänger-Adresse: <br>
+                                <span id="a4a_empfaenger5"></span>
+                                <script>
+                                    document.getElementById("a4a_empfaenger5").innerHTML = a4a_empfaengerTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zu überweisender Betrag: <br>
+                                <span id="a4a_betrag5"></span>
+                                <script>
+                                    document.getElementById("a4a_betrag5").innerHTML = a4a_betragTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Transaktionsgebühr: <br>
+                                <span id="a4a_gebuehr5"></span>
+                                <script>
+                                    document.getElementById("a4a_gebuehr5").innerHTML = a4a_gebuehrTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zeitstempel: <br>
+                                <span id="a4a_zeitstempel5"></span>
+                                <script>
+                                    document.getElementById("a4a_zeitstempel5").innerHTML = a4a_zeitTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Hashwert Transaktion: <br>
+                                <span id="a4a_hashwert5" class="hash"></span>
+                                <script>
+                                    document.getElementById("a4a_hashwert5").innerHTML = a4a_hashTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld" style="padding-top: 0.4em;">
+                                Digitale Signatur: <br>
+                                <span id="a4a_digitaleSignatur5" class="signatur"></span>
+                                <script>
+                                    document.getElementById("a4a_digitaleSignatur5").innerHTML = a4a_signaturTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+                <div id="a4a_tabelleHashRef4" style="position: absolute; top: 31.5em; left: 3em;">
+                    <table class="tabelle tabTransaktion" 
+                        style="height: 3.7em;">
+                        <tr>
+                            <td class="tabFeld">
+                                <b>Referenz Transaktion 4:</b> <br>
+                                <span id="a4a_hashRef4" class="hash"></span>
+                                <script>
+                                    document.getElementById("a4a_hashRef4").innerHTML = a3b_hashTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="a4a_tabelleHashRef5" style="position: absolute; top: 31.5em; left: 18em;">
+                    <table class="tabelle tabTransaktion" style="height: 3.7em;">
+                        <tr>
+                            <td class="tabFeld">
+                                <b>Referenz Transaktion 5:</b> <br>
+                                <span id="a4a_hashRef5" class="hash"></span>
+                                <script>
+                                    document.getElementById("a4a_hashRef5").innerHTML = a4a_hashTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="a4a_feldHashRef45" class="feld" 
+                    style="position: absolute; top: 2em; left: 10.5em; visibility: hidden;">
+                    <b>Referenz 45:</b> &nbsp <span id="a4a_hashTrans45" class="hash"></span>
+                    <script>
+                        document.getElementById("a4a_hashTrans45").innerHTML = a4a_hashReferenz45;
+                    </script>
+                </div>
+                <div id="a4a_hashwertBerechnung" class="feld"
+                    style="position: absolute; top: 13em; left: 33em;">
+                    <p style="margin: 0.5em 0em;"><b>Eingabe:</b></p>
+                    <p style="margin: 0.5em 0em">
+                        <span id="a4a_refTrans45" class="feld hash" style="visibility: hidden;"></span></p>
+                    <script>
+                        document.getElementById("a4a_refTrans45").innerHTML = a4a_referenz45;
+                    </script>
+                    <p style="margin: 0.5em 0em;"><b>Hashwert auf Eingabe:</b></p>
+                    <p style="margin: 0.5em 0em 1em 0em;">
+                        <span id="a4a_hashRefTrans45" class="feld hash" style="visibility: hidden;"></span></p>
+                    <script>
+                        document.getElementById("a4a_hashRefTrans45").innerHTML = a4a_hashReferenz45;
+                    </script>
+                </div>
+                <img id="a4a_pfeil1" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 10.2em; left: 9.5em; height: 3.3em; visibility: hidden;">
+                <img id="a4a_pfeil2" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 10.2em; left: 24.5em; height: 3.3em; visibility: hidden;">
+                <img id="a4a_pfeil3" src="img/pfeil_ref_zu_ref_links.png" alt="Pfeil"
+                    style="position: absolute; left: 9.5em; top: 4em; height: 3.1em; width: 8.2em; visibility: hidden;">
+                <img id="a4a_pfeil4" src="img/pfeil_ref_zu_ref_rechts.png" alt="Pfeil"
+                    style="position: absolute; left: 17.3em; top: 4em; height: 3.1em; width: 8.2em; visibility: hidden;">
+                <button id="a4a_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="
+                        document.getElementById('a4a_hintergButton').style='visibility: hidden';
+                        document.getElementById('a4a_unterbrechung').style = 
+                            'position: absolute; right: 13.3em; top: 1em; visibility: visible'
+                        document.getElementById('a4a_abbruch').style =
+                            'position: absolute; right: 2em; top: 1em; visibility: visible';
+                        document.getElementById('a4a_startButton').style='visibility: hidden';
+                        a4a_bewegteReferenzen();"
+                    >Starte Animation</button>
+                <button id="a4a_neustart" class="animbutton" style="visibility: hidden;"
+                    >Animation neu starten</button>
+                <button id="a4a_unterbrechung" class="animbutton" style="visibility: hidden;"
+                    >Animation unterbrechen</button>
+                <button id="a4a_fortsetzung" class="animbutton" style="visibility: hidden;"
+                    >Animation fortsetzen</button>
+                <button id="a4a_abbruch" class="animbutton" style="visibility: hidden;"
+                    >Animation abbrechen</button>
+                <img id="a4a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a4a_info1').style='visibility: visible; z-index: 122;'">                    
+            </div>
+            <div id="a4a_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a4a_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a4a_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a4a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a4a_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a4a_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>    
         </div>
 

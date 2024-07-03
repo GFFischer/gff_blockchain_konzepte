@@ -23,6 +23,12 @@ var a3c_hinterg1 = "Hintergrundtext 3c";
 var a3d_info1 = "Infotext 3d";
 var a3d_hinterg1 = "Hintergrundtext 3d";
 
+var a4a_info1 = "Infotext 4a";
+var a4a_hinterg1 = "Hintergrundtext 4a";
+var a4b_info1 = "Infotext 4b";
+var a4b_hinterg1 = "Hintergrundtext 4b";
+var a4c_info1 = "Infotext 4a";
+var a4c_hinterg1 = "Hintergrundtext 4c";
 
 var copyright_hashes = "Berechnet unter Verwendung der JavaScript Implementation von üblichen Hashfunktionen, zur \
 Verfügung gestellt von </br>&copy; 2012-2017, Tomas Aparicio und </br>&copy; 1999-2012, Paul Johnston, Angel Marin, \

@@ -490,6 +490,32 @@ function a3c_erstelleSignatur(hashTransaktion, idxAdresse) {
     document.getElementById("a3c_digSigT4").innerHTML = a3c_signaturTeil4;
 }
 
+function a3c_clear() {
+    document.getElementById("a3c_signaturTabelle").style.visibility = "hidden";
+    document.getElementById('a3c_hashTitel').classList.add('tabHervorgehoben');
+    document.getElementById('a3c_digSigTitel').classList.remove('tabHervorgehoben');
+    document.getElementById('a3c_hashT1').classList.add('tabHervorgehoben');
+    document.getElementById('a3c_hashT2').classList.add('tabHervorgehoben');
+    document.getElementById('a3c_hashT3').classList.add('tabHervorgehoben');
+    document.getElementById('a3c_hashT4').classList.add('tabHervorgehoben');
+    document.getElementById('a3c_digSigTabFeld').classList.remove('tabHervorgehoben');
+    document.getElementById('a3c_dezT1').style.visibility = "hidden";
+    document.getElementById('a3c_dezT2').style.visibility = "hidden";
+    document.getElementById('a3c_dezT3').style.visibility = "hidden";
+    document.getElementById('a3c_dezT4').style.visibility = "hidden";
+    document.getElementById('a3c_binT1').style.visibility = "hidden";
+    document.getElementById('a3c_binT2').style.visibility = "hidden";
+    document.getElementById('a3c_binT3').style.visibility = "hidden";
+    document.getElementById('a3c_binT4').style.visibility = "hidden";
+    document.getElementById('a3c_digSigT1').style.visibility = 'hidden';
+    document.getElementById('a3c_digSigT2').style.visibility = 'hidden';
+    document.getElementById('a3c_digSigT3').style.visibility = 'hidden';
+    document.getElementById('a3c_digSigT4').style.visibility = 'hidden';
+    document.getElementById('a3c_infoimg1').style.visibility = "hidden";
+    document.getElementById('a3c_hintergButton').style.visibility = "hidden";
+}
+
+
 function a3d_tabelleTransaktion() {
     document.getElementById("a3d_auftraggeber").innerHTML = a3b_senderTransaktion;
     document.getElementById("a3d_empfaenger").innerHTML = a3b_empfaengerTransaktion;
@@ -571,7 +597,6 @@ function a3d_clear() {
     document.getElementById("a3d_zurueckgewieseneTrans").style.visibility = "hidden";
     document.getElementById("a3d_gueltigeTrans").style.visibility = "hidden";
     document.getElementById("a3d_signaturTabelle").style.visibility = "hidden";
-    document.getElementById("a3d_neustartButton").style.visibility = "visible";
     document.getElementById('a3d_dezT1').style.visibility = "hidden";
     document.getElementById('a3d_dezT2').style.visibility = "hidden";
     document.getElementById('a3d_dezT3').style.visibility = "hidden";
@@ -586,6 +611,131 @@ function a3d_clear() {
     document.getElementById('a3d_hashT4').style.visibility = "hidden";
     document.getElementById('a3d_hashTitel').classList.remove('tabHervorgehoben');
     document.getElementById('a3d_hashwertTabFeld').classList.remove('tabHervorgehoben');
-    document.getElementById('a3c_infoimg1').style.visibility = "hidden";
-    document.getElementById('a3c_hintergButton').style.visibility = "hidden";
+    document.getElementById('a3d_infoimg1').style.visibility = "hidden";
+    document.getElementById('a3d_hintergButton').style.visibility = "hidden";
+}
+
+function a4a_datenTransaktion() {
+    document.getElementById("a4a_auftraggeber4").innerHTML = a3b_senderTransaktion;
+    document.getElementById("a4a_empfaenger4").innerHTML = a3b_empfaengerTransaktion;
+    document.getElementById("a4a_betrag4").innerHTML = a3b_betragTransaktion + " SiC";
+    document.getElementById("a4a_gebuehr4").innerHTML = a3b_gebuehrTransaktion + " SiC";
+    document.getElementById("a4a_zeitstempel4").innerHTML = a3b_zeitTransaktion;
+    document.getElementById("a4a_hashwert4").innerHTML = a3b_hashTransaktion;
+    document.getElementById("a4a_digitaleSignatur4").innerHTML = a3c_signaturTransaktion;
+    a4a_referenz45 = a3b_hashTransaktion + " " + a4a_hashTransaktion;
+    a4a_hashReferenz45 = berechneHash(a4a_referenz45);
+    document.getElementById("a4a_refTrans45").innerHTML = a4a_referenz45;
+    document.getElementById("a4a_hashTrans45").innerHTML = a4a_hashReferenz45;
+    document.getElementById("a4a_hashRefTrans45").innerHTML = a4a_hashReferenz45;
+}
+
+var a4a_verstricheneZeit = 0;
+
+async function a4a_bewegteReferenzen() {
+    
+    const a4a_startzeit = Date.now();
+    var a4a_aktuelleZeit = a4a_startzeit;
+    var posX_Referenz1 = positionX("a4a_tabelleHashRef4");
+    var posY_Referenz1 = positionY("a4a_tabelleHashRef4");
+    var posX_Referenz2 = positionX("a4a_tabelleHashRef5");
+    var posY_Referenz2 = positionY("a4a_tabelleHashRef5");
+    
+    var a4a_unterbrochen = false;
+
+    document.getElementById("a4a_abbruch").addEventListener("click", () => {
+        a4a_unterbrochen = true;
+        document.getElementById("a4a_tabelleHashRef4").style="position: absolute; left: 3em; top: 6.7em;";
+        document.getElementById("a4a_tabelleHashRef5").style="position: absolute; left: 18em; top: 6.7em;";
+        document.getElementById("a4a_pfeil1").style.visibility = "visible";
+        document.getElementById("a4a_pfeil2").style.visibility = "visible";
+        document.getElementById("a4a_pfeil3").style.visibility = "visible";
+        document.getElementById("a4a_pfeil4").style.visibility = "visible";
+        document.getElementById("a4a_refTrans45").style.visibility = "visible";
+        document.getElementById("a4a_hashRefTrans45").style.visibility = "visible";
+        document.getElementById("a4a_feldHashRef45").style.visibility = "visible";
+        document.getElementById("a4a_refTrans45").classList.remove("tabHervorgehoben");
+        document.getElementById("a4a_hashRef4").classList.remove("tabHervorgehoben");
+        document.getElementById("a4a_hashRef5").classList.remove("tabHervorgehoben");
+        document.getElementById("a4a_hashRefTrans45").classList.add("tabHervorgehoben");
+        document.getElementById("a4a_hashTrans45").classList.add("tabHervorgehoben");
+        document.getElementById("a4a_infoimg1").style = 
+            "visibility: visible; position: absolute; top: 28em; left: 40em;"
+        document.getElementById("a4a_abbruch").style="visibility: hidden";
+        document.getElementById("a4a_unterbrechung").style="visibility: hidden";
+        document.getElementById("a4a_fortsetzung").style="visibility: hidden";
+        document.getElementById("a4a_neustart").style=
+            "position: absolute; right: 2em; top: 1em; visibility: visible";
+        document.getElementById("a4a_hintergButton").style =
+            "visibility: visible; position: absolute; top: 40.5em; left: 2em"});
+
+    document.getElementById("a4a_unterbrechung").addEventListener("click", () => {
+        a4a_unterbrochen = true;
+        a4a_aktuelleZeit = Date.now();
+        document.getElementById("a4a_fortsetzung").style = 
+            "position: absolute; right: 25.9em; top: 1em; visibility: visible";});
+    
+    document.getElementById("a4a_fortsetzung").addEventListener("click", () => {
+        a4a_unterbrochen = false;
+        a4a_verstricheneZeit = a4a_aktuelleZeit - a4a_startzeit;
+        document.getElementById("a4a_fortsetzung").style="visibility: hidden";
+        a4a_bewegteReferenzen()});
+
+    document.getElementById("a4a_neustart").addEventListener("click", () => {
+        a4a_unterbrochen = true;
+        a4a_verstricheneZeit = 0;
+        document.getElementById("a4a_unterbrechung").style = 
+            "position: absolute; right: 13.3em; top: 1em; visibility: visible";
+        document.getElementById("a4a_abbruch").style="position: absolute; right: 2em; top: 1em; visibility: visible";
+        document.getElementById("a4a_fortsetzung").style="visibility: visible";
+        document.getElementById("a4a_neustart").style="visibility: hidden";
+        document.getElementById("a4a_infoimg1").style="visibility:hidden";
+        document.getElementById("a4a_hintergButton").style ="visibility: hidden";
+        document.getElementById("a4a_tabelleHashRef4").style="position: absolute; top: 31.5em; left: 3em;";
+        document.getElementById("a4a_tabelleHashRef5").style="position: absolute; top: 31.5em; left: 18em;";
+        document.getElementById("a4a_pfeil1").style.visibility = "hidden";
+        document.getElementById("a4a_pfeil2").style.visibility = "hidden";
+        document.getElementById("a4a_pfeil3").style.visibility = "hidden";
+        document.getElementById("a4a_pfeil4").style.visibility = "hidden";
+        document.getElementById("a4a_refTrans45").style.visibility = "hidden";
+        document.getElementById("a4a_hashRefTrans45").style.visibility = "hidden";
+        document.getElementById("a4a_feldHashRef45").style.visibility = "hidden";
+        a4a_bewegteReferenzen();});
+
+    bewegeObjekt("a4a_tabelleHashRef4", "a4a_unterbrechung", "a4a_abbruch", "a4a_neustart", posX_Referenz1, posY_Referenz1, 0, -0.5, 0, 6.5);
+    await verzoegerung(2400 - a4a_verstricheneZeit);
+    document.getElementById('a4a_pfeil1').style.visibility = 'visible';
+    await verzoegerung(500);
+    if (!a4a_unterbrochen) {
+        bewegeObjekt("a4a_tabelleHashRef5", "a4a_unterbrechung", "a4a_abbruch", "a4a_neustart", posX_Referenz2, posY_Referenz2, 0, -0.5, 0, 6.5);
+        await verzoegerung(2400 - a4a_verstricheneZeit);
+        document.getElementById('a4a_pfeil2').style.visibility = 'visible';
+        await verzoegerung(1500);
+        document.getElementById("a4a_refTrans45").style.visibility = "visible";
+        document.getElementById("a4a_refTrans45").classList.add("tabHervorgehoben");
+        document.getElementById("a4a_hashRef4").classList.add("tabHervorgehoben");
+        document.getElementById("a4a_hashRef5").classList.add("tabHervorgehoben");
+        await verzoegerung(1500);
+        document.getElementById("a4a_refTrans45").classList.remove("tabHervorgehoben");
+        document.getElementById("a4a_hashRef4").classList.remove("tabHervorgehoben");
+        document.getElementById("a4a_hashRef5").classList.remove("tabHervorgehoben");
+        document.getElementById("a4a_hashRefTrans45").style.visibility = "visible";
+        document.getElementById("a4a_hashRefTrans45").classList.add("tabHervorgehoben");
+        document.getElementById("a4a_hashTrans45").classList.add("tabHervorgehoben");
+        await verzoegerung(1500);
+        document.getElementById('a4a_pfeil3').style.visibility = 'visible';
+        document.getElementById('a4a_pfeil4').style.visibility = 'visible';
+        document.getElementById("a4a_feldHashRef45").style.visibility = "visible";
+        if (!a4a_unterbrochen) {
+            document.getElementById("a4a_infoimg1").style =
+                "visibility: visible; position: absolute; top: 28em; left: 40em;";
+            document.getElementById("a4a_abbruch").style = "visibility: hidden";
+            document.getElementById("a4a_unterbrechung").style = "visibility: hidden";
+            document.getElementById("a4a_neustart").style =
+                "position: absolute; right: 2em; top: 1em; visibility: visible";
+            document.getElementById("a4a_hintergButton").style = 
+                "visibility: visible; position: absolute; top: 40.5em; left: 2em"
+        }
+
+    }    
 }

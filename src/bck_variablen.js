@@ -362,3 +362,32 @@ var a3d_entschluesseltTeil1 = berechneSignatur(a3c_signaturTeil1, a3d_eKey, a3c_
 var a3d_entschluesseltTeil2 = berechneSignatur(a3c_signaturTeil2, a3d_eKey, a3c_nKey);
 var a3d_entschluesseltTeil3 = berechneSignatur(a3c_signaturTeil3, a3d_eKey, a3c_nKey);
 var a3d_entschluesseltTeil4 = berechneSignatur(a3c_signaturTeil4, a3d_eKey, a3c_nKey);
+
+/* Animation 4 */
+
+var a4a_senderTransaktion = a2b_adressenKnoten[6];
+var a4a_empfaengerTransaktion = getAdresse(21);
+var a4a_betragTransaktion = Math.floor(Math.random() * a3a_guthabenAdressen[6]);
+var a4a_gebuehrTransaktion = a3b_errechneTransaktionsgebuehr(a4a_betragTransaktion);
+var a4a_zeitTransaktion = zeitstempel();
+
+function a4a_stringTransaktion() {
+    return a4a_senderTransaktion + a4a_empfaengerTransaktion + a4a_betragTransaktion + a4a_gebuehrTransaktion 
+    + a4a_zeitTransaktion;
+}
+
+var a4a_hashTransaktion = berechneHash(a4a_stringTransaktion());
+var a4a_hashTeil1 = a4a_hashTransaktion.substr(0,2);
+var a4a_hashTeil2 = a4a_hashTransaktion.substr(2,2);
+var a4a_hashTeil3 = a4a_hashTransaktion.substr(4,2);
+var a4a_hashTeil4 = a4a_hashTransaktion.substr(6,2);
+var a4a_dKey = adressenAuswahl[indizesFuerAdressen[6]].d;
+var a4a_nKey = adressenAuswahl[indizesFuerAdressen[6]].n;
+var a4a_signaturTeil1 = berechneSignatur(umwandleInDez(a4a_hashTeil1, 16), a4a_dKey, a4a_nKey);
+var a4a_signaturTeil2 = berechneSignatur(umwandleInDez(a4a_hashTeil2, 16), a4a_dKey, a4a_nKey);
+var a4a_signaturTeil3 = berechneSignatur(umwandleInDez(a4a_hashTeil3, 16), a4a_dKey, a4a_nKey);
+var a4a_signaturTeil4 = berechneSignatur(umwandleInDez(a4a_hashTeil4, 16), a4a_dKey, a4a_nKey);
+var a4a_signaturTransaktion = a4a_signaturTeil1 + " " + a4a_signaturTeil2 + " " + a4a_signaturTeil3 
+    + " " + a4a_signaturTeil4;
+var a4a_referenz45 = a3b_hashTransaktion + " " + a4a_hashTransaktion;
+var a4a_hashReferenz45 = berechneHash(a4a_referenz45);
