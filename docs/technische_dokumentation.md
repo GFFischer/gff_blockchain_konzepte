@@ -539,6 +539,10 @@ Konkret handelt es sich um folgende Funktionen:
   verschlüsselt diese mit der Funktion *a3c_berechneSignatur()*. Für die Werte des privaten Schlüssels (d, n) bekommt die
   Funktion einen Index (ganze Zahl von 0 bis 2) übergeben (*idxAdresse*), mit dem aus dem Array *adressenAuswahl* die
   Werte für d und n ausgewählt werden.
+* **a3c_clear**() <br>
+  Diese Funktion bewirkt, dass die Ansicht von Animation 3c wieder auf die Anfangswerte zurückgesetzt wird. Sie wird
+  ausgeführt, wenn in Animation 3b die Daten für eine neue oder veränderte Transaktion mit "OK" im zweiten Formular
+  bestätigt werden.
 * **a3d_tabelleTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
   eingegeben hat (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche
