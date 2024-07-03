@@ -556,6 +556,11 @@ Konkret handelt es sich um folgende Funktionen:
   Für die Werte des öffentlichen Schlüssels (e, n) bekommt die Funktion einen Index (ganze Zahl von 0 bis 2) übergeben
   (*idxAdresse*), mit dem aus dem Array *adressenAuswahl* die Werte für e und n ausgewählt werden. (Diese Funktion wird
   **während** der Animation ausgeführt, nicht beim Start!)
+* **a3d_clear**() <br>
+  Diese Funktion bewirkt, dass die Ansicht von Animation 3d wieder auf die Anfangswerte zurückgesetzt wird. Sie wird
+  nicht beim Starten der Animation 3d ausgeführt, sondern erst wenn der Button mit der Beschriftung "Wiederhole die Prüfung
+  der Transaktion" geklickt wird. Ebenso wird sie ausgeführt, wenn in Animation 3b die Daten für eine neue oder veränderte
+  Transaktion mit "OK" im zweiten Formular bestätigt werden.
 * **a4a_datenTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
   eingegeben hat (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche
