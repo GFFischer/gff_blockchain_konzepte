@@ -567,9 +567,8 @@ Konkret handelt es sich um folgende Funktionen:
 * **a4a_datenTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
   eingegeben hat (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche
-  automatisch vergeben worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*) oder bei
-  der Prüfung der Transaktion in Animation 3d geändert worden sind (Variable *a3b_betragTransaktion*). Ebenso generiert
-  wird der Inhalt der Tabelle, in der aus den Hash-Referenzen der beiden angezeigten Transaktionen eine neue Hash-Referenz
+  automatisch vergeben worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*). Ebenso
+  generiert wird der Inhalt der Tabelle, in der aus den Hash-Referenzen der beiden angezeigten Transaktionen eine neue Hash-Referenz
   als deren Verknüfung angezeigt wird (Variablen *a4a_referenz45, a4a_hashReferenz45*).
 * **a4bc_datenMerkleTree**() <br/>
   Neu generiert wird der html-Code für die Tabelle der Transaktion, welche der User in der Animation 3b eingegeben hat
