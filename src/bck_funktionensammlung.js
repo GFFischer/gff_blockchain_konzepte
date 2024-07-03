@@ -30,7 +30,7 @@ function ausklappenMenu(oeffneID) {
 
 /* Funktionen für das Umrechnen von Zahlen aus den und in die verschiedenen Zahlensysteme (binär, dezimal, 
 hexadezimal) sowie für das Umrechnen einer Dezimalzahl in einen achtstelligen hexadezimalen Hashwert mit führenden
-Nullen */
+Nullen und das Ergänzen von führenden Nullen bei zweistelligen und achtstelligen Zahlen*/
 
 function umwandleInDez(zahl, basis) {
     return parseInt(zahl, basis);
@@ -46,6 +46,26 @@ function umwandleDezInHashwert(dezZahl) {
     laenge = temp.length;
     if (laenge < 8) {
         for (var i = 0; i < (8 - laenge); i++) {
+            temp = "0" + temp;
+        }
+    }
+    return temp;
+}
+
+function ergaenzeNullen2(wert) {
+    temp = wert;
+    if (wert.length < 2) {
+        for (var i = 0; i < (2 - wert.length); i++) {
+            temp = "0" + temp;
+        }
+    }
+    return temp;
+}
+
+function ergaenzeNullen8(wert) {
+    temp = wert;
+    if (wert.length < 8) {
+        for (var i = 0; i < (8 - wert.length); i++) {
             temp = "0" + temp;
         }
     }

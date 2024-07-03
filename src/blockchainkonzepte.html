@@ -75,7 +75,8 @@
                         ">Eine neue Transaktion erstellen</li>
                     <li id="a3c_menu" class="submenuEintrag" onclick="oeffneAnimation('3c'); a3c_tabelleTransaktion();
                         ">Eine Transaktion digital signieren</li>
-                    <li id="a3d_menu" class="submenuEintrag" onclick="oeffneAnimation('3d')
+                    <li id="a3d_menu" class="submenuEintrag" onclick="oeffneAnimation('3d'); 
+                        a3d_pruefeSignatur(a3b_hashTransaktion, a3c_idxAdresseSender); a3d_tabelleTransaktion();
                         ">Die Gültigkeit einer Transaktion überprüfen</li>
                 </ul>
                 <li onclick="ausklappenMenu('anim4_menu');
@@ -1371,6 +1372,7 @@
                     <button id="a3b_formularButton1" class="formularbutton" onclick="
                         a3b_senderTransaktion = 
                             a2b_adressenKnoten[document.getElementById('a3b_eingabeAuftraggeber').value];
+                        a3c_idxAdresseSender = document.getElementById('a3b_eingabeAuftraggeber').value;
                         document.getElementById('a3b_auftraggeber').innerHTML = a3b_senderTransaktion;  
                         a3b_empfaengerTransaktion = 'e=' + document.getElementById('a3b_eingabeE').value + ', n=' +
                             document.getElementById('a3b_eingabeN').value;
@@ -1409,7 +1411,6 @@
                             'visibility: visible; position: absolute; top: 39em; left: 32em';
                         document.getElementById('a3b_hintergButton').style=
                         '`visibility: visible; position: absolute; top: 46.5em; left: 29.2em';
-
                         document.getElementById('a3b_tabelleTransaktion').style='visibility: visible';
                         a3a_guthabenAdressen[a3b_pruefeEingabeAdresseEmpfaenger(a3b_empfaengerTransaktion)] += 
                             a3b_betragTransaktion - a3b_gebuehrTransaktion;
@@ -1421,6 +1422,7 @@
                         a3b_tabelleAdressenKnotenNeuMitGuthaben();
                         var guthaben = 'guthaben' + document.getElementById('a3b_eingabeAuftraggeber').value;
                         document.getElementById(guthaben).classList.add('tabHervorgehoben');
+                        a3d_clear();
                     ">OK</button>
                 </div>
 
@@ -1460,7 +1462,8 @@
                     onclick="document.getElementById('a3c_hinterg1').style='visibility: visible; z-index: 101';">
                     Hintergrundwissen</button>
                 <button id="a3c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('3d')">weiter</button>
+                    onclick="oeffneAnimation('3d'); a3d_pruefeSignatur(a3b_hashTransaktion, a3c_idxAdresseSender); 
+                        a3d_tabelleTransaktion();">weiter</button>
                 <button id="a3c_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('3b'); a3b_tabelleAdressenKnotenNeuMitGuthaben();
                     ">zurück</button>
@@ -1561,22 +1564,26 @@
                             <th class="tabFeldTitel">als binäre Zahl</th>
                             <td id="a3c_binT1" class="tabFeld"></td>
                             <script>
-                                document.getElementById("a3c_binT1").innerHTML = umwandleHexInBin(a3c_hashTeil1);
+                                document.getElementById("a3c_binT1").innerHTML = 
+                                    ergaenzeNullen8(umwandleHexInBin(a3c_hashTeil1));
                                 document.getElementById("a3c_binT1").style.visibility = "hidden";
                             </script>
                             <td id="a3c_binT2" class="tabFeld"></td>
                             <script>
-                                document.getElementById("a3c_binT2").innerHTML = umwandleHexInBin(a3c_hashTeil2);
+                                document.getElementById("a3c_binT2").innerHTML = 
+                                    ergaenzeNullen8(umwandleHexInBin(a3c_hashTeil2));
                                 document.getElementById("a3c_binT2").style.visibility = "hidden";
                             </script>
                             <td id="a3c_binT3" class="tabFeld"></td>
                             <script>
-                                document.getElementById("a3c_binT3").innerHTML = umwandleHexInBin(a3c_hashTeil3);
+                                document.getElementById("a3c_binT3").innerHTML = 
+                                    ergaenzeNullen8(umwandleHexInBin(a3c_hashTeil3));
                                 document.getElementById("a3c_binT3").style.visibility = "hidden";
                             </script>
                             <td id="a3c_binT4" class="tabFeld"></td>
                             <script>
-                                document.getElementById("a3c_binT4").innerHTML = umwandleHexInBin(a3c_hashTeil4);
+                                document.getElementById("a3c_binT4").innerHTML = 
+                                    ergaenzeNullen8(umwandleHexInBin(a3c_hashTeil4));
                                 document.getElementById("a3c_binT4").style.visibility = "hidden";
                             </script>
                         </tr>
@@ -1696,6 +1703,303 @@
                 </script> <br>
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a3c_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>    
+        </div>
+
+<! Animation 3d -->
+
+        <div id="anim_3d" class="mitte animation">
+            <h1>Die Gültigkeit einer Transaktion wird von jedem Peer geprüft</h1>
+            <p>
+                Eine Transaktion wird an alle Peers geschickt. Jeder Peer überpfrüft, ob die eingegebenen Daten
+                korrekt sind. Wichtig ist vor allem, ob die angegebene Auftraggeber-Adresse tatsächlich im Besitz 
+                der Werte (in unserer Darstellung: der SiCs) ist, die überwiesen werden sollen, und ob die
+                Transaktion tatsächlich von der angegebenen Auftraggeber-Adresse gesendet wurde, wozu die digitale
+                Signatur überprüft wird.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="width: 55em; height: 38em;"></div>
+                <button id="a3d_hintergButton" class="animbutton" 
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a3d_hinterg1').style='visibility: visible; z-index: 111';">
+                    Hintergrundwissen</button>
+                <button id="a3d_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('3e')">weiter</button>
+                <button id="a3d_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('3c'); a3c_tabelleTransaktion();
+                    ">zurück</button>
+                <div id="a3d_tabelleTransaktion">
+                    <table class="tabelle tabTransaktion" style="position: absolute; top: 5em; left: 3em;">
+                        <tr>
+                            <th class="tabFeldTitel">Transaktionsdaten</th>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Auftraggeber-Adresse: <br>
+                                <span id="a3d_auftraggeber"></span>
+                                <script>
+                                    document.getElementById("a3d_auftraggeber").innerHTML = a3b_senderTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Empfänger-Adresse: <br>
+                                <span id="a3d_empfaenger"></span>
+                                <script>
+                                    document.getElementById("a3d_empfaenger").innerHTML = a3b_empfaengerTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zu überweisender Betrag: <br>
+                                <span id="a3d_betrag"></span>
+                                <script>
+                                    document.getElementById("a3d_betrag").innerHTML = a3b_betragTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Transaktionsgebühr: <br>
+                                <span id="a3d_gebuehr"></span>
+                                <script>
+                                    document.getElementById("a3d_gebuehr").innerHTML = a3b_gebuehrTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zeitstempel: <br>
+                                <span id="a3d_zeitstempel"></span>
+                                <script>
+                                    document.getElementById("a3d_zeitstempel").innerHTML = a3b_zeitTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td id="a3d_hashwertTabFeld"  class="tabFeld">
+                                Hashwert Transaktion: <br>
+                                <span id="a3d_hashwert" class="hash"></span>
+                                <script>
+                                    document.getElementById("a3d_hashwert").innerHTML = a3b_hashTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Digitale Signatur: <br>
+                                <span id="a3d_digitaleSignatur" class="signatur"></span>
+                                <script>
+                                    document.getElementById("a3d_digitaleSignatur").innerHTML = a3c_signaturTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+                <img id="a3d_haken1" src="img/haken.png" alt="Haken" 
+                    style="width: 2.5em; position: absolute; left: 20em; top: 5em; visibility: hidden;">
+                <div class="feld" style="position: absolute; left: 24em; top: 5em; width: 16em;">
+                    ... alle Daten korrekt eingegeben
+                </div>
+                <img id="a3d_haken2" src="img/haken.png" alt="Haken" 
+                    style="width: 2.5em; position: absolute; left: 20em; top: 8em; visibility: hidden;">
+                <div class="feld" style="position: absolute; left: 24em; top: 8em; width: 16em;">
+                    ... Konto Auftraggeber vorhanden
+                </div>
+                <img id="a3d_haken3" src="img/haken.png" alt="Haken" 
+                    style="width: 2.5em; position: absolute; left: 20em; top: 11em; visibility: hidden;">
+                <div class="feld" style="position: absolute; left: 24em; top: 11em; width: 16em;">
+                    ... Konto Empfänger vorhanden
+                </div>
+                <img id="a3d_haken4" src="img/haken.png" alt="Haken" 
+                    style="width: 2.5em; position: absolute; left: 20em; top: 14em; visibility: hidden;">
+                <img id="a3d_kreuz1" src="img/kreuz.png" alt="Kreuz" 
+                style="width: 2.5em; position: absolute; left: 20em; top: 14em; visibility: hidden;">
+                <div class="feld" style="position: absolute; left: 24em; top: 14em; width: 16em;">
+                    ... Betrag niedriger als Kontostand
+                </div>
+                <div id="a3d_zurueckgewieseneTrans" 
+                    style="position: absolute; left: 26.5em; top: 20.5em; visibility: hidden;">
+                    Transaktion zurückgewiesen
+                </div>
+                <div id="a3d_gueltigeTrans" style="position: absolute; left: 44em; top: 13.2em; visibility: hidden;">
+                    Transaktion gültig
+                </div>
+                <div>
+                    <table id="a3d_signaturTabelle" class="tabelle tabSignatur" 
+                        style="position: absolute; left: 19em; top: 19.7em; visibility: hidden;">
+                        <tr>
+                            <th id="a3d_digSigTitel" class="tabFeldTitel">Digitale Signatur</th>
+                            <td id="a3d_digSigT1" class="tabFeld signatur"></td>
+                            <script>
+                                document.getElementById("a3d_digSigT1").innerHTML = a3d_signaturTeil1;
+                            </script>
+                            <td id="a3d_digSigT2" class="tabFeld signatur"></td>
+                            <script>
+                                document.getElementById("a3d_digSigT2").innerHTML = a3d_signaturTeil2;
+                            </script>
+                            <td id="a3d_digSigT3" class="tabFeld signatur"></td>
+                            <script>
+                                document.getElementById("a3d_digSigT3").innerHTML = a3d_signaturTeil3;
+                            </script>
+                            <td id="a3d_digSigT4" class="tabFeld signatur"></td>
+                            <script>
+                                document.getElementById("a3d_digSigT4").innerHTML = a3d_signaturTeil4;
+                            </script>
+                        </tr>
+                        <tr>
+                            <th class="tabFeldTitel">entschlüsselt</th>
+                            <td id="a3d_dezT1" class="tabFeld"></td>
+                            <script>
+                                document.getElementById("a3d_dezT1").innerHTML = 
+                                    berechneSignatur(a3c_signaturTeil1, a3d_eKey, a3c_nKey);
+                                document.getElementById("a3d_dezT1").style.visibility = "hidden";
+                            </script>
+                            <td id="a3d_dezT2" class="tabFeld"></td>
+                            <script>
+                                document.getElementById("a3d_dezT2").innerHTML = 
+                                    berechneSignatur(a3c_signaturTeil2, a3d_eKey, a3c_nKey);
+                                document.getElementById("a3d_dezT2").style.visibility = "hidden";
+                            </script>
+                            <td id="a3d_dezT3" class="tabFeld"></td>
+                            <script>
+                                document.getElementById("a3d_dezT3").innerHTML = 
+                                    berechneSignatur(a3c_signaturTeil3, a3d_eKey, a3c_nKey);
+                                document.getElementById("a3d_dezT3").style.visibility = "hidden";
+                            </script>
+                            <td id="a3d_dezT4" class="tabFeld"></td>
+                            <script>
+                                document.getElementById("a3d_dezT4").innerHTML = 
+                                    berechneSignatur(a3c_signaturTeil4, a3d_eKey, a3c_nKey);
+                                document.getElementById("a3d_dezT4").style.visibility = "hidden";
+                            </script>
+                        </tr>
+                        <tr>
+                            <th class="tabFeldTitel">als binäre Zahl</th>
+                            <td id="a3d_binT1" class="tabFeld"></td>
+                            <script>
+                                document.getElementById("a3d_binT1").innerHTML = 
+                                    ergaenzeNullen8(umwandleDez(a3d_entschluesseltTeil1, 2));
+                                document.getElementById("a3d_binT1").style.visibility = "hidden";
+                            </script>
+                            <td id="a3d_binT2" class="tabFeld"></td>
+                            <script>
+                                document.getElementById("a3d_binT2").innerHTML = 
+                                ergaenzeNullen8(umwandleDez(a3d_entschluesseltTeil2, 2));
+                                document.getElementById("a3d_binT2").style.visibility = "hidden";
+                            </script>
+                            <td id="a3d_binT3" class="tabFeld"></td>
+                            <script>
+                                document.getElementById("a3d_binT3").innerHTML = 
+                                    ergaenzeNullen8(umwandleDez(a3d_entschluesseltTeil3, 2));
+                                document.getElementById("a3d_binT3").style.visibility = "hidden";
+                            </script>
+                            <td id="a3d_binT4" class="tabFeld"></td>
+                            <script>
+                                document.getElementById("a3d_binT4").innerHTML = 
+                                    ergaenzeNullen8(umwandleDez(a3d_entschluesseltTeil4, 2));
+                                document.getElementById("a3d_binT4").style.visibility = "hidden";
+                            </script>
+                        </tr>
+                        <tr>
+                            <th id="a3d_hashTitel" class="tabFeldTitel">Hashwert</th>
+                            <td id="a3d_hashT1" class="tabFeld hash"></td>
+                            <script>
+                                document.getElementById("a3d_hashT1").innerHTML = 
+                                    ergaenzeNullen2(umwandleDez(a3d_entschluesseltTeil1, 16));
+                                document.getElementById("a3d_hashT1").classList.add("tabHervorgehoben");
+                                document.getElementById("a3d_hashT1").style.visibility = "hidden";
+                            </script>
+                            <td id="a3d_hashT2" class="tabFeld hash"></td>
+                            <script>
+                                document.getElementById("a3d_hashT2").innerHTML = 
+                                    ergaenzeNullen2(umwandleDez(a3d_entschluesseltTeil2, 16));
+                                document.getElementById("a3d_hashT2").classList.add("tabHervorgehoben");
+                                document.getElementById("a3d_hashT2").style.visibility = "hidden";
+                            </script>
+                            <td id="a3d_hashT3" class="tabFeld hash"></td>
+                            <script>
+                                document.getElementById("a3d_hashT3").innerHTML = 
+                                    ergaenzeNullen2(umwandleDez(a3d_entschluesseltTeil3, 16));
+                                document.getElementById("a3d_hashT3").classList.add("tabHervorgehoben");
+                                document.getElementById("a3d_hashT3").style.visibility = "hidden";
+                            </script>
+                            <td id="a3d_hashT4" class="tabFeld hash"></td>
+                            <script>
+                                document.getElementById("a3d_hashT4").innerHTML = 
+                                    ergaenzeNullen2(umwandleDez(a3d_entschluesseltTeil4, 16));
+                                document.getElementById("a3d_hashT4").classList.add("tabHervorgehoben");
+                                document.getElementById("a3d_hashT4").style.visibility = "hidden";
+                            </script>
+                        </tr>
+                    </table>
+
+                </div>
+                <button id="a3d_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="a3d_pruefeTransaktion();
+                    ">Prüfe die Transaktion</button>
+                <button id="a3d_neustartButton" class="animbutton" 
+                    style="position: absolute; right: 2em; top: 1em; visibility: hidden;"
+                    onclick="a3d_clear();
+                        a3d_pruefeSignatur(a3b_hashTransaktion, a3c_idxAdresseSender);
+                        a3d_pruefeTransaktion();
+                        document.getElementById('a3d_neustartButton').style.visibility = 'hidden';
+                    ">Wiederhole die Prüfung der Transaktion</button>
+                <button id="a3d_buttonBerechnung1" class="animbutton" 
+                    style="position: absolute; left: 49.5em; top: 22.6em; visibility: hidden;"
+                    onclick="
+                        document.getElementById('a3d_dezT1').style.visibility = 'visible';
+                        document.getElementById('a3d_dezT2').style.visibility = 'visible';
+                        document.getElementById('a3d_dezT3').style.visibility = 'visible';
+                        document.getElementById('a3d_dezT4').style.visibility = 'visible';
+                        document.getElementById('a3d_buttonBerechnung1').style.visibility = 'hidden';
+                        document.getElementById('a3d_buttonBerechnung2').style.visibility = 'visible';
+                    ">Berechne</button>
+                <button id="a3d_buttonBerechnung2" class="animbutton" 
+                    style="position: absolute; left: 49.5em; top: 25.1em; visibility: hidden;"
+                    onclick="
+                        document.getElementById('a3d_binT1').style.visibility = 'visible';
+                        document.getElementById('a3d_binT2').style.visibility = 'visible';
+                        document.getElementById('a3d_binT3').style.visibility = 'visible';
+                        document.getElementById('a3d_binT4').style.visibility = 'visible';
+                        document.getElementById('a3d_buttonBerechnung2').style.visibility = 'hidden';
+                        document.getElementById('a3d_buttonBerechnung3').style.visibility = 'visible';
+                    ">Berechne</button>
+                <button id="a3d_buttonBerechnung3" class="animbutton" 
+                    style="position: absolute; left: 49.5em; top: 27.6em; visibility: hidden;"
+                    onclick="
+                        document.getElementById('a3d_hashT1').style.visibility = 'visible';
+                        document.getElementById('a3d_hashT2').style.visibility = 'visible';
+                        document.getElementById('a3d_hashT3').style.visibility = 'visible';
+                        document.getElementById('a3d_hashT4').style.visibility = 'visible';
+                        document.getElementById('a3d_hashTitel').classList.add('tabHervorgehoben');
+                        document.getElementById('a3d_hashwertTabFeld').classList.add('tabHervorgehoben');
+                        document.getElementById('a3d_buttonBerechnung3').style.visibility = 'hidden';
+                        document.getElementById('a3d_gueltigeTrans').style.visibility = 'visible';
+                        document.getElementById('a3d_neustartButton').style.visibility = 'visible';
+                        document.getElementById('a3d_infoimg1').style = 
+                            'position: absolute; left: 32em; top: 32em; visibility: visible;';
+                        document.getElementById('a3d_hintergButton').style = 
+                            'position: absolute; left: 2em; top: 34.5em; visibility: visible;';
+                    ">Berechne</button>
+                <img id="a3d_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a3d_info1').style='visibility: visible; z-index: 112;'">                    
+            </div>
+            <div id="a3d_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a3d_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a3d_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a3d_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a3d_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a3d_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>    
         </div>
 

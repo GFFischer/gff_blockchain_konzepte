@@ -356,3 +356,9 @@ var a3c_signaturTeil3 = berechneSignatur(umwandleInDez(a3c_hashTeil3, 16), a3c_d
 var a3c_signaturTeil4 = berechneSignatur(umwandleInDez(a3c_hashTeil4, 16), a3c_dKey, a3c_nKey);
 var a3c_signaturTransaktion = a3c_signaturTeil1 + " " + a3c_signaturTeil2 + " " + a3c_signaturTeil3 
     + " " + a3c_signaturTeil4;
+
+var a3d_eKey = adressenAuswahl[indizesFuerAdressen[0]].e;
+var a3d_entschluesseltTeil1 = berechneSignatur(a3c_signaturTeil1, a3d_eKey, a3c_nKey);
+var a3d_entschluesseltTeil2 = berechneSignatur(a3c_signaturTeil2, a3d_eKey, a3c_nKey);
+var a3d_entschluesseltTeil3 = berechneSignatur(a3c_signaturTeil3, a3d_eKey, a3c_nKey);
+var a3d_entschluesseltTeil4 = berechneSignatur(a3c_signaturTeil4, a3d_eKey, a3c_nKey);
