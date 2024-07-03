@@ -357,6 +357,9 @@ Variablen:
   *indizesFuerAdressen*.
 * **a4a_signaturTeil1** bis **a4a_signaturTeil4**: die vier Variablen beinhalten die vier Teile der digitalen Signatur der Transaktion,
   berechnet mit der Funktion *berechneSignatur()*.
+* **a4a_signaturTransaktion**: <br>
+  beinhaltet die Werte, die in den Variablen *a4a_signaturTeil1* bis *a4a_signaturTeil4* gespeichert sind, zusammengefasst in einem
+  String, jeweils getrennt durch ein Leerzeichen.
 * **a4a_referenz45**: beinhaltet die Konkatenation der Variablen *a3b_hashTransaktion* + " " + *a4a_hashTransaktion*.
 * **a4a_hashReferenz45**: beinhaltet den Hashwert der beiden Hash-Referenzen, berechnet mit der Funktion *berechneHash()* auf den
   String in der Variable *a4a_referenz45*.
@@ -536,6 +539,10 @@ Konkret handelt es sich um folgende Funktionen:
   verschlüsselt diese mit der Funktion *a3c_berechneSignatur()*. Für die Werte des privaten Schlüssels (d, n) bekommt die
   Funktion einen Index (ganze Zahl von 0 bis 2) übergeben (*idxAdresse*), mit dem aus dem Array *adressenAuswahl* die
   Werte für d und n ausgewählt werden.
+* **a3c_clear**() <br>
+  Diese Funktion bewirkt, dass die Ansicht von Animation 3c wieder auf die Anfangswerte zurückgesetzt wird. Sie wird
+  ausgeführt, wenn in Animation 3b die Daten für eine neue oder veränderte Transaktion mit "OK" im zweiten Formular
+  bestätigt werden.
 * **a3d_tabelleTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
   eingegeben hat (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche
@@ -564,10 +571,13 @@ Konkret handelt es sich um folgende Funktionen:
 * **a4a_datenTransaktion**() <br/>
   Neu generiert wird der html-Code für die Daten in der Tabelle der Transaktion, welche der User in der Animation 3b
   eingegeben hat (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche
-  automatisch vergeben worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*) oder bei
-  der Prüfung der Transaktion in Animation 3d geändert worden sind (Variable *a3b_betragTransaktion*). Ebenso generiert
-  wird der Inhalt der Tabelle, in der aus den Hash-Referenzen der beiden angezeigten Transaktionen eine neue Hash-Referenz
+  automatisch vergeben worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*). Ebenso
+  generiert wird der Inhalt der Tabelle, in der aus den Hash-Referenzen der beiden angezeigten Transaktionen eine neue Hash-Referenz
   als deren Verknüfung angezeigt wird (Variablen *a4a_referenz45, a4a_hashReferenz45*).
+* **a4a_bewegteReferenzen**() <br>
+  Mit dieser Funktion wird die Animation, d.h. die Bewegung der Hash-Referenzen der Transaktionen aus den Tabellen der
+  Transaktionen heraus, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch, Neustart,
+  Unterbrechung und Fortsetzung der Animation notwendig ist.
 * **a4bc_datenMerkleTree**() <br/>
   Neu generiert wird der html-Code für die Tabelle der Transaktion, welche der User in der Animation 3b eingegeben hat
   (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche automatisch vergeben
