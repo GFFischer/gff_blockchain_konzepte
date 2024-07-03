@@ -357,6 +357,9 @@ Variablen:
   *indizesFuerAdressen*.
 * **a4a_signaturTeil1** bis **a4a_signaturTeil4**: die vier Variablen beinhalten die vier Teile der digitalen Signatur der Transaktion,
   berechnet mit der Funktion *berechneSignatur()*.
+* **a4a_signaturTransaktion**: <br>
+  beinhaltet die Werte, die in den Variablen *a4a_signaturTeil1* bis *a4a_signaturTeil4* gespeichert sind, zusammengefasst in einem
+  String, jeweils getrennt durch ein Leerzeichen.
 * **a4a_referenz45**: beinhaltet die Konkatenation der Variablen *a3b_hashTransaktion* + " " + *a4a_hashTransaktion*.
 * **a4a_hashReferenz45**: beinhaltet den Hashwert der beiden Hash-Referenzen, berechnet mit der Funktion *berechneHash()* auf den
   String in der Variable *a4a_referenz45*.
