@@ -574,6 +574,10 @@ Konkret handelt es sich um folgende Funktionen:
   automatisch vergeben worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*). Ebenso
   generiert wird der Inhalt der Tabelle, in der aus den Hash-Referenzen der beiden angezeigten Transaktionen eine neue Hash-Referenz
   als deren Verknüfung angezeigt wird (Variablen *a4a_referenz45, a4a_hashReferenz45*).
+* **a4a_bewegteReferenzen**() <br>
+  Mit dieser Funktion wird die Animation, d.h. die Bewegung der Hash-Referenzen der Transaktionen aus den Tabellen der
+  Transaktionen heraus, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch, Neustart,
+  Unterbrechung und Fortsetzung der Animation notwendig ist.
 * **a4bc_datenMerkleTree**() <br/>
   Neu generiert wird der html-Code für die Tabelle der Transaktion, welche der User in der Animation 3b eingegeben hat
   (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche automatisch vergeben
