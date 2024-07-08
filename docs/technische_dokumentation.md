@@ -796,6 +796,9 @@ werden.
 * **.tabTransaktion**: <br>
   Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der die
   Daten einer Transaktion angezeigt werden, bestimmt.
+* **.4bc_tabTransaktion**: <br>
+  Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten der Tabellen, mit der die Daten einer Transaktion
+  angezeigt werden, speziell für die Animationen a4b und a4c, wo eine kleinere Darstellung notwendig ist, bestimmt.
 * **.tabFremdeAdressen**: <br>
   Als Ergänzung zur Klasse *.tabelle* werden hier die Besonderheiten wie z.B. die Breite (*width*) der Tabelle, mit der die
   Adressen der fremden Knoten angezeigt werden, bestimmt.
@@ -821,6 +824,9 @@ werden.
 * **.feld**: <br>
   Diese Klasse regelt die Formatierung derjenigen Elemente in den Animationen, die aussehen wie eine lediglich aus einem einzigen
   Feld bestehende Tabelle (ähnlich wie ein Block mit weissem Hintergrund und schwarzem Rahmen).
+* **.a4bc_feld**: <br>
+  Diese Klasse regelt die Formatierung der verkleinerten Darstellung derjeniger Elemente in den Animationen a4b und a4c, die
+  aussehen wie eine lediglich aus einem einzigen Feld bestehende Tabelle.
 * **.geaenderterWert**: <br>
   Diese Klasse dient dazu, die Felder, welche sich in der Animation 4c verändern können, durch eine gesonderte Formatierung
   hervorzuheben.
