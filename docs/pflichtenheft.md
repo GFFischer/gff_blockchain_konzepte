@@ -757,7 +757,7 @@ Für alle User gilt die Voraussetzung, dass sie der deutschen Sprache mächtig s
   Transaktionsdaten, ausgenommen jene, die der User schon irgendwann im Verlaufe der laufenden Verwendung der Applikation
   in einer der Animationen eingegeben hat. Herausgehoben sind die Hash-Referenzen auf diese Transaktionen. Neben diesen
   Tabellen befinden sich zwei weitere Transaktionen ohne konkrete Daten aber mit herausgehobenen Hash-Referenzen (siehe
-  folgende schematische Darstellung).
+  folgende schematische Darstellung).*
 
 ![Diagram](img/animation_4b_01.svg)
 
