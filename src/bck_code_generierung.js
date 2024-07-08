@@ -687,7 +687,6 @@ async function a4a_bewegteReferenzen() {
         document.getElementById("a4a_unterbrechung").style = 
             "position: absolute; right: 13.3em; top: 1em; visibility: visible";
         document.getElementById("a4a_abbruch").style="position: absolute; right: 2em; top: 1em; visibility: visible";
-        document.getElementById("a4a_fortsetzung").style="visibility: visible";
         document.getElementById("a4a_neustart").style="visibility: hidden";
         document.getElementById("a4a_infoimg1").style="visibility:hidden";
         document.getElementById("a4a_hintergButton").style ="visibility: hidden";

@@ -391,3 +391,21 @@ var a4a_signaturTransaktion = a4a_signaturTeil1 + " " + a4a_signaturTeil2 + " " 
     + " " + a4a_signaturTeil4;
 var a4a_referenz45 = a3b_hashTransaktion + " " + a4a_hashTransaktion;
 var a4a_hashReferenz45 = berechneHash(a4a_referenz45);
+
+var a4b_referenz6 = berechneHash("Transaktion 6" + zeitstempel());
+var a4b_referenz7 = berechneHash("Transaktion 7" + zeitstempel());
+var a4b_referenz8 = berechneHash("Transaktion 8" + zeitstempel());
+var a4b_referenz9 = berechneHash("Transaktion 9" + zeitstempel());
+var a4b_referenzA = berechneHash("Transaktion a" + zeitstempel());
+var a4b_referenzB = berechneHash("Transaktion b" + zeitstempel());
+var a4b_hashReferenz67 = berechneHash(a4b_referenz6 + a4b_referenz7);
+var a4b_hashReferenz89 = berechneHash(a4b_referenz8 + a4b_referenz9);
+var a4b_hashReferenzAB = berechneHash(a4b_referenzA + a4b_referenzB);
+var a4b_hashReferenz0123 = berechneHash("Referenz 0123" + zeitstempel());
+var a4b_hashReferenz4567 = berechneHash(a4a_hashReferenz45 + a4b_hashReferenz67);
+var a4b_hashReferenz89AB = berechneHash(a4b_hashReferenz89 + a4b_hashReferenzAB);
+var a4b_hashReferenzCDEF = berechneHash("Referenz cdef" + zeitstempel());
+var a4b_hashBlock1 = berechneHash("Genesis-Block" + zeitstempel());
+var a4b_hashBlock2 = berechneHash(a4b_hashBlock1 + a4b_hashReferenz4567);
+var a4b_hashBlock3 = berechneHash(a4b_hashBlock2 + a4b_hashReferenz89AB);
+var a4b_hashBlock4 = berechneHash(a4b_hashBlock3 + a4b_hashReferenzCDEF);

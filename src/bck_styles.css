@@ -391,6 +391,11 @@ input:focus, select:focus, textarea:focus, button:focus {
     vertical-align: middle;
 }
 
+.a4bc_block {
+    font-size: 80%;
+    line-height: 125%;
+}
+
 .blockinhalt {
     width: 80%;
     padding: 0.5em;
@@ -477,6 +482,12 @@ input:focus, select:focus, textarea:focus, button:focus {
     width: 14em;
 }
 
+.a4bc_tabTransaktion {
+    width: 13.5em;
+    font-size: 80%;
+    line-height: 125%;
+}
+
 .tabFremdeAdressen {
     width: 18em;
 }
@@ -545,6 +556,17 @@ input:focus, select:focus, textarea:focus, button:focus {
     border-color: black;
     text-align: center;
     padding: 0.3em 1em;
+}
+
+.a4bc_feld {
+    background-color: white;
+    border-width: thin;
+    border-style: solid;
+    border-color: black;
+    font-size: 80%;
+    line-height: 125%;
+    text-align: center;
+    padding: 0.4em;
 }
 
 .geaendeter Wert {

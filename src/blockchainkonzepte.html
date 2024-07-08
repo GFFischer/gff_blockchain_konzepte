@@ -2272,5 +2272,467 @@
             </div>    
         </div>
 
+<! Animation 4b -->
+
+        <div id="anim_4b" class="mitte animation">
+            <h1>Verknüpfte Transaktionen werden in einem Block zusammengefasst</h1>
+            <p>
+                Mehrere Transaktionen werden über ihre Hash-Referenzen in einer Baum-Struktur miteinander verbunden.
+                Der Hashwert, der die Wurzel dieses Baumes bildet, wird zur Hash-Referenz auf den Inhalt eines Blocks
+                in der Blockchain.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="width: 75em; height: 55em;"></div>
+                <button id="a4b_hintergButton" class="animbutton" 
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a4b_hinterg1').style='visibility: visible; z-index: 131';">
+                    Hintergrundwissen</button>
+                <button id="a4b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('4c');">weiter</button>
+                <button id="a4b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('4a'); a4a_datenTransaktion();
+                    ">zurück</button>
+                <div id="a4b_tabelleTransaktion4">
+                    <table class="tabelle a4bc_tabTransaktion" style="position: absolute; top: 40em; left: 3em;">
+                        <tr>
+                            <th class="tabFeldTitel">Transaktion 4</th>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Auftraggeber-Adresse: <br>
+                                <span id="a4b_auftraggeber4"></span>
+                                <script>
+                                    document.getElementById("a4b_auftraggeber4").innerHTML = a3b_senderTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Empfänger-Adresse: <br>
+                                <span id="a4b_empfaenger4"></span>
+                                <script>
+                                    document.getElementById("a4b_empfaenger4").innerHTML = a3b_empfaengerTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zu überweisender Betrag: <br>
+                                <span id="a4b_betrag4"></span>
+                                <script>
+                                    document.getElementById("a4b_betrag4").innerHTML = a3b_betragTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Transaktionsgebühr: <br>
+                                <span id="a4b_gebuehr4"></span>
+                                <script>
+                                    document.getElementById("a4b_gebuehr4").innerHTML = a3b_gebuehrTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zeitstempel: <br>
+                                <span id="a4b_zeitstempel4"></span>
+                                <script>
+                                    document.getElementById("a4b_zeitstempel4").innerHTML = a3b_zeitTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Hashwert Transaktion: <br>
+                                <span id="a4b_hashwert4" class="hash"></span>
+                                <script>
+                                    document.getElementById("a4b_hashwert4").innerHTML = a3b_hashTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Digitale Signatur: <br>
+                                <span id="a4b_digitaleSignatur4" class="signatur" style="font-size: 120%;"></span>
+                                <script>
+                                    document.getElementById("a4b_digitaleSignatur4").innerHTML = a3c_signaturTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+                <div id="a4b_tabelleTransaktion5">
+                    <table class="tabelle a4bc_tabTransaktion" style="position: absolute; top: 40em; left: 17em;">
+                        <tr>
+                            <th class="tabFeldTitel">Transaktion 5</th>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Auftraggeber-Adresse: <br>
+                                <span id="a4b_auftraggeber5"></span>
+                                <script>
+                                    document.getElementById("a4b_auftraggeber5").innerHTML = a4a_senderTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Empfänger-Adresse: <br>
+                                <span id="a4b_empfaenger5"></span>
+                                <script>
+                                    document.getElementById("a4b_empfaenger5").innerHTML = a4a_empfaengerTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zu überweisender Betrag: <br>
+                                <span id="a4b_betrag5"></span>
+                                <script>
+                                    document.getElementById("a4b_betrag5").innerHTML = a4a_betragTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Transaktionsgebühr: <br>
+                                <span id="a4b_gebuehr5"></span>
+                                <script>
+                                    document.getElementById("a4b_gebuehr5").innerHTML = a4a_gebuehrTransaktion + " SiC";
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Zeitstempel: <br>
+                                <span id="a4b_zeitstempel5"></span>
+                                <script>
+                                    document.getElementById("a4b_zeitstempel5").innerHTML = a4a_zeitTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Hashwert Transaktion: <br>
+                                <span id="a4b_hashwert5" class="hash"></span>
+                                <script>
+                                    document.getElementById("a4b_hashwert5").innerHTML = a4a_hashTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tabFeld">
+                                Digitale Signatur: <br>
+                                <span id="a4b_digitaleSignatur5" class="signatur" style="font-size: 120%;"></span>
+                                <script>
+                                    document.getElementById("a4b_digitaleSignatur5").innerHTML = a4a_signaturTransaktion;
+                                </script>
+                            </td>
+                        </tr>
+                    </table>    
+                </div>
+                <div id="a4b_feldHashRef4" class="a4bc_feld" 
+                    style="position: absolute; top: 34.7em; left: 3.75em;">
+                    <b>Referenz 4:</b> <span id="a4b_hashTrans4" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans4").innerHTML = a3b_hashTransaktion;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef5" class="a4bc_feld" 
+                    style="position: absolute; top: 34.7em; left: 17.75em;">
+                    <b>Referenz 5:</b> <span id="a4b_hashTrans5" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans5").innerHTML = a4a_hashTransaktion;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef6" class="a4bc_feld" 
+                    style="position: absolute; top: 34.7em; left: 31em;">
+                    <b>R 6:</b> <span id="a4b_hashTrans6" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans6").innerHTML = a4b_referenz6;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef7" class="a4bc_feld" 
+                    style="position: absolute; top: 34.7em; left: 40.5em;">
+                    <b>R 7:</b> <span id="a4b_hashTrans7" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans7").innerHTML = a4b_referenz7;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef8" class="a4bc_feld" 
+                    style="position: absolute; top: 34.7em; left: 50em;">
+                    <b>R 8:</b> <span id="a4b_hashTrans8" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans8").innerHTML = a4b_referenz8;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef9" class="a4bc_feld" 
+                    style="position: absolute; top: 34.7em; left: 59.5em;">
+                    <b>R 9:</b> <span id="a4b_hashTrans9" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans9").innerHTML = a4b_referenz9;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRefA" class="a4bc_feld" 
+                    style="position: absolute; top: 34.7em; left: 69em;">
+                    <b>R a:</b> <span id="a4b_hashTransA" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTransA").innerHTML = a4b_referenzA;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRefB" class="a4bc_feld" 
+                    style="position: absolute; top: 34.7em; left: 78.5em;">
+                    <b>R b:</b> <span id="a4b_hashTransB" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTransB").innerHTML = a4b_referenzB;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef45" class="a4bc_feld" 
+                    style="position: absolute; top: 29.5em; left: 10em;">
+                    <b>Referenz 45:</b> <span id="a4b_hashTrans45" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans45").innerHTML = a4a_hashReferenz45;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef67" class="a4bc_feld" 
+                    style="position: absolute; top: 29.5em; left: 33.6em;">
+                    <b>Referenz 67:</b> <span id="a4b_hashTrans67" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans67").innerHTML = a4b_hashReferenz67;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef89" class="a4bc_feld" 
+                    style="position: absolute; top: 29.5em; left: 52.5em;">
+                    <b>Referenz 89:</b> <span id="a4b_hashTrans89" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans89").innerHTML = a4b_hashReferenz89;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRefAB" class="a4bc_feld" 
+                    style="position: absolute; top: 29.5em; left: 71.7em;">
+                    <b>Referenz ab:</b> <span id="a4b_hashTransAB" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTransAB").innerHTML = a4b_hashReferenzAB;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef0123" class="a4bc_feld" 
+                    style="position: absolute; top: 24.3em; left: 3em;">
+                    <b>Referenz 0123:</b> <span id="a4b_hashTrans0123" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans0123").innerHTML = a4b_hashReferenz0123;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef4567" class="a4bc_feld" 
+                    style="position: absolute; top: 24.3em; left: 21.2em;">
+                    <b>Referenz 4567:</b> <span id="a4b_hashTrans4567" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans4567").innerHTML = a4b_hashReferenz4567;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRef89AB" class="a4bc_feld" 
+                    style="position: absolute; top: 24.3em; left: 61.3em;">
+                    <b>Referenz 89ab:</b> <span id="a4b_hashTrans89AB" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTrans89AB").innerHTML = a4b_hashReferenz89AB;
+                    </script>
+                </div>
+                <div id="a4b_feldHashRefDCEF" class="a4bc_feld" 
+                    style="position: absolute; top: 24.3em; left: 79.5em;">
+                    <b>Referenz cdef:</b> <span id="a4b_hashTransCDEF" class="hash"></span>
+                    <script>
+                        document.getElementById("a4b_hashTransCDEF").innerHTML = a4b_hashReferenzCDEF;
+                    </script>
+                </div>
+                <div id="a4b_block1" class="block a4bc_block" 
+                    style="position: absolute; left: 3.7em; top: 6em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a4b_block1Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block1Hash").innerHTML = a4b_hashBlock1;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hashwert vorheriger Block:
+                        <span class="hash" style="font-size: 100%;">"Genesis-Block"</span>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hash-Referenz Inhalt:
+                        <span id="a4b_block1HashRef" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block1HashRef").innerHTML = a4b_hashReferenz0123;
+                        </script>
+                    </div>
+                </div>
+                <div id="a4b_block2" class="block a4bc_block" 
+                    style="position: absolute; left: 22.2em; top: 6em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a4b_block2Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block2Hash").innerHTML = a4b_hashBlock2;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hashwert vorheriger Block:
+                        <span id="a4b_block2VorhBlock" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block2VorhBlock").innerHTML = a4b_hashBlock1;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hash-Referenz Inhalt:
+                        <span id="a4b_block2HashRef" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block2HashRef").innerHTML = a4b_hashReferenz4567;
+                        </script>
+                    </div>
+                </div>
+                <div id="a4b_block3" class="block a4bc_block" 
+                    style="position: absolute; left: 62.4em; top: 6em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a4b_block3Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block3Hash").innerHTML = a4b_hashBlock3;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hashwert vorheriger Block:
+                        <span id="a4b_block3VorhBlock" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block3VorhBlock").innerHTML = a4b_hashBlock2;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hash-Referenz Inhalt:
+                        <span id="a4b_block3HashRef" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block3HashRef").innerHTML = a4b_hashReferenz89AB;
+                        </script>
+                    </div>
+                </div>
+                <div id="a4b_block4" class="block a4bc_block" 
+                    style="position: absolute; left: 80.2em; top: 6em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a4b_block4Hash" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block4Hash").innerHTML = a4b_hashBlock4;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hashwert vorheriger Block:
+                        <span id="a4b_block4VorhBlock" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block4VorhBlock").innerHTML = a4b_hashBlock3;
+                        </script>
+                    </div>
+                    <div class="block blockinhalt">
+                        Hash-Referenz Inhalt:
+                        <span id="a4b_block4HashRef" class="hash"></span>
+                        <script>
+                            document.getElementById("a4b_block4HashRef").innerHTML = a4b_hashReferenzCDEF;
+                        </script>
+                    </div>
+                </div>
+                <div class="a4bc_feld" style="position: absolute; left: 31.25em; top: 40em;"><b>Transaktion 6</b></div>
+                <div class="a4bc_feld" style="position: absolute; left: 40.85em; top: 40em;"><b>Transaktion 7</b></div>
+                <div class="a4bc_feld" style="position: absolute; left: 50.45em; top: 40em;"><b>Transaktion 8</b></div>
+                <div class="a4bc_feld" style="position: absolute; left: 60.05em; top: 40em;"><b>Transaktion 9</b></div>
+                <div class="a4bc_feld" style="position: absolute; left: 69.65em; top: 40em;"><b>Transaktion a</b></div>
+                <div class="a4bc_feld" style="position: absolute; left: 79.25em; top: 40em;"><b>Transaktion b</b></div>
+                <img id="a4b_pfeil01" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 29.4em; left: 7.5em; height: 3em;">
+                <img id="a4b_pfeil02" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 29.4em; left: 18.7em; height: 3em;">
+                <img id="a4b_pfeil03" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 29.4em; left: 27.75em; height: 3em;">
+                <img id="a4b_pfeil04" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 29.4em; left: 35.4em; height: 3em;">
+                <img id="a4b_pfeil05" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 29.4em; left: 43.05em; height: 3em;">
+                <img id="a4b_pfeil06" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 29.4em; left: 50.7em; height: 3em;">
+                <img id="a4b_pfeil07" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 29.4em; left: 58.35em; height: 3em;">
+                <img id="a4b_pfeil08" src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 29.4em; left: 66em; height: 3em;">
+                <img id="a4b_pfeil11" src="img/pfeil_ref_zu_ref_links_2.png" alt="Pfeil"
+                    style="position: absolute; top: 25.1em; left: 8em; height: 2.7em; width: 5.7em;">
+                <img id="a4b_pfeil12" src="img/pfeil_ref_zu_ref_rechts_2.png" alt="Pfeil"
+                    style="position: absolute; top: 25.1em; left: 13.3em; height: 2.7em; width: 5.7em;">
+                <img id="a4b_pfeil13" src="img/pfeil_ref_zu_ref_links_3.png" alt="Pfeil"
+                    style="position: absolute; top: 25.1em; left: 28.2em; height: 2.7em; width: 4em;">
+                <img id="a4b_pfeil14" src="img/pfeil_ref_zu_ref_rechts_3.png" alt="Pfeil"
+                    style="position: absolute; top: 25.1em; left: 31.8em; height: 2.7em; width: 4em;">
+                <img id="a4b_pfeil15" src="img/pfeil_ref_zu_ref_links_3.png" alt="Pfeil"
+                    style="position: absolute; top: 25.1em; left: 43.5em; height: 2.7em; width: 4em;">
+                <img id="a4b_pfeil16" src="img/pfeil_ref_zu_ref_rechts_3.png" alt="Pfeil"
+                    style="position: absolute; top: 25.1em; left: 47.1em; height: 2.7em; width: 4em;">
+                <img id="a4b_pfeil17" src="img/pfeil_ref_zu_ref_links_3.png" alt="Pfeil"
+                    style="position: absolute; top: 25.1em; left: 58.8em; height: 2.7em; width: 4em;">
+                <img id="a4b_pfeil18" src="img/pfeil_ref_zu_ref_rechts_3.png" alt="Pfeil"
+                    style="position: absolute; top: 25.1em; left: 62.4em; height: 2.7em; width: 4em;">
+                <img id="a4b_pfeil21" src="img/pfeil_ref_zu_ref_links_4.png" alt="Pfeil"
+                    style="position: absolute; top: 21.05em; left: 13.5em; height: 2.6em; width: 9.5em;">
+                <img id="a4b_pfeil22" src="img/pfeil_ref_zu_ref_rechts_4.png" alt="Pfeil"
+                    style="position: absolute; top: 21.05em; left: 22.6em; height: 2.6em; width: 9.5em;">
+                <img id="a4b_pfeil23" src="img/pfeil_ref_zu_ref_links.png" alt="Pfeil"
+                    style="position: absolute; top: 21.05em; left: 47.1em; height: 3em; width: 8em;">
+                <img id="a4b_pfeil24" src="img/pfeil_ref_zu_ref_rechts.png" alt="Pfeil"
+                    style="position: absolute; top: 21.05em; left: 54.7em; height: 3em; width: 8em;">
+                <img id="a4b_pfeil31" src="img/pfeil_header_zu_inhalt_2.png" alt="Pfeil"
+                    style="position: absolute; top: 16.1em; left: 7.5em; height: 3.7em;">
+                <img id="a4b_pfeil32" src="img/pfeil_header_zu_inhalt_2.png" alt="Pfeil"
+                    style="position: absolute; top: 16.1em; left: 22.4em; height: 3.7em;">
+                <img id="a4b_pfeil33" src="img/pfeil_header_zu_inhalt_2.png" alt="Pfeil"
+                    style="position: absolute; top: 16.1em; left: 54.5em; height: 3.7em;">
+                <img id="a4b_pfeil34" src="img/pfeil_header_zu_inhalt_2.png" alt="Pfeil"
+                    style="position: absolute; top: 16.1em; left: 68.8em; height: 3.7em;">
+                <img id="a4b_pfeil41" src="img/pfeil_bloecke_verbinden_2.png" alt="Pfeil"
+                    style="position: absolute; top: 7em; left: 12.25em; height: 5.2em; width: 6.6em;">
+                <img id="a4b_pfeil42" src="img/pfeil_bloecke_verbinden_2.png" alt="Pfeil"
+                    style="position: absolute; top: 7em; left: 59.2em; height: 5.2em; width: 6.05em;">
+                <img id="a4b_pfeil43" src="img/pfeil_bloecke_verbinden_3.png" alt="Pfeil"
+                    style="position: absolute; top: 7em; left: 27.05em; height: 5.2em; width: 24em;">
+                <button id="a4b_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="
+                        document.getElementById('a4b_hintergButton').style='visibility: hidden';
+                        document.getElementById('a4b_unterbrechung').style = 
+                            'position: absolute; right: 13.3em; top: 1em; visibility: visible'
+                        document.getElementById('a4b_abbruch').style =
+                            'position: absolute; right: 2em; top: 1em; visibility: visible';
+                        document.getElementById('a4b_startButton').style='visibility: hidden';
+                        "
+                    >Starte Animation</button>
+                <button id="a4b_neustart" class="animbutton" style="visibility: hidden;"
+                    >Animation neu starten</button>
+                <button id="a4b_unterbrechung" class="animbutton" style="visibility: hidden;"
+                    >Animation unterbrechen</button>
+                <button id="a4b_fortsetzung" class="animbutton" style="visibility: hidden;"
+                    >Animation fortsetzen</button>
+                <button id="a4b_abbruch" class="animbutton" style="visibility: hidden;"
+                    >Animation abbrechen</button>
+                <img id="a4b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a4b_info1').style='visibility: visible; z-index: 132;'">                    
+            </div>
+            <div id="a4b_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a4b_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a4b_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a4b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a4b_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a4b_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>    
+        </div>
+
     </body>
 </html>
