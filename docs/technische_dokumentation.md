@@ -761,6 +761,9 @@ werden.
   Applikation.
 * **.block**: <br>
   Diese Klasse regelt die Formatierung der Elemente, die in verschiedenen Animationen die Blöcke einer Blockchain darstellen.
+* **.a4bc_block**: <br>
+  Diese Klasse ergänzt die Klasse *.block* für die Animationen 4b und 4c und regelt, dass in diesen Animationen verkleinerte
+  Darstellungen der Blöcke angezeigt werden.
 * **.blockinhalt**: <br>
   Diese Klasse ergänzt die Klasse *.block* und ist für die Elemente, die innerhalb eines dargestellten Blocks ala Elemente dieses
   Blocks angezeigt werden. Dabei wird v.a. die Eigenschaft *width* auf *80%* gesetzt.
