@@ -374,7 +374,7 @@ Variablen:
   *a4b_referenzB* berechneten Hashwert.
 * **a4b_hashReferenz0123**: beinhaltet einen Hashwert, berechnet mit der Funktion *berechneHash()* auf einen String "Referenz 0123" +
   den von der Funktion *zeitstempel()* zurückgegebenen Wert.
-* **a4b_hashReferenz4567**: beinhaltet den mit der Funktion *berechneHash()* auf die Konkatenation der Variablen *a4b_hashReferenz45* +
+* **a4b_hashReferenz4567**: beinhaltet den mit der Funktion *berechneHash()* auf die Konkatenation der Variablen *a4a_hashReferenz45* +
   " " + *a4b_referenz67* berechneten Hashwert.
 * **a4b_hashReferenz89AB**: beinhaltet den mit der Funktion *berechneHash()* auf die Konkatenation der Variablen *a4b_hashReferenz89* +
   " " + *a4b_referenzAB* berechneten Hashwert.
