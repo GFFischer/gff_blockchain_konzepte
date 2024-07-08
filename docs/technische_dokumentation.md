@@ -578,14 +578,15 @@ Konkret handelt es sich um folgende Funktionen:
   Mit dieser Funktion wird die Animation, d.h. die Bewegung der Hash-Referenzen der Transaktionen aus den Tabellen der
   Transaktionen heraus, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch, Neustart,
   Unterbrechung und Fortsetzung der Animation notwendig ist.
-* **a4bc_datenMerkleTree**() <br/>
+* **a4b_datenMerkleTree**() <br/>
   Neu generiert wird der html-Code für die Tabelle der Transaktion, welche der User in der Animation 3b eingegeben hat
   (Variablen *a3b_senderTransaktion, a3b_empfaengerTransaktion, a3b_betragTransaktion*) bzw. welche automatisch vergeben
-  worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion*) oder bei der Prüfung der
-  Transaktion in Animation 3d geändert worden sind (Variable *a3b_betragTransaktion*). Ebenso generiert wird der html-Code
-  für sämtliche Hash-Referenzen, die am Ende der Animation im dargestellten Merkle-Tree und in den dargestellten Blöcken der
-  Blockchain angezeigt werden und die von den Eingaben in den Animationen 3b und 3d abhängig sind. (Diese Funktion wird auch
-  zu Beginn der Animation 4c ausgeführt.)
+  worden sind (Variablen *a3b_gebuehrTransaktion, a3b_zeitTransaktion, a3b_hashTransaktion, a3c_signaturTransaktion*).
+  Ebenso generiert wird der html-Code für sämtliche Hash-Referenzen, die am Ende der Animation im dargestellten
+  Merkle-Tree und in den dargestellten Blöcken der Blockchain angezeigt werden und die von den Eingaben in Animationen 3b
+  sind.
+* **a4c_datenMerkleTree**() <br/>
+  Diese Funktion macht das gleiche wie die Funktion *a4b_datenMerkleTree()*, allerdings für die Darstellung in Animation 3c.
 * **a4c_aendereDaten**() <br/>
   Neu generiert werden während der Ausführung der Animation 4c jene Daten der Transaktionen, die der User über das Formular
   verändert (Variablen *a3b_empfaengerTransaktion, a3b_betragTransaktion, a4a_empfaengerTransaktion, a4a_betragTransaktion*),
