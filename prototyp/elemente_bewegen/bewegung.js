@@ -21,7 +21,7 @@ function bewegeObjekt(objektID, unterbrechungID, abbruchID, neustartID, startpos
         function starteBewegung() {
             document.getElementById(unterbrechungID).addEventListener("click", function() {clearInterval(bewegung)});
             document.getElementById(abbruchID).addEventListener("click", function() {clearInterval(bewegung)});
-            document.getElementById(neustartID).addEventListener("click", function() {clearInterval(bewegung)});
+            document.getElementById(neustartID).addEventListener("click", function() {clearInterval(bewegung);});
             objekt.style.left = startpos_x + "em";
             objekt.style.top = startpos_y + "em";
             startpos_x += tempo_x;

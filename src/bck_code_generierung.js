@@ -81,11 +81,10 @@ async function a1d_bewegteElemente() {
 } */
 
 var a1d_verstricheneZeit = 0;
+var a1d_delay = 0
 
 async function a1d_bewegteBloecke() {
     
-    const a1d_startzeit = Date.now();
-    var a1d_aktuelleZeit = a1d_startzeit;
     var posX_Block1 = positionX("a1d_block1Inhalt");
     var posY_Block1 = positionY("a1d_block1Inhalt");
     var posX_Block2 = positionX("a1d_block2Inhalt");
@@ -100,6 +99,7 @@ async function a1d_bewegteBloecke() {
 
     document.getElementById("a1d_abbruch").addEventListener("click", () => {
         a1d_unterbrochen = true;
+        a1d_verstricheneZeit = 0;
         document.getElementById("a1d_block1Inhalt").style="position: absolute; left: 2.5em; top: 26.4em;";
         document.getElementById("a1d_block2Inhalt").style="position: absolute; left: 16em; top: 26.4em;";
         document.getElementById("a1d_block3Inhalt").style="position: absolute; left: 29.5em; top: 26.4em;";
@@ -142,86 +142,71 @@ async function a1d_bewegteBloecke() {
 
     document.getElementById("a1d_unterbrechung").addEventListener("click", () => {
         a1d_unterbrochen = true;
-        a1d_aktuelleZeit = Date.now();
         document.getElementById("a1d_fortsetzung").style="position: absolute; right: 25.9em; top: 1em; visibility: visible";});
     
     document.getElementById("a1d_fortsetzung").addEventListener("click", () => {
-        a1d_unterbrochen = false;
-        a1d_verstricheneZeit = a1d_aktuelleZeit - a1d_startzeit;
-        document.getElementById("a1d_fortsetzung").style="visibility: hidden";
-        a1d_bewegteBloecke()});
+        a1d_unterbrochen = false;});
 
     document.getElementById("a1d_neustart").addEventListener("click", () => {
-        a1d_unterbrochen = true;
-        a1d_verstricheneZeit = 0;
-        document.getElementById("a1d_unterbrechung").style = 
-            "position: absolute; right: 13.3em; top: 1em; visibility: visible";
-        document.getElementById("a1d_abbruch").style="position: absolute; right: 2em; top: 1em; visibility: visible";
-        document.getElementById("a1d_fortsetzung").style="visibility: visible";
-        document.getElementById("a1d_neustart").style="visibility: hidden";
-        document.getElementById("a1d_infoimg1").style="visibility:hidden";
-        document.getElementById("a1d_hintergButton").style ="visibility: hidden";
-        document.getElementById("a1d_block1Inhalt").style="position: absolute; left: 2.5em; top: 16.4em;";
-        document.getElementById("a1d_block2Inhalt").style="position: absolute; left: 16em; top: 16.4em;";
-        document.getElementById("a1d_block3Inhalt").style="position: absolute; left: 29.5em; top: 16.4em;";
-        document.getElementById("a1d_block4Inhalt").style="position: absolute; left: 43em; top: 16.4em;";
-        document.getElementById("a1d_block5Inhalt").style="position: absolute; left: 56.5em; top: 16.4em;";
-        document.getElementById("a1d_pfeil1").style.visibility = "hidden";
-        document.getElementById("a1d_pfeil2").style.visibility = "hidden";
-        document.getElementById("a1d_pfeil3").style.visibility = "hidden";
-        document.getElementById("a1d_pfeil4").style.visibility = "hidden";
-        document.getElementById("a1d_pfeil5").style.visibility = "hidden";
-        document.getElementById("a1d_block1HashInhalt").style.visibility = "hidden";
-        document.getElementById("a1d_block2HashInhalt").style.visibility = "hidden";
-        document.getElementById("a1d_block3HashInhalt").style.visibility = "hidden";
-        document.getElementById("a1d_block4HashInhalt").style.visibility = "hidden";
-        document.getElementById("a1d_block5HashInhalt").style.visibility = "hidden";
-        document.getElementById('a1d_block1').style.height = '19em';
-        document.getElementById('a1d_block2').style.height = '19em';
-        document.getElementById('a1d_block3').style.height = '19em';
-        document.getElementById('a1d_block4').style.height = '19em';
-        document.getElementById('a1d_block5').style.height = '19em';
-        a1d_bewegteBloecke();});
+        a1d_unterbrochen = true;});
 
     bewegeObjekt("a1d_block1Inhalt", "a1d_unterbrechung", "a1d_abbruch", "a1d_neustart", posX_Block1, posY_Block1, 0, 0.25, 0, 26.5);
     document.getElementById('a1d_block1').style.height = '16em';
-    await verzoegerung(2500 - a1d_verstricheneZeit);
+    if (a1d_verstricheneZeit < 2500) {a1d_verstricheneZeit += 2500; a1d_delay = 2500;}
+    else {a1d_delay = 0;}
+    await verzoegerung(a1d_delay);
     document.getElementById('a1d_block1HashInhalt').style =
         'position: absolute; left: 2.5em; top: 16.4em; visibility: visible';
     document.getElementById('a1d_pfeil1').style = 
         'position: absolute; top:20.8em; left: 7.5em; height: 6.5em; visibility: visible';
-    await verzoegerung(500);
+    if (a1d_verstricheneZeit < 3000) {a1d_verstricheneZeit += 500; a1d_delay = 500;}
+    else {a1d_delay = 0;}
+        await verzoegerung(a1d_delay);
     if (!a1d_unterbrochen) {
         bewegeObjekt("a1d_block2Inhalt", "a1d_unterbrechung", "a1d_abbruch", "a1d_neustart", posX_Block2, posY_Block2, 0, 0.25, 0, 26.5);
         document.getElementById('a1d_block2').style.height = '16em';
-        await verzoegerung(2500 - a1d_verstricheneZeit);
+        if (a1d_verstricheneZeit < 5500) {a1d_verstricheneZeit += 2500; a1d_delay = 2500;}
+        else {a1d_delay = 0;}
+        await verzoegerung(a1d_delay);
         document.getElementById('a1d_block2HashInhalt').style =
             'position: absolute; left: 16em; top: 16.4em; visibility: visible';
         document.getElementById('a1d_pfeil2').style = 
             'position: absolute; top:20.8em; left: 21em; height: 6.5em; visibility: visible';
-        await verzoegerung(500);
+        if (a1d_verstricheneZeit < 6000) {a1d_verstricheneZeit += 500; a1d_delay = 500;}
+        else {a1d_delay = 0;}
+        await verzoegerung(a1d_delay);
         if (!a1d_unterbrochen) {
             bewegeObjekt("a1d_block3Inhalt", "a1d_unterbrechung", "a1d_abbruch", "a1d_neustart", posX_Block3, posY_Block3, 0, 0.25, 0, 26.5);
             document.getElementById('a1d_block3').style.height = '16em';
-            await verzoegerung(2500 - a1d_verstricheneZeit);
+            if (a1d_verstricheneZeit < 8500) {a1d_verstricheneZeit += 2500; a1d_delay = 2500;}
+            else {a1d_delay = 0;}
+            await verzoegerung(a1d_delay);
             document.getElementById('a1d_block3HashInhalt').style =
                 'position: absolute; left: 29.5em; top: 16.4em; visibility: visible';
             document.getElementById('a1d_pfeil3').style = 
                 'position: absolute; top:20.8em; left: 34.5em; height: 6.5em; visibility: visible';
-            await verzoegerung(500);
+            if (a1d_verstricheneZeit < 9000) {a1d_verstricheneZeit += 500; a1d_delay = 500;}
+            else {a1d_delay = 0;}
+            await verzoegerung(a1d_delay);
             if (!a1d_unterbrochen) {
                 bewegeObjekt("a1d_block4Inhalt", "a1d_unterbrechung", "a1d_abbruch", "a1d_neustart", posX_Block4, posY_Block4, 0, 0.25, 0, 26.5);
                 document.getElementById('a1d_block4').style.height = '16em';
-                await verzoegerung(2500 - a1d_verstricheneZeit);
+                if (a1d_verstricheneZeit < 11500) {a1d_verstricheneZeit += 2500; a1d_delay = 2500;}
+                else {a1d_delay = 0;}
+                await verzoegerung(a1d_delay);
                 document.getElementById('a1d_block4HashInhalt').style =
                     'position: absolute; left: 43em; top: 16.4em; visibility: visible';
                 document.getElementById('a1d_pfeil4').style = 
                     'position: absolute; top:20.8em; left: 48em; height: 6.5em; visibility: visible';
-                await verzoegerung(500);
+                if (a1d_verstricheneZeit < 12000) {a1d_verstricheneZeit += 500; a1d_delay = 500;}
+                else {a1d_delay = 0;}
+                await verzoegerung(a1d_delay);
                 if (!a1d_unterbrochen) {
                     bewegeObjekt("a1d_block5Inhalt", "a1d_unterbrechung", "a1d_abbruch", "a1d_neustart", posX_Block5, posY_Block5, 0, 0.25, 0, 26.5);
                     document.getElementById('a1d_block5').style.height = '16em';
-                    await verzoegerung(2500);
+                    if (a1d_verstricheneZeit < 14500) {a1d_verstricheneZeit += 2500; a1d_delay = 2500;}
+                    else {a1d_delay = 0;}
+                    await verzoegerung(a1d_delay);
                     document.getElementById('a1d_block5HashInhalt').style =
                         'position: absolute; left: 56.5em; top: 16.4em; visibility: visible';
                     document.getElementById('a1d_pfeil5').style = 
@@ -232,11 +217,12 @@ async function a1d_bewegteBloecke() {
                         document.getElementById("a1d_unterbrechung").style="visibility: hidden";
                         document.getElementById("a1d_neustart").style="position: absolute; right: 2em; top: 1em; visibility: visible";
                         document.getElementById("a1d_hintergButton").style ="visibility: visible; position: absolute; top: 36.5em; left: 2em"
+                        a1d_verstricheneZeit = 0;
                     }
                 }
             }
         }
-    }    
+    }
 }
 
 function a2b_nameKnotenNeu() {
@@ -631,11 +617,10 @@ function a4a_datenTransaktion() {
 }
 
 var a4a_verstricheneZeit = 0;
+var a4a_delay = 0;
 
 async function a4a_bewegteReferenzen() {
     
-    const a4a_startzeit = Date.now();
-    var a4a_aktuelleZeit = a4a_startzeit;
     var posX_Referenz1 = positionX("a4a_tabelleHashRef4");
     var posY_Referenz1 = positionY("a4a_tabelleHashRef4");
     var posX_Referenz2 = positionX("a4a_tabelleHashRef5");
@@ -671,70 +656,328 @@ async function a4a_bewegteReferenzen() {
 
     document.getElementById("a4a_unterbrechung").addEventListener("click", () => {
         a4a_unterbrochen = true;
-        a4a_aktuelleZeit = Date.now();
         document.getElementById("a4a_fortsetzung").style = 
             "position: absolute; right: 25.9em; top: 1em; visibility: visible";});
     
     document.getElementById("a4a_fortsetzung").addEventListener("click", () => {
-        a4a_unterbrochen = false;
-        a4a_verstricheneZeit = a4a_aktuelleZeit - a4a_startzeit;
-        document.getElementById("a4a_fortsetzung").style="visibility: hidden";
-        a4a_bewegteReferenzen()});
+        a4a_unterbrochen = false;});
 
     document.getElementById("a4a_neustart").addEventListener("click", () => {
         a4a_unterbrochen = true;
-        a4a_verstricheneZeit = 0;
-        document.getElementById("a4a_unterbrechung").style = 
-            "position: absolute; right: 13.3em; top: 1em; visibility: visible";
-        document.getElementById("a4a_abbruch").style="position: absolute; right: 2em; top: 1em; visibility: visible";
-        document.getElementById("a4a_neustart").style="visibility: hidden";
-        document.getElementById("a4a_infoimg1").style="visibility:hidden";
-        document.getElementById("a4a_hintergButton").style ="visibility: hidden";
-        document.getElementById("a4a_tabelleHashRef4").style="position: absolute; top: 31.5em; left: 3em;";
-        document.getElementById("a4a_tabelleHashRef5").style="position: absolute; top: 31.5em; left: 18em;";
-        document.getElementById("a4a_pfeil1").style.visibility = "hidden";
-        document.getElementById("a4a_pfeil2").style.visibility = "hidden";
-        document.getElementById("a4a_pfeil3").style.visibility = "hidden";
-        document.getElementById("a4a_pfeil4").style.visibility = "hidden";
-        document.getElementById("a4a_refTrans45").style.visibility = "hidden";
-        document.getElementById("a4a_hashRefTrans45").style.visibility = "hidden";
-        document.getElementById("a4a_feldHashRef45").style.visibility = "hidden";
-        a4a_bewegteReferenzen();});
+        a4a_verstricheneZeit = 0;});
 
     bewegeObjekt("a4a_tabelleHashRef4", "a4a_unterbrechung", "a4a_abbruch", "a4a_neustart", posX_Referenz1, posY_Referenz1, 0, -0.5, 0, 6.5);
-    await verzoegerung(2400 - a4a_verstricheneZeit);
-    document.getElementById('a4a_pfeil1').style.visibility = 'visible';
-    await verzoegerung(500);
+    if (a4a_verstricheneZeit < 2400) {a4a_verstricheneZeit += 2400; a4a_delay = 2400;}
+    else {a4a_delay = 0;}
+    await verzoegerung(a4a_delay);
     if (!a4a_unterbrochen) {
-        bewegeObjekt("a4a_tabelleHashRef5", "a4a_unterbrechung", "a4a_abbruch", "a4a_neustart", posX_Referenz2, posY_Referenz2, 0, -0.5, 0, 6.5);
-        await verzoegerung(2400 - a4a_verstricheneZeit);
-        document.getElementById('a4a_pfeil2').style.visibility = 'visible';
-        await verzoegerung(1500);
-        document.getElementById("a4a_refTrans45").style.visibility = "visible";
-        document.getElementById("a4a_refTrans45").classList.add("tabHervorgehoben");
-        document.getElementById("a4a_hashRef4").classList.add("tabHervorgehoben");
-        document.getElementById("a4a_hashRef5").classList.add("tabHervorgehoben");
-        await verzoegerung(1500);
-        document.getElementById("a4a_refTrans45").classList.remove("tabHervorgehoben");
-        document.getElementById("a4a_hashRef4").classList.remove("tabHervorgehoben");
-        document.getElementById("a4a_hashRef5").classList.remove("tabHervorgehoben");
-        document.getElementById("a4a_hashRefTrans45").style.visibility = "visible";
-        document.getElementById("a4a_hashRefTrans45").classList.add("tabHervorgehoben");
-        document.getElementById("a4a_hashTrans45").classList.add("tabHervorgehoben");
-        await verzoegerung(1500);
-        document.getElementById('a4a_pfeil3').style.visibility = 'visible';
-        document.getElementById('a4a_pfeil4').style.visibility = 'visible';
-        document.getElementById("a4a_feldHashRef45").style.visibility = "visible";
+        document.getElementById('a4a_pfeil1').style.visibility = 'visible';
+        if (a4a_verstricheneZeit < 2900) {a4a_verstricheneZeit += 500; a4a_delay = 500;}
+        else {a4a_delay = 0;}
+        await verzoegerung(a4a_delay);
         if (!a4a_unterbrochen) {
-            document.getElementById("a4a_infoimg1").style =
-                "visibility: visible; position: absolute; top: 28em; left: 40em;";
-            document.getElementById("a4a_abbruch").style = "visibility: hidden";
-            document.getElementById("a4a_unterbrechung").style = "visibility: hidden";
-            document.getElementById("a4a_neustart").style =
-                "position: absolute; right: 2em; top: 1em; visibility: visible";
-            document.getElementById("a4a_hintergButton").style = 
-                "visibility: visible; position: absolute; top: 40.5em; left: 2em"
+            bewegeObjekt("a4a_tabelleHashRef5", "a4a_unterbrechung", "a4a_abbruch", "a4a_neustart", posX_Referenz2, posY_Referenz2, 0, -0.5, 0, 6.5);
+            if (a4a_verstricheneZeit < 4400) {a4a_verstricheneZeit += 2400; a4a_delay = 2400;}
+            else {a4a_delay = 0;}
+            await verzoegerung(a4a_delay);
+            if (!a4a_unterbrochen) {
+                document.getElementById('a4a_pfeil2').style.visibility = 'visible';
+                if (a4a_verstricheneZeit < 6800) {a4a_verstricheneZeit += 1500; a4a_delay = 1500;}
+                else {a4a_delay = 0;}
+                await verzoegerung(a4a_delay);
+                if (!a4a_unterbrochen) {
+                    document.getElementById("a4a_refTrans45").style.visibility = "visible";
+                    document.getElementById("a4a_refTrans45").classList.add("tabHervorgehoben");
+                    document.getElementById("a4a_hashRef4").classList.add("tabHervorgehoben");
+                    document.getElementById("a4a_hashRef5").classList.add("tabHervorgehoben");
+                    if (a4a_verstricheneZeit < 8300) {a4a_verstricheneZeit += 1500; a4a_delay = 1500;}
+                    else {a4a_delay = 0;}
+                    await verzoegerung(a4a_delay);
+                    if (!a4a_unterbrochen) {
+                        document.getElementById("a4a_refTrans45").classList.remove("tabHervorgehoben");
+                        document.getElementById("a4a_hashRef4").classList.remove("tabHervorgehoben");
+                        document.getElementById("a4a_hashRef5").classList.remove("tabHervorgehoben");
+                        document.getElementById("a4a_hashRefTrans45").style.visibility = "visible";
+                        document.getElementById("a4a_hashRefTrans45").classList.add("tabHervorgehoben");
+                        document.getElementById("a4a_hashTrans45").classList.add("tabHervorgehoben");
+                        if (a4a_verstricheneZeit < 9800) {a4a_verstricheneZeit += 1500; a4a_delay = 1500;}
+                        else {a4a_delay = 0;}
+                        await verzoegerung(a4a_delay);
+                        if (!a4a_unterbrochen) {
+                            document.getElementById('a4a_pfeil3').style.visibility = 'visible';
+                            document.getElementById('a4a_pfeil4').style.visibility = 'visible';
+                            document.getElementById("a4a_feldHashRef45").style.visibility = "visible";
+                            if (!a4a_unterbrochen) {
+                                document.getElementById("a4a_infoimg1").style =
+                                    "visibility: visible; position: absolute; top: 28em; left: 40em;";
+                                document.getElementById("a4a_abbruch").style = "visibility: hidden";
+                                document.getElementById("a4a_unterbrechung").style = "visibility: hidden";
+                                document.getElementById("a4a_neustart").style =
+                                    "position: absolute; right: 2em; top: 1em; visibility: visible";
+                                document.getElementById("a4a_hintergButton").style = 
+                                    "visibility: visible; position: absolute; top: 40.5em; left: 2em"
+                                a4a_verstricheneZeit = 0;
+                            }
+                        }  
+                    }
+                }
+            }
         }
+    }
+}
 
-    }    
+function a4b_datenMerkleTree() {
+    document.getElementById("a4b_auftraggeber4").innerHTML = a3b_senderTransaktion;
+    document.getElementById("a4b_empfaenger4").innerHTML = a3b_empfaengerTransaktion;
+    document.getElementById("a4b_betrag4").innerHTML = a3b_betragTransaktion + " SiC";
+    document.getElementById("a4b_gebuehr4").innerHTML = a3b_gebuehrTransaktion + " SiC";
+    document.getElementById("a4b_zeitstempel4").innerHTML = a3b_zeitTransaktion;
+    document.getElementById("a4b_hashwert4").innerHTML = a3b_hashTransaktion;
+    document.getElementById("a4b_digitaleSignatur4").innerHTML = a3c_signaturTransaktion;
+    document.getElementById("a4b_auftraggeber5").innerHTML = a4a_senderTransaktion;
+    document.getElementById("a4b_hashTrans4").innerHTML = a3b_hashTransaktion;
+    a4a_referenz45 = a3b_hashTransaktion + " " + a4a_hashTransaktion;
+    a4a_hashReferenz45 = berechneHash(a4a_referenz45);
+    document.getElementById("a4b_hashTrans45").innerHTML = a4a_hashReferenz45;
+    a4b_hashReferenz4567 = berechneHash(a4a_hashReferenz45 + a4b_hashReferenz67);
+    document.getElementById("a4b_hashTrans4567").innerHTML = a4b_hashReferenz4567;
+    document.getElementById("a4b_block2HashRef").innerHTML = a4b_hashReferenz4567;
+    a4b_hashBlock2 = berechneHash(a4b_hashBlock1 + a4b_hashReferenz4567);
+    document.getElementById("a4b_block2Hash").innerHTML = a4b_hashBlock2;
+    document.getElementById("a4b_block3VorhBlock").innerHTML = a4b_hashBlock2;
+    a4b_hashBlock3 = berechneHash(a4b_hashBlock2 + a4b_hashReferenz89AB);
+    document.getElementById("a4b_block3Hash").innerHTML = a4b_hashBlock3;
+    document.getElementById("a4b_block4VorhBlock").innerHTML = a4b_hashBlock3;
+    a4b_hashBlock4 = berechneHash(a4b_hashBlock3 + a4b_hashReferenzCDEF);
+    document.getElementById("a4b_block4Hash").innerHTML = a4b_hashBlock4;
+}
+
+function a4c_datenMerkleTree() {
+    document.getElementById("a4c_auftraggeber4").innerHTML = a3b_senderTransaktion;
+    document.getElementById("a4c_empfaenger4").innerHTML = a3b_empfaengerTransaktion;
+    document.getElementById("a4c_betrag4").innerHTML = a3b_betragTransaktion + " SiC";
+    document.getElementById("a4c_gebuehr4").innerHTML = a3b_gebuehrTransaktion + " SiC";
+    document.getElementById("a4c_zeitstempel4").innerHTML = a3b_zeitTransaktion;
+    document.getElementById("a4c_hashwert4").innerHTML = a3b_hashTransaktion;
+    document.getElementById("a4c_digitaleSignatur4").innerHTML = a3c_signaturTransaktion;
+    document.getElementById("a4c_auftraggeber5").innerHTML = a4a_senderTransaktion;
+    document.getElementById("a4c_hashTrans4").innerHTML = a3b_hashTransaktion;
+    a4a_referenz45 = a3b_hashTransaktion + " " + a4a_hashTransaktion;
+    a4a_hashReferenz45 = berechneHash(a4a_referenz45);
+    document.getElementById("a4c_hashTrans45").innerHTML = a4a_hashReferenz45;
+    a4b_hashReferenz4567 = berechneHash(a4a_hashReferenz45 + a4b_hashReferenz67);
+    document.getElementById("a4c_hashTrans4567").innerHTML = a4b_hashReferenz4567;
+    document.getElementById("a4c_block2HashRef").innerHTML = a4b_hashReferenz4567;
+    a4b_hashBlock2 = berechneHash(a4b_hashBlock1 + a4b_hashReferenz4567);
+    document.getElementById("a4c_block2Hash").innerHTML = a4b_hashBlock2;
+    document.getElementById("a4c_block3VorhBlock").innerHTML = a4b_hashBlock2;
+    a4b_hashBlock3 = berechneHash(a4b_hashBlock2 + a4b_hashReferenz89AB);
+    document.getElementById("a4c_block3Hash").innerHTML = a4b_hashBlock3;
+    document.getElementById("a4c_block4VorhBlock").innerHTML = a4b_hashBlock3;
+    a4b_hashBlock4 = berechneHash(a4b_hashBlock3 + a4b_hashReferenzCDEF);
+    document.getElementById("a4c_block4Hash").innerHTML = a4b_hashBlock4;
+}
+
+var a4b_verstricheneZeit = 0;
+var a4b_delay = 0;
+
+async function a4b_wachsendeBlockchain() {
+    
+    var a4b_unterbrochen = false;
+
+    document.getElementById("a4b_abbruch").addEventListener("click", () => {
+        a4b_unterbrochen = true;
+        document.getElementById("a4b_feldHashRef8").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRef9").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRefA").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRefB").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRef45").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRef67").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRef89").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRefAB").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRef0123").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRef4567").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRef89AB").style.visibility = "visible";
+        document.getElementById("a4b_feldHashRefCDEF").style.visibility = "visible";
+        document.getElementById("a4b_block1").style.visibility = "visible";
+        document.getElementById("a4b_block2").style.visibility = "visible";
+        document.getElementById("a4b_block3").style.visibility = "visible";
+        document.getElementById("a4b_block4").style.visibility = "visible";
+        document.getElementById("a4b_trans8").style.visibility = "visible";
+        document.getElementById("a4b_trans9").style.visibility = "visible";
+        document.getElementById("a4b_transA").style.visibility = "visible";
+        document.getElementById("a4b_transB").style.visibility = "visible";
+        document.getElementById("a4b_pfeil05").style.visibility = "visible";
+        document.getElementById("a4b_pfeil06").style.visibility = "visible";
+        document.getElementById("a4b_pfeil07").style.visibility = "visible";
+        document.getElementById("a4b_pfeil08").style.visibility = "visible";
+        document.getElementById("a4b_pfeil11").style.visibility = "visible";
+        document.getElementById("a4b_pfeil12").style.visibility = "visible";
+        document.getElementById("a4b_pfeil13").style.visibility = "visible";
+        document.getElementById("a4b_pfeil14").style.visibility = "visible";
+        document.getElementById("a4b_pfeil15").style.visibility = "visible";
+        document.getElementById("a4b_pfeil16").style.visibility = "visible";
+        document.getElementById("a4b_pfeil17").style.visibility = "visible";
+        document.getElementById("a4b_pfeil18").style.visibility = "visible";
+        document.getElementById("a4b_pfeil21").style.visibility = "visible";
+        document.getElementById("a4b_pfeil22").style.visibility = "visible";
+        document.getElementById("a4b_pfeil23").style.visibility = "visible";
+        document.getElementById("a4b_pfeil24").style.visibility = "visible";
+        document.getElementById("a4b_pfeil31").style.visibility = "visible";
+        document.getElementById("a4b_pfeil32").style.visibility = "visible";
+        document.getElementById("a4b_pfeil33").style.visibility = "visible";
+        document.getElementById("a4b_pfeil34").style.visibility = "visible";
+        document.getElementById("a4b_pfeil41").style.visibility = "visible";
+        document.getElementById("a4b_pfeil42").style.visibility = "visible";
+        document.getElementById("a4b_pfeil43").style.visibility = "visible";
+        document.getElementById("a4b_infoimg1").style = 
+            "visibility: visible; position: absolute; top: 40em; left: 30em;"
+        document.getElementById("a4b_abbruch").style="visibility: hidden";
+        document.getElementById("a4b_unterbrechung").style="visibility: hidden";
+        document.getElementById("a4b_fortsetzung").style="visibility: hidden";
+        document.getElementById("a4b_neustart").style=
+            "position: absolute; right: 2em; top: 1em; visibility: visible";
+        document.getElementById("a4b_hintergButton").style =
+            "visibility: visible; position: absolute; top: 51.5em; left: 2em"});
+
+    document.getElementById("a4b_unterbrechung").addEventListener("click", () => {
+        a4b_unterbrochen = true;
+        document.getElementById("a4b_fortsetzung").style = 
+            "position: absolute; right: 25.9em; top: 1em; visibility: visible";});
+    
+    document.getElementById("a4b_fortsetzung").addEventListener("click", () => {
+        a4b_unterbrochen = false;});
+
+    document.getElementById("a4a_neustart").addEventListener("click", () => {
+        a4b_unterbrochen = true;
+        a4b_verstricheneZeit = 0;});
+    
+    document.getElementById("a4b_pfeil11").style.visibility = "visible";
+    document.getElementById("a4b_pfeil12").style.visibility = "visible";
+    if (a4b_verstricheneZeit < 1000) {a4b_verstricheneZeit += 1000; a4b_delay = 1000;}
+    else {a4b_delay = 0;}
+    await verzoegerung(a4b_delay);
+    if (!a4b_unterbrochen) {
+        document.getElementById("a4b_feldHashRef45").style.visibility = "visible";
+        if (a4b_verstricheneZeit < 2500) {a4b_verstricheneZeit += 1500; a4b_delay = 1500;}
+        else {a4b_delay = 0;}
+        await verzoegerung(a4b_delay);
+        if (!a4b_unterbrochen) {
+            document.getElementById("a4b_pfeil13").style.visibility = "visible";
+            document.getElementById("a4b_pfeil14").style.visibility = "visible";
+            if (a4b_verstricheneZeit < 3500) {a4b_verstricheneZeit += 1000; a4b_delay = 1000;}
+            else {a4b_delay = 0;}
+            await verzoegerung(a4b_delay);
+            if (!a4b_unterbrochen) {
+                document.getElementById("a4b_feldHashRef67").style.visibility = "visible";
+                if (a4b_verstricheneZeit < 5000) {a4b_verstricheneZeit += 1500; a4b_delay = 1500;}
+                else {a4b_delay = 0;}
+                await verzoegerung(a4b_delay);
+                if (!a4b_unterbrochen) {
+                    document.getElementById("a4b_pfeil21").style.visibility = "visible";
+                    document.getElementById("a4b_pfeil22").style.visibility = "visible";
+                    if (a4b_verstricheneZeit < 6000) {a4b_verstricheneZeit += 1000; a4b_delay = 1000;}
+                    else {a4b_delay = 0;}
+                    await verzoegerung(a4b_delay);
+                    if (!a4b_unterbrochen) {
+                        document.getElementById("a4b_feldHashRef4567").style.visibility = "visible";
+                        if (a4b_verstricheneZeit < 7500) {a4b_verstricheneZeit += 1500; a4b_delay = 1500;}
+                        else {a4b_delay = 0;}
+                        await verzoegerung(a4b_delay);
+                        if (!a4b_unterbrochen) {
+                            document.getElementById("a4b_pfeil05").style.visibility = "visible";
+                            document.getElementById("a4b_pfeil06").style.visibility = "visible";
+                            document.getElementById("a4b_pfeil07").style.visibility = "visible";
+                            document.getElementById("a4b_pfeil08").style.visibility = "visible";
+                            document.getElementById("a4b_trans8").style.visibility = "visible";
+                            document.getElementById("a4b_trans9").style.visibility = "visible";
+                            document.getElementById("a4b_transA").style.visibility = "visible";
+                            document.getElementById("a4b_transB").style.visibility = "visible";
+                            document.getElementById("a4b_feldHashRef8").style.visibility = "visible";
+                            document.getElementById("a4b_feldHashRef9").style.visibility = "visible";
+                            document.getElementById("a4b_feldHashRefA").style.visibility = "visible";
+                            document.getElementById("a4b_feldHashRefB").style.visibility = "visible";
+                            if (a4b_verstricheneZeit < 8500) {a4b_verstricheneZeit += 1000; a4b_delay = 1000;}
+                            else {a4b_delay = 0;}
+                            await verzoegerung(a4b_delay);
+                            if (!a4b_unterbrochen) {
+                                document.getElementById("a4b_pfeil15").style.visibility = "visible";
+                                document.getElementById("a4b_pfeil16").style.visibility = "visible";
+                                document.getElementById("a4b_pfeil17").style.visibility = "visible";
+                                document.getElementById("a4b_pfeil18").style.visibility = "visible";
+                                if (a4b_verstricheneZeit < 9300) {a4b_verstricheneZeit += 800; a4b_delay = 800;}
+                                else {a4b_delay = 0;}
+                                await verzoegerung(a4b_delay);
+                                if (!a4b_unterbrochen) {
+                                    document.getElementById("a4b_feldHashRef89").style.visibility = "visible";
+                                    document.getElementById("a4b_feldHashRefAB").style.visibility = "visible";
+                                    if (a4b_verstricheneZeit < 10300) {a4b_verstricheneZeit += 1000; a4b_delay = 1000;}
+                                    else {a4b_delay = 0;}
+                                    await verzoegerung(a4b_delay);
+                                    if (!a4b_unterbrochen) {
+                                        document.getElementById("a4b_pfeil23").style.visibility = "visible";
+                                        document.getElementById("a4b_pfeil24").style.visibility = "visible";
+                                        if (a4b_verstricheneZeit < 11100) {a4b_verstricheneZeit += 800; a4b_delay = 800;}
+                                        else {a4b_delay = 0;}
+                                        await verzoegerung(a4b_delay);
+                                        if (!a4b_unterbrochen) {
+                                            document.getElementById("a4b_feldHashRef89AB").style.visibility = "visible";
+                                            if (a4b_verstricheneZeit < 12600) {a4b_verstricheneZeit += 1500; a4b_delay = 1500;}
+                                            else {a4b_delay = 0;}
+                                            await verzoegerung(a4b_delay);
+                                            if (!a4b_unterbrochen) {
+                                                document.getElementById("a4b_feldHashRef0123").style.visibility = "visible";
+                                                document.getElementById("a4b_feldHashRefCDEF").style.visibility = "visible";
+                                                if (a4b_verstricheneZeit < 14100) {a4b_verstricheneZeit += 1500; a4b_delay = 1500;}
+                                                else {a4b_delay = 0;}
+                                                await verzoegerung(a4b_delay);
+                                                if (!a4b_unterbrochen) {
+                                                    document.getElementById("a4b_block1").style.visibility = "visible";
+                                                    document.getElementById("a4b_pfeil31").style.visibility = "visible";
+                                                    if (a4b_verstricheneZeit < 15600) {a4b_verstricheneZeit += 1500; a4b_delay = 1500;}
+                                                    else {a4b_delay = 0;}
+                                                    await verzoegerung(a4b_delay);
+                                                    if (!a4b_unterbrochen) {
+                                                        document.getElementById("a4b_block2").style.visibility = "visible";
+                                                        document.getElementById("a4b_pfeil32").style.visibility = "visible";
+                                                        document.getElementById("a4b_pfeil41").style.visibility = "visible";
+                                                        if (a4b_verstricheneZeit < 17100) {a4b_verstricheneZeit += 1500; a4b_delay = 1500;}
+                                                        else {a4b_delay = 0;}
+                                                        await verzoegerung(a4b_delay);
+                                                        if (!a4b_unterbrochen) {
+                                                            document.getElementById("a4b_block3").style.visibility = "visible";
+                                                            document.getElementById("a4b_pfeil33").style.visibility = "visible";
+                                                            document.getElementById("a4b_pfeil43").style.visibility = "visible";
+                                                            if (a4b_verstricheneZeit < 18600) {a4b_verstricheneZeit += 1500; a4b_delay = 1500;}
+                                                            else {a4b_delay = 0;}
+                                                            await verzoegerung(a4b_delay);
+                                                            if (!a4b_unterbrochen) {
+                                                                document.getElementById("a4b_block4").style.visibility = "visible";
+                                                                document.getElementById("a4b_pfeil34").style.visibility = "visible";
+                                                                document.getElementById("a4b_pfeil42").style.visibility = "visible";
+                                                                document.getElementById("a4b_infoimg1").style = 
+                                                                    "visibility: visible; position: absolute; top: 40em; left: 30em;"
+                                                                document.getElementById("a4b_abbruch").style="visibility: hidden";
+                                                                document.getElementById("a4b_unterbrechung").style="visibility: hidden";
+                                                                document.getElementById("a4b_fortsetzung").style="visibility: hidden";
+                                                                document.getElementById("a4b_neustart").style=
+                                                                    "position: absolute; right: 2em; top: 1em; visibility: visible";
+                                                                document.getElementById("a4b_hintergButton").style =
+                                                                    "visibility: visible; position: absolute; top: 51.5em; left: 2em"
+                                                                a4b_verstricheneZeit = 0;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
