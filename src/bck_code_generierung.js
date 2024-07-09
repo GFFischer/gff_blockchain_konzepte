@@ -752,32 +752,6 @@ function a4b_datenMerkleTree() {
     document.getElementById("a4b_block4Hash").innerHTML = a4b_hashBlock4;
 }
 
-function a4c_datenMerkleTree() {
-    document.getElementById("a4c_auftraggeber4").innerHTML = a3b_senderTransaktion;
-    document.getElementById("a4c_empfaenger4").innerHTML = a3b_empfaengerTransaktion;
-    document.getElementById("a4c_betrag4").innerHTML = a3b_betragTransaktion + " SiC";
-    document.getElementById("a4c_gebuehr4").innerHTML = a3b_gebuehrTransaktion + " SiC";
-    document.getElementById("a4c_zeitstempel4").innerHTML = a3b_zeitTransaktion;
-    document.getElementById("a4c_hashwert4").innerHTML = a3b_hashTransaktion;
-    document.getElementById("a4c_digitaleSignatur4").innerHTML = a3c_signaturTransaktion;
-    document.getElementById("a4c_auftraggeber5").innerHTML = a4a_senderTransaktion;
-    document.getElementById("a4c_hashTrans4").innerHTML = a3b_hashTransaktion;
-    a4a_referenz45 = a3b_hashTransaktion + " " + a4a_hashTransaktion;
-    a4a_hashReferenz45 = berechneHash(a4a_referenz45);
-    document.getElementById("a4c_hashTrans45").innerHTML = a4a_hashReferenz45;
-    a4b_hashReferenz4567 = berechneHash(a4a_hashReferenz45 + a4b_hashReferenz67);
-    document.getElementById("a4c_hashTrans4567").innerHTML = a4b_hashReferenz4567;
-    document.getElementById("a4c_block2HashRef").innerHTML = a4b_hashReferenz4567;
-    a4b_hashBlock2 = berechneHash(a4b_hashBlock1 + a4b_hashReferenz4567);
-    document.getElementById("a4c_block2Hash").innerHTML = a4b_hashBlock2;
-    document.getElementById("a4c_block3VorhBlock").innerHTML = a4b_hashBlock2;
-    a4b_hashBlock3 = berechneHash(a4b_hashBlock2 + a4b_hashReferenz89AB);
-    document.getElementById("a4c_block3Hash").innerHTML = a4b_hashBlock3;
-    document.getElementById("a4c_block4VorhBlock").innerHTML = a4b_hashBlock3;
-    a4b_hashBlock4 = berechneHash(a4b_hashBlock3 + a4b_hashReferenzCDEF);
-    document.getElementById("a4c_block4Hash").innerHTML = a4b_hashBlock4;
-}
-
 var a4b_verstricheneZeit = 0;
 var a4b_delay = 0;
 
@@ -979,5 +953,91 @@ async function a4b_wachsendeBlockchain() {
                 }
             }
         }
+    }
+}
+
+function a4c_datenMerkleTree() {
+    document.getElementById("a4c_auftraggeber4").innerHTML = a3b_senderTransaktion;
+    document.getElementById("a4c_empfaenger4").innerHTML = a3b_empfaengerTransaktion;
+    document.getElementById("a4c_betrag4").innerHTML = a3b_betragTransaktion + " SiC";
+    document.getElementById("a4c_gebuehr4").innerHTML = a3b_gebuehrTransaktion + " SiC";
+    document.getElementById("a4c_zeitstempel4").innerHTML = a3b_zeitTransaktion;
+    document.getElementById("a4c_hashwert4").innerHTML = a3b_hashTransaktion;
+    document.getElementById("a4c_digitaleSignatur4").innerHTML = a3c_signaturTransaktion;
+    document.getElementById("a4c_auftraggeber5").innerHTML = a4a_senderTransaktion;
+    document.getElementById("a4c_hashTrans4").innerHTML = a3b_hashTransaktion;
+    a4a_referenz45 = a3b_hashTransaktion + " " + a4a_hashTransaktion;
+    a4a_hashReferenz45 = berechneHash(a4a_referenz45);
+    document.getElementById("a4c_hashTrans45").innerHTML = a4a_hashReferenz45;
+    a4b_hashReferenz4567 = berechneHash(a4a_hashReferenz45 + a4b_hashReferenz67);
+    document.getElementById("a4c_hashTrans4567").innerHTML = a4b_hashReferenz4567;
+    document.getElementById("a4c_block2HashRef").innerHTML = a4b_hashReferenz4567;
+    a4b_hashBlock2 = berechneHash(a4b_hashBlock1 + a4b_hashReferenz4567);
+    document.getElementById("a4c_block2Hash").innerHTML = a4b_hashBlock2;
+    document.getElementById("a4c_block3VorhBlock").innerHTML = a4b_hashBlock2;
+    a4b_hashBlock3 = berechneHash(a4b_hashBlock2 + a4b_hashReferenz89AB);
+    document.getElementById("a4c_block3Hash").innerHTML = a4b_hashBlock3;
+    document.getElementById("a4c_block4VorhBlock").innerHTML = a4b_hashBlock3;
+    a4b_hashBlock4 = berechneHash(a4b_hashBlock3 + a4b_hashReferenzCDEF);
+    document.getElementById("a4c_block4Hash").innerHTML = a4b_hashBlock4;
+}
+
+async function a4c_aendereDaten() {
+    var a4c_wert1 = "e=" + document.getElementById('a4c_eingabeE4').value + ", n="
+        + document.getElementById('a4c_eingabeN4').value;
+    var a4c_wert2 = document.getElementById('a4c_betragTransaktion4').value;
+    var a4c_wert3 = "e=" + document.getElementById('a4c_eingabeE5').value + ", n="
+        + document.getElementById('a4c_eingabeN5').value;
+    var a4c_wert4 = document.getElementById('a4c_betragTransaktion5').value;
+    if (!(a4c_wert1 == "e=, n=")) {
+        document.getElementById('a4c_empfaenger4').innerHTML = a4c_wert1;
+        document.getElementById('a4c_empfaenger4').classList.add('tabHervorgehoben');
+    }
+    if (!(a4c_wert2 == "")) {
+        document.getElementById('a4c_betrag4').innerHTML = a4c_wert2 + ' SiC';
+        document.getElementById('a4c_betrag4').classList.add('tabHervorgehoben');
+    }
+    if (!(a4c_wert3 == "e=, n=")) {
+        document.getElementById('a4c_empfaenger5').innerHTML = a4c_wert3;
+        document.getElementById('a4c_empfaenger5').classList.add('tabHervorgehoben');
+    }
+    if (!(a4c_wert4 == "")) {
+        document.getElementById('a4c_betrag5').innerHTML = a4c_wert4 + ' SiC';
+        document.getElementById('a4c_betrag5').classList.add('tabHervorgehoben');
+    }
+    await verzoegerung(1000);
+    if (!(a4c_wert1 == "e=, n=") || !(a4c_wert2 == "")) {
+        document.getElementById('a4c_hashTrans4').innerHTML = berechneHash(a4c_wert1 + a4c_wert2);
+        document.getElementById("a4c_hashTrans4").classList.add('tabHervorgehoben');
+    }
+    if (!(a4c_wert3 == "e=, n=") || !(a4c_wert4 == "")) {
+        document.getElementById('a4c_hashTrans5').innerHTML = berechneHash(a4c_wert3 + a4c_wert4);
+        document.getElementById("a4c_hashTrans5").classList.add('tabHervorgehoben');
+    }
+    await verzoegerung(1000);
+    if (!(a4c_wert1 == "e=, n=") || !(a4c_wert2 == "") || !(a4c_wert3 == "e=, n=") || !(a4c_wert4 == "")) {
+        document.getElementById('a4c_hashTrans45').innerHTML = 
+            berechneHash(a4c_wert1 + a4c_wert2 + a4c_wert3 + a4c_wert4);
+        document.getElementById("a4c_hashTrans45").classList.add('tabHervorgehoben');
+        await verzoegerung(1000);
+        document.getElementById('a4c_hashTrans4567').innerHTML = 
+            berechneHash(a4c_wert1 + a4c_wert2 + a4c_wert3 + a4c_wert4 + a4b_hashReferenz67);
+        document.getElementById("a4c_hashTrans4567").classList.add('tabHervorgehoben');
+        await verzoegerung(1000);
+        document.getElementById('a4c_block2HashRef').innerHTML = 
+            berechneHash(a4c_wert1 + a4c_wert2 + a4c_wert3 + a4c_wert4 + a4b_hashReferenz67);
+        document.getElementById("a4c_block2HashRef").classList.add('tabHervorgehoben');
+        await verzoegerung(1000);
+        document.getElementById('a4c_block2Hash').innerHTML = 
+            berechneHash(a4c_wert1 + a4c_wert2 + a4c_wert3 + a4c_wert4 + a4b_hashReferenz67 + a4b_hashBlock1);
+        document.getElementById("a4c_block2Hash").classList.add('tabHervorgehoben');
+        await verzoegerung(1000);
+        document.getElementById('a4c_pfeil43').style.visibility = 'hidden';
+        document.getElementById('a4c_pfeil44').style.visibility = 'visible';
+        document.getElementById('a4c_fragezeichen').style.visibility = 'visible';
+        document.getElementById("a4c_infoimg1").style = 
+            "visibility: visible; position: absolute; top: 40em; left: 30em;";
+        document.getElementById("a4c_hintergButton").style =
+            "visibility: visible; position: absolute; top: 51.5em; left: 2em";
     }
 }

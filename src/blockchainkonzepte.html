@@ -3287,11 +3287,78 @@
                     style="position: absolute; top: 7em; left: 59.2em; height: 5.2em; width: 6.05em;">
                 <img id="a4c_pfeil43" src="img/pfeil_bloecke_verbinden_3.png" alt="Pfeil"
                     style="position: absolute; top: 7em; left: 27.05em; height: 5.2em; width: 24em;">
-                <button id="a4c_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                <img id="a4c_pfeil44" src="img/pfeil_kette_zerbrochen.png" alt="Pfeil"
+                    style="position: absolute; top: 9.2em; left: 38.8em; height: 3em; width: 12.2em; visibility: hidden;">
+                <img id="a4c_fragezeichen" src="img/fragezeichen.png" alt="Fragezeichen"
+                    style="position: absolute; top: 5em; left: 38.2em; height: 3em; visibility: hidden;">
+                <button id="a4c_startButton" class="animbutton" 
+                    style="position: absolute; right: 2em; top: 1em;"
                     onclick="
-                       alert('Noch nichts definiert');
-                        "
+                        document.getElementById('a4c_empfaenger4').innerHTML = a3b_empfaengerTransaktion;
+                        document.getElementById('a4c_betrag4').innerHTML = a3b_betragTransaktion + ' SiC';
+                        document.getElementById('a4c_empfaenger5').innerHTML = a4a_empfaengerTransaktion;
+                        document.getElementById('a4c_betrag5').innerHTML = a4a_betragTransaktion + ' SiC';
+                        document.getElementById('a4c_hashTrans4').innerHTML = a3b_hashTransaktion;
+                        document.getElementById('a4c_hashTrans5').innerHTML = a4a_hashTransaktion;
+                        document.getElementById('a4c_hashTrans45').innerHTML = a4a_hashReferenz45;
+                        document.getElementById('a4c_hashTrans4567').innerHTML = a4b_hashReferenz4567;
+                        document.getElementById('a4c_block2HashRef').innerHTML =  a4b_hashReferenz4567;
+                        document.getElementById('a4c_block2Hash').innerHTML = a4b_hashBlock2;
+                        document.getElementById('a4c_pfeil43').style.visibility = 'visible';
+                        document.getElementById('a4c_pfeil44').style.visibility = 'hidden';
+                        document.getElementById('a4c_fragezeichen').style.visibility = 'hidden';
+                        document.getElementById('a4c_infoimg1').style.visibility = 'hidden';
+                        document.getElementById('a4c_hintergButton').style.visibility = 'hidden';
+                        document.getElementById('a4c_formular').style.visibility = 'visible';
+                        document.getElementById('a4c_empfaenger4').classList.remove('tabHervorgehoben');
+                        document.getElementById('a4c_betrag4').classList.remove('tabHervorgehoben');
+                        document.getElementById('a4c_empfaenger5').classList.remove('tabHervorgehoben');
+                        document.getElementById('a4c_betrag5').classList.remove('tabHervorgehoben');
+                        document.getElementById('a4c_hashTrans4').classList.remove('tabHervorgehoben');
+                        document.getElementById('a4c_hashTrans5').classList.remove('tabHervorgehoben');
+                        document.getElementById('a4c_hashTrans45').classList.remove('tabHervorgehoben');
+                        document.getElementById('a4c_hashTrans4567').classList.remove('tabHervorgehoben');
+                        document.getElementById('a4c_block2HashRef').classList.remove('tabHervorgehoben');
+                        document.getElementById('a4c_block2Hash').classList.remove('tabHervorgehoben');"
                     >Ändere Transaktionsdaten</button>
+                <div id="a4c_formular" class="formular" 
+                    style="position: absolute; right: 2em; top: 5em; width: 18em; visibility: hidden;">
+                    <p><b>Ändere einen oder mehrere der folgenden Werte</b></p>
+                    <p><label>Betrag Transaktion 4: </p>
+                        <input id="a4c_betragTransaktion4" size="5" type="text"></label> SiC
+                    <p>Empfänger Transaktion 4: </p>
+                    <p><label>e: <input id="a4c_eingabeE4" size="3" maxlength="2" type="text"></label>
+                    <label>n: <input id="a4c_eingabeN4" size="4" maxlength="4" type="text"></label></p>
+                    <p><label>Betrag Transaktion 5: </p>
+                        <input id="a4c_betragTransaktion5" size="5" type="text"></label> SiC
+                    <p>Empfänger Transaktion 5: </p>
+                    <p><label>e: <input id="a4c_eingabeE5" size="3" maxlength="2" type="text"></label>
+                    <label>n: <input id="a4c_eingabeN5" size="4" maxlength="4" type="text"></label></p>
+                    <button id="a4c_formularButton1" class="formularbutton" onclick="
+                        if (!pruefeEingabeZahl(document.getElementById('a4c_betragTransaktion4').value) &&
+                            !(document.getElementById('a4c_betragTransaktion4').value == '')) {
+                            document.getElementById('a4c_warnung1').style = 
+                            'visibility: visible; top: 7em; right: 6em; z-index: 153'
+                        }
+                        else if (!pruefeEingabeZahl(document.getElementById('a4c_betragTransaktion5').value) &&
+                            !(document.getElementById('a4c_betragTransaktion5').value == '')) {
+                            document.getElementById('a4c_warnung1').style = 
+                            'visibility: visible; top: 7em; right: 6em; z-index: 153'
+                        }
+                        else {
+                            document.getElementById('a4c_formular').style.visibility = 'hidden';
+                            a4c_aendereDaten();
+                        }
+                    ">Transaktionsdaten ändern</button>
+                </div>
+                <div id="a4c_warnung1" class="hinweis">
+                    <p class="hinweistext">
+                        Bitte gib eine ganze Zahl ein.
+                    </p>
+                    <button class="hinweisbutton" onclick="
+                        document.getElementById('a4c_warnung1').style = 'visibility: hidden';
+                    ">OK</button>
+                </div>
                 <img id="a4c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
                     onclick="document.getElementById('a4c_info1').style='visibility: visible; z-index: 142;'">                    
             </div>
