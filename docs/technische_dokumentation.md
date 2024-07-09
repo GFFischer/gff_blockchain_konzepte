@@ -585,6 +585,10 @@ Konkret handelt es sich um folgende Funktionen:
   Ebenso generiert wird der html-Code für sämtliche Hash-Referenzen, die am Ende der Animation im dargestellten
   Merkle-Tree und in den dargestellten Blöcken der Blockchain angezeigt werden und die von den Eingaben in Animationen 3b
   sind.
+* **a4b_wachsendeBlockchain**() <br/>
+  Mit dieser Funktion wird die Animation, d.h. der schrittweise Aufbau der Grafik, die das Verknüpfen von Transaktionen und
+  Blöcken darstellt, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch, Neustart,
+  Unterbrechung und Fortsetzung der Animation notwendig ist.
 * **a4c_datenMerkleTree**() <br/>
   Diese Funktion macht das gleiche wie die Funktion *a4b_datenMerkleTree()*, allerdings für die Darstellung in Animation 3c.
 * **a4c_aendereDaten**() <br/>
