@@ -1041,3 +1041,45 @@ async function a4c_aendereDaten() {
             "visibility: visible; position: absolute; top: 51.5em; left: 2em";
     }
 }
+
+function a5ab_datenBloecke() {
+    a5a_hashVorhBlock = a4b_hashBlock1;
+    document.getElementById("a5ab_vorhBlockHash1").innerHTML = a5a_hashVorhBlock;
+    a5a_hashInhalt = a4b_hashReferenz4567;¨
+    document.getElementById("a5ab_inhaltHash1").innerHTML = a5a_hashInhalt;
+}
+
+function a5ab_mining(nonceID, nonce, hashID, hashBlock, target, zeit, hashInhalt, 
+    hashVorherigerBlock, intervall, abbruchID, hakenID, zaehlerID, zaehler, nextStartButtonID, nextBlockID) {
+    document.getElementById(hashID).innerHTML = hashBlock;
+    document.getElementById(nonceID).innerHTML = nonce;
+    var targetZahl = umwandleInDez(target, 16);
+    var nonceZahl = umwandleInDez(nonce, 16);
+    var hashBlockDez = umwandleInDez(hashBlock, 16);
+    if (hashBlockDez < targetZahl) {
+        document.getElementById(hakenID).style.visibility = "visible";
+        document.getElementById(nextBlockID).style.visibility = "visible";
+        document.getElementById(nextStartButtonID).style.visibility = "visible";
+        return;
+        } 
+    async function aendereWert() {
+        document.getElementById(abbruchID).addEventListener("click", function() {clearInterval(wertNeu)});
+        zaehler += 1;
+        document.getElementById(zaehlerID).innerHTML = zaehler;
+        nonceZahl += 1;
+        nonce = umwandleDezInHashwert(nonceZahl);
+        document.getElementById(nonceID).innerHTML = nonce;
+        hashBlock = berechneHash(hashInhalt + hashVorherigerBlock + zeit + target + nonce);
+        hashBlockDez = umwandleInDez(hashBlock, 16);
+        await verzoegerung(200);
+        document.getElementById(hashID).innerHTML = hashBlock;
+        if (hashBlockDez < targetZahl) {
+            clearInterval(wertNeu);
+            document.getElementById(abbruchID).style.visibility = "hidden";
+            document.getElementById(hakenID).style.visibility = "visible";
+            document.getElementById(nextBlockID).style.visibility = "visible";
+            document.getElementById(nextStartButtonID).style.visibility = "visible";
+        }
+    }
+    var wertNeu = setInterval(aendereWert, intervall);
+}

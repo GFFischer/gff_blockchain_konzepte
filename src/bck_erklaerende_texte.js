@@ -30,6 +30,9 @@ var a4b_hinterg1 = "Hintergrundtext 4b";
 var a4c_info1 = "Infotext 4a";
 var a4c_hinterg1 = "Hintergrundtext 4c";
 
+var a5ab_info1 = "Infotext Animation 5";
+var a5ab_hinterg1 = "Hintergrundtext Animation 5"
+
 var copyright_hashes = "Berechnet unter Verwendung der JavaScript Implementation von üblichen Hashfunktionen, zur \
 Verfügung gestellt von </br>&copy; 2012-2017, Tomas Aparicio und </br>&copy; 1999-2012, Paul Johnston, Angel Marin, \
 Jeremy Lin. </br>Quelle: <a href='https://github.com/h2non/jshashes'>GitHub</a>.";

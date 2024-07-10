@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="1.0074671"
-     inkscape:cx="413.90932"
-     inkscape:cy="194.5473"
+     inkscape:zoom="4.0298684"
+     inkscape:cx="546.66798"
+     inkscape:cy="510.68665"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
@@ -203,13 +203,13 @@
        transform="matrix(0.6499574,0,0,0.6499574,44.682762,12.426577)"><tspan
          x="90.634865"
          y="75.290611"
-         id="tspan39"><tspan
+         id="tspan4"><tspan
    style="fill:#000000;stroke:none"
-   id="tspan8">Hash-Referenz</tspan> <tspan
+   id="tspan1">Hash-Referenz</tspan> <tspan
    style="fill:#000000;stroke:none"
-   id="tspan37">vorheriger</tspan> <tspan
+   id="tspan2">vorheriger</tspan> <tspan
    style="fill:#000000;stroke:none"
-   id="tspan38">Block:</tspan></tspan></text>
+   id="tspan3">Block:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.21007px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.229749;stroke-dasharray:none;stroke-opacity:1"
@@ -237,11 +237,11 @@
        transform="matrix(0.6499574,0,0,0.6499574,4.1093945,6.505379)"><tspan
          x="151.61325"
          y="103.52779"
-         id="tspan42"><tspan
+         id="tspan7"><tspan
    style="fill:#000000;stroke:none"
-   id="tspan40">Hash-Referenz</tspan> <tspan
+   id="tspan5">Hash-Referenz</tspan> <tspan
    style="fill:#000000;stroke:none"
-   id="tspan41">Inhalt:</tspan></tspan></text>
+   id="tspan6">Inhalt:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.21007px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.229749;stroke-dasharray:none;stroke-opacity:1"
@@ -577,9 +577,9 @@
        transform="matrix(0.6499574,0,0,0.6499574,3.7112252,-17.982034)"><tspan
          x="151.61325"
          y="103.52779"
-         id="tspan45"><tspan
+         id="tspan9"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan44">Zeitstempel:</tspan></tspan></text>
+           id="tspan8">Zeitstempel:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.21007px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.229749;stroke-dasharray:none;stroke-opacity:1"
@@ -600,9 +600,9 @@
        transform="matrix(0.6499574,0,0,0.6499574,4.5075638,-30.325283)"><tspan
          x="151.61325"
          y="103.52779"
-         id="tspan51"><tspan
+         id="tspan12"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan50">Target:</tspan></tspan></text>
+           id="tspan10">Target:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.21007px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.229749;stroke-dasharray:none;stroke-opacity:1"
@@ -663,13 +663,13 @@
        transform="matrix(0.6499574,0,0,0.6499574,123.23472,12.989673)"><tspan
          x="90.634865"
          y="75.290611"
-         id="tspan55"><tspan
+         id="tspan17"><tspan
    style="fill:#000000;stroke:none"
-   id="tspan52">Hash-Referenz</tspan> <tspan
+   id="tspan13">Hash-Referenz</tspan> <tspan
    style="fill:#000000;stroke:none"
-   id="tspan53">vorheriger</tspan> <tspan
+   id="tspan14">vorheriger</tspan> <tspan
    style="fill:#000000;stroke:none"
-   id="tspan54">Block:</tspan></tspan></text>
+   id="tspan16">Block:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.21007px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.229749;stroke-dasharray:none;stroke-opacity:1"
@@ -703,11 +703,11 @@
        transform="matrix(0.6499574,0,0,0.6499574,82.661349,7.0684755)"><tspan
          x="151.61325"
          y="103.52779"
-         id="tspan59"><tspan
+         id="tspan23"><tspan
    style="fill:#000000;stroke:none"
-   id="tspan56">Hash-Referenz</tspan> <tspan
+   id="tspan21">Hash-Referenz</tspan> <tspan
    style="fill:#000000;stroke:none"
-   id="tspan58">Inhalt:</tspan></tspan></text>
+   id="tspan22">Inhalt:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.21007px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.229749;stroke-dasharray:none;stroke-opacity:1"
@@ -996,7 +996,7 @@
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:2.5222px;font-family:Arial;-inkscape-font-specification:'Arial Bold';text-align:start;text-anchor:start;stroke-width:0.324979"
          x="199.25696"
          y="142.70346"
-         sodipodi:role="line">T 7</tspan></text>
+         sodipodi:role="line">T b</tspan></text>
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.283237;stroke-dasharray:none;stroke-opacity:1"
        id="rect83"
@@ -1041,9 +1041,9 @@
        transform="matrix(0.6499574,0,0,0.6499574,82.26318,-17.418938)"><tspan
          x="151.61325"
          y="103.52779"
-         id="tspan61"><tspan
+         id="tspan26"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan60">Zeitstempel:</tspan></tspan></text>
+           id="tspan25">Zeitstempel:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.21007px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.229749;stroke-dasharray:none;stroke-opacity:1"
@@ -1064,9 +1064,9 @@
        transform="matrix(0.6499574,0,0,0.6499574,83.059519,-29.762187)"><tspan
          x="151.61325"
          y="103.52779"
-         id="tspan65"><tspan
+         id="tspan32"><tspan
            style="fill:#000000;stroke:none"
-           id="tspan62">Target:</tspan></tspan></text>
+           id="tspan31">Target:</tspan></tspan></text>
     <text
        xml:space="preserve"
        style="font-size:3.21007px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle;fill:none;stroke:#000000;stroke-width:0.229749;stroke-dasharray:none;stroke-opacity:1"

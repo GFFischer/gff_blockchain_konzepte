@@ -94,7 +94,7 @@
                 <li id="anim5_eintrag" onclick="ausklappenMenu('anim5_menu');
                     document.getElementById('navmenu').classList.remove('sichtbar');
                     document.getElementById('navmenu').classList.add('unsichtbar');
-                    oeffneAnimation('5ab'); 
+                    oeffneAnimation('5'); a5ab_datenBloecke();
                     ">Der Konsensalgorithmus, Teil 1: Proof-of-Work</li>
                 <ul id="anim5_menu"></ul>
                 <li onclick="ausklappenMenu('anim6_menu');
@@ -2878,7 +2878,7 @@
                     onclick="document.getElementById('a4c_hinterg1').style='visibility: visible; z-index: 131';">
                     Hintergrundwissen</button>
                 <button id="a4c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('5ab');">weiter</button>
+                    onclick="oeffneAnimation('5'); a5ab_datenBloecke()">weiter</button>
                 <button id="a4c_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('4b'); a4b_datenMerkleTree();
                     ">zurück</button>
@@ -3375,6 +3375,279 @@
                 </script> <br>
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a4c_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>    
+        </div>
+
+<! Animation 5ab -->
+
+        <div id="anim_5" class="mitte animation">
+            <h1>Die Lösung eines Hashpuzzles macht einen Block gültig</h1>
+            <p>
+                Damit ein Block in die Blockchain aufgenommen werden kann, muss seine Gültigkeit nachgewiesen werden.
+                Beim sogenannten "Proof-of-Work"-Verfahren muss für den Block ein Hashwert gefunden werden, der
+                kleiner ist als eine vorgegebene Zahl ("Target"). Dafür wird der Block mit einer sich solange
+                ändernden Zufallszahl ("Nonce") ergänzt, bis ein passender Hashwert gefunden worden ist. Je kleiner
+                das Target, umso grösser ist der Rechenaufwand.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="width: 55em; height: 53em;"></div>
+                <button id="a5ab_hintergButton" class="animbutton" 
+                    style="position: absolute; top: 49.5em; left: 2em; visibility: visible;"
+                    onclick="document.getElementById('a5ab_hinterg1').style='visibility: visible; z-index: 151';">
+                    Hintergrundwissen</button>
+                <button id="a5ab_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('6a')">weiter</button>
+                <button id="a4a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('4c'); a4c_datenMerkleTree();
+                    ">zurück</button>
+                <div id="a5ab_block1">
+                    <div id="a5ab_blockHeader1" class="block" 
+                        style="width: 15em; position: absolute; top: 5em; left: 8.7em;">
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Hashwert Block:
+                            <span id="a5ab_blockHash1" class="hash"><br><br></span>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Nonce:
+                            <span id="a5ab_nonceHash1" class="hash"></span>
+                            <script>
+                                document.getElementById("a5ab_nonceHash1").innerHTML = a5a_nonce;
+                            </script>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Target:
+                            <span id="a5ab_target1" class="hash"></span>
+                            <script>
+                                document.getElementById("a5ab_target1").innerHTML = a5a_target;
+                            </script>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Zeitstempel: <br>
+                            <span id="a5ab_zeit1"><br></span>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Hash-Referenz vorheriger Block:
+                            <span id="a5ab_vorhBlockHash1" class="hash"></span>
+                            <script>
+                                document.getElementById("a5ab_vorhBlockHash1").innerHTML = a5a_hashVorhBlock;
+                            </script>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Hash-Referenz Inhalt:
+                            <span id="a5ab_inhaltHash1" class="hash"></span>
+                            <script>
+                                document.getElementById("a5ab_inhaltHash1").innerHTML = a5a_hashInhalt;
+                            </script>
+                        </div>
+                    </div>
+                    <div class="feld" style="position: absolute; left: 8em; top: 45em;"><b>T 4</b></div>
+                    <div class="feld" style="position: absolute; left: 12.5em; top: 45em;"><b>T 5</b></div>
+                    <div class="feld" style="position: absolute; left: 17em; top: 45em;"><b>T 6</b></div>
+                    <div class="feld" style="position: absolute; left: 21.5em; top: 45em;"><b>T 7</b></div>
+                    <div class="feld" style="position: absolute; left: 8em; top: 40.95em;"><b>R 4</b></div>
+                    <div class="feld" style="position: absolute; left: 12.5em; top: 40.95em;"><b>R 5</b></div>
+                    <div class="feld" style="position: absolute; left: 17em; top: 40.95em;"><b>R 6</b></div>
+                    <div class="feld" style="position: absolute; left: 21.5em; top: 40.95em;"><b>R 7</b></div>
+                    <div class="feld" style="position: absolute; left: 10.05em; top: 36.9em;"><b>R 45</b></div>
+                    <div class="feld" style="position: absolute; left: 19.05em; top: 36.9em;"><b>R 67</b></div>
+                    <div class="feld" style="position: absolute; left: 14em; top: 32.85em;"><b>R 4567</b></div>
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                    style="position: absolute; top: 43em; left: 9.5em; height: 2.4em;">
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                        style="position: absolute; top: 43em; left: 14em; height: 2.4em;">
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                        style="position: absolute; top: 43em; left: 18.5em; height: 2.4em;">
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                        style="position: absolute; top: 43em; left: 23em; height: 2.4em;">
+                    <img src="img/pfeil_ref_zu_ref_links_3.png" alt="Pfeil"
+                        style="position: absolute; top: 38.95em; left: 9.8em; height: 2em; width: 2.45em">
+                    <img src="img/pfeil_ref_zu_ref_rechts_3.png" alt="Pfeil"
+                        style="position: absolute; top: 38.95em; left: 12em; height: 2em; width: 2.45em">
+                    <img src="img/pfeil_ref_zu_ref_links_3.png" alt="Pfeil"
+                        style="position: absolute; top: 38.95em; left: 18.8em; height: 2em; width: 2.45em">
+                    <img src="img/pfeil_ref_zu_ref_rechts_3.png" alt="Pfeil"
+                        style="position: absolute; top: 38.95em; left: 21em; height: 2em; width: 2.45em">
+                    <img src="img/pfeil_ref_zu_ref_links_2.png" alt="Pfeil"
+                        style="position: absolute; top: 34.9em; left: 12.1em; height: 2em; width: 4.7em">
+                    <img src="img/pfeil_ref_zu_ref_rechts_2.png" alt="Pfeil"
+                        style="position: absolute; top: 34.9em; left: 16.45em; height: 2em; width: 4.7em">
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                        style="position: absolute; top: 30.3em; left: 16.2em; height: 3em;">
+                    <img src="img/pfeil_bloecke_verbinden_5.png" alt="Pfeil"
+                        style="position: absolute; top: 7.8em; left: 2.3em; height: 17em; width: 7.75em;">
+                </div>
+                <img id="a5ab_haken1" src="img/haken.png" alt="Haken"
+                    style="position: absolute; top: 7.5em; left: 21em; width: 2em; visibility: hidden;">
+                <div id="a5ab_block2" style="visibility: hidden;">
+                    <div id="a5ab_blockHeader2" class="block" 
+                        style="width: 15em; position: absolute; top: 5em; left: 30.7em;">
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Hashwert Block:
+                            <span id="a5ab_blockHash2" class="hash"></span>
+                            <script>
+                                document.getElementById("a5ab_blockHash2").innerHTML = a5b_hashBlock;
+                            </script>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Nonce:
+                            <span id="a5ab_nonceHash2" class="hash"></span>
+                            <script>
+                                document.getElementById("a5ab_nonceHash2").innerHTML = a5b_nonce;
+                            </script>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Target:
+                            <span id="a5ab_target2" class="hash"></span>
+                            <script>
+                                document.getElementById("a5ab_target2").innerHTML = a5b_target;
+                            </script>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Zeitstempel: <br>
+                            <span id="a5ab_zeit2"><br></span>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Hash-Referenz vorheriger Block:
+                            <span id="a5ab_vorhBlockHash2" class="hash"></span>
+                        </div>
+                        <div class="block blockinhalt" style="width: 86%;">
+                            Hash-Referenz Inhalt:
+                            <span id="a5ab_inhaltHash2" class="hash"></span>
+                            <script>
+                                document.getElementById("a5ab_inhaltHash2").innerHTML = a5b_hashInhalt;
+                            </script>
+                        </div>
+                    </div>
+                    <div class="feld" style="position: absolute; left: 30em; top: 45em;"><b>T 8</b></div>
+                    <div class="feld" style="position: absolute; left: 34.5em; top: 45em;"><b>T 9</b></div>
+                    <div class="feld" style="position: absolute; left: 39em; top: 45em;"><b>T a</b></div>
+                    <div class="feld" style="position: absolute; left: 43.5em; top: 45em;"><b>T b</b></div>
+                    <div class="feld" style="position: absolute; left: 30em; top: 40.95em;"><b>R 8</b></div>
+                    <div class="feld" style="position: absolute; left: 34.5em; top: 40.95em;"><b>R 9</b></div>
+                    <div class="feld" style="position: absolute; left: 39em; top: 40.95em;"><b>R a</b></div>
+                    <div class="feld" style="position: absolute; left: 43.5em; top: 40.95em;"><b>R b</b></div>
+                    <div class="feld" style="position: absolute; left: 32.05em; top: 36.9em;"><b>R 89</b></div>
+                    <div class="feld" style="position: absolute; left: 41.05em; top: 36.9em;"><b>R ab</b></div>
+                    <div class="feld" style="position: absolute; left: 36em; top: 32.85em;"><b>R 89ab</b></div>
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                        style="position: absolute; top: 43em; left: 31.5em; height: 2.4em;">
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                        style="position: absolute; top: 43em; left: 36em; height: 2.4em;">
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                        style="position: absolute; top: 43em; left: 40.5em; height: 2.4em;">
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                        style="position: absolute; top: 43em; left: 45em; height: 2.4em;">
+                    <img src="img/pfeil_ref_zu_ref_links_3.png" alt="Pfeil"
+                        style="position: absolute; top: 38.95em; left: 31.8em; height: 2em; width: 2.45em">
+                    <img src="img/pfeil_ref_zu_ref_rechts_3.png" alt="Pfeil"
+                        style="position: absolute; top: 38.95em; left: 34em; height: 2em; width: 2.45em">
+                    <img src="img/pfeil_ref_zu_ref_links_3.png" alt="Pfeil"
+                        style="position: absolute; top: 38.95em; left: 40.8em; height: 2em; width: 2.45em">
+                    <img src="img/pfeil_ref_zu_ref_rechts_3.png" alt="Pfeil"
+                        style="position: absolute; top: 38.95em; left: 43em; height: 2em; width: 2.45em">
+                    <img src="img/pfeil_ref_zu_ref_links_2.png" alt="Pfeil"
+                        style="position: absolute; top: 34.9em; left: 34.1em; height: 2em; width: 4.7em">
+                    <img src="img/pfeil_ref_zu_ref_rechts_2.png" alt="Pfeil"
+                        style="position: absolute; top: 34.9em; left: 38.45em; height: 2em; width: 4.7em">
+                    <img src="img/pfeil_referenz_zu_transaktion.png" alt="Pfeil"
+                        style="position: absolute; top: 30.3em; left: 38.2em; height: 3em;">
+                </div>
+                <img id="a5ab_verbindungspfeil" src="img/pfeil_bloecke_verbinden_4.png" alt="Pfeil"
+                    style="position: absolute; top: 7.8em; left: 24.3em; height: 17em; width: 7.75em; visibility: hidden;">
+                <img id="a5ab_haken2" src="img/haken.png" alt="Haken"
+                    style="position: absolute; top: 7.5em; left: 43em; width: 2em; visibility: hidden;">
+                <div id="a5ab_zaehlerBox" class="feld" ¨
+                    style="position: absolute; top: 11.2em; left: 50.5em; line-height: 180%; padding: 0.5em 0em;">
+                    <p><b>Anzahl Lösungsversuche:</b></p>
+                    <p>erster Block: <span id="a5ab_zaehlerBlock1" class="feld"></span><br>
+                    (Durchschnitt: 16)</p>
+                    <script>
+                        document.getElementById("a5ab_zaehlerBlock1").innerHTML = a5a_zaehler;
+                    </script>
+                    <p>zweiter Block: <span id="a5ab_zaehlerBlock2" class="feld"></span><br>
+                    (Durchschnitt: 256)</p>
+                    <script>
+                        document.getElementById("a5ab_zaehlerBlock2").innerHTML = a5b_zaehler;
+                    </script>
+                </div>
+                <button id="a5ab_startButton1" class="animbutton" 
+                    style="position: absolute; right: 2em; top: 1em; visibility: visible;"
+                    onclick="
+                        a5a_zeit = zeitstempel();
+                        document.getElementById('a5ab_zeit1').innerHTML = a5a_zeit;
+                        a5a_zaehler += 1;
+                        document.getElementById('a5ab_zaehlerBlock1').innerHTML = a5a_zaehler;
+                        document.getElementById('a5ab_startButton1').style.visibility = 'hidden';
+                        document.getElementById('a5ab_unterbrechung1').style.visibility = 'visible';
+                        a5ab_mining('a5ab_nonceHash1', a5a_nonce, 'a5ab_blockHash1', a5a_hashBlock, a5a_target, 
+                            a5a_zeit, 'a5ab_inhaltHash1', 'a5ab_vorhBlockHash1', 700, 'a5ab_unterbrechung1', 
+                            'a5ab_haken1', 'a5ab_zaehlerBlock1', a5a_zaehler, 'a5ab_startButton2', 'a5ab_block2');"
+                    >Starte Mining</button>
+                <button id="a5ab_unterbrechung1" class="animbutton" 
+                    style="position: absolute; right: 2em; top: 1em; visibility: hidden;"
+                    onclick="
+                        a5a_nonce = document.getElementById('a5ab_nonceHash1').innerHTML;
+                        document.getElementById('a5ab_fortsetzung1').style.visibility = 'visible';"
+                    >Mining unterbrechen</button>
+                <button id="a5ab_fortsetzung1" class="animbutton" 
+                    style="position: absolute; right: 13.3em; top: 1em; visibility: hidden;"
+                    onclick="
+                        a5a_zaehler = parseInt(document.getElementById('a5ab_zaehlerBlock1').innerHTML);
+                        document.getElementById('a5ab_zaehlerBlock1').innerHTML = a5a_zaehler;
+                        a5ab_mining('a5ab_nonceHash1', a5a_nonce, 'a5ab_blockHash1', a5a_hashBlock, a5a_target, 
+                            a5a_zeit, 'a5ab_inhaltHash1', 'a5ab_vorhBlockHash1', 700, 'a5ab_unterbrechung1', 
+                            'a5ab_haken1', 'a5ab_zaehlerBlock1', a5a_zaehler, 'a5ab_startButton2', 'a5ab_block2');
+                        document.getElementById('a5ab_fortsetzung1').style.visibility = 'hidden';"
+                    >Mining fortsetzen</button>
+                    <button id="a5ab_startButton2" class="animbutton" 
+                        style="position: absolute; right: 2em; top: 1em; visibility: hidden;"
+                        onclick="
+                            a5b_zeit = zeitstempel();
+                            document.getElementById('a5ab_zeit2').innerHTML = a5b_zeit;
+                            a5b_zaehler += 1;
+                            document.getElementById('a5ab_zaehlerBlock2').innerHTML = a5b_zaehler;
+                            document.getElementById('a5ab_vorhBlockHash2').innerHTML = 
+                                document.getElementById('a5ab_blockHash1').innerHTML;
+                            document.getElementById('a5ab_verbindungspfeil').style.visibility = 'visible';
+                            document.getElementById('a5ab_startButton2').style.visibility = 'hidden';
+                            document.getElementById('a5ab_unterbrechung2').style.visibility = 'visible';
+                            a5ab_mining('a5ab_nonceHash2', a5b_nonce, 'a5ab_blockHash2', a5b_hashBlock, a5b_target, 
+                                a5b_zeit, 'a5ab_inhaltHash2', 'a5ab_vorhBlockHash2', 700, 'a5ab_unterbrechung2', 
+                                'a5ab_haken2', 'a5ab_zaehlerBlock2', a5b_zaehler, 'a5ab_startButton2', 'a5ab_block2');"
+                        >Starte Mining</button>
+                    <button id="a5ab_unterbrechung2" class="animbutton" 
+                        style="position: absolute; right: 2em; top: 1em; visibility: hidden;"
+                        onclick="
+                            a5b_nonce = document.getElementById('a5ab_nonceHash2').innerHTML;
+                            document.getElementById('a5ab_fortsetzung2').style.visibility = 'visible';"
+                        >Mining unterbrechen</button>
+                    <button id="a5ab_fortsetzung2" class="animbutton" 
+                        style="position: absolute; right: 13.3em; top: 1em; visibility: hidden;"
+                        onclick="
+                            a5b_zaehler = parseInt(document.getElementById('a5ab_zaehlerBlock2').innerHTML);
+                            document.getElementById('a5ab_zaehlerBlock2').innerHTML = a5b_zaehler;
+                            a5ab_mining('a5ab_nonceHash2', a5b_nonce, 'a5ab_blockHash2', a5b_hashBlock, a5b_target, 
+                                a5b_zeit, 'a5ab_inhaltHash2', 'a5ab_vorhBlockHash2', 700, 'a5ab_unterbrechung2', 
+                                'a5ab_haken2', 'a5ab_zaehlerBlock2', a5b_zaehler, 'a5ab_startButton2', 'a5ab_block2');
+                            document.getElementById('a5ab_fortsetzung2').style.visibility = 'hidden';"
+                        >Mining fortsetzen</button>
+                <img id="a5ab_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    style="position: absolute; top: 35em; left: 57em; visibility: visible;"
+                    onclick="document.getElementById('a5ab_info1').style='visibility: visible; z-index: 152;'">                    
+            </div>
+            <div id="a5ab_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a5ab_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a5ab_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a5ab_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a5ab_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a5ab_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>    
         </div>
 

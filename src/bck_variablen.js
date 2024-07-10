@@ -409,3 +409,17 @@ var a4b_hashBlock1 = berechneHash("Genesis-Block" + zeitstempel());
 var a4b_hashBlock2 = berechneHash(a4b_hashBlock1 + a4b_hashReferenz4567);
 var a4b_hashBlock3 = berechneHash(a4b_hashBlock2 + a4b_hashReferenz89AB);
 var a4b_hashBlock4 = berechneHash(a4b_hashBlock3 + a4b_hashReferenzCDEF);
+
+var a5a_hashVorhBlock = a4b_hashBlock1;
+var a5a_hashInhalt = a4b_hashReferenz4567;
+var a5a_zeit = zeitstempel();
+var a5a_target = "0fffffff";
+var a5a_nonce = "00000001";
+var a5a_zaehler = 0;
+var a5a_hashBlock = berechneHash(a5a_hashInhalt + a5a_hashVorhBlock + a5a_zeit + a5a_target + a5a_nonce);
+var a5b_hashInhalt = a4b_hashReferenz89AB;
+var a5b_zeit = zeitstempel();
+var a5b_target = "00ffffff";
+var a5b_nonce = "5264c509";
+var a5b_hashBlock = berechneHash(a5b_hashInhalt + a5a_hashBlock + a5b_zeit + a5b_target + a5b_nonce);
+var a5b_zaehler = 0;
