@@ -397,6 +397,8 @@ Variablen:
 * **a5a_nonce**: beinhaltet die Nonce, die für die Lösung des Hashpuzzles benötigt wird. Anfangswert ist "00000001".
 * **a5a_hashBlock**: beinhaltet den Hashwert des Blocks, der mit der Funktion *berechneHash()*, angewendet auf eine Konkatenation der
   Inhalte der Variablen *a5a_hashInhalt, a5a_hashVorhBlock, a5a_zeit, a5a_target* und *a5a_nonce*.
+* **a5a_zaehler**: beinhaltet die Anzahl der Versuche, die beim Mining gebraucht wurden, um das Hashpuzzle zu lösen. Anfangswert ist
+  0, während des Minings wird diese Variable laufend hochgezählt.
 * **a5b_hashInhalt**: beinhaltet den Hashwert des Inhalts des dargestellten Blocks. Anfangswert ist der Inhalt der Variable
   *a4b_hashReferenz89AB*.
 * **a5b_zeit**: beinhaltet den Zeitstempel des Erstellens des Blocks, berechnet mit der Funktion *zeitstempel()*.
@@ -404,6 +406,8 @@ Variablen:
 * **a5b_nonce**: beinhaltet die Nonce, die für die Lösung des Hashpuzzles benötigt wird. Anfangswert ist "5264c509".
 * **a5b_hashBlock**: beinhaltet den Hashwert des Blocks, der mit der Funktion *berechneHash()*, angewendet auf eine Konkatenation der
   Inhalte der Variablen *a5b_hashInhalt, a5a_hashBlock, a5b_zeit, a5b_target* und *a5b_nonce*.
+* **a5b_zaehler**: beinhaltet die Anzahl der Versuche, die beim Mining gebraucht wurden, um das Hashpuzzle zu lösen. Anfangswert ist
+  0, während des Minings wird diese Variable laufend hochgezählt.
 
 Klassen und Funktionen:
 
