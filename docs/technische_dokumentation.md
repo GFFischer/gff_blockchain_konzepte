@@ -398,7 +398,7 @@ Variablen:
 * **a5a_hashBlock**: beinhaltet den Hashwert des Blocks, der mit der Funktion *berechneHash()*, angewendet auf eine Konkatenation der
   Inhalte der Variablen *a5a_hashInhalt, a5a_hashVorhBlock, a5a_zeit, a5a_target* und *a5a_nonce*.
 * **a5b_hashInhalt**: beinhaltet den Hashwert des Inhalts des dargestellten Blocks. Anfangswert ist der Inhalt der Variable
-  **a4b_hashReferenz89AB*.
+  *a4b_hashReferenz89AB*.
 * **a5b_zeit**: beinhaltet den Zeitstempel des Erstellens des Blocks, berechnet mit der Funktion *zeitstempel()*.
 * **a5b_target**: beinhaltet den Schwierigkeitsgrad des Hashpuzzles. Anfangswert ist "00ffffff".
 * **a5b_nonce**: beinhaltet die Nonce, die für die Lösung des Hashpuzzles benötigt wird. Anfangswert ist "5264c509".
