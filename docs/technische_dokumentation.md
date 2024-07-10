@@ -608,7 +608,7 @@ Konkret handelt es sich um folgende Funktionen:
   (Variable *a5a_hashVorhBlock*) des ersten Blocks sowie die in Animation 5a gefundene Hash-Referenz des Blocks (Variable
   *a5a_hashBlock*), welche gleichzeitig im zweiten Block die Hash-Referenz für den vorherigen Block ist.
 * **a5ab_mining**(nonceID, nonce, hashID, hashBlock, target, zeit, hashInhalt, hashVorherigerBlock, intervall, abbruchID, hakenID,
-  nextStartButtonID, nextBlockID) <br>
+  zaehlerID, zaehler, nextStartButtonID, nextBlockID) <br>
   Mit dieser Funktion wird in den Animationen 5a und 5b das Schützen der Blöcke durch Proof-of-Work simuliert. Auch sie
   generiert html-Code, indem sie die sich ändernde Nonce und den jeweils berechneten Hashwert in den in der Animation
   dargestellten Blöcken ausgibt. Dabei wird so vorgegangen, dass für die übergebenen Werte eines Blocks einer Blockchain in
@@ -634,6 +634,10 @@ Konkret handelt es sich um folgende Funktionen:
   beendet werden kann. <br>
   Der Parameter *hakenID* beinhaltet die ID des Bildes eines Hakens, der angezeigt wird, wenn das Mining erfolgreich
   abgeschlossen ist. <br>
+  Der Parameter *zaehlerID* beinhaltet die ID des Elements, in dem auf der Animation angezeigt wird, wie viele Lösungsversuche
+  für das Hashpuzzle bereits getätigt wurden. <br>
+  Der Parameter *zaehler* beinhaltet die Variable, in der gespeichert wird, wie viele Lösungsversuche für das Hashpuzzle bereits
+  getätigt wurden. <br>
   Der Parameter *nextStartButtonID* beinhaltet die ID des Buttons, der nach dem Mining angezeigt wird und mit dem das Mining für
   den nächsten dargestellten Block gestartet werden kann. <br>
   Der Parameter *nextBlockID* beinhaltet die ID des nächsten dargestellten Blocks, für den im Anschluss die Mining-Funktion
