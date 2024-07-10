@@ -388,10 +388,10 @@ Variablen:
   Konkatenation der Variablen *a4b_hashBlock2* + *a4b_hashReferenz89AB*.
 * **a4b_hashBlock4**: beinhaltet den Hashwert des vierten dargestellten Blocks, berechnet mit der Funktion *berechneHash()* auf die
   Konkatenation der Variablen *a4b_hashBlock3* + *a4b_hashReferenzCDEF*.
-* **a5a_hashVorhBlock**: beinhaltet den Hashwert des nicht dargestellten vorherigen Blocks. Anfangswert ist der Inhlat der Variable
+* **a5a_hashVorhBlock**: beinhaltet den Hashwert des nicht dargestellten vorherigen Blocks. Anfangswert ist der Inhalt der Variable
   *a4b_hashBlock1*.
 * **a5a_hashInhalt**: beinhaltet den Hashwert des Inhalts des dargestellten Blocks. Anfangswert ist der Inhalt der Variable
-  **a4b_hashReferenz4567*.
+  *a4b_hashReferenz4567*.
 * **a5a_zeit**: beinhaltet den Zeitstempel des Erstellens des Blocks, berechnet mit der Funktion *zeitstempel()*.
 * **a5a_target**: beinhaltet den Schwierigkeitsgrad des Hashpuzzles. Anfangswert ist "0fffffff".
 * **a5a_nonce**: beinhaltet die Nonce, die für die Lösung des Hashpuzzles benötigt wird. Anfangswert ist "00000001".
