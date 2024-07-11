@@ -649,6 +649,13 @@ Konkret handelt es sich um folgende Funktionen:
   Mit dieser Funktion wird die Animation, d.h. die schrittweise Änderung des Graphen, die das Verteilen einer Transaktion im
   Peer-to-Peer-Netzwerk darstellt, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch,
   Neustart, Unterbrechung und Fortsetzung der Animation notwendig ist.
+* **a6b_preStart**() <br>
+  Generiert wird der Code für den veränderten Inhalt der Knoten im Graphen. Diese Funktion ist nötig, um Schwierigkeiten mit der
+  Hierarchie der Anführungszeichen zu bewältigen.
+* **a6b_verteileBlock**() <br>
+  Mit dieser Funktion wird die Animation, d.h. die schrittweise Änderung des Graphen, die das Verteilen einer neuen Blocks im
+  Peer-to-Peer-Netzwerk darstellt, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch,
+  Neustart, Unterbrechung und Fortsetzung der Animation notwendig ist.
 
 
 ### CSS
