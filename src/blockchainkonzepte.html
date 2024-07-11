@@ -3828,5 +3828,176 @@
             </div>  
         </div>
 
+<! Animation 6b -->
+
+        <div id="anim_6b" class="mitte animation">
+            <h1>Transaktionen werden in neuen Blöcken zusammengefasst und verteilt</h1>
+            <p>
+                Wenn sich genung gültige Transaktionen im Posteingang befinden, kann jeder Peer beginnen, einen 
+                neuen Block zu erstellen. Falls er das Hashpuszzle lösen kann, bevor von einem anderen Peer ein
+                neuer Block der Blockchain hinzugefügt worden ist, wird der neue Block an alle anderen Peers im
+                Netzwerk verteilt.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
+                <button id="a6b_hintergButton" class="animbutton" 
+                style="visibility: hidden;"
+                onclick="document.getElementById('a6b_hinterg1').style='visibility: visible; z-index: 171';">
+                Hintergrundwissen</button>
+                <button id="a6b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('6c');"
+                    >weiter</button>
+                <button id="a6b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('6a'); a6a_inhaltKnotenNeu();">zurück</button>
+                <img id="a6b_graph_start" class="graph" src="img/graph_fertig.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: visible;">
+                <img id="a6b_graph_1" class="graph" src="img/graph_6a_1.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6b_graph_2" class="graph" src="img/graph_6a_2.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6b_graph_3" class="graph" src="img/graph_6a_3.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6b_graph_4" class="graph" src="img/graph_6a_4.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6b_graph_5" class="graph" src="img/graph_6a_5.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6b_graph_6" class="graph" src="img/graph_6a_6.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <div id="a6b_knotenNeu" class="knoten" 
+                    style="position: absolute; left: 7.5em; top: 28em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knotenNeu").innerHTML = 
+                        "<p style='margin-top: 0.8em;''><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>";
+                    </script>
+                <div id="a6b_knoten1" class="knoten" style="position: absolute; left: 7.5em; top: 4em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten1").innerHTML = 
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <div id="a6b_knoten2" class="knoten" style="position: absolute; left: 19.5em; top: 1em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten2").innerHTML =
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <div id="a6b_knoten3" class="knoten" style="position: absolute; left: 31.5em; top: 2.5em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten3").innerHTML = 
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <div id="a6b_knoten4" class="knoten" style="position: absolute; left: 2em; top: 15em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten4").innerHTML = 
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <div id="a6b_knoten5" class="knoten" style="position: absolute; left: 19.5em; top: 13.3em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten5").innerHTML =
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <div id="a6b_knoten6" class="knoten" style="position: absolute; left: 31em; top: 14em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten6").innerHTML = 
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <div id="a6b_knoten7" class="knoten" style="position: absolute; left: 44.5em; top: 12em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten7").innerHTML = 
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <div id="a6b_knoten8" class="knoten" style="position: absolute; left: 18em; top: 25em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten8").innerHTML =
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <div id="a6b_knoten9" class="knoten" style="position: absolute; left: 29em; top: 27.5em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten9").innerHTML =
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <div id="a6b_knoten10" class="knoten" style="position: absolute; left: 40.5em; top: 24em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6b_knoten10").innerHTML = 
+                        '<p style="margin-top: 0.8em;"><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                    </script>
+                <button id="a6b_preStartButton" class="animbutton" 
+                    style="position: absolute; right: 2em; top: 1em; visibility: visible;"
+                    onclick="
+                        document.getElementById('a6b_preStartButton').style.visibility = 'hidden';
+                        document.getElementById('a6b_startButton').style.visibility = 'visible';
+                        document.getElementById('a6b_knotenNeu').innerHTML = a6b_preStart();
+                    ">Erstelle einen neuen Block</button>
+                <button id="a6b_startButton" class="animbutton" 
+                    style="position: absolute; right: 2em; top: 1em; visibility: hidden;"
+                    onclick="
+                        document.getElementById('a6b_hintergButton').style='visibility: hidden';
+                        document.getElementById('a6b_unterbrechung').style = 
+                            'position: absolute; right: 13.3em; top: 1em; visibility: visible'
+                        document.getElementById('a6b_abbruch').style =
+                            'position: absolute; right: 2em; top: 1em; visibility: visible';
+                        document.getElementById('a6b_startButton').style='visibility: hidden';
+                        a6b_verteileBlock();
+                    ">Verteile den neuen Block</button>
+                <button id="a6b_neustart" class="animbutton" style="visibility: hidden;"
+                    onclick="
+                        a6b_verstricheneZeit = 0;
+                        document.getElementById('a6b_graph_6').style.visibility = 'hidden';
+                        document.getElementById('a6b_graph_start').style.visibility = 'visible';
+                        document.getElementById('a6b_knoten1').innerHTML =
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_knoten2').innerHTML = 
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_knoten3').innerHTML =
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_knoten4').innerHTML =
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_knoten5').innerHTML =
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_knoten6').innerHTML =
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_knoten7').innerHTML =
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_knoten8').innerHTML =
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_knoten9').innerHTML =
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_knoten10').innerHTML =
+                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
+                        document.getElementById('a6b_infoimg1').style.visibility = 'hidden';
+                        document.getElementById('a6b_unterbrechung').style = 
+                            'position: absolute; right: 13.3em; top: 1em; visibility: visible';
+                        document.getElementById('a6b_abbruch').style=
+                            'position: absolute; right: 2em; top: 1em; visibility: visible';
+                        document.getElementById('a6b_neustart').style='visibility: hidden';
+                        document.getElementById('a6b_hintergButton').style.visibility = 'hidden';
+                        a6b_verteileBlock();"
+                    >Animation neu starten</button>
+                <button id="a6b_unterbrechung" class="animbutton" style="visibility: hidden;"
+                    >Animation unterbrechen</button>
+                <button id="a6b_fortsetzung" class="animbutton" style="visibility: hidden;"
+                    onclick="
+                        document.getElementById('a6b_fortsetzung').style='visibility: hidden';
+                        a6b_verteileBlock();"
+                    >Animation fortsetzen</button>
+                <button id="a6b_abbruch" class="animbutton" style="visibility: hidden;"
+                    >Animation abbrechen</button>
+                <img id="a6b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a6b_info1').style='visibility: visible; z-index: 172;'">
+            </div>
+            <div id="a6b_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a6b_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a6b_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a6b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a6b_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a6b_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>  
+        </div>
+
     </body>
 </html>

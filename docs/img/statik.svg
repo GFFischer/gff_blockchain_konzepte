@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="3.2000003"
-     inkscape:cx="314.68747"
-     inkscape:cy="956.24991"
+     inkscape:zoom="12.800001"
+     inkscape:cx="195.85936"
+     inkscape:cy="553.5937"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
@@ -859,12 +859,12 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.211458;stroke-linejoin:round;stroke-dasharray:none"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.217165;stroke-linejoin:round;stroke-dasharray:none"
        id="rect203"
-       width="52.220013"
-       height="113.01905"
-       x="68.638252"
-       y="158.60916" />
+       width="52.214306"
+       height="119.21452"
+       x="68.641106"
+       y="158.61201" />
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:3.175px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none;stroke-width:0.225;stroke-linejoin:round;stroke-dasharray:none"
@@ -1055,7 +1055,17 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.4;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
          x="70.180527"
          y="270.13568"
-         id="tspan145">a6a_verteileTransaktion()</tspan></text>
+         id="tspan145">a6a_verteileTransaktion()</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.4;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
+         x="70.180527"
+         y="273.09903"
+         id="tspan146">a6b_preStart()</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.4;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
+         x="70.180527"
+         y="276.06235"
+         id="tspan147">a6b_verteileBlock()</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 68.512502,165.41054 H 120.91117"
@@ -1615,8 +1625,8 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <path
-       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.203364;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
-       d="m 56.799835,159.02006 2e-6,-114.663178"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.206186;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+       d="m 56.799835,162.224 2e-6,-117.867118"
        id="path400"
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />

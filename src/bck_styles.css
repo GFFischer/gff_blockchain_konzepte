@@ -585,14 +585,14 @@ input:focus, select:focus, textarea:focus, button:focus {
     border-color: black;
     color: var(--creme);
     text-align: center;
-    padding: 0.1em;
+    padding: 0.3em;
 }
 
-.teileBlockGruen {
+.teileBlockBlau {
     background-color: var(--schmetterlingsblau);
     border-width: thin;
     border-style: solid;
     border-color: black;
     text-align: center;
-    padding: 0.1em;
+    padding: 0.3em;
 }

@@ -1259,3 +1259,116 @@ async function a6a_verteileTransaktion() {
         }
     }
 }
+
+function a6b_preStart() {
+    return "<br><br><span class='hash teileBlockGruen'>01d33512</span><p><b>T 4 &nbsp; T5</b></p>";
+}
+
+var a6b_verstricheneZeit = 0;
+var a6b_delay = 0;
+
+async function a6b_verteileBlock() {
+    
+    var a6b_unterbrochen = false;
+    var a6b_knotenInhaltNeu = "<br><br><span class='hash teileBlockGruen'>01d33512</span><p><b>T 4 &nbsp; T5</b></p>"
+
+    document.getElementById("a6b_abbruch").addEventListener("click", () => {
+        a6b_unterbrochen = true;
+        document.getElementById("a6b_graph_6").style.visibility = "visible";
+        document.getElementById("a6b_graph_start").style.visibility = "hidden";
+        document.getElementById("a6b_graph_1").style.visibility = "hidden";
+        document.getElementById("a6b_graph_2").style.visibility = "hidden";
+        document.getElementById("a6b_graph_3").style.visibility = "hidden";
+        document.getElementById("a6b_graph_4").style.visibility = "hidden";
+        document.getElementById("a6b_graph_5").style.visibility = "hidden";
+        document.getElementById("a6b_knotenNeu").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten1").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten2").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten3").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten4").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten5").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten6").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten7").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten8").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten9").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten10").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_infoimg1").style = 
+            "visibility: visible; position: absolute; top: 39.5em; left: 5em"
+        document.getElementById("a6b_abbruch").style="visibility: hidden";
+        document.getElementById("a6b_unterbrechung").style="visibility: hidden";
+        document.getElementById("a6b_fortsetzung").style="visibility: hidden";
+        document.getElementById("a6b_neustart").style=
+            "position: absolute; right: 2em; top: 1em; visibility: visible";
+        document.getElementById("a6b_hintergButton").style =
+            "visibility: visible; position: absolute; top: 44.5em; left: 2em"});
+    
+    document.getElementById("a6b_unterbrechung").addEventListener("click", () => {
+        a6b_unterbrochen = true;
+        document.getElementById("a6b_fortsetzung").style = 
+            "position: absolute; right: 25.9em; top: 1em; visibility: visible";});
+    
+    document.getElementById("a6b_fortsetzung").addEventListener("click", () => {
+        a6b_unterbrochen = false;});
+
+    document.getElementById("a6b_neustart").addEventListener("click", () => {
+        a6b_unterbrochen = false;
+        a6b_verstricheneZeit = 0;
+        document.getElementById('a6b_knotenNeu').innerHTML =
+            "<br><br><span class='hash teileBlockGruen'>01d33512</span><p><b>T 4 &nbsp; T5</b></p>";});
+    
+    document.getElementById("a6b_graph_1").style.visibility = "visible";
+    document.getElementById("a6b_graph_start").style.visibility = "hidden";
+    document.getElementById("a6b_knoten1").innerHTML = a6b_knotenInhaltNeu;
+    document.getElementById("a6b_knoten8").innerHTML = a6b_knotenInhaltNeu;
+    if (a6b_verstricheneZeit < 1500) {a6b_verstricheneZeit += 1500; a6b_delay = 1500;}
+    else {a6b_delay = 0;}
+    await verzoegerung(a6b_delay);
+    if (!a6b_unterbrochen) {
+        document.getElementById("a6b_graph_2").style.visibility = "visible";
+        document.getElementById("a6b_graph_1").style.visibility = "hidden";
+        document.getElementById("a6b_knoten4").innerHTML = a6b_knotenInhaltNeu;
+        document.getElementById("a6b_knoten9").innerHTML = a6b_knotenInhaltNeu;
+        if (a6b_verstricheneZeit < 3000) {a6b_verstricheneZeit += 1500; a6b_delay = 1500;}
+        else {a6b_delay = 0;}
+        await verzoegerung(a6b_delay);
+        if (!a6b_unterbrochen) {
+            document.getElementById("a6b_graph_3").style.visibility = "visible";
+            document.getElementById("a6b_graph_2").style.visibility = "hidden";
+            document.getElementById("a6b_knoten3").innerHTML = a6b_knotenInhaltNeu;
+            document.getElementById("a6b_knoten10").innerHTML = a6b_knotenInhaltNeu;
+            if (a6b_verstricheneZeit < 4500) {a6b_verstricheneZeit += 1000; a6b_delay = 1000;}
+            else {a6b_delay = 0;}
+            await verzoegerung(a6b_delay);
+            if (!a6b_unterbrochen) {
+                document.getElementById("a6b_graph_4").style.visibility = "visible";
+                document.getElementById("a6b_graph_3").style.visibility = "hidden";
+                document.getElementById("a6b_knoten6").innerHTML = a6b_knotenInhaltNeu;
+                document.getElementById("a6b_knoten7").innerHTML = a6b_knotenInhaltNeu;
+                if (a6b_verstricheneZeit < 6000) {a6b_verstricheneZeit += 1500; a6b_delay = 1500;}
+                else {a6b_delay = 0;}
+                await verzoegerung(a6b_delay);
+                if (!a6b_unterbrochen) {
+                    document.getElementById("a6b_graph_5").style.visibility = "visible";
+                    document.getElementById("a6b_graph_4").style.visibility = "hidden";
+                    document.getElementById("a6b_knoten2").innerHTML = a6b_knotenInhaltNeu;
+                    document.getElementById("a6b_knoten5").innerHTML = a6b_knotenInhaltNeu;
+                    if (a6b_verstricheneZeit < 7500) {a6b_verstricheneZeit += 1000; a6b_delay = 1000;}
+                    else {a6b_delay = 0;}
+                    await verzoegerung(a6b_delay);
+                    if (!a6b_unterbrochen) {
+                        document.getElementById("a6b_graph_6").style.visibility = "visible";
+                        document.getElementById("a6b_graph_5").style.visibility = "hidden";
+                        document.getElementById("a6b_unterbrechung").style.visibility = "hidden";
+                        document.getElementById("a6b_abbruch").style.visibility = "hidden";
+                        document.getElementById("a6b_neustart").style =
+                            "position: absolute; right: 2em; top: 1em; visibility: visible";
+                        document.getElementById('a6b_infoimg1').style = 
+                            "visibility: visible; position: absolute; top: 39.5em; left: 5em";
+                        document.getElementById('a6b_hintergButton').style = 
+                            "visibility: visible; position: absolute; top: 44.5em; left: 2em";
+                    }
+                }
+            }
+        }
+    }
+}
