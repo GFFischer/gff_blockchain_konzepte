@@ -645,6 +645,10 @@ Konkret handelt es sich um folgende Funktionen:
 * **a6a_inhaltKnotenNeu**() <br>
   Neu generiert wird der Inhalt des neuen Knotens, bestehend aus den diesem zugewiesenen Adressen, abhängig von der in Animation
   2b eingegebenen Anzahl (Array *a2b_adressenKnoten*).
+* **a6a_verteileTransaktion**() <br>
+  Mit dieser Funktion wird die Animation, d.h. die schrittweise Änderung des Graphen, die das Verteilen einer Transaktion im
+  Peer-to-Peer-Netzwerk darstellt, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch,
+  Neustart, Unterbrechung und Fortsetzung der Animation notwendig ist.
 
 
 ### CSS
