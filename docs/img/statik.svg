@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.40000004"
-     inkscape:cx="-402.49996"
-     inkscape:cy="584.99995"
+     inkscape:zoom="3.2000003"
+     inkscape:cx="314.68747"
+     inkscape:cy="956.24991"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
@@ -859,12 +859,12 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.209132;stroke-linejoin:round;stroke-dasharray:none"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.211458;stroke-linejoin:round;stroke-dasharray:none"
        id="rect203"
-       width="52.22234"
-       height="110.54091"
-       x="68.637093"
-       y="158.608" />
+       width="52.220013"
+       height="113.01905"
+       x="68.638252"
+       y="158.60916" />
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:3.175px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none;stroke-width:0.225;stroke-linejoin:round;stroke-dasharray:none"
@@ -1050,7 +1050,12 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.4;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
          x="70.180527"
          y="267.17236"
-         id="tspan267">a6a_inhaltKnotenNeu()</tspan></text>
+         id="tspan267">a6a_inhaltKnotenNeu()</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.4;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
+         x="70.180527"
+         y="270.13568"
+         id="tspan145">a6a_verteileTransaktion()</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 68.512502,165.41054 H 120.91117"

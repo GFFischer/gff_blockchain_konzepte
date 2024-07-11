@@ -569,7 +569,7 @@ input:focus, select:focus, textarea:focus, button:focus {
     padding: 0.4em;
 }
 
-.geaendeter Wert {
+.geaendeterWert {
     font-weight: bold;
     color: var(--klatschmohnrot);
 }

@@ -639,11 +639,11 @@ async function a4a_bewegteReferenzen() {
         document.getElementById("a4a_refTrans45").style.visibility = "visible";
         document.getElementById("a4a_hashRefTrans45").style.visibility = "visible";
         document.getElementById("a4a_feldHashRef45").style.visibility = "visible";
-        document.getElementById("a4a_refTrans45").classList.remove("tabHervorgehoben");
-        document.getElementById("a4a_hashRef4").classList.remove("tabHervorgehoben");
-        document.getElementById("a4a_hashRef5").classList.remove("tabHervorgehoben");
-        document.getElementById("a4a_hashRefTrans45").classList.add("tabHervorgehoben");
-        document.getElementById("a4a_hashTrans45").classList.add("tabHervorgehoben");
+        document.getElementById("a4a_refTrans45").classList.remove("geaendeterWert");
+        document.getElementById("a4a_hashRef4").classList.remove("geaendeterWert");
+        document.getElementById("a4a_hashRef5").classList.remove("geaendeterWert");
+        document.getElementById("a4a_hashRefTrans45").classList.add("geaendeterWert");
+        document.getElementById("a4a_hashTrans45").classList.add("geaendeterWert");
         document.getElementById("a4a_infoimg1").style = 
             "visibility: visible; position: absolute; top: 28em; left: 40em;"
         document.getElementById("a4a_abbruch").style="visibility: hidden";
@@ -687,19 +687,19 @@ async function a4a_bewegteReferenzen() {
                 await verzoegerung(a4a_delay);
                 if (!a4a_unterbrochen) {
                     document.getElementById("a4a_refTrans45").style.visibility = "visible";
-                    document.getElementById("a4a_refTrans45").classList.add("tabHervorgehoben");
-                    document.getElementById("a4a_hashRef4").classList.add("tabHervorgehoben");
-                    document.getElementById("a4a_hashRef5").classList.add("tabHervorgehoben");
+                    document.getElementById("a4a_refTrans45").classList.add("geaendeterWert");
+                    document.getElementById("a4a_hashRef4").classList.add("geaendeterWert");
+                    document.getElementById("a4a_hashRef5").classList.add("geaendeterWert");
                     if (a4a_verstricheneZeit < 8300) {a4a_verstricheneZeit += 1500; a4a_delay = 1500;}
                     else {a4a_delay = 0;}
                     await verzoegerung(a4a_delay);
                     if (!a4a_unterbrochen) {
-                        document.getElementById("a4a_refTrans45").classList.remove("tabHervorgehoben");
-                        document.getElementById("a4a_hashRef4").classList.remove("tabHervorgehoben");
-                        document.getElementById("a4a_hashRef5").classList.remove("tabHervorgehoben");
+                        document.getElementById("a4a_refTrans45").classList.remove("geaendeterWert");
+                        document.getElementById("a4a_hashRef4").classList.remove("geaendeterWert");
+                        document.getElementById("a4a_hashRef5").classList.remove("geaendeterWert");
                         document.getElementById("a4a_hashRefTrans45").style.visibility = "visible";
-                        document.getElementById("a4a_hashRefTrans45").classList.add("tabHervorgehoben");
-                        document.getElementById("a4a_hashTrans45").classList.add("tabHervorgehoben");
+                        document.getElementById("a4a_hashRefTrans45").classList.add("geaendeterWert");
+                        document.getElementById("a4a_hashTrans45").classList.add("geaendeterWert");
                         if (a4a_verstricheneZeit < 9800) {a4a_verstricheneZeit += 1500; a4a_delay = 1500;}
                         else {a4a_delay = 0;}
                         await verzoegerung(a4a_delay);
@@ -991,46 +991,46 @@ async function a4c_aendereDaten() {
     var a4c_wert4 = document.getElementById('a4c_betragTransaktion5').value;
     if (!(a4c_wert1 == "e=, n=")) {
         document.getElementById('a4c_empfaenger4').innerHTML = a4c_wert1;
-        document.getElementById('a4c_empfaenger4').classList.add('tabHervorgehoben');
+        document.getElementById('a4c_empfaenger4').classList.add('geaendeterWert');
     }
     if (!(a4c_wert2 == "")) {
         document.getElementById('a4c_betrag4').innerHTML = a4c_wert2 + ' SiC';
-        document.getElementById('a4c_betrag4').classList.add('tabHervorgehoben');
+        document.getElementById('a4c_betrag4').classList.add('geaendeterWert');
     }
     if (!(a4c_wert3 == "e=, n=")) {
         document.getElementById('a4c_empfaenger5').innerHTML = a4c_wert3;
-        document.getElementById('a4c_empfaenger5').classList.add('tabHervorgehoben');
+        document.getElementById('a4c_empfaenger5').classList.add('geaendeterWert');
     }
     if (!(a4c_wert4 == "")) {
         document.getElementById('a4c_betrag5').innerHTML = a4c_wert4 + ' SiC';
-        document.getElementById('a4c_betrag5').classList.add('tabHervorgehoben');
+        document.getElementById('a4c_betrag5').classList.add('geaendeterWert');
     }
     await verzoegerung(1000);
     if (!(a4c_wert1 == "e=, n=") || !(a4c_wert2 == "")) {
         document.getElementById('a4c_hashTrans4').innerHTML = berechneHash(a4c_wert1 + a4c_wert2);
-        document.getElementById("a4c_hashTrans4").classList.add('tabHervorgehoben');
+        document.getElementById("a4c_hashTrans4").classList.add('geaendeterWert');
     }
     if (!(a4c_wert3 == "e=, n=") || !(a4c_wert4 == "")) {
         document.getElementById('a4c_hashTrans5').innerHTML = berechneHash(a4c_wert3 + a4c_wert4);
-        document.getElementById("a4c_hashTrans5").classList.add('tabHervorgehoben');
+        document.getElementById("a4c_hashTrans5").classList.add('geaendeterWert');
     }
     await verzoegerung(1000);
     if (!(a4c_wert1 == "e=, n=") || !(a4c_wert2 == "") || !(a4c_wert3 == "e=, n=") || !(a4c_wert4 == "")) {
         document.getElementById('a4c_hashTrans45').innerHTML = 
             berechneHash(a4c_wert1 + a4c_wert2 + a4c_wert3 + a4c_wert4);
-        document.getElementById("a4c_hashTrans45").classList.add('tabHervorgehoben');
+        document.getElementById("a4c_hashTrans45").classList.add('geaendeterWert');
         await verzoegerung(1000);
         document.getElementById('a4c_hashTrans4567').innerHTML = 
             berechneHash(a4c_wert1 + a4c_wert2 + a4c_wert3 + a4c_wert4 + a4b_hashReferenz67);
-        document.getElementById("a4c_hashTrans4567").classList.add('tabHervorgehoben');
+        document.getElementById("a4c_hashTrans4567").classList.add('geaendeterWert');
         await verzoegerung(1000);
         document.getElementById('a4c_block2HashRef').innerHTML = 
             berechneHash(a4c_wert1 + a4c_wert2 + a4c_wert3 + a4c_wert4 + a4b_hashReferenz67);
-        document.getElementById("a4c_block2HashRef").classList.add('tabHervorgehoben');
+        document.getElementById("a4c_block2HashRef").classList.add('geaendeterWert');
         await verzoegerung(1000);
         document.getElementById('a4c_block2Hash').innerHTML = 
             berechneHash(a4c_wert1 + a4c_wert2 + a4c_wert3 + a4c_wert4 + a4b_hashReferenz67 + a4b_hashBlock1);
-        document.getElementById("a4c_block2Hash").classList.add('tabHervorgehoben');
+        document.getElementById("a4c_block2Hash").classList.add('geaendeterWert');
         await verzoegerung(1000);
         document.getElementById('a4c_pfeil43').style.visibility = 'hidden';
         document.getElementById('a4c_pfeil44').style.visibility = 'visible';
@@ -1045,7 +1045,7 @@ async function a4c_aendereDaten() {
 function a5ab_datenBloecke() {
     a5a_hashVorhBlock = a4b_hashBlock1;
     document.getElementById("a5ab_vorhBlockHash1").innerHTML = a5a_hashVorhBlock;
-    a5a_hashInhalt = a4b_hashReferenz4567;¨
+    a5a_hashInhalt = a4b_hashReferenz4567;
     document.getElementById("a5ab_inhaltHash1").innerHTML = a5a_hashInhalt;
 }
 
@@ -1082,4 +1082,180 @@ function a5ab_mining(nonceID, nonce, hashID, hashBlock, target, zeit, hashInhalt
         }
     }
     var wertNeu = setInterval(aendereWert, intervall);
+}
+
+function a6a_inhaltKnotenNeu() {
+    document.getElementById('a6a_privateSchluessel').innerHTML = a2b_schluessel();
+    document.getElementById('a6a_knotenNeu').innerHTML = '<br>' + a2b_adressenKnoten[0] + '<br>' + 
+        a2b_adressenKnoten[1] + '<br>' + a2b_adressenKnoten[2] + "<br><b>Transaktion 4</b>";
+}
+
+var a6a_verstricheneZeit = 0;
+var a6a_delay = 0;
+
+async function a6a_verteileTransaktion() {
+
+    var a6a_unterbrochen = false;
+
+    document.getElementById("a6a_abbruch").addEventListener("click", () => {
+        a6a_unterbrochen = true;
+        document.getElementById("a6a_graph_6").style.visibility = "visible";
+        document.getElementById("a6a_graph_start").style.visibility = "hidden";
+        document.getElementById("a6a_graph_1").style.visibility = "hidden";
+        document.getElementById("a6a_graph_2").style.visibility = "hidden";
+        document.getElementById("a6a_graph_3").style.visibility = "hidden";
+        document.getElementById("a6a_graph_4").style.visibility = "hidden";
+        document.getElementById("a6a_graph_5").style.visibility = "hidden";
+        document.getElementById("a6a_knoten1").innerHTML = "<br>" + a2b_adressenKnoten[3] + "<br>" 
+            + a2b_adressenKnoten[4] + "<br>" + a2b_adressenKnoten[5] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten2").innerHTML = "<br>" + a2b_adressenKnoten[6] + "<br>" 
+            + a2b_adressenKnoten[7] + "<br>" + a2b_adressenKnoten[8] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten3").innerHTML = "<br>" + a2b_adressenKnoten[9] + "<br>" 
+            + a2b_adressenKnoten[10] + "<br>" + a2b_adressenKnoten[11] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten4").innerHTML = "<br>" + a2b_adressenKnoten[12] + "<br>" 
+            + a2b_adressenKnoten[13] + "<br>" + a2b_adressenKnoten[14] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten5").innerHTML = "<br>" + a2b_adressenKnoten[15] + "<br>" 
+            + a2b_adressenKnoten[16] + "<br>" + a2b_adressenKnoten[17] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten6").innerHTML = "<br>" + a2b_adressenKnoten[18] + "<br>" 
+            + a2b_adressenKnoten[19] + "<br>" + a2b_adressenKnoten[20] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten7").innerHTML = "<br>" + a2b_adressenKnoten[21] + "<br>" 
+            + a2b_adressenKnoten[22] + "<br>" + a2b_adressenKnoten[23] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten8").innerHTML = "<br>" + a2b_adressenKnoten[24] + "<br>" 
+            + a2b_adressenKnoten[25] + "<br>" + a2b_adressenKnoten[26] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten9").innerHTML = "<br>" + a2b_adressenKnoten[27] + "<br>" 
+            + a2b_adressenKnoten[28] + "<br>" + a2b_adressenKnoten[29] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten10").innerHTML = "<br>" + a2b_adressenKnoten[30] + "<br>" 
+            + a2b_adressenKnoten[31] + "<br>" + a2b_adressenKnoten[32] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten1").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten2").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten3").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten4").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten5").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten6").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten7").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten8").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten9").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten10").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_infoimg1").style = 
+            "visibility: visible; position: absolute; top: 39.5em; left: 5em"
+        document.getElementById("a6a_abbruch").style="visibility: hidden";
+        document.getElementById("a6a_unterbrechung").style="visibility: hidden";
+        document.getElementById("a6a_fortsetzung").style="visibility: hidden";
+        document.getElementById("a6a_neustart").style=
+            "position: absolute; right: 2em; top: 1em; visibility: visible";
+        document.getElementById("a6a_hintergButton").style =
+            "visibility: visible; position: absolute; top: 44.5em; left: 2em"});
+    
+    document.getElementById("a6a_unterbrechung").addEventListener("click", () => {
+        a6a_unterbrochen = true;
+        document.getElementById("a6a_fortsetzung").style = 
+            "position: absolute; right: 25.9em; top: 1em; visibility: visible";});
+    
+    document.getElementById("a6a_fortsetzung").addEventListener("click", () => {
+        a6a_unterbrochen = false;});
+
+    document.getElementById("a6a_neustart").addEventListener("click", () => {
+        a6a_unterbrochen = false;
+        a6a_verstricheneZeit = 0;});
+    
+    document.getElementById("a6a_graph_1").style.visibility = "visible";
+    document.getElementById("a6a_graph_start").style.visibility = "hidden";
+    if (a6a_verstricheneZeit < 1000) {a6a_verstricheneZeit += 1000; a6a_delay = 1000;}
+    else {a6a_delay = 0;}
+    await verzoegerung(a6a_delay);
+    if (!a6a_unterbrochen) {
+        document.getElementById("a6a_knoten1").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten1").innerHTML = "<br>" + a2b_adressenKnoten[3] + "<br>" 
+            + a2b_adressenKnoten[4] + "<br>" + a2b_adressenKnoten[5] + "<br><b>Transaktion 4<b>";
+        document.getElementById("a6a_knoten8").classList.add("gruenerHintergrund");
+        document.getElementById("a6a_knoten8").innerHTML = "<br>" + a2b_adressenKnoten[24] + "<br>" 
+            + a2b_adressenKnoten[25] + "<br>" + a2b_adressenKnoten[26] + "<br><b>Transaktion 4<b>";
+        if (a6a_verstricheneZeit < 2500) {a6a_verstricheneZeit += 1500; a6a_delay = 1500;}
+        else {a6a_delay = 0;}
+        await verzoegerung(a6a_delay);
+        if (!a6a_unterbrochen) {
+            document.getElementById("a6a_graph_2").style.visibility = "visible";
+            document.getElementById("a6a_graph_1").style.visibility = "hidden";
+            if (a6a_verstricheneZeit < 3500) {a6a_verstricheneZeit += 1000; a6a_delay = 1000;}
+            else {a6a_delay = 0;}
+            await verzoegerung(a6a_delay);
+            if (!a6a_unterbrochen) {
+                document.getElementById("a6a_knoten4").classList.add("gruenerHintergrund");
+                document.getElementById("a6a_knoten4").innerHTML = "<br>" + a2b_adressenKnoten[12] + "<br>" 
+                    + a2b_adressenKnoten[13] + "<br>" + a2b_adressenKnoten[14] + "<br><b>Transaktion 4<b>";
+                document.getElementById("a6a_knoten9").classList.add("gruenerHintergrund");
+                document.getElementById("a6a_knoten9").innerHTML = "<br>" + a2b_adressenKnoten[27] + "<br>" 
+                    + a2b_adressenKnoten[28] + "<br>" + a2b_adressenKnoten[29] + "<br><b>Transaktion 4<b>";
+                if (a6a_verstricheneZeit < 5000) {a6a_verstricheneZeit += 1500; a6a_delay = 1500;}
+                else {a6a_delay = 0;}
+                await verzoegerung(a6a_delay);
+                if (!a6a_unterbrochen) {
+                    document.getElementById("a6a_graph_3").style.visibility = "visible";
+                    document.getElementById("a6a_graph_2").style.visibility = "hidden";
+                    if (a6a_verstricheneZeit < 6000) {a6a_verstricheneZeit += 1000; a6a_delay = 1000;}
+                    else {a6a_delay = 0;}
+                    await verzoegerung(a6a_delay);
+                    if (!a6a_unterbrochen) {
+                        document.getElementById("a6a_knoten3").classList.add("gruenerHintergrund");
+                        document.getElementById("a6a_knoten3").innerHTML = "<br>" + a2b_adressenKnoten[9] + "<br>" 
+                            + a2b_adressenKnoten[10] + "<br>" + a2b_adressenKnoten[11] + "<br><b>Transaktion 4<b>";
+                        document.getElementById("a6a_knoten10").classList.add("gruenerHintergrund");
+                        document.getElementById("a6a_knoten10").innerHTML = "<br>" + a2b_adressenKnoten[30] + "<br>" 
+                            + a2b_adressenKnoten[31] + "<br>" + a2b_adressenKnoten[32] + "<br><b>Transaktion 4<b>";
+                        if (a6a_verstricheneZeit < 7500) {a6a_verstricheneZeit += 1500; a6a_delay = 1500;}
+                        else {a6a_delay = 0;}
+                        await verzoegerung(a6a_delay);
+                        if (!a6a_unterbrochen) {
+                            document.getElementById("a6a_graph_4").style.visibility = "visible";
+                            document.getElementById("a6a_graph_3").style.visibility = "hidden";
+                            if (a6a_verstricheneZeit < 8500) {a6a_verstricheneZeit += 1000; a6a_delay = 1000;}
+                            else {a6a_delay = 0;}
+                            await verzoegerung(a6a_delay);
+                            if (!a6a_unterbrochen) {
+                                document.getElementById("a6a_knoten6").classList.add("gruenerHintergrund");
+                                document.getElementById("a6a_knoten6").innerHTML = "<br>" + a2b_adressenKnoten[18] + "<br>" 
+                                    + a2b_adressenKnoten[19] + "<br>" + a2b_adressenKnoten[20] + "<br><b>Transaktion 4<b>";
+                                document.getElementById("a6a_knoten7").classList.add("gruenerHintergrund");
+                                document.getElementById("a6a_knoten7").innerHTML = "<br>" + a2b_adressenKnoten[21] + "<br>" 
+                                    + a2b_adressenKnoten[22] + "<br>" + a2b_adressenKnoten[23] + "<br><b>Transaktion 4<b>";
+                                if (a6a_verstricheneZeit < 10000) {a6a_verstricheneZeit += 1500; a6a_delay = 1500;}
+                                else {a6a_delay = 0;}
+                                await verzoegerung(a6a_delay);
+                                if (!a6a_unterbrochen) {
+                                    document.getElementById("a6a_graph_5").style.visibility = "visible";
+                                    document.getElementById("a6a_graph_4").style.visibility = "hidden";
+                                    if (a6a_verstricheneZeit < 11000) {a6a_verstricheneZeit += 1000; a6a_delay = 1000;}
+                                    else {a6a_delay = 0;}
+                                    await verzoegerung(a6a_delay);
+                                    if (!a6a_unterbrochen) {
+                                        document.getElementById("a6a_knoten2").classList.add("gruenerHintergrund");
+                                        document.getElementById("a6a_knoten2").innerHTML = "<br>" + a2b_adressenKnoten[6] + "<br>" 
+                                            + a2b_adressenKnoten[7] + "<br>" + a2b_adressenKnoten[8] + "<br><b>Transaktion 4<b>";
+                                        document.getElementById("a6a_knoten5").classList.add("gruenerHintergrund");
+                                        document.getElementById("a6a_knoten5").innerHTML = "<br>" + a2b_adressenKnoten[15] + "<br>" 
+                                            + a2b_adressenKnoten[16] + "<br>" + a2b_adressenKnoten[17] + "<br><b>Transaktion 4<b>";
+                                        if (a6a_verstricheneZeit < 12500) {a6a_verstricheneZeit += 1500; a6a_delay = 1500;}
+                                        else {a6a_delay = 0;}
+                                        await verzoegerung(a6a_delay);
+                                        if (!a6a_unterbrochen) {
+                                            document.getElementById("a6a_graph_6").style.visibility = "visible";
+                                            document.getElementById("a6a_graph_5").style.visibility = "hidden";
+                                            document.getElementById("a6a_unterbrechung").style.visibility = "hidden";
+                                            document.getElementById("a6a_abbruch").style.visibility = "hidden";
+                                            document.getElementById("a6a_neustart").style =
+                                                "position: absolute; right: 2em; top: 1em; visibility: visible";
+                                            document.getElementById('a6a_infoimg1').style = 
+                                                "visibility: visible; position: absolute; top: 39.5em; left: 5em";
+                                            document.getElementById('a6a_hintergButton').style = 
+                                                "visibility: visible; position: absolute; top: 44.5em; left: 2em";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

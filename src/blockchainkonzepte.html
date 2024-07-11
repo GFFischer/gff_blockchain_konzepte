@@ -102,7 +102,7 @@
                 <ul id="anim6_menu" class="submenu"
                     onclick="document.getElementById('navmenu').classList.remove('sichtbar');
                         document.getElementById('navmenu').classList.add('unsichtbar');">
-                    <li id="a6a_menu" class="submenuEintrag" onclick="oeffneAnimation('6a')
+                    <li id="a6a_menu" class="submenuEintrag" onclick="oeffneAnimation('6a'); a6a_inhaltKnotenNeu();
                         ">Eine neue Transaktion im Netzwerk verteilen</li>
                     <li id="a6b_menu" class="submenuEintrag" onclick="oeffneAnimation('6b')
                         ">Einen neuen Block im Netzwerk verteilen</li>
@@ -1210,7 +1210,7 @@
                 <button id="a2c_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
                     onclick="a2c_verschwindendeNamen();">Starte Animation</button>
                 <img id="a2c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a2b_info1').style='visibility: visible; z-index: 72;'">    
+                    onclick="document.getElementById('a2c_info1').style='visibility: visible; z-index: 72;'">    
                 <img id="a2c_pfeil" src="img/pfeil_private_schluessel_schwarz.png" alt="Pfeil"
                     style="position: absolute; left: 16.2em; top: 35.6em; width: 4em;">
                 <div id="a2c_privateSchluessel" class="block" style=
@@ -3310,16 +3310,16 @@
                         document.getElementById('a4c_infoimg1').style.visibility = 'hidden';
                         document.getElementById('a4c_hintergButton').style.visibility = 'hidden';
                         document.getElementById('a4c_formular').style.visibility = 'visible';
-                        document.getElementById('a4c_empfaenger4').classList.remove('tabHervorgehoben');
-                        document.getElementById('a4c_betrag4').classList.remove('tabHervorgehoben');
-                        document.getElementById('a4c_empfaenger5').classList.remove('tabHervorgehoben');
-                        document.getElementById('a4c_betrag5').classList.remove('tabHervorgehoben');
-                        document.getElementById('a4c_hashTrans4').classList.remove('tabHervorgehoben');
-                        document.getElementById('a4c_hashTrans5').classList.remove('tabHervorgehoben');
-                        document.getElementById('a4c_hashTrans45').classList.remove('tabHervorgehoben');
-                        document.getElementById('a4c_hashTrans4567').classList.remove('tabHervorgehoben');
-                        document.getElementById('a4c_block2HashRef').classList.remove('tabHervorgehoben');
-                        document.getElementById('a4c_block2Hash').classList.remove('tabHervorgehoben');"
+                        document.getElementById('a4c_empfaenger4').classList.remove('geaendeterWert');
+                        document.getElementById('a4c_betrag4').classList.remove('geaendeterWert');
+                        document.getElementById('a4c_empfaenger5').classList.remove('geaendeterWert');
+                        document.getElementById('a4c_betrag5').classList.remove('geaendeterWert');
+                        document.getElementById('a4c_hashTrans4').classList.remove('geaendeterWert');
+                        document.getElementById('a4c_hashTrans5').classList.remove('geaendeterWert');
+                        document.getElementById('a4c_hashTrans45').classList.remove('geaendeterWert');
+                        document.getElementById('a4c_hashTrans4567').classList.remove('geaendeterWert');
+                        document.getElementById('a4c_block2HashRef').classList.remove('geaendeterWert');
+                        document.getElementById('a4c_block2Hash').classList.remove('geaendeterWert');"
                     >Ändere Transaktionsdaten</button>
                 <div id="a4c_formular" class="formular" 
                     style="position: absolute; right: 2em; top: 5em; width: 18em; visibility: hidden;">
@@ -3396,7 +3396,7 @@
                     onclick="document.getElementById('a5ab_hinterg1').style='visibility: visible; z-index: 151';">
                     Hintergrundwissen</button>
                 <button id="a5ab_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('6a')">weiter</button>
+                    onclick="oeffneAnimation('6a'); a6a_inhaltKnotenNeu();">weiter</button>
                 <button id="a4a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('4c'); a4c_datenMerkleTree();
                     ">zurück</button>
@@ -3649,6 +3649,183 @@
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a5ab_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>    
+        </div>
+
+<! Animation 6a -->
+
+        <div id="anim_6a" class="mitte animation">
+            <h1>Neue Transaktionen werden im Peer-to-Peer-Netzwerk verteilt</h1>
+            <p>
+                Wenn ein Peer eine neue Transaktion erstellt, schickt er sie an alle Peers weiter, mit denen er
+                direkt verbunden ist. Wenn bei einem Peer auf diese Art eine neue Transaktion in seinem Posteingang
+                landet, schickt er sie an alle direkt mit ihm verbundenen Peers weiter. So landet die neue Transaktion
+                am Ende in den Posteingängen von sämtlichen Peers. 
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
+                <button id="a6a_hintergButton" class="animbutton" 
+                style="visibility: hidden;"
+                onclick="document.getElementById('a6a_hinterg1').style='visibility: visible; z-index: 161';">
+                Hintergrundwissen</button>
+                <button id="a6a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('6b');"
+                    >weiter</button>
+                <button id="a6a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('5'); a5ab_datenBloecke();">zurück</button>
+                <img id="a6a_graph_start" class="graph" src="img/graph_fertig.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: visible;">
+                <img id="a6a_graph_1" class="graph" src="img/graph_6a_1.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6a_graph_2" class="graph" src="img/graph_6a_2.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6a_graph_3" class="graph" src="img/graph_6a_3.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6a_graph_4" class="graph" src="img/graph_6a_4.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6a_graph_5" class="graph" src="img/graph_6a_5.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <img id="a6a_graph_6" class="graph" src="img/graph_6a_6.png" alt="Peer-to-Peer-System"
+                    style="position: absolute; left: 8em; top: 6em; visibility: hidden;">
+                <div id="a6a_knotenNeu" class="knoten gruenerHintergrund" 
+                    style="position: absolute; left: 7.5em; top: 28em;"></div>
+                    <script>
+                        document.getElementById('a6a_knotenNeu').innerHTML = '<br>' + a2b_adressenKnoten[0] + '<br>' + 
+                        a2b_adressenKnoten[1] + '<br>' + a2b_adressenKnoten[2] + "<br><b>Transaktion 4</b>";
+                    </script>
+                <div id="a6a_knoten1" class="knoten" style="position: absolute; left: 7.5em; top: 4em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten1").innerHTML = "<br>" 
+                        + a2b_adressenKnoten[3] + "<br>" + a2b_adressenKnoten[4] + "<br>" + a2b_adressenKnoten[5];
+                    </script>
+                <div id="a6a_knoten2" class="knoten" style="position: absolute; left: 19.5em; top: 1em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten2").innerHTML = "<br>"
+                        + a2b_adressenKnoten[6] + "<br>" + a2b_adressenKnoten[7] + "<br>" + a2b_adressenKnoten[8];
+                    </script>
+                <div id="a6a_knoten3" class="knoten" style="position: absolute; left: 31.5em; top: 2.5em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten3").innerHTML = "<br>" 
+                        + a2b_adressenKnoten[9] + "<br>" + a2b_adressenKnoten[10] + "<br>" + a2b_adressenKnoten[11];
+                    </script>
+                <div id="a6a_knoten4" class="knoten" style="position: absolute; left: 2em; top: 15em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten4").innerHTML = "<br>" 
+                        + a2b_adressenKnoten[12] + "<br>" + a2b_adressenKnoten[13] + "<br>" + a2b_adressenKnoten[14];
+                    </script>
+                <div id="a6a_knoten5" class="knoten" style="position: absolute; left: 19.5em; top: 13.3em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten5").innerHTML = "<br>" 
+                        + a2b_adressenKnoten[15] + "<br>" + a2b_adressenKnoten[16] + "<br>" + a2b_adressenKnoten[17];
+                    </script>
+                <div id="a6a_knoten6" class="knoten" style="position: absolute; left: 31em; top: 14em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten6").innerHTML = "<br>" 
+                        + a2b_adressenKnoten[18] + "<br>" + a2b_adressenKnoten[19] + "<br>" + a2b_adressenKnoten[20];
+                    </script>
+                <div id="a6a_knoten7" class="knoten" style="position: absolute; left: 44.5em; top: 12em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten7").innerHTML = "<br>" 
+                        + a2b_adressenKnoten[21] + "<br>" + a2b_adressenKnoten[22] + "<br>" + a2b_adressenKnoten[23];
+                    </script>
+                <div id="a6a_knoten8" class="knoten" style="position: absolute; left: 18em; top: 25em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten8").innerHTML = "<br>" 
+                        + a2b_adressenKnoten[24] + "<br>" + a2b_adressenKnoten[25] + "<br>" + a2b_adressenKnoten[26];
+                    </script>
+                <div id="a6a_knoten9" class="knoten" style="position: absolute; left: 29em; top: 27.5em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten9").innerHTML = "<br>" 
+                        + a2b_adressenKnoten[27] + "<br>" + a2b_adressenKnoten[28] + "<br>" + a2b_adressenKnoten[29];
+                    </script>
+                <div id="a6a_knoten10" class="knoten" style="position: absolute; left: 40.5em; top: 24em;"></div>
+                    <script type="text/javascript">
+                        document.getElementById("a6a_knoten10").innerHTML = "<br>" 
+                        + a2b_adressenKnoten[30] + "<br>" + a2b_adressenKnoten[31] + "<br>" + a2b_adressenKnoten[32];
+                    </script>
+                <button id="a6a_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="
+                        document.getElementById('a6a_hintergButton').style='visibility: hidden';
+                        document.getElementById('a6a_unterbrechung').style = 
+                            'position: absolute; right: 13.3em; top: 1em; visibility: visible'
+                        document.getElementById('a6a_abbruch').style =
+                            'position: absolute; right: 2em; top: 1em; visibility: visible';
+                        document.getElementById('a6a_startButton').style='visibility: hidden';
+                        a6a_verteileTransaktion();
+                    ">Verteile Transaktion</button>
+                <button id="a6a_neustart" class="animbutton" style="visibility: hidden;"
+                    onclick="
+                        a6a_verstricheneZeit = 0;
+                        document.getElementById('a6a_graph_6').style.visibility = 'hidden';
+                        document.getElementById('a6a_graph_start').style.visibility = 'visible';
+                        document.getElementById('a6a_knoten1').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[3] + '<br>' + a2b_adressenKnoten[4] + '<br>' + a2b_adressenKnoten[5];
+                        document.getElementById('a6a_knoten2').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[6] + '<br>' + a2b_adressenKnoten[7] + '<br>' + a2b_adressenKnoten[8];
+                        document.getElementById('a6a_knoten3').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[9] + '<br>' + a2b_adressenKnoten[10] + '<br>' + a2b_adressenKnoten[11];
+                        document.getElementById('a6a_knoten4').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[12] + '<br>' + a2b_adressenKnoten[13] + '<br>' + a2b_adressenKnoten[14];
+                        document.getElementById('a6a_knoten5').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[15] + '<br>' + a2b_adressenKnoten[16] + '<br>' + a2b_adressenKnoten[17];
+                        document.getElementById('a6a_knoten6').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[18] + '<br>' + a2b_adressenKnoten[19] + '<br>' + a2b_adressenKnoten[20];
+                        document.getElementById('a6a_knoten7').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[21] + '<br>' + a2b_adressenKnoten[22] + '<br>' + a2b_adressenKnoten[23];
+                        document.getElementById('a6a_knoten8').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[24] + '<br>' + a2b_adressenKnoten[25] + '<br>' + a2b_adressenKnoten[26];
+                        document.getElementById('a6a_knoten9').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[27] + '<br>' + a2b_adressenKnoten[28] + '<br>' + a2b_adressenKnoten[29];
+                        document.getElementById('a6a_knoten10').innerHTML = '<br>' 
+                            + a2b_adressenKnoten[30] + '<br>' + a2b_adressenKnoten[31] + '<br>' + a2b_adressenKnoten[32];
+                        document.getElementById('a6a_knoten1').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_knoten2').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_knoten3').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_knoten4').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_knoten5').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_knoten6').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_knoten7').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_knoten8').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_knoten9').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_knoten10').classList.remove('gruenerHintergrund');
+                        document.getElementById('a6a_infoimg1').style.visibility = 'hidden';
+                        document.getElementById('a6a_unterbrechung').style = 
+                            'position: absolute; right: 13.3em; top: 1em; visibility: visible';
+                        document.getElementById('a6a_abbruch').style=
+                            'position: absolute; right: 2em; top: 1em; visibility: visible';
+                        document.getElementById('a6a_neustart').style='visibility: hidden';
+                        document.getElementById('a6a_hintergButton').style.visibility = 'hidden';
+                        a6a_verteileTransaktion();"
+                    >Animation neu starten</button>
+                <button id="a6a_unterbrechung" class="animbutton" style="visibility: hidden;"
+                    >Animation unterbrechen</button>
+                <button id="a6a_fortsetzung" class="animbutton" style="visibility: hidden;"
+                    onclick="
+                        document.getElementById('a6a_fortsetzung').style='visibility: hidden';
+                        a6a_verteileTransaktion();"
+                    >Animation fortsetzen</button>
+                <button id="a6a_abbruch" class="animbutton" style="visibility: hidden;"
+                    >Animation abbrechen</button>
+                <img id="a6a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a6a_info1').style='visibility: visible; z-index: 162;'">    
+                <img id="a6a_pfeil" src="img/pfeil_private_schluessel_schwarz.png" alt="Pfeil"
+                    style="position: absolute; left: 16.2em; top: 35.6em; width: 4em;">
+                <div id="a6a_privateSchluessel" class="block" style=
+                    "position: absolute; left: 19.7em; top: 38.4em;"></div>       
+            </div>
+            <div id="a6a_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a6a_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a6a_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a6a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a6a_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a6a_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>  
         </div>
 
     </body>
