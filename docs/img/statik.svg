@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="12.800001"
-     inkscape:cx="195.85936"
-     inkscape:cy="553.5937"
+     inkscape:zoom="1.1313709"
+     inkscape:cx="148.49241"
+     inkscape:cy="446.36112"
      inkscape:window-width="1440"
      inkscape:window-height="890"
      inkscape:window-x="-6"
@@ -859,12 +859,12 @@
        inkscape:connector-type="polyline"
        inkscape:connector-curvature="0" />
     <rect
-       style="fill:#ffffff;stroke:#000000;stroke-width:0.217165;stroke-linejoin:round;stroke-dasharray:none"
+       style="fill:#ffffff;stroke:#000000;stroke-width:0.222065;stroke-linejoin:round;stroke-dasharray:none"
        id="rect203"
-       width="52.214306"
-       height="119.21452"
-       x="68.641106"
-       y="158.61201" />
+       width="52.209408"
+       height="124.66666"
+       x="68.643555"
+       y="158.61447" />
     <text
        xml:space="preserve"
        style="font-weight:bold;font-size:3.175px;line-height:0;font-family:Arial;-inkscape-font-specification:'Arial Bold';fill:#000000;stroke:none;stroke-width:0.225;stroke-linejoin:round;stroke-dasharray:none"
@@ -1065,7 +1065,17 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.4;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
          x="70.180527"
          y="276.06235"
-         id="tspan147">a6b_verteileBlock()</tspan></text>
+         id="tspan147">a6b_verteileBlock()</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.4;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
+         x="70.180527"
+         y="279.0257"
+         id="tspan148">a6c_preStart()</tspan><tspan
+         sodipodi:role="line"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:2.11667px;line-height:1.4;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;stroke:none;stroke-width:0.225"
+         x="70.180527"
+         y="281.98904"
+         id="tspan149">a6c_verteileBloecke()</tspan></text>
     <path
        style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.2;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
        d="M 68.512502,165.41054 H 120.91117"

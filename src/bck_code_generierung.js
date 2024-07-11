@@ -1372,3 +1372,22 @@ async function a6b_verteileBlock() {
         }
     }
 }
+
+async function a6c_preStart() {
+    document.getElementById('a6c_knotenNeu').innerHTML = 
+        "<br><br><span class='hash teileBlockGruen'>01d33512</span><p><b>T 4 &nbsp; T 5</b></p>";
+    await verzoegerung(500);
+    document.getElementById('a6c_knoten2').innerHTML = 
+        "<br><br><span class='hash teileBlockBlau'>0f75b449</span><p><b>T 0 &nbsp; T 1</b></p>";
+}
+
+var a6c_verstricheneZeit = 0;
+var a6c_delay = 0;
+
+async function a6c_verteileBloecke() {
+    
+    var a6c_unterbrochen = false;
+    var a6c_knotenInhaltA = "<br><br><span class='hash teileBlockGruen'>01d33512</span><p><b>T 4 &nbsp; T5</b></p>";
+    var a6c_knotenInhaltB = "<br><br><span class='hash teileBlockBlau'>0f75b449</span><p><b>T 0 &nbsp; T 1</b></p>";
+    var a6c_knotenInhaltAB = ""
+}
