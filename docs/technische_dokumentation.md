@@ -656,6 +656,13 @@ Konkret handelt es sich um folgende Funktionen:
   Mit dieser Funktion wird die Animation, d.h. die schrittweise Änderung des Graphen, die das Verteilen einer neuen Blocks im
   Peer-to-Peer-Netzwerk darstellt, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch,
   Neustart, Unterbrechung und Fortsetzung der Animation notwendig ist.
+* **a6c_preStart**() <br>
+  Generiert wird der Code für den veränderten Inhalt der beiden Knoten im Graphen, die nahezu gleichzeitig einen neuen Block
+  erstellen. Verwendet wird die Funktion, wenn der User auf den mit "Erstelle einen neuen Block" beschriebenen Button klickt.
+* **a6c_verteileBloecke**() <br>
+  Mit dieser Funktion wird die Animation, d.h. die schrittweise Änderung des Graphen, die das Verteilen zweier neuer Blöcke im
+  Peer-to-Peer-Netzwerk darstellt, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch,
+  Neustart, Unterbrechung und Fortsetzung der Animation notwendig ist.
 
 
 ### CSS
