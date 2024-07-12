@@ -16,6 +16,7 @@
 |   0.11  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 12.06.2024 | Pkt 5.1 und 5.2 bearbeitet |
 |   0.12  |  Fundamentale Blockchain-Konzepte | Georg Fischer | in Bearbeitung | 13.06.2024 | Grafik hinzugefügt |
 |   1.0   |  Fundamentale Blockchain-Konzepte | Georg Fischer | abgeschlossen  | 14.06.2024 | Grafiken hinzugefügt |
+|   2.0   |  Fundamentale Blockchain-Konzepte | Georg Fischer | abgeschlossen  | 12.07.2024 | Laufende Anpassungen abgeschlossen |
 
 
 # 1 Einführung
@@ -663,6 +664,14 @@ Konkret handelt es sich um folgende Funktionen:
   Mit dieser Funktion wird die Animation, d.h. die schrittweise Änderung des Graphen, die das Verteilen zweier neuer Blöcke im
   Peer-to-Peer-Netzwerk darstellt, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, also alles was für Abbruch,
   Neustart, Unterbrechung und Fortsetzung der Animation notwendig ist.
+* **a7a_bildeBlockchain**() <br>
+  Mit dieser Funktion wird der erste Teil der Animation 7, das ist das schrittweise Bilden der Blockchain bis zur ersten
+  Verzweigung, also bis zum ersten Konflikt, ausgelöst. Sie beinhaltet auch die Steuerung der Animation, in diesem Falle die
+  Möglichkeit zum Abbruch und zum Neustart der Animation.
+* **a7b_bildeBlockchain**() <br>
+  Mit dieser Funktion wird der zweite Teil der Animation 7, das ist das schrittweise Bilden der Blockchain bis zur zweiten
+  Verzweigung ausgelöst. Sie beinhaltet auch die Steuerung der Animation, in diesem Falle die Möglichkeit zum Abbruch und zum
+  Neustart der Animation.
 
 
 ### CSS
