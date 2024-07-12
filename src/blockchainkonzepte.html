@@ -4095,81 +4095,184 @@
                     onclick="
                         document.getElementById('a6c_preStartButton').style.visibility = 'hidden';
                         document.getElementById('a6c_startButton').style.visibility = 'visible';
-                        document.getElementById('a6c_knotenNeu').innerHTML = a6c_preStart();
+                        a6c_preStart();
                     ">Erstelle einen neuen Block</button>
-
-                    
-                <button id="a6b_startButton" class="animbutton" 
+                <button id="a6c_startButton" class="animbutton" 
                     style="position: absolute; right: 2em; top: 1em; visibility: hidden;"
                     onclick="
-                        document.getElementById('a6b_hintergButton').style='visibility: hidden';
-                        document.getElementById('a6b_unterbrechung').style = 
+                        document.getElementById('a6c_hintergButton').style='visibility: hidden';
+                        document.getElementById('a6c_unterbrechung').style = 
                             'position: absolute; right: 13.3em; top: 1em; visibility: visible'
-                        document.getElementById('a6b_abbruch').style =
+                        document.getElementById('a6c_abbruch').style =
                             'position: absolute; right: 2em; top: 1em; visibility: visible';
-                        document.getElementById('a6b_startButton').style='visibility: hidden';
-                        a6b_verteileBlock();
+                        document.getElementById('a6c_startButton').style='visibility: hidden';
+                        a6c_verteileBloecke();
                     ">Verteile den neuen Block</button>
-                <button id="a6b_neustart" class="animbutton" style="visibility: hidden;"
+                <button id="a6c_neustart" class="animbutton" style="visibility: hidden;"
                     onclick="
-                        a6b_verstricheneZeit = 0;
-                        document.getElementById('a6b_graph_6').style.visibility = 'hidden';
-                        document.getElementById('a6b_graph_start').style.visibility = 'visible';
-                        document.getElementById('a6b_knoten1').innerHTML =
+                        a6c_verstricheneZeit = 0;
+                        document.getElementById('a6c_graph_6').style.visibility = 'hidden';
+                        document.getElementById('a6c_graph_start').style.visibility = 'visible';
+                        a6c_preStart();
+                        document.getElementById('a6c_knoten1').innerHTML =
                         '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_knoten2').innerHTML = 
+                        document.getElementById('a6c_knoten3').innerHTML =
                         '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_knoten3').innerHTML =
+                        document.getElementById('a6c_knoten4').innerHTML =
                         '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_knoten4').innerHTML =
+                        document.getElementById('a6c_knoten5').innerHTML =
                         '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_knoten5').innerHTML =
+                        document.getElementById('a6c_knoten6').innerHTML =
                         '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_knoten6').innerHTML =
+                        document.getElementById('a6c_knoten7').innerHTML =
                         '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_knoten7').innerHTML =
+                        document.getElementById('a6c_knoten8').innerHTML =
                         '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_knoten8').innerHTML =
+                        document.getElementById('a6c_knoten9').innerHTML =
                         '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_knoten9').innerHTML =
+                        document.getElementById('a6c_knoten10').innerHTML =
                         '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_knoten10').innerHTML =
-                        '<p style=`margin-top: 0.8em;`><b><br>T 0 &nbsp T 1<br>T 2 &nbsp T 3<br>T 4 &nbsp T 5</b></b>';
-                        document.getElementById('a6b_infoimg1').style.visibility = 'hidden';
-                        document.getElementById('a6b_unterbrechung').style = 
+                        document.getElementById('a6c_infoimg1').style.visibility = 'hidden';
+                        document.getElementById('a6c_unterbrechung').style = 
                             'position: absolute; right: 13.3em; top: 1em; visibility: visible';
-                        document.getElementById('a6b_abbruch').style=
+                        document.getElementById('a6c_abbruch').style=
                             'position: absolute; right: 2em; top: 1em; visibility: visible';
-                        document.getElementById('a6b_neustart').style='visibility: hidden';
-                        document.getElementById('a6b_hintergButton').style.visibility = 'hidden';
-                        a6b_verteileBlock();"
+                        document.getElementById('a6c_neustart').style='visibility: hidden';
+                        document.getElementById('a6c_hintergButton').style.visibility = 'hidden';
+                        a6c_verteileBloecke();"
                     >Animation neu starten</button>
-                <button id="a6b_unterbrechung" class="animbutton" style="visibility: hidden;"
+                <button id="a6c_unterbrechung" class="animbutton" style="visibility: hidden;"
                     >Animation unterbrechen</button>
-                <button id="a6b_fortsetzung" class="animbutton" style="visibility: hidden;"
+                <button id="a6c_fortsetzung" class="animbutton" style="visibility: hidden;"
                     onclick="
-                        document.getElementById('a6b_fortsetzung').style='visibility: hidden';
-                        a6b_verteileBlock();"
+                        document.getElementById('a6c_fortsetzung').style='visibility: hidden';
+                        a6c_verteileBloecke();"
                     >Animation fortsetzen</button>
-                <button id="a6b_abbruch" class="animbutton" style="visibility: hidden;"
+                <button id="a6c_abbruch" class="animbutton" style="visibility: hidden;"
                     >Animation abbrechen</button>
-                <img id="a6b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a6b_info1').style='visibility: visible; z-index: 172;'">
+                <img id="a6c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a6c_info1').style='visibility: visible; z-index: 182;'">
             </div>
-            <div id="a6b_info1" class="infotext" style="visibility: hidden;">
+            <div id="a6c_info1" class="infotext" style="visibility: hidden;">
                 <script type="text/javascript">
-                    document.write(a6b_info1);
+                    document.write(a6c_info1);
                 </script> <br>
                 <button class="infobutton"
-                    onclick="document.getElementById('a6b_info1').style='visibility: hidden';">Schliessen</button>
+                    onclick="document.getElementById('a6c_info1').style='visibility: hidden';">Schliessen</button>
             </div>
-            <div id="a6b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+            <div id="a6c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
                 <script type="text/javascript">
-                    document.write(a6b_hinterg1);
+                    document.write(a6c_hinterg1);
                 </script> <br>
                 <button class="hintergrbutton"
-                    onclick="document.getElementById('a6b_hinterg1').style='visibility: hidden';">Schliessen</button>
+                    onclick="document.getElementById('a6c_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>  
+        </div>
+
+<! Animation 7 -->
+
+        <div id="anim_7" class="mitte animation">
+            <h1>Die Seitenzahlen einer Blockchain sind Hashwerte</h1>
+            <p>
+                Wenn zwei oder mehrere Blöcke im Posteingang landen, die alle auf denselben Vorgänger-Block verweisen,
+                entsteht ein Konflikt und die Blockchain bekommt zwei oder mehrere Äste. Welcher Ast der gültige ist,
+                mit dem die Blockchain fortgesetzt wird, entscheidet der insgesamt erbrachte Rechenaufwand, also die
+                Summe aller durch die Targets der Blöcke bestimmten Schwierigkeitsgrade der Hashpuzzles.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="width: 50em; height: 40em;"></div>
+                <button id="a7_hintergButton" class="animbutton" 
+                style="visibility: hidden;"
+                onclick="document.getElementById('a7_hinterg1').style='visibility: visible; z-index: 191';">
+                Hintergrundwissen</button>
+                <button id="a7_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('ende');">weiter</button>
+                <button id="7_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                    onclick="oeffneAnimation('6c')">zurück</button>
+                <div id="a7_block7" class="block" style="position: absolute; left: 2em; top: 5em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a7_block7Hash" class="hash">0002349c</span>
+                    </div>
+                    <div class="block blockinhalt">
+                        <b>Schwierigkeit: 3</b>
+                    </div>
+                </div>
+                <div id="a7_block1" class="block gruenerHintergrund" style="position: absolute; left: 2em; top: 16em;">
+                    <div class="block blockinhalt gruenerHintergrund">
+                        Hashwert Block:
+                        <span id="a7_block1Hash" class="hash">04ca5f95</span>
+                    </div>
+                    <div class="block blockinhalt gruenerHintergrund">
+                        <b>Schwierigkeit: 1</b>
+                    </div>
+                </div>
+                <div id="a7_block2" class="block gruenerHintergrund" style="position: absolute; left: 17em; top: 16em;">
+                    <div class="block blockinhalt gruenerHintergrund">
+                        Hashwert Block:
+                        <span id="a7_block2Hash" class="hash">00c72847</span>
+                    </div>
+                    <div class="block blockinhalt gruenerHintergrund">
+                        <b>Schwierigkeit: 2</b>
+                    </div>
+                </div>
+                <div id="a7_block3" class="block" style="position: absolute; left: 32em; top: 16em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a7_block3Hash" class="hash">07c30f23</span>
+                    </div>
+                    <div class="block blockinhalt">
+                        <b>Schwierigkeit: 1</b>
+                    </div>
+                </div>
+                <div id="a7_block4" class="block" style="position: absolute; left: 32em; top: 27em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a7_block4Hash" class="hash">03402ddd</span>
+                    </div>
+                    <div class="block blockinhalt">
+                        <b>Schwierigkeit: 1</b>
+                    </div>
+                </div>
+                <div id="a7_block5" class="block" style="position: absolute; left: 47em; top: 16em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a7_block5Hash" class="hash">009be997</span>
+                    </div>
+                    <div class="block blockinhalt">
+                        <b>Schwierigkeit: 2</b>
+                    </div>
+                </div>
+                <div id="a7_block6" class="block" style="position: absolute; left: 47em; top: 27em;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a7_block6Hash" class="hash">055f62ab</span>
+                    </div>
+                    <div class="block blockinhalt">
+                        <b>Schwierigkeit: 1</b>
+                    </div>
+                </div>
+                
+                <button id="a7_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
+                    onclick="alert('Noch nichts');
+                    ">Starte Animation</button>
+                <img id="a7_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a7_info1').style='visibility: visible; z-index: 192;'">                    
+            </div>
+            <div id="a7_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a7_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a7_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a7_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a7_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a7_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>
         </div>
 
     </body>

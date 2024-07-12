@@ -410,6 +410,8 @@ var a4b_hashBlock2 = berechneHash(a4b_hashBlock1 + a4b_hashReferenz4567);
 var a4b_hashBlock3 = berechneHash(a4b_hashBlock2 + a4b_hashReferenz89AB);
 var a4b_hashBlock4 = berechneHash(a4b_hashBlock3 + a4b_hashReferenzCDEF);
 
+/* Animation 5 */
+
 var a5a_hashVorhBlock = a4b_hashBlock1;
 var a5a_hashInhalt = a4b_hashReferenz4567;
 var a5a_zeit = zeitstempel();

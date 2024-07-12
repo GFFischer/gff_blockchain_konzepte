@@ -1389,5 +1389,138 @@ async function a6c_verteileBloecke() {
     var a6c_unterbrochen = false;
     var a6c_knotenInhaltA = "<br><br><span class='hash teileBlockGruen'>01d33512</span><p><b>T 4 &nbsp; T5</b></p>";
     var a6c_knotenInhaltB = "<br><br><span class='hash teileBlockBlau'>0f75b449</span><p><b>T 0 &nbsp; T 1</b></p>";
-    var a6c_knotenInhaltAB = ""
+    var a6c_knotenInhaltAB = "<p style='margin: 0.6em;'></p><br><span class='hash teileBlockGruen'>01d33512</span>\
+        <br><br><span class='hash teileBlockBlau'>0f75b449</span>";
+    var a6c_knotenInhaltBA = "<p style='margin: 0.6em;'></p><br><span class='hash teileBlockBlau'>0f75b449</span>\
+        <br><br><span class='hash teileBlockGruen'>01d33512</span>";
+    
+    document.getElementById("a6c_abbruch").addEventListener("click", () => {
+        a6c_unterbrochen = true;
+        document.getElementById("a6c_graph_6").style.visibility = "visible";
+        document.getElementById("a6c_graph_start").style.visibility = "hidden";
+        document.getElementById("a6c_graph_1").style.visibility = "hidden";
+        document.getElementById("a6c_graph_2").style.visibility = "hidden";
+        document.getElementById("a6c_graph_3").style.visibility = "hidden";
+        document.getElementById("a6c_graph_4").style.visibility = "hidden";
+        document.getElementById("a6c_graph_5").style.visibility = "hidden";
+        document.getElementById("a6c_knotenNeu").innerHTML = a6c_knotenInhaltAB;
+        document.getElementById("a6c_knoten1").innerHTML = a6c_knotenInhaltAB;
+        document.getElementById("a6c_knoten2").innerHTML = a6c_knotenInhaltBA;
+        document.getElementById("a6c_knoten3").innerHTML = a6c_knotenInhaltBA;
+        document.getElementById("a6c_knoten4").innerHTML = a6c_knotenInhaltAB;
+        document.getElementById("a6c_knoten5").innerHTML = a6c_knotenInhaltBA;
+        document.getElementById("a6c_knoten6").innerHTML = a6c_knotenInhaltBA;
+        document.getElementById("a6c_knoten7").innerHTML = a6c_knotenInhaltBA;
+        document.getElementById("a6c_knoten8").innerHTML = a6c_knotenInhaltAB;
+        document.getElementById("a6c_knoten9").innerHTML = a6c_knotenInhaltAB;
+        document.getElementById("a6c_knoten10").innerHTML = a6c_knotenInhaltBA;
+        document.getElementById("a6c_infoimg1").style = 
+            "visibility: visible; position: absolute; top: 39.5em; left: 5em"
+        document.getElementById("a6c_abbruch").style="visibility: hidden";
+        document.getElementById("a6c_unterbrechung").style="visibility: hidden";
+        document.getElementById("a6c_fortsetzung").style="visibility: hidden";
+        document.getElementById("a6c_neustart").style=
+            "position: absolute; right: 2em; top: 1em; visibility: visible";
+        document.getElementById("a6c_hintergButton").style =
+            "visibility: visible; position: absolute; top: 44.5em; left: 2em"});
+    
+    document.getElementById("a6c_unterbrechung").addEventListener("click", () => {
+        a6c_unterbrochen = true;
+        document.getElementById("a6c_fortsetzung").style = 
+            "position: absolute; right: 25.9em; top: 1em; visibility: visible";});
+    
+    document.getElementById("a6c_fortsetzung").addEventListener("click", () => {
+        a6c_unterbrochen = false;});
+
+    document.getElementById("a6c_neustart").addEventListener("click", () => {
+        a6c_unterbrochen = false;
+        a6c_verstricheneZeit = 0;
+        document.getElementById('a6c_knotenNeu').innerHTML = a6c_knotenInhaltA;
+        document.getElementById('a6c_knoten2').innerHTML = a6c_knotenInhaltB;});
+
+    document.getElementById("a6c_graph_1").style.visibility = "visible";
+    document.getElementById("a6c_graph_start").style.visibility = "hidden";
+    if (a6c_verstricheneZeit < 1500) {a6c_verstricheneZeit += 1500; a6c_delay = 1500;}
+    else {a6c_delay = 0;}
+    await verzoegerung(a6c_delay);
+    if (!a6c_unterbrochen) {
+        document.getElementById("a6c_knoten1").innerHTML = a6c_knotenInhaltA;
+        document.getElementById("a6c_knoten8").innerHTML = a6c_knotenInhaltA;
+        await verzoegerung(500);
+        a6c_verstricheneZeit += 500;
+        document.getElementById("a6c_knoten5").innerHTML = a6c_knotenInhaltB;
+        document.getElementById("a6c_knoten6").innerHTML = a6c_knotenInhaltB;
+        await verzoegerung(1000);
+        a6c_verstricheneZeit += 1000;
+        document.getElementById("a6c_graph_2").style.visibility = "visible";
+        document.getElementById("a6c_graph_1").style.visibility = "hidden";
+        if (a6c_verstricheneZeit < 4500) {a6c_verstricheneZeit += 1500; a6c_delay = 1500;}
+        else {a6c_delay = 0;}
+        await verzoegerung(a6c_delay);
+        if (!a6c_unterbrochen) {
+            document.getElementById("a6c_knoten4").innerHTML = a6c_knotenInhaltA;
+            document.getElementById("a6c_knoten9").innerHTML = a6c_knotenInhaltA;
+            await verzoegerung(500);
+            a6c_verstricheneZeit += 500;
+            document.getElementById("a6c_knoten3").innerHTML = a6c_knotenInhaltB;
+            document.getElementById("a6c_knoten7").innerHTML = a6c_knotenInhaltB;
+            document.getElementById("a6c_knoten10").innerHTML = a6c_knotenInhaltB;
+            await verzoegerung(1000);
+            a6c_verstricheneZeit += 1000;
+            document.getElementById("a6c_graph_3").style.visibility = "visible";
+            document.getElementById("a6c_graph_2").style.visibility = "hidden";
+            if (a6c_verstricheneZeit < 7500) {a6c_verstricheneZeit += 1500; a6c_delay = 1500;}
+            else {a6c_delay = 0;}
+            await verzoegerung(a6c_delay);
+            if (!a6c_unterbrochen) {
+                document.getElementById("a6c_knoten3").innerHTML = a6c_knotenInhaltBA;
+                document.getElementById("a6c_knoten10").innerHTML = a6c_knotenInhaltBA;
+                await verzoegerung(500);
+                a6c_verstricheneZeit += 500;
+                document.getElementById("a6c_knoten4").innerHTML = a6c_knotenInhaltAB;
+                document.getElementById("a6c_knoten9").innerHTML = a6c_knotenInhaltAB;
+                await verzoegerung(1000);
+                a6c_verstricheneZeit += 1000;
+                document.getElementById("a6c_graph_4").style.visibility = "visible";
+                document.getElementById("a6c_graph_3").style.visibility = "hidden";
+                if (a6c_verstricheneZeit < 10500) {a6c_verstricheneZeit += 1500; a6c_delay = 1500;}
+                else {a6c_delay = 0;}
+                await verzoegerung(a6c_delay);
+                if (!a6c_unterbrochen) {
+                    document.getElementById("a6c_knoten6").innerHTML = a6c_knotenInhaltBA;
+                    document.getElementById("a6c_knoten7").innerHTML = a6c_knotenInhaltBA;
+                    await verzoegerung(500);
+                    a6c_verstricheneZeit += 500;
+                    document.getElementById("a6c_knoten1").innerHTML = a6c_knotenInhaltAB;
+                    document.getElementById("a6c_knoten8").innerHTML = a6c_knotenInhaltAB;
+                    await verzoegerung(1000);
+                    a6c_verstricheneZeit += 1000;
+                    document.getElementById("a6c_graph_5").style.visibility = "visible";
+                    document.getElementById("a6c_graph_4").style.visibility = "hidden";
+                    if (a6c_verstricheneZeit < 13500) {a6c_verstricheneZeit += 1500; a6c_delay = 1500;}
+                    else {a6c_delay = 0;}
+                    await verzoegerung(a6c_delay);
+                    if (!a6c_unterbrochen) {
+                        document.getElementById("a6c_knoten2").innerHTML = a6c_knotenInhaltBA;
+                        document.getElementById("a6c_knoten5").innerHTML = a6c_knotenInhaltBA;
+                        await verzoegerung(500);
+                        a6c_verstricheneZeit += 500;
+                        document.getElementById("a6c_knotenNeu").innerHTML = a6c_knotenInhaltAB;
+                        await verzoegerung(1000);
+                        a6c_verstricheneZeit += 1000;
+                        document.getElementById("a6c_graph_6").style.visibility = "visible";
+                        document.getElementById("a6c_graph_5").style.visibility = "hidden";
+                        document.getElementById("a6c_unterbrechung").style.visibility = "hidden";
+                        document.getElementById("a6c_abbruch").style.visibility = "hidden";
+                        document.getElementById("a6c_neustart").style =
+                            "position: absolute; right: 2em; top: 1em; visibility: visible";
+                        document.getElementById('a6c_infoimg1').style = 
+                            "visibility: visible; position: absolute; top: 39.5em; left: 5em";
+                        document.getElementById('a6c_hintergButton').style = 
+                            "visibility: visible; position: absolute; top: 44.5em; left: 2em";
+                    }
+                }
+            }
+        }
+    }
 }
