@@ -4180,25 +4180,16 @@
                 Summe aller durch die Targets der Blöcke bestimmten Schwierigkeitsgrade der Hashpuzzles.
             </p>
             <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="width: 50em; height: 40em;"></div>
+                <div class="hintergrund" style="width: 90em; height: 40em;"></div>
                 <button id="a7_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
+                style="position: absolute; top: 36.5em; left: 3em; visibility: hidden;"
                 onclick="document.getElementById('a7_hinterg1').style='visibility: visible; z-index: 191';">
                 Hintergrundwissen</button>
                 <button id="a7_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('ende');">weiter</button>
                 <button id="7_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('6c')">zurück</button>
-                <div id="a7_block7" class="block" style="position: absolute; left: 2em; top: 5em;">
-                    <div class="block blockinhalt">
-                        Hashwert Block:
-                        <span id="a7_block7Hash" class="hash">0002349c</span>
-                    </div>
-                    <div class="block blockinhalt">
-                        <b>Schwierigkeit: 3</b>
-                    </div>
-                </div>
-                <div id="a7_block1" class="block gruenerHintergrund" style="position: absolute; left: 2em; top: 16em;">
+                <div id="a7_block1" class="block gruenerHintergrund" style="position: absolute; left: 4em; top: 16em;">
                     <div class="block blockinhalt gruenerHintergrund">
                         Hashwert Block:
                         <span id="a7_block1Hash" class="hash">04ca5f95</span>
@@ -4207,7 +4198,8 @@
                         <b>Schwierigkeit: 1</b>
                     </div>
                 </div>
-                <div id="a7_block2" class="block gruenerHintergrund" style="position: absolute; left: 17em; top: 16em;">
+                <div id="a7_block2" class="block gruenerHintergrund"
+                    style="position: absolute; left: 19em; top: 16em; visibility: hidden;">
                     <div class="block blockinhalt gruenerHintergrund">
                         Hashwert Block:
                         <span id="a7_block2Hash" class="hash">00c72847</span>
@@ -4216,16 +4208,18 @@
                         <b>Schwierigkeit: 2</b>
                     </div>
                 </div>
-                <div id="a7_block3" class="block" style="position: absolute; left: 32em; top: 16em;">
-                    <div class="block blockinhalt">
+                <div id="a7_block3" class="block" 
+                    style="position: absolute; left: 34em; top: 16em; visibility: hidden;">
+                    <div id="a7_block3Inhalt" class="block blockinhalt">
                         Hashwert Block:
                         <span id="a7_block3Hash" class="hash">07c30f23</span>
                     </div>
-                    <div class="block blockinhalt">
+                    <div id="a7_block3Target" class="block blockinhalt">
                         <b>Schwierigkeit: 1</b>
                     </div>
                 </div>
-                <div id="a7_block4" class="block" style="position: absolute; left: 32em; top: 27em;">
+                <div id="a7_block4" class="block" 
+                    style="position: absolute; left: 34em; top: 27em; visibility: hidden;">
                     <div class="block blockinhalt">
                         Hashwert Block:
                         <span id="a7_block4Hash" class="hash">03402ddd</span>
@@ -4234,16 +4228,18 @@
                         <b>Schwierigkeit: 1</b>
                     </div>
                 </div>
-                <div id="a7_block5" class="block" style="position: absolute; left: 47em; top: 16em;">
-                    <div class="block blockinhalt">
+                <div id="a7_block5" class="block" 
+                    style="position: absolute; left: 49em; top: 16em; visibility: hidden;">
+                    <div id="a7_block5Inhalt" class="block blockinhalt">
                         Hashwert Block:
                         <span id="a7_block5Hash" class="hash">009be997</span>
                     </div>
-                    <div class="block blockinhalt">
+                    <div id="a7_block5Target" class="block blockinhalt">
                         <b>Schwierigkeit: 2</b>
                     </div>
                 </div>
-                <div id="a7_block6" class="block" style="position: absolute; left: 47em; top: 27em;">
+                <div id="a7_block6" class="block" 
+                    style="position: absolute; left: 49em; top: 27em; visibility: hidden;">
                     <div class="block blockinhalt">
                         Hashwert Block:
                         <span id="a7_block6Hash" class="hash">055f62ab</span>
@@ -4252,11 +4248,166 @@
                         <b>Schwierigkeit: 1</b>
                     </div>
                 </div>
-                
-                <button id="a7_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
-                    onclick="alert('Noch nichts');
+                <div id="a7_block7" class="block" 
+                    style="position: absolute; left: 64em; top: 5em; visibility: hidden;">
+                    <div id="a7_block7Inhalt" class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a7_block7Hash" class="hash">0002349c</span>
+                    </div>
+                    <div id="a7_block7Target" class="block blockinhalt">
+                        <b>Schwierigkeit: 3</b>
+                    </div>
+                </div>
+                <div id="a7_block8" class="block" 
+                    style="position: absolute; left: 64em; top: 16em; visibility: hidden;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a7_block8Hash" class="hash">032492f8</span>
+                    </div>
+                    <div class="block blockinhalt">
+                        <b>Schwierigkeit: 1</b>
+                    </div>
+                </div>
+                <div id="a7_block9" class="block" 
+                    style="position: absolute; left: 79em; top: 16em; visibility: hidden;">
+                    <div class="block blockinhalt">
+                        Hashwert Block:
+                        <span id="a7_block9Hash" class="hash">0d9827fa</span>
+                    </div>
+                    <div class="block blockinhalt">
+                        <b>Schwierigkeit: 1</b>
+                    </div>
+                </div>
+                <img id="a7_pfeil1" src="img/pfeil_bloecke_verbinden_7.png" alt="Pfeil"
+                    style="position: absolute; top: 20.2em; left: 2.7em; width: 2em; visibility: visible;">
+                <img id="a7_pfeil2" src="img/pfeil_bloecke_verbinden_6.png" alt="Pfeil"
+                    style="position: absolute; top: 20.2em; left: 15.6em; width: 4.1em; visibility: hidden;">
+                <img id="a7_pfeil3" src="img/pfeil_bloecke_verbinden_6.png" alt="Pfeil"
+                    style="position: absolute; top: 20.2em; left: 30.6em; width: 4.1em; visibility: hidden;">
+                <img id="a7_pfeil4" src="img/pfeil_bloecke_verbinden_8.png" alt="Pfeil"
+                    style="position: absolute; top: 24.9em; left: 26.9em; width: 7.8em; visibility: hidden;">
+                <img id="a7_pfeil5" src="img/pfeil_bloecke_verbinden_6.png" alt="Pfeil"
+                    style="position: absolute; top: 20.2em; left: 45.6em; width: 4.1em; visibility: hidden;">
+                <img id="a7_pfeil6" src="img/pfeil_bloecke_verbinden_6.png" alt="Pfeil"
+                    style="position: absolute; top: 31.3em; left: 45.6em; width: 4.1em; visibility: hidden;">
+                <img id="a7_pfeil7" src="img/pfeil_bloecke_verbinden_9.png" alt="Pfeil"
+                    style="position: absolute; top: 9.2em; left: 56.7em; width: 8em; height: 7.3em; visibility: hidden;">
+                <img id="a7_pfeil8" src="img/pfeil_bloecke_verbinden_6.png" alt="Pfeil"
+                    style="position: absolute; top: 20.2em; left: 60.6em; width: 4.1em; visibility: hidden;">
+                <img id="a7_pfeil9" src="img/pfeil_bloecke_verbinden_6.png" alt="Pfeil"
+                    style="position: absolute; top: 20.2em; left: 75.6em; width: 4.1em; visibility: hidden;">
+                <img id="a7_fragezeichen1" src="img/fragezeichen.png" alt="Fragezeichen"
+                    style="position: absolute; top: 24.5em; left: 31.7em; height: 3em; visibility: hidden;">
+                <img id="a7_fragezeichen2" src="img/fragezeichen.png" alt="Fragezeichen"
+                    style="position: absolute; top: 13.5em; left: 61.7em; height: 3em; visibility: hidden;">
+                <img id="a7_haken1" src="img/haken.png" alt="Haken"
+                    style="position: absolute; top: 17.5em; left: 31.4em; width: 2.5em; visibility: hidden;">
+                <img id="a7_haken2" src="img/haken.png" alt="Haken"
+                    style="position: absolute; top: 6.5em; left: 61.4em; width: 2.5em; visibility: hidden;">
+                <img id="a7_kreuz1" src="img/kreuz.png" alt="Kreuz"
+                    style="position: absolute; top: 28.7em; left: 31.7em; width: 2em; visibility: hidden;">
+                <img id="a7_kreuz2" src="img/kreuz.png" alt="Kreuz"
+                    style="position: absolute; top: 17.7em; left: 61.7em; width: 2em; visibility: hidden;">
+                <button id="a7a_startButton" class="animbutton" 
+                    style="position: absolute; left: 3em; top: 1em; visibility: visible;"
+                    onclick="
+                        document.getElementById('a7a_startButton').style.visibility = 'hidden';
+                        document.getElementById('a7a_abbruch').style.visibility = 'visible';
+                        a7a_bildeBlockchain();
                     ">Starte Animation</button>
+                <button id="a7a_neustart" class="animbutton" 
+                    style="position: absolute; left: 3em; top: 1em; visibility: hidden;"
+                    onclick="
+                        document.getElementById('a7a_neustart').style.visibility = 'hidden';
+                        document.getElementById('a7a_abbruch').style.visibility = 'visible';
+                        document.getElementById('a7b_startButton').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil2').style.visibility = 'hidden';
+                        document.getElementById('a7_block2').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil3').style.visibility = 'hidden';
+                        document.getElementById('a7_block3').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil4').style.visibility = 'hidden';
+                        document.getElementById('a7_block4').style.visibility = 'hidden';
+                        document.getElementById('a7_fragezeichen1').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil5').style.visibility = 'hidden';
+                        document.getElementById('a7_block5').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil6').style.visibility = 'hidden';
+                        document.getElementById('a7_block6').style.visibility = 'hidden';
+                        document.getElementById('a7b_entscheidung').style.visibility = 'hidden';
+                        a7a_bildeBlockchain()"
+                    >Animation neu starten</button>
+                <button id="a7a_abbruch" class="animbutton" 
+                    style="position: absolute; left: 3em; top: 1em; visibility: hidden;"
+                    >Animation abbrechen</button>
+                <button id="a7b_startButton" class="animbutton" 
+                    style="position: absolute; left: 15em; top: 1em; visibility: hidden;"
+                    onclick="
+                        document.getElementById('a7b_startButton').style.visibility = 'hidden';
+                        document.getElementById('a7a_neustart').style.visibility = 'hidden';
+                        a7b_bildeBlockchain();
+                    ">Entscheidung fällen</button>
+                <button id="a7b_neustart" class="animbutton" 
+                    style="position: absolute; left: 3em; top: 1em; visibility: hidden;"
+                    onclick="
+                        document.getElementById('a7b_neustart').style.visibility = 'hidden';
+                        document.getElementById('a7b_entscheidung').style.visibility = 'hidden';
+                        document.getElementById('a7a_abbruch').style.visibility = 'visible';
+                        document.getElementById('a7b_startButton').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil2').style.visibility = 'hidden';
+                        document.getElementById('a7_block2').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil3').style.visibility = 'hidden';
+                        document.getElementById('a7_block3').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil4').style.visibility = 'hidden';
+                        document.getElementById('a7_block4').style.visibility = 'hidden';
+                        document.getElementById('a7_fragezeichen1').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil5').style.visibility = 'hidden';
+                        document.getElementById('a7_block5').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil6').style.visibility = 'hidden';
+                        document.getElementById('a7_block6').style.visibility = 'hidden';
+                        document.getElementById('a7_haken1').style.visibility = 'hidden';
+                        document.getElementById('a7_kreuz1').style.visibility = 'hidden';
+                        document.getElementById('a7_block3').classList.remove('gruenerHintergrund');
+                        document.getElementById('a7_block3Inhalt').classList.remove('gruenerHintergrund');
+                        document.getElementById('a7_block3Target').classList.remove('gruenerHintergrund');
+                        document.getElementById('a7_block5').classList.remove('gruenerHintergrund');
+                        document.getElementById('a7_block5Inhalt').classList.remove('gruenerHintergrund');
+                        document.getElementById('a7_block5Target').classList.remove('gruenerHintergrund');
+                        document.getElementById('a7_block7').classList.remove('gruenerHintergrund');
+                        document.getElementById('a7_block7Inhalt').classList.remove('gruenerHintergrund');
+                        document.getElementById('a7_block7Target').classList.remove('gruenerHintergrund');document.getElementById('a7_block8').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil8').style.visibility = 'hidden';
+                        document.getElementById('a7_block7').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil7').style.visibility = 'hidden';
+                        document.getElementById('a7_block9').style.visibility = 'hidden';
+                        document.getElementById('a7_pfeil9').style.visibility = 'hidden';
+                        document.getElementById('a7_haken2').style.visibility = 'hidden';
+                        document.getElementById('a7_kreuz2').style.visibility = 'hidden';
+                        document.getElementById('a7_fragezeichen2').style.visibility = 'hidden';
+                        document.getElementById('a7_infoimg1').style.visibility = 'hidden';
+                        document.getElementById('a7_hintergButton').style.visibility = 'hidden';
+                        document.getElementById('a7b_abbruch').style.visibility = 'hidden';
+                        a7a_bildeBlockchain()"
+                    >Animation neu starten</button>
+                <button id="a7b_abbruch" class="animbutton" 
+                    style="position: absolute; left: 3em; top: 1em; visibility: hidden;"
+                    >Animation abbrechen</button>
+                <button id="a7b_entscheidung" class="animbutton" 
+                    style="position: absolute; left: 15em; top: 1em; visibility: hidden;"
+                    onclick="
+                    document.getElementById('a7b_entscheidung').style.visibility = 'hidden';
+                    document.getElementById('a7_infoimg1').style.visibility = 'visible';
+                    document.getElementById('a7b_abbruch').style.visibility = 'hidden';
+                    document.getElementById('a7b_neustart').style.visibility = 'visible';
+                    document.getElementById('a7_hintergButton').style.visibility = 'visible';
+                    document.getElementById('a7_fragezeichen2').style.visibility = 'hidden';
+                    document.getElementById('a7_haken2').style.visibility = 'visible';
+                    document.getElementById('a7_kreuz2').style.visibility = 'visible';
+                    document.getElementById('a7_block7').classList.add('gruenerHintergrund');
+                    document.getElementById('a7_block7Inhalt').classList.add('gruenerHintergrund');
+                    document.getElementById('a7_block7Target').classList.add('gruenerHintergrund');
+                    ">Entscheidung fällen</button>
+                    
                 <img id="a7_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    style="position: absolute; top: 30em; left: 67.5em; visibility: hidden;"
                     onclick="document.getElementById('a7_info1').style='visibility: visible; z-index: 192;'">                    
             </div>
             <div id="a7_info1" class="infotext" style="visibility: hidden;">

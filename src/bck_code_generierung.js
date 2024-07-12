@@ -1524,3 +1524,55 @@ async function a6c_verteileBloecke() {
         }
     }
 }
+
+async function a7a_bildeBlockchain() {
+    var a7a_abgebrochen = false;
+    document.getElementById("a7a_abbruch").addEventListener("click", () => {
+        a7a_abgebrochen = true;});
+    document.getElementById('a7_pfeil2').style.visibility = 'visible';
+    document.getElementById('a7_block2').style.visibility = 'visible';
+    if (!a7a_abgebrochen) {await verzoegerung(1500);}
+    document.getElementById('a7_pfeil3').style.visibility = 'visible';
+    document.getElementById('a7_block3').style.visibility = 'visible';
+    document.getElementById('a7_pfeil4').style.visibility = 'visible';
+    document.getElementById('a7_block4').style.visibility = 'visible';
+    if (!a7a_abgebrochen) {await verzoegerung(1000);}
+    document.getElementById('a7_fragezeichen1').style.visibility = 'visible';
+    if (!a7a_abgebrochen) {await verzoegerung(1500);}
+    document.getElementById('a7_pfeil5').style.visibility = 'visible';
+    document.getElementById('a7_block5').style.visibility = 'visible';
+    document.getElementById('a7_pfeil6').style.visibility = 'visible';
+    document.getElementById('a7_block6').style.visibility = 'visible';
+    document.getElementById('a7b_startButton').style.visibility = 'visible';
+    document.getElementById('a7a_abbruch').style.visibility = 'hidden';
+    document.getElementById('a7a_neustart').style.visibility = 'visible';
+}
+
+async function a7b_bildeBlockchain() {
+    var a7b_abgebrochen = false;
+    document.getElementById("a7b_abbruch").addEventListener("click", () => {
+        a7b_abgebrochen = true;
+        document.getElementById("a7_fragezeichen2").style.visibility = "visible";});
+    document.getElementById('a7b_abbruch').style.visibility = 'visible';
+    document.getElementById('a7_fragezeichen1').style.visibility = 'hidden';
+    document.getElementById('a7_haken1').style.visibility = 'visible';
+    document.getElementById('a7_kreuz1').style.visibility = 'visible';
+    document.getElementById('a7_block3').classList.add('gruenerHintergrund');
+    document.getElementById('a7_block3Inhalt').classList.add('gruenerHintergrund');
+    document.getElementById('a7_block3Target').classList.add('gruenerHintergrund');
+    document.getElementById('a7_block5').classList.add('gruenerHintergrund');
+    document.getElementById('a7_block5Inhalt').classList.add('gruenerHintergrund');
+    document.getElementById('a7_block5Target').classList.add('gruenerHintergrund');
+    if (!a7b_abgebrochen) {await verzoegerung(1500);}
+    document.getElementById('a7_block8').style.visibility = 'visible';
+    document.getElementById('a7_pfeil8').style.visibility = 'visible';
+    if (!a7b_abgebrochen) {await verzoegerung(1500);}
+    document.getElementById('a7_block7').style.visibility = 'visible';
+    document.getElementById('a7_pfeil7').style.visibility = 'visible';
+    document.getElementById('a7_block9').style.visibility = 'visible';
+    document.getElementById('a7_pfeil9').style.visibility = 'visible';
+    if (!a7b_abgebrochen) {document.getElementById('a7_fragezeichen2').style.visibility = 'visible';}
+    document.getElementById('a7b_entscheidung').style.visibility = 'visible';
+    document.getElementById('a7b_neustart').style.visibility = 'visible';
+    document.getElementById('a7b_abbruch').style.visibility = 'hidden';
+}
