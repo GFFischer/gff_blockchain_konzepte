@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.8">
         <title>Fundamentale Konzepte einer Blockchain</title>
         <script type="text/javascript" src="hash.js"></script>
         <script type="text/javascript" src="bck_funktionensammlung.js"></script>
@@ -1134,17 +1135,18 @@
                                 'visibility: visible; position: absolute; top: 39.5em; left: 5em';
                             document.getElementById('a2b_hintergButton').style=
                                 'visibility: visible; position: absolute; top: 44.5em; left: 2em';
+                            document.getElementById('a2b_knotenNeu').style=
+                                'position: absolute; left: 7.5em; top: 28em; visibility: visible;';
+                            document.getElementById('a2b_formular').style='visibility: hidden';
+                            document.getElementById('a2b_privateSchluessel').innerHTML = a2b_schluessel();
+                            document.getElementById('a2b_privateSchluessel').style.visibility = 'visible';
+                            document.getElementById('a2b_pfeil').style.visibility = 'visible';
                         }
                         else {
                             document.getElementById('a2b_warnung').style = 
                                 'visibility: visible; top: 7em; right: 6em; z-index: 63';
                         }
-                        document.getElementById('a2b_knotenNeu').style=
-                            'position: absolute; left: 7.5em; top: 28em; visibility: visible;';
-                        document.getElementById('a2b_formular').style='visibility: hidden';
-                        document.getElementById('a2b_privateSchluessel').innerHTML = a2b_schluessel();
-                        document.getElementById('a2b_privateSchluessel').style.visibility = 'visible';
-                        document.getElementById('a2b_pfeil').style.visibility = 'visible';
+                        
                     ">OK</button>
                 </div>
                 <img id="a2b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
@@ -3454,8 +3456,8 @@
                     <div id="a5ab_blockHeader1" class="block" 
                         style="width: 15em; position: absolute; top: 5em; left: 8.7em;">
                         <div class="block blockinhalt" style="width: 86%;">
-                            Hashwert Block:
-                            <span id="a5ab_blockHash1" class="hash"><br><br></span>
+                            Hashwert Block: <br>
+                            <span id="a5ab_blockHash1" class="hash"><br></span>
                         </div>
                         <div class="block blockinhalt" style="width: 86%;">
                             Nonce:
@@ -3532,7 +3534,7 @@
                     <div id="a5ab_blockHeader2" class="block" 
                         style="width: 15em; position: absolute; top: 5em; left: 30.7em;">
                         <div class="block blockinhalt" style="width: 86%;">
-                            Hashwert Block:
+                            Hashwert Block: <br>
                             <span id="a5ab_blockHash2" class="hash"></span>
                             <script>
                                 document.getElementById("a5ab_blockHash2").innerHTML = a5b_hashBlock;
@@ -4511,7 +4513,7 @@
                     onclick="document.getElementById('a8_hinterg1').style='visibility: visible; z-index: 202';">
                     Hintergrundwissen</button>
                 <button id="a8_zurueck" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('7')">zurueck</button>
+                    onclick="oeffneAnimation('7')">zurück</button>
             </div>
             <div id="a8_info1" class="infotext" style="visibility: hidden;">
                 <script type="text/javascript">

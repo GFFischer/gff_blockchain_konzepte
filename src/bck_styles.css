@@ -234,7 +234,6 @@ div .hintergrund {
     border-radius: 0.5em;
     height: 30em;
     min-width: 96%;
-    overflow: scroll;
     margin: 2%;
 }
 
@@ -512,8 +511,19 @@ input:focus, select:focus, textarea:focus, button:focus {
     width: 30em;
 }
 
+@font-face {
+    font-family: 'Consolas';
+    src: url('fonts/consola.ttf');
+}
+
+@font-face {
+    font-family: 'Consolas';
+    font-weight: bold;
+    src: url('fonts/consolab.ttf');
+}
+
 .hash {
-    font-family: 'Bitstream Vera Sans Mono', Consolas, 'Courier New', Courier, monospace;
+    font-family: Consolas, 'Courier New', Courier, monospace;
     font-size: 120%;
 }
 
@@ -528,7 +538,7 @@ input:focus, select:focus, textarea:focus, button:focus {
 }
 
 .signatur {
-    font-family: 'Bitstream Vera Sans Mono', Consolas, 'Courier New', Courier, monospace;
+    font-family: Consolas, 'Courier New', Courier, monospace;
     font-size: 125%;
     font-weight: bold;
 }
