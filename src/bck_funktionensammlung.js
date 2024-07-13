@@ -20,7 +20,7 @@ gesetzt */
 function ausklappenMenu(oeffneID) {
     document.getElementById(oeffneID).style = 'visibility: visible; height: auto';
     var pruefID = "anim";
-    for (var i = 1; i <= 7; i++) {
+    for (var i = 1; i <= 8; i++) {
         pruefID = "anim" + i + "_menu";
         if (pruefID != oeffneID) {
             document.getElementById(pruefID).style = 'visibility: hidden; height: 0em';

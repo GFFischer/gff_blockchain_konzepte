@@ -34,7 +34,7 @@
                     document.getElementById('navmenu').classList.remove('sichtbar');
                     document.getElementById('navmenu').classList.add('unsichtbar');
                     oeffneAnimation('0');
-                    ">Startseite</li>
+                    ">Start</li>
                 <ul id="anim0_menu"></ul>
                 <li onclick="ausklappenMenu('anim1_menu');
                     ">Die Blockchain-Datenstruktur</li>
@@ -115,6 +115,12 @@
                     oeffneAnimation('7');
                     ">Der Konsensalgorithmus, Teil 2: Auflösen von Konflikten</li>
                 <ul id="anim7_menu"></ul>
+                <li id="anim8_eintrag" onclick="ausklappenMenu('anim8_menu');
+                    document.getElementById('navmenu').classList.remove('sichtbar');
+                    document.getElementById('navmenu').classList.add('unsichtbar');
+                    oeffneAnimation('8');
+                    ">Abschluss</li>
+                <ul id="anim8_menu"></ul>
             </ul>
         </nav>
 
@@ -125,6 +131,32 @@
             <p>
                 Hier wird der Text stehen, der erklärt. Und Grafiken kommen natürlich auch noch dazu.
             </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="height: 12em;" ></div>
+                <img id="a0_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    style="position: absolute; top: 2em; left: 6em; visibility: visible;"
+                    onclick="document.getElementById('a0_info1').style='visibility: visible; z-index: 3;'">
+                <button id="a0_hintergButton" class="animbutton" 
+                    style="position: absolute; top: 7em; left: 3em;"
+                    onclick="document.getElementById('a0_hinterg1').style='visibility: visible; z-index: 2';">
+                    Hintergrundwissen</button>
+                <button id="a0_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('1a')">weiter</button>
+            </div>
+            <div id="a0_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a0_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a0_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a0_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a0_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a0_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>
         </div>
 
 <! Animation 1a -->
@@ -139,9 +171,9 @@
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="width: 38em;"></div>
                 <button id="a1a_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
-                onclick="document.getElementById('a1a_hinterg1').style='visibility: visible; z-index: 11';">
-                Hintergrundwissen</button>
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a1a_hinterg1').style='visibility: visible; z-index: 11';">
+                    Hintergrundwissen</button>
                 <button id="a1a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('1b'); a1b_inhaltBlock3()">weiter</button>
                 <button id="a1a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -213,8 +245,7 @@
                        
                     ">OK</button>
                 </div>
-                <img id="a1a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a1a_info1').style='visibility: visible; z-index: 12;'">                    
+                
             </div>
             <div id="a1a_info1" class="infotext" style="visibility: hidden;">
                 <script type="text/javascript">
@@ -229,8 +260,7 @@
                 </script> <br>
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a1a_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            
+            </div>   
         </div>
 
 <! Animation 1b -->
@@ -245,9 +275,11 @@
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="width: 50em;"></div>
                 <button id="a1b_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
-                onclick="document.getElementById('a1b_hinterg1').style='visibility: visible; z-index: 21';">
-                Hintergrundwissen</button>
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a1b_hinterg1').style='visibility: visible; z-index: 21';">
+                    Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a1b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('1c'); a1c_inhalteBloecke()">weiter</button>
                 <button id="a1b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -386,6 +418,8 @@
                 <button id="a1c_hintergButton" class="animbutton" style="visibility: hidden;"
                     onclick="document.getElementById('a1c_hinterg1').style='visibility: visible; z-index: 31';">
                 Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a1c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('1d'); a1d_inhalteBloecke();">weiter</button>
                 <button id="a1c_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -587,6 +621,8 @@
                 <button id="a1d_hintergButton" class="animbutton" style="visibility: hidden;" onclick=
                     "document.getElementById('a1d_hinterg1').style='visibility: visible; z-index: 41';">
                 Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a1d_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('2a')">weiter</button>
                 <button id="a1d_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -843,9 +879,9 @@
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="height: 43em; min-width: 54em;"></div>
                 <button id="a2a_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
-                onclick="document.getElementById('a2a_hinterg1').style='visibility: visible; z-index: 51';">
-                Hintergrundwissen</button>
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a2a_hinterg1').style='visibility: visible; z-index: 51';">
+                    Hintergrundwissen</button>
                 <button id="a2a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('2b'); a2b_nameKnotenNeu();">weiter</button>
                 <button id="a2a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -991,9 +1027,9 @@
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
                 <button id="a2b_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
-                onclick="document.getElementById('a2b_hinterg1').style='visibility: visible; z-index: 61';">
-                Hintergrundwissen</button>
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a2b_hinterg1').style='visibility: visible; z-index: 61';">
+                    Hintergrundwissen</button>
                 <button id="a2b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('2c'); a2c_inhaltKnotenNeu();">weiter</button>
                 <button id="a2b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -1101,7 +1137,7 @@
                         }
                         else {
                             document.getElementById('a2b_warnung').style = 
-                                'visibility: visible; top: 7em; right: 6em; z-index: 53';
+                                'visibility: visible; top: 7em; right: 6em; z-index: 63';
                         }
                         document.getElementById('a2b_knotenNeu').style=
                             'position: absolute; left: 7.5em; top: 28em; visibility: visible;';
@@ -1146,9 +1182,9 @@
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
                 <button id="a2c_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
-                onclick="document.getElementById('a2c_hinterg1').style='visibility: visible; z-index: 71';">
-                Hintergrundwissen</button>
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a2c_hinterg1').style='visibility: visible; z-index: 71';">
+                    Hintergrundwissen</button>
                 <button id="a2c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('3a'); a3a_tabelleAdressenKnotenNeu(); a3a_eingabeGuthaben();"
                     >weiter</button>
@@ -1308,6 +1344,8 @@
                     style="visibility: hidden;"
                     onclick="document.getElementById('a3b_hinterg1').style='visibility: visible; z-index: 91';">
                     Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a3b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('3c'); a3c_tabelleTransaktion();">weiter</button>
                 <button id="a3b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -1429,7 +1467,7 @@
                             document.getElementById('a3b_gebuehr').innerHTML = a3b_gebuehrTransaktion + ' SiC';
                         } else {
                             document.getElementById('a3b_warnung1').style = 
-                            'visibility: visible; top: 7em; right: 6em; z-index: 63'
+                            'visibility: visible; top: 7em; right: 6em; z-index: 93'
                         }
                         if (a3b_pruefeEingabeAdresseEmpfaenger(a3b_empfaengerTransaktion) >= 0) {
                             document.getElementById('a3b_empfaenger').innerHTML = a3b_empfaengerTransaktion;
@@ -1444,7 +1482,7 @@
                                 'position: absolute; right: 2em; top: 28em; visibility: visible; width: 21.5em';
                         } else {
                             document.getElementById('a3b_warnung2').style = 
-                            'visibility: visible; top: 15em; right: 6em; z-index: 64'
+                            'visibility: visible; top: 15em; right: 6em; z-index: 94'
                         }
                     ">Transaktion bestätigen</button>
                 </div>
@@ -1513,6 +1551,8 @@
                     style="visibility: hidden;"
                     onclick="document.getElementById('a3c_hinterg1').style='visibility: visible; z-index: 101';">
                     Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a3c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('3d'); a3d_pruefeSignatur(a3b_hashTransaktion, a3c_idxAdresseSender); 
                         a3d_tabelleTransaktion();">weiter</button>
@@ -1775,6 +1815,8 @@
                     style="visibility: hidden;"
                     onclick="document.getElementById('a3d_hinterg1').style='visibility: visible; z-index: 111';">
                     Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a3d_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('4a'); a4a_datenTransaktion();">weiter</button>
                 <button id="a3d_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -2070,6 +2112,8 @@
                     style="visibility: hidden;"
                     onclick="document.getElementById('a4a_hinterg1').style='visibility: visible; z-index: 121';">
                     Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a4a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('4b'); a4b_datenMerkleTree();">weiter</button>
                 <button id="a4a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -2348,6 +2392,8 @@
                     style="visibility: hidden;"
                     onclick="document.getElementById('a4b_hinterg1').style='visibility: visible; z-index: 131';">
                     Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a4b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('4c'); a4c_datenMerkleTree();">weiter</button>
                 <button id="a4b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -2875,8 +2921,10 @@
                 <div class="hintergrund" style="width: 75em; height: 55em;"></div>
                 <button id="a4c_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
-                    onclick="document.getElementById('a4c_hinterg1').style='visibility: visible; z-index: 131';">
+                    onclick="document.getElementById('a4c_hinterg1').style='visibility: visible; z-index: 141';">
                     Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a4c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('5'); a5ab_datenBloecke()">weiter</button>
                 <button id="a4c_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -3338,12 +3386,12 @@
                         if (!pruefeEingabeZahl(document.getElementById('a4c_betragTransaktion4').value) &&
                             !(document.getElementById('a4c_betragTransaktion4').value == '')) {
                             document.getElementById('a4c_warnung1').style = 
-                            'visibility: visible; top: 7em; right: 6em; z-index: 153'
+                            'visibility: visible; top: 7em; right: 6em; z-index: 143'
                         }
                         else if (!pruefeEingabeZahl(document.getElementById('a4c_betragTransaktion5').value) &&
                             !(document.getElementById('a4c_betragTransaktion5').value == '')) {
                             document.getElementById('a4c_warnung1').style = 
-                            'visibility: visible; top: 7em; right: 6em; z-index: 153'
+                            'visibility: visible; top: 7em; right: 6em; z-index: 143'
                         }
                         else {
                             document.getElementById('a4c_formular').style.visibility = 'hidden';
@@ -3395,6 +3443,8 @@
                     style="position: absolute; top: 49.5em; left: 2em; visibility: visible;"
                     onclick="document.getElementById('a5ab_hinterg1').style='visibility: visible; z-index: 151';">
                     Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a5ab_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('6a'); a6a_inhaltKnotenNeu();">weiter</button>
                 <button id="a4a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -3664,9 +3714,9 @@
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
                 <button id="a6a_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
-                onclick="document.getElementById('a6a_hinterg1').style='visibility: visible; z-index: 161';">
-                Hintergrundwissen</button>
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a6a_hinterg1').style='visibility: visible; z-index: 161';">
+                    Hintergrundwissen</button>
                 <button id="a6a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('6b');"
                     >weiter</button>
@@ -3842,9 +3892,11 @@
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
                 <button id="a6b_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
-                onclick="document.getElementById('a6b_hinterg1').style='visibility: visible; z-index: 171';">
-                Hintergrundwissen</button>
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a6b_hinterg1').style='visibility: visible; z-index: 171';">
+                    Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a6b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('6c');"
                     >weiter</button>
@@ -4012,9 +4064,11 @@
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
                 <button id="a6c_hintergButton" class="animbutton" 
-                style="visibility: hidden;"
-                onclick="document.getElementById('a6c_hinterg1').style='visibility: visible; z-index: 181';">
-                Hintergrundwissen</button>
+                    style="visibility: hidden;"
+                    onclick="document.getElementById('a6c_hinterg1').style='visibility: visible; z-index: 181';">
+                    Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a6c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('7');"
                     >weiter</button>
@@ -4182,11 +4236,13 @@
             <div style="position: relative; text-align: center;">
                 <div class="hintergrund" style="width: 90em; height: 40em;"></div>
                 <button id="a7_hintergButton" class="animbutton" 
-                style="position: absolute; top: 36.5em; left: 3em; visibility: hidden;"
-                onclick="document.getElementById('a7_hinterg1').style='visibility: visible; z-index: 191';">
-                Hintergrundwissen</button>
+                    style="position: absolute; top: 36.5em; left: 3em; visibility: hidden;"
+                    onclick="document.getElementById('a7_hinterg1').style='visibility: visible; z-index: 191';">
+                    Hintergrundwissen</button>
+                <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
+                    onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a7_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('ende');">weiter</button>
+                    onclick="oeffneAnimation('8');">weiter</button>
                 <button id="7_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('6c')">zurück</button>
                 <div id="a7_block1" class="block gruenerHintergrund" style="position: absolute; left: 4em; top: 16em;">
@@ -4423,6 +4479,53 @@
                 </script> <br>
                 <button class="hintergrbutton"
                     onclick="document.getElementById('a7_hinterg1').style='visibility: hidden';">Schliessen</button>
+            </div>
+        </div>
+
+<! Copyright-Hinweis -->
+
+        <div id="copyrightHashfunktionen" class="hinweis" style="z-index: 1; top: 60vh; left: 20vw;">
+            <p id="copyrightHinweis" class="hinweistext"></p>
+            <script>
+                document.getElementById("copyrightHinweis").innerHTML = copyright_hashes;
+            </script>
+            <button class="hinweisbutton" onclick="
+                document.getElementById('copyrightHashfunktionen').style.visibility = 'hidden';
+            ">OK</button>
+        </div>
+
+<! Abschluss-Seite -->
+        
+        <div id="anim_8" class="mitte animation">
+            <h1>Die Blockchain: Resümee und Ausblick</h1>
+            <p>
+                Hier wird der Text stehen, der einige Punkte erwähnt, die über das rein Technische hinausgehen.
+            </p>
+            <div style="position: relative; text-align: center;">
+                <div class="hintergrund" style="height: 12em;" ></div>
+                <img id="a8_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    style="position: absolute; top: 2em; left: 6em; visibility: visible;"
+                    onclick="document.getElementById('a8_info1').style='visibility: visible; z-index: 203;'">
+                <button id="a8_hintergButton" class="animbutton" 
+                    style="position: absolute; top: 7em; left: 3em;"
+                    onclick="document.getElementById('a8_hinterg1').style='visibility: visible; z-index: 202';">
+                    Hintergrundwissen</button>
+                <button id="a8_zurueck" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
+                    onclick="oeffneAnimation('7')">zurueck</button>
+            </div>
+            <div id="a8_info1" class="infotext" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a8_info1);
+                </script> <br>
+                <button class="infobutton"
+                    onclick="document.getElementById('a8_info1').style='visibility: hidden';">Schliessen</button>
+            </div>
+            <div id="a8_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                <script type="text/javascript">
+                    document.write(a8_hinterg1);
+                </script> <br>
+                <button class="hintergrbutton"
+                    onclick="document.getElementById('a8_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>
         </div>
 

@@ -1,3 +1,6 @@
+var a0_info1 = "Der erste Erklärungstext";
+var a0_hinterg1 = "Der erste Hintergrundtext";
+
 var a1a_info1 = "Hier kommt der erste Infotext hinein.";
 var a1a_hinterg1 = "Hintergrundtext 1";
 var a1b_info1 = "Infotext 1b";
@@ -43,6 +46,10 @@ var a6c_hinterg1 = "Hintergrundtext 6c"
 var a7_info1 = "Infotext Animation 7";
 var a7_hinterg1 = "Hintergrundtext Animation 7"
 
-var copyright_hashes = "Berechnet unter Verwendung der JavaScript Implementation von üblichen Hashfunktionen, zur \
-Verfügung gestellt von </br>&copy; 2012-2017, Tomas Aparicio und </br>&copy; 1999-2012, Paul Johnston, Angel Marin, \
-Jeremy Lin. </br>Quelle: <a href='https://github.com/h2non/jshashes'>GitHub</a>.";
+var a8_info1 = "Der letzte Erklärungstext";
+var a8_hinterg1 = "Der letzte Hintergrundtext";
+
+var copyright_hashes = "Die Hashwerte werden berechnet unter Verwendung der JavaScript Implementation von üblichen \
+Hashfunktionen, zur Verfügung gestellt von </br>&copy; 2012-2017, Tomas Aparicio und </br>&copy; 1999-2012, Paul \
+Johnston, Angel Marin, Jeremy Lin. </br>Quelle: <a href='https://github.com/h2non/jshashes' target='_blank'\
+style='color: rgb(254,205,49)'>GitHub</a>";

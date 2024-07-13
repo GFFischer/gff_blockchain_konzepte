@@ -78,8 +78,12 @@ nav li:active {
     color: var(--tarngruen);
 }
 
-#anim0_eintrag, #anim5_eintrag {
+#anim0_eintrag, #anim5_eintrag, #anim7_eintrag {
     margin: 0.3em 0.5em 0.6em;
+}
+
+#anim8_eintrag {
+    margin: 0.6em 0.5em 0.6em;
 }
 
 nav ul.submenu {
@@ -337,6 +341,14 @@ button.hintergrbutton:active {
     background-color: var(--antikblau);
     color: var(--grapefruit);
 }
+
+.copyrightSymbol {
+    float: left; 
+    margin-left: 2.5em; 
+    width: 1.5em;
+    cursor: pointer;
+}
+    
 
 .formular {
     visibility: hidden;
