@@ -709,8 +709,8 @@ werden.
   Der Navigationsbereich wird als unsortierte Liste (*nav ul*) realisiert, wobei die Listeneinträge (*nav li*) so formatiert
   sind, dass sie für den User den Eindruck erwecken, Buttons zu sein (Cursor wird zum Pointer, Invertierung der Farben bei
   Aktivierung *nav li:active*).
-* **#anim0_eintrag, #anim5_eintrag**: <br>
-  Bei diesen beiden IDs handelt es sich um zwei Einträge im Navigationsmenü, bei denen es keine ausklappbaren Untermenüs gibt.
+* **#anim0_eintrag, #anim5_eintrag, #anim7_eintrag, #anim8_eintrag**: <br>
+  Bei diesen vier IDs handelt es sich um zwei Einträge im Navigationsmenü, bei denen es keine ausklappbaren Untermenüs gibt.
   Für sie werden die Aussenabstände separat geregelt, damit im Navigationsmenü alle Abstände gleich sind.
 * **nav ul.submenu**: <br>
   Bestimmt wird, dass die Untermenüs im Navigationsmenü standardmassig unsichtbar sind und ihre Höhe sowie ihr Aussenabstand auf
