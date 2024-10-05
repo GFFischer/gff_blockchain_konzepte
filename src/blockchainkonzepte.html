@@ -130,34 +130,70 @@
         <div id="anim_0" class="mitte animation" style="display: inline;">
             <h1>Die fundamentalen Konzepte einer Blockchain</h1>
             <p>
-                Hier wird der Text stehen, der erklärt. Und Grafiken kommen natürlich auch noch dazu.
+                <strong>Du hast das Wort „Blockchain“ schon einmal gehört und willst wissen, worum es sich 
+                dabei handelt? Du willst wissen, wie eine „Kryptowährung“ – also rein digitales 
+                Geld – funktionieren kann? Oder du wurdest von deiner Informatik-Lehrperson dazu 
+                aufgefordert, dich über Blockchains schlau zu machen? Egal. Hier bist du 
+                richtig.</strong> <br><br>
+                Wir werden uns einen Weg durch die grundlegenden Konzepte der Blockchain-Technologie 
+                bahnen, der uns zu <strong>19 Animationen</strong> führen wird. Von Animation zu 
+                Animation kannst du Schritt für Schritt über die mit „zurück“ und „weiter“ 
+                beschrifteten Buttons wandern, oder du kannst über das Navigationsmenü direkt zu 
+                einer bestimmten Animation springen. <br><br>
+                Wenn alles klappt, bist du am Ende unseres Weges schon fast eine Expertin oder ein 
+                Experte für das Thema „Blockchain“ …
+
             </p>
-            <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="height: 12em;" ></div>
-                <img id="a0_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    style="position: absolute; top: 2em; left: 6em; visibility: visible;"
-                    onclick="document.getElementById('a0_info1').style='visibility: visible; z-index: 3;'">
-                <button id="a0_hintergButton" class="animbutton" 
-                    style="position: absolute; top: 7em; left: 3em;"
-                    onclick="document.getElementById('a0_hinterg1').style='visibility: visible; z-index: 2';">
-                    Hintergrundwissen</button>
+            <div style="position: relative;">
+                <div class="hintergrund">
+                    <table style="border-spacing: 3em 1em">
+                        <tr>
+                            <td style="text-align: center;">
+                                <img id="a0_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                                style="visibility: visible;"
+                                onclick="document.getElementById('a0_info1').style='visibility: visible; z-index: 3;'">
+                            </td>
+                            <td>
+                                Dieses Symbol erscheint immer dann, wenn du eine Animation beendet hast. Wenn du 
+                                draufklickst, öffnet sich ein Text, in dem das Konzept erklärt wird, das du in 
+                                der Animation gesehen hast. <br> 
+                                <strong> Probier's aus und du wirst eine erste kurze Einführung ins Thema 
+                                „Blockchain“ erhalten.</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <button id="a0_hintergButton" class="animbutton" 
+                                onclick="document.getElementById('a0_hinterg1').style='visibility: visible; z-index: 2';">
+                                Hintergrundwissen</button>
+                            </td>
+                            <td>
+                                Beim Klicken auf diesen Button öffnet sich ein Text mit Hintergrundwissen, das 
+                                über das hinausgeht, was wir in der Animation gezeigt haben. Hier erhältst du 
+                                weiterführende Informationen, um deine Kenntnisse zu vertiefen. <br> 
+                                <strong> Probier's aus und du wirst erfahren, wie das mit der 
+                                Blockchain angefangen hat.</strong>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="a0_info1" class="infotext" style="visibility: hidden;">
+                        <script type="text/javascript">
+                            document.write(a0_info1);
+                        </script> <br>
+                        <button class="infobutton"
+                            onclick="document.getElementById('a0_info1').style='visibility: hidden';">Schliessen</button>
+                    </div>
+                    <div id="a0_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                        <script type="text/javascript">
+                            document.write(a0_hinterg1);
+                        </script> <br>
+                        <button class="hintergrbutton"
+                            onclick="document.getElementById('a0_hinterg1').style='visibility: hidden';">Schliessen</button>
+                    </div>
+                </div>
                 <button id="a0_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('1a')">weiter</button>
-            </div>
-            <div id="a0_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a0_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a0_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a0_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a0_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a0_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>
+            </div> 
         </div>
 
 <! Animation 1a -->
@@ -169,8 +205,8 @@
                 bestimmt. Wenn eine neue Seite dazukommt, bekommt sie eine Seitenzahl, die um 1 höher ist als die 
                 Seitenzahl der bis dahin letzten Seite.
             </p>
-            <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="width: 38em;"></div>
+            <div style="position: relative;">
+                <div class="hintergrund" style="height: 30em; width: 38em;"></div>
                 <button id="a1a_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a1a_hinterg1').style='visibility: visible; z-index: 11';">
@@ -234,9 +270,9 @@
                             document.getElementById('a1a_block3Inhalt').innerHTML = a1a_block3Inhalt;
                             document.getElementById('a1a_block3').style = 'position: absolute; left: 26em; top: 5em; visibility: visible';
                             document.getElementById('a1a_formular').style = 'visibility: hidden';
-                            document.getElementById('a1a_infoimg1').style=
+                            document.getElementById('a1a_infoimg1').style =
                                 'visibility: visible; position: absolute; top: 21em; left: 30em';
-                            document.getElementById('a1a_hintergButton').style=
+                            document.getElementById('a1a_hintergButton').style =
                                 'visibility: visible; position: absolute; top: 26.5em; left: 2em';
                         }
                         else {
@@ -246,7 +282,8 @@
                        
                     ">OK</button>
                 </div>
-                
+                <img id="a1a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                    onclick="document.getElementById('a1a_info1').style='visibility: visible; z-index: 12;'">
             </div>
             <div id="a1a_info1" class="infotext" style="visibility: hidden;">
                 <script type="text/javascript">
@@ -274,7 +311,7 @@
                 uns 8 Zeichen), die mit einer sogenannten "Hashfunktion" auf den Inhalt des Blocks berechnet wird.
             </p>
             <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="width: 50em;"></div>
+                <div class="hintergrund" style="height: 30em; width: 50em;"></div>
                 <button id="a1b_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a1b_hinterg1').style='visibility: visible; z-index: 21';">
@@ -1282,7 +1319,7 @@
                 überwiesen wurden, ist das Guthaben dieser Adresse.
             </p>
             <div style="position: relative; text-align: center;">
-                <div class="hintergrund"></div>
+                <div class="hintergrund" style="height: 30em;"></div>
                 <button id="a3a_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a3a_hinterg1').style='visibility: visible; z-index: 81';">
