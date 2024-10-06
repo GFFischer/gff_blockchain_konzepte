@@ -211,6 +211,13 @@
                     style="visibility: hidden;"
                     onclick="document.getElementById('a1a_hinterg1').style='visibility: visible; z-index: 11';">
                     Hintergrundwissen</button>
+                <div id="a1a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a1a_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a1a_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <button id="a1a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('1b'); a1b_inhaltBlock3()">weiter</button>
                 <button id="a1a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -284,21 +291,14 @@
                 </div>
                 <img id="a1a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
                     onclick="document.getElementById('a1a_info1').style='visibility: visible; z-index: 12;'">
-            </div>
-            <div id="a1a_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a1a_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a1a_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a1a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a1a_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a1a_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>   
+                <div id="a1a_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a1a_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a1a_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
+            </div>       
         </div>
 
 <! Animation 1b -->
@@ -310,12 +310,19 @@
                 einen Hashwert. Das ist eine (in unserer Darstellung hexadezimale) Zahl mit einer fixen Länge (bei
                 uns 8 Zeichen), die mit einer sogenannten "Hashfunktion" auf den Inhalt des Blocks berechnet wird.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative;">
                 <div class="hintergrund" style="height: 30em; width: 50em;"></div>
                 <button id="a1b_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a1b_hinterg1').style='visibility: visible; z-index: 21';">
                     Hintergrundwissen</button>
+                <div id="a1b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a1b_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a1b_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a1b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
@@ -425,21 +432,14 @@
                     ">OK</button>
                 </div>
                 <img id="a1b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a1b_info1').style='visibility: visible; z-index: 22;'">                    
-            </div>
-            <div id="a1b_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a1b_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a1b_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a1b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a1b_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a1b_hinterg1').style='visibility: hidden';">Schliessen</button>
+                    onclick="document.getElementById('a1b_info1').style='visibility: visible; z-index: 22;'">
+                <div id="a1b_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a1b_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a1b_info1').style='visibility: hidden';">Schliessen</button>
+                </div>                 
             </div>
         </div>
 
@@ -451,11 +451,8 @@
                 Jeder Block beinhaltet den Hashwert des vorherigen Blocks. Dadurch werden die Blöcke miteinander
                 verknüpft und bekommen eine Reihenfolge. Und aus einzelnen Blöcken wird eine Kette von Blöcken.
             </p>
-            <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="width: 68em; height: 32em;"></div>
-                <button id="a1c_hintergButton" class="animbutton" style="visibility: hidden;"
-                    onclick="document.getElementById('a1c_hinterg1').style='visibility: visible; z-index: 31';">
-                Hintergrundwissen</button>
+            <div style="position: relative;">
+                <div class="hintergrund" style="width: 68em; height: 30em;"></div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a1c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
@@ -591,6 +588,13 @@
                 </div>
                 <img id="a1c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg""
                     onclick="document.getElementById('a1c_info1').style='visibility: visible; z-index: 34;'">
+                <div id="a1c_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a1c_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a1c_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <div id="a1c_formular" class="formular">
                     <p><label>Gib den Inhalt des neuen Blocks ein: </p><p>
                         <textarea id="a1c_inputInhaltBlock5" cols="15" rows="4" maxlength="50"></textarea></label></p>
@@ -629,20 +633,6 @@
                     ">OK</button>
                 </div>                    
             </div>
-            <div id="a1c_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a1c_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a1c_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a1c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a1c_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a1c_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>   
         </div>
         
 <! Animation 1d -->
@@ -911,7 +901,7 @@
             <h1>Eine Blockchain läuft einem Netzwerk</h1>
             <p>
                 Eine Blockchain wird nicht irgendwo zentral gespeichert, sondern sie wird von einem Netzwerk von 
-                vielen gleichwertigen Knoten bearbeitet. Alle Knoten ("Peers) sind dabei gleichrangig, bei jedem 
+                vielen gleichwertigen Knoten bearbeitet. Alle Knoten ("Peers") sind dabei gleichrangig, bei jedem 
                 Knoten ist die gesamte Blockchain mit all ihren Daten gespeichert.
             </p>
             <div style="position: relative; text-align: center;">
