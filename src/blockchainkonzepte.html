@@ -644,11 +644,8 @@
                 gespeichert. Übrig bleibt ein sogenannter "Block-Header", der über Hashwerte (sogenannte
                 "Hash-Referenzen") auf den vorherigen Block und den eigenen Inhalt verweist ("referenziert").
             </p>
-            <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="width: 68em; height: 40em;"></div>
-                <button id="a1d_hintergButton" class="animbutton" style="visibility: hidden;" onclick=
-                    "document.getElementById('a1d_hinterg1').style='visibility: visible; z-index: 41';">
-                Hintergrundwissen</button>
+            <div style="position: relative;">
+                <div class="hintergrund" style="width: 68em; height: 39em;"></div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a1d_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
@@ -821,7 +818,6 @@
                     style="visibility: hidden;">
                 <button id="a1d_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
                     onclick="
-                        document.getElementById('a1d_hintergButton').style='visibility: hidden';
                         document.getElementById('a1d_unterbrechung').style = 
                             'position: absolute; right: 13.3em; top: 1em; visibility: visible'
                         document.getElementById('a1d_abbruch').style =
@@ -838,7 +834,6 @@
                         document.getElementById('a1d_fortsetzung').style='visibility: visible';
                         document.getElementById('a1d_neustart').style='visibility: hidden';
                         document.getElementById('a1d_infoimg1').style='visibility:hidden';
-                        document.getElementById('a1d_hintergButton').style ='visibility: hidden';
                         document.getElementById('a1d_block1Inhalt').style=
                             'position: absolute; left: 2.5em; top: 16.4em;';
                         document.getElementById('a1d_block2Inhalt').style=
@@ -878,20 +873,13 @@
                 <img id="a1d_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
                     style="visibility: hidden"
                     onclick="document.getElementById('a1d_info1').style='visibility: visible; z-index: 44;'">                   
-            </div>
-            <div id="a1d_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a1d_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a1d_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a1d_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a1d_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a1d_hinterg1').style='visibility: hidden';">Schliessen</button>
+                <div id="a1d_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a1d_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a1d_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
         </div>
 
@@ -904,12 +892,19 @@
                 vielen gleichwertigen Knoten bearbeitet. Alle Knoten ("Peers") sind dabei gleichrangig, bei jedem 
                 Knoten ist die gesamte Blockchain mit all ihren Daten gespeichert.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative;">
                 <div class="hintergrund" style="height: 43em; min-width: 54em;"></div>
                 <button id="a2a_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a2a_hinterg1').style='visibility: visible; z-index: 51';">
                     Hintergrundwissen</button>
+                <div id="a2a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a2a_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a2a_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <button id="a2a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('2b'); a2b_nameKnotenNeu();">weiter</button>
                 <button id="a2a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -1024,22 +1019,15 @@
                     ">OK</button>
                 </div>
                 <img id="a2a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a2a_info1').style='visibility: visible; z-index: 52;'">                    
+                    onclick="document.getElementById('a2a_info1').style='visibility: visible; z-index: 52;'">
+                <div id="a2a_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a2a_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a2a_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
-            <div id="a2a_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a2a_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a2a_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a2a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a2a_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a2a_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>  
         </div>
 
 <! Animation 2b -->
@@ -1052,12 +1040,19 @@
                 kann, ob eine Transaktion tatsächlich von demjenigen Peer getätigt worden ist, der in dieser
                 Transaktion als Absender angegeben ist.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative;">
                 <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
                 <button id="a2b_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a2b_hinterg1').style='visibility: visible; z-index: 61';">
                     Hintergrundwissen</button>
+                <div id="a2b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a2b_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a2b_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <button id="a2b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('2c'); a2c_inhaltKnotenNeu();">weiter</button>
                 <button id="a2b_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -1177,26 +1172,19 @@
                     ">OK</button>
                 </div>
                 <img id="a2b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a2b_info1').style='visibility: visible; z-index: 62;'">    
+                    onclick="document.getElementById('a2b_info1').style='visibility: visible; z-index: 62;'">
+                <div id="a2b_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a2b_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a2b_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <img id="a2b_pfeil" src="img/pfeil_private_schluessel_gruen.png" alt="Pfeil"
                     style="position: absolute; left: 16.2em; top: 35.6em; width: 4em; visibility: hidden;">
                 <div id="a2b_privateSchluessel" class="block" style=
                     "position: absolute; left: 19.7em; top: 38.4em; visibility: hidden;"></div>       
             </div>
-            <div id="a2b_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a2b_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a2b_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a2b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a2b_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a2b_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>  
         </div>
 
 <! Animation 2c -->

@@ -76,8 +76,6 @@ async function a1d_bewegteElemente() {
     document.getElementById('a1d_pfeil5').style = 
         'position: absolute; top:20.8em; left: 61em; height: 6em; visibility: visible';
     document.getElementById('a1d_infoimg1').style = 'visibility: visible; position: absolute; top: 34.5em; left: 60em';
-    document.getElementById('a1d_hintergButton').style = 
-        'visibility: visible; position: absolute; top: 36.5em; left: 2em';
 } */
 
 var a1d_verstricheneZeit = 0;
@@ -136,9 +134,7 @@ async function a1d_bewegteBloecke() {
         document.getElementById("a1d_unterbrechung").style="visibility: hidden";
         document.getElementById("a1d_fortsetzung").style="visibility: hidden";
         document.getElementById("a1d_neustart").style=
-            "position: absolute; right: 2em; top: 1em; visibility: visible";
-        document.getElementById("a1d_hintergButton").style =
-            "visibility: visible; position: absolute; top: 36.5em; left: 2em"});
+            "position: absolute; right: 2em; top: 1em; visibility: visible"});
 
     document.getElementById("a1d_unterbrechung").addEventListener("click", () => {
         a1d_unterbrochen = true;
@@ -216,7 +212,6 @@ async function a1d_bewegteBloecke() {
                         document.getElementById("a1d_abbruch").style="visibility: hidden";
                         document.getElementById("a1d_unterbrechung").style="visibility: hidden";
                         document.getElementById("a1d_neustart").style="position: absolute; right: 2em; top: 1em; visibility: visible";
-                        document.getElementById("a1d_hintergButton").style ="visibility: visible; position: absolute; top: 36.5em; left: 2em"
                         a1d_verstricheneZeit = 0;
                     }
                 }
