@@ -1196,12 +1196,19 @@
                 bekommen. Das wird nun korrigiert, denn tatsächlich haben die Peers keine Namen. Sie bleiben
                 anonym. Das einzige, wodurch ein Peer identifiziert werden kann, sind seine Adressen.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative">
                 <div class="hintergrund" style="height: 48em; min-width: 54em;"></div>
                 <button id="a2c_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a2c_hinterg1').style='visibility: visible; z-index: 71';">
                     Hintergrundwissen</button>
+                <div id="a2c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a2c_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a2c_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <button id="a2c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('3a'); a3a_tabelleAdressenKnotenNeu(); a3a_eingabeGuthaben();"
                     >weiter</button>
@@ -1264,25 +1271,18 @@
                     onclick="a2c_verschwindendeNamen();">Starte Animation</button>
                 <img id="a2c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
                     onclick="document.getElementById('a2c_info1').style='visibility: visible; z-index: 72;'">    
+                <div id="a2c_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a2c_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a2c_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <img id="a2c_pfeil" src="img/pfeil_private_schluessel_schwarz.png" alt="Pfeil"
                     style="position: absolute; left: 16.2em; top: 35.6em; width: 4em;">
                 <div id="a2c_privateSchluessel" class="block" style=
                     "position: absolute; left: 19.7em; top: 38.4em;"></div>       
             </div>
-            <div id="a2c_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a2c_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a2c_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a2c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a2c_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a2c_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>  
         </div>
         
 <! Animation 3a -->
@@ -1296,12 +1296,19 @@
                 die an eine Adresse überwiesen und von dieser Adresse noch nicht wieder woandershin weiter
                 überwiesen wurden, ist das Guthaben dieser Adresse.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative;">
                 <div class="hintergrund" style="height: 30em;"></div>
                 <button id="a3a_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a3a_hinterg1').style='visibility: visible; z-index: 81';">
                     Hintergrundwissen</button>
+                <div id="a3a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a3a_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a3a_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <button id="a3a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('3b'); a3b_tabelleAdressenKnotenNeuMitGuthaben();">weiter</button>
                 <button id="a3a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
@@ -1327,22 +1334,15 @@
                     a3a_eingabeGuthaben();
                 </script>
                 <img id="a3a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a3a_info1').style='visibility: visible; z-index: 82;'">                    
+                    onclick="document.getElementById('a3a_info1').style='visibility: visible; z-index: 82;'">
+                <div id="a3a_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a3a_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a3a_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
-            <div id="a3a_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a3a_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a3a_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a3a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a3a_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a3a_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>    
         </div>
 
 <! Animation 3b -->
@@ -1355,12 +1355,19 @@
                 will und wie hoch der Betrag ist. Automatisch hinzugefügt werden ein Zeitstempel, eine Gebühr und 
                 ein Hashwert, der auf alle Daten der Transaktion berechnet wird.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative;">
                 <div class="hintergrund" style="width: 46em; height: 50em;"></div>
                 <button id="a3b_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a3b_hinterg1').style='visibility: visible; z-index: 91';">
                     Hintergrundwissen</button>
+                <div id="a3b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a3b_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a3b_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a3b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
@@ -1534,22 +1541,15 @@
                 </div>
 
                 <img id="a3b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a3b_info1').style='visibility: visible; z-index: 92;'">                    
+                    onclick="document.getElementById('a3b_info1').style='visibility: visible; z-index: 92;'">
+                <div id="a3b_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a3b_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a3b_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
-            <div id="a3b_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a3b_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a3b_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a3b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a3b_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a3b_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>    
         </div>
 
 <! Animation 3c -->
@@ -1562,12 +1562,19 @@
                 der Auftraggeber-Adresse diesen Hashwert entschlüsseln und dadurch feststellen, ob die Transaktion 
                 tatsächlich von der angegebenen Auftraggeber-Adresse stammt.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative;">
                 <div class="hintergrund" style="width: 55em; height: 38em;"></div>
                 <button id="a3c_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a3c_hinterg1').style='visibility: visible; z-index: 101';">
                     Hintergrundwissen</button>
+                <div id="a3c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a3c_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a3c_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a3c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
@@ -1797,22 +1804,15 @@
                             'position: absolute; left: 2em; top: 34.5em; visibility: visible;';
                     ">Berechne</button>
                 <img id="a3c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a3c_info1').style='visibility: visible; z-index: 102;'">                    
+                    onclick="document.getElementById('a3c_info1').style='visibility: visible; z-index: 102;'">
+                <div id="a3c_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a3c_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a3c_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
-            <div id="a3c_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a3c_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a3c_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a3c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a3c_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a3c_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>    
         </div>
 
 <! Animation 3d -->
@@ -1826,12 +1826,19 @@
                 Transaktion tatsächlich von der angegebenen Auftraggeber-Adresse gesendet wurde, wozu die digitale
                 Signatur überprüft wird.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative;">
                 <div class="hintergrund" style="width: 56em; height: 38em;"></div>
                 <button id="a3d_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a3d_hinterg1').style='visibility: visible; z-index: 111';">
                     Hintergrundwissen</button>
+                <div id="a3d_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a3d_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a3d_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a3d_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
@@ -1929,7 +1936,7 @@
                 <img id="a3d_kreuz1" src="img/kreuz.png" alt="Kreuz" 
                 style="width: 2.5em; position: absolute; left: 20em; top: 14em; visibility: hidden;">
                 <div class="feld" style="position: absolute; left: 24em; top: 14em; width: 16em;">
-                    ... Betrag niedriger als Kontostand
+                    ... Auftraggeber im Besitz aller SiC
                 </div>
                 <div id="a3d_zurueckgewieseneTrans" 
                     style="position: absolute; left: 26.5em; top: 20.5em; visibility: hidden;">
@@ -2096,22 +2103,15 @@
                             'position: absolute; left: 2em; top: 34.5em; visibility: visible;';
                     ">Berechne</button>
                 <img id="a3d_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a3d_info1').style='visibility: visible; z-index: 112;'">                    
+                    onclick="document.getElementById('a3d_info1').style='visibility: visible; z-index: 112;'">
+                <div id="a3d_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a3d_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a3d_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
-            <div id="a3d_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a3d_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a3d_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a3d_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a3d_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a3d_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>    
         </div>
 
 <! Animation 4a -->
