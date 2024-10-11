@@ -2123,12 +2123,8 @@
                 Somit würde jede kleinste Veränderung in den Transaktionen sofort auffallen, denn eine solche würde
                 nicht nur die Hash-Referenz der Transaktion, sondern auch die Hash-Referenz der Verknüpfung verändern.
             </p>
-            <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="width: 55em; height: 44em;"></div>
-                <button id="a4a_hintergButton" class="animbutton" 
-                    style="visibility: hidden;"
-                    onclick="document.getElementById('a4a_hinterg1').style='visibility: visible; z-index: 121';">
-                    Hintergrundwissen</button>
+            <div style="position: relative;">
+                <div class="hintergrund" style="width: 55em; height: 40em;"></div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a4a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
@@ -2336,7 +2332,6 @@
                     style="position: absolute; left: 17.3em; top: 4em; height: 3.1em; width: 8.2em; visibility: hidden;">
                 <button id="a4a_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
                     onclick="
-                        document.getElementById('a4a_hintergButton').style='visibility: hidden';
                         document.getElementById('a4a_unterbrechung').style = 
                             'position: absolute; right: 13.3em; top: 1em; visibility: visible'
                         document.getElementById('a4a_abbruch').style =
@@ -2352,7 +2347,6 @@
                             'position: absolute; right: 2em; top: 1em; visibility: visible';
                         document.getElementById('a4a_neustart').style='visibility: hidden';
                         document.getElementById('a4a_infoimg1').style='visibility:hidden';
-                        document.getElementById('a4a_hintergButton').style ='visibility: hidden';
                         document.getElementById('a4a_tabelleHashRef4').style=
                             'position: absolute; top: 31.5em; left: 3em;';
                         document.getElementById('a4a_tabelleHashRef5').style=
@@ -2376,22 +2370,15 @@
                 <button id="a4a_abbruch" class="animbutton" style="visibility: hidden;"
                     >Animation abbrechen</button>
                 <img id="a4a_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a4a_info1').style='visibility: visible; z-index: 122;'">                    
+                    onclick="document.getElementById('a4a_info1').style='visibility: visible; z-index: 122;'">
+                <div id="a4a_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a4a_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a4a_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
-            <div id="a4a_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a4a_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a4a_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a4a_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a4a_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a4a_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>    
         </div>
 
 <! Animation 4b -->
@@ -2403,12 +2390,8 @@
                 Der Hashwert, der die Wurzel dieses Baumes bildet, wird zur Hash-Referenz auf den Inhalt eines Blocks
                 in der Blockchain.
             </p>
-            <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="width: 75em; height: 55em;"></div>
-                <button id="a4b_hintergButton" class="animbutton" 
-                    style="visibility: hidden;"
-                    onclick="document.getElementById('a4b_hinterg1').style='visibility: visible; z-index: 131';">
-                    Hintergrundwissen</button>
+            <div style="position: relative;">
+                <div class="hintergrund" style="width: 75em; height: 50em;"></div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a4b_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
@@ -2834,7 +2817,6 @@
                     style="position: absolute; top: 7em; left: 27.05em; height: 5.2em; width: 24em; visibility: hidden;">
                 <button id="a4b_startButton" class="animbutton" style="position: absolute; right: 2em; top: 1em;"
                     onclick="
-                        document.getElementById('a4b_hintergButton').style='visibility: hidden';
                         document.getElementById('a4b_unterbrechung').style = 
                             'position: absolute; right: 13.3em; top: 1em; visibility: visible'
                         document.getElementById('a4b_abbruch').style =
@@ -2893,7 +2875,6 @@
                         document.getElementById('a4b_abbruch').style=
                             'position: absolute; right: 2em; top: 1em; visibility: visible';
                         document.getElementById('a4b_neustart').style='visibility: hidden';
-                        document.getElementById('a4b_hintergButton').style.visibility = 'hidden';
                         a4b_wachsendeBlockchain();"
                     >Animation neu starten</button>
                 <button id="a4b_unterbrechung" class="animbutton" style="visibility: hidden;"
@@ -2906,22 +2887,15 @@
                 <button id="a4b_abbruch" class="animbutton" style="visibility: hidden;"
                     >Animation abbrechen</button>
                 <img id="a4b_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a4b_info1').style='visibility: visible; z-index: 132;'">                    
+                    onclick="document.getElementById('a4b_info1').style='visibility: visible; z-index: 132;'">
+                <div id="a4b_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a4b_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a4b_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
-            <div id="a4b_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a4b_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a4b_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a4b_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a4b_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a4b_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>    
         </div>
 
 <! Animation 4c -->

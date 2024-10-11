@@ -645,9 +645,7 @@ async function a4a_bewegteReferenzen() {
         document.getElementById("a4a_unterbrechung").style="visibility: hidden";
         document.getElementById("a4a_fortsetzung").style="visibility: hidden";
         document.getElementById("a4a_neustart").style=
-            "position: absolute; right: 2em; top: 1em; visibility: visible";
-        document.getElementById("a4a_hintergButton").style =
-            "visibility: visible; position: absolute; top: 40.5em; left: 2em"});
+            "position: absolute; right: 2em; top: 1em; visibility: visible";});
 
     document.getElementById("a4a_unterbrechung").addEventListener("click", () => {
         a4a_unterbrochen = true;
@@ -709,8 +707,6 @@ async function a4a_bewegteReferenzen() {
                                 document.getElementById("a4a_unterbrechung").style = "visibility: hidden";
                                 document.getElementById("a4a_neustart").style =
                                     "position: absolute; right: 2em; top: 1em; visibility: visible";
-                                document.getElementById("a4a_hintergButton").style = 
-                                    "visibility: visible; position: absolute; top: 40.5em; left: 2em"
                                 a4a_verstricheneZeit = 0;
                             }
                         }  
@@ -805,9 +801,7 @@ async function a4b_wachsendeBlockchain() {
         document.getElementById("a4b_unterbrechung").style="visibility: hidden";
         document.getElementById("a4b_fortsetzung").style="visibility: hidden";
         document.getElementById("a4b_neustart").style=
-            "position: absolute; right: 2em; top: 1em; visibility: visible";
-        document.getElementById("a4b_hintergButton").style =
-            "visibility: visible; position: absolute; top: 51.5em; left: 2em"});
+            "position: absolute; right: 2em; top: 1em; visibility: visible";});
 
     document.getElementById("a4b_unterbrechung").addEventListener("click", () => {
         a4b_unterbrochen = true;
@@ -931,8 +925,6 @@ async function a4b_wachsendeBlockchain() {
                                                                 document.getElementById("a4b_fortsetzung").style="visibility: hidden";
                                                                 document.getElementById("a4b_neustart").style=
                                                                     "position: absolute; right: 2em; top: 1em; visibility: visible";
-                                                                document.getElementById("a4b_hintergButton").style =
-                                                                    "visibility: visible; position: absolute; top: 51.5em; left: 2em"
                                                                 a4b_verstricheneZeit = 0;
                                                             }
                                                         }
