@@ -2908,12 +2908,19 @@
                 noch so klein ist, den Hashwert der Transaktion und in der Folge jede davon abhängige Hash-Referenz 
                 verändert und dadurch die Blockchain zerbricht.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative;">
                 <div class="hintergrund" style="width: 75em; height: 55em;"></div>
                 <button id="a4c_hintergButton" class="animbutton" 
                     style="visibility: hidden;"
                     onclick="document.getElementById('a4c_hinterg1').style='visibility: visible; z-index: 141';">
                     Hintergrundwissen</button>
+                <div id="a4c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a4c_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a4c_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a4c_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
@@ -3399,22 +3406,15 @@
                     ">OK</button>
                 </div>
                 <img id="a4c_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    onclick="document.getElementById('a4c_info1').style='visibility: visible; z-index: 142;'">                    
+                    onclick="document.getElementById('a4c_info1').style='visibility: visible; z-index: 142;'">
+                <div id="a4c_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a4c_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a4c_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
-            <div id="a4c_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a4c_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a4c_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a4c_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a4c_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a4c_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>    
         </div>
 
 <! Animation 5ab -->
@@ -3428,17 +3428,24 @@
                 ändernden Zufallszahl ("Nonce") ergänzt, bis ein passender Hashwert gefunden worden ist. Je kleiner
                 das Target, umso grösser ist der Rechenaufwand.
             </p>
-            <div style="position: relative; text-align: center;">
+            <div style="position: relative;">
                 <div class="hintergrund" style="width: 55em; height: 53em;"></div>
                 <button id="a5ab_hintergButton" class="animbutton" 
                     style="position: absolute; top: 49.5em; left: 2em; visibility: visible;"
                     onclick="document.getElementById('a5ab_hinterg1').style='visibility: visible; z-index: 151';">
                     Hintergrundwissen</button>
+                <div id="a5ab_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a5ab_hinterg1);
+                    </script> <br>
+                    <button class="hintergrbutton"
+                        onclick="document.getElementById('a5ab_hinterg1').style='visibility: hidden';">Schliessen</button>
+                </div>
                 <img src="img/copyright_symbol.png" alt="Copyright-Hinweis" class="copyrightSymbol""
                     onclick="document.getElementById('copyrightHashfunktionen').style.visibility = 'visible';">
                 <button id="a5ab_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('6a'); a6a_inhaltKnotenNeu();">weiter</button>
-                <button id="a4a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
+                <button id="a5ab_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('4c'); a4c_datenMerkleTree();
                     ">zurück</button>
                 <div id="a5ab_block1">
@@ -3674,22 +3681,15 @@
                         >Mining fortsetzen</button>
                 <img id="a5ab_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
                     style="position: absolute; top: 35em; left: 57em; visibility: visible;"
-                    onclick="document.getElementById('a5ab_info1').style='visibility: visible; z-index: 152;'">                    
+                    onclick="document.getElementById('a5ab_info1').style='visibility: visible; z-index: 152;'">
+                <div id="a5ab_info1" class="infotext" style="visibility: hidden;">
+                    <script type="text/javascript">
+                        document.write(a5ab_info1);
+                    </script> <br>
+                    <button class="infobutton"
+                        onclick="document.getElementById('a5ab_info1').style='visibility: hidden';">Schliessen</button>
+                </div>
             </div>
-            <div id="a5ab_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a5ab_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a5ab_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a5ab_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a5ab_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a5ab_hinterg1').style='visibility: hidden';">Schliessen</button>
-            </div>    
         </div>
 
 <! Animation 6a -->
