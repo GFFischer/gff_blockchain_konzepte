@@ -1129,9 +1129,7 @@ async function a6a_verteileTransaktion() {
         document.getElementById("a6a_unterbrechung").style="visibility: hidden";
         document.getElementById("a6a_fortsetzung").style="visibility: hidden";
         document.getElementById("a6a_neustart").style=
-            "position: absolute; right: 2em; top: 1em; visibility: visible";
-        document.getElementById("a6a_hintergButton").style =
-            "visibility: visible; position: absolute; top: 44.5em; left: 2em"});
+            "position: absolute; right: 2em; top: 1em; visibility: visible"});
     
     document.getElementById("a6a_unterbrechung").addEventListener("click", () => {
         a6a_unterbrochen = true;
@@ -1233,8 +1231,6 @@ async function a6a_verteileTransaktion() {
                                                 "position: absolute; right: 2em; top: 1em; visibility: visible";
                                             document.getElementById('a6a_infoimg1').style = 
                                                 "visibility: visible; position: absolute; top: 39.5em; left: 5em";
-                                            document.getElementById('a6a_hintergButton').style = 
-                                                "visibility: visible; position: absolute; top: 44.5em; left: 2em";
                                         }
                                     }
                                 }
@@ -1285,9 +1281,7 @@ async function a6b_verteileBlock() {
         document.getElementById("a6b_unterbrechung").style="visibility: hidden";
         document.getElementById("a6b_fortsetzung").style="visibility: hidden";
         document.getElementById("a6b_neustart").style=
-            "position: absolute; right: 2em; top: 1em; visibility: visible";
-        document.getElementById("a6b_hintergButton").style =
-            "visibility: visible; position: absolute; top: 44.5em; left: 2em"});
+            "position: absolute; right: 2em; top: 1em; visibility: visible"});
     
     document.getElementById("a6b_unterbrechung").addEventListener("click", () => {
         a6b_unterbrochen = true;
@@ -1351,8 +1345,6 @@ async function a6b_verteileBlock() {
                             "position: absolute; right: 2em; top: 1em; visibility: visible";
                         document.getElementById('a6b_infoimg1').style = 
                             "visibility: visible; position: absolute; top: 39.5em; left: 5em";
-                        document.getElementById('a6b_hintergButton').style = 
-                            "visibility: visible; position: absolute; top: 44.5em; left: 2em";
                     }
                 }
             }
@@ -1407,9 +1399,7 @@ async function a6c_verteileBloecke() {
         document.getElementById("a6c_unterbrechung").style="visibility: hidden";
         document.getElementById("a6c_fortsetzung").style="visibility: hidden";
         document.getElementById("a6c_neustart").style=
-            "position: absolute; right: 2em; top: 1em; visibility: visible";
-        document.getElementById("a6c_hintergButton").style =
-            "visibility: visible; position: absolute; top: 44.5em; left: 2em"});
+            "position: absolute; right: 2em; top: 1em; visibility: visible"});
     
     document.getElementById("a6c_unterbrechung").addEventListener("click", () => {
         a6c_unterbrochen = true;
@@ -1503,8 +1493,6 @@ async function a6c_verteileBloecke() {
                             "position: absolute; right: 2em; top: 1em; visibility: visible";
                         document.getElementById('a6c_infoimg1').style = 
                             "visibility: visible; position: absolute; top: 39.5em; left: 5em";
-                        document.getElementById('a6c_hintergButton').style = 
-                            "visibility: visible; position: absolute; top: 44.5em; left: 2em";
                     }
                 }
             }
