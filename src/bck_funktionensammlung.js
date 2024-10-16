@@ -83,7 +83,7 @@ function umwandleBinInHex(binZahl) {
 /* Funktionen für das Prüfen von Eingaben des Users (ausschliesslich Text bzw. Ziffern? Ziffer von 1 - 3?) */
 
 function pruefeEingabeText(eingabe) {
-    var vorgabe = /^[\w\.\,\s\?\!\ö\ä\ü\Ö\Ä\Ü\ß]+$/;
+    var vorgabe = /^[\w\.\,\s\?\!\:\-\"\'\;\ö\ä\ü\Ö\Ä\Ü\ß]+$/;
     return vorgabe.test(eingabe);
 }
 

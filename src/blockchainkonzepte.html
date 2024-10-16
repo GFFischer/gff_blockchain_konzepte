@@ -72,7 +72,7 @@
                         a3a_tabelleAdressenKnotenNeu(); a3a_eingabeGuthaben();
                         ">Den Adressen ein Guthaben zuweisen</li>
                     <li id="a3b_menu" class="submenuEintrag" onclick="oeffneAnimation('3b');
-                        a3b_tabelleAdressenKnotenNeuMitGuthaben();
+                        a3b_tabelleAdressenKnotenNeuMitGuthaben(); a3b_tabelleAdressenFremdeKnoten();
                         ">Eine neue Transaktion erstellen</li>
                     <li id="a3c_menu" class="submenuEintrag" onclick="oeffneAnimation('3c'); a3c_tabelleTransaktion();
                         ">Eine Transaktion digital signieren</li>
@@ -827,11 +827,11 @@
                     >Starte Animation</button>
                 <button id="a1d_neustart" class="animbutton" style="visibility: hidden;"
                     onclick="
-                         document.getElementById('a1d_unterbrechung').style = 
+                        document.getElementById('a1d_unterbrechung').style = 
                             'position: absolute; right: 13.3em; top: 1em; visibility: visible';
                         document.getElementById('a1d_abbruch').style=
                             'position: absolute; right: 2em; top: 1em; visibility: visible';
-                        document.getElementById('a1d_fortsetzung').style='visibility: visible';
+                        document.getElementById('a1d_fortsetzung').style='visibility: hidden';
                         document.getElementById('a1d_neustart').style='visibility: hidden';
                         document.getElementById('a1d_infoimg1').style='visibility:hidden';
                         document.getElementById('a1d_block1Inhalt').style=
@@ -1310,7 +1310,7 @@
                         onclick="document.getElementById('a3a_hinterg1').style='visibility: hidden';">Schliessen</button>
                 </div>
                 <button id="a3a_weiter" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
-                    onclick="oeffneAnimation('3b'); a3b_tabelleAdressenKnotenNeuMitGuthaben();">weiter</button>
+                    onclick="oeffneAnimation('3b'); a3b_tabelleAdressenKnotenNeuMitGuthaben(); a3b_tabelleAdressenFremdeKnoten();">weiter</button>
                 <button id="a3a_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
                     onclick="oeffneAnimation('2c'); a2c_inhaltKnotenNeu()">zurück</button>
                 <div id="a3a_tabelleEigeneAdressen" style="position: absolute; top: 4em; left: 4em;"></div>
@@ -1485,7 +1485,7 @@
                             document.getElementById('a3b_auftraggeber').innerHTML = a3b_senderTransaktion;  
                             a3b_empfaengerTransaktion = 'e=' + document.getElementById('a3b_eingabeE').value +
                                 ', n=' + document.getElementById('a3b_eingabeN').value;
-                            a3b_betragTransaktion = document.getElementById('a3b_eingabeBetrag').value;
+                            a3b_betragTransaktion = Number(document.getElementById('a3b_eingabeBetrag').value);
                             document.getElementById('a3b_betrag').innerHTML = a3b_betragTransaktion + ' SiC';
                             a3b_gebuehrTransaktion = a3b_errechneTransaktionsgebuehr(a3b_betragTransaktion);
                             document.getElementById('a3b_gebuehr').innerHTML = a3b_gebuehrTransaktion + ' SiC';
@@ -1533,7 +1533,7 @@
                         a3a_guthabenAdressen[document.getElementById('a3b_eingabeAuftraggeber').value] -=
                             a3b_betragTransaktion;
                         a3b_tabelleAdressenKnotenNeuMitGuthaben();
-                        var guthaben = 'guthaben' + document.getElementById('a3b_eingabeAuftraggeber').value;
+                        var guthaben = 'guthaben' + a3c_idxAdresseSender;
                         document.getElementById(guthaben).classList.add('tabHervorgehoben');
                         a3c_clear();
                         a3d_clear();
@@ -1581,7 +1581,7 @@
                     onclick="oeffneAnimation('3d'); a3d_pruefeSignatur(a3b_hashTransaktion, a3c_idxAdresseSender); 
                         a3d_tabelleTransaktion();">weiter</button>
                 <button id="a3c_zurueck" class="animbutton" style="float: right; margin-right: 1em; width: 7em;"
-                    onclick="oeffneAnimation('3b'); a3b_tabelleAdressenKnotenNeuMitGuthaben();
+                    onclick="oeffneAnimation('3b'); a3b_tabelleAdressenKnotenNeuMitGuthaben(); a3b_tabelleAdressenFremdeKnoten();
                     ">zurück</button>
                 <div id="a3c_tabelleTransaktion">
                     <table class="tabelle tabTransaktion" style="position: absolute; top: 5em; left: 3em;">
@@ -3605,14 +3605,14 @@
                 <img id="a5ab_haken2" src="img/haken.png" alt="Haken"
                     style="position: absolute; top: 7.5em; left: 43em; width: 2em; visibility: hidden;">
                 <div id="a5ab_zaehlerBox" class="feld" ¨
-                    style="position: absolute; top: 11.2em; left: 50.5em; line-height: 180%; padding: 0.5em 0em;">
-                    <p><b>Anzahl Lösungsversuche:</b></p>
-                    <p>erster Block: <span id="a5ab_zaehlerBlock1" class="feld"></span><br>
+                    style="position: absolute; top: 11.2em; left: 50em; line-height: 180%; padding: 0.5em 0em;">
+                    <p style="padding: 0em 0em;"><b>Anzahl<br>Lösungsversuche:</b></p>
+                    <p style="padding: 0em 0em;">erster Block: <span id="a5ab_zaehlerBlock1" class="feld"></span><br>
                     (Durchschnitt: 16)</p>
                     <script>
                         document.getElementById("a5ab_zaehlerBlock1").innerHTML = a5a_zaehler;
                     </script>
-                    <p>zweiter Block: <span id="a5ab_zaehlerBlock2" class="feld"></span><br>
+                    <p style="padding: 0em 0em;">zweiter Block: <span id="a5ab_zaehlerBlock2" class="feld"></span><br>
                     (Durchschnitt: 256)</p>
                     <script>
                         document.getElementById("a5ab_zaehlerBlock2").innerHTML = a5b_zaehler;
@@ -3680,7 +3680,7 @@
                             document.getElementById('a5ab_fortsetzung2').style.visibility = 'hidden';"
                         >Mining fortsetzen</button>
                 <img id="a5ab_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    style="position: absolute; top: 35em; left: 57em; visibility: visible;"
+                    style="position: absolute; top: 35em; left: 54em; visibility: visible;"
                     onclick="document.getElementById('a5ab_info1').style='visibility: visible; z-index: 152;'">
                 <div id="a5ab_info1" class="infotext" style="visibility: hidden;">
                     <script type="text/javascript">
@@ -4436,35 +4436,72 @@
 <! Abschluss-Seite -->
         
         <div id="anim_8" class="mitte animation">
-            <h1>Die Blockchain: Resümee und Ausblick</h1>
+            <h1>Die Blockchain und was wir über sie gelernt haben</h1>
             <p>
-                Hier wird der Text stehen, der einige Punkte erwähnt, die über das rein Technische hinausgehen.
+                <strong>Wenn alles klappt, bist du am Ende unseres Weges schon fast eine Expertin 
+                oder ein Experte für das Thema „Blockchain“ …</strong><br><br>
+                Dieser Satz steht auf der Startseite dieser Applikation und damit am Beginn unseres 
+                Weges durch die grundlegenden Konzepte der Blockchain-Technologie. Jetzt stehen wir 
+                am Ende dieses Weges und können rückblickend überprüfen, ob es uns gelungen ist, 
+                der Erreichung dieses Ziels zumindest nahezukommen. <br><br>
+                Wie auch immer diese Überprüfung ausgeht, eines wollen wir dir sagen: <br>
+                <strong><ul>
+                    <li style="margin-bottom: 0.5em;">Wir gratulieren dir, dass du es geschafft hast,
+                        dich bis hierher durchzuklicken!</li>
+                    <li style="margin-bottom: 0.5em;">Wir hoffen, dass du etwas Neues gelernt hast 
+                        und dass unsere Animationen und Erklärungen verständlich waren!</li>
+                    <li style="margin-bottom: 0.5em;">Wir freuen uns mit dir, wenn du deine 
+                        Entdeckungsreise durch die Welt der Informatik fortsetzt! Es gibt noch so 
+                        viele Ideen, so viele Konzepte …</li>
+                </ul></strong>
             </p>
-            <div style="position: relative; text-align: center;">
-                <div class="hintergrund" style="height: 12em;" ></div>
-                <img id="a8_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
-                    style="position: absolute; top: 2em; left: 6em; visibility: visible;"
-                    onclick="document.getElementById('a8_info1').style='visibility: visible; z-index: 203;'">
-                <button id="a8_hintergButton" class="animbutton" 
-                    style="position: absolute; top: 7em; left: 3em;"
-                    onclick="document.getElementById('a8_hinterg1').style='visibility: visible; z-index: 202';">
-                    Hintergrundwissen</button>
+            <div style="position: relative;">
+                <div class="hintergrund">
+                    <table style="border-spacing: 3em 1em">
+                        <tr>
+                            <td style="text-align: center;">
+                                <img id="a8_infoimg1" src="img/infoimg.png" alt="Erklärung" class="infoimg"
+                                style="visibility: visible;"
+                                onclick="document.getElementById('a8_info1').style='visibility: visible; z-index: 203;'">
+                            </td>
+                            <td>
+                                <strong>Was haben wir gelernt?</strong><br>
+	                            Wenn du ein letztes Mal auf das Symbol für die erklärenden Texte 
+                                klickst, kommst du zu einer Zusammenfassung all dessen, was in den 
+                                19 Animationen dargestellt, simuliert und erklärt worden ist.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;">
+                                <button id="a8_hintergButton" class="animbutton" 
+                                onclick="document.getElementById('a8_hinterg1').style='visibility: visible; z-index: 2';">
+                                Hintergrundwissen</button>
+                            </td>
+                            <td>
+                                <strong>Was gibt es noch zu dieser Applikation zu sagen?</strong><br>
+	                            Wenn du ein letztes Mal auf diesen Button klickst, kannst du etwas 
+                                über den Autor und darüber erfahren, in welchem Rahmen diese 
+                                Applikation entstanden ist.
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="a8_info1" class="infotext" style="visibility: hidden;">
+                        <script type="text/javascript">
+                            document.write(a8_info1);
+                        </script> <br>
+                        <button class="infobutton"
+                            onclick="document.getElementById('a8_info1').style='visibility: hidden';">Schliessen</button>
+                    </div>
+                    <div id="a8_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
+                        <script type="text/javascript">
+                            document.write(a8_hinterg1);
+                        </script> <br>
+                        <button class="hintergrbutton"
+                            onclick="document.getElementById('a8_hinterg1').style='visibility: hidden';">Schliessen</button>
+                    </div>
+                </div>
                 <button id="a8_zurueck" class="animbutton" style="float: right; margin-right: 2em; width: 7em;" 
                     onclick="oeffneAnimation('7')">zurück</button>
-            </div>
-            <div id="a8_info1" class="infotext" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a8_info1);
-                </script> <br>
-                <button class="infobutton"
-                    onclick="document.getElementById('a8_info1').style='visibility: hidden';">Schliessen</button>
-            </div>
-            <div id="a8_hinterg1" class="hintergrundwissen" style="visibility: hidden;">
-                <script type="text/javascript">
-                    document.write(a8_hinterg1);
-                </script> <br>
-                <button class="hintergrbutton"
-                    onclick="document.getElementById('a8_hinterg1').style='visibility: hidden';">Schliessen</button>
             </div>
         </div>
 

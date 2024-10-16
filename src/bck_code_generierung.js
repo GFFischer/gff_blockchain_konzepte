@@ -397,6 +397,7 @@ function a3b_tabelleAdressenKnotenNeuMitGuthaben() {
     }
     htmlCode += "</table>";
     document.getElementById("a3b_tabelleEigeneAdressen").innerHTML = htmlCode;
+    document.getElementById("a3b_eingabeAuftraggeber").innerHTML = a3b_auswahllisteAuftraggeber();
 }
 
 function a3b_tabelleAdressenFremdeKnoten() {
@@ -523,6 +524,11 @@ async function a3d_pruefeTransaktion() {
             'position: absolute; left: 32em; top: 32em; visibility: visible;';
         document.getElementById('a3d_hintergButton').style = 
             'position: absolute; left: 2em; top: 34.5em; visibility: visible;';
+        a3a_guthabenAdressen[a3c_idxAdresseSender] += a3b_betragTransaktion;
+        a3a_guthabenAdressen[a3b_pruefeEingabeAdresseEmpfaenger(a3b_empfaengerTransaktion)] -= 
+                            a3b_betragTransaktion - a3b_gebuehrTransaktion;
+        a3b_tabelleAdressenFremdeKnoten();
+        document.getElementById('a3b_tabelleTransaktion').style='visibility: hidden';
     } else {
         document.getElementById("a3d_haken4").style.visibility = "visible";
         await verzoegerung(1500);
@@ -603,6 +609,7 @@ function a4a_datenTransaktion() {
     document.getElementById("a4a_gebuehr4").innerHTML = a3b_gebuehrTransaktion + " SiC";
     document.getElementById("a4a_zeitstempel4").innerHTML = a3b_zeitTransaktion;
     document.getElementById("a4a_hashwert4").innerHTML = a3b_hashTransaktion;
+    document.getElementById("a4a_hashRef4").innerHTML = a3b_hashTransaktion;
     document.getElementById("a4a_digitaleSignatur4").innerHTML = a3c_signaturTransaktion;
     a4a_referenz45 = a3b_hashTransaktion + " " + a4a_hashTransaktion;
     a4a_hashReferenz45 = berechneHash(a4a_referenz45);
