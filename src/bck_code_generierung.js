@@ -1003,10 +1003,14 @@ async function a4c_aendereDaten() {
     if (!(a4c_wert1 == "e=, n=") || !(a4c_wert2 == "")) {
         document.getElementById('a4c_hashTrans4').innerHTML = berechneHash(a4c_wert1 + a4c_wert2);
         document.getElementById("a4c_hashTrans4").classList.add('geaendeterWert');
+        document.getElementById("a4c_hashwert4").innerHTML = berechneHash(a4c_wert1 + a4c_wert2);
+        document.getElementById("a4c_hashwert4").classList.add('geaendeterWert');
     }
     if (!(a4c_wert3 == "e=, n=") || !(a4c_wert4 == "")) {
         document.getElementById('a4c_hashTrans5').innerHTML = berechneHash(a4c_wert3 + a4c_wert4);
         document.getElementById("a4c_hashTrans5").classList.add('geaendeterWert');
+        document.getElementById("a4c_hashwert5").innerHTML = berechneHash(a4c_wert1 + a4c_wert2);
+        document.getElementById("a4c_hashwert5").classList.add('geaendeterWert');
     }
     await verzoegerung(1000);
     if (!(a4c_wert1 == "e=, n=") || !(a4c_wert2 == "") || !(a4c_wert3 == "e=, n=") || !(a4c_wert4 == "")) {
