@@ -408,7 +408,7 @@
                         if (a1b_eingabe) {
                             if (document.getElementById('a1b_inputInhaltBlock4').value != '') {
                             a1b_block4Inhalt = document.getElementById('a1b_inputInhaltBlock4').value;
-                            a1b_block4Hash = berechneHash('Block 4' + a1b_block4Inhalt);
+                            a1b_block4Hash = berechneHash(a1b_block4Inhalt);
                             }
                             document.getElementById('a1b_block4Inhalt').innerHTML = a1b_block4Inhalt;
                             document.getElementById('a1b_block4Hash').innerHTML = a1b_block4Hash;
@@ -603,7 +603,7 @@
                         if (a1c_eingabe) {
                             if (document.getElementById('a1c_inputInhaltBlock5').value != '') {
                             a1c_block5Inhalt = document.getElementById('a1c_inputInhaltBlock5').value;
-                            a1c_block5Hash = berechneHash('Block 5' + a1c_block5Inhalt);
+                            a1c_block5Hash = berechneHash(a1c_block5Inhalt);
                             }
                             document.getElementById('a1c_block5Inhalt').innerHTML = a1c_block5Inhalt;
                             document.getElementById('a1c_block5Hash').innerHTML = a1c_block5Hash;
@@ -886,7 +886,7 @@
 <! Animation 2a -->
 
         <div id="anim_2a" class="mitte animation">
-            <h1>Eine Blockchain läuft einem Netzwerk</h1>
+            <h1>Eine Blockchain läuft in einem Netzwerk</h1>
             <p>
                 Eine Blockchain wird nicht irgendwo zentral gespeichert, sondern sie wird von einem Netzwerk von 
                 vielen gleichwertigen Knoten bearbeitet. Alle Knoten ("Peers") sind dabei gleichrangig, bei jedem 
@@ -1192,7 +1192,7 @@
         <div id="anim_2c" class="mitte animation">
             <h1>Die Peers sind anonym</h1>
             <p>
-                In unserer Darstellung haben die einzlenen Peers bisher zum leichteren Verständnis einen Namen
+                In unserer Darstellung haben die einzelnen Peers bisher zum leichteren Verständnis einen Namen
                 bekommen. Das wird nun korrigiert, denn tatsächlich haben die Peers keine Namen. Sie bleiben
                 anonym. Das einzige, wodurch ein Peer identifiziert werden kann, sind seine Adressen.
             </p>
@@ -1292,7 +1292,7 @@
             <p>
                 Der vorrangige Sinn einer Blockchain ist es, Werte von einer Adresse zu einer anderen Adresse zu
                 verschieben, also "Transaktionen" zu tätigen. Das geschieht in einer eigenen Währung, die wir für 
-                unsere Simulation einer Blockchain SiC ("Simulationscoins") nennen wollen. Die Summe aller SiCs, 
+                unsere Simulation einer Blockchain SiC ("Simulation Coins") nennen wollen. Die Summe aller SiCs, 
                 die an eine Adresse überwiesen und von dieser Adresse noch nicht wieder woandershin weiter
                 überwiesen wurden, ist das Guthaben dieser Adresse.
             </p>
@@ -1820,7 +1820,7 @@
         <div id="anim_3d" class="mitte animation">
             <h1>Die Gültigkeit einer Transaktion wird von jedem Peer geprüft</h1>
             <p>
-                Eine Transaktion wird an alle Peers geschickt. Jeder Peer überpfrüft, ob die eingegebenen Daten
+                Eine Transaktion wird an alle Peers geschickt. Jeder Peer überprüft, ob die eingegebenen Daten
                 korrekt sind. Wichtig ist vor allem, ob die angegebene Auftraggeber-Adresse tatsächlich im Besitz 
                 der Werte (in unserer Darstellung: der SiCs) ist, die überwiesen werden sollen, und ob die
                 Transaktion tatsächlich von der angegebenen Auftraggeber-Adresse gesendet wurde, wozu die digitale
@@ -3866,7 +3866,7 @@
             <h1>Transaktionen werden in neuen Blöcken zusammengefasst und verteilt</h1>
             <p>
                 Wenn sich genug gültige Transaktionen im Posteingang befinden, kann jeder Peer beginnen, einen 
-                neuen Block zu erstellen. Falls er das Hashpuszzle lösen kann, bevor von einem anderen Peer ein
+                neuen Block zu erstellen. Falls er das Hashpuzzle lösen kann, bevor von einem anderen Peer ein
                 neuer Block der Blockchain hinzugefügt worden ist, wird der neue Block an alle anderen Peers im
                 Netzwerk verteilt. Die im neuen Block verarbeiteten Transaktionen werden dabei aus dem Posteingang
                 gelöscht.

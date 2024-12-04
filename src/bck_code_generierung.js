@@ -1,14 +1,14 @@
 function a1b_inhaltBlock3() {
-    a1b_block3Hash = berechneHash("Block 3" + a1a_block3Inhalt);
+    a1b_block3Hash = berechneHash(a1a_block3Inhalt);
     document.getElementById("a1b_block3Hash").innerHTML = a1b_block3Hash;
     document.getElementById("a1b_block3Inhalt").innerHTML = a1a_block3Inhalt;
 }
 
 function a1c_inhalteBloecke() {
-    a1b_block3Hash = berechneHash("Block 3" + a1a_block3Inhalt);
+    a1b_block3Hash = berechneHash(a1a_block3Inhalt);
     document.getElementById("a1c_block3Hash").innerHTML = a1b_block3Hash;
     document.getElementById("a1c_block3Inhalt").innerHTML = a1a_block3Inhalt;
-    a1b_block4Hash = berechneHash("Block 4" + a1b_block4Inhalt);
+    a1b_block4Hash = berechneHash(a1b_block4Inhalt);
     document.getElementById("a1c_block4Hash").innerHTML = a1b_block4Hash;
     document.getElementById("a1c_block4Inhalt").innerHTML = a1b_block4Inhalt;
     document.getElementById("a1c_block3HashVorh").innerHTML = a1b_block3Hash;
@@ -17,15 +17,15 @@ function a1c_inhalteBloecke() {
 }
 
 function a1d_inhalteBloecke() {
-    a1b_block3Hash = berechneHash("Block 3" + a1a_block3Inhalt);
+    a1b_block3Hash = berechneHash(a1a_block3Inhalt);
     document.getElementById("a1d_block3Hash").innerHTML = a1b_block3Hash;
     document.getElementById("a1d_block3InhaltText").innerHTML = a1a_block3Inhalt;
-    a1b_block4Hash = berechneHash("Block 4" + a1b_block4Inhalt);
+    a1b_block4Hash = berechneHash(a1b_block4Inhalt);
     document.getElementById("a1d_block4Hash").innerHTML = a1b_block4Hash;
     document.getElementById("a1d_block4InhaltText").innerHTML = a1b_block4Inhalt;
     document.getElementById("a1d_block3HashVorh").innerHTML = a1b_block3Hash;
     document.getElementById("a1d_block4HashVorh").innerHTML = a1b_block4Hash;
-    a1c_block5Hash = berechneHash("Block 5" + a1c_block5Inhalt);
+    a1c_block5Hash = berechneHash(a1c_block5Inhalt);
     document.getElementById("a1d_block5Hash").innerHTML = a1c_block5Hash;
     document.getElementById("a1d_block5InhaltText").innerHTML = a1c_block5Inhalt;
 }
@@ -243,7 +243,7 @@ function a2b_aendereAnzahlSchluessel(zahl) {
 }
 
 function a2b_schluessel() {
-    var htmlcode = "Private Schluessel: <br>" + a2b_privateSchluessel[0];
+    var htmlcode = "Private Schlüssel: <br>" + a2b_privateSchluessel[0];
     if (a2b_privateSchluessel[1] != "") {
         htmlcode += "<br>" + a2b_privateSchluessel[1];
     }
@@ -424,7 +424,7 @@ function a3b_auswahllisteAuftraggeber() {
 }
 
 function a3b_pruefeEingabeAdresseEmpfaenger(adresse) {
-    for (var i = 0; i < a2b_adressenKnoten.length; i++) {
+    for (var i = 3; i < a2b_adressenKnoten.length; i++) {
         if (a2b_adressenKnoten[i] != "" && adresse === a2b_adressenKnoten[i].substr(4)) {
             return i;
         }
